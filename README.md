@@ -39,14 +39,20 @@ This step is a little more tricky and involves uploading your image through Word
 2. Navigate to the Media menu, and select the [Add New](http://www.cayenne-mydevices.com/wp-admin/media-new.php) link.
 3. Click "Select Files" and upload your image.
 4. When the upload is complete, click the Edit link located the right of the thumbnail.
-5. On this screen, you will find a few different things you'll need to copy and enter into the example code below these instructions. If your image is larger than 660px, you will have to continue to the 6th step as well.
+5. On this screen, you will find a few different things you'll need to copy and enter into the example code below to embed your image. If your image is larger than 660px, you will have to continue to the 6th step as well.
 
     **File URL:** IMAGE_URL <br/>
     **Width:** WIDTH (If the width is greater than 660px, goto step 6 to get the correct size)<br/>
     **Height:** HEIGHT <br/>
     **Alt:** A short description of this image
-6. If your width is greater than 660px, while you are still on the Edit Media
-7. 
+
+6. If your width is greater than 660px, stay on the Edit Media page:
+   * Click on the "Edit Image" button located below your uploaded media.
+   * A new set of tools appears, and the to right of the image you will see a menu called "Scale Image". 
+   * In the first box located below "New dimensions", enter 660. 
+   * This will give you the appropriate size ratio for your large image. 
+   * Use the 660 for the width, and use the number to the right of it for the height.
+7. Fill out the example code below with your new data. Paste the code into place and preview your changes.
     
 **Image Example Code**
 ```
