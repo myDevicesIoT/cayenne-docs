@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Scrollspy demo</title>
+
+        <!--Page Specific Metas-->
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!--Mobile Specific Metas-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--Font-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+
+        <!--Stylesheets-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+        <style>
+            body {
+                color: #1a1a1a;
+                font-family: 'Open Sans', Verdana, sans-serif;
+                font-size: 2em;
+            }
+
+            /*The white background content wrapper*/
+            .content {
+                background-color: #fafafa;
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                padding: 20px 50px;
+            }
+
+            .color {
+                height: 600px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <h1>Scroll down to see the background color change</h1>
+                    <div id="white" class="color">
+                        <h2>The White Team</h2>
+                    </div>
+                    <div id="red" class="color">
+                        <h2>The Red Team</h2>
+                    </div>
+                    <div id="blue" class="color">
+                        <h2>The Blue Team</h2>
+                    </div>
+                    <div id="green" class="color">
+                        <h2>The Green Team</h2>
+                    </div>
+                    <div id="black" class="color">
+                        <h2>The Black Team</h2>
+                    </div>
+                    <div id="snow-white" class="color">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Scripts-->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="../jquery-scrollspy.min.js"></script>
+        <script>
+            $(function domReady($) {
+                // for each element with the class 'color'
+                $('.color').each(function eachElement() {
+                    // cache the jQuery object
+                    var $this = $(this);
+
+                    var position = $this.position();
+
+                    window.console.log(position);
+                    window.console.log('min: ' + position.top + ' / max: ' + window.parseInt(position.top + $this.height(), 10));
+
+                    $this.scrollspy({
+                        min: position.top,
+                        max: position.top + $this.height(),
+                        onEnter: function onEnter(element/*, position*/) {
+                            $('body').css('background-color', element.id);
+                            window.console.log('Entering ' + element.id);
+                        },
+                        onLeave: function onLeave(element/*, position*/) {
+                            window.console.log('Leaving ' + element.id);
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
