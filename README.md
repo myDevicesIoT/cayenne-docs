@@ -35,7 +35,18 @@ This step is a little more tricky and involves uploading your image through Word
 
 **We'll use adding a screenshot for our example:**
 
-1. 
+1. Login to the [Cayenne Wordpress admin panel](http://www.cayenne-mydevices.com/wp-admin).
+2. Navigate to the Media menu, and select the [Add New](http://www.cayenne-mydevices.com/wp-admin/media-new.php) link.
+3. Click "Select Files" and upload your image.
+4. When the upload is complete, click the Edit link located the right of the thumbnail.
+5. On this screen, you will find a few different things you'll need to copy into the example code below.
+  File URL: #IMAGE_URL#
+  
+
+*Image Example Code*
 
 
+```
+<p style="text-align:center"><br/><img src="#IMAGE_URL#" width="600" height="388" alt="Using Sketch Files"><br/><br/></p>
+```
 
