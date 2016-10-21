@@ -18,7 +18,7 @@ This section will highlight the common actions you might take while editing the 
 ### Switching to the Staging version
 Are you looking for the Staging version of the Docs? On the main repo page, right above the files, select the dropdown labeled Branch. From there, select the Staging branch. You are now in the Staging version of the Docs.
 
-### Making a minor edit
+### Making a text edit
 Let's say you find something incorrectly written or you would like to update some text. First, you would find the main section the article is located in. 
 
 **We'll use Getting Started for our example:**
