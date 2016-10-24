@@ -85,7 +85,7 @@ For our example we will  walk through setting up and connecting an [Arduino Uno 
 
 To use the Cayenne Arduino MQTT Library, the Arduino IDE software should be installed. Go to https://www.arduino.cc/en/Main/Software to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
 
-####Add Cayenne Arduino MQTT Library to your Arduino IDE
+###Add MQTT Library to Arduino IDE
 
 The Cayenne Arduino MQTT Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards using MQTT. Cayenne sketch files can be combined with other sketch files for your IoT projects.
 
