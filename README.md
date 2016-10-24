@@ -66,14 +66,14 @@ If you need to add additional anchor links to a section in the Docs, use the sam
 **In this example, we're linking to a fictional #help-me section**
 ```
 
-<p id="help-me" class="anchor-link"></p
+<p id="help-me" class="anchor-link"></p>
 
 ```
 
 **Sample code for copy + pasting purposes**
 ```
 
-<p id="ANCHOR_LINK_HERE" class="anchor-link"></p
+<p id="ANCHOR_LINK_HERE" class="anchor-link"></p>
 
 ```
 
