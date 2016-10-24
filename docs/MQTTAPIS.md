@@ -429,7 +429,94 @@ If this is too advanced for the user, they can refer back to the C++ walkthrough
 
 ##MQTT Messaging Topics
 
-**TODO**
+**Using MQTT with Cayenne**
+
+MQTT is the preferred API protocol to send and receive data to and from Cayenne’s dashboard. Payloads are plain text based, and topics follow a tree composed of a Username, a Client ID and a Channel ID, allowing for fine filtration and control. Therefore, MQTT does not require the use of a provisioning API. Data that is published to a backend topic can also be subscribed to by a user’s third party application.  
+
+###Send System info
+
+System information is very basic information that may change very rarely over the lifetime of a device.
+
+| Topic	| PUB |	SUB |
+|-------|-------------------------------------------|---|---|
+| v1/**username**/things/**clientID**/sys/model     |	X |	X |
+| v1/**username**/things/**clientID**/sys/version   |	X |	X |
+| v1/**username**/things/**clientID**/sys/cpu/model |	X |	X |
+| v1/**username**/things/**clientID**/sys/cpu/speed |	X |	X |
+
+A string payload for each topic is expected:
++ (string) Device Model, eg. “Arduino Uno”
++ (string) Device Version, eg. “1.0”
++ (string) Device CPU Model, eg. “ATMega328”
++	(string) Device CPU Speed, eg. “72000000000” for 72Mhz
+
+###Send Sensor data
+
+In order to send data, the channel ID needs to be appended to the data topic.
+
+| Topic	| PUB |	SUB |
+|-------|-------------------------------------------|---|---|
+| v1/**username**/things/**clientID**/data/**channel**     |	X |	X |
+
+The data type and/or unit can be added to prefix the value, allowing the backend to process and display data without the need of configuring the data channel from the dashboard:
++	(string) type=value
++	(string) type,unit=value
+
+###Receive Actuator command
+
+In order to receive a command for a given data channel, the device must subscribe to the “cmd” topic.
+
+| Topic	| PUB |	SUB |
+|-------|-------------------------------------------|---|---|
+| v1/**username**/things/**clientID**/cmd/**channel**     |	  |	X |
+
+Payload will contain a command sequence number followed by the value. The Developer is responsible for managing the value format.
++	(string) seq,value
+
+###Send command response
+
+In order to let the system know of an actuator command, the device must publish a response on a common response topic.
+
+| Topic	| PUB |	SUB |
+|-------|-------------------------------------------|---|---|
+| v1/**username**/things/**clientID**/response     |	X |	  |
+
+Payload must contain the status “ok” or “error”, as well as the command sequence number and an optional message that will be displayed to the user in case of error.
++	(string) ok,seq
++	(string) error,seq=message
+
+###Receive channel configuration
+
+When adding a widget from the dashboard, the backend will publish activation on the appropriate topic. This is useful for the developer to initialize I/O lookup and send data. As the backend sends configuration in retained mode, the device will receive the last configuration right after subscribing.
+
+| Topic	| PUB |	SUB |
+|-------|-------------------------------------------|---|---|
+| v1/**username**/things/**clientID**/conf/**channel**     |	  |	X |
+| v1/**username**/things/**clientID**/digital-conf/**channel**     |	  |	X |
+| v1/**username**/things/**clientID**/analog-conf/**channel**     |	  |	X |
+
+Payload will simply contain “on” or “off”
+
+###Examples
+
+**Send Sensor Data to Channel 2**
+
+⇒ PUB v1/A1234B5678C/things/0123-4567-89AB-CDEF/data/2
+
+temp,c=20.7
+
+**Receive Actuator Command on Channel 3**
+
+⇒ SUB v1/username/things/0123-4567-89AB-CDEF/cmd/3
+
+⇐ 5,0
+
+**Send a Command Response**
+
+⇒ PUB v1/username/things/0123-4567-89AB-CDEF/response
+
+ok,5
+
 
 ##FAQs
 
