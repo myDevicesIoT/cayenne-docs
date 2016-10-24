@@ -403,12 +403,7 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
 
 ## LoRa
 
-### Get started in minutes!
-
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/hmIGRrvevCA" frameborder="0" allowfullscreen></iframe></p>
-
-Before you can manage your LoRa device using the online dashboard, you must allow Cayenne to connect to your device.
-
+Before you can manage your LoRa device using the online dashboard, you must make sure your device is setup and add it to your Cayenne dashboard.
 
 ### LoRa setup
 
@@ -440,7 +435,7 @@ In addition to adding previously activated devices, Cayenne is capable of activa
 
 To begin the process of adding a LoRa device to Cayenne, select the LoRa option from the list of devices. A list of LoRa Networks and supported devices will appear.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/step-1-choose-device-category-1.png" width="600" height="362" alt="Add LoRa Device"></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/step-1-choose-device-category-2.png" width="600" height="359" alt="step-1-choose-device-category"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-Choose-Network-and-Device.png" width="600" height="363" alt="Add LoRa Device"></p>
 
