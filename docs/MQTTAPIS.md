@@ -18,14 +18,19 @@ MQTT is the preferred transport and API for sending data to the Cayenne Cloud, o
 Cayenne MQTT is straightforward and easy to use, offering several different ways of connecting your data to Cayenne.
 
 ####Option 1: Use the Cayenne MQTT Libraries
+
 This is the easiest way to get started with using MQTT with Cayenne. We have implemented various MQTT libraries that bundle an [MQTT client](#bring-your-own-thing-api-mqtt-clients) and support libraries for supporting MQTT. Using these, you’ll have access to all of the libraries and code examples you’ll need to quickly program and connect your board to Cayenne.
 
 We have prepared walkthroughs and libraries for some of the most common toolchain/IDE combinations to help get you up and running as quickly as possible. If you would like to use our libraries, the easiest way to get started is to jump to a section below and follow the guided walkthrough provided there.
+
 + [Arduino MQTT Walkthrough](#bring-your-own-thing-api-using-arduino-mqtt) - For Beginner users. This is the easiest way to get started with using Cayenne MQTT in your project. This will walk you through connecting an Arduino board using the Arduino IDE, adding a Temperature sensor as well as a Light actuator.
+
 + [C++ Walkthrough](#bring-your-own-thing-api-using-c) - For Intermediate users. This will walk you through connecting a Nucleo board using the mbed IDE, with widgets automatically populated on the dashboard and then adding a Light actuator.
+
 + [Embedded C Walkthrough](#bring-your-own-thing-api-using-embedded-c) - For Advanced users. This will discuss importing the Cayenne Embedded C library into your mbed IDE and provides guidance from there as to which code areas of the code need to be updated/customized in order to implement support for your board.
 
 ####Option 2: Use raw MQTT API functions
+
 If you are integrating Cayenne into your existing or custom program, you may wish to only use the raw Cayenne BYOT API functions for interacting with Cayenne. Typically you will have already chosen your own MQTT client, will already have implemented your own networking calls, and you just need the *Publish-Subscribe* details for Cayenne’s BYOT API.
 
 If you fall into this camp, you can jump straight to the [MQTT Messaging Topics](#bring-your-own-thing-api-mqtt-messaging-topics) section where you’ll find the API details for MQTT, including the raw MQTT details on topics and behavior. We have also prepared a tutorial for using an MQTT client to manually publish and subscribe data so that you can test out using MQTT with Cayenne.
@@ -48,16 +53,16 @@ To interact with an MQTT broker you’ll need an MQTT client. Here’s a quick l
 **TODO: All of these need links**
 
 **Arduino MQTT**
-<a href="" target="_blank">Github link</a>
-[Walkthrough](#bring-your-own-thing-api-using-arduino-mqtt)
++ <a href="" target="_blank">Github link</a>
++ [Walkthrough](#bring-your-own-thing-api-using-arduino-mqtt)
 
 **C++**
-<a href="" target="_blank">Github link</a>
-[Walkthrough](#bring-your-own-thing-api-using-c)
++ <a href="" target="_blank">Github link</a>
++ [Walkthrough](#bring-your-own-thing-api-using-c)
 
 **Embedded C**
-<a href="" target="_blank">Github link</a>
-[Walkthrough](#bring-your-own-thing-api-using-embedded-c)
++ <a href="" target="_blank">Github link</a>
++ [Walkthrough](#bring-your-own-thing-api-using-embedded-c)
 
 ##Using the MQTT Libraries
 
@@ -89,8 +94,6 @@ To use the Cayenne Arduino MQTT Library, the Arduino IDE software should be inst
 
 The Cayenne Arduino MQTT Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards using MQTT. Cayenne sketch files can be combined with other sketch files for your IoT projects.
 
-<a href="" target="_blank">Download the Cayenne Arduino MQTT Library</a>**TODO: Need public link**
- 
 The Cayenne Arduino MQTT Library is available directly from the Arduino IDE Libraries list. To install the library, select **Sketch** > **Include library** > **Manage Libraries**. The *Library Manager* dialog will appear. From here, search for the **Cayenne MQTT** library and install it.
  
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-manage-libraries.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
@@ -106,11 +109,11 @@ The Cayenne MQTT library has now been expanded in the libraries folder in your A
 
 In order to successfully program your Arduino board, you will need to verify that the appropriate Board and Port are selected in the Arduino IDE.
  
-First, verify that the correct Board is selected in the Tools menu. Select the board type that you will be programming.
- 
+First, verify that the correct Board is selected in the **Tools** > **Board** menu. Be sure to select the board type that you will be programming.
+
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-board-selection.png" width="660" height="552" alt="Arduino IDE board selection"><br/><br/></p>
  
-Then, verify that you have the correct Port selected for communicating with your Arduino. Pick the correct port based upon how you are connecting your Arduino to your PC/Mac.
+Then, verify that you have the correct **Port** selected for communicating with your Arduino. Pick the correct port based upon how you are connecting your Arduino to your PC/Mac.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-port-selection.png" width="660" height="552" alt="Arduino IDE port selection"><br/><br/></p>
 
@@ -153,13 +156,15 @@ Once our board is connected to our Cayenne dashboard, we can send some sensor da
 
 The first step in handling our TMP36 sensor is to write some code to read the sensor’s current value. The TMP36 sensor doesn’t give us a Temperature reading, it will give us an output that is related to voltage. We’d prefer to show a temperature in Celsius on our dashboard, so we also need to convert the reading into a usable temperature. We start by adding the code to read and convert the TMP36 from Analog Pin 0 into celsius temperature.
 
+*Tip: Refer to the documentation for whatever sensor you are using in order to determine what kind of code needs to be written to read its sensor data.*
+
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-tmp36-read-and-convert-sensor.png" width="WIDTH" height="HEIGHT" alt="arduino-ide-tmp36-read-and-convert-sensor"><br/><br/></p>
 
 ####Send Temperature reading to Cayenne
 
 Now let’s send our TMP36 temperature data up to Cayenne. This is easily accomplished, requiring only a single line of code. In this case, we’ll send the data to Cyanne using MQTT Channel 0.
 
-*TIP: There are many ways to read and send sensor data. Depending upon what device you are using and what goals you have in mind, you may choose a different way. You can refer to the [MQTT Messaging Topics](#bring-your-own-thing-api-mqtt-messaging-topics) section for additional guidance on coding for the Cayenne MQTT libraries.*
+*TIP: There are many ways to read and send sensor data. Depending upon what device you are using and what goals you have in mind, you may choose a different way.*
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-send-test-data.png" width="660" height="554" alt="arduino-ide-send-test-data"><br/><br/></p>
 
@@ -279,6 +284,8 @@ Expand the program tree in your mbed workspace and find the example file, **main
 
 The Nucleo board we’ve chosen includes a WiFi network connection, so we will need to program our board so that it can connect to our wireless network. Without this information, our board will be unable to establish proper Internet connectivity and will be unable to communicate with the Cayenne cloud. Refer to the **main.cpp** file and fill in the **SSID** and **WIFI Password** for your wireless connection. The example sketch file includes placeholders for these values, so we just need to update them with the correct information for our wireless network.
 
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-customize-example-code-file-wifi.png" width="660" height="395" alt="mbed-customize-example-code-file-wifi"><br/><br/></p>
+
 ####Fill in the MQTT Credentials
 
 After filling in the network information, we will need to fill in the required MQTT Credentials for our account and this board. Refer to the Connect screen on your Cayenne dashboard, copying & pasting your **MQTT Username**, **MQTT Password** and **Client ID** into the example file. The example sketch file includes placeholders for these values as well, so we just need to update them with the values provided to us on the Connect screen.
@@ -286,6 +293,8 @@ After filling in the network information, we will need to fill in the required M
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Connect screen so that the correct values are used for your device.*
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-customize-example-code-file-mqtt-creds.png" width="660" height="395" alt="mbed-customize-example-code-file-mqtt-creds"><br/><br/></p>
 
 Our program has now been customized and is ready to be compiled and uploaded to the device so that it can connect to Cayenne.
 
