@@ -52,11 +52,28 @@ This step is a little more tricky and involves uploading your image through Word
    * This will give you the appropriate size ratio for your large image. 
    * Use the 660 for the width, and use the number to the right of it for the height.
 7. Fill out the example code below with your new data. Paste the code into place and preview your changes.
-    
+
 **Image Example Code**
 ```
 
 <p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="ALT"><br/><br/></p>
+
+```
+
+### I need to add more anchor links, is there sample code for this?
+If you need to add additional anchor links to a section in the Docs, use the sample code below and fill in the anchor link (e.g. #apis) without the # sign. 
+
+**In this example, we're linking to a fictional #help-me section**
+```
+
+<p id="help-me" class="anchor-link"></p
+
+```
+
+**Sample code for copy + pasting purposes**
+```
+
+<p id="ANCHOR_LINK_HERE" class="anchor-link"></p
 
 ```
 
