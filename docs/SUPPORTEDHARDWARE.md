@@ -202,7 +202,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
 
 
 **Links:** <br/>
@@ -224,7 +224,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
 
 **Links:**
 
@@ -243,7 +243,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
 
 **Links:**
 
@@ -264,7 +264,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
@@ -287,7 +287,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
@@ -304,7 +304,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
@@ -337,6 +337,27 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### Elsys
 
+#### Elsys ELT-1
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" alt="component-doc-image-elsys-elt1"><br/><br/></p>
+
+**Networks supported:**
+
+*   [Actility](#actility-lora-networks)
+*   [Senet](#lora-senet-network)
+
+**Links:**
+
+*   [Product Page](http://www.elsys.se/?page_id=117)
+*   [Datasheet](http://www.elsys.se/en/wp-content/uploads/sites/3/2016/05/ELT-1-folder.pdf)
+
+**Sensors included:**
+
+*   Temperature
+*   Humidity
+*   Analog
+
+
 #### Elsys ESM5k
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
@@ -344,7 +365,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
@@ -367,7 +388,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
@@ -386,6 +407,22 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### GlobalSat
 
+#### GlobalSat LS-111 CO2
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" alt="component-doc-image-globalsat-ls111"><br/><br/></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+
+**Sensors included:**
+
+*   CO2
+*   Temperature
+*   Humidity
+
+
 #### GlobalSat LT-100
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LT-100"></p>
@@ -393,7 +430,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
@@ -414,7 +451,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
@@ -435,7 +472,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
@@ -504,7 +541,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
