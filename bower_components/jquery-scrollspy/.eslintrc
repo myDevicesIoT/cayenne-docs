@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb/legacy",
+  "rules": {
+    // Override Airbnb's style guide defaults for ES5
+    "camelcase": [2, {"properties": "always"}],
+    "indent": [2, 4, {"SwitchCase": 1}],
+    "max-len": [2, 256, 4],
+    "no-param-reassign": 0,
+    "no-shadow": 0,
+    "no-use-before-define": 0,
+    // "padded-blocks": 0,
+    // "spaced-comment": 0,
+    "vars-on-top": 0
+  }
+}

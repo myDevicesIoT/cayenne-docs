@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="../jquery-scrollspy.js"></script>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+    <button id="add">add scrollspy</button>
+    <button id="remove">remove scrollspy</button>
+    <script>
+      var $wrapper = $('#wrapper');
+      $('#add').on('click', function() {
+        var child = $('<div>').attr('id', 'scroller');
+        child.scrollspy({
+          onEnter: function() {
+            console.log('entered');
+          }
+        });
+        $wrapper.append(child);
+        child = null;
+      });
+
+      $('#remove').on('click', function() {
+        var child = $('#scroller');
+        child.scrollspy({}, 'destroy');
+        child = null;
+        $wrapper.html('');
+      });
+    </script>
+  </body>
+</html>
