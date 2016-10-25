@@ -7,44 +7,44 @@ Widgets are used to control a device or are used to show the visualization of da
 <table class="widgets-table" style="text-align:center; width:100%; background-color: transparent;">
 <tbody>
 <tr>
-<td height="150"><a href="#2-state-display"><img class="aligncenter size-full wp-image-4602" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081922/Tile-2StateWidget.png" alt="Tile-2StateWidget" width="120" height="150"></a></td>
-<td height="150"><a href="#accelerometer-widget"><img class="aligncenter size-full wp-image-4623" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105150/Tile-AccelerometerWidget-ComingSoon.png" alt="Tile-AccelerometerWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#battery-widget"><img class="aligncenter size-full wp-image-4629" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105201/Tile-BatteryWidget-ComingSoon.png" alt="Tile-BatteryWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#button-control"><img class="aligncenter size-full wp-image-4603" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081942/Tile-ButtonWidget.png" alt="Tile-ButtonWidget" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-2-state"><img class="aligncenter size-full wp-image-4602" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081922/Tile-2StateWidget.png" alt="Tile-2StateWidget" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-accelerometer"><img class="aligncenter size-full wp-image-4623" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105150/Tile-AccelerometerWidget-ComingSoon.png" alt="Tile-AccelerometerWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-battery"><img class="aligncenter size-full wp-image-4629" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105201/Tile-BatteryWidget-ComingSoon.png" alt="Tile-BatteryWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-button"><img class="aligncenter size-full wp-image-4603" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081942/Tile-ButtonWidget.png" alt="Tile-ButtonWidget" width="120" height="150"></a></td>
 </tr>
 <tr>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#camera-widget"><img class="aligncenter size-full wp-image-4618" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105141/Tile-CameraWidget-ComingSoon.png" alt="Tile-CameraWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#dial-knob-widget"><img class="aligncenter size-full wp-image-4632" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105206/Tile-DialKnobWidget-ComingSoon.png" alt="Tile-DialKnobWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#donut-widget"><img class="aligncenter size-full wp-image-4616" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105138/Tile-DonutWidget-ComingSoon.png" alt="Tile-DonutWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#gallery-widget"><img class="aligncenter size-full wp-image-4619" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105143/Tile-GalleryWidget-ComingSoon.png" alt="Tile-GalleryWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-camera"><img class="aligncenter size-full wp-image-4618" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105141/Tile-CameraWidget-ComingSoon.png" alt="Tile-CameraWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-dial-knob"><img class="aligncenter size-full wp-image-4632" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105206/Tile-DialKnobWidget-ComingSoon.png" alt="Tile-DialKnobWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-donut"><img class="aligncenter size-full wp-image-4616" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105138/Tile-DonutWidget-ComingSoon.png" alt="Tile-DonutWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-gallery"><img class="aligncenter size-full wp-image-4619" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105143/Tile-GalleryWidget-ComingSoon.png" alt="Tile-GalleryWidget-ComingSoon" width="120" height="150"></a></td>
 </tr>
 <tr>
-<td height="150"><a href="#gauge-display"><img class="aligncenter size-full wp-image-4601" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081900/Tile-GaugeWidget.png" alt="Tile-GaugeWidget" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#gyroscope-widget"><img class="aligncenter size-full wp-image-4622" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105148/Tile-GyroscopeWidget-ComingSoon.png" alt="Tile-GyroscopeWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#intrusion-widget"><img class="aligncenter size-full wp-image-4633" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105209/Tile-IntrusionWidget-ComingSoon.png" alt="Tile-IntrusionWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#joystick-widget"><img class="aligncenter wp-image-4627 size-full" style="border: 0 !important;" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105157/Tile-JoystickWidget-ComingSoon.png" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-gauge"><img class="aligncenter size-full wp-image-4601" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081900/Tile-GaugeWidget.png" alt="Tile-GaugeWidget" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-gyroscope"><img class="aligncenter size-full wp-image-4622" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105148/Tile-GyroscopeWidget-ComingSoon.png" alt="Tile-GyroscopeWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-intrusion"><img class="aligncenter size-full wp-image-4633" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105209/Tile-IntrusionWidget-ComingSoon.png" alt="Tile-IntrusionWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-joystick"><img class="aligncenter wp-image-4627 size-full" style="border: 0 !important;" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105157/Tile-JoystickWidget-ComingSoon.png" width="120" height="150"></a></td>
 </tr>
 <tr>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#lcd-widget"><img class="aligncenter size-full wp-image-4626" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105155/Tile-LCDWidget-ComingSoon.png" alt="Tile-LCDWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#lighting-widget"><img class="aligncenter size-full wp-image-4628" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105159/Tile-LightingWidget-ComingSoon.png" alt="Tile-LightingWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#line-chart-display"><img class="aligncenter size-full wp-image-4600" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081838/Tile-LineChartWidget.png" alt="Tile-LineChartWidget" width="120" height="150"></a></td>
-<td height="150"><a href=""><img class="aligncenter size-full wp-image-4621" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105147/Tile-MagnetometerWidget-ComingSoon.png" alt="Tile-MagnetometerWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-lcd"><img class="aligncenter size-full wp-image-4626" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105155/Tile-LCDWidget-ComingSoon.png" alt="Tile-LCDWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-lighting"><img class="aligncenter size-full wp-image-4628" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105159/Tile-LightingWidget-ComingSoon.png" alt="Tile-LightingWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-line-chart"><img class="aligncenter size-full wp-image-4600" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081838/Tile-LineChartWidget.png" alt="Tile-LineChartWidget" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-magnetometer"><img class="aligncenter size-full wp-image-4621" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105147/Tile-MagnetometerWidget-ComingSoon.png" alt="Tile-MagnetometerWidget-ComingSoon" width="120" height="150"></a></td>
 </tr>
 <tr>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#map-widget"><img class="aligncenter size-full wp-image-4620" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105145/Tile-MapWidget-ComingSoon.png" alt="Tile-MapWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#meter-widget"><img class="aligncenter size-full wp-image-4630" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105203/Tile-MeterWidget-ComingSoon.png" alt="Tile-MeterWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#motion-widget"><img class="aligncenter size-full wp-image-4615" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105136/Tile-MotionWidget-ComingSoon.png" alt="Tile-MotionWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#proximity-widget"><img class="aligncenter size-full wp-image-4614" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105134/Tile-ProximityWidget-ComingSoon.png" alt="Tile-ProximityWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-map"><img class="aligncenter size-full wp-image-4620" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105145/Tile-MapWidget-ComingSoon.png" alt="Tile-MapWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-meter"><img class="aligncenter size-full wp-image-4630" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105203/Tile-MeterWidget-ComingSoon.png" alt="Tile-MeterWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-motion"><img class="aligncenter size-full wp-image-4615" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105136/Tile-MotionWidget-ComingSoon.png" alt="Tile-MotionWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-proximity"><img class="aligncenter size-full wp-image-4614" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105134/Tile-ProximityWidget-ComingSoon.png" alt="Tile-ProximityWidget-ComingSoon" width="120" height="150"></a></td>
 </tr>
 <tr>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#rotary-knob-widget"><img class="aligncenter size-full wp-image-4631" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105204/Tile-RotaryKnobWidget-ComingSoon.png" alt="Tile-RotaryKnobWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#signal-widget"><img class="aligncenter size-full wp-image-4625" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105154/Tile-SignalWidget-ComingSoon.png" alt="Tile-SignalWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#slider-control"><img class="aligncenter size-full wp-image-4604" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081959/Tile-SliderWidget.png" alt="Tile-SliderWidget" width="120" height="150"></a></td>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#switch-widget"><img class="aligncenter size-full wp-image-4624" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105152/Tile-SwitchWidget-ComingSoon.png" alt="Tile-SwitchWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-rotary-knob"><img class="aligncenter size-full wp-image-4631" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105204/Tile-RotaryKnobWidget-ComingSoon.png" alt="Tile-RotaryKnobWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-signal"><img class="aligncenter size-full wp-image-4625" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105154/Tile-SignalWidget-ComingSoon.png" alt="Tile-SignalWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-slider"><img class="aligncenter size-full wp-image-4604" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081959/Tile-SliderWidget.png" alt="Tile-SliderWidget" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-switch"><img class="aligncenter size-full wp-image-4624" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105152/Tile-SwitchWidget-ComingSoon.png" alt="Tile-SwitchWidget-ComingSoon" width="120" height="150"></a></td>
 </tr>
 <tr>
-<td height="150"><a href="http://www.cayenne-mydevices.com/CayenneStaging/docs/#text-widget"><img class="aligncenter size-full wp-image-4617" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105140/Tile-TextWidget-ComingSoon.png" alt="Tile-TextWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#value-display"><img class="aligncenter size-full wp-image-4599" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081807/Tile-ValueWidget.png" alt="Tile-ValueWidget" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-text"><img class="aligncenter size-full wp-image-4617" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105140/Tile-TextWidget-ComingSoon.png" alt="Tile-TextWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-value"><img class="aligncenter size-full wp-image-4599" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081807/Tile-ValueWidget.png" alt="Tile-ValueWidget" width="120" height="150"></a></td>
 <td height="150"></td>
 <td height="150"></td>
 </tr>
@@ -88,13 +88,13 @@ Select your method of connectivity; is your sensor connected to Digital pins, or
    - **Digital** <br/>
 A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
    - **Virtual** <br/>
-[Virtual pins](#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Icon** <br/>
 Select an Icon to be used for the widget. For example, a temperature sensor could a thermometer Icon.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the 2 State code for this widget to your Arduino, click the **Sketch File** button to open the [2 State Widget sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino). See [Using Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the 2 State code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">2 State Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -136,7 +136,7 @@ Select your method of connectivity; is your sensor connected to Digital pins, or
    - **Digital** <br/>
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget.
@@ -145,7 +145,7 @@ Select the Data type and the Units to be used for the widget.
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Accelerometer code for this widget to your Arduino, click the **Sketch File** button to [open the (Coming Soon) Arduino Accelerometer Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See Using Sketch Files for more information on customizing and using sketch files.
+If you haven’t already uploaded the Accelerometer code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Arduino Accelerometer Widget sketch file</a>. See Using Sketch Files for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -186,13 +186,13 @@ Select your method of connectivity; is your sensor connected to Digital pins, or
 A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
 
    - **Virtual** <br/>
-[Virtual pins](#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a battery may have percent remaining or a measure of the power level.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Battery code for this widget to your Arduino, click the **Sketch File** button to [open the (Coming Soon) Arduino Accelerometer Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See [Using Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Battery code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Arduino Accelerometer Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -240,7 +240,7 @@ You can control the actuator state (high / low) through the digital pin on the A
 Select an Icon to be used for the widget. For example, a light switch might have a light bulb icon.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Button code for this widget to your Arduino, click the **Sketch File** button to [Button Widget sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/ButtonWidget/ButtonWidget.ino). See [Using Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Button code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/ButtonWidget/ButtonWidget.ino" target="_blank">Button Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -325,7 +325,7 @@ Select the Data type and the Units to be used for the widget. For example, a lig
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Dial Knob code for this widget to your Arduino, click the **Sketch File** button to [(Coming Soon) Dial Knob Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See [Using Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Dial Knob code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Dial Knob Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -362,7 +362,7 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
    
    - **Analog** <br/>
@@ -381,7 +381,7 @@ Select the Data type and the Units to be used for the widget. For example, a dis
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Donut code for this widget to your Arduino, click the **Sketch File** button to [(Coming Soon) Donut Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See [Using Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Donut code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Donut Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -418,7 +418,7 @@ Give your sensor a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#using-analog-vs-virtual-pins)
+Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
    - **Analog** <br/>
 If you’re trying to read data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.<br/><br/>
@@ -432,7 +432,7 @@ Select the Data type and the Units to be used for the widget. For example, a tem
 Input the minimum and maximum values that you’d like the gauge widget to use when displaying the range of data for your sensor. This can help improve the visualization of your sensor data as it displays on the gauge widget.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Gauge code for this widget to your Arduino, click the **Sketch File** button to open the [Gauge Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/GaugeWidget/GaugeWidget.ino). See [Using Sketch Files](http://www.cayenne-mydevices.com/CayenneStaging/docs/#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Gauge code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/GaugeWidget/GaugeWidget.ino" target="_blank">Gauge Widget sketch file</a>. See [Using Sketch Files](http://www.cayenne-mydevices.com/CayenneStaging/docs/#using-sketch-files-arduino) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.
@@ -515,7 +515,7 @@ Select the Data type and the Units to be used for the widget.
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File**<br/>
-If you haven’t already uploaded the Gyroscope code for this widget to your Arduino, click the Sketch File button to open the [Gyroscope Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Gyroscope code for this widget to your Arduino, click the Sketch File button to open the <a href="" target="_blank">Gyroscope Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**</br>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.<br/><br/>
@@ -558,7 +558,7 @@ You can control the widget state (high / low) through the digital pin on the Ard
 [Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Step 1: Sketch File**<br/>
-If you haven’t already uploaded the Intrusion code for this widget to your Arduino, click the Sketch File button to open the [Intrusion Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Intrusion code for this widget to your Arduino, click the Sketch File button to open the <a href="" target="_blank">Intrusion Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**</br>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.<br/><br/>
@@ -607,7 +607,7 @@ Select the Data type and the Units to be used for the widget. For example, a lig
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Joystick code for this widget to your Arduino, click the Sketch File button to open the [Joystick Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Joystick code for this widget to your Arduino, click the Sketch File button to open the <a href="" target="_blank">Joystick Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**</br>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.<br/><br/>
@@ -649,7 +649,7 @@ Select the Virtual pin that your LCD will use when displaying values.
 [Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the LCD code for this widget to your Arduino, click the Sketch File button to open the [(Coming Soon)LCD Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See [Using Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the LCD code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon)LCD Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**</br>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.<br/><br/>
@@ -700,7 +700,7 @@ Select the Data type and the Units to be used for the widget. For example, a lig
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Lighting code for this widget to your Arduino, click the **Sketch File** button to open the [(Coming Soon) Lighting Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See Using [Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Lighting code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Lighting Widget sketch file</a>. See Using [Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -736,7 +736,7 @@ Give your sensor a name.
 Select your Arduino device.
 
 **Connectivity** <br/>
-Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#using-analog-vs-virtual-pins)
+Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
    - **Analog** <br/>
 If you’re trying to read data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.
@@ -749,7 +749,7 @@ Select the Data type and the Units to be used for the widget. For example, a tem
 Input the minimum and maximum values that you’d like the line graph widget to use when displaying the range of data for your sensor. This can help improve the visualization of your sensor data as it displays on the line graph.
 
 **Step 1: Sketch File**
-If you haven’t already uploaded the Line Chart code for this widget to your Arduino, click the **Sketch File** button to open the [Line Chart Widget sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/LineChartWidget/LineChartWidget.ino). See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Line Chart code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/LineChartWidget/LineChartWidget.ino" target="_blank">Line Chart Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**
 After filling in each of the fields for your widget, click the Add Widget button and the widget will be added to your dashboard.<br/><br/>
@@ -800,7 +800,7 @@ Select the Data type and the Units to be used for the widget.
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Magnetometer code for this widget to your Arduino, click the **Sketch File** button to open the [(Coming Soon) Magnetometer sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See Using [Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Magnetometer code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Magnetometer sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -848,7 +848,7 @@ The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino 
 Select the Data type and the Units to be used for the widget. For example, a map of GPS devices might have Data type of Location and Units of GPS coordinates.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Map code for this widget to your Arduino, click the **Sketch File** button to open the [(Coming Soon) Map Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See Using [Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Map code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Map Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -884,7 +884,7 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
@@ -896,7 +896,7 @@ The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino 
 Select the Data type and the Units to be used for the widget. For example, a liquid level widget could have a Data type of Liquid and Units of Gallons.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Meter code for this widget to your Arduino, click the **Sketch File** button to open the [(Coming Soon) Meter Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See Using [Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Meter code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Meter Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -932,16 +932,16 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 You can control the widget state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the [(Coming Soon) Motion Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See Using [Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Motion Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -977,19 +977,19 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 You can control the widget state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit**
 Select the Data type and the Units to be used for the widget.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the [(Coming Soon) Proximity Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See Using [Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Proximity Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1025,13 +1025,13 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 You can control the widget state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a voltage adjustment widget might have Data type of Voltage and Units of volts.
@@ -1040,7 +1040,7 @@ Select the Data type and the Units to be used for the widget. For example, a vol
 Input the minimum and maximum values that you’d like the widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the [(Coming Soon) Rotary Knob Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See Using [Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Rotary Knob Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1076,13 +1076,13 @@ Give your actuator a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
 
    - **Virtual** <br/>
-[Virtual pins](#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a cell strength widget might have Data type of Signal Strength and Units of dBM.
@@ -1091,7 +1091,7 @@ Select the Data type and the Units to be used for the widget. For example, a cel
 Input the minimum and maximum values that you’d like the signal widget to use when adjusting the range of data for your widget.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the [(Coming Soon) Signal Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). See Using [Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Signal Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1142,7 +1142,7 @@ Select the Data type and the Units to be used for the widget. For example, a lig
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Slider code for this widget to your Arduino, click the Sketch File button to open the [Slider Widget sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/SliderWidget/SliderWidget.ino). See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Slider code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/SliderWidget/SliderWidget.ino" target="_blank">Slider Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1190,7 +1190,7 @@ You can control the actuator state (high / low) through the digital pin on the A
 Specify the labels to be shown on the widget for the On and Off state names.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Switch code for this widget to your Arduino, click the **Sketch File button** to [open the Switch Widget sketch file](https://github.com/myDevicesIoT/CayenneArduinoSamples/). [See Using Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Switch code for this widget to your Arduino, click the **Sketch File button** to open the <a href="" target="_blank">Switch Widget sketch file</a>. [See Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1262,7 +1262,7 @@ Give your sensor a name.
 Select your Arduino device.
 
 **Connectivity** <br/>
-Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#using-analog-vs-virtual-pins)
+Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
    - **Analog** <br/>
 If you’re trying to read data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.
@@ -1272,10 +1272,7 @@ If you’re trying to read data from an analog sensor, the Arduino may have seve
 Select the Data type, the Units, and the Icon to be used for the widget. For example, a temperature sensor could have a Data type of temperature, Units of Celsius, and a thermometer Icon.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Value code for this widget to your Arduino, click the Sketch File button to open the [Value Widget sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/ValueWidget/ValueWidget.ino). See [Using Sketch Files](#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Value code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/ValueWidget/ValueWidget.ino" target="_blank">Value Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the Add Widget button and the widget will be added to your dashboard.
-
-
-
