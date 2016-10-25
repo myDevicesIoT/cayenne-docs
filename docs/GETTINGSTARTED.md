@@ -4,9 +4,9 @@
 
 
 ## Create Cayenne Account
-You can create an account from [Mobile](http://www.cayenne-mydevices.com/CayenneStaging/docs#mobile-apps) or online. Mobile is the easiest and fastest way, but instructions for online set up are below:
+You can create an account from [Mobile](#downloads-mobile-apps) or online. Mobile is the easiest and fastest way, but instructions for online set up are below:
 
-On the [Sign Up page](https://cayenne.mydevices.com/cayenne/signup?_ga=1.165612799.1524412540.1457034675), enter your Name, Email and create a Password.
+On the <a href="https://cayenne.mydevices.com/cayenne/signup?_ga=1.165612799.1524412540.1457034675" target="_blank">Sign Up page</a>, enter your Name, Email and create a Password.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601095407/Sign-Up.png" width="600" height="610" alt="Sign up for Cayenne"></p>
 
@@ -14,11 +14,11 @@ On the [Sign Up page](https://cayenne.mydevices.com/cayenne/signup?_ga=1.1656127
 
 
 ## Choose Device
-Cayenne currently supports Raspberry Pi and Arduino devices currently.  Select the device you would like to get started with in your IoT project.
+Cayenne currently supports Raspberry Pi, Arduino and LoRa devices. Select the device you would like to get started with in your IoT project.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616132558/1st-Experience-Step-1-choose-device.png" width="600" height="384" alt="Choose a Device"></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/step-1-choose-device-category-2.png" width="600" height="359" alt="Choose device category"><br/><br/></p>
 
-The next section covers getting started with a Raspberry Pi device.  If you’re using an Arduino device to get started, [click here](http://www.cayenne-mydevices.com/CayenneStaging/docs#arduino-arduino).
+The next section covers getting started with a Raspberry Pi device.  If you’re using an Arduino device to get started, [click here](#getting-started-arduino). If you’re using a LoRa device to get started, [click here](#getting-started-lora).
 
 <p id="raspberry-pi" class="anchor-link"></p>
 
@@ -29,9 +29,10 @@ The next section covers getting started with a Raspberry Pi device.  If you’re
 
 
 ### Getting started in minutes!
+
 1. Power on your Raspberry Pi. Connect the power adapter to your Raspberry Pi.
 2. Connect the Pi to the Internet. Connect your Raspberry Pi to the Internet using an Ethernet cable. Or, if you have a Wi-Fi dongle setup already this works too.
-3. Make sure the Raspbian operating system is installed. Cayenne works with Jessie OS versions of Raspbian. Please make sure one of these is pre-installed to the sd card. If you need to install the Raspbian operating system, [click here](https://www.raspberrypi.org/downloads/raspbian/).
+3. Make sure the Raspbian operating system is installed. Cayenne works with Jessie OS versions of Raspbian. Please make sure one of these is pre-installed to the sd card. If you need to install the Raspbian operating system, <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">click here</a>.
 
    **Note:** You do not need to make any configuration changes to the Pi device. Cayenne automatically handles setting up and configuring your Pi for use. However, it is recommended that you expand the filesystem on the flash card if necessary. Please refer to raspi-config if you need additional information on performing this step.
 
@@ -48,7 +49,7 @@ The next section covers getting started with a Raspberry Pi device.  If you’re
 
 Before you can manage your Raspberry Pi device using the mobile app, you must install the Cayenne app onto your mobile device. Installing and using the mobile app is the easiest way to get started with Cayenne. If you need additional help on this step, refer to the video tutorial above.
 
-Visit the [Mobile App download page](http://www.cayenne-mydevices.com/CayenneStaging/docs#mobile-apps) to find the appropriate app store link for your device.
+Visit the [Mobile App download page](#downloads-mobile-apps) to find the appropriate app store link for your device.
 
 After installing the Cayenne app onto your mobile device, you will be guided through finding and installing Cayenne on all of your Raspberry Pi devices.
 
@@ -56,7 +57,7 @@ After installing the Cayenne app onto your mobile device, you will be guided thr
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/Qx0IHv-UR-0" frameborder="0" allowfullscreen></iframe></p>
 
-(1.) Before you can manage your Raspberry Pi device using the online dashboard, you must install Cayenne onto the device.
+**1. Before you can manage your Raspberry Pi device using the online dashboard, you must install Cayenne onto the device.**
 
 After verifying your Raspberry Pi is setup and powered on, you can continue with connecting your device to Cayenne.
 
@@ -66,7 +67,7 @@ The instructions for installing Cayenne onto your device are displayed on screen
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616133821/1st-Experience-RPI-Step-3-connect-rpi.png" width="600" height="382" alt="Raspberry Pi Step 3"></p>
 
-(2.) As soon as the installation process starts, the Installing screen automatically appears. From here you can check on the installation process as it completes.
+**2. As soon as the installation process starts, the Installing screen automatically appears. From here you can check on the installation process as it completes.**
 
 Cayenne installs on your Raspberry Pi in 4 steps:
 
@@ -79,7 +80,7 @@ __This may take up to 10 minutes. Please be patient.__
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160205134947/Screenshot-123.png" width="600" height="382" alt="Installing Cayenne"></p>
 
-(3.) As soon as the installation process completes, the Online Dashboard will automatically appear. Your Raspberry Pi is now ready to use!
+**3. As soon as the installation process completes, the Online Dashboard will automatically appear. Your Raspberry Pi is now ready to use!**
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601102506/RaspberryPi-1stExperience.jpg" width="600" height="382" alt="Cayenne First Experience"></p>
 
@@ -87,16 +88,16 @@ __This may take up to 10 minutes. Please be patient.__
 
 
 ### Sensors
-Cayenne works with temperature, luminosity, pressure/distance, motion and generic sensors connected to your Raspberry Pi devices. [View supported sensors](http://www.cayenne-mydevices.com/CayenneStaging/docs#sensors-supported-hardware)
+Cayenne works with temperature, luminosity, pressure/distance, motion and generic sensors connected to your Raspberry Pi devices. [View supported sensors](#supported-hardware-sensors)
 
 **EXAMPLE**: Let’s add a BMP180 temperature and pressure sensor to see how easy it is to get started.
 
-Connect the BMP180 as shown here. [View BMP180 hardware tutorial](http://www.cayenne-mydevices.com/CayenneStaging/docs#rpi-bmp180)
+Connect the BMP180 as shown here. [View BMP180 hardware tutorial](#supported-hardware-sensors-temperature-bmp180-rpi-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121157/RPI-BMP180-Step-4.png" width="600" height="193" alt="Cayenne Step 4"></p>
 
 
-Click **Add New > Device / Widget**.
+Click **Add New** > **Device / Widget**.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"></p>
 
@@ -120,11 +121,11 @@ You can check the current status of your sensor at any time by visiting the dash
 
 
 ### Actuators
-Cayenne works with light, motor, valve, relay and generic actuators that are connected to your Raspberry Pi devices. [View supported actuators](http://www.cayenne-mydevices.com/CayenneStaging/docs#actuators-supported-hardware)
+Cayenne works with light, motor, valve, relay and generic actuators that are connected to your Raspberry Pi devices. [View supported actuators](#supported-hardware-actuators)
 
 **EXAMPLE**: We will switch on an LED connected to your Raspberry Pi using Cayenne.
 
-Connect an LED to Channel 23 as shown here. [View LED tutorial](http://www.cayenne-mydevices.com/CayenneStaging/docs#rpi-digital-output-led)
+Connect an LED to Channel 23 as shown here. [View LED tutorial](#supported-hardware-actuators-generic-digital-output-rpi-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121207/RPI-Digital-Out-Led-Step-2.png" width="600" height="193" alt="LED Step 2"></p>
 
@@ -134,7 +135,7 @@ Click **Add New > Device / Widget**.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"></p>
 
 1. Select **Actuators**, then **Light**, then **Light Switch**.
-2. Enter “LED” in name field.
+2. Enter “LED” in **Name** field.
 3. Choose channel 23.
 4. Click **Add Actuator**.
 
@@ -150,7 +151,7 @@ The LED widget has been added to your dashboard. Click the LED button in the das
 
 ### Extensions
 
-You can add analog, digital and PWM extensions to your Raspberry Pi. This allows you to add more sensors and actuators to your Raspberry Pi. [View supported extensions](http://www.cayenne-mydevices.com/CayenneStaging/docs#extensions-supported-hardware)
+You can add analog, digital and PWM extensions to your Raspberry Pi. This allows you to add more sensors and actuators to your Raspberry Pi. [View supported extensions](#supported-hardware-extensions)
 
 <p id="arduino-arduino" class="anchor-link"></p>
 
@@ -173,9 +174,11 @@ Before you can manage your Arduino device using the online dashboard, you must s
 Begin by verifying that your Arduino board and PC/Mac are correctly set up before continuing.
 
 1. **Make sure your Arduino is connected to the Internet**<br/>
+
    On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have a shield supported by Cayenne installed and working
    
 2. **Make sure your Arduino is connected to a PC/Mac via the USB cable**<br/>
+
    Power on your Arduino by connecting your Arduino with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the power LED lit on your board.
    
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616134313/1st-Experience-Arduino-Step-2-setup-arduino.png" width="600" height="384" alt="Step 2 Arduino"></p>
@@ -184,6 +187,7 @@ Begin by verifying that your Arduino board and PC/Mac are correctly set up befor
 
 
 #### Using Cayenne Arduino Library
+
 The Cayenne Arduino Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards. Cayenne sketch files can be combined with other sketch files for your IoT projects.
 
 If you need to download the Cayenne Arduino Library, [click here](https://s3.amazonaws.com/mydevices-cayenne/arduino/lib/prod/Cayenne.zip).
@@ -192,22 +196,20 @@ If you need to download the Cayenne Arduino Library, [click here](https://s3.ama
 
 
 ##### Installing Arduino IDE Software
-To use the Cayenne Arduino Library, the Arduino IDE software should be installed. Go to [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
+To use the Cayenne Arduino Library, the Arduino IDE software should be installed. Go to <a href="https://www.arduino.cc/en/Main/Software" target="_blank">https://www.arduino.cc/en/Main/Software</a> to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
 
 
-##### Installing Cayenne Library
+##### Add Cayenne Library to Arduino IDE
 
-The Cayenne Arduino Library is distributed as a ZIP file. Do not unzip the downloaded library, leave it as is. Open the Arduino IDE and navigate to **Sketch > Include Library**. At the top of the drop down list, select the option **Add .ZIP Library**.
+The Cayenne Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards. Cayenne sketch files can be combined with other sketch files for your IoT projects.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601124500/ImportingCayenneLibrary.jpg" width="600" height="913" alt="Importing Cayenne Library"></p>
+The Cayenne Library is available directly from the Arduino IDE Libraries list. To install the library, select **Sketch** > **Include library** > **Manage Libraries**. The *Library Manager* dialog will appear. From here, search for the **Cayenne** library and install it.
 
-You will be prompted to select the library you would like to add. Navigate to where you downloaded the Cayenne library zip file and select the **Cayenne.zip** file.
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-manage-libraries.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601124529/CayenneZipFile.jpg" width="600" height="498" alt="Cayenne ZIP File"></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-add-Cayenne-lib-using-Lib-Manager.png" width="600" height="542" alt="arduino-ide-add-cayenne-lib-using-lib-manager"><br/><br/></p>
 
-The Cayenne zip file has now been expanded in the libraries folder in your Arduino sketches directory.
-
-Return to the **Sketch > Include Library** menu. You should now see the **Cayenne** library at the bottom of the drop-down menu under **Contributed Libraries**. The Cayenne library is now ready to be used in your sketch file.
+The Cayenne library has now been expanded in the libraries folder in your Arduino sketches directory. You can verify this by going to the **Sketch** > **Include Library** menu where you should now see the Cayenne library at the bottom of the drop-down menu under *Contributed Libraries*. The Cayenne library is now ready to be used in your project.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601124601/CayenneLibraryInstalled.jpg" width="600" height="925" alt="Cayenne Library Installed"></p>
 
@@ -218,15 +220,15 @@ Return to the **Sketch > Include Library** menu. You should now see the **Cayenn
 
 After setting up your PC/Mac computer with the Arduino IDE and the Cayenne Library, you are ready to install Cayenne onto your device. Continue to Step 3 of the Arduino installation, where you will connect your board with Cayenne.
 
-On this screen, select the Arduino board that you are using from the list of [supported boards](http://www.cayenne-mydevices.com/CayenneStaging/docs#arduino-microcontrollers). As you select your Arduino board, a list of connections appears below the board name. Select the connection type that you are using.
+On this screen, select the Arduino board that you are using from the list of [supported boards](#supported-hardware-microcontrollers-arduino). As you select your Arduino board, a list of connections appears below the board name. Select the connection type that you are using.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616135653/1st-Experience-Arduino-Step-3-board-expanded1.png" width="600" height="385" alt="Arduino Step 3"></p>
 
-Click on the Sketch button next to the connection you will be using and a popup will appear with the sketch file you will need when flashing your Arduino device. The sketch file will contain everything you need to connect your device to Cayenne, including your [authentication token](http://www.cayenne-mydevices.com/CayenneStaging/docs#finding-auth-token).
+Click on the Sketch button next to the connection you will be using and a popup will appear with the sketch file you will need when flashing your Arduino device. The sketch file will contain everything you need to connect your device to Cayenne, including your [authentication token](#sketch-files-finding-auth-token).
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616135934/1st-Experience-Arduino-Step-3-connection-example.png" width="600" height="385" alt="Arduino Step 3 Connection Example"></p>
 
-Copy & paste the sketch file contents into Arduino IDE and select **Sketch -> Upload** to upload the sketch file to your device.
+Copy & paste the sketch file contents into Arduino IDE and select **Sketch** > **Upload** to upload the sketch file to your device.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616151042/Arduino-IDE-paste-example-sketch-for-connection.png" width="600" height="555" alt="Arduino IDE paste example sketch"></p>
 
@@ -236,26 +238,26 @@ As soon as your Arduino device comes online and connects to Cayenne, you will se
 
 **Congrats! You are all set! Now your hardware is connected to the Cayenne Cloud!**
 
-If you run into any troubles, see Troubleshooting for things to check.
+If you run into any troubles, see [Troubleshooting](#getting-started-arduino-troubleshooting) for things to check.
 
 <p id="sensors-arduino" class="anchor-link"></p>
 
 
 ### Sensors
 
-Cayenne works with any sensor that is connected to an Arduino. We’ve created [sketch files](https://github.com/myDevicesIoT/CayenneArduinoSamples) for the various temperature, luminosity, pressure, proximity, motion and generic sensor models.
+Cayenne works with any sensor that is connected to an Arduino. We’ve created <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples" target="_blank">sketch files</a> for the various temperature, luminosity, pressure, proximity, motion and generic sensor models.
 
 **EXAMPLE:** Let’s add temperature sensor TMP36 to see how easy it is.
 
-Connect the TMP36 as shown here. [View TMP36 hardware tutorial](http://www.cayenne-mydevices.com/CayenneStaging/docs#arduino-tmp36)
+Connect the TMP36 as shown here. [View TMP36 hardware tutorial](#supported-hardware-sensors-temperature-tmp36-arduino-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121144/Arduino_TMP36_step3_bb.png" width="600" height="380" alt="Arduino TMP36 Step 3"></p>
 
-Click **Add New > Device / Widget**.
+Click **Add New** > **Device / Widget**.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"></p>
 
-1. Choose **Sensor > Temperature > TMP36**.
+1. Choose **Sensor** > **Temperature** > **TMP36**.
 2. Choose **Virtual** from the I/O field.
 3. We will use Virtual Pin 1 for this example. Choose **V1** from the **Pin** field.
 4. Click the **Step 1: Sketch File** button to view the sketch file.
@@ -266,9 +268,9 @@ A popup will appear showing the TMP36 sketch file. Copy the sketch file contents
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151040/Add-Device-Arduino-TMP36-Sketch-file2.png" width="600" height="386" alt="Arduino Add Device TMP361 Sketch File"></p>
 
-Paste the TMP36 sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **authentication token** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](http://www.cayenne-mydevices.com/CayenneStaging/docs#using-sketch-files-arduino)
+Paste the TMP36 sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **authentication token** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](#sketch-files-using-sketch-files)
 
-In this case, we are using the default Virtual Pin 1 which is already defined in the sketch file, so the sketch file should be OK to use as is. After verifying the sketch file looks good, select **Sketch -> Upload** to upload the sketch file to your device.
+In this case, we are using the default Virtual Pin 1 which is already defined in the sketch file, so the sketch file should be OK to use as is. After verifying the sketch file looks good, select **Sketch** > **Upload** to upload the sketch file to your device.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160603151539/TMP36-ArduinoIDE.jpg" width="600" height="836" alt="Arduino IDE TMP361"></p>
 
@@ -281,19 +283,19 @@ In the Cayenne dashboard, you can now click the **Step 2: Add Sensor** button an
 
 ### Actuators
 
-Cayenne works with actuators that are connected to an Arduino.  We’ve created [sketch files](https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Actuators) for light, motor, valve, relay and generic actuators.
+Cayenne works with actuators that are connected to an Arduino.  We’ve created <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Actuators" target="_blank">sketch files</a> for light, motor, valve, relay and generic actuators.
 
 **EXAMPLE:** Let’s add a luminosity actuator widget.
 
-For this example, attach a LED to a PWM-enabled Pin on your Arduino Uno. Let’s use D6 in this example. [View Luminosity hardware tutorial](http://www.cayenne-mydevices.com/CayenneStaging/docs#arduino-luminosity)
+For this example, attach a LED to a PWM-enabled Pin on your Arduino Uno. Let’s use D6 in this example. [View Luminosity hardware tutorial](#supported-hardware-actuators-light-luminosity-arduino-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601112652/Arduino-Luminosity-Step-2.png" width="600" height="307" alt="Arduino Luminosity Step 2"></p>
 
-Click **Add New > Device / Widget**.
+Click **Add New** > **Device / Widget**.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"></p>
 
-1. Choose **Actuator > Light > Luminosity**.
+1. Choose **Actuator** > **Light** > **Luminosity**.
 2. Choose **Virtual** from the I/O field.
 3. We will use Virtual Pin 1 for this example. Choose **V1** from the **Pin field**.
 4. Click the **Step 1: Sketch File** button to view the sketch file.
@@ -304,7 +306,7 @@ A popup will appear showing the Luminosity sketch file. Copy the sketch file con
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617152613/Add-Device-Arduino-Luminosity-sketch-file2.png" width="600" height="386" alt="Arduino Luminosity Sketch File"></p>
 
-Paste the Luminosity sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **authentication token** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](http://www.cayenne-mydevices.com/CayenneStaging/docs#using-sketch-files-arduino)
+Paste the Luminosity sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **authentication token** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](#sketch-files-using-sketch-files)
 
 In this case, the example sketch file assumes that we used Digital Pin 3 to connect our Luminosity actuator, but we used Digital Pin 6 instead. We will need to update the sketch file to correct the pin. Find and update the **LED_DIGITAL_PIN** definition so that it points at pin 6.
 
@@ -312,7 +314,7 @@ In this case, the example sketch file assumes that we used Digital Pin 3 to conn
 #define LED_DIGITAL_PIN 6
 ```
 
-After verifying the sketch file looks good, select Sketch -> Upload to upload the sketch file to your device.
+After verifying the sketch file looks good, select **Sketch** > **Upload** to upload the sketch file to your device.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151924/Arduino-Luminosity-in-Arduino-IDE.png" width="600" height="554" alt="Arduino Luminosity in Arduino IDE"></p>
 
@@ -327,7 +329,7 @@ In the Cayenne dashboard, you can now click the **Step 2: Add Actuator** button 
 
 We’ve integrated some specific sensors and actuators, but there are thousands of sensors, actuators and other devices that get connected to Arduino boards. Custom widgets allow you to send and receive data from any device that is connected to your Arduino board to Cayenne.
 
-[Cayenne Custom Widgets Documentation](http://www.cayenne-mydevices.com/CayenneStaging/docs#widgets)
+[Cayenne Custom Widgets Documentation](#custom-widgets)
 
 **EXAMPLE:** Let’s see how easy it is to use a Custom Widget in Cayenne. We will switch on an LED connected to your Raspberry Pi using a custom Button widget.
 
@@ -335,17 +337,19 @@ Connect an LED to Digital Pin 8 as shown here. [View light switch tutorial](http
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601105118/Arduino_LED_step2_bb.png" width="600" height="317" alt="Arduino LED Step 2"></p>
 
-Click **Add New > Device / Widget**.
+Click **Add New** > **Device / Widget**.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"></p>
 
 1. Select **Custom Widgets**, then the **Button** Widget.
-2. Enter the following settings:<br/>
-   **Widget Name:** LED<br/>
-   **Device:** Arduino<br/>
-   **Connectivity:** Digital<br/>
-   **Pin:** D8<br/>
+2. Enter the following settings:
+
+   **Widget Name:** LED
+   **Device:** Arduino
+   **Connectivity:** Digital
+   **Pin:** D8
    **Icon:** LED
+
 3. Click **Add Widget**.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601132656/Arduino-Custom-Button-Widget.png" width="600" height="355" alt="Arduino Custom Button Widget"></p>
