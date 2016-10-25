@@ -208,7 +208,9 @@ Cayenne allows you to create triggered actions on and between your Raspberry Pis
 
 ### Setting up triggers
 
+**Example trigger**
 Let’s create our first trigger. We’ll create a trigger to turn on our light when the temperature reaches a certain value.
+
 
 1. To begin creating a Trigger, click **Add New Trigger** from top right navigation.
    
@@ -218,33 +220,31 @@ Let’s create our first trigger. We’ll create a trigger to turn on our light 
    
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145622/Triggers-000.jpg" width="600" height="376" alt="Triggers"><br/></p>
    
-   From here, you can fill in all the details required for creation of your trigger. When creating a new trigger, the empty screen serves as an overview of the creation process.
+   From here, you can fill in all the details required for creation of your trigger. When creating a new trigger, the empty screen serves as an overview of the creation process. All triggers follow the general format of **IF** my device senses something, **THEN** do something in response.
 
-Example: **IF** my device senses something, **THEN** do something in response.
-
-1. Let’s begin by giving our trigger a name. Enter **“Arduino Uno TMP36 is above 80, Turn on Raspberry Pi Light Switch”** into the Trigger Name field.
+3. Let’s begin by giving our trigger a name. Enter **“Arduino Uno TMP36 is above 80, Turn on Raspberry Pi Light Switch”** into the Trigger Name field.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145732/Triggers-01.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
 
-2. We’re going to trigger a light turning on when a temperature sensor on the Arduino device is above 80 degrees. The TMP36 temperature sensor is located on our Arduino device, so drag & drop the **Arduino** device into the **IF** statement.
+4. We’re going to trigger a light turning on when a temperature sensor on the Arduino device is above 80 degrees. The TMP36 temperature sensor is located on our Arduino device, so drag & drop the **Arduino** device into the **IF** statement.
    
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145843/Triggers-02.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
    
-3. After selecting the TMP36 temperature sensor, we can choose whether we want to trigger an action if temperature is above or below a certain value.
+5. After selecting the TMP36 temperature sensor, we can choose whether we want to trigger an action if temperature is above or below a certain value.
 
    We want to react to the temperature being high, so we select **Temperature** from the list and select **Temperature Above** in the options presented and choose 80 degrees for this example.
    
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145950/Triggers-03.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
    
-4. We want to take action once the temperature is high by turning on the light in our **Raspberry Pi*. Drag & drop the Raspberry Pi device into the **THEN** statement area.
+6. We want to take action once the temperature is high by turning on the light in our **Raspberry Pi*. Drag & drop the Raspberry Pi device into the **THEN** statement area.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150032/Triggers-04.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
 
-5. We can now choose an action to take on our **Raspberry Pi**. Since we want to turn on the light, select **Light Switch** from the actions list and then choose On from the list of options available.
+7. We can now choose an action to take on our **Raspberry Pi**. Since we want to turn on the light, select **Light Switch** from the actions list and then choose On from the list of options available.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150131/Triggers-05.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
 
-6. We’re done! Click **Save Trigger** to complete our trigger and return to the Triggers list where our new trigger is shown.
+8. We’re done! Click **Save Trigger** to complete our trigger and return to the Triggers list where our new trigger is shown.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150219/Triggers-06.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
    
