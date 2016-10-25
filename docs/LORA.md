@@ -339,6 +339,7 @@ We will walk you through these steps in the following sections.
 
 
 ### Create account
+
 To create your Senet account, visit the <a href="https://portal.senetco.com/" target="_blank">Senet Portal</a>. Follow the **Register as a new user** process located there to get started.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-portal-register-account.png" width="600" height="363" alt="Senet"><br/><br/></p>
@@ -350,7 +351,7 @@ Before you can use your LoRa device on the Senet network, it must be registered 
 
 **Log into the Senet portal**
 
-Start by going to the <a href="https://portal.senetco.com/" target="_blank">Senet portal</a> and logging into your account.
+Start by going to the <a href="https://portal.senetco.com/" target="_blank">Senet portal</a> and logging into your account. Once logged in, you can proceed with registering a new device.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125129/Senet-login.png" width="600" height="318" alt="Senet"><br/><br/></p>
 
@@ -358,25 +359,32 @@ Start by going to the <a href="https://portal.senetco.com/" target="_blank">Sene
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/_mrDBWEDMuU" frameborder="0" allowfullscreen></iframe></p>
 
-To get started with a new device, click on the **Register new device** button. Enter in the **Device ID** (this will be the *DevEUI* located on the device or given to you when purchased) and a description for the device. Click **Submit** to register the device.
+To get started with a new device, click on the **Register new device** button. The *New node* screen will appear.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125357/Senet-register-button-hlt.png" width="600" height="336" alt="Senet"><br/><br/></p>
 
+From the *New node* screen, enter in the **Device ID** (this will be the *DevEUI* located on the device or given to you when purchased) and a description for the device. Click **Submit** to complete registering the device.
+
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125416/Senet-new-node.png" width="600" height="291" alt="Senet"><br/><br/></p>
+
+Click on the **Back to Node List** button to return to the landing screen. Your device will now appear in the list of devices shown here.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
+
 
 ### Setup device forwarding to Cayenne
 
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/T7m0f8UCdQk" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/GtYMcNepUIE" frameborder="0" allowfullscreen></iframe></p>
 
-In order for Cayenne to be able to able to receive your device’s information, you will need to setup packet forwarding in the Device Setup/Edit screen. Click on the device in the device list to open its dashboard.
+In order for Cayenne to be able to able to receive your device’s information, you will need to setup packet forwarding. To do so, click on the device in the device list and its dashboard screen will open.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125444/Senet-device-dashboard.png" width="600" height="410" alt="Senet"><br/><br/></p>
 
-From the **cogwheel** menu, select **Device Edit** and the *Device Setup/Edit* screen appears.
+With the device dashboard screen open, click on the **cogwheel** menu and select **Device Edit**. The *Device Setup/Edit* screen appears.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125508/Senet-menu-device-edit.png" width="600" height="208" alt="Senet"><br/><br/></p>
 
-From this screen we can setup the device so that it forwards data to Cayenne.
+From the *Device Setup/Edit* screen we can setup the device so that it forwards data to Cayenne. To do so, enter the following information:
 
 1. From the **Forward To** dropdown select the **HTTP Post** option.
 2. Leave the **Packet Format** at its default value of *JSON*.
@@ -396,9 +404,14 @@ Some devices will come from your device supplier preprogrammed and ready to be u
 
 If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step.
 
+*TIP: Be sure that your device is programmed and properly connected to the network at this time. You should see data being reported on the Senet portal's device list for your device. If you do not, double check the values entered for your device and consider programming/flashing the device again.*
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
+
+
 ### Add device to Cayenne
 
-Once your device has been registered, programmed, is forwarding data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
 
 Click **Add New** > **Device / Widget**.
 
