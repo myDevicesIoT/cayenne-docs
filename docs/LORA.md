@@ -85,7 +85,33 @@ Start by going to the <a href="https://demo.thingpark.com/deviceManager/" target
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160824134621/ThingPark-landing-dashboard.png" width="600" height="407" alt="Actility"><br/><br/></p>
 
-**2\. Create new device**
+**2\. Create Cayenne Routing Profile**
+
+In order for data from your device to reach Cayenne, you must create an **AS Routing Profile** in the Actility portal. We can then setup our device to use this profile. To begin, select the **AS routing profiles** entry on the portal. From the screen that appears, click on the **Add** button to create a new profile.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-1.png" width="600" height="359" alt="create-routing-profile-1"><br/><br/></p>
+
+Give your profile a name and click the **Create** button.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-2.png" width="600" height="145" alt="create-routing-profile-2"><br/><br/></p>
+
+The *Routing Profile* screen will appear with details for your profile. We want to add a new route to our profile, select the **Add** button to begin doing so.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-3.png" width="600" height="360" alt="create-routing-profile-3"><br/><br/></p>
+
+In the **Destinations** field, select the existing *ThingPark Cloud* and click on the **Edit** button. The *Edit distation* dialog will appear.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-4.png" width="600" height="359" alt="create-routing-profile-4"><br/><br/></p>
+
+In the *Edit distination* dialog, change the dropdown for **Type** to *Third party AS (HTTP)*. In the **Destination** field, enter in the Cayenne Actility URL **"https://longrangeapi.mydevices.com/longrange/api/actility/messages/add**. After doing so, click on the **Edit** button to save your changes.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-5.png" width="600" height="284" alt="Cayenne URL"><br/><br/></p>
+
+After saving your changes, you will be returned to the previous screen. Be sure to click on the **Save** button to save the changes to your profile. You may now continue with creating a device that uses this profile.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-6.png" width="600" height="359" alt="create-routing-profile-6"><br/><br/></p>
+
+**3\. Create new device**
 
 To get started with a new device, right-click on the **Devices** entry in the portal and select **Create device** from the menu that appears.
 
@@ -109,7 +135,7 @@ After selecting the OTAA activation mode, the list of fields will update to show
     *   **Thingpark cloud config:** Skip – Cayenne does not require this optional field.
 *   Network
     *   **Connectivity plan:** Select an appropriate Actility plan here for activating your device under.
-    *   **AS routing profile:** Select **Cayenne** from the dropdown. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
+    *   **AS routing profile:** Select the Cayenne route that you created above in **Step 2** from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
 *   Administrative data
     *   **Device name:** Used by Actility. Cayenne does not use this information.
     *   **Marker:** Used by Actility. Cayenne does not use this information.
@@ -135,7 +161,7 @@ After selecting the APB activation mode, the list of fields will update to show 
     *   **Thingpark cloud config:** Skip – Cayenne does not require this optional field.
 *   Network
     *   **Connectivity plan:** Select an appropriate Actility plan here for activating your device under.
-    *   **AS routing profile:** Select **Cayenne** from the dropdown. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
+    *   **AS routing profile:** Select the Cayenne route that you created above in **Step 2** from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
 *   Administrative data
     *   **Device name:** Used by Actility. Cayenne does not use this information.
     *   **Marker:** Used by Actility. Cayenne does not use this information.
@@ -147,13 +173,13 @@ Once added, you will see your new device listed in the device list on the portal
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822144748/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
 
-**3\. Programming the device**
+**4\. Programming the device**
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
 If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step.
 
-**4\. Add your device in Cayenne**
+**5\. Add your device in Cayenne**
 
 Once your device has been registered, programmed and is online, you can then proceed with adding an [Already Registered device](#lora-actility-add-device-to-cayenne-already-registered) in Cayenne. This will add your new device into the list of devices shown in Cayenne.
 
