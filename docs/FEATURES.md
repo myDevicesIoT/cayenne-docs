@@ -9,16 +9,18 @@ The Cayenne dashboard (online and mobile) is the main screen where you can setup
 
 From the Cayenne dashboard you can:
 
-+ Add [Raspberry Pis](http://www.cayenne-mydevices.com/CayenneStaging/docs#raspberry-pi-single-board-computers), [Arduino boards](http://www.cayenne-mydevices.com/CayenneStaging/docs#arduino-microcontrollers), [sensors](http://www.cayenne-mydevices.com/CayenneStaging/docs#sensors-supported-hardware), [actuators](http://www.cayenne-mydevices.com/CayenneStaging/docs#actuators-supported-hardware) and [extensions](http://www.cayenne-mydevices.com/CayenneStaging/docs#extensions-supported-hardware).
-+ Fully customize your dashboard with [drag-and-drop widgets](http://www.cayenne-mydevices.com/CayenneStaging/docs#drag-and-drop-widgets-dashboard).
-+ View [device and sensor data history](http://www.cayenne-mydevices.com/CayenneStaging/docs#device-and-sensor-history-dashboard).
-+ Setup [automatic triggers](http://www.cayenne-mydevices.com/CayenneStaging/docs#rules-engine) and receive [notification alerts](http://www.cayenne-mydevices.com/CayenneStaging/docs#notifications).
-+ [Schedule actions](http://www.cayenne-mydevices.com/CayenneStaging/docs#scheduling) and commands.
-+ [Create IoT projects](http://www.cayenne-mydevices.com/CayenneStaging/docs#projects).
-+ Remotely manage devices and sensors.
++ Add [Raspberry Pis](#supported-hardware-single-board-computers-raspberry-pi), [Arduino boards](#supported-hardware-microcontrollers-arduino), [LoRa devices](#supported-hardware-lora-devices), [sensors](#supported-hardware-sensors), [actuators](#supported-hardware-actuators) and [extensions](#supported-hardware-extensions).
++ Fully customize your dashboard with [drag-and-drop widgets](#features-dashboard-drag-and-drop-widgets).
++ View [device and sensor data history](#features-visualization-data-history).
++ Setup [automatic triggers](#features-triggers) and receive [notification alerts](#features-alerts).
++ [Schedule actions](#features-scheduling) and commands.
++ [Create IoT projects](http://www.cayenne-mydevices.com/CayenneStaging/docs/#features-projects).
++ [Remotely manage](#features-remote-control) devices and sensors.
++ [Track Assets](#features-asset-tracking) and display them on a map.
 
 
 ### Drag-and-drop widgets
+
 Cayenne uses widgets to visualize devices, their data, status and actions. Every device, sensor and actuator that gets added in Cayenne has one or more widgets associated depending on the hardware capabilities. Widgets are added to the Device list on the left hand side and to each device’s Dashboard.
 
 Widgets can be be re-arranged on your dashboard by drag and dropping them anywhere. To move a widget, place your mouse or finger at top middle area of widget. Then tap and move the widget where you want it on your dashboard.
@@ -130,36 +132,42 @@ Cayenne allows you to create scheduled events for Raspberry Pis, Arduinos, senso
 
 ### Setting up scheduled events
 
-Let’s create our first scheduled event. We’ll turn off the light at 10 pm every night.
+**Example event**
+Let’s create an example event to show you how easy it is. We’ll create the following event: *At 10 pm turn off the lights and turn off the fan.*
 
-1. To begin creating an Event, open the feature by selecting **Add New** and then **Event**.<br/>
+1. To begin creating an Event, open the feature by selecting **Add New** and then **Event**.
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"></p>
+
 2. The Create New Event screen appears.
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144155/ScheduleEvent-00.jpg" width="345" height="365" alt="Schedule Event"></p>
 
 From here, you can fill in all the details required for creation of your scheduled event. When creating a new scheduled event, the empty screen serves as an overview of the creation process.
 
-**Example event**
-Let’s create an example event to show you how easy it is. We’ll create the following event: At 10 pm turn off the lights and turn off the fan.
+3. Let’s begin by giving our scheduled event a name. Enter **“At 10 pm, Turn off Light and Fan”** into the **Event title** field.
 
-1. Let’s begin by giving our scheduled event a name. Enter **“At 10 pm, Turn off Light and Fan”** into the **Event title** field.
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144407/ScheduleEvent-01.jpg" width="345" height="365" alt="Schedule Event"><br/><br/></p>
    
-2. In the Date and Time fields, enter the date you want to start the scheduled event and the time.
+4. In the Date and Time fields, enter the date you want to start the scheduled event and the time.
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144430/ScheduleEvent-02.jpg" width="345" height="365" alt="Schedule Event"><br/><br/></p>
    
-3. Select the Timezone of when you want the scheduled event to run. By Default, the scheduled event runs in the **default browser timezone** of the computer or phone you are on.
+5. Select the Timezone of when you want the scheduled event to run. By Default, the scheduled event runs in the **default browser timezone** of the computer or phone you are on.
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144501/ScheduleEvent-03.jpg" width="346" height="400" alt="Schedule Event"><br/><br/></p>
    
-4. Select how often you want the scheduled event to occur. By default, the scheduled event only occurs one time. For this example we will have the scheduled event happen Every Day. Select the **Repeat** frequency and choose the **Every Day** option.
+6. Select how often you want the scheduled event to occur. By default, the scheduled event only occurs one time. For this example we will have the scheduled event happen Every Day. Select the **Repeat** frequency and choose the **Every Day** option.
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144544/ScheduleEvent-04.jpg" width="346" height="400" alt="Schedule Event"><br/><br/></p>
    
-5. You can optionally choose to receive notifications whenever this event runs. Events can be delivered by email and/or text message. For this example, we will choose to receive notification by email and text message. Select the checkbox next to each option and enter the phone number and email address you would like to receive the notification into the appropriate fields.
+7. You can optionally choose to receive notifications whenever this event runs. Events can be delivered by email and/or text message. For this example, we will choose to receive notification by email and text message. Select the checkbox next to each option and enter the phone number and email address you would like to receive the notification into the appropriate fields.
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144636/ScheduleEvent-05.jpg" width="346" height="410" alt="Schedule Event"><br/><br/></p>
    
-6. To complete your scheduled event, add the action that you want to occur at your scheduled time. For this example, we will add two different actions in our scheduled event.
-   
-   Click the **+ Action** button to create a new event.
+8. To complete your scheduled event, add the action that you want to occur at your scheduled time. For this example, we will add two different actions in our scheduled event.
+
+9. Click the **+ Action** button to create a new event.
    
    Using the **Device** field, select the device that will take the action.
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144712/ScheduleEvent-06.jpg" width="346" height="619" alt="Schedule Event"><br/><br/></p>
@@ -172,7 +180,7 @@ Let’s create an example event to show you how easy it is. We’ll create the f
    
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144848/ScheduleEvent-08.jpg" width="346" height="546" alt="Schedule Event"><br/><br/></p>
    
-7. You’re done. Click Save, and your Scheduled Event will be added to Cayenne. Cayenne will automatically take care of synchronizing with your devices and running the event at the appropriate time.
+10. You’re done. Click **Save**, and your Scheduled Event will be added to Cayenne. Cayenne will automatically take care of synchronizing with your devices and running the event at the appropriate time.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144957/Scheduling-MonthView.jpg" width="600" height="413" alt="Month View"></p>
 
@@ -325,26 +333,29 @@ Cayenne makes it easy to manage your connected devices from anywhere. Using the 
 * **Mobile app** – The Cayenne app has been designed to give you an easy way to manage your devices from your mobile device, with the easy to use mobile experience that you expect.
 
  
-**Manually control device**<br/>
-Cayenne makes it easy to add widgets to your device and project dashboards for quickly changing the state of your device. Using Actuators or Custom Widgets, you can easily manually take action on your device. For example, you can create a custom [Button widget](#button-control) that lets you easily toggle your light on/off. Or you can add a [Servo Motor](#servo-motor-motor) that lets you adjust a motor using a [Slider widget](#slider-control).
+**Manually control device**
 
-Cayenne has a growing list of widgets available to help you manually control a device’s state.
+Cayenne makes it easy to add widgets to your device and project dashboards for quickly changing the state of your device. Using Actuators or Custom Widgets, you can easily manually take action on your device. For example, you can create a custom [Button widget](#custom-widgets-button) that lets you easily toggle your light on/off. Or you can add a [Servo Motor](#supported-hardware-actuators-motor-servo-motor) that lets you adjust a motor using a [Slider widget](#custom-widgets-slider).
 
-* [Button](#button-control): Change device state from ON/OFF or HIGH/LOW. For example, turning a light on/off.
-* [Dial Knob](#dial-knob-widget): Change values between MIN and MAX, such as the temperature of a thermostat or volume control. Knob widgets can also be used to just display the current value of a knob that is being turned by a user, such as potentiometer or physical knob located on a board.
-* [Joystick](#joystick-widget): This controls a device, such as a video camera in a parking lot or a robot. It controls movements on X and Y axis in 4 directions.
-* [Lighting](#lighting-widget): Changes the color, adjusts the luminosity and has ability to turn on or off a light, LED or light source.
-* [Slider](#slider-control): Change the value of the connected device, such as dimming a light.
-* [Switch](#switch-widget): Used to change between 2 states, such as switching between power voltage levels used. Similar to a button. <br/><br/>
+Cayenne has a growing [list of widgets available](#custom-widgets) to help you manually control a device’s state.
+
+* [Button](#custom-widgets-button): Change device state from ON/OFF or HIGH/LOW. For example, turning a light on/off.
+* [Dial Knob](#custom-widgets-dial-knob): Change values between MIN and MAX, such as the temperature of a thermostat or volume control. Knob widgets can also be used to just display the current value of a knob that is being turned by a user, such as potentiometer or physical knob located on a board.
+* [Joystick](#custom-widgets-joystick): This controls a device, such as a video camera in a parking lot or a robot. It controls movements on X and Y axis in 4 directions.
+* [Lighting](#custom-widgets-lighting): Changes the color, adjusts the luminosity and has ability to turn on or off a light, LED or light source.
+* [Slider](#custom-widgets-slider): Change the value of the connected device, such as dimming a light.
+* [Switch](#custom-widgets-switch): Used to change between 2 states, such as switching between power voltage levels used. Similar to a button.
  
 
-**Scheduling actions**<br/>
-Cayenne allows you to create scheduled events for LoRa devices, Raspberry Pis, Arduinos, connected sensors and actuators. A scheduled event can have one or more actions added to it. After setting up your scheduled action, Cayenne will take care of running the action at the appropriate time. [View more on Scheduling](#scheduling)
+**Scheduling actions**
+
+Cayenne allows you to create scheduled events for LoRa devices, Raspberry Pis, Arduinos, connected sensors and actuators. A scheduled event can have one or more actions added to it. After setting up your scheduled action, Cayenne will take care of running the action at the appropriate time. [View more on Scheduling](#features-scheduling)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144848/ScheduleEvent-08.jpg" width="346" height="546" alt="Triggers"><br/><br/></p>
 
-**Automatic Triggers**<br/>
-Cayenne allows you to create triggered actions on and between your LoRa devices, Raspberry Pis, Arduinos, connected sensors and actuators based upon the state your devices. After setting up your Triggers, Cayenne will monitor device conditions and take action once the appropriate conditions are met. Simply put if a trigger event happens, then a resulting action happens. [View more on Triggers](#rules-engine)
+**Automatic Triggers**
+
+Cayenne allows you to create triggered actions on and between your LoRa devices, Raspberry Pis, Arduinos, connected sensors and actuators based upon the state your devices. After setting up your Triggers, Cayenne will monitor device conditions and take action once the appropriate conditions are met. Simply put if a trigger event happens, then a resulting action happens. [View more on Triggers](#features-triggers)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151114/Triggers-06-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
 
@@ -352,7 +363,8 @@ Cayenne allows you to create triggered actions on and between your LoRa devices,
 
 Need to find a lost device, or need to monitor the movement of your devices during the day? Using Cayenne’s asset tracking features, you can see the past & present location of all of your devices connected to Cayenne.
  
-**Asset tracking types**<br/>
+**Asset tracking types**
+
 Depending upon the type of device being added, there may be several Location settings available for enabling asset tracking.
 
 * Devices that move.
@@ -361,8 +373,9 @@ Depending upon the type of device being added, there may be several Location set
 * Wireless sensors that can move independently from the device they’re connected to.
 * Custom Widgets for devices that may be stationary or may move.
  
-**Asset tracking visualization**<br/>
-After setting up asset tracking on all your connected devices, Cayenne gives you an easy way to visualize their current and past locations. The [Device Map widget](#device-map-features) allows you to view the location history of a single device and any connected sensors. Using the [Project Map widget](#project-map-features), you can examine the location and history for multiple devices at once. <br/>
+**Asset tracking visualization**
+
+After setting up asset tracking on all your connected devices, Cayenne gives you an easy way to visualize their current and past locations. The [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) allows you to view the location history of a single device and any connected sensors. Using the [Project Map widget](#features-asset-tracking-map-tracking-features-project-map-features), you can examine the location and history for multiple devices at once. <br/>
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712114534/Device-Tracking-map-highlight.png" width="600" height="363" alt="Asset Tracking"><br/><br/></p>
 
@@ -431,22 +444,22 @@ Cayenne will guide you through enabling tracking as a part of the setup process 
 
 #### LoRa Devices
 
-Some LoRa devices move around and support automatic location updating, while other devices will remain stationary. If the device supports automatic location tracking, Cayenne will automatically configure it. If the device does not support automatic location tracking, or you do not wish to use it, you can manually set your device’s location.<br/><br/>
+Some LoRa devices move around and support automatic location updating, while other devices will remain stationary. If the device supports automatic location tracking, Cayenne will automatically configure it. If the device does not support automatic location tracking, or you do not wish to use it, you can manually set your device’s location.
 
-**Manual Asset Tracking (LoRa)**<br/>
+**Manual Asset Tracking (LoRa)**
 
-If your LoRa device will remain stationary, set the **Location** field for the device to “This device doesn’t move”. You can then set the **Data Type** and **Units** so that you can manually enter in an address or coordinates for the device. After adding the device, you will see a Map Widget that will allow you to manually set the device’s location. <br/>
+If your LoRa device will remain stationary, set the **Location** field for the device to “This device doesn’t move”. You can then set the **Data Type** and **Units** so that you can manually enter in an address or coordinates for the device. After adding the device, you will see a Map Widget that will allow you to manually set the device’s location.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926143957/LoRa-Settings-Device-doesnt-move1.png" width="600" height="363" alt="LoRa Tracking"><br/><br/></p>
 
-To set the address manually using the widget, simply enter the address into the widget and confirm. If you wish to change the address, hover over the address shown and click on the edit icon.<br/>
+To set the address manually using the widget, simply enter the address into the widget and confirm. If you wish to change the address, hover over the address shown and click on the edit icon.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926144726/LoRa-Map-widget-Manual-location-default1.png" width="600" height="416" alt="LoRa Tracking"><br/><br/></p>
 
 
-**Enabling Automatic Asset Tracking (LoRa)**<br/>
+**Enabling Automatic Asset Tracking (LoRa)**
 
-If your LoRa device provides location data and will move around, the Location field for the device will default to “This device moves”. You can then set the Data Type and Units to customize how the location data will be shown on the map. After adding the device, you will it shown on a Map Widget and the location information for the device will be automatically kept up to date as the device moves.<br/>
+If your LoRa device provides location data and will move around, the Location field for the device will default to “This device moves”. You can then set the Data Type and Units to customize how the location data will be shown on the map. After adding the device, you will it shown on a Map Widget and the location information for the device will be automatically kept up to date as the device moves.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926144159/LoRa-Settings-Automatic-location-tracking1.png" width="600" height="363" alt="LoRa Tracking"><br/><br/></p>
 
@@ -455,19 +468,19 @@ If your LoRa device provides location data and will move around, the Location fi
 
 #### Arduino
 
-When adding an Arduino microcontroller to Cayenne, asset tracking will automatically default to manual tracking and the **Location setting** will be set to “This device doesn’t move”. After adding your Arduino device to Cayenne, your device dashboard will appear and a [Device Map widget](#device-map-features) will be automatically added.<br/><br/>
+When adding an Arduino microcontroller to Cayenne, asset tracking will automatically default to manual tracking and the **Location setting** will be set to “This device doesn’t move”. After adding your Arduino device to Cayenne, your device dashboard will appear and a [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) will be automatically added.
 
  
-**Manual Asset Tracking (Arduino)**<br/>
+**Manual Asset Tracking (Arduino)**
 
-You can manually set the the address of your device in the map widget or by opening settings for the widget. To set the address manually using the widget, simply enter the address into the widget and confirm. If you wish to change the address, hover over the address shown and click on the edit icon.<br/><br/>
+You can manually set the the address of your device in the map widget or by opening settings for the widget. To set the address manually using the widget, simply enter the address into the widget and confirm. If you wish to change the address, hover over the address shown and click on the edit icon.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926142127/Arduino-Map-Widget-Manual-location-default1.png" width="600" height="363" alt="LoRa Tracking"><br/><br/></p>
 
 
 **Enabling Automatic Asset Tracking (Arduino)**<br/>
 
-If your Arduino device will move around, you can setup automatic asset tracking through settings for the widget.<br/><br/>
+If your Arduino device will move around, you can setup automatic asset tracking through settings for the widget.
 
 1. Click on the **cogwheel icon** located in the widget tile to open settings for the widget.
 2. Under the **MAP** settings, change **Location** to “This devices moves”.
@@ -482,45 +495,41 @@ If your Arduino device will move around, you can setup automatic asset tracking 
 
 #### Raspberry Pi
 
-When adding a Raspberry Pi computer to Cayenne, asset tracking will automatically default to manual tracking and the **Location setting** will be set to “This device doesn’t move”. After adding your Raspberry Pi device to Cayenne, your device dashboard will appear and a [Device Map widget](#device-map-features) will be automatically added.<br/><br/>
+When adding a Raspberry Pi computer to Cayenne, asset tracking will automatically default to manual tracking and the **Location setting** will be set to “This device doesn’t move”. After adding your Raspberry Pi device to Cayenne, your device dashboard will appear and a [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) will be automatically added.
  
-**Manual Asset Tracking (Raspberry Pi)**<br/>
+**Manual Asset Tracking (Raspberry Pi)**
 
-You can manually set the the address of your device in the map widget or by opening settings for the widget.<br/>
+You can manually set the the address of your device in the map widget or by opening settings for the widget.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926141955/RPI-Map-Widget-Manual-location-default1.png" width="600" height="363" alt="Raspberry Pi Tracking"><br/><br/></p>
 
 
-**Enabling Automatic Asset Tracking (Raspberry Pi)**<br/><br/>
-Coming soon!
-<br/><br/>
+**Enabling Automatic Asset Tracking (Raspberry Pi)**
 
+Coming soon!
 
 #### Custom Widgets
 
-When adding a Custom Widget, you will be asked whether the widget is attached to a parent device, or whether this widget will move independently from the device it communicates with. For example, you might have custom sensors, each outfitted with GPS devices, sending their data back to a Raspberry Pi that monitors all sensor data.<br/><br/>
-
+When adding a Custom Widget, you will be asked whether the widget is attached to a parent device, or whether this widget will move independently from the device it communicates with. For example, you might have custom sensors, each outfitted with GPS devices, sending their data back to a Raspberry Pi that monitors all sensor data.
  
-**Connected to a Device**<br/>
+**Connected to a Device**
 
-When adding a Custom Widget to Cayenne, the location settings will default to using the same location as the device to which this device is connected to. If you are connecting a sensor which is wired directly to its parent device, there is no additional information needed for this widget’s location – the location of your widget will automatically share the location of its parent. You may click on the parent device marker on the map widget to see the location and status information for your device, including your custom widget’s status.<br/>
+When adding a Custom Widget to Cayenne, the location settings will default to using the same location as the device to which this device is connected to. If you are connecting a sensor which is wired directly to its parent device, there is no additional information needed for this widget’s location – the location of your widget will automatically share the location of its parent. You may click on the parent device marker on the map widget to see the location and status information for your device, including your custom widget’s status.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926142800/Custom-Widget-Map-Widget-connected-sensor1.png" width="600" height="363" alt="Connected to a Device"><br/><br/></p>
 
 
-**Manual Asset Tracking**<br/>
+**Manual Asset Tracking**
 
-If you have a Custom Widget that is not located in the same place as the device it communicates with, you can enter a manual location for the device. To configure your Custom Widget for manual tracking, be sure to change the **Location** for the widget to “Manual”. You will then be given the option to enter in the Address for your widget.<br/><br/>
-
+If you have a Custom Widget that is not located in the same place as the device it communicates with, you can enter a manual location for the device. To configure your Custom Widget for manual tracking, be sure to change the **Location** for the widget to “Manual”. You will then be given the option to enter in the Address for your widget.
  
-**Moves independently**<br/>
+**Moves independently**
 
-If you have a device that is capable of moving independently of its parent, you can configure your Custom Widget to obtain its location automatically. To configure your Custom Widget for automatic location tracking, be sure to change the **Location** for the widget to “Moves independently”. You will then be asked to enter in the required information that let’s Cayenne know where to obtain the location information for this device. For example, when connecting to an Arduino board, you will be asked for the Virtual Pin that provides location data. See more information on specifying automatic location tracking settings for [Raspberry Pi](#raspberry-pi-device-tracking) or [Arduino devices](#arduino-device-tracking).<br/><br/>
-
+If you have a device that is capable of moving independently of its parent, you can configure your Custom Widget to obtain its location automatically. To configure your Custom Widget for automatic location tracking, be sure to change the **Location** for the widget to “Moves independently”. You will then be asked to enter in the required information that let’s Cayenne know where to obtain the location information for this device. For example, when connecting to an Arduino board, you will be asked for the Virtual Pin that provides location data. See more information on specifying automatic location tracking settings for [Raspberry Pi](#features-asset-tracking-configuring-tracking-raspberry-pi), [Arduino devices](#features-asset-tracking-configuring-tracking-arduino) or [LoRa devices](#features-asset-tracking-configuring-tracking-lora-devices).
 
 #### Connected Sensors
 
-Many of the sensors supported in Cayenne’s Add Device process will be wired directly to an Arduino or Raspberry Pi device. These sensors will share the location data for their parent device. When adding these devices, you will find that the **Location** field will automatically be set to “Connected to Raspberry Pi” or “Connected to Arduino”. There is no additional location information needed for this device. You will see these sensors shown when you view the details for a location marker. [View Map Widget Features](#device-map-features)<br/>
+Many of the sensors supported in Cayenne’s Add Device process will be wired directly to an Arduino or Raspberry Pi device. These sensors will share the location data for their parent device. When adding these devices, you will find that the **Location** field will automatically be set to “Connected to Raspberry Pi” or “Connected to Arduino”. There is no additional location information needed for this device. You will see these sensors shown when you view the details for a location marker. [View Map Widget Features](#features-asset-tracking-map-tracking-features-device-map-features)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804141842/lora-device-connect-sensors-info.png" width="600" height="416" alt="Connected Sensors"><br/><br/></p>
 
@@ -528,27 +537,27 @@ Many of the sensors supported in Cayenne’s Add Device process will be wired di
 
 #### Wireless Sensors
 
-Some sensors contain GPS or other wireless location tracking onboard. When adding these devices, you will have the option of allowing the sensor to be tracked independently of the device it communicates to.<br/><br/>
+Some sensors contain GPS or other wireless location tracking onboard. When adding these devices, you will have the option of allowing the sensor to be tracked independently of the device it communicates to.
 
  
-**Moves independently**<br/>
+**Moves independently**
 
-By default, the **Location** for wireless sensors will be set to “Moves independently”. You will then be asked to enter in the required information that let’s Cayenne know where to obtain the location information for this device. For example, with a wireless sensor that communicates its data with an Arduino board, you will be asked for the Virtual Pin that will contain the location data. See more information on specifying automatic location tracking settings for [Raspberry Pi](#raspberry-pi-device-tracking) or [Arduino devices](#arduino-device-tracking).<br/><br/>
+By default, the **Location** for wireless sensors will be set to “Moves independently”. You will then be asked to enter in the required information that let’s Cayenne know where to obtain the location information for this device. For example, with a wireless sensor that communicates its data with an Arduino board, you will be asked for the Virtual Pin that will contain the location data. See more information on specifying automatic location tracking settings for [Raspberry Pi](#features-asset-tracking-configuring-tracking-raspberry-pi), [Arduino devices](#features-asset-tracking-configuring-tracking-arduino) or [LoRa devices](#features-asset-tracking-configuring-tracking-lora-devices).
 
 
 ### Map Tracking Features
 
-Cayenne’s Map Widget makes it easy to view the current or past location data for your devices. Whenever you add a Device to Cayenne, a [Device Map Widget](#device-map-features) is automatically added for you. This Device Map widget allows you to visualize the location data for your single device. If you want to view multiple devices at once, check out the [Project Map Widget](#project-map-features).<br/><br/>
+Cayenne’s Map Widget makes it easy to view the current or past location data for your devices. Whenever you add a Device to Cayenne, a [Device Map Widget](#features-asset-tracking-map-tracking-features-device-map-features) is automatically added for you. This Device Map widget allows you to visualize the location data for your single device. If you want to view multiple devices at once, check out the [Project Map Widget](#features-asset-tracking-map-tracking-features-project-map-features).
  
-**Zooming and scrolling**<br/>
+**Zooming and scrolling**
 
 Using the Map Widget, you can zoom in and zoom out and scroll the map view around to get the best view of your data.<br/><br/>
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712142115/Map-view-zoom-scroll.png" width="600" height="363" alt="Map Tracking Features"><br/><br/></p>
 
-**Change Map View options**<br/>
+**Change Map View options**
 
-Using the Map View menu, you can change certain map options such as viewing Terrain or Satellite imagery.<br/><br/>
+Using the Map View menu, you can change certain map options such as viewing Terrain or Satellite imagery.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712142329/Map-view-sat-terrain.png" width="600" height="363" alt="Terrain Imagery"><br/><br/></p>
 
@@ -561,34 +570,34 @@ Whenever you add a Device to Cayenne, a Device Map widget is automatically added
 
 **Location markers**<br/>
 
-Location history for each device is shown on the Device Map as a trail of location markers. The location trail gives you can easy way to see movement of the selected device for the date being shown. You can click on the device or on a location data point to see additional details.<br/><br/>
+Location history for each device is shown on the Device Map as a trail of location markers. The location trail gives you can easy way to see movement of the selected device for the date being shown. You can click on the device or on a location data point to see additional details.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804150042/Map-view-Device-Map-markers2.png" width="600" height="416" alt="Device Map Features"><br/><br/></p>
 
-**Details popup**<br/>
+**Details popup**
 
-Clicking on a device or a location marker opens a popup dialog with additional information. When clicking on a device marker, you will see additional information on the device, its current location and attached sensors. When clicking on a past location marker, you can see additional address information taken at that point in time.<br/><br/>
+Clicking on a device or a location marker opens a popup dialog with additional information. When clicking on a device marker, you will see additional information on the device, its current location and attached sensors. When clicking on a past location marker, you can see additional address information taken at that point in time.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804150250/Map-view-Device-Map-popup-details1.png" width="600" height="416" alt="Device Map Features"><br/><br/></p>
 
 
-**Filtering by Date & Time**<br/>
+**Filtering by Date & Time**
 
-Using the controls in the widget, you can update the map widget to display a different day of location data. You can use the **left arrow** or **right arrow** next to the date to quickly jump backward or forward a day at a time. Alternatively, you can on the current displayed date to open a **date picker** that will let you choose the date. After changing the date, the map widget will update to display the location of your device on that date. You can also use the time of day slider to adjust the timeframe displayed for the selected day.<br/><br/>
+Using the controls in the widget, you can update the map widget to display a different day of location data. You can use the **left arrow** or **right arrow** next to the date to quickly jump backward or forward a day at a time. Alternatively, you can on the current displayed date to open a **date picker** that will let you choose the date. After changing the date, the map widget will update to display the location of your device on that date. You can also use the time of day slider to adjust the timeframe displayed for the selected day.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712142934/Map-view-Device-Map-date-filter.png" width="600" height="363" alt="Device Map Features"><br/><br/></p>
 
 
-**Viewing Connected Devices**<br/>
+**Viewing Connected Devices**
 
-The Map widget makes it easy to see your device and all connected sensors. Sensors connected directly to the device will appear in the same location as the device. You can click on the location for the device and the status of connected devices will appear in the information data that appears.<br/><br/>
+The Map widget makes it easy to see your device and all connected sensors. Sensors connected directly to the device will appear in the same location as the device. You can click on the location for the device and the status of connected devices will appear in the information data that appears.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804150250/Map-view-Device-Map-popup-details1.png" width="600" height="416" alt="Device Map Features"><br/><br/></p>
 
 
-**Viewing Independent Devices**<br/>
+**Viewing Independent Devices**
 
-The Device Map also displays sensors that are configured to move independently from the device they communicate to. These sensors receive their own location trail and markers for previous location data points. As with the parent device, you can click on the independent sensor or one of its location markers to get additional details.<br/><br/>
+The Device Map also displays sensors that are configured to move independently from the device they communicate to. These sensors receive their own location trail and markers for previous location data points. As with the parent device, you can click on the independent sensor or one of its location markers to get additional details.
 
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804150528/Map-view-Device-Map-wireless-sensor1.png" width="600" height="416" alt="Device Map Features"><br/><br/></p>
@@ -596,56 +605,54 @@ The Device Map also displays sensors that are configured to move independently f
 
 #### Project Map Features
 
-Whenever you add a [Project](#projects) to Cayenne, a Project Map widget is automatically added for you. This widget allows you to visualize the location data for multiple devices at one time.<br/><br/>
+Whenever you add a [Project](#features-projects) to Cayenne, a Project Map widget is automatically added for you. This widget allows you to visualize the location data for multiple devices at one time.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712143333/Map-view-Project-Map-highlight.png" width="600" height="363" alt="Project Map Features"><br/><br/></p>
 
-**Adding Devices**<br/>
+**Adding Devices**
 
 The Project Map widget can display several devices at once. You can either add individual devices or you can add a batch of devices.
 
-To add a single device, drag & drop that device from the side device list into the map widget. The device will then be added. To add multiple devices, drag & drop a group of devices into the map. When you drop the group onto the map, a dialog will open asking you which devices to add. Select the devices you want added and click **Add** and all of the selected devices will be added to the map.<br/><br/>
+To add a single device, drag & drop that device from the side device list into the map widget. The device will then be added. To add multiple devices, drag & drop a group of devices into the map. When you drop the group onto the map, a dialog will open asking you which devices to add. Select the devices you want added and click **Add** and all of the selected devices will be added to the map.
  
-**Details popup**<br/>
+**Details popup**
 
-Clicking on a device marker in the map opens a popup dialog with additional information on the device and its location at that point in time.<br/><br/>
+Clicking on a device marker in the map opens a popup dialog with additional information on the device and its location at that point in time.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712143550/Map-view-Project-Map-popup-details.png" width="600" height="363" alt="Project Map Features"><br/><br/></p>
 
-**Filtering by Date**<br/>
+**Filtering by Date**
 
-Using the controls in the widget, you can update the map widget to display a different day of location data for all devices on the map. You can use the **left arrow** or **right arrow** next to the date to quickly jump backward or forward a day at a time. Alternatively, you can on the current displayed date to open a **date picker** that will let you choose the date. After changing the date, the map widget will update to display the location of all devices on the map at that point in time.<br/><br/>
+Using the controls in the widget, you can update the map widget to display a different day of location data for all devices on the map. You can use the **left arrow** or **right arrow** next to the date to quickly jump backward or forward a day at a time. Alternatively, you can on the current displayed date to open a **date picker** that will let you choose the date. After changing the date, the map widget will update to display the location of all devices on the map at that point in time.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712143656/Map-view-Project-Map-date-filter.png" width="600" height="363" alt="Project Map Features"><br/><br/></p>
 
 
-**Filtering by Time of day**<br/>
+**Filtering by Time of day**
 
 In addition to picking which day to view location data on, the Project map also gives you the ability to view where the devices where throughout the day. To change the time of day, click and drag the **time of day slider**. As you change the slider position, the location markers for each device shown on the map updates. Using the time of day slider, you can watch the location of each device change as the day goes on.
 
 
-
-
 ## Custom Code
 
-Cayenne supports a number of sensors, actuators and extensions [natively](#supported-hardware). If you want to use a device that Cayenne does not currently support, or you want greater control over the behavior of your device, you will need to write some custom code. Using Cayenne, you can easily integrate your devices that use custom code, viewing and controlling them using the same great dashboard and mobile app support that Cayenne has for native devices.<br/><br/>
+Cayenne supports a number of sensors, actuators and extensions [natively](#supported-hardware). If you want to use a device that Cayenne does not currently support, or you want greater control over the behavior of your device, you will need to write some custom code. Using Cayenne, you can easily integrate your devices that use custom code, viewing and controlling them using the same great dashboard and mobile app support that Cayenne has for native devices.
 
 
 ### Arduino
 
 
-Writing custom code for devices connected to an Arduino is accomplished using sketch files. By writing your code in the sketch file, you have complete control over how your data is sent to Cayenne. [See Using Sketch Files](#using-sketch-files-arduino)
+Writing custom code for devices connected to an Arduino is accomplished using sketch files. By writing your code in the sketch file, you have complete control over how your data is sent to Cayenne. [See Using Sketch Files](#sketch-files-using-sketch-files)
 
 If the sensor that you want to customize is already supported by Cayenne, you can start with the example sketch file for that sensor and make minor changes before uploading it to your board. If you want greater control, or you need to add something new that Cayenne does not currently support, you can use a Custom Widget and add whatever custom code you need to the example sketch files for Custom Widgets.
 
-*TIP: Your custom code should communicate with Cayenne using [Virtual Pins](#virtual-pins-microcontrollers).*
+*TIP: Your custom code should communicate with Cayenne using [Virtual Pins](#sketch-files-virtual-pins).*
 
-The example sketch files for each component can be found by following the Add Device/Widget process in the Cayenne dashboard, or you can visit the [Cayenne github](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/tree/master/examples).<br/><br/>
+The example sketch files for each component can be found by following the Add Device/Widget process in the Cayenne dashboard, or you can visit the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/tree/master/examples" target="_blank">Cayenne github</a>.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151040/Add-Device-Arduino-TMP36-Sketch-file2.png" width="600" height="386" alt="Arduino Custom Code"><br/><br/></p>
 
 
-After writing your sketch file to send device data to the Cayenne Virtual Pins, you can upload the code to your Arduino board. You will then need to complete adding your Device or Custom Widget to Cayenne by telling Cayenne how to read the data. Fill in the appropriate settings during the Add Device/Widget process, making sure to select the correct **Virtual Pin(s)**, **Data Type** and **Units** being sent in your custom code.<br/><br/>
+After writing your sketch file to send device data to the Cayenne Virtual Pins, you can upload the code to your Arduino board. You will then need to complete adding your Device or Custom Widget to Cayenne by telling Cayenne how to read the data. Fill in the appropriate settings during the Add Device/Widget process, making sure to select the correct **Virtual Pin(s)**, **Data Type** and **Units** being sent in your custom code.
 
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160721125553/Custom-Code-Arduino-Custom-Widget-settings1.png" width="600" height="362" alt="Arduino Custom Code"><br/><br/></p>
