@@ -85,7 +85,7 @@ Start by going to the <a href="https://demo.thingpark.com/deviceManager/" target
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160824134621/ThingPark-landing-dashboard.png" width="600" height="407" alt="Actility"><br/><br/></p>
 
-**2\. Create Cayenne Routing Profile**
+### Create Cayenne Routing Profile
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/n8pSDJqJtYU" frameborder="0" allowfullscreen></iframe></p>
 
