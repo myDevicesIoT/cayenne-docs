@@ -421,12 +421,12 @@ If your device has not been previously registered with your LoRa network provide
 
 Need an account? Here are some helpful links to creating an account based on which network you’ll be using.
 
-*   [Creating Actility account](#create-actility-account-2-2-2)
-*   [Creating Senet account](#create-senet-account-2-2-2)
+*   [Creating Actility account](#lora-actility-create-account)
+*   [Creating Senet account](#lora-senet-network-create-account)
 
 **3\. Make sure you have the information on your LoRa devices being connected**
 
-In order to connect Cayenne to your LoRa device, you will need to know the DEVEUI for your device. [What’s this?](#device-information-lora)
+In order to connect Cayenne to your LoRa device, you will need to know the DEVEUI for your device. [What’s this?](#lora-about-deveuis)
 
 In addition to adding previously activated devices, Cayenne is capable of activating new devices on some LoRa provider networks. If you will be activating your device on the network for the first time, you will also need additional information for the activation process, such as your Appkey or AppEUI. The information required will depend upon which activation mode you select for your device and which network you will be using.
 
@@ -452,17 +452,3 @@ When adding the LoRa device, the settings, supported activation modes and accoun
 
 *   [Using the Actility Network](#lora-actility)
 *   [Using the Senet Network](#lora-senet-network)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
