@@ -356,7 +356,7 @@ Start by going to the <a href="https://portal.senetco.com/" target="_blank">Sene
 
 **Register new device**
 
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/pCnxVzJVDWk" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/_mrDBWEDMuU" frameborder="0" allowfullscreen></iframe></p>
 
 To get started with a new device, click on the **Register new device** button. Enter in the **Device ID** (this will be the *DevEUI* located on the device or given to you when purchased) and a description for the device. Click **Submit** to register the device.
 
@@ -376,10 +376,17 @@ From the **cogwheel** menu, select **Device Edit** and the *Device Setup/Edit* s
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125508/Senet-menu-device-edit.png" width="600" height="208" alt="Senet"><br/><br/></p>
 
-From this screen we can setup the device so that it forwards data to Cayenne. From the **Forward To** dropdown select the **HTTP Post** option. Leave the **Packet Format** at its default value of *JSON*. Make sure the **Forward RF Data** checkbox is selected to see signal strength data for your device in Cayenne. Finally, enter in the Cayenne URL for the Senet API into the **URL** field and click the **Update** button to save changes.
-  ```
-  https://longrangeapi.mydevices.com/longrange/api/senet/messages/add
-  ```
+From this screen we can setup the device so that it forwards data to Cayenne.
+
+1. From the **Forward To** dropdown select the **HTTP Post** option.
+2. Leave the **Packet Format** at its default value of *JSON*.
+3. Make sure the **Forward RF Data** checkbox is selected to see signal strength data for your device in Cayenne.
+4. Enter in the Cayenne URL for the Senet API into the **URL** field.
+
+   ```
+   https://longrangeapi.mydevices.com/longrange/api/senet/messages/add
+   ```
+5. Click the **Update** button to save changes.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-device-setup-using-URL.png" width="600" height="216" alt="senet-device-setup-using-url"><br/><br/></p>
 
@@ -391,7 +398,7 @@ If your device needs to be programmed, you should now proceed with programming/f
 
 ### Add device to Cayenne
 
-Once your device has been registered, programmed and is online, you can then proceed with adding the device in Cayenne so that it appears in your dashboard.
+Once your device has been registered, programmed, is forwarding data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
 
 Click **Add New** > **Device / Widget**.
 
