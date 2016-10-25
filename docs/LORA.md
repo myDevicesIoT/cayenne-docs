@@ -348,12 +348,13 @@ To create your Senet account, visit the <a href="https://portal.senetco.com/" ta
 
 Before you can use your LoRa device on the Senet network, it must be registered on the network using the Senet portal. The following information will help guide you through this process.
 
-**1\. Log into the Senet portal** <br/>
+**Log into the Senet portal**
+
 Start by going to the <a href="https://portal.senetco.com/" target="_blank">Senet portal</a> and logging into your account.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125129/Senet-login.png" width="600" height="318" alt="Senet"><br/><br/></p>
 
-**2\. Register new device** <br/>
+**Register new device**
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/pCnxVzJVDWk" frameborder="0" allowfullscreen></iframe></p>
 
@@ -363,7 +364,7 @@ To get started with a new device, click on the **Register new device** button. E
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125416/Senet-new-node.png" width="600" height="291" alt="Senet"><br/><br/></p>
 
-**3\. Setup device forwarding to Cayenne** <br/>
+### Setup device forwarding to Cayenne
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/T7m0f8UCdQk" frameborder="0" allowfullscreen></iframe></p>
 
@@ -382,7 +383,7 @@ From this screen we can setup the device so that it forwards data to Cayenne. Fr
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-device-setup-using-URL.png" width="600" height="216" alt="senet-device-setup-using-url"><br/><br/></p>
 
-###  Programming the device**
+###  Programming the device
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
