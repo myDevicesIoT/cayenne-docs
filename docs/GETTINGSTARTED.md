@@ -450,8 +450,8 @@ After selecting the LoRa Network and Device that you want to add, you will then 
 
 When adding the LoRa device, the settings, supported activation modes and account information required will depend upon which network is selected. Click on the appropriate link below to jump to the section on your network, each of which contains a detailed walkthrough that will help you add your LoRa device to Cayenne.
 
-*   [Using the Actility Network](#actility-lora-networks-2-2-2)
-*   [Using the Senet Network](#senet-lora-networks-2-2-2)
+*   [Using the Actility Network](#lora-actility)
+*   [Using the Senet Network](#lora-senet-network)
 
 
 
