@@ -248,7 +248,7 @@ Let’s create our first trigger. We’ll create a trigger to turn on our light 
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150219/Triggers-06.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
    
-   Cayenne will will now start monitoring the temperature sensor and when it reaches the correct temperature your trigger will automatically run.
+Cayenne will will now start monitoring the temperature sensor and when it reaches the correct temperature your trigger will automatically run.
    
    
    
@@ -261,6 +261,7 @@ Cayenne enables you to receive notifications when a device or sensor has reached
 
 ### Setting up alerts
 
+**Example alert**
 Let’s create our first notification alert. We’ll send a text message and email notification alert when the temperature outside reaches 90 degrees to send a text message and email.
 
 1. To begin creating a Trigger Notification Alert, open the up the feature by selecting **Triggers** from **Add New navigation**.
@@ -273,39 +274,37 @@ Let’s create our first notification alert. We’ll send a text message and ema
    
    From here, you can fill in all the details required for creation of your notification alert. To make this process easy, you will be guided through triggered alert creation that is easy to follow and select the devices and actions that you want.
 
-**EXAMPLE:** **IF** my device senses something, **THEN** send me an alert notification
-
-1. Let’s begin by giving our trigger a name. Enter **“Tmp36 is above 80, Send Notification”** into the Trigger Name field.
+3. Let’s begin by giving our trigger a name. Enter **“Tmp36 is above 80, Send Notification”** into the Trigger Name field.
    
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150757/Triggers-01-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
 
-2. We’re going to trigger a notification alert when Tmp36 is above 80 degrees. The TMP36 temperature sensor is located on our Arduino device, so drag & drop the **Arduino** device into the **IF** statement.
+4. We’re going to trigger a notification alert when Tmp36 is above 80 degrees. The TMP36 temperature sensor is located on our Arduino device, so drag & drop the **Arduino** device into the **IF** statement.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150853/Triggers-02-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
 
-3. After selecting the TMP36 temperature sensor, we can choose whether we want to trigger a notification if temperature is above or below a certain value.
+5. After selecting the TMP36 temperature sensor, we can choose whether we want to trigger a notification if temperature is above or below a certain value.
 
    We want to react to the temperature being high, so we select **Temperature** from the list and select **Temperature Above** in the options presented and choose **80 degrees** for this example.
    
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150957/Triggers-03-NOtification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
    
-4. We want to receive a triggered alert notification by text message and email each time TMP36 is above 80 degrees. Click **Setup notification**.
+6. We want to receive a triggered alert notification by text message and email each time TMP36 is above 80 degrees. Click **Setup notification**.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151034/Triggers-04-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
    
-5. You can choose to receive notifications by text message and/or email. We want both, so we will choose **Select All**.   
+7. You can choose to receive notifications by text message and/or email. We want both, so we will choose **Select All**.   
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151059/Triggers-05-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
 
-6. Click **Add custom recipient** and enter in phone number to receive text. Then click **Add more recipients**? and add in the email address.
+8. Click **Add custom recipient** and enter in phone number to receive text. Then click **Add more recipients**? and add in the email address.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151114/Triggers-06-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>   
    
-7. We’re done! Click **Save Trigger** to complete our trigger alert and return to the Triggers list where our new trigger alert is shown.
+9. We’re done! Click **Save Trigger** to complete our trigger alert and return to the Triggers list where our new trigger alert is shown.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151206/Triggers-07-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>   
    
-   Cayenne will will now start monitoring the temperature sensor and when it reaches the correct temperature a notification alert will be send by email and text message. <br/><br/>
+Cayenne will will now start monitoring the temperature sensor and when it reaches the correct temperature a notification alert will be send by email and text message. <br/><br/>
    
  
 ### Receiving alerts
