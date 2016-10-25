@@ -1,9 +1,9 @@
-#LoRa
+# LoRa
 
 <p id="lora-information" class="anchor-link"></p>
 <p id="overview-lora" class="anchor-link"></p>
 
-##Overview
+## Overview
 LoRa is a wireless technology developed to create the low-power, wide-area networks (LPWANs) required for machine-to-machine (M2M) and Internet of Things (IoT) applications. The technology offers a very compelling mix of long range, low power consumption and secure data transmission and is gaining significant traction in IoT networks being deployed by wireless network operators.
 
 A network based on LoRa wireless technology can provide coverage that is greater in range compared to that of existing cellular networks. In fact, many mobile network operators have chosen to complement their existing cellular/wireless networks with a LPWAN based on LoRa technology because it is easy to plug into their existing infrastructure and also allows them to offer their customers a solution to serve more IoT battery-operated applications.
@@ -13,7 +13,7 @@ LoRa technology was originally developed by Semtech, but is now coordinated by t
 <p id="how-it-works-lora" class="anchor-link"></p>
 
 
-##How LoRaWAN works
+## How LoRaWAN works
 LoRaWAN is a Data + Network Protocol built on top of LoRa. LoRaWAN targets the basic needs of LoRa usage for IoT by providing Addressing, Routing and Security.
 
 Topology of a LoRaWAN network consists of several elements.
@@ -28,14 +28,14 @@ Topology of a LoRaWAN network consists of several elements.
 <p id="device-information-lora" class="anchor-link"></p>
 
 
-##About DevEUIs
+## About DevEUIs
 
 LoRa devices have a unique identifier (DevEUI) that is assigned to the device by the chip manufacturer. This identifier is used to uniquely identify the device on the network. Cayenne will need to know the DevEUI for your device, regardless of whether it is already registered, or if the device needs to be activated for the first time.
 
 <p id="using-a-public-gateway-lora" class="anchor-link"></p>
 
 
-##Using a public network
+## Using a public network
 Using a public LoRa network is the easiest way to get started using LoRa. In order to get started using a public LoRa network, you will want to first verify that yours sensors will be covered by an appropriate Network Operator. Once you know which network operator you will connect with, you can purchase devices that work on that network. You will then need an account with that operator so that you can add your devices to the network.
 
 In order to activate a LoRa device on a network, you will need to have an account with that network. Using Cayenne, you will not need your account information if the device has already been registered on the network. If you wish to use Cayenne to help activate the device on the network, however, you will need your account information handy so that you can provide this information in order to authenticate with the network and activate the device.
@@ -46,7 +46,7 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 *   [Senet](#lora-senet-network)
 
 
-##Actility
+## Actility
 
 **About Actility**<br/>
 Actility is an industry leader in Machine to Machine (M2M) large scale infrastructure with ThingPark®, the new generation standard-based M2M communication platform. Actility is a winner of the French Ministry of Research competition, has obtained the Grand Prix of the Tremplin Entreprise and has been rewarded by Innov’ Eco and CleanTech République for its particularly innovative approach in its Internet Of Things (IoT) solutions.
@@ -65,13 +65,13 @@ Cayenne currently supports the following registration / activation modes for dev
 Need to know what devices are currently supported? Check out the Actility [Supported devices](#lora-actility-supported-devices) section.
 
 
-###Create account
+### Create account
 
 To create your Actility account, visit the <a href="http://actility.thingpark.com/thingpark-store/authentication" target="_blank">Actility Portal</a>. Follow the **Create your account** process located there to get started.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Actility-portal-landing.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
-###Manually register device
+### Manually register device
 
 Before you can use your LoRa device on the Actility network, it must be registered on the network. The following information will help guide you through this process using the Actility portal.
 
@@ -188,7 +188,7 @@ If your device needs to be programmed, you should now proceed with programming/f
 Once your device has been registered, programmed and is online, you can then proceed with adding an [Already Registered device](#lora-actility-add-device-to-cayenne-already-registered) in Cayenne. This will add your new device into the list of devices shown in Cayenne.
 
 
-###Add device to Cayenne
+### Add device to Cayenne
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/QPiZ-FSjdyw" frameborder="0" allowfullscreen></iframe></p>
 
@@ -216,7 +216,7 @@ Cayenne currently supports the following registration / activation modes for dev
 In the following sections, we will walk you through examples of adding your Actility device using each of these activation modes.
 
 
-####Already Registered
+#### Already Registered
 If your device has been previously registered on the Actility network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
 
 **Items you will need:**
@@ -253,7 +253,7 @@ The LoRa Pulse widget has been added to your dashboard and Cayenne will automati
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160819153512/LoRa-device-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 
-####Over the Air Activation
+#### Over the Air Activation
 
 In Over the Air Activation (OTAA), devices are pre-provisioned to work on a specific LoRa network. To use Activation by Personalization, the LoRa hardware is ordered preconfigured by the Device Manufacturer for a given setup. This removes any additional user interaction necessary to activate these devices once deployed.
 
@@ -274,7 +274,7 @@ Once you have entered in the required information, click on **Add LoRa device**.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
-####Activation by Personalization
+#### Activation by Personalization
 
 In Activation by Personalization (APB), devices are pre-provisioned to work on a specific LoRa network. To use Activation by Personalization, the LoRa hardware is ordered preconfigured by the Device Manufacturer for a given setup. This removes any additional user interaction necessary to activate these devices once deployed.
 
@@ -295,7 +295,7 @@ Once you have entered in the required information, click on **Add LoRa device**.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
-###Supported devices
+### Supported devices
 
 **Actility network devices supported by Cayenne**
 Cayenne currently supports the following devices on the Actility network. Support for more devices is constantly ongoing.
@@ -320,29 +320,33 @@ Cayenne currently supports the following devices on the Actility network. Suppor
 *   [Semtech LoRa Motes US](#supported-hardware-lora-devices-semtech-lora-motes-usa)
 
 
-##Senet Network
+## Senet Network
 
-**About Senet** <br/>
+**About Senet**
+
 Senet, a contributing member of the LoRa® Alliance, is the first and only public provider in North America of low-power wide-area networks (LPWANs) with its class-leading LoRa® modulation for IoT and M2M applications.
 
-**Need an account?** <br/>
-In order to register devices or add your device into Cayenne, you will need a Senet account. You may refer to [Create a Senet account](#lora-senet-network-create-account) for more information.
+**Using Senet with Cayenne**
 
-**Adding Senet network devices to Cayenne** <br/>
-Cayenne currently supports the following registration / activation modes for devices that use the Senet network:
+Cayenne makes it easy to use your LoRa device and the Senet network. You will need to:
 
-* [Already Registered](#lora-senet-network-add-device-to-cayenne-already-registered) – devices [manually registered](#lora-senet-network-manual-register-device) via the Senet portal.
+1. Create / Log into your account on the Senet portal
+2. Register your device on the Senet portal
+3. Setup traffic forwarding to Cayenne
+4. Add your device to your Cayenne dashboard
 
-**Supported devices**
-Need to know what devices are currently supported? Check out the Senet [Supported devices](#lora-senet-network-supported-devices) section.
+We will walk you through these steps in the following sections.
 
-###Create account
+
+### Create account
 To create your Senet account, visit the <a href="https://portal.senetco.com/" target="_blank">Senet Portal</a>. Follow the **Register as a new user** process located there to get started.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-portal-register-account.png" width="600" height="363" alt="Senet"><br/><br/></p>
 
-###Manual register device
-Before you can use your LoRa device on the Senet network, it must be manually registered on the network using the Senet portal. The following information will help guide you through this process. Once your device has been registered with Senet, it can be [added to Cayenne](#lora-senet-network-add-device-to-cayenne).
+
+### Manual register device
+
+Before you can use your LoRa device on the Senet network, it must be registered on the network using the Senet portal. The following information will help guide you through this process.
 
 **1\. Log into the Senet portal** <br/>
 Start by going to the <a href="https://portal.senetco.com/" target="_blank">Senet portal</a> and logging into your account.
@@ -353,7 +357,7 @@ Start by going to the <a href="https://portal.senetco.com/" target="_blank">Sene
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/pCnxVzJVDWk" frameborder="0" allowfullscreen></iframe></p>
 
-To get started with a new device, click on the **Register new device** button. Enter in the **Device ID** and a description for the device. Click **Submit** to register the device.
+To get started with a new device, click on the **Register new device** button. Enter in the **Device ID** (this will be the *DevEUI* located on the device or given to you when purchased) and a description for the device. Click **Submit** to register the device.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125357/Senet-register-button-hlt.png" width="600" height="336" alt="Senet"><br/><br/></p>
 
@@ -367,31 +371,26 @@ In order for Cayenne to be able to able to receive your device’s information, 
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125444/Senet-device-dashboard.png" width="600" height="410" alt="Senet"><br/><br/></p>
 
-From the menu, select **Device Edit** and the *Device Setup/Edit* screen appears.
+From the **cogwheel** menu, select **Device Edit** and the *Device Setup/Edit* screen appears.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125508/Senet-menu-device-edit.png" width="600" height="208" alt="Senet"><br/><br/></p>
 
-There are two options for setting up forwarding to Cayenne. In the first option, click on the dropdown for the **Forward To** and select the **MyDevices** option from the list.
-
-*Tip: Be sure the **Forward RF Data** checkbox is selected to see signal strength data in Cayenne.*
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-device-setup.png" width="600" height="194" alt="Senet"><br/><br/></p>
-
-In the second option, you can manually enter the URL for forwarding. To do so, select **HTTP Post** from the **Forward To** dropdown. The **Packet Format** can remain at its default of *JSON*. Next, enter in the Cayenne URL for the Senet API into the **URL** field, using **https://longrangeapi.mydevices.com/longrange/api/senet/messages/add**.
+From this screen we can setup the device so that it forwards data to Cayenne. From the **Forward To** dropdown select the **HTTP Post** option. Leave the **Packet Format** at its default value of *JSON*. Make sure the **Forward RF Data** checkbox is selected to see signal strength data for your device in Cayenne. Finally, enter in the Cayenne URL for the Senet API into the **URL** field and click the **Update** button to save changes.
+  ```
+  https://longrangeapi.mydevices.com/longrange/api/senet/messages/add
+  ```
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-device-setup-using-URL.png" width="600" height="216" alt="senet-device-setup-using-url"><br/><br/></p>
 
-**4\. Programming the device** <br/>
+###  Programming the device**
+
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
 If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step.
 
-**5\. Add your device in Cayenne** <br/>
-Once your device has been registered, programmed and is online, you can then proceed with adding an [Already Registered device](#lora-senet-network-add-device-to-cayenne-already-registered) in Cayenne. This will add your new device into the list of devices shown in Cayenne.
+### Add device to Cayenne
 
-
-###Add device to Cayenne
-In order for your LoRa device to appear in your dashboard, it must be added from the Cayenne dashboard.
+Once your device has been registered, programmed and is online, you can then proceed with adding the device in Cayenne so that it appears in your dashboard.
 
 Click **Add New** > **Device / Widget**.
 
@@ -405,7 +404,7 @@ After selecting the device that you wish to add, settings for that device will a
 
 In the following section, we’ll walk you through this process.
 
-####Already Registered
+#### Already Registered
 
 Once your device has been previously registered on the Senet network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
 
@@ -441,8 +440,10 @@ The Multitech mDotBox device has been added to your dashboard and Cayenne will a
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160819153512/LoRa-device-dashboard.png" width="600" height="407" alt="Senet"><br/><br/></p>
 
-###Supported devices
+### Supported devices
+
 **Senet network devices supported by Cayenne**
+
 Cayenne currently supports the following devices on the Senet network. Support for more devices is constantly ongoing.
 
 *   [Adeunis LoRa Field Test Device](#supported-hardware-lora-devices-adeunis-lora-field-test-device)
