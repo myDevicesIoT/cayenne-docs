@@ -344,11 +344,11 @@ Click **Add New** > **Device / Widget**.
 1. Select **Custom Widgets**, then the **Button** Widget.
 2. Enter the following settings:
 
-   **Widget Name:** LED
-   **Device:** Arduino
-   **Connectivity:** Digital
-   **Pin:** D8
-   **Icon:** LED
+   + **Widget Name:** LED
+   + **Device:** Arduino
+   + **Connectivity:** Digital
+   + **Pin:** D8
+   + **Icon:** LED
 
 3. Click **Add Widget**.
 
@@ -360,7 +360,7 @@ The button widget gets added to your dashboard.
 
 Push the button in your online dashboard to turn the LED on and off. You’re now ready to start using Cayenne for your IoT projects.
 
-Check out other example sketches at our [Cayenne Github](https://github.com/myDevicesIoT/CayenneArduinoSamples). Feel free to experiment and combine different examples together to create your own amazing projects.
+Check out other example sketches at our <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples" target="_blank">Cayenne Github</a>. Feel free to experiment and combine different examples together to create your own amazing projects.
 
 <p id="troubleshooting-arduino" class="anchor-link"></p>
 
@@ -369,40 +369,54 @@ Check out other example sketches at our [Cayenne Github](https://github.com/myDe
 
 If you don’t see your Arduino device connected to Cayenne, or if you’re running into trouble successfully programming your Arduino with the Arduino IDE, here are a few things to check.
 
+1. **Make sure your Arduino is connected to the Internet**
 
-1. **Make sure your Arduino is connected to the Internet**<br/>
-   On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have [a shield supported by Cayenne](http://www.cayenne-mydevices.com/CayenneStaging/docs#arduino-shields-connections) installed and working.<br/><br/>
-   *TIP: Double check that the board connection #include in your sketch file is correct for the shield that you are using. The Cayenne sketch file examples assume that you have a W5100 connected. If this line does not match your connection, your board will fail to connect to Cayenne.*<br/><br/>
+   On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have [a shield supported by Cayenne](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) installed and working.
+
+   *TIP: Double check that the board connection #include in your sketch file is correct for the shield that you are using. The Cayenne sketch file examples assume that you have a W5100 connected. If this line does not match your connection, your board will fail to connect to Cayenne.*
       
    ```
    #include <CayenneEthernet.h>
   
    ```
    <br/>
-2. **Make sure your Arduino is connected to a PC/Mac via the USB cable**<br/>
-   Power on your Arduino by connecting your Arduino with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the power LED lit on your board.<br/><br/>
-3. **Configure the Arduino IDE**<br/>
-   First, verify that you have the [Arduino IDE](https://www.arduino.cc/en/Main/Software) installed.
+2. **Make sure your Arduino is connected to a PC/Mac via the USB cable**
+
+   Power on your Arduino by connecting your Arduino with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the power LED lit on your board.
+
+3. **Configure the Arduino IDE**
+
+   First, verify that you have the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE</a> installed.
+
    Open the Arduino IDE program and verify that the correct **Board** is selected.
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616113931/Arduino-IDE-board-selection.png" width="600" height="501" alt="Arduino IDE Board Selection"></p>
+
    Next, verify that you have the correct **Port** selected for communicating with your Arduino. Pick the correct port based upon how you are connecting your Arduino to your PC/Mac.
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616114005/Arduino-IDE-port-selection.png" width="600" height="501" alt="Arduino IDE Port Selection"></p>
-4. **Verify that you have the Cayenne Library installed**<br/>
-   Verify that you see the Cayenne library installed under **File -> Examples -> Cayenne**. If you do not, [download the library](https://s3.amazonaws.com/mydevices-cayenne/arduino/lib/prod/Cayenne.zip) and include it into the Arduino IDE. For more help on this, see [Installing Cayenne Library into your Arduino IDE](http://www.cayenne-mydevices.com/CayenneStaging/docs#installing-library-arduino-ide).   
+
+4. **Verify that you have the Cayenne Library installed**
+
+   Verify that you see the Cayenne library installed under **File** > **Examples** > **Cayenne**. If you do not, make sure to add it to your Library. For more help on this, see [Add Cayenne Library to Arduino IDE](#getting-started-arduino-arduino-setup-using-cayenne-arduino-library-add-cayenne-library-to-arduino-ide).
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616115052/Arduino-IDE-Cayenne-lib-installed.png" width="600" height="555" alt="Arduino IDE Library Installed"></p>
-5. **Verify that your Arduino is connected with Cayenne**<br/>   
-   You can use the Serial Monitor tool in the Arduino IDE to view some connection information. After uploading your sketch file to the Arduino device, open the **Serial Monitor** and look for the Cayenne connection.   
+
+5. **Verify that your Arduino is connected with Cayenne**
+
+   You can use the Serial Monitor tool in the Arduino IDE to view some connection information. After uploading your sketch file to the Arduino device, open the **Serial Monitor** and look for the Cayenne connection.
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616114750/Arduino-Serial-Monitor-option.png" width="600" height="487" alt="Arduino Serial Monitor"></p>
+
    In the output of the Serial Monitor, you should see something like this:
+
    ```
    Getting IP...
    My IP: 192.168.0.10
    Connecting to arduino.mydevices.com:8442
    Ready (ping: 109ms).
    ```
-   If you don’t, this means your board is not connected to the Internet to send data to the Cayenne cloud. You will need to verify that your Arduino is connected to the Internet.
-   
-   If you don’t see any outptut in the Serial Monitor, leave it open and Reset your Arduino board.
+   If you don’t, this means your board is not connected to the Internet to send data to the Cayenne cloud. You will need to verify that your Arduino is connected to the Internet. If you don’t see any outptut in the Serial Monitor, leave it open and Reset your Arduino board.
 
 
 ## LoRa
