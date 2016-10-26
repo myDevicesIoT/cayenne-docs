@@ -444,25 +444,6 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   Accelerometer
 
 
-#### GlobalSat LM-130-EVB
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LM-130-EVB"></p>
-
-**Networks supported:**
-
-*   [Actility](#lora-actility)
-*   [Senet](#lora-senet-network)
-
-**Links:**
-
-*   <a href="http://www.globalsat.com.tw/s/en/2/product/LoRaWAN%E2%84%A2-Compliant-Evaluation-Board-LM-130EVB-211701.html" target="_blank">Product Page</a>
-*   <a href="http://webbuilder.asiannet.com/909/ftp/download/LM-130EVB%20Spec_V1%205_Formal_20160831.pdf" target="_blank">Datasheet</a>
-
-**Sensors included:**
-
-*   TODO
-
-
 ### Multitech
 
 #### mDotBox
