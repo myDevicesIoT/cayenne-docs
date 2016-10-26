@@ -553,7 +553,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 }
 /* Custom */
 div.toggle-menu {
-  background: url("http://cayenne-mydevices.com/docs-dev/img/expand.png") no-repeat;
+  background: url("img/expand.png") no-repeat;
   height: 8px;
   width: 6px;
   float: left;
@@ -562,7 +562,7 @@ div.toggle-menu {
   cursor: pointer;
 }
 div.expand {
-  background: url("http://cayenne-mydevices.com/docs-dev/img/toggle.png") no-repeat;
+  background: url("img/toggle.png") no-repeat;
 }
 @media (min-width: 1180px) {
   /* body:not(.no-literate) .content-root {
