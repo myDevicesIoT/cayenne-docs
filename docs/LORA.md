@@ -140,7 +140,9 @@ After selecting the OTAA activation mode, the list of fields will update to show
 + Device identification
     + **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
     + **Device Address:** Skip – When selecting OTAA activation, the device address will automatically be generated based on the DevEUI.
-    + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Selecting the correct profile here is not required for Cayenne to work with your device – the information will be sent in raw format to Cayenne and will work regardless of this selection.
+    + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Be sure to select the correct profile for your device and which network it will be using.
+    
+        *TIP: You can refer to the [Supported devices section](#lora-actility-supported-devices) where we have more details on which Device Profile to select for devices.*
 + Application layer
     + **Application EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
 
@@ -174,7 +176,9 @@ After selecting the APB activation mode, the list of fields will update to show 
 + Device identification
     + **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
     + **Device Address:** When using APB, you will need to manually enter the hardware address here.
-    + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Selecting the correct profile here is not required for Cayenne to work with your device – the information will be sent in raw format to Cayenne and will work regardless of this selection.
+    + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Be sure to select the correct profile for your device and which network it will be using.
+    
+        *TIP: You can refer to the [Supported devices section](#lora-actility-supported-devices) where we have more details on which Device Profile to select for devices.*
     + **Application session key:** Enter the AppSKey. The AppSKey is an application session key specific for the end-device. It is used by both the network server and the end-device to encrypt and decrypt the payload field of application-specific data messages.
     + **Network session key:** Enter the NwkSKey. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
 + Application layer
@@ -291,6 +295,20 @@ Cayenne currently supports the following devices on the Actility network. Suppor
 *   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
 *   [Semtech LoRa Motes EU](#supported-hardware-lora-devices-semtech-lora-motes-eu)
 *   [Semtech LoRa Motes US](#supported-hardware-lora-devices-semtech-lora-motes-usa)
+
+**Actility Device Profiles by device**
+
+When setting up your device on Actility's ThingPark portal, you must select the correct **Device Profile** for your device. Below are some guidelines on which profile to select, based on your device.
+
++ For devices used in European Union:
+  + Select the Profile **LoRaWAN 1.0 class A - Rx2-SF12**
++ For devices use in United States of America:
+  + Select the Profile **LoRaWAN 1.0 class A -US- Rx2-SF12**
++ Exceptions to the above:
+  + If you are using the **NKE Watteco SmartPlug**, use the class C version of above configs depending on which region you are in.
+
+    For example, with the SmartPlug being used in the US, select **LoRaWAN 1.0 class C (-US-) Rx2-SF12**
+    And in the EU, select **LoRaWAN 1.0 class C - Rx2-SF12**
 
 
 ## Senet Network
