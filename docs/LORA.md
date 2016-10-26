@@ -76,7 +76,7 @@ To create your Actility account, visit the <a href="http://actility.thingpark.co
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/n8pSDJqJtYU" frameborder="0" allowfullscreen></iframe></p>
 
-In order for data from your device to reach Cayenne, you must create an **AS Routing Profile** in the Actility portal. We can then setup our device to use this profile. To begin, select the **AS routing profiles** entry on the portal. From the screen that appears, click on the **Add** button to create a new profile.
+In order for data from your device to reach Cayenne, you must create an **AS Routing Profile** in the Actility portal. Any devices that you wish to add to Cayenne will need to be configured to use this routing profile or Cayenne will not receive their data. To create this profile select the **AS routing profiles** entry on the portal. From the screen that appears, click on the **Add** button to begin creating a new profile.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-1.png" width="600" height="359" alt="create-routing-profile-1"><br/><br/></p>
 
@@ -92,7 +92,10 @@ In the **Destinations** field, select the existing *ThingPark Cloud* and click o
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-4.png" width="600" height="359" alt="create-routing-profile-4"><br/><br/></p>
 
-In the *Edit distination* dialog, change the dropdown for **Type** to *Third party AS (HTTP)*. In the **Destination** field, enter in the Cayenne Actility URL **"https://longrangeapi.mydevices.com/longrange/api/actility/messages/add**. After doing so, click on the **Edit** button to save your changes.
+In the *Edit distination* dialog, change the dropdown for **Type** to *Third party AS (HTTP)*. In the **Destination** field, enter in the Cayenne Actility URL and then click on the **Edit** button to save your changes. 
+```
+https://longrangeapi.mydevices.com/longrange/api/actility/messages/add
+```
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-5.png" width="600" height="284" alt="Cayenne URL"><br/><br/></p>
 
@@ -121,9 +124,10 @@ To get started with a new device, right-click on the **Devices** entry in the po
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822155516/ThingPark-menu-expanded-Create-device.png" width="400" height="337" alt="Actility"><br/><br/></p>
 
-The **New device** dialog will appear. To create a new device using the Actility portal, you will need to enter in all required information for completing the device creation into the New device dialog. The process begins by selecting an appropriate activation mode from the **Device activation** field.
+The *New device* dialog will appear. To create a new device using the Actility portal, you will need to enter in all required information for completing the device creation. The process begins by selecting an appropriate activation mode from the **Device activation** field.
 
-Actility's activation modes supports two modes (OTAA, APB). In most cases, this will be Over the Air Activation (OTAA). Let's cover the information needed for both methods.
+Actility supports two activation modes (OTAA, APB). In most cases, you will want to select Over the Air Activation (OTAA). Let's cover the information needed for both methods.
+
 - [Over the Air Activation (OTAA)](#lora-actility-manually-register-device-over-the-air-activation-otaa)
 - [Activation By Personalization (APB)](#lora-actility-manually-register-device-activation-by-personalization-apb)
 
@@ -133,23 +137,33 @@ After selecting the OTAA activation mode, the list of fields will update to show
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822144738/ThingPark-New-device.png" width="600" height="407" alt="Actility"><br/><br/></p>
 
-*   Device identification
-    *   **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
-    *   **Device Address:** Skip – When selecting OTAA activation, the device address will automatically be generated based on the DevEUI.
-    *   **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Selecting the correct profile here is not required for Cayenne to work with your device – the information will be sent in raw format to Cayenne and will work regardless of this selection.
-*   Application layer
-    *   **Application EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
-    *   **Application key:** Enter the Appkey. The AppKey is a key specific for the end-device that is assigned by the application owner to the end-device and most likely derived from an application-specific root key exclusively known to and under the control of the application provider.
-    *   **Thingpark cloud config:** Skip – Cayenne does not require this optional field.
-*   Network
-    *   **Connectivity plan:** Select an appropriate Actility plan here for activating your device under.
-    *   **AS routing profile:** Select the Cayenne route that you created above in **Step 2** from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
-*   Administrative data
-    *   **Device name:** Used by Actility. Cayenne does not use this information.
-    *   **Marker:** Used by Actility. Cayenne does not use this information.
-    *   **Administrative info:** Used by Actility. Cayenne does not use this information.
-    *   **Administrative location:** Used by Actility. Cayenne does not use this information.
-*   Complete the device creation by clicking the **Create** button to create the device.
++ Device identification
+    + **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
+    + **Device Address:** Skip – When selecting OTAA activation, the device address will automatically be generated based on the DevEUI.
+    + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Selecting the correct profile here is not required for Cayenne to work with your device – the information will be sent in raw format to Cayenne and will work regardless of this selection.
++ Application layer
+    + **Application EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
+
+        *TIP: If you do not have an Applicate EUI, you can create one yourself. It must be a unique string composed of 16 alphanumeric characters.*
+    + **Application key:** Enter the Appkey. The AppKey is a key specific for the end-device that is assigned by the application owner to the end-device and most likely derived from an application-specific root key exclusively known to and under the control of the application provider.
+
+        *TIP: If you do not have an Applicate key, you can create one yourself. It must be a unique string composed of 32 alphanumeric characters.*
+    + **Thingpark cloud config:** Skip – Cayenne does not require this optional field.
++ Network
+    + **Connectivity plan:** Select an appropriate Actility plan here for activating your device under.
+    + **AS routing profile:** Select the Cayenne route that you created above in **Step 2** from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
++ Administrative data
+    + **Device name:** Used by Actility. Cayenne does not use this information.
+    + **Marker:** Used by Actility. Cayenne does not use this information.
+    + **Administrative info:** Used by Actility. Cayenne does not use this information.
+    + **Administrative location:** Used by Actility. Cayenne does not use this information.
++ Complete the device creation by clicking the **Create** button to create the device.
+
+Once added, you will see your new device listed in the device list on the portal.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
+
+Once your device has been created, continue by making sure that your device has been [programmed/flashed](#lora-actility-programming-the-device).
 
 #### Activation By Personalization (APB)
 
@@ -157,30 +171,35 @@ After selecting the APB activation mode, the list of fields will update to show 
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160825073849/ThingPark-New-device-APB.png" width="600" height="369" alt="Actility"><br/><br/></p>
 
-*   Device identification
-    *   **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
-    *   **Device Address:** When using APB, you will need to manually enter the hardware address here.
-    *   **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Selecting the correct profile here is not required for Cayenne to work with your device – the information will be sent in raw format to Cayenne and will work regardless of this selection.
-    *   **Application session key:** Enter the AppSKey. The AppSKey is an application session key specific for the end-device. It is used by both the network server and the end-device to encrypt and decrypt the payload field of application-specific data messages.
-    *   **Network session key:** Enter the NwkSKey. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
-*   Application layer
-    *   **Application EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
-    *   **Application key:** Enter the Appkey. The AppKey is a key specific for the end-device that is assigned by the application owner to the end-device and most likely derived from an application-specific root key exclusively known to and under the control of the application provider.
-    *   **Thingpark cloud config:** Skip – Cayenne does not require this optional field.
-*   Network
-    *   **Connectivity plan:** Select an appropriate Actility plan here for activating your device under.
-    *   **AS routing profile:** Select the Cayenne route that you created above in **Step 2** from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
-*   Administrative data
-    *   **Device name:** Used by Actility. Cayenne does not use this information.
-    *   **Marker:** Used by Actility. Cayenne does not use this information.
-    *   **Administrative info:** Used by Actility. Cayenne does not use this information.
-    *   **Administrative location:** Used by Actility. Cayenne does not use this information.
-*   Complete the device creation by clicking the **Create** button to create the device.
++ Device identification
+    + **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
+    + **Device Address:** When using APB, you will need to manually enter the hardware address here.
+    + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Selecting the correct profile here is not required for Cayenne to work with your device – the information will be sent in raw format to Cayenne and will work regardless of this selection.
+    + **Application session key:** Enter the AppSKey. The AppSKey is an application session key specific for the end-device. It is used by both the network server and the end-device to encrypt and decrypt the payload field of application-specific data messages.
+    + **Network session key:** Enter the NwkSKey. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
++ Application layer
+    + **Application EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
+
+        *TIP: If you do not have an Applicate EUI, you can create one yourself. It must be a unique string composed of 16 alphanumeric characters.*
+    + **Application key:** Enter the Appkey. The AppKey is a key specific for the end-device that is assigned by the application owner to the end-device and most likely derived from an application-specific root key exclusively known to and under the control of the application provider.
+
+        *TIP: If you do not have an Applicate key, you can create one yourself. It must be a unique string composed of 32 alphanumeric characters.*
+    + **Thingpark cloud config:** Skip – Cayenne does not require this optional field.
++ Network
+    + **Connectivity plan:** Select an appropriate Actility plan here for activating your device under.
+    + **AS routing profile:** Select the Cayenne route that you created above in **Step 2** from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
++ Administrative data
+    + **Device name:** Used by Actility. Cayenne does not use this information.
+    + **Marker:** Used by Actility. Cayenne does not use this information.
+    + **Administrative info:** Used by Actility. Cayenne does not use this information.
+    + **Administrative location:** Used by Actility. Cayenne does not use this information.
++ Complete the device creation by clicking the **Create** button to create the device.
 
 Once added, you will see your new device listed in the device list on the portal.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
 
+Once your device has been created, continue by making sure that your device has been [programmed/flashed](#lora-actility-programming-the-device).
 
 ###  Programming the device
 
