@@ -330,10 +330,11 @@ Senet, a contributing member of the LoRa® Alliance, is the first and only publi
 
 Cayenne makes it easy to use your LoRa device and the Senet network. You will need to:
 
-1. Create / Log into your account on the Senet portal
-2. Register your device on the Senet portal
-3. Setup traffic forwarding to Cayenne
-4. Add your device to your Cayenne dashboard
+1. [Create / Log into your account on the Senet portal](#lora-senet-network-create-account)
+2. [Register your device on the Senet portal](#lora-senet-network-manual-register-device)
+3. [Setup traffic forwarding to Cayenne](#lora-senet-network-setup-device-forwarding-to-cayenne)
+4. [Program/Flash your device](#lora-senet-network-programming-the-device)
+5. [Add your device to your Cayenne dashboard](#lora-senet-network-add-device-to-cayenne)
 
 We will walk you through these steps in the following sections.
 
