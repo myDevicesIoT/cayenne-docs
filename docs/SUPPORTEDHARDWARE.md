@@ -34,6 +34,8 @@ Cayenne works with Raspberry Pi computers running Linux based Raspbian OS Jessie
 
 ## Microcontrollers
 
+<p id="arduino-microcontrollers" class="anchor-link"></p>
+
 ### Arduino
 
 Cayenne can be used with Internet connected Arduino devices. The following Arduino versions are currently supported.
