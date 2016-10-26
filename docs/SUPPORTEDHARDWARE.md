@@ -2,8 +2,13 @@
 
 ## Single Board Computers
 
+<p id="raspberry-pi-single-board-computers" class="anchor-link"></p>
 ### Raspberry Pi
 Cayenne works with Raspberry Pi computers running Linux based Raspbian OS Jessie. The following Raspberry Pi hardware versions are currently supported.
+
+**Need a Raspberry Pi?**
+<a href="http://www.newark.com/raspberrypi-boards?rd=raspberry+pi&selectedCategoryId=&categoryName=All+Categories&categoryNameResp=All+Categories" target="_blank">Visit the store</a> to find a Raspberry Pi to use with Cayenne.
+
 
 
 #### Model A
@@ -33,6 +38,8 @@ Cayenne works with Raspberry Pi computers running Linux based Raspbian OS Jessie
 
 Cayenne can be used with Internet connected Arduino devices. The following Arduino versions are currently supported.
 
+**Need an Arduino board?**
+<a href="http://store-usa.arduino.cc" target="_blank">Visit the store</a> to find an Arduino board to use with Cayenne.
 
 #### Arduino Due
 
@@ -99,7 +106,7 @@ In order for the Arduino IDE to be able to program an Arduino Due, you need to i
 
 <a href="https://www.arduino.cc/en/Main/ArduinoBoardYun" target="_blank">Learn more about Arduino Yun</a>
 
-
+<p id="#arduino-shields-connections" class="anchor-link"></p>
 #### Arduino Ethernet & Wifi Shield
 
 Using an Arduino ethernet shield or WiFi shield gives your Arduino the ability to connect to the internet and the Cayenne dashboard. There are various Cayenne sketch files that are made specifically for the shield that you are using on your Arduino. This is because different shields use different ethernet/WiFi chips.
