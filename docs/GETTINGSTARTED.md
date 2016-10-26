@@ -161,7 +161,7 @@ You can add analog, digital and PWM extensions to your Raspberry Pi. This allows
 <p id="arduino-get-started-in-minutes" class="anchor-link"></p>
 
 
-### Getting started in minutes!
+### Get started in minutes!
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/hmIGRrvevCA" frameborder="0" allowfullscreen></iframe></p>
 
 Before you can manage your Arduino device using the online dashboard, you must setup your device and install the Cayenne Arduino Library onto the device.
@@ -173,15 +173,18 @@ Before you can manage your Arduino device using the online dashboard, you must s
 
 Begin by verifying that your Arduino board and PC/Mac are correctly set up before continuing.
 
-1. **Make sure your Arduino is connected to the Internet**<br/>
-
-   On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have a shield supported by Cayenne installed and working
-   
-2. **Make sure your Arduino is connected to a PC/Mac via the USB cable**<br/>
-
-   Power on your Arduino by connecting your Arduino with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the power LED lit on your board.
-   
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616134313/1st-Experience-Arduino-Step-2-setup-arduino.png" width="600" height="384" alt="Step 2 Arduino"></p>
+
+
+#### Connect the Arduino to the Internet
+
+Make sure your Arduino is connected to the Internet. On most Arduino boards, you will need to connect an [Ethernet or Wi-Fi shield](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) in order to connect your board to the Internet. Verify that you have a shield supported by Cayenne installed and working.
+   
+#### Connect the Arduino to a PC/Mac
+
+Power on your Arduino by connecting your Arduino with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the power LED lit on your board.
+
+*TIP: If you will have more than a couple of sensors attached to your Arduino, it may be a good idea to also supply power to the Arduino using the external power jack. This will ensure that after your board is programmed and running, it has sufficient power for all your connected devices.*
 
 <p id="using-cayenne-library" class="anchor-link"></p>
 
@@ -336,7 +339,7 @@ In the Cayenne dashboard, you can now click the **Step 2: Add Actuator** button 
 <p id="add-custom-widgets-arduino" class="anchor-link"></p>
 
 
-### Add custom widgets
+### Custom widgets
 
 We’ve integrated some specific sensors and actuators, but there are thousands of sensors, actuators and other devices that get connected to Arduino boards. Custom widgets allow you to send and receive data from any device that is connected to your Arduino board to Cayenne.
 
