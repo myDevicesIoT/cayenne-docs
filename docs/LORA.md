@@ -74,7 +74,7 @@ To create your Actility account, visit the <a href="http://actility.thingpark.co
 
 ### Create Cayenne Routing Profile
 
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/n8pSDJqJtYU" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/rpZo-GKd7mY" frameborder="0" allowfullscreen></iframe></p>
 
 In order for data from your device to reach Cayenne, you must create an **AS Routing Profile** in the Actility portal. Any devices that you wish to add to Cayenne will need to be configured to use this routing profile or Cayenne will not receive their data. To create this profile select the **AS routing profiles** entry on the portal. From the screen that appears, click on the **Add** button to begin creating a new profile.
 
@@ -118,7 +118,7 @@ If you aren't already logged in, start by going to the <a href="https://demo.thi
 
 **Create new device**
 
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/cXPxkBeSaXk" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/hxhRwEalGvk" frameborder="0" allowfullscreen></iframe></p>
 
 To get started with a new device, right-click on the **Devices** entry in the portal and select **Create device** from the menu that appears.
 
@@ -216,7 +216,7 @@ If your device needs to be programmed, you should now proceed with programming/f
 
 ### Add device to Cayenne
 
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/QPiZ-FSjdyw" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/u6QuVJCUTo4" frameborder="0" allowfullscreen></iframe></p>
 
 Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
 
@@ -349,7 +349,7 @@ Start by going to the <a href="https://portal.senetco.com/" target="_blank">Sene
 
 **Register new device**
 
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/_mrDBWEDMuU" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/CrY-wAw58Ts" frameborder="0" allowfullscreen></iframe></p>
 
 To get started with a new device, click on the **Register new device** button. The *New node* screen will appear.
 
@@ -366,7 +366,7 @@ Click on the **Back to Node List** button to return to the landing screen. Your 
 
 ### Setup device forwarding to Cayenne
 
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/GtYMcNepUIE" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/k7V0FzuFf-I" frameborder="0" allowfullscreen></iframe></p>
 
 In order for Cayenne to be able to able to receive your device’s information, you will need to setup packet forwarding. To do so, click on the device in the device list and its dashboard screen will open.
 
