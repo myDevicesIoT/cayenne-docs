@@ -215,6 +215,17 @@ The Cayenne library has now been expanded in the libraries folder in your Arduin
 
 <p id="connect-your-arduino" class="anchor-link"></p>
 
+### Configure Arduino IDE
+
+In order to successfully program your Arduino board, you will need to verify that the appropriate Board and Port are selected in the Arduino IDE.
+ 
+First, verify that the correct Board is selected in the **Tools** > **Board** menu. Be sure to select the board type that you will be programming.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-board-selection.png" width="660" height="552" alt="Arduino IDE board selection"><br/><br/></p>
+ 
+Then, verify that you have the correct **Port** selected for communicating with your Arduino. Pick the correct port based upon how you are connecting your Arduino to your PC/Mac.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-port-selection.png" width="660" height="552" alt="Arduino IDE port selection"><br/><br/></p>
 
 #### Connect your Arduino
 
