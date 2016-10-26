@@ -106,12 +106,12 @@
         });
 
         //APIs navigation
-        var api = $("li#apis-item");
-        var apl = $("ul#apis-list");
+        var api = $("li#bring-your-own-thing-api-item");
+        var apl = $("ul#bring-your-own-thing-api-list");
 
         api.prepend( $("<div class='toggle-menu'></div>") );
         apl.hide();
-        var ape = $("#apis-item > div.toggle-menu");
+        var ape = $("#bring-your-own-thing-api-item > div.toggle-menu");
 
         ape.click(function(){
             $(this).toggleClass("expand");
@@ -148,12 +148,12 @@
         });
 
         //MQTT API navigation
-        var mqttItem = $("li#mqtt-api-item");
-        var mqttList = $("ul#mqtt-api-list");
+        var mqttItem = $("li#bring-your-own-thing-api-item");
+        var mqttList = $("ul#bring-your-own-thing-api-list");
 
         mqttItem.prepend( $("<div class='toggle-menu'></div>") );
         mqttList.hide();
-        var mqttE = $("#mqtt-api-item > div.toggle-menu");
+        var mqttE = $("bring-your-own-thing-api-item > div.toggle-menu");
 
         mqttE.click(function(){
             $(this).toggleClass("expand");

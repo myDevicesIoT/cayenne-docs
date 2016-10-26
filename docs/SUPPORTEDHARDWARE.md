@@ -2,47 +2,57 @@
 
 ## Single Board Computers
 
+<p id="raspberry-pi-single-board-computers" class="anchor-link"></p>
+
 ### Raspberry Pi
 Cayenne works with Raspberry Pi computers running Linux based Raspbian OS Jessie. The following Raspberry Pi hardware versions are currently supported.
+
+**Need a Raspberry Pi?**
+<a href="http://www.newark.com/raspberrypi-boards?rd=raspberry+pi&selectedCategoryId=&categoryName=All+Categories&categoryNameResp=All+Categories" target="_blank">Visit the store</a> to find a Raspberry Pi to use with Cayenne.
+
 
 
 #### Model A
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606164149/Raspberry-Pi-Model-A.jpeg" width="350" height="238" class="noborder" alt="Raspberry Pi Model A"></p>
 
-[Learn more about Raspberry Pi Model A](https://www.raspberrypi.org/products/model-a/)
+<a href="https://www.raspberrypi.org/products/model-a/" target="_blank">Learn more about Raspberry Pi Model A</a>
 
 
 #### Model B
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606164510/Raspberry-Pi-Model-B.jpg" width="350" height="238" class="noborder" alt="Raspberry Pi Model B"></p>
 
-[Learn more about Raspberry Pi Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
+<a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/" target="_blank">Learn more about Raspberry Pi Model B</a>
 
 
 #### Zero
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606164723/Raspberry-Pi-Zero.jpg" width="350" height="178" class="noborder" alt="Raspberry Pi Zero"></p>
 
-[Learn more about Raspberry Pi Zero](https://www.raspberrypi.org/products/pi-zero/)
+<a href="https://www.raspberrypi.org/products/pi-zero/" target="_blank">Learn more about Raspberry Pi Zero</a>
 
 
 ## Microcontrollers
+
+<p id="arduino-microcontrollers" class="anchor-link"></p>
 
 ### Arduino
 
 Cayenne can be used with Internet connected Arduino devices. The following Arduino versions are currently supported.
 
+**Need an Arduino board?**
+<a href="http://store-usa.arduino.cc" target="_blank">Visit the store</a> to find an Arduino board to use with Cayenne.
 
 #### Arduino Due
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606155151/Arduino-Due.jpg" width="350" height="188" class="noborder" alt="Arduino Due"></p>
 
-[Learn more about Arduino Due](https://www.arduino.cc/en/Main/ArduinoBoardDue)
+<a href="https://www.arduino.cc/en/Main/ArduinoBoardDue" target="_blank">Learn more about Arduino Due</a>
 
 *TIP: Starting from the IDE version 1.6.2, only AVR Arduino boards are installed by default. Some Arduino boards require an additional Core to be installed. The Arduino Due is one such example.*
 
-[Learn more about Arduino – Cores](https://www.arduino.cc/en/Guide/Cores)
+<a href="https://www.arduino.cc/en/Guide/Cores" target="_blank">Learn more about Arduino – Cores</a>
 
 In order for the Arduino IDE to be able to program an Arduino Due, you need to install the SAM Core using the Boards Manager.
 
@@ -55,56 +65,57 @@ In order for the Arduino IDE to be able to program an Arduino Due, you need to i
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606155840/Arduino-LeonardoFront.jpg" width="350" height="263" class="noborder" alt="Arduino Leonardo"></p>
 
-[Learn more about Arduino Leonardo](https://www.arduino.cc/en/Main/arduinoBoardLeonardo&sa=D&ust=1465255537100000&usg=AFQjCNFoomViIHvbQESYdewaM8sQyjNoWg)
+<a href="https://www.arduino.cc/en/Main/arduinoBoardLeonardo&sa=D&ust=1465255537100000&usg=AFQjCNFoomViIHvbQESYdewaM8sQyjNoWg" target="_blank">Learn more about Arduino Leonardo</a>
 
 
 #### Arduino Mega
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606160049/Arduino-Mega.jpg" width="350" height="187" class="noborder" alt="Arduino Mega"></p>
 
-[Learn more about Arduino Mega](https://www.arduino.cc/en/Main/arduinoBoardMega&sa=D&ust=1465255537100000&usg=AFQjCNFrvHL9JLkObw9vamESIaDmud_6qg)
+<a href="https://www.arduino.cc/en/Main/arduinoBoardMega&sa=D&ust=1465255537100000&usg=AFQjCNFrvHL9JLkObw9vamESIaDmud_6qg" target="_blank">Learn more about Arduino Mega</a>
 
 
 #### Arduino Nano
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606160211/Arduino-Nano.jpg" width="350" height="152" class="noborder" alt="Arduino Nano"></p>
 
-[Learn more about Arduino Nano](https://www.arduino.cc/en/Main/ArduinoBoardNano&sa=D&ust=1465255537100000&usg=AFQjCNF2ed6JYbU3bBtq1CJG_7DWKDSoDA)
+<a href="https://www.arduino.cc/en/Main/ArduinoBoardNano&sa=D&ust=1465255537100000&usg=AFQjCNF2ed6JYbU3bBtq1CJG_7DWKDSoDA" target="_blank">Learn more about Arduino Nano</a>
 
 
 #### Arduino Pro Micro
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606160332/Arduino-Pro-Micro.jpg" width="350" height="186" class="noborder" alt="Arduino Pro Micro"></p>
 
-[Learn more about Arduino Pro Micro](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-overview-pro-micro)
+<a href="https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-overview-pro-micro" target="_blank">Learn more about Arduino Pro Micro</a>
 
 
 #### Arduino Pro Mini
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606160445/Arduino-Pro-Mini.jpg" width="350" height="196" class="noborder" alt="Arduino Pro Mini"></p>
 
-[Learn more about Arduino Pro Mini](https://www.arduino.cc/en/Main/arduinoBoardProMini)
+<a href="https://www.arduino.cc/en/Main/arduinoBoardProMini" target="_blank">Learn more about Arduino Pro Mini</a>
 
 
 #### Arduino Uno
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606161047/Arduino-Uno.jpg" width="350" height="252" class="noborder" alt="Arduino Uno"></p>
 
-[Learn more about Arduino Uno](https://www.arduino.cc/en/Main/ArduinoBoardUno)
+<a href="https://www.arduino.cc/en/Main/ArduinoBoardUno" target="_blank">Learn more about Arduino Uno</a>
 
 
 #### Arduino Yun
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606162951/Arduino-Yun.jpg" width="350" height="249" class="noborder" alt="Arduino Yun"></p>
 
-[Learn more about Arduino Yun](https://www.arduino.cc/en/Main/ArduinoBoardYun)
+<a href="https://www.arduino.cc/en/Main/ArduinoBoardYun" target="_blank">Learn more about Arduino Yun</a>
 
+<p id="arduino-shields-connections" class="anchor-link"></p>
 
 #### Arduino Ethernet & Wifi Shield
 
 Using an Arduino ethernet shield or WiFi shield gives your Arduino the ability to connect to the internet and the Cayenne dashboard. There are various Cayenne sketch files that are made specifically for the shield that you are using on your Arduino. This is because different shields use different ethernet/WiFi chips.
 
-You can use the following information to help you identify and connect your Arduino to the Internet. Once you’ve identified how your Arduino will connect, you can continue with connecting your Arduino to Cayenne. [Read about Installing Cayenne Library into your Arduino IDE](http://www.cayenne-mydevices.com/docs/#installing-library-arduino-ide)
+You can use the following information to help you identify and connect your Arduino to the Internet. Once you’ve identified how your Arduino will connect, you can continue with connecting your Arduino to Cayenne. [Read about Adding Cayenne Library to Arduino IDE](#getting-started-arduino-arduino-setup-using-cayenne-arduino-library-add-cayenne-library-to-arduino-ide)
 
 <br/> 
 
@@ -112,13 +123,13 @@ You can use the following information to help you identify and connect your Ardu
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615143609/ArduinoEthernetShield_R3_Front.jpg" class="noborder" width="346" height="245" alt="Ethernet Shield W5100"></p>
 
-Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5100/EthernetShieldW5100.ino) if using the [Arduino Ethernet Shield W5100](https://www.arduino.cc/en/Main/ArduinoEthernetShield).
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5100/EthernetShieldW5100.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoEthernetShield" target="_blank">Arduino Ethernet Shield W5100</a>.
 
 <br/> 
 
 **ManualConnection**
 
-Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/ManualConnection/ManualConnection.ino) if manually connecting to the Arduino Ethernet Shield to the internet. You’ll need to specify the MAC address, IP, and gateway in the sketch file, as well as select the type of Ethernet Shield you are using.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/ManualConnection/ManualConnection.ino" target="_blank">sketch file</a> if manually connecting to the Arduino Ethernet Shield to the internet. You’ll need to specify the MAC address, IP, and gateway in the sketch file, as well as select the type of Ethernet Shield you are using.
 
 <br/> 
 
@@ -126,7 +137,7 @@ Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/b
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615143613/ethernet-shield-for-arduino-w5200.jpg" class="noborder" width="346" height="246" alt="Ethernet Shield W5200"></p>
 
-Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5200/EthernetShieldW5200.ino) if using the [Arduino Ethernet Shield W5200](http://www.dfrobot.com/index.php?route=product/product&product_id=1028#.V2GAB_krKhc).
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5200/EthernetShieldW5200.ino" target="_blank">sketch file</a> if using the <a href="http://www.dfrobot.com/index.php?route=product/product&product_id=1028#.V2GAB_krKhc" target="_blank">Arduino Ethernet Shield W5200</a>.
 
 *Remember to download and install the W5200 library to your Ardiuno IDE. Then, add it to your sketch file.*
 
@@ -136,7 +147,7 @@ Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/b
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615154542/W5500.jpg" width="346" height="276" class="noborder" alt="Ethernet Shield W5500"></p>
 
-Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5500/EthernetShieldW5500.ino) if using the [Arduino Ethernet Shield W5500](http://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0).
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5500/EthernetShieldW5500.ino" target="_blank">sketch file</a> if using the <a href="http://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0" target="_blank">Arduino Ethernet Shield W5500</a>.
 
 
 *Remember to download and install the W5500 library to your Arduino IDE. Then, add it to your sketch file.*
@@ -145,15 +156,15 @@ Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/b
 
 Please also make sure the correct Ethernet2 library is downloaded to your Arduino IDE. You’ll need to use a specific Ethernet2 library depending on the Ethernet Shield 2 you’ve purchased. We’ve listed some common libraries below. Simply download the Ethernet2 library and add it to your sketch file when uploading to your Arduino.
 
-[Adafruit Ethernet2 Library](https://github.com/adafruit/Ethernet2/tree/master/src)
+<a href="https://github.com/adafruit/Ethernet2/tree/master/src" target="_blank">Adafruit Ethernet2 Library</a>
 
-[Arduino.org Ethernet2 Library](https://github.com/arduino-org/Arduino/tree/master/libraries/Ethernet2)
+<a href="https://github.com/arduino-org/Arduino/tree/master/libraries/Ethernet2" target="_blank">Arduino.org Ethernet2 Library</a>
 
 <br/> 
 
 **SerialUSBconnection**
 
-Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/SerialUSBConnection/SerialUSBConnection.ino) if getting internet connection from the serial USB port on your computer. You can read more about this [here](https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Connections/ArduinoSerialUSB).
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/SerialUSBConnection/SerialUSBConnection.ino" target="_blank">sketch file</a> if getting internet connection from the serial USB port on your computer. You can read more about this <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Connections/ArduinoSerialUSB" target="_blank">here</a>.
 
 <br/> 
 
@@ -161,7 +172,7 @@ Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/b
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615143603/Arduino_WiFi_Shield.jpg" width="346" height="244" class="noborder" alt="WiFiShield"></p>
 
-Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/WiFiShield/WiFiShield.ino) if using the [Arduino WiFi Shield](https://www.arduino.cc/en/Main/ArduinoWiFiShield).
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/WiFiShield/WiFiShield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield</a>.
 
 <br/> 
 
@@ -169,7 +180,7 @@ Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/b
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615154328/Arduino_WiFi_101_Shield.jpg" width="346" height="291" class="noborder" alt="WiFi101Shield"></p>
 
-Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/WiFi101Shield/WiFi101Shield.ino) if using the [Arduino WiFi Shield 101](https://www.arduino.cc/en/Main/ArduinoWiFiShield).
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/WiFi101Shield/WiFi101Shield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield 101</a>.
 
 *Remember to download and install the WiFi101 library to your Arduino IDE. Then, add it to your sketch file.*
 
@@ -177,9 +188,9 @@ Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/b
 
 **ArduinoYun**
 
-Use this [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/ArduinoYun/ArduinoYun.ino) when using the [Arduino Yun](https://www.arduino.cc/en/Main/ArduinoBoardYun) connected to an ethernet cable.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/ArduinoYun/ArduinoYun.ino" target="_blank">sketch file</a> when using the <a href="https://www.arduino.cc/en/Main/ArduinoBoardYun" target="_blank">Arduino Yun</a> connected to an ethernet cable.
 
-Want to use the Arduino Yun on-board WiFi? Check out [this tutorial](https://www.arduino.cc/en/Guide/ArduinoYun#toc14) on the Arduino website.
+Want to use the Arduino Yun on-board WiFi? Check out <a href="https://www.arduino.cc/en/Guide/ArduinoYun#toc14" target="_blank">this tutorial</a> on the Arduino website.
 
 <p id="lora-hardware-supported-devices" class="anchor-link"></p>
 
@@ -189,9 +200,9 @@ Want to use the Arduino Yun on-board WiFi? Check out [this tutorial](https://www
 Cayenne can be used with a range of LoRa devices, supported by several different LoRa network providers.
 
 **Need a LoRa device?**
-[Visit the ThingPark store](http://actility.thingpark.com/thingpark-store/) to find a LoRa device for your use.
+<a href="http://actility.thingpark.com/thingpark-store/" target="_blank">Visit the ThingPark store</a> to find a LoRa device for your use.
 
-Additional guidance on finding providers of LoRa sensors and other devices can be found using the [LoRaWAN Products & Services](http://www.semtech.com/lora/ecosystem/) page.
+Additional guidance on finding providers of LoRa sensors and other devices can be found using the <a href="http://www.semtech.com/lora/ecosystem/" target="_blank">LoRaWAN Products & Services</a> page.
 
 
 ### Adeunis
@@ -202,14 +213,14 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
 
 
 **Links:** <br/>
 
-* [Product Page](http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-demonstrator-by-adeunis-rf)
-* [Datasheet](http://www.adeunis-rf.com/media/downloads/172/trad_file/eng/arf_lorawan_demonstrator_868_data_sheet_v1-2_gb.pdf)
-* [User Guide](http://www.adeunis-rf.com/media/downloads/185/trad_file/eng/ug_lorawan_demonstrator_user_v1.1.pdf)
+* <a href="http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-demonstrator-by-adeunis-rf" target="_blank">Product Page</a>
+* <a href="http://www.adeunis-rf.com/media/downloads/172/trad_file/eng/arf_lorawan_demonstrator_868_data_sheet_v1-2_gb.pdf" target="_blank">Datasheet</a>
+* <a href="http://www.adeunis-rf.com/media/downloads/185/trad_file/eng/ug_lorawan_demonstrator_user_v1.1.pdf" target="_blank">User Guide</a>
 
 **Sensors included:** 
 
@@ -224,13 +235,13 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
 
 **Links:**
 
-*   [Product Page](http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-sensors)
-*   [Datasheet](http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf)
-*   [User Guide](http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf)
+*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-sensors" target="_blank">Product Page</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">User Guide</a>
 
 **Sensors included:**
 
@@ -243,13 +254,13 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
 
 **Links:**
 
-*   [Product Page](http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-pulse)
-*   [Datasheet](http://www.adeunis-rf.com/media/downloads/176/trad_file/eng/arf_lorawan_pulse_data_sheet_v1-3-gb.pdf)
-*   [User Guide](http://www.adeunis-rf.com/media/downloads/183/trad_file/eng/arf8046xx_adeunis_lorawan_pulse_user_guide_v1.5_fr_gb.pdf)
+*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-pulse" target="_blank">Product Page</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/176/trad_file/eng/arf_lorawan_pulse_data_sheet_v1-3-gb.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/183/trad_file/eng/arf8046xx_adeunis_lorawan_pulse_user_guide_v1.5_fr_gb.pdf" target="_blank">User Guide</a>
 
 **Sensors included:**
 
@@ -263,13 +274,13 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
-*   [Product Page](http://www.adeunis-rf.com/en/products/lorawan-products/field_test_device_lorawan_868)
-*   [Datasheet](http://www.adeunis-rf.com/media/downloads/188/trad_file/eng/arf_lorawan_field_test_device_868_data_sheet_v1.0_fr_gb.pdf)
+*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/field_test_device_lorawan_868" target="_blank">Product Page</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/188/trad_file/eng/arf_lorawan_field_test_device_868_data_sheet_v1.0_fr_gb.pdf" target="_blank">Datasheet</a>
 
 **Sensors included:**
 
@@ -286,12 +297,12 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
-*   [Datasheet](http://www.ascoel.it/images/pdf_ascoel/CM868LR_eng.pdf)
+*   <a href="http://www.ascoel.it/images/pdf_ascoel/CM868LR_eng.pdf" target="_blank">Datasheet</a>
 
 **Sensors included:**
 
@@ -303,13 +314,13 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
-*   [Product Page](http://www.ascoel.it/index.php?lang=en)
-*   [Datasheet](http://www.ascoel.it/images/pdf_ascoel/IR868LR_eng.pdf)
+*   <a href="http://www.ascoel.it/index.php?lang=en" target="_blank">Product Page</a>
+*   <a href="http://www.ascoel.it/images/pdf_ascoel/IR868LR_eng.pdf" target="_blank">Datasheet</a>
 
 **Sensors included:**
 
@@ -321,12 +332,12 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
+*   [Actility](#lora-actility)
 
 **Links:**
 
-*   [Product Page](http://www.ascoel.it/index.php?lang=en)
-*   [Datasheet](http://www.ascoel.it/images/pdf_ascoel/CO868LR_eng.pdf)
+*   <a href="http://www.ascoel.it/index.php?lang=en" target="_blank">Product Page</a>
+*   <a href="http://www.ascoel.it/images/pdf_ascoel/CO868LR_eng.pdf" target="_blank">Datasheet</a>
 
 **Sensors included:**
 
@@ -337,20 +348,41 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### Elsys
 
+#### Elsys ELT-1
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" alt="component-doc-image-elsys-elt1"><br/><br/></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+
+**Links:**
+
+*   <a href="http://www.elsys.se/?page_id=117" target="_blank">Product Page</a>
+*   <a href="http://www.elsys.se/en/wp-content/uploads/sites/3/2016/05/ELT-1-folder.pdf" target="_blank">Datasheet</a>
+
+**Sensors included:**
+
+*   Temperature
+*   Humidity
+*   Analog
+
+
 #### Elsys ESM5k
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
-*   [Product Page](http://www.elsys.se/?page_id=117)
-*   [Datasheet](http://www.elsys.se/en/wp-content/uploads/sites/3/2016/05/ESM5k-folder.pdf)
-*   [User Guide](http://www.elsys.se/en/wp-content/uploads/sites/3/2016/03/Elsys-sensor-settings.pdf)
+*   <a href="http://www.elsys.se/?page_id=117" target="_blank">Product Page</a>
+*   <a href="http://www.elsys.se/en/wp-content/uploads/sites/3/2016/05/ESM5k-folder.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.elsys.se/en/wp-content/uploads/sites/3/2016/03/Elsys-sensor-settings.pdf" target="_blank">User Guide</a>
 
 **Sensors included:**
 
@@ -366,14 +398,14 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
-*   [Product Page](http://www.elsys.se/?page_id=117)
-*   [Datasheet](http://www.elsys.se/en/wp-content/uploads/sites/3/2016/05/ERS-folder.pdf)
-*   [User Guide](http://www.elsys.se/en/wp-content/uploads/sites/3/2016/03/Elsys-sensor-settings.pdf)
+*   <a href="http://www.elsys.se/?page_id=117" target="_blank">Product Page</a>
+*   <a href="http://www.elsys.se/en/wp-content/uploads/sites/3/2016/05/ERS-folder.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.elsys.se/en/wp-content/uploads/sites/3/2016/03/Elsys-sensor-settings.pdf" target="_blank">User Guide</a>
 
 **Sensors included:**
 
@@ -386,44 +418,41 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### GlobalSat
 
+#### GlobalSat LS-111 CO2
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" alt="component-doc-image-globalsat-ls111"><br/><br/></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+
+**Sensors included:**
+
+*   CO2
+*   Temperature
+*   Humidity
+
+
 #### GlobalSat LT-100
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LT-100"></p>
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
-*   [Product Page](http://www.globalsat.com.tw/s/en/2/product/LoRaWAN%E2%84%A2-Compliant-GPS-Tracker-LT-100H-LT-100E-199335.html)
-*   [Datasheet](http://webbuilder.asiannet.com/909/ftp/download/LT-100%20LoRaWAN%20tracker%20datasheet_V1.2_20160929_Sales_Version.pdf)
-*   [User Guide](http://webbuilder.asiannet.com/909/ftp/download/LT-100%20user%20manual_V1.1_20160912.pdf)
+*   <a href="http://www.globalsat.com.tw/s/en/2/product/LoRaWAN%E2%84%A2-Compliant-GPS-Tracker-LT-100H-LT-100E-199335.html" target="_blank">Product Page</a>
+*   <a href="http://webbuilder.asiannet.com/909/ftp/download/LT-100%20LoRaWAN%20tracker%20datasheet_V1.2_20160929_Sales_Version.pdf" target="_blank">Datasheet</a>
+*   <a href="http://webbuilder.asiannet.com/909/ftp/download/LT-100%20user%20manual_V1.1_20160912.pdf" target="_blank">User Guide</a>
 
 **Sensors included:**
 
 *   GPS
 *   Accelerometer
-
-
-#### GlobalSat LM-130-EVB
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LM-130-EVB"></p>
-
-**Networks supported:**
-
-*   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
-
-**Links:**
-
-*   [Product Page](http://www.globalsat.com.tw/s/en/2/product/LoRaWAN%E2%84%A2-Compliant-Evaluation-Board-LM-130EVB-211701.html)
-*   [Datasheet](http://webbuilder.asiannet.com/909/ftp/download/LM-130EVB%20Spec_V1%205_Formal_20160831.pdf)
-
-**Sensors included:**
-
-*   TODO
 
 
 ### Multitech
@@ -434,14 +463,14 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
-*   [Product Page](http://www.multitech.com/brands/multiconnect-mdot-box)
-*   [Datasheet](http://www.multitech.com/documents/publications/data-sheets/86002178.pdf)
-*   [User Guide](http://www.multitech.net/developer/wp-content/uploads/2016/01/MTDOT-BOX_quickstart_012716.pdf)
+*   <a href="http://www.multitech.com/brands/multiconnect-mdot-box" target="_blank">Product Page</a>
+*   <a href="http://www.multitech.com/documents/publications/data-sheets/86002178.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.multitech.net/developer/wp-content/uploads/2016/01/MTDOT-BOX_quickstart_012716.pdf" target="_blank">User Guide</a>
 
 **Sensors included:**
 
@@ -460,13 +489,13 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
+*   [Actility](#lora-actility)
 
 **Links:**
 
-*   [Product Page](http://www.nke-watteco.com/product/actuator-smart-plug/)
-*   [Datasheet](http://www.nke-watteco.fr/wp-content/uploads/2015/03/Smart-plug_LoRa_en.pdf)
-*   [User Guide](https://fccid.io/pdf.php?id=3043099)
+*   <a href="http://www.nke-watteco.com/product/actuator-smart-plug/" target="_blank">Product Page</a>
+*   <a href="http://www.nke-watteco.fr/wp-content/uploads/2015/03/Smart-plug_LoRa_en.pdf" target="_blank">Datasheet</a>
+*   <a href="https://fccid.io/pdf.php?id=3043099" target="_blank">User Guide</a>
 
 **Sensors, Actuators included:**
 
@@ -480,13 +509,13 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
+*   [Actility](#lora-actility)
 
 **Links:**
 
-*   [Product Page](http://www.nke-watteco.com/product/lora-temperature-humidity-sensor/)
-*   [Datasheet](http://www.nke-watteco.fr/wp-content/uploads/2015/03/THr_LoRa-sensor_en.pdf)
-*   [User Guide](https://fccid.io/pdf.php?id=2935257)
+*   <a href="http://www.nke-watteco.com/product/lora-temperature-humidity-sensor/" target="_blank">Product Page</a>
+*   <a href="http://www.nke-watteco.fr/wp-content/uploads/2015/03/THr_LoRa-sensor_en.pdf" target="_blank">Datasheet</a>
+*   <a href="https://fccid.io/pdf.php?id=2935257" target="_blank">User Guide</a>
 
 **Sensors included:**
 
@@ -503,12 +532,12 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
-*   [Senet](#senet-lora-networks-2-2-2)
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
 
 **Links:**
 
-*   [Product Page](http://www.risinghf.com/product/rhf1s001/?lang=en)
+*   <a href="http://www.risinghf.com/product/rhf1s001/?lang=en" target="_blank">Product Page</a>
 
 **Sensors included:**
 
@@ -524,12 +553,12 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
+*   [Actility](#lora-actility)
 
 **Links:**
 
-*   [Product Page](http://webshop.imst.de/loramote-lora-evaluation-tool.html)
-*   [User Guide](http://www.semtech.com/images/datasheet/User_Guide_LoRaMote_STD.pdf)
+*   <a href="http://webshop.imst.de/loramote-lora-evaluation-tool.html" target="_blank">Product Page</a>
+*   <a href="http://www.semtech.com/images/datasheet/User_Guide_LoRaMote_STD.pdf" target="_blank">User Guide</a>
 
 **Sensors included:**
 
@@ -544,12 +573,12 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Networks supported:**
 
-*   [Actility](#actility-lora-networks)
+*   [Actility](#lora-actility)
 
 **Links:**
 
-*   [Product Page](https://developer.mbed.org/platforms/NAMote-72/)
-*   [User Guide](https://developer.mbed.org/teams/Semtech/wiki/NAMote-72-wiki)
+*   <a href="https://developer.mbed.org/platforms/NAMote-72/" target="_blank">Product Page</a>
+*   <a href="https://developer.mbed.org/teams/Semtech/wiki/NAMote-72-wiki" target="_blank">User Guide</a>
 
 **Sensors included:**
 
@@ -612,7 +641,7 @@ Connect the LED positive wire (the longer of the two wires on the LED) from resi
 You’re done! You can now add a widget for the LED switch (Pin 8) and use it to turn the LED on and off.
 
 ###### Step 4
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/LightSwitch/LightSwitch.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/LightSwitch/LightSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 <br/><br/>
 
@@ -688,7 +717,7 @@ Connect the LED positive wire (the longer of the two wires on the LED) from resi
 You’re done! You can now add a widget for the light switch (Pin 8) and use it to turn the LED on and off.
 
 ###### Step 4
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/LightSwitch/LightSwitch.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/LightSwitch/LightSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 #### Luminosity
@@ -745,7 +774,7 @@ Connect one of the Arduino PWM output pins to the longer (anode) pin of the LED,
 You’re done! You can now add a Luminosity actuator to your dashboard, and use digital channel 6 to adjust the LED brightness.
 
 ###### Step 4
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/Luminosity/Luminosity.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/Luminosity/Luminosity.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 ### Motor
 
@@ -853,7 +882,7 @@ Connect the normally open (NO) pin on the relay to the motor.
 You’re done! You can now add the Motor Switch to the dashboard and control it using digital pin 8.
 
 ###### Step 9
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/MotorSwitch/MotorSwitch.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/MotorSwitch/MotorSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 #### Servo Motor
@@ -865,7 +894,7 @@ Use the following diagram to connect a Servo Motor.
 A couple of notes before you get started:
 
 - The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you! In this case we’ll be using a PCA9685 PWM controller to connect our Servo to the Pi. We’ll also be using an external 5v power supply to provide power to the Servo.
-- To add a PWM Output you will need a PWM controller. For this example we will use a PCA9685 PWM I/O Controller. This tutorial assumes you already have the PCA9685 connected. Refer to the [PCA9685 Tutorial](http://www.cayenne-mydevices.com/tutorials/hardware/rpi-pca9685/) if you need assistance with that part.
+- To add a PWM Output you will need a PWM controller. For this example we will use a PCA9685 PWM I/O Controller. This tutorial assumes you already have the PCA9685 connected. Refer to the [PCA9685 Tutorial](#supported-hardware-extensions-pwm-pca9685-rpi-tutorial) if you need assistance with that part.
 - Make sure Raspberry Pi is powered off when connecting wires.
 - When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
 - Some full-size breadboards (used in diagrams below) have a powerline that is separated in the middle. If this is the case, be sure your sensors are connected on the same half of the breadboard as your Pi Cobbler.
@@ -896,7 +925,7 @@ Use the following diagram to connect a Servo Motor.
 A couple of notes before you get started:
 
 - The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you! In this case we’ll be using a PCA9685 PWM controller to connect our Servo to the Pi. We’ll also be using an external 5v power supply to provide power to the Servo.
-- To add a PWM Output you will need a PWM controller. For this example we will use a PCA9685 PWM I/O Controller. This tutorial assumes you already have the PCA9685 connected. Refer to the [PCA9685 Tutorial](http://www.cayenne-mydevices.com/tutorials/hardware/rpi-pca9685/) if you need assistance with that part.
+- To add a PWM Output you will need a PWM controller. For this example we will use a PCA9685 PWM I/O Controller. This tutorial assumes you already have the PCA9685 connected. Refer to the [PCA9685 Tutorial](#supported-hardware-extensions-pwm-pca9685-rpi-tutorial) if you need assistance with that part.
 - Make sure Raspberry Pi is powered off when connecting wires.
 - When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
 - Some full-size breadboards (used in diagrams below) have a powerline that is separated in the middle. If this is the case, be sure your sensors are connected on the same half of the breadboard as your Pi Cobbler.
@@ -948,7 +977,7 @@ Connect the Servo Motor control pin (yellow) to one of the PWM outputs on the Ar
 You’re done! You can now add the Servo Motor to your dashboard, controlling it through digital pin 6.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/ServoMotor/ServoMotor.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/ServoMotor/ServoMotor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 ### Valve
@@ -964,7 +993,7 @@ Use the following diagram to connect a Valve.
 A couple of notes before you get started:
 
 
-- We will use a Relay to connect our Valve to the Raspberry Pi. This tutorial assumes that you already have the Relay connected. If you need assistance with connecting the relay, there is an example of connecting a relay in the [Relay Switch Tutorial](http://www.cayenne-mydevices.com/tutorials/hardware/rpi-relay-switch/).
+- We will use a Relay to connect our Valve to the Raspberry Pi. This tutorial assumes that you already have the Relay connected. If you need assistance with connecting the relay, there is an example of connecting a relay in the [Relay Switch Tutorial](#supported-hardware-actuators-relay-relay-switch-rpi-tutorial).
 - Make sure Raspberry Pi is powered off when connecting wires.
 - When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
 - The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you!
@@ -1027,7 +1056,7 @@ Connect the normally open (NO) pin on the relay to the valve. You may choose to 
 You’re done! You can now add the Valve to the dashboard and control it using digital pin 2.
 
 ###### Step 6
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/ValveSwitch/ValveSwitch.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/ValveSwitch/ValveSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 ### Relay
@@ -1120,7 +1149,7 @@ Connect the normally open (NO) pin on the relay to the shorter (cathode) pin of 
 You’re done! You can now add the relay switch to the dashboard and control the LED using digital pin 2.
 
 ###### Step 8
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/RelaySwitch/RelaySwitch.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/RelaySwitch/RelaySwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 ### Generic
 
@@ -1172,7 +1201,7 @@ Connect the LED positive wire (the longer of the two wires on the LED) from resi
 You’re done! You can now add a widget for the digital output (Pin 8) and use it to turn the LED on and off.
 
 ###### Step 4
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/GenericDigitalOutput/GenericDigitalOutput.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/GenericDigitalOutput/GenericDigitalOutput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 #### PWM Output
@@ -1225,24 +1254,24 @@ Connect one of the Arduino PWM output pins to the longer (anode) pin of the LED,
 You’re done! You can now add the PWM Output to your dashboard, and use digital channel 6 to adjust the LED brightness.
 
 ###### Step 4
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/GenericPWMOutput/GenericPWMOutput.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Actuators/GenericPWMOutput/GenericPWMOutput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 ## Extensions
 You can add analog, digital and PWM extensions to your Raspberry Pi. This allows you to add more sensors and actuators to your Raspberry Pi.
 
-*   [Analog Converter](#analog-converter-extensions)
-*   [GPIO Port](#gpio-port-extensions)
-*   [PWM](#pwm-extensions)
+*   [Analog Converter](#supported-hardware-extensions-analog-converter)
+*   [GPIO Port](#supported-hardware-extensions-gpio-port)
+*   [PWM](#supported-hardware-extensions-pwm)
 
 
 ### Analog Converter
-*   [MCP3004](#mcp3004-analog-converter)
-*   [MCP3204](#mcp3204-analog-converter)
-*   [MCP3208](#mcp3208-analog-converter)
-*   [MCP3008](#mcp3008-analog-converter)
-*   [ADS1115](#ads1115-analog-converter)
-*   [ADS1015](#ads1015-analog-converter)
+*   [MCP3004](#supported-hardware-extensions-analog-converter-mcp3004)
+*   [MCP3204](#supported-hardware-extensions-analog-converter-mcp3204)
+*   [MCP3208](#supported-hardware-extensions-analog-converter-mcp3208)
+*   [MCP3008](#supported-hardware-extensions-analog-converter-mcp3008)
+*   [ADS1115](#supported-hardware-extensions-analog-converter-ads1115)
+*   [ADS1015](#supported-hardware-extensions-analog-converter-ads1015)
 
 
 #### MCP3004
@@ -1529,15 +1558,15 @@ You’re done! You can now add the ADS1015 converter on the dashboard, with defa
 
 ### GPIO Port
 
-*   [MCP23018](#mcp23018-gpio-port)
-*   [MCP23017](#mcp23017-gpio-port)
-*   [MCP23009](#mcp23009-gpio-port)
-*   [MCP23008](#mcp23008-gpio-port)
-*   [DS2408](#ds2408-gpio-port)
-*   [MCP23S09](#mcp23s09-gpio-port)
-*   [MCP23S08](#mcp23s08-gpio-port)
-*   [MCP23S18](#mcp23s18-gpio-port)
-*   [MCP23S17](#mcp23s17-gpio-port)
+*   [MCP23018](#supported-hardware-extensions-gpio-port-mcp23018)
+*   [MCP23017](#supported-hardware-extensions-gpio-port-mcp23017)
+*   [MCP23009](#supported-hardware-extensions-gpio-port-mcp23009)
+*   [MCP23008](#supported-hardware-extensions-gpio-port-mcp23008)
+*   [DS2408](#supported-hardware-extensions-gpio-port-ds2408)
+*   [MCP23S09](#supported-hardware-extensions-gpio-port-mcp23s09)
+*   [MCP23S08](#supported-hardware-extensions-gpio-port-mcp23s08)
+*   [MCP23S18](#supported-hardware-extensions-gpio-port-mcp23s18)
+*   [MCP23S17](#supported-hardware-extensions-gpio-port-mcp23s17)
 
 #### MCP23018
 
@@ -2023,20 +2052,20 @@ You’re done! You can now add the PCA9685 controller to your dashboard with def
 
 Cayenne works with temperature, luminosity, pressure/distance, motion and generic sensors connected to your Raspberry Pi and Arduino devices.
 
-*   [Temperature](#temperature-sensors)
-*   [Luminosity](#luminosity-sensors)
-*   [Pressure](#pressure-sensors)
-*   [Proximity/Distance](#proximitydistance-sensors)
-*   [Motion](#motion-sensors)
-*   [Generic](#generic-sensors)
+*   [Temperature](#supported-hardware-sensors-temperature)
+*   [Luminosity](#supported-hardware-sensors-luminosity)
+*   [Pressure](#supported-hardware-sensors-pressure)
+*   [Proximity/Distance](#supported-hardware-sensors-proximitydistance)
+*   [Motion](#supported-hardware-sensors-motion)
+*   [Generic](#supported-hardware-sensors-generic)
 
 ### Temperature
 
-*   [TMP36](#tmp36-temperature)
-*   [TMP102](#tmp102-temperature)
-*   [DS18B20](#ds18b20-temperature)
-*   [BMP180](#bmp180-temperature)
-*   [Thermistor](#thermistor-temperature)
+*   [TMP36](#supported-hardware-sensors-temperature-tmp36)
+*   [TMP102](#supported-hardware-sensors-temperature-tmp102)
+*   [DS18B20](#supported-hardware-sensors-temperature-ds18b20)
+*   [BMP180](#supported-hardware-sensors-temperature-bmp180)
+*   [Thermistor](#supported-hardware-sensors-temperature-thermistor)
 
 #### TMP36
 
@@ -2101,7 +2130,7 @@ Connect the TMP36 signal pin (blue wire) to an analog pin on the Arduino. In thi
 You’re done! You can now add the TMP36 to your dashboard using analog pin 0.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/TMP36/TMP36.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/TMP36/TMP36.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 #### TMP102
@@ -2178,7 +2207,7 @@ Connect the SCL pins of the TMP102 and Arduino.
 You’re done! You can now add the TMP102 sensor on the dashboard, with default address of 0x48.
 
 ###### Step 6
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/TMP102/TMP102.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/TMP102/TMP102.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 #### DS18B20
@@ -2242,7 +2271,7 @@ Connect the DS18B20 output pin (DQ) to a digital input pin on the Arduino, in th
 You’re done! You can now add the DS18B20 sensor to your dashboard using digital pin 7.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/DS18B20/DS18B20.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/DS18B20/DS18B20.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 #### BMP180
 
@@ -2316,7 +2345,7 @@ Connect the the SDA pins on the Arduino and BMP180.
 You’re done! You can now add the BMP180 to your dashboard.
 
 ###### Step 6
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/BMP180/BMP180.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/BMP180/BMP180.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 #### Thermistor
 
@@ -2380,13 +2409,13 @@ Connect the Thermistor to one of the Arduino’s analog pins, pin A2 in this cas
 You’re done! You can now add the Thermistor to your dashboard, reading its value using analog pin A2.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/Thermistor/Thermistor.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/Thermistor/Thermistor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 ### Luminosity
 
-*   [VCNL4000](#vcnl4000-luminosity)
-*   [TSL2561](#tsl2561-luminosity)
-*   [Photoresistor](#photoresistor-luminosity)
+*   [VCNL4000](#supported-hardware-sensors-luminosity-vcnl4000)
+*   [TSL2561](#supported-hardware-sensors-luminosity-tsl2561)
+*   [Photoresistor](#supported-hardware-sensors-luminosity-photoresistor)
 
 #### VCNL4000
 
@@ -2520,7 +2549,7 @@ Connect the SCL pins of the TSL2561 and Arduino.
 You’re done! You can now add the TSL2561 sensor on the dashboard, with default address of 0x39.
 
 ###### Step 6
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/TSL2561/TSL2561.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/TSL2561/TSL2561.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 #### Photoresistor
@@ -2587,11 +2616,11 @@ Connect the Photoresistor (blue wire) to an analog pin on the Arduino. In this c
 You’re done! You can now add the Photoresistor to your dashboard using analog pin 0.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/Photoresistor/Photoresistor.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/Photoresistor/Photoresistor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 ### Pressure
-*   [BMP180](#bmp180-pressure)
-*   [Analog Load Pressure](#analog-load-pressure-sensor-pressure)
+*   [BMP180](#supported-hardware-sensors-temperature-bmp180)
+*   [Analog Load Pressure](#supported-hardware-sensors-pressure-analog-load)
 
 
 #### BMP180
@@ -2669,7 +2698,7 @@ Connect the the SDA pins on the Arduino and BMP180.
 You’re done! You can now add the BMP180 to your dashboard.
 
 ###### Step 6
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/BMP180/BMP180.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/BMP180/BMP180.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 #### Analog Load
@@ -2738,11 +2767,11 @@ Connect the Pressure Sensor to an analog pin on the Arduino. In this case, analo
 You’re done! You can now add the Pressure Sensor to your dashboard, referencing analog pin 0.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/AnalogLoadPressureSensor/AnalogLoadPressureSensor.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/AnalogLoadPressureSensor/AnalogLoadPressureSensor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 ### Proximity/Distance
-[Analog Distance](#analog-distance-sensors-proximitydistance)
+[Analog Distance](#supported-hardware-sensors-proximitydistance-analog-distance)
 
 #### Analog Distance
 
@@ -2811,11 +2840,11 @@ Connect the Proximity Sensor (yellow wire) to an analog pin on the Arduino. In t
 You’re done! You can now add the Proximity Sensor to your dashboard referencing analog pin 0.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/AnalogDistanceSensor/AnalogDistanceSensor.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/AnalogDistanceSensor/AnalogDistanceSensor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 ### Motion
-[Digital Motion](#digital-motion-sensor-motion)
+[Digital Motion](#supported-hardware-sensors-motion-digital-motion-sensor)
 
 #### Digital Motion Sensor
 
@@ -2880,12 +2909,12 @@ Connect the Motion Sensor Signal wire (yellow) to a digital pin on the Arduino. 
 You’re done! You can now add the Digital Motion Sensor to your dashboard, referencing pin 7 as the input pin.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/DigitalMotionSensor/DigitalMotionSensor.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/DigitalMotionSensor/DigitalMotionSensor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 ### Generic
-[Digital Input](#digital-input-generic)
-[Analog Input](#analog-input-generic)
+[Digital Input](#supported-hardware-sensors-generic-digital-input)
+[Analog Input](#supported-hardware-sensors-generic-analog-input)
 
 
 #### Digital Input
@@ -2950,7 +2979,7 @@ Connect the pushbutton (using the same pin as the resistor) to one of the digita
 You’re done! You can now add the digital input to your dashboard and use it to read the button state using digital pin 7.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/GenericDigitalInput/GenericDigitalInput.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/GenericDigitalInput/GenericDigitalInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 
 #### Analog Input
@@ -3017,5 +3046,5 @@ Connect the Photoresistor to one of the Analog inputs on the Arduino. For this e
 You’re done! You can now add the photoresistor to your dashboard, referencing Analog pin 0 as the input pin.
 
 ###### Step 5
-Copy & paste the [sketch file](https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/GenericAnalogInput/GenericAnalogInput.ino) into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/GenericAnalogInput/GenericAnalogInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 

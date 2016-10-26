@@ -23,9 +23,9 @@ There are several major components in the platform:
 ## What do I need?
 
 ### **Hardware**
-A Raspberry Pi or Arduino device connected to the Internet. The list of hardware that works with Cayenne will keep growing.
+A Raspberry Pi or Arduino device connected to the Internet, or a LoRa device connected to a public or private gateway. The list of hardware that works with Cayenne will keep growing.
 
 ### **Smartphone or Browser**
-Cayenne was designed to work from iOS and Android smartphones and popular browsers. TIP: Setup from the mobile device is the easiest way to get started.
+Cayenne was designed to work from iOS and Android smartphones and popular browsers.
 
-
+*TIP: Setup from the mobile device is the easiest way to get started.*
