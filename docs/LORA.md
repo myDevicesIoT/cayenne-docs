@@ -48,42 +48,29 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 
 ## Actility
 
-**About Actility**<br/>
+**About Actility**
+
 Actility is an industry leader in Machine to Machine (M2M) large scale infrastructure with ThingPark®, the new generation standard-based M2M communication platform. Actility is a winner of the French Ministry of Research competition, has obtained the Grand Prix of the Tremplin Entreprise and has been rewarded by Innov’ Eco and CleanTech République for its particularly innovative approach in its Internet Of Things (IoT) solutions.
 
-**Need an account?**<br/>
-In order to register devices or add your device into Cayenne, you will need an Actility account. You may refer to [Create an Actility account](#lora-actility-create-account) for more information.
+**Using Actility with Cayenne**
 
-**Adding Actility network devices to Cayenne**<br/>
-Cayenne currently supports the following registration / activation modes for devices that use the Actility network:
+Cayenne makes it easy to use your LoRa device and the Actility network. You will need to:
 
-* [Already Registered](#lora-actility-add-device-to-cayenne-already-registered) – devices [manually registered](#lora-actility-manually-register-device) via the Actility portal.
-* [Over the Air Activation (OTAA)](#lora-actility-add-device-to-cayenne-over-the-air-activation)
-* [Activation by Personalization (ABP)](#lora-actility-add-device-to-cayenne-activation-by-personalization)
+1. [Create / Log into your account on Actility's ThingPark portal](#lora-actility-create-account)
+2. [Create Cayenne Routing Profile](#lora-actility-create-cayenne-routing-profile)
+3. [Register your device on the ThingPark portal](#lora-actility-manually-register-device)
+4. [Program/Flash your device](#lora-actility-programming-the-device)
+5. [Add your device to your Cayenne dashboard](#lora-actility-add-device-to-cayenne)
 
-**Supported devices**<br/>
-Need to know what devices are currently supported? Check out the Actility [Supported devices](#lora-actility-supported-devices) section.
+We will walk you through these steps in the following sections.
 
 
 ### Create account
 
-To create your Actility account, visit the <a href="http://actility.thingpark.com/thingpark-store/authentication" target="_blank">Actility Portal</a>. Follow the **Create your account** process located there to get started.
+To create your Actility account, visit the <a href="http://actility.thingpark.com/thingpark-store/authentication" target="_blank">Actility ThingPark Portal</a>. Follow the **Create your account** process located there to get started.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Actility-portal-landing.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
-### Manually register device
-
-Before you can use your LoRa device on the Actility network, it must be registered on the network. The following information will help guide you through this process using the Actility portal.
-
-*TIP: Cayenne is capable of activating your device on the Actility network automatically. If you wish to use this feature, you can skip manually registering your device and jump straight to the section on [Adding your device to Cayenne](#lora-actility-add-device-to-cayenne) using either [Over the Air Activation (OTAA)](#lora-actility-add-device-to-cayenne-over-the-air-activation) or [Activation by Personalization (APB)](#lora-actility-add-device-to-cayenne-activation-by-personalization).*
-
-**1\. Log into the Actility portal**
-
-Start by going to the <a href="https://demo.thingpark.com/deviceManager/" target="_blank">Actility portal</a> and logging into your account. You will then see the Actility dashboard.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822144157/ThingPark-login2.png" width="300" height="362" alt="Actility"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160824134621/ThingPark-landing-dashboard.png" width="600" height="407" alt="Actility"><br/><br/></p>
 
 ### Create Cayenne Routing Profile
 
@@ -113,7 +100,20 @@ After saving your changes, you will be returned to the previous screen. Be sure 
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-6.png" width="600" height="359" alt="create-routing-profile-6"><br/><br/></p>
 
-**3\. Create new device**
+### Manually register device
+
+Before you can use your LoRa device on the Actility network, it must be registered on the network. The following information will help guide you through this process using Actility's ThingPark portal.
+
+**Log into the ThingPark portal**
+
+If you aren't already logged in, start by going to the <a href="https://demo.thingpark.com/deviceManager/" target="_blank">Actility portal</a> and logging into your account. You will then see the Actility dashboard.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822144157/ThingPark-login2.png" width="300" height="362" alt="Actility"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160824134621/ThingPark-landing-dashboard.png" width="600" height="407" alt="Actility"><br/><br/></p>
+
+
+**Create new device**
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/cXPxkBeSaXk" frameborder="0" allowfullscreen></iframe></p>
 
@@ -121,9 +121,13 @@ To get started with a new device, right-click on the **Devices** entry in the po
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822155516/ThingPark-menu-expanded-Create-device.png" width="400" height="337" alt="Actility"><br/><br/></p>
 
-The **New device** dialog will appear. To create a new device using the Actility portal, you will need to enter in all required information for completing the device creation into the New device dialog. The process begins by selecting an appropriate activation mode from the **Device activation** field. In most cases, this will be Over the Air Activation (OTAA).
+The **New device** dialog will appear. To create a new device using the Actility portal, you will need to enter in all required information for completing the device creation into the New device dialog. The process begins by selecting an appropriate activation mode from the **Device activation** field.
 
-**Over the Air Activation (OTAA)**
+Actility's activation modes supports two modes (OTAA, APB). In most cases, this will be Over the Air Activation (OTAA). Let's cover the information needed for both methods.
+- [Over the Air Activation (OTAA)](#lora-actility-manually-register-device-over-the-air-activation-otaa)
+- [Activation By Personalization (APB)](#lora-actility-manually-register-device-activation-by-personalization-apb)
+
+#### Over the Air Activation (OTAA)
 
 After selecting the OTAA activation mode, the list of fields will update to show you required fields. You will need to fill in all require fields to register & activate your device with Actility. Below you will find notes on the fields seen for OTAA and specific notes as they relate to what needs to be selected in order to work with Cayenne.
 
@@ -147,7 +151,7 @@ After selecting the OTAA activation mode, the list of fields will update to show
     *   **Administrative location:** Used by Actility. Cayenne does not use this information.
 *   Complete the device creation by clicking the **Create** button to create the device.
 
-**Activation By Personalization (APB)**
+#### Activation By Personalization (APB)
 
 After selecting the APB activation mode, the list of fields will update to show you required fields. You will need to fill in all require fields to register & activate your device with Actility. Below you will find notes on the fields seen for APB and specific notes as they relate to what needs to be selected in order to work with Cayenne.
 
@@ -175,24 +179,23 @@ After selecting the APB activation mode, the list of fields will update to show 
 
 Once added, you will see your new device listed in the device list on the portal.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822144748/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
 
-**4\. Programming the device**
+
+###  Programming the device
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-senet-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
 
-**5\. Add your device in Cayenne**
-
-Once your device has been registered, programmed and is online, you can then proceed with adding an [Already Registered device](#lora-actility-add-device-to-cayenne-already-registered) in Cayenne. This will add your new device into the list of devices shown in Cayenne.
+**NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
 
 ### Add device to Cayenne
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/QPiZ-FSjdyw" frameborder="0" allowfullscreen></iframe></p>
 
-In order for your LoRa device to appear in your dashboard, it must be added from the Cayenne dashboard.
+Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
 
 Click **Add New** > **Device / Widget**.
 
@@ -202,21 +205,10 @@ From the list of devices & widgets that appears, click **LoRa** and select the *
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Actility-menu.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
-After selecting the device that you wish to add, settings for that device will appear. Depending upon whether your device has been previously registered on the Actility Network, or if you want Cayenne to perform this step, different settings will be displayed.
-
-_TIP: Which device Activation Mode you use is decided by you or your device seller (usually the device manufacturer or the network provider) when the device is bought and all related IDs and Keys should be provided to you when you receive your device. In case you do not know your device Activation Mode and the related information please contact your device seller._
-
-**Adding Actility network devices to Cayenne**  
-Cayenne currently supports the following registration / activation modes for devices that use the Actility network:
-
-* [Already Registered](#lora-actility-add-device-to-cayenne-already-registered) – devices [manually registered](#lora-actility-manually-register-device) via the Actility portal.
-* [Over the Air Activation (OTAA)](#lora-actility-add-device-to-cayenne-over-the-air-activation)
-* [Activation by Personalization (ABP)](#lora-actility-add-device-to-cayenne-activation-by-personalization)
-
-In the following sections, we will walk you through examples of adding your Actility device using each of these activation modes.
-
+After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
 #### Already Registered
+
 If your device has been previously registered on the Actility network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
 
 **Items you will need:**
@@ -252,48 +244,10 @@ The LoRa Pulse widget has been added to your dashboard and Cayenne will automati
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160819153512/LoRa-device-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
-
-#### Over the Air Activation
-
-In Over the Air Activation (OTAA), devices are pre-provisioned to work on a specific LoRa network. To use Activation by Personalization, the LoRa hardware is ordered preconfigured by the Device Manufacturer for a given setup. This removes any additional user interaction necessary to activate these devices once deployed.
-
-**Items you will need:**
-
-1.  Which [LoRa device](#lora-actility-supported-devices) is being added?
-2.  What is the unique [DevEUI](#lora-about-deveuis) for the device? (Although this information is not needed for APB activation, Cayenne will need to know this information for communication with the device after it has been added.)
-3.  **AppEUI** – The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device. The AppEUI is stored in the device before the activation procedure is executed.
-4.  **Appkey** – Cryptographic Key. The AppKey is a key specific for the end-device that is assigned by the application owner to the end-device and most likely derived from an application-specific root key exclusively known to and under the control of the application provider.
-5.  **Username** – Your username for your account on the network. Along with your password, this is used to authenticate your request to add the device to the network. Refer to your network provider if you need this information.
-6.  **Password** – Your password for your account on the network. Along with your network username, this is used to authenticate your request to add the device to the network. Refer to your network provider if you need this information.
-
-_TIP: Cayenne will store your **Username** and will temporarily cache your **Password**. This can save time if you are adding several devices to your dashboard._
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-Actility-LoRa-Pulse-otaa-1.png" width="600" height="363" alt="Actility"><br/><br/></p>
-
 Once you have entered in the required information, click on **Add LoRa device**. Cayenne will activate your device on the network and your dashboard will appear after a few moments. Cayenne will automatically create widgets for all sensors included with your device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status the sensors on the device.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
-#### Activation by Personalization
-
-In Activation by Personalization (APB), devices are pre-provisioned to work on a specific LoRa network. To use Activation by Personalization, the LoRa hardware is ordered preconfigured by the Device Manufacturer for a given setup. This removes any additional user interaction necessary to activate these devices once deployed.
-
-**Items you will need:**
-
-1.  Which [LoRa device](#lora-actility-supported-devices) is being added?
-2.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added? (Although this information is not needed for APB activation, Cayenne will need to know this information for communication with the device after it has been added.)
-3.  **AppSKey** – The AppSKey is an application session key specific for the end-device. It is used by both the network server and the end-device to encrypt and decrypt the payload field of application-specific data messages. It is also used to calculate and verify an application-level MIC that may be included in the payload of application-specific data messages.
-4.  **NwkSKey** – The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
-5.  **Username** – Your username for your account on the network. Along with your password, this is used to authenticate your request to add the device to the network. Refer to your network provider if you need this information.
-6.  **Password** – Your password for your account on the network. Along with your network username, this is used to authenticate your request to add the device to the network. Refer to your network provider if you need this information.
-
-_TIP: Cayenne will store your **Username** and will temporarily cache your **Password**. This can save time if you are adding several devices to your dashboard._
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-Actility-LoRa-Pulse-apb.png" width="600" height="363" alt="Actility"><br/><br/></p>
-
-Once you have entered in the required information, click on **Add LoRa device**. Cayenne will activate your device on the network and your dashboard will appear after a few moments. Cayenne will automatically create widgets for all sensors included with your device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status the sensors on the device.
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 ### Supported devices
 
@@ -424,9 +378,7 @@ From the list of devices & widgets that appears, click **LoRa** and select the *
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Senet-menu.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
-After selecting the device that you wish to add, settings for that device will appear. As Senet currently only supports manual device registration, Cayenne will walk you through adding your [previously registered device](#lora-senet-network-manual-register-device).
-
-In the following section, we’ll walk you through this process.
+After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
 #### Already Registered
 
