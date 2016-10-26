@@ -191,9 +191,7 @@ Power on your Arduino by connecting your Arduino with a USB cable (or FTDI conne
 
 #### Using Cayenne Arduino Library
 
-The Cayenne Arduino Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards. Cayenne sketch files can be combined with other sketch files for your IoT projects.
-
-If you need to download the Cayenne Arduino Library, [click here](https://s3.amazonaws.com/mydevices-cayenne/arduino/lib/prod/Cayenne.zip).
+The Cayenne Arduino Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards. Cayenne sketch files can be combined with other sketch files for your IoT projects. In this section we will walk you through installing and configuring the Arduino IDE to use the library.
 
 <p id="installing-library-arduino-ide" class="anchor-link"></p>
 
@@ -218,7 +216,7 @@ The Cayenne library has now been expanded in the libraries folder in your Arduin
 
 <p id="connect-your-arduino" class="anchor-link"></p>
 
-### Configure Arduino IDE
+#### Configure Arduino IDE
 
 In order to successfully program your Arduino board, you will need to verify that the appropriate Board and Port are selected in the Arduino IDE.
  
