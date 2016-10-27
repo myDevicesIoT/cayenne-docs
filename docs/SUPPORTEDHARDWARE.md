@@ -650,6 +650,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606101416/Component-Doc-Image-Light-Switch.png" width="346" height="124" alt="Light Switch"></p>
 
+<p id="rpi-light-switch-2" class="anchor-link"></p>
+<p id="rpi-light-switch" class="anchor-link"></p>
 
 ##### Raspberry Pi Tutorial
 
@@ -692,7 +694,7 @@ Connect the relay (K1) common (CO) pin to ground. Also connect the normally open
 ###### Step 6
 You’re done! You can now add the Relay Switch to the dashboard and use it to control the LED on GPIO 13. 
 
-<br>
+<p id="arduino-light-switch" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -724,6 +726,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606101815/Component-Doc-Image-Luminosity.png" width="346" height="124" alt="Luminosity"></p>
 
+<p id="rpi-luminosity" class="anchor-link"></p>
 
 ##### Raspberry Pi Tutorial
 
@@ -751,6 +754,7 @@ Connect ground from Channel 0 of the PCA9685 to the LEDs shorter (negative) lead
 ###### Step 3
 You’re done! You can now add the Luminosity actuator to your dashboard, using Channel 0 on the PCA9685 to adjust the LEDs brightness.
 
+<p id="arduino-luminosity" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect an LED to your Arduino and adjust its brightness using PWM.
@@ -781,6 +785,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 #### Motor Switch
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104015/Component-Doc-Image-Servo-Motor.png" width="351" height="126" alt="Motor Switch"></p>
+
+<p id="rpi-dc-motor" class="anchor-link"></p>
 
 ##### RPI Tutorial
 
@@ -832,6 +838,7 @@ Connect the normally open (NO) pin on the relay to the motor.
 ###### Step 8
 You’re done! You can now add the Motor Switch to the dashboard and control it using GPIO Channel 13.
 
+<p id="arduino-dc-motor" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -889,34 +896,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104015/Component-Doc-Image-Servo-Motor.png" width="346" height="124" alt="Servo Motor"></p>
 
-Use the following diagram to connect a Servo Motor.
-
-A couple of notes before you get started:
-
-- The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you! In this case we’ll be using a PCA9685 PWM controller to connect our Servo to the Pi. We’ll also be using an external 5v power supply to provide power to the Servo.
-- To add a PWM Output you will need a PWM controller. For this example we will use a PCA9685 PWM I/O Controller. This tutorial assumes you already have the PCA9685 connected. Refer to the [PCA9685 Tutorial](#supported-hardware-extensions-pwm-pca9685-rpi-tutorial) if you need assistance with that part.
-- Make sure Raspberry Pi is powered off when connecting wires.
-- When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
-- Some full-size breadboards (used in diagrams below) have a powerline that is separated in the middle. If this is the case, be sure your sensors are connected on the same half of the breadboard as your Pi Cobbler.
-
-###### Step 1
-Connect power from the external power source to the PCA9685. Also connect power from one of the output channels (V+) on the PCA9685 to the servo motor (red).
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122640/RPI-Servo-Step-1.png" width="757" height="320" class="noborder" alt="Servo Motor"></p>
-
-###### Step 2
-Connect ground from the external power to the PCA9685. Also connect ground (GND) from the PCA9685 (GND) to the relay (black).
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122641/RPI-Servo-Step-2.png" width="757" height="320" class="noborder" alt="Servo Motor"></p>
-
-###### Step 3
-Connect the control channel (PWM) from the PCA9685 to the relay (yellow).
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121344/RPI-Servo-Step-3.png" width="757" height="320" class="noborder" alt="Servo Motor"></p>
-
-###### Step 4
-You’re done! You can now add the Servo Motor to your dashboard, controlling it through the PCA9685 (Channel 15 in our example).
-
+<p id="rpi-servo-motor" class="anchor-link"></p>
 
 ##### RPI Tutorial
 
@@ -948,6 +928,7 @@ Connect the control channel (PWM) from the PCA9685 to the relay (yellow).
 ###### Step 4
 You’re done! You can now add the Servo Motor to your dashboard, controlling it through the PCA9685 (Channel 15 in our example).
 
+<p id="arduino-servo-motor" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -986,6 +967,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104638/Component-Doc-Image-Valve-Switch.png" width="351" height="126" alt="Valve Switch"></p>
 
+<p id="rpi-valve-relay" class="anchor-link"></p>
+
 ##### RPI Tutorial
 
 Use the following diagram to connect a Valve.
@@ -1022,6 +1005,7 @@ Connect either the normally open (NO) or normally closed (NC) pin on the relay t
 ###### Step 5
 You’re done! You can now add the Valve to the dashboard and control it using the relay.
 
+<p id="arduino-valve-relay" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect your Valve.
@@ -1064,6 +1048,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 #### Relay Switch
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606103904/Component-Doc-Image-Relay-Switch.png" width="351" height="126" alt="Relay Switch"></p>
 
+<p id="rpi-relay-switch" class="anchor-link"></p>
+
 ##### RPI Tutorial
 Use the following diagram to connect a Relay Switch.
 
@@ -1104,6 +1090,7 @@ Connect the relay (K1) common (CO) pin to ground. Also connect the normally open
 ###### Step 6
 You’re done! You can now add the Relay Switch to the dashboard and use it to control the LED on GPIO 13.
 
+<p id="arduino-relay-switch" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect a Relay Switch and use it to control an LED.
@@ -1156,6 +1143,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 #### Digital Output
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606101027/Component-Doc-Image-Generic-Digital-Output.png" width="346" height="124" alt="Digital Output"></p>
 
+<p id="rpi-digital-output-led" class="anchor-link"></p>
+
 ##### RPI Tutorial
 Use the following diagram to use one of the Raspberry Pi Digital Outputs.
 
@@ -1178,6 +1167,8 @@ Connect the LED ground wire (the shorter of the two wires) to the GND pin from t
 
 ###### Step 3
 You’re done! You can now add the digital output (Pin 23) to your dashboard and use it turn the LED on and off.
+
+<p id="arduino-digital-output-led" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect a Digital Output to the Arduino. In this example, we will use the Arduino to control an LED.
@@ -1207,6 +1198,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 #### PWM Output
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606101144/Component-Doc-Image-Generic-PWM-Output.png" width="346" height="124" alt="Digital Output"></p>
 
+<p id="rpi-pwm-output" class="anchor-link"></p>
+
 ##### RPI Tutorial
 Use the following diagram to connect a PWM Output.
 
@@ -1231,6 +1224,7 @@ Connect ground from Channel 0 of the PCA9685 to the LEDs shorter (negative) lead
 ###### Step 3
 You’re done! You can now add a Generic PWM Output to your dashboard, using Channel 0 on the PCA9685 to adjust the LEDs brightness.
 
+<p id="arduino-pwm-output" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect a PWM Output.
@@ -1276,6 +1270,8 @@ You can add analog, digital and PWM extensions to your Raspberry Pi. This allows
 
 #### MCP3004
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102412/Component-Doc-Image-MCP3004.png" width="346" height="124" alt="MCP3004"></p>
+
+<p id="rpi-mcp3004" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **MCP3004 A/D Converter with SPI Serial Interface**.
@@ -1324,6 +1320,8 @@ You’re done! You can now add the MCP3004 converter to your dashboard using chi
 #### MCP3204
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102606/Component-Doc-Image-MCP3204.png" width="346" height="124" alt="MCP3204"></p>
 
+<p id="rpi-mcp3204" class="anchor-link"></p>
+
 ##### RPI Tutorial
 Use the following diagram to connect your **MCP3204 A/D Converter with SPI Serial Interface**.
 
@@ -1370,6 +1368,8 @@ You’re done! You can now add the MCP3204 converter to your dashboard using chi
 
 #### MCP3208
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102700/Component-Doc-Image-MCP3208.png" width="346" height="124" alt="MCP3208"></p>
+
+<p id="rpi-mcp3208" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **MCP3208 A/D Converter with SPI Serial Interface**.
@@ -1418,6 +1418,7 @@ You’re done! You can now add the MCP3208 converter to your dashboard using chi
 #### MCP3008
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102509/Component-Doc-Image-MCP3008.png" width="346" height="124" alt="MCP3008"></p>
 
+<p id="rpi-mcp3008" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your MCP3008 A/D Converter with SPI Serial Interface.
@@ -1465,6 +1466,8 @@ You’re done! You can now add the MCP3008 converter to your dashboard, using ch
 
 #### ADS1115
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606095419/Component-Doc-Image-ADS1115.png" width="346" height="124" alt="ADS1115"></p>
+
+<p id="rpi-ads1115" class="anchor-link"></p>
 
 ##### RPI Tutorial
 
@@ -1515,6 +1518,8 @@ You’re done! You can now add the ADS1115 converter on the dashboard, with defa
 #### ADS1015
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606093812/Component-Doc-Image-ADS1015.png" width="346" height="124" alt="ADS1015"></p>
+
+<p id="rpi-ads1015" class="anchor-link"></p>
 
 ##### RPI Tutorial
 
@@ -1572,6 +1577,7 @@ You’re done! You can now add the ADS1015 converter on the dashboard, with defa
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606093812/Component-Doc-Image-ADS1015.png" width="346" height="124" alt="MCP23018"></p>
 
+<p id="rpi-mcp23018" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your MCP23018 IO Expander.
@@ -1622,6 +1628,7 @@ You’re done! You can now add the MCP23018 on the dashboard, with default addre
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606103013/Component-Doc-Image-MCP23017.png" width="346" height="124" alt="MCP23017"></p>
 
+<p id="rpi-mcp23017" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **MCP23017 IO Expander**.
@@ -1671,6 +1678,8 @@ You’re done! You can now add the MCP23017 on the dashboard, with default addre
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102906/Component-Doc-Image-MCP23009.png" width="346" height="124" alt="MCP23009"></p>
 
+<p id="rpi-mcp23009" class="anchor-link"></p>
+
 ##### RPI Tutorial
 Use the following diagram to connect your MCP23009 IO Expander.
 
@@ -1718,6 +1727,8 @@ You’re done! You can now add the MCP23009 on the dashboard, with default addre
 #### MCP23008
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102815/Component-Doc-Image-MCP23008.png" width="346" height="124" alt="MCP23008"></p>
+
+<p id="rpi-mcp23008" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **MCP23008 IO Expander**.
@@ -1767,6 +1778,7 @@ You’re done! You can now add the MCP23008 on the dashboard, with default addre
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606100910/Component-Doc-Image-DS2408.png" width="346" height="124" alt="DS2408"></p>
 
+<p id="rpi-ds2408" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **DS2408 “1-Wire” IO Expander**.
@@ -1800,6 +1812,8 @@ You’re done! Power on your Raspberry Pi and Cayenne will automatically detect 
 #### MCP23S09
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102020/Component-Doc-Image-MCP23S09.png" width="346" height="124" alt="MCP23S09"></p>
+
+<p id="rpi-mcp23s09" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **MCP23S09 A/D Converter with SPI Interface**.
@@ -1849,6 +1863,7 @@ You’re done! You can now add the MCP23S09 converter to your dashboard using ch
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606101924/Component-Doc-Image-MCP23S08.png" width="346" height="124" alt="MCP23S08"></p>
 
+<p id="rpi-mcp23s08" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your MCP23S08 A/D Converter with SPI Interface.
@@ -1903,6 +1918,7 @@ You’re done! You can now add the MCP23S08 converter to your dashboard using ch
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102307/Component-Doc-Image-MCP23S18.png" width="346" height="124" alt="MCP23S18"></p>
 
+<p id="rpi-mcp23s18" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **MCP23S18 A/D Converter with SPI Interface**.
@@ -1952,6 +1968,7 @@ You’re done! You can now add the MCP23S18 converter to your dashboard using ch
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102122/Component-Doc-Image-MCP23S17.png" width="346" height="124" alt="MCP23S17"></p>
 
+<p id="rpi-mcp23s17" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **MCP23S17 A/D Converter with SPI Interface**.
@@ -2013,6 +2030,8 @@ You’re done! You can now add the MCP23S17 converter to your dashboard using ch
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606103654/Component-Doc-Image-PCA9685.png" width="346" height="124" alt="PCA9685"></p>
 
+<p id="rpi-pca9685" class="anchor-link"></p>
+
 ##### RPI Tutorial
 
 Use the following diagram to connect your **PCA9685 PWM I2C Controller**.
@@ -2071,6 +2090,7 @@ Cayenne works with temperature, luminosity, pressure/distance, motion and generi
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104237/Component-Doc-Image-TMP36.png" width="346" height="124" alt="TMP36"></p>
 
+<p id="rpi-tmp36" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect a **TMP36 Analog Temperature sensor**.
@@ -2101,6 +2121,7 @@ Connect the TMP36 pin 2 (VOUT) to one of the 8 Channels on the MCP3008. For this
 ###### Step 4
 You’re done! You can now add the TMP36 sensor to your dashboard, using the MCP3008’s Channel 0 to read the sensor value.
 
+<p id="arduino-tmp36" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect your **TMP36 Analog Temperature sensor**.
@@ -2137,6 +2158,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104347/Component-Doc-Image-TMP102.png" width="346" height="124" alt="TMP102"></p>
 
+<p id="rpi-tmp102" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **TMP102 Temperature sensor**.
@@ -2172,6 +2194,7 @@ Connect the SCL pins of the TMP102 and Pi Cobbler.
 ###### Step 5
 You’re done! You can now add the TMP102 sensor on the dashboard, with default address of 0x48.
 
+<p id="arduino-tmp102" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -2214,6 +2237,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606100752/Component-Doc-Image-DS18B20.png" width="346" height="124" alt="DS18B20"></p>
 
+<p id="rpi-ds18b20" class="anchor-link"></p>
+
 ##### RPI Tutorial
 Use the following diagram to connect your DS18B20 “1-Wire” Temperature sensor.
 
@@ -2243,6 +2268,7 @@ Connect the DS18B20 output pin (DQ) to GPIO Pin 4 on the Pi Cobbler. Connecting 
 ###### Step 4
 You’re done! Power on your Raspberry Pi and Cayenne will automatically detect the DS18B20 sensor and add it to your dashboard.
 
+<p id="arduino-ds18b20" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect your **DS18B20 “1-Wire” Temperature sensor**.
@@ -2276,6 +2302,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 #### BMP180
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606100318/Component-Doc-Image-BMP180.png" width="346" height="124" alt="BMP180"></p>
+
+<p id="rpi-bmp180" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect your **BMP180 Barometric Pressure / Temperature sensor**.
@@ -2311,6 +2339,7 @@ Connect the the SDA pins on the Pi Cobbler and BMP180.
 ###### Step 5
 You’re done! You can now add the BMP180 to your dashboard.
 
+<p id="arduino-bmp180" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect your BMP180 Barometric Pressure / Temperature sensor.
@@ -2351,6 +2380,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104127/Component-Doc-Image-Thermistor.png" width="346" height="124" alt="Thermistor"></p>
 
+<p id="rpi-thermistor" class="anchor-link"></p>
 
 ##### RPI Tutorial
 Use the following diagram to connect a **Thermistor**.
@@ -2381,6 +2411,7 @@ Connect the Thermistor to one of the 8 Channels on the MCP3008. For this example
 ###### Step 4
 You’re done! You can now add the Thermistor to your dashboard, using the MCP3008’s Channel 0.
 
+<p id="arduino-thermistor" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect your Thermistor.
@@ -2421,6 +2452,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104127/Component-Doc-Image-Thermistor.png" width="346" height="124" alt="VCNL4000"></p>
 
+<p id="rpi-vcnl4000" class="anchor-link"></p>
+
 ##### RPI Tutorial
 Use the following diagram to connect a **VCNL4000 Proximity and Luminosity sensor**.
 
@@ -2454,6 +2487,7 @@ Connect the SCL pins of the VCNL4000 and Pi Cobbler.
 ###### Step 5
 You’re done! You can now add the VCNL4000 sensor on the dashboard.
 
+<p id="arduino-vcnl4000" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 Use the following diagram to connect your **VCNL4000 Proximity and Luminosity sensor**.
@@ -2478,6 +2512,7 @@ Connect ground from the Arduino to the VCNL4000 (GND).
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104531/Component-Doc-Image-TSL2561.png" width="346" height="124" alt="TSL2561"></p>
 
+<p id="rpi-tsl2561" class="anchor-link"></p>
 
 ##### RPI Tutorial
 
@@ -2514,6 +2549,7 @@ Connect the SCL pins of the TSL2561 and Pi Cobbler.
 ###### Step 5
 You’re done! You can now add the TSL2561 sensor on the dashboard, with default address of 0x39.
 
+<p id="arduino-tsl2561" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -2556,6 +2592,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606103759/Component-Doc-Image-Photoresistor.png" width="346" height="124" alt="Photoresistor"></p>
 
+<p id="rpi-photoresistor" class="anchor-link"></p>
+
 ##### RPI Tutorial
 
 Use the following diagram to connect your Photoresistor.
@@ -2585,6 +2623,8 @@ Connect the Photoresistor to one of the 8 Channels on the MCP3008. For this exam
 
 ###### Step 4
 You’re done! You can now add the Photoresistor to your dashboard, using the MCP3008 Channel 0 to read values from the sensor.
+
+<p id="arduino-photoresistor" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -2705,6 +2745,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606100133/Component-Doc-Image-Analog-Load-Pressure-Sensor.png" width="346" height="124" alt="Analog Load"></p>
 
+<p id="rpi-analog-pressure-sensor" class="anchor-link"></p>
+
 ##### RPI Tutorial
 
 Use the following diagram to connect your **Analog Pressure Sensor**.
@@ -2736,6 +2778,7 @@ Connect the Pressure sensor to one of the input channels on the MCP3008, Channel
 ###### Step 4
 You’re done! You can now add the Analog Pressure sensor to your dashboard, using the MCP3008’s Channel 0 to read the sensor.
 
+<p id="arduino-analog-pressure-sensor" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -2777,6 +2820,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606095645/Component-Doc-Image-Analog-Distance-Sensor.png" width="346" height="124" alt="Analog Distance"></p>
 
+<p id="rpi-analog-proximity-sensor" class="anchor-link"></p>
 
 ##### RPI Tutorial
 
@@ -2809,6 +2853,7 @@ Connect the Proximity Sensor’s output (yellow) to one of the input channels on
 ###### Step 4
 You’re done! You can now add the Analog Proximity Sensor to your dashboard, using the MCP3008’s Channel 0 to read the sensor.
 
+<p id="arduino-analog-proximity-sensor" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -2850,6 +2895,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606100621/Component-Doc-Image-Digital-Motion-Sensor.png" width="346" height="124" alt="Digital Motion Sensor"></p>
 
+<p id="rpi-digital-motion-sensor" class="anchor-link"></p>
 
 ##### RPI Tutorial
 
@@ -2880,6 +2926,7 @@ Connect ground from the Pi Cobbler to the Motion sensor.
 ###### Step 4
 You’re done! You can now add the Digital Motion sensor to your dashboard, using GPIO 17 as the input channel.
 
+<p id="arduino-digital-motion-sensor" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -2921,6 +2968,8 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606100444/Component-Doc-Image-Digital-Input.png" width="346" height="124" alt="Digital Input"></p>
 
+<p id="rpi-digital-input" class="anchor-link"></p>
+
 ##### RPI Tutorial
 
 Use the following diagram to use one of the **Raspberry Pi Digital Inputs**.
@@ -2950,6 +2999,7 @@ Connect the pushbutton (using the same pin as the resistor) to one of the GPIO p
 ###### Step 4
 You’re done! You can now add the Digital Input to your dashboard and use it to read the button state using GPIO 17.
 
+<p id="arduino-digital-input" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -2986,6 +3036,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606100005/Component-Doc-Image-Analog-Input.png" width="346" height="124" alt="Analog Input"></p>
 
+<p id="rpi-analog-input" class="anchor-link"></p>
 
 ##### RPI Tutorial
 
@@ -3017,6 +3068,7 @@ Connect the Proximity Sensor’s output (yellow) to one of the input channels on
 ###### Step 4
 You’re done! You can now add the Analog Input to your dashboard, using the MCP3008’s Channel 0 to read the sensor.
 
+<p id="arduino-analog-input" class="anchor-link"></p>
 
 ##### Arduino Tutorial
 
@@ -3047,4 +3099,3 @@ You’re done! You can now add the photoresistor to your dashboard, referencing 
 
 ###### Step 5
 Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/GenericAnalogInput/GenericAnalogInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
-
