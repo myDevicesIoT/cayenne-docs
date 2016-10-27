@@ -21,13 +21,13 @@ Cayenne MQTT is straightforward and easy to use, offering several different ways
 
 This is the easiest way to get started with using MQTT with Cayenne. We have implemented various MQTT libraries that bundle an [MQTT client](#bring-your-own-thing-api-mqtt-clients) and support libraries for supporting MQTT. Using these, you’ll have access to all of the libraries and code examples you’ll need to quickly program and connect your board to Cayenne.
 
-We have prepared walkthroughs and libraries for some of the most common toolchain/IDE combinations to help get you up and running as quickly as possible. If you would like to use our libraries, the easiest way to get started is to jump to a section below and follow the guided walkthrough provided there.
+We have prepared walkthroughs and libraries for some of the most common toolchain/IDE combinations to help get you up and running as quickly as possible. If you would like to use our libraries, the easiest way to get started is to jump to a section below and read through the information and guides provided there.
 
-+ [Arduino MQTT Walkthrough](#bring-your-own-thing-api-using-arduino-mqtt) - For Beginner users. This is the easiest way to get started with using Cayenne MQTT in your project. This will walk you through connecting an Arduino board using the Arduino IDE, adding a Temperature sensor as well as a Light actuator.
++ [Arduino MQTT Library](#bring-your-own-thing-api-using-arduino-mqtt) - For Beginner users. This is the easiest way to get started with using Cayenne MQTT in your project. In this section we'll cover setting up the popular Arduino IDE as well as installing and configuring Arduino IDE to use Cayenne's Arduino MQTT library. It also includes a walkthrough of setting up a specific board, sending sensor data and controlling an actuator from the Cayenne dashboard.
 
-+ [C++ Walkthrough](#bring-your-own-thing-api-using-c) - For Intermediate users. This will walk you through connecting a Nucleo board using the mbed IDE, with widgets automatically populated on the dashboard and then adding a Light actuator.
++ [C++ Library](#bring-your-own-thing-api-using-c) - For Intermediate users. This section walks you through using the C++ Library in your code. It includes an example of using the mbed IDE to program & connect a Nucleo board to Cayenne, writing code to send sensor data as well as control an onboard LED from the Cayenne dashboard.
 
-+ [Embedded C Walkthrough](#bring-your-own-thing-api-using-embedded-c) - For Advanced users. This will discuss importing the Cayenne Embedded C library into your mbed IDE and provides guidance from there as to which code areas of the code need to be updated/customized in order to implement support for your board.
++ [Embedded C Library](#bring-your-own-thing-api-using-embedded-c) - For Advanced users. This section discusses the steps needed to make use of the Embedded C library in your code. It also includes advice from the Cayenne team as to which areas of the code need to be updated/customized in order to implement support for new boards.
 
 #### Option 2: Use raw MQTT API functions
 
@@ -332,7 +332,7 @@ Once our board is connected to our Cayenne dashboard, we can send some sensor da
 
 #### Import the TMP36 library
 
-In order to use the TMP36 sensor with mbed, we must import a library that supports this sensor. There are many such options for sensor libraries in mbed, you may choose a different library than we do for this example.
+In order to use a TMP36 sensor with mbed, we will import a library that will support reading data from this sensor and converting its readings into temperature readings. There are many such options for sensor libraries in mbed, you may choose a different library than we do for this example.
 
 To import our sensor library, click on the **Import** button in mbed. From the Libraries screen that appears, you can use the **Search** field to find appropriate libraries.
 
@@ -350,7 +350,7 @@ To save time, you may use the following <a href="https://developer.mbed.org/user
 
 #### Reading the TMP36 sensor data
 
-Now that we have a library that we can use with our sensor, we can write some code that will read its value. We will write this code in the **main.cpp** file. If you use a different library, or different sensors, be sure to refer to the instructions that come with them for details, including what code you must include for reading data from the sensor.
+Now that we have a library that we can use with our sensor, we can write some code that will read its value using that library. We will write this code in the **main.cpp** file. If you use a different library, or different sensors, be sure to refer to the instructions that come with them for details, including what code you must include for reading data from the sensor.
 
 At a high level, for the library we'll be using, we implement the following tasks in our code for reading from our sensors:
 
