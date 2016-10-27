@@ -57,10 +57,11 @@ Actility is an industry leader in Machine to Machine (M2M) large scale infrastru
 Cayenne makes it easy to use your LoRa device and the Actility network. You will need to:
 
 1. [Create / Log into your account on Actility's ThingPark portal](#lora-actility-create-account)
-2. [Create Cayenne Routing Profile](#lora-actility-create-cayenne-routing-profile)
-3. [Register your device on the ThingPark portal](#lora-actility-manually-register-device)
-4. [Program/Flash your device](#lora-actility-programming-the-device)
-5. [Add your device to your Cayenne dashboard](#lora-actility-add-device-to-cayenne)
+2. [Setup gateway device](#lora-actility-setup-gateway-device)
+3. [Create Cayenne Routing Profile](#lora-actility-create-cayenne-routing-profile)
+4. [Register your device on the ThingPark portal](#lora-actility-manually-register-device)
+5. [Program/Flash your device](#lora-actility-programming-the-device)
+6. [Add your device to your Cayenne dashboard](#lora-actility-add-device-to-cayenne)
 
 We will walk you through these steps in the following sections.
 
@@ -70,6 +71,20 @@ We will walk you through these steps in the following sections.
 To create your Actility account, visit the <a href="http://actility.thingpark.com/thingpark-store/authentication" target="_blank">Actility ThingPark Portal</a>. Follow the **Create your account** process located there to get started.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Actility-portal-landing.png" width="600" height="363" alt="Actility"><br/><br/></p>
+
+
+### Setup gateway device
+
+Actility does not currently have a public LoRa network for your devices to connect to. In order for your LoRa devices to connect to the Actility network, you must have purchased and configured a gateway device.
+
+When using the Actility network, we recommend that you purchase and configure one of the following gateway devices:
+
++ For use in the European Union, we recommend the **Multitech Conduit EU868**
+   + You can purchase a <a href="http://actility.thingpark.com/thingpark-store/development-kit/178-multitech-conduit-eu868.html" target="_blank">Multitech Conduit EU868 here</a>
++ For use in the United States of America, we recommend the **Multitech Conduit US915**
+   + You can purchase a <a href="http://actility.thingpark.com/thingpark-store/development-kit/193-multitech-conduit-us915.html" target="_blank">Multitech Conduit US915 here</a>
+   
+**Be sure that you have an appropriate Actility gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
 
 ### Create Cayenne Routing Profile
@@ -153,7 +168,7 @@ After selecting the OTAA activation mode, the list of fields will update to show
     + **Thingpark cloud config:** Skip – Cayenne does not require this optional field.
 + Network
     + **Connectivity plan:** Select an appropriate Actility plan here for activating your device under.
-    + **AS routing profile:** Select the Cayenne route that you created above in **Step 2** from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
+    + **AS routing profile:** Select the Cayenne route that you [created earlier](#lora-actility-create-cayenne-routing-profile) from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
 + Administrative data
     + **Device name:** Used by Actility. Cayenne does not use this information.
     + **Marker:** Used by Actility. Cayenne does not use this information.
@@ -191,7 +206,7 @@ After selecting the APB activation mode, the list of fields will update to show 
     + **Thingpark cloud config:** Skip – Cayenne does not require this optional field.
 + Network
     + **Connectivity plan:** Select an appropriate Actility plan here for activating your device under.
-    + **AS routing profile:** Select the Cayenne route that you created above in **Step 2** from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
+    + **AS routing profile:** Select the Cayenne route that you [created earlier](#lora-actility-create-cayenne-routing-profile) from the dropdown here. This will forward the information from your device to Cayenne so that once your device is online, Cayenne will receive its information.
 + Administrative data
     + **Device name:** Used by Actility. Cayenne does not use this information.
     + **Marker:** Used by Actility. Cayenne does not use this information.
@@ -318,10 +333,11 @@ Senet, a contributing member of the LoRa® Alliance, is the first and only publi
 Cayenne makes it easy to use your LoRa device and the Senet network. You will need to:
 
 1. [Create / Log into your account on the Senet portal](#lora-senet-network-create-account)
-2. [Register your device on the Senet portal](#lora-senet-network-manual-register-device)
-3. [Setup traffic forwarding to Cayenne](#lora-senet-network-setup-device-forwarding-to-cayenne)
-4. [Program/Flash your device](#lora-senet-network-programming-the-device)
-5. [Add your device to your Cayenne dashboard](#lora-senet-network-add-device-to-cayenne)
+2. [Setup gateway device](#lora-senet-network-setup-gateway-device)
+3. [Register your device on the Senet portal](#lora-senet-network-manual-register-device)
+4. [Setup traffic forwarding to Cayenne](#lora-senet-network-setup-device-forwarding-to-cayenne)
+5. [Program/Flash your device](#lora-senet-network-programming-the-device)
+6. [Add your device to your Cayenne dashboard](#lora-senet-network-add-device-to-cayenne)
 
 We will walk you through these steps in the following sections.
 
@@ -331,6 +347,23 @@ We will walk you through these steps in the following sections.
 To create your Senet account, visit the <a href="https://portal.senetco.com/" target="_blank">Senet Portal</a>. Follow the **Register as a new user** process located there to get started.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-portal-register-account.png" width="600" height="363" alt="Senet"><br/><br/></p>
+
+
+### Setup gateway device
+
+Senet currently has limited coverage for connecting your devices without the need for a gateway. Depending upon where your devices are located, you may need or want to purchase and configure a gateway device for your use. If you need to do so, it is recommended that you use a MultiConnect Conduit gateway device. You can find links to an appropriate LoRa version of this device on the <a href="http://multitech.com/brands/multiconnect-conduit" target="_blank">Multitech MultiConnect Conduit page</a>.
+
+**Be sure that your devices are covered by the Senet network, including having an appropriate gateway configured and working if needed, before continuing. Your devices will not be able to properly function without your gateway device in place.**
+
+#### Register new gateway device
+
+If you need to register a new gateway device, the Senet portal has instructions and the software for doing so. To begin this process, log into your Senet account and click on the **Download gateway software** link. This will open a detailed guide that Senet has created for the process of registering and installing software on the Multitech MultiTech Conduit gateway.
+
+**Note:** Gateway Registration and Software Installation is only required for devices that are new to the Senet Network. If Senet provided your device no further action is necessary.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-access-gateway-guide.png" width="600" height="299" alt="senet-access-gateway-guide"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-downlod-gateway-software.png" width="600" height="359" alt="senet-downlod-gateway-software"><br/><br/></p>
 
 
 ### Manual register device
