@@ -75,9 +75,7 @@ To create your Actility account, visit the <a href="http://actility.thingpark.co
 
 ### Setup gateway device
 
-Actility does not currently have a public LoRa network for your devices to connect to. In order for your LoRa devices to connect to the Actility network, you must have purchased and configured a gateway device.
-
-When using the Actility network, we recommend that you purchase and configure one of the following gateway devices:
+In order for your LoRa devices to connect to the Actility network, you must have purchased and configured a gateway device. When using the Actility network, we recommend that you purchase and configure one of the following gateway devices:
 
 + For use in the European Union, we recommend the **Multitech Conduit EU868**
    + You can purchase a <a href="http://actility.thingpark.com/thingpark-store/development-kit/178-multitech-conduit-eu868.html" target="_blank">Multitech Conduit EU868 here</a>
@@ -351,7 +349,7 @@ To create your Senet account, visit the <a href="https://portal.senetco.com/" ta
 
 ### Setup gateway device
 
-Senet currently has limited coverage for connecting your devices without the need for a gateway. Depending upon where your devices are located, you may need or want to purchase and configure a gateway device for your use. If you need to do so, it is recommended that you use a MultiConnect Conduit gateway device. You can find links to an appropriate LoRa version of this device on the <a href="http://multitech.com/brands/multiconnect-conduit" target="_blank">Multitech MultiConnect Conduit page</a>.
+In order for your LoRa devices to connect to the Senet network, you should purchase and configure a gateway device. When using the Senet network, it is recommended that you use a MultiConnect Conduit gateway device. You can find links to an appropriate LoRa version of this device on the <a href="http://multitech.com/brands/multiconnect-conduit" target="_blank">Multitech MultiConnect Conduit page</a>.
 
 **Be sure that your devices are covered by the Senet network, including having an appropriate gateway configured and working if needed, before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
