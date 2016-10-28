@@ -450,24 +450,136 @@ Once you have written code to handle the actuator, click on the Compile button a
 
 ## Using Embedded C
 
-The Cayenne Embedded C library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C language. You can find this library, and the example code presented in this section, in our <a href="" target="_blank">Cayenne Embedded C Github</a> repository. **TODO: Replace with public link**
+The Cayenne Embedded C library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C language. You can find this library, and the example code presented in this section, in our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C" target="_blank">Cayenne Embedded C Github</a> repository.
 
-**NOTE:** There are many different ways to implement your project using the C library, in this section we’ll take you through one such example. If you would like to review an example of simply putting one of our libraries into use, you may wish to also review the [Cayenne C++ Library](#bring-your-own-thing-api-using-c) example.
+**NOTE:** There are many different ways to implement your project using the C library, in this section we’ll take you through one such example by discussing some technical details of writing code to support a Linux-based board. The details of this section are written for a more advanced user who is looking for examples on how to extend the C library to support their board. You may also wish to also review the [Cayenne C++ Library](#bring-your-own-thing-api-using-c) example which covers similar concepts and includes code examples for adding a specific sensor and actuator in your code.
 
 **Example: using the library**
 
-In this section we will  walk through setting up and connecting a [Raspberry Pi 3 Model B](#supported-hardware-single-board-computers-raspberry-pi-model-b). Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the Embedded C library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of a connected Light actuator using our dashboard.
+In this section we will walk through setting up and connecting a [Raspberry Pi 3 Model B](#supported-hardware-single-board-computers-raspberry-pi-model-b) to Cayenne using MQTT. Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the Embedded C library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of a connected Light actuator using our dashboard.
 
 To accomplish this goal, we will cover the following topics:
 
 + Connect the board
 + Install compiler
 + Install Embedded C library
-+ Add support for board under Linux
-  + Timers?
-  + Networking?
++ Writing code to support your board/platform
+    + Implement support for your platform/board
+    + Implementing Networking code
+    + Implementing Timer code
++ Code examples
+  + Connect board to Cayenne
+  + Send sensor data to Cayenne
+  + Respond to actuator commands
 
 **TODO: Walk through video here**
+
+
+### Connect the board
+
+For our example we will use a Raspberry Pi 3. We recommend that you install the <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">Raspbian OS</a> onto your Pi. Raspbian comes with the GNU compiler, making it easy for us to write code for our project.
+
+1. Power on your Raspberry Pi. Connect the power adapter to your Raspberry Pi.
+2. Connect the Pi to the Internet. Connect your Raspberry Pi to the Internet using an Ethernet cable. Or, if you have a Wi-Fi dongle setup already this works too.
+3. Make sure the Raspbian operating system is installed. Cayenne works with Jessie OS versions of Raspbian. Please make sure one of these is pre-installed to the sd card. If you need to install the Raspbian operating system, <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">click here</a>.
+
+   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160128155812/raspberry-pi-actual.png" width="600" height="610" alt="Raspberry Pi"></p>
+
+
+### Install compiler
+
+If you are using the recommended Raspbian OS, the GNU compiler will already be installed. You can verify this by checking the version.
+```
+gcc -v
+```
+
+If your compiler is not yet installed and you are using a Debian distribution, you can easily get all the packages you need by installing the *build-essential* package.
+```
+apt-get install build-essential
+```
+After verifying that your compiler is ready to be used, you can move on to installing the Cayenne Embedded C library.
+
+### Install Embedded C library
+
+The Cayenne Embedded C library and its examples can be found on our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C" target="_blank">Github repository</a>. To make use of the library, make a clone of the library repository in your project workspace.
+
+For example, to clone the C library into a new project called *CayenneMQTTTest*:
+```
+mkdir CayenneMQTTTest
+cd CayenneMQTTTest
+git clone https://github.com/myDevicesIoT/Cayenne-MQTT-C.git
+```
+
+### Writing code to support your board/platform
+
+The Embedded C library bundles all of the basic code needed to connect to Cayenne using MQTT, including the <a href="http://www.eclipse.org/paho/" target="_blank">Eclipse Paho MQTT client</a>. In order to operate successfully, the MQTT code requires an implementation of **Timer** and **Networking** code that will work for your platform. In addition, you may find it necessary to account for the idiosyncrasies of the specific board that you need to support. This section will help guide you in writing code to support your board/platform.
+
+#### Implement support for your platform/board
+
+At a mimimum, you must implement the needed **Timer** and **Networking** functions that are used by Cayenne's MQTT code. Without these implemented for your platform, networking will not work and the library code will not be able to *Publish* or *Subscribe* data to the Cayenne Cloud.
+
+**Linux Example**
+
+Currently, the Embedded C library includes a working example for the Linux Operating System. You can find this implementation under the **<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/tree/master/src/Platform/Linux" target="_blank">Platform/Linux</a>** subfolder in the library files. If you are using a Linux based device, you can use the Linux code we've provided as-is.
+
+**Supporting other platforms**
+
+To support a different Operating System, such as say Windows, you will need to accomplish the following tasks to support your platform:
+
+1. Implement Networking code, used by the library for connectivity
+2. Implement Timer code, used by the library for connectivity
+3. Update the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">CayenneMQTTClient/PlatformHeader.h</a> to reference your new Timer, Networking implementation
+
+*TIP: Much of the information provided here also applies should you need to extend Cayenne's [C++ Library](#bring-your-own-thing-api-using-c). However, in the case of the C++ library, Step 3 above can be omitted - only the Timer and Networking implementation are needed. See the notes below on where to accomplish this for Timer and Networking.*
+
+#### Implementing Networking code
+
+In order for the Embedded C library and its MQTT client to have proper connectivity, you will need to provide a Network implementation that can be used. This code is needed, for example, to create a tcp connection and provide read/write functions so that the code can connect to the Cayenne Cloud. Because the code needed for this is platform dependent, you will need to provide a working implementation for your platform. We have documented this process in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader include file</a>. In addition, you can refer to the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/tree/master/src/Platform/Linux" target="_blank">Linux</a> implementation included with the library.
+
+After implementing your timer code, be sure to then include a link to your file(s) in <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader.h</a>. The MQTT client used by the library will not function without a working timer implementation for your platform.
+
+*TIP: If need should need to accomplish this in [C++ Library](#bring-your-own-thing-api-using-c), you can find helpful hints for implementing this in the NetworkInterface.h file.*
+
+#### Implementing Timer code
+
+In order for the Embedded C library and its MQTT client to have proper connectivity, you will need to provide a Timer implementation that can be used. We have documented this process in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader include file</a>. In addition, you can refer to the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/tree/master/src/Platform/Linux" target="_blank">Linux</a> implementation included with the library.
+
+After implementing your timer code, be sure to then include a link to your file(s) in <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader.h</a>. The MQTT client used by the library will not function without a working timer implementation for your platform.
+
+*TIP: If need should need to accomplish this in [C++ Library](#bring-your-own-thing-api-using-c), you can find helpful hints for implementing this in the Timer.h file.*
+
+### Code examples
+
+If you are using a Linux-based board, the Embedded C library includes working examples for connecting your board, publishing data and subscribing to data from Cayenne. In the next few sections we will discuss these examples and give you some details on how the code uses MQTT to accomplish these tasks.
+
+**Running the examples**
+The Embedded C library includes a Makefile for building the examples. You can do so by switching to the root of the source and running the *Makefile* there. There are three examples included with the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/tree/master/src/Platform/Linux/examples" target="_blank">Linux code</a>:
+
++ **SimplePublish** - Provides an example of connecting to Cayenne and Publishing dummy sensor data. Cayenne will automatically created dashboard Widgets for sensor data received in this manner.
++ **SimpleSubscribe** - Provides an example of Subscribing to MQTT topics, allowing 
++ **CayenneClient** - An all inclusive example that performs both sending and receiving example data using the Cayenne cloud.
+
+In the next few sections we will walk through portions of these examples and cover the following concepts.
+
++ [Connecting your board to Cayenne](#bring-your-own-thing-api-using-embedded-c-code-examples-connect-board-to-cayenne) so that your device shows up in your dashboard.
++ [Sending sensor data to Cayenne](#bring-your-own-thing-api-using-embedded-c-code-examples-send-sensor-data-to-cayenne) so that your dashboard is populated with widgets.
++ [Responding to actuator commands](#bring-your-own-thing-api-using-embedded-c-code-examples-respond-to-actuator-commands) where we add a Button on our dashboard and tell our board to change the state of an actuator.
+
+#### Connect board to Cayenne
+
+The first step in verifying that your board is communicating and working with Cayenne is to establish a connection.
+
+After filling in the network information, we will need to fill in the required MQTT Credentials for our account and this board. Refer to the *Connect your Device* screen on your Cayenne dashboard, copying & pasting your **MQTT Username**, **MQTT Password** and **Client ID** into the example code. The example code includes placeholders for these values as well, so we just need to update them with the values provided to us on the Connect screen.
+
+*TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Connect screen so that the correct values are used for your device.*
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-customize-example-code-file-mqtt-creds.png" width="660" height="395" alt="mbed-customize-example-code-file-mqtt-creds"><br/><br/></p>
+
+#### Send sensor data to Cayenne
+
+#### Respond to actuator commands
 
 
 ## Manually Sending / Verifying data
