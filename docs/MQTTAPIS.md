@@ -456,21 +456,21 @@ The Cayenne Embedded C library will give you everything you need to quickly get 
 
 **Example: using the library**
 
-In this section we will walk through setting up and connecting a [Raspberry Pi 3 Model B](#supported-hardware-single-board-computers-raspberry-pi-model-b) to Cayenne using MQTT. Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the Embedded C library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of a connected Light actuator using our dashboard.
+In this section we will walk through setting up and connecting a [Raspberry Pi 3 Model B](#supported-hardware-single-board-computers-raspberry-pi-model-b) to Cayenne using MQTT. Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the Embedded C library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending example sensor data to our dashboard. Finally, we will examine code that handles reacting to a user changing the status of an example Light actuator widget on our dashboard.
 
 To accomplish this goal, we will cover the following topics:
 
-+ Connect the board
-+ Install compiler
-+ Install Embedded C library
-+ Writing code to support your board/platform
-    + Implement support for your platform/board
-    + Implementing Networking code
-    + Implementing Timer code
-+ Code examples
-  + Connect board to Cayenne
-  + Send sensor data to Cayenne
-  + Respond to actuator commands
++ [Connect the board](#bring-your-own-thing-api-using-embedded-c-connect-the-board)
++ [Install compiler](#bring-your-own-thing-api-using-embedded-c-install-compiler)
++ [Install Embedded C library](#bring-your-own-thing-api-using-embedded-c-install-embedded-c-library)
++ [Writing code to support your board/platform](#bring-your-own-thing-api-using-embedded-c-writing-code-to-support-your-boardplatform)
+    + [Implement support for your platform/board](#bring-your-own-thing-api-using-embedded-c-writing-code-to-support-your-boardplatform-implement-support-for-your-platformboard)
+    + [Implementing Networking code](#bring-your-own-thing-api-using-embedded-c-writing-code-to-support-your-boardplatform-implementing-networking-code)
+    + [Implementing Timer code](#bring-your-own-thing-api-using-embedded-c-writing-code-to-support-your-boardplatform-implementing-timer-code)
++ [Code examples](#bring-your-own-thing-api-using-embedded-c-code-examples)
+  + [Connect board to Cayenne](#bring-your-own-thing-api-using-embedded-c-code-examples-connect-board-to-cayenne)
+  + [Send sensor data to Cayenne](#bring-your-own-thing-api-using-embedded-c-code-examples-send-sensor-data-to-cayenne)
+  + [Respond to actuator commands](#bring-your-own-thing-api-using-embedded-c-code-examples-respond-to-actuator-commands)
 
 **TODO: Walk through video here**
 
@@ -559,11 +559,11 @@ The Embedded C library includes three helpful examples located in the <a href="h
 + [Sending sensor data to Cayenne](#bring-your-own-thing-api-using-embedded-c-code-examples-send-sensor-data-to-cayenne) so that your dashboard is populated with widgets.
 + [Responding to actuator commands](#bring-your-own-thing-api-using-embedded-c-code-examples-respond-to-actuator-commands) where we add a Button on our dashboard and tell our board to change the state of an actuator.
 
-*Examples included with the Linux platform:*
+*Examples included in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/tree/master/src/Platform/Linux/examples" target="_blank">Linux platform code</a>:*
 
-+ **SimplePublish** - Provides an example of connecting to Cayenne and Publishing dummy sensor data. Cayenne will automatically created dashboard Widgets for sensor data received in this manner.
-+ **SimpleSubscribe** - Provides an example of Subscribing to MQTT topics, allowing 
-+ **CayenneClient** - An all inclusive example that performs both sending and receiving example data using the Cayenne cloud.
++ **<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimplePublish.c" target="_blank">SimplePublish</a>** - Provides an example of connecting to Cayenne and Publishing dummy sensor data. Cayenne will automatically created dashboard Widgets for sensor data received in this manner.
++ **<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimpleSubscribe.c" target="_blank">SimpleSubscribe</a>** - Provides an example of Subscribing to MQTT topics, allowing 
++ **<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/CayenneClient.c" target="_blank">CayenneClient</a>** - An all inclusive example that performs both sending and receiving example data using the Cayenne cloud.
 
 #### Connect board to Cayenne
 
@@ -605,7 +605,7 @@ Now that we have our board connected to Cayenne and it has successfully sent tes
 
 For this example, we will setup a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. We will then take a look at the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimpleSubscribe.c" target="_blank">SimpleSubscribe</a>* code example that subscribes to data from Cayenne so that we know when our actuator's state was changed on the dashboard.
 
-#### Add dashboard widget
+##### Add dashboard widget
 
 Let's start by adding a Button widget on the dashboard. From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
@@ -616,14 +616,14 @@ Let's start by adding a Button widget on the dashboard. From the Cayenne dashboa
 3. We’ll be adding this actuator to our custom device, so make sure your device is selected in the **Device** field.
 4. Select 0 from the **Chanenel** field.
 
-  **Note:** The *SimpleSubscribe* code doesn't care what channel our device is connected to, but normally we would want to make sure the Channel selected here matches up with the channel that our code uses later when watching for *COMMAND* messages sent from Cayenne.
+  **Note:** The *SimpleSubscribe* code doesn't care what channel our device is connected to, but normally we would want to make sure the Channel selected here matches up with the channel that our code uses later when watching for *COMMAND* messages sent from Cayenne. Our recommendation is to stick to using *Channel == the Pin your actuator is connected to*.
 
 5. We can specify an **Icon** for our actuator. Say we’re using it to control a Light, so let’s select a Light icon here.
 6. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="dashboard-add-actuator"><br/><br/></p>
 
-#### Write code for the actuator
+##### Write code for the actuator
 
 To properly handle actuator commands with Cayenne, make sure your code covers the following:
 
