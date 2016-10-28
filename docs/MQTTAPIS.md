@@ -567,7 +567,7 @@ The Embedded C library includes three helpful examples located in the <a href="h
 
 #### Connect board to Cayenne
 
-The first step in verifying that your board is communicating and working with Cayenne is to establish a connection. The <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimplePublish.c" target="_blank">SimplePublish</a> example provides the easiest example of doing so. It includes a complete example of connecting to the Cayenne Cloud and sending some simple test data to verify the connection is working. We will use this example for demonstrating connecting your board to Cayenne.
+The first step in verifying that your board is communicating and working with Cayenne is to establish a connection. The *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimplePublish.c" target="_blank">SimplePublish</a>* example provides provides the easiest example of doing so. You can find this example in **Platform/Linux/Examples** folder included with the library. It includes a complete example of connecting to the Cayenne Cloud and sending some simple test data to verify the connection is working. We will use this example for demonstrating connecting your board to Cayenne.
 
 **Adding your MQTT Credentials**
 
@@ -588,6 +588,17 @@ After filling in your MQTT credentials into the code example, we are ready to ru
 **Congrats! Your hardware is now connected to the Cayenne Cloud!**
 
 #### Send sensor data to Cayenne
+
+Once our board is connected to our Cayenne dashboard, we can send some test data and get our very first widget added. For this example, we can continue to refer to the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimplePublish.c" target="_blank">SimplePublish</a>* example. In addition to connecting to our dashboard, this example also includes two examples of sending example data to our dashboard.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-publish-data.png" width="660" height="329" alt="embedded-c-code-publish-data"><br/><br/></p>
+
+Once our board comes online, it will send two test data points to our dashboard, a temperature value and a luminosity value. As soon as Cayenne receives this data, it will automatically add widgets for them! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-dashboard-simple-publish.png" width="660" height="460" alt="embedded-c-dashboard-simple-publish"><br/><br/></p>
+
+**Congrats! Your hardware is now sending sensor data to the Cayenne Cloud!**
+
 
 #### Respond to actuator commands
 
