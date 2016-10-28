@@ -599,8 +599,61 @@ Once our board comes online, it will send two test data points to our dashboard,
 
 **Congrats! Your hardware is now sending sensor data to the Cayenne Cloud!**
 
-
 #### Respond to actuator commands
+
+Now that we have our board connected to Cayenne and it has successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. When users change the state of actuators using the dashboard widgets, Cayenne publishes *COMMAND* messages. By subscring to these messages, we will be informed when our actuator's state was changed. We can then take action in response, such as telling a connected Light to turn on or off.
+
+For this example, we will setup a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. We will then take a look at the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimpleSubscribe.c" target="_blank">SimpleSubscribe</a>* code example that subscribes to data from Cayenne so that we know when our actuator's state was changed on the dashboard.
+
+#### Add dashboard widget
+
+Let's start by adding a Button widget on the dashboard. From the Cayenne dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
+
+1. Choose **Custom Widget** > **Button**.
+2. Give your actuator a name, for example enter “Light” into the **Name** field.
+3. We’ll be adding this actuator to our custom device, so make sure your device is selected in the **Device** field.
+4. Select 0 from the **Chanenel** field.
+
+  **Note:** The *SimpleSubscribe* code doesn't care what channel our device is connected to, but normally we would want to make sure the Channel selected here matches up with the channel that our code uses later when watching for *COMMAND* messages sent from Cayenne.
+
+5. We can specify an **Icon** for our actuator. Say we’re using it to control a Light, so let’s select a Light icon here.
+6. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="dashboard-add-actuator"><br/><br/></p>
+
+#### Write code for the actuator
+
+To properly handle actuator commands with Cayenne, make sure your code covers the following:
+
+1. Subscribe to *COMMAND* messages from Cayenne.
+2. When a new *COMMMAND* arrives, handle changing the status of the actuator connected to the board.
+
+   **Note:** Cayenne will include which Channel was effected as well as what the new state is.
+3. Inform Cayenne that the state change was handled and confirm to Cayenne what the new state is.
+
+   **Note:** It's very important to inform Cayenne that the event was handled. This ensures that the dashboard confirms to the user that the actuator was changed and the dashboard can properly reflect the correct status of the device.
+
+The *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimpleSubscribe.c" target="_blank">SimpleSubscribe</a>* example provides provides the easiest example of reacting to command messages from Cayenne. You can find this example in **Platform/Linux/Examples** folder included with the library. It includes code to listen and react to all *COMMAND* messages received from Cayenne, making it easy for us to quickly test an example of controlling an actuator with the dashboard.
+
+**Adding your MQTT Credentials**
+
+As before with the *SimplePublish* example, we need to fill in our MQTT Credentials into the code for the *SimpleSubscribe* example code. If we fail to do so, our device will not be able to connect to our account. Refer to the *Connect your Device* screen on your Cayenne dashboard, copying & pasting your **MQTT Username**, **MQTT Password** and **Client ID** into the example code provided in *SimplePublish.c*. The example code includes placeholders for these values as well, so we just need to update them with the values provided to us on the Connect screen.
+
+*TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Connect screen so that the correct values are used for your device.*
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
+
+**Compile, Upload and connect to Cayenne**
+
+After filling in your MQTT credentials into the code example, we are ready to run the *SimpleSubscribe* example. The Embedded C library includes a Makefile for building the examples. You can do so by switching to the root directory of the source and running the *Makefile* there. You can then run the *SimpleSubscribe* program. As soon as your device comes online and connects to Cayenne, you can use the Button widget on the dashboard to send your board actuator commands.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-dashboard-simple-subscribe.png" width="660" height="460" alt="embedded-c-dashboard-simple-subscribe"><br/><br/></p>
+
+**Congrats! You can now use the button to send actuator commands to your board.**
 
 
 ## Manually Sending / Verifying data
