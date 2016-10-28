@@ -360,19 +360,26 @@ At a high level, for the library we'll be using, we implement the following task
 
 2. Initialize a TMP36 object from our library with the correct Pin information based on how we connected our sensor.
 
+   The TMP36 library that we're using provides a TMP36 class that includes easy to use functions for reading from our sensor. We create an instance by telling it which pin our sensor is connected to. For this example, our sensor is connected to Pin 5.
+
    <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-2.png" width="660" height="395" alt="mbed-sensor-step-2"><br/><br/></p>
 
 3. Read the sensor's value using the TMP36 object.
 
-   *TIP: The TMP36 library we're using for our sensor allows us to easily read the value for our sensor and convert it to our desired Temperature in Celsius. We'll accomplish both reading & publishing on a single line in the next step - sending the Temperature reading to Cayenne.*
+   The TMP36 library makes reading our sensors value very easy. With a single call, the library will read the sensor's value and convert it into a temperature in Celsius for us.
+
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-read-sensor-value.png" width="660" height="394" alt="tmp 36 read sensor value"><br/><br/></p>
+   
 
 *TIP: You can refer to this <a href="" target="_blank">example file</a> that includes our example code reading and sending our sensor’s data to Cayenne. Note also that there are many ways to read and send sensor data, we’re only showing you one such example here. Depending upon what device you are using and what goals you have in mind, you may choose a very different way.*
 
 #### Send Temperature reading to Cayenne
 
-Once we’ve implemented reading our sensor’s value in our code, we can continue with sending our sensor’s data up to Cayenne. In our code example, we'll do by reading and publishing the sensor's value every few seconds.
+Once we’ve implemented reading our sensor’s value in our code, we can continue with sending our sensor’s data up to Cayenne. This is easily accomplished with a single publish function call provided by the C++ library. Since our sensor is connected to Pin 5, we'll publish the data to MQTT on Channel 5.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-4.png" width="660" height="394" alt="mbed-sensor-step-4"><br/><br/></p>
+*TIP: For more information on MQTT Publishing, you may wish to check out the [MQTT Messaging Topics](#bring-your-own-thing-api-mqtt-messaging-topics) section.*
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-send-sensor-value.png" width="660" height="396" alt="send sensor value"><br/><br/></p>
 
 Once you have written code to handle the TMP36, click on the **Compile** button and download the binary file from mbed. Drag & drop the updated binary file to your device’s folder. Even though we already have a binary file in place in our Nucleo board’s folder, that won’t matter. The Nucleo board will use the newest binary, removing the old file already there. Shortly after placing the updated binary in the shared folder, the Nucleo board will run the program.
 
