@@ -206,9 +206,11 @@ Your actuator will be added to your dashboard and we can now use it to control o
 
 The Cayenne C++ library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C++ language. There are several versions of Cayenne C++ library, from the base library to versions that have been customized for working with specific toolchain/IDE's and supporting specific board types. To see all of the various versions supported, check out the <a href="" target="_blank">Cayenne C++ Github</a>. **TODO: Replace with public link**
 
+**NOTE:** There are many different ways to implement your project using the C++ library, in this section we’ll take you through one such example. If you would like to review an example that includes more information on extending one of our libraries to support a custom board, you may wish to also review the [Embedded C Library](#bring-your-own-thing-api-using-embedded-c) example which covers more on this topic.
+
 **Example: using the library**
 
-There are many different ways to implement your project using the C++ library, in this section we’ll take you through a complete example. We will  walk through setting up and connecting a <a href="https://developer.mbed.org/platforms/ST-Nucleo-F446RE/" target="_blank">Nucleo board with WiFi shield</a>. We will use the <a href="https://www.mbed.com/en/" target="_blank">mbed online IDE</a>, a free online code editor and compiler in which the code is written and compiled within a web browser, and compiled on the cloud using the ARMCC C/C++ compiler. After writing code to connect our board, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of the Nucleo's onboard LED from our dashboard.
+In this section we will  walk through setting up and connecting a <a href="https://developer.mbed.org/platforms/ST-Nucleo-F446RE/" target="_blank">Nucleo board with WiFi shield</a>. We will use the <a href="https://www.mbed.com/en/" target="_blank">mbed online IDE</a>, a free online code editor and compiler in which the code is written and compiled within a web browser, and compiled on the cloud using the ARMCC C/C++ compiler. After writing code to connect our board, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of the Nucleo's onboard LED from our dashboard.
 
 To accomplish this goal, we will cover the following topics:
 
@@ -445,21 +447,33 @@ Once you have written code to handle the actuator, click on the Compile button a
 
 **Congrats! You can now use the button to control the status of the onboard LED.**
 
+
 ## Using Embedded C
 
-**TODO: walkthrough info for this library - example TBD with Camrin**
+The Cayenne Embedded C library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C language. You can find this library, and the example code presented in this section, in our <a href="" target="_blank">Cayenne Embedded C Github</a> repository. **TODO: Replace with public link**
 
-Variation of C++ library walkthrough, still using mbed IDE. Board type here is not important, it won’t be a full walkthrough (too much coding involved).
+**NOTE:** There are many different ways to implement your project using the C library, in this section we’ll take you through one such example. If you would like to review an example of simply putting one of our libraries into use, you may wish to also review the [Cayenne C++ Library](#bring-your-own-thing-api-using-c) example.
 
-Instead of choosing the C++ library, the user will select the generic C library and import it into mbed (same process as C++ example).
+**Example: using the library**
 
-We will then cover code areas that need to be customized/updated in our library to support the user’s chosen board. This will be helpful hints and information, such as discussing the Timer & Networking code and general info on what needs to change there. It will not be a line-by-line walkthrough of code. Basically, we’ll be discussing a high level of the Cayenne team had to do to get our mbed Nucleo library coded up.
+In this section we will  walk through setting up and connecting a [Raspberry Pi 3 Model B](#supported-hardware-single-board-computers-raspberry-pi-model-b). Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the Embedded C library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of a connected Light actuator using our dashboard.
 
-If this is too advanced for the user, they can refer back to the C++ walkthrough. For the advanced user, this is what they’ll need and then we can also end with a reference to the MQTT Messaging Topics section and its API reference.
+To accomplish this goal, we will cover the following topics:
 
-##Manually Sending / Verifying data
++ Connect the board
++ Install compiler
++ Install Embedded C library
++ Add support for board under Linux
+  + Timers?
+  + Networking?
+
+**TODO: Walk through video here**
+
+
+## Manually Sending / Verifying data
 
 **TODO: walkthrough info for manually sending/verifying data with MQTT.fx program**
+
 
 ## Supported Data Types
 
