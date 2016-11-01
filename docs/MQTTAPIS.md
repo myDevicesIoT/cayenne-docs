@@ -54,17 +54,19 @@ To interact with an MQTT broker you’ll need an MQTT client. Here’s a quick l
 
 **Arduino MQTT**
 
-   + <a href="" target="_blank">Github link</a>
+   + <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">Github link</a>
+   
+      **Note:** The Arduino MQTT Library is available directly through the Arduino IDE *Library Manager*. This is the recommended way of obtaining this library. More details on adding this library into your Arduino IDE are available in the [Documentation](#bring-your-own-thing-api-using-arduino-mqtt).
    + [Documentation](#bring-your-own-thing-api-using-arduino-mqtt)
 
 **C++**
 
-   + <a href="" target="_blank">Github link</a>
+   + <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP" target="_blank">Github link</a>
    + [Documentation](#bring-your-own-thing-api-using-c)
 
 **Embedded C**
 
-   + <a href="" target="_blank">Github link</a>
+   + <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C" target="_blank">Github link</a>
    + [Documentation](#bring-your-own-thing-api-using-embedded-c)
 
 ## Using the MQTT Libraries
@@ -152,8 +154,7 @@ Once you have double-checked the sketch file, select **Sketch** > **Upload** to 
 
 Once our board is connected to our Cayenne dashboard, we can send some sensor data and get our very first widget added. For this example, we’ll be using a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36). Begin by making sure that your TMP36 sensor is connected to the Arduino board. If you need help connecting this sensor, you can refer to the [TMP36 Arduino Tutorial](#supported-hardware-sensors-temperature-tmp36-arduino-tutorial). As in the tutorial, our TMP36 sensor will be connected to the Arduino’s Analog Pin 0.
 
-*TIP: You can refer to this <a href="" target="_blank">example file</a> that includes all of the code shown below for reading and sending our sensor’s data to Cayenne.*
-**TODO: need public link**
+*TIP: You can refer to this <a href="https://github.com/myDevicesIoT/cayenne-docs/blob/staging/examples/MQTT_EthernetShieldW5100_with_TMP36/MQTT_EthernetShieldW5100_with_TMP36.ino" target="_blank">example file</a> that includes all of the code used in our example for reading and sending our sensor’s data to Cayenne.*
 
 #### Reading the TMP36 sensor data
 
@@ -209,7 +210,7 @@ Your actuator will be added to your dashboard and we can now use it to control o
 
 ## Using C++
 
-The Cayenne C++ library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C++ language. There are several versions of Cayenne C++ library, from the base library to versions that have been customized for working with specific toolchain/IDE's and supporting specific board types. To see all of the various versions supported, check out the <a href="" target="_blank">Cayenne C++ Github</a>. **TODO: Replace with public link**
+The Cayenne C++ library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C++ language. There are several versions of Cayenne C++ library, from the base library to versions that have been customized for working with specific toolchain/IDE's and supporting specific board types. To see all of the various versions supported, see the README on the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP" target="_blank">Cayenne C++ Github</a>.
 
 **NOTE:** There are many different ways to implement your project using the C++ library, in this section we’ll take you through one such example. If you would like to review an example that includes more information on extending one of our libraries to support a custom board, you may wish to also review the [Embedded C Library](#bring-your-own-thing-api-using-embedded-c) example which covers more on this topic.
 
@@ -271,11 +272,7 @@ The Cayenne C++ Library is a collection of code, support libraries, an MQTT clie
 *TIP: If Cayenne does not currently your board, toolchain/IDE, or you want more advanced guidance on customizing the Cayenne library, see the [Using Embedded C walkthrough](#bring-your-own-thing-api-using-embedded-c) which covers more on these topics.*
 
 
-**TODO: replace mbed repo link with public link once ready**
-
-To begin using this library, visit the <a href="https://developer.mbed.org/teams/myDevicesIoT/" target="_blank">Cayenne mbed repository</a> which contains a list of the various Cayenne MQTT mbed libraries available. For our Nucleo board, we select the **Cayenne-X-NUCLEO-IDW01M1** library from the list. This will open a page on this library, from which we can import the library.
-
-**DEV TODO Reminder: The Connect screen repo link needs to direct the user to a generic C++ repo that has links to all of these library variants + the Readme should guide the user. So in this instance, the Readme needs to have a section with link to the mbed repository since it is hosted external to our repo.**
+To begin using this library, visit the <a href="https://developer.mbed.org/teams/myDevicesIoT/" target="_blank">Cayenne mbed repository</a> which contains a list of the various Cayenne MQTT mbed projects available. For our Nucleo board, we select the **Cayenne-X-NUCLEO-IDW01M1** library from the list. This will open a page on mbed from which we can import it into our compiler.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-MQTT-mbed-libraries.png" width="660" height="395" alt="cayenne-mqtt-mbed-libraries"><br/><br/></p>
 
@@ -363,19 +360,19 @@ At a high level, for the library we'll be using, we implement the following task
 
 1. Include the TMP36 header for our library.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-1.png" width="660" height="395" alt="mbed-sensor-step-1"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-1-zoom.png" width="660" height="472" alt="mbed-sensor-step-1"><br/><br/></p>
 
 2. Initialize a TMP36 object from our library with the correct Pin information based on how we connected our sensor.
 
    The TMP36 library that we're using provides a TMP36 class that includes easy to use functions for reading from our sensor. We create an instance by telling it which pin our sensor is connected to. For this example, our sensor is connected to Pin 5.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-2.png" width="660" height="395" alt="mbed-sensor-step-2"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-2-zoom.png" width="660" height="428" alt="mbed-sensor-step-2"><br/><br/></p>
 
 3. Read the sensor's value using the TMP36 object.
 
    The TMP36 library makes reading our sensors value very easy. With a single call, the library will read the sensor's value and convert it into a temperature in Celsius for us.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-read-sensor-value.png" width="660" height="394" alt="tmp 36 read sensor value"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-read-sensor-value-zoom.png" width="660" height="428" alt="tmp 36 read sensor value"><br/><br/></p>
    
 
 *TIP: You can refer to this <a href="" target="_blank">example file</a> that includes our example code reading and sending our sensor’s data to Cayenne. Note also that there are many ways to read and send sensor data, we’re only showing you one such example here. Depending upon what device you are using and what goals you have in mind, you may choose a very different way.*
@@ -386,7 +383,7 @@ Once we’ve implemented reading our sensor’s value in our code, we can contin
 
 *TIP: For more information on MQTT Publishing, you may wish to check out the [MQTT Messaging Topics](#bring-your-own-thing-api-mqtt-messaging-topics) section.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-send-sensor-value.png" width="660" height="396" alt="send sensor value"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-send-sensor-value-zoom.png" width="660" height="422" alt="send sensor value"><br/><br/></p>
 
 Once you have written code to handle the TMP36, click on the **Compile** button and download the binary file from mbed. Drag & drop the updated binary file to your device’s folder. Even though we already have a binary file in place in our Nucleo board’s folder, that won’t matter. The Nucleo board will use the newest binary, removing the old file already there. Shortly after placing the updated binary in the shared folder, the Nucleo board will run the program.
 
@@ -432,17 +429,25 @@ Cayenne is now setup to send *COMMAND* events to our actuator, but nobody is lis
 At a high level, we must implement the following coding tasks:
 
 1. Add an LED1 object to our code so that we can control it.
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-step-1.png" width="660" height="396" alt="mbed-actuator-step-1"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-step-1-zoom.png" width="650" height="598" alt="mbed-actuator-step-1"><br/><br/></p>
 
 2. Subscribe to the COMMAND messages that Cayenne sends to our LED.
 
-   TIP: Using the Nucleo library, this task is automatically handled. There’s no need for us to subscribe to Command topics. If you want additional information on MQTT Publish and Subscribe related topics, you may wish to refer to the [MQTT Messaging Topics](#bring-your-own-thing-api-mqtt-messaging-topics) section.
+   TIP: Using the Nucleo library, this task is automatically handled. There’s no need for us to subscribe to Command topics.
 
 3. Change the LED’s state based on what Cayenne tells us the new state is.
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-step-3.png" width="660" height="396" alt="mbed-actuator-step-3"><br/><br/></p>
 
-4. Inform Cayenne that the actuator state change has been handled, so that it can properly reflect the status on its dashboard.
-    <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-step-4.png" width="660" height="396" alt="mbed-actuator-step-4"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-set-LED-state-zoom.png" width="639" height="598" alt="set LED state"><br/><br/></p>
+
+4. Publish the updated LED state to Cayenne dashboard.
+
+  **Note:** This ensures that the correct state for our actuator is reflected on the dashboard.
+
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-inform-dashboard-of-LED-state-zoom.png" width="660" height="396" alt="mbed-actuator-inform-dashboard-of-led-state-zoom"><br/><br/></p>
+
+5. Inform Cayenne that the actuator state change has been handled without errors.
+
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-publish-response-zoom.png" width="660" height="430" alt="mbed-actuator-publish-response-zoom"><br/><br/></p>
 
 *TIP: You can refer to the <a href="" target="_blank">example file</a> that includes our example code for controlling this LED actuator on our Nucleo board.*
 
@@ -2221,7 +2226,6 @@ In order to send data, the channel ID needs to be appended to the data topic.
 | v1/**username**/things/**clientID**/data/**channel**     |	X |	X |
 
 The data type and/or unit can be added to prefix the value, allowing the backend to process and display data without the need of configuring the data channel from the dashboard:
-+	(string) type=value
 +	(string) type,unit=value
 
 ### Receive Actuator command
