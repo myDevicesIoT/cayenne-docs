@@ -464,7 +464,7 @@ Once you have written code to handle the actuator, click on the Compile button a
 
 The Cayenne Embedded C library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C language. You can find this library, and the example code presented in this section, in our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C" target="_blank">Cayenne Embedded C Github</a> repository.
 
-**NOTE:** There are many different ways to implement your project using the C library, in this section we’ll take you through one such example by discussing some technical details of writing code to support a Linux-based board. The details of this section are written for a more advanced user who is looking for examples on how to extend the C library to support their board. You may also wish to also review the [Cayenne C++ Library](#bring-your-own-thing-api-using-c) example which covers similar concepts and includes code examples for adding a specific sensor and actuator in your code.
+**NOTE:** There are many different ways to implement your project using the C library, in this section we’ll take you through one such example by discussing some technical details of writing code to support a Linux-based board. The details of this section are written for a more advanced user who is looking for examples on how to extend the C library to support their board. You may also wish to also review the [Cayenne C++ Library](#bring-your-own-thing-api-using-c) example which provides additional focus by covering use of the library with specific hardware.
 
 **Example: using the library**
 
