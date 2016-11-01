@@ -79,5 +79,5 @@ If you need to add additional anchor links to a section in the Docs, use the sam
 
 
 ### I'm ready for my changes to go live!
-So you're ready for your changes to go live? Once we're all up to speed on editing the new Docs setup, we will link all changes directly to this repo. We're giving the auto-update feature a grace period in order to avoid any unwanted or accident changes being published to the live site. In the mean time, contact Jonathan on Skype (jsiderman.mydevices), Slack (@jsiderman) or email (jsiderman@mydevices.com) and the push will happen in no time. 
+So you're ready for your changes to go live? Contact Jonathan on Skype (jsiderman.mydevices), Slack (@jsiderman) or via email (jsiderman@mydevices.com). 
 
