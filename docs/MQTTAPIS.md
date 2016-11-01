@@ -50,23 +50,23 @@ To interact with an MQTT broker you’ll need an MQTT client. Here’s a quick l
 
 ## Libraries
 
-**TODO: All of these need links**
-
 **Arduino MQTT**
 
-   + <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">Github link</a>
-   
-      **Note:** The Arduino MQTT Library is available directly through the Arduino IDE *Library Manager*. This is the recommended way of obtaining this library. More details on adding this library into your Arduino IDE are available in the [Documentation](#bring-your-own-thing-api-using-arduino-mqtt).
+   + The Arduino MQTT Library is available directly through the Arduino IDE *Library Manager*. This is the recommended way of obtaining this library. See [Add MQTT Library to Arduino IDE](#bring-your-own-thing-api-using-arduino-mqtt-add-mqtt-library-to-arduino-ide).
+      + You may also find the library in our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">Arduino MQTT Github</a> repository.
+
    + [Documentation](#bring-your-own-thing-api-using-arduino-mqtt)
 
 **C++**
 
-   + <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP" target="_blank">Github link</a>
+   + Refer to the README located in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP" target="_blank">C++ Github</a> for information on using & obtaining C++ library versions.
+   
+      + **Note:** If you are using the mbed IDE, check out our <a href="https://developer.mbed.org/teams/myDevicesIoT/" target="_blank">Cayenne mbed repository</a>.
    + [Documentation](#bring-your-own-thing-api-using-c)
 
 **Embedded C**
 
-   + <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C" target="_blank">Github link</a>
+   + Refer to the README located in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C" target="_blank">Embedded C Github</a> for information on using & obtaining C++ library versions.
    + [Documentation](#bring-your-own-thing-api-using-embedded-c)
 
 ## Using the MQTT Libraries
@@ -212,7 +212,7 @@ Your actuator will be added to your dashboard and we can now use it to control o
 
 The Cayenne C++ library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C++ language. There are several versions of Cayenne C++ library, from the base library to versions that have been customized for working with specific toolchain/IDE's and supporting specific board types. To see all of the various versions supported, see the README on the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP" target="_blank">Cayenne C++ Github</a>.
 
-**NOTE:** There are many different ways to implement your project using the C++ library, in this section we’ll take you through one such example. If you would like to review an example that includes more information on extending one of our libraries to support a custom board, you may wish to also review the [Embedded C Library](#bring-your-own-thing-api-using-embedded-c) example which covers more on this topic.
+**NOTE:** There are many different ways to implement your project using the C++ library, in this section we’ll take you through one such example. If you would like to review an example that includes more advanced topics related to extending one of our libraries to support a custom board, you may wish to also review the [Embedded C Library](#bring-your-own-thing-api-using-embedded-c) section.
 
 **Example: using the library**
 
@@ -230,6 +230,8 @@ To accomplish this goal, we will cover the following topics:
 + [Control a Light actuator](#bring-your-own-thing-api-using-c-control-a-light-actuator)
 
 **TODO: Walk through video here**
+
+*TIP: You can also refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code covered in this section for Sending sensor data and Controlling an actuator.*
 
 ### Connect the board
 
@@ -330,9 +332,11 @@ After you drag & drop the binary into the device, the Nucleo board will automati
 
 **Congrats! Your hardware is now connected to the Cayenne Cloud!**
 
-###Send sensor data
+### Send sensor data
 
 Once our board is connected to our Cayenne dashboard, we can send some sensor data and get our very first widget added. For this example, we’ll be using a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36). Begin by making sure that your sensor is connected to the board.
+
+*TIP: There are many ways to read and send sensor data, we’re only showing you one such example here. Depending upon what device you are using and what goals you have in mind, you may choose a very different way. As a reminder, you can refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code mentioned in this section.*
 
 #### Import the TMP36 library
 
@@ -374,8 +378,6 @@ At a high level, for the library we'll be using, we implement the following task
 
    <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-read-sensor-value-zoom.png" width="660" height="428" alt="tmp 36 read sensor value"><br/><br/></p>
    
-
-*TIP: You can refer to this <a href="" target="_blank">example file</a> that includes our example code reading and sending our sensor’s data to Cayenne. Note also that there are many ways to read and send sensor data, we’re only showing you one such example here. Depending upon what device you are using and what goals you have in mind, you may choose a very different way.*
 
 #### Send Temperature reading to Cayenne
 
@@ -449,7 +451,7 @@ At a high level, we must implement the following coding tasks:
 
    <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-publish-response-zoom.png" width="660" height="430" alt="mbed-actuator-publish-response-zoom"><br/><br/></p>
 
-*TIP: You can refer to the <a href="" target="_blank">example file</a> that includes our example code for controlling this LED actuator on our Nucleo board.*
+*TIP: As a reminder, you can refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code mentioned in this section.*
 
 Once you have written code to handle the actuator, click on the Compile button and download the binary file from mbed. Drag & drop the updated binary file to your device’s folder. Even though we already have a binary file in place in our Nucleo board’s folder, that won’t matter. The Nucleo board will use the newest binary, removing the old file already there. Shortly after placing the updated binary in the shared folder, the Nucleo board will run the program. As soon as your board comes online, you can use the dashboard to interact with your actuator.
 
