@@ -2214,6 +2214,7 @@ System information is very basic information that may change very rarely over th
 | v1/**username**/things/**clientID**/sys/cpu/speed |	X |	X |
 
 A string payload for each topic is expected:
+
 + (string) Device Model, eg. “Arduino Uno”
 + (string) Device Version, eg. “1.0”
 + (string) Device CPU Model, eg. “ATMega328”
@@ -2228,6 +2229,7 @@ In order to send data, the channel ID needs to be appended to the data topic.
 | v1/**username**/things/**clientID**/data/**channel**     |	X |	X |
 
 The data type and/or unit can be added to prefix the value, allowing the backend to process and display data without the need of configuring the data channel from the dashboard:
+
 +	(string) type,unit=value
 
 ### Receive Actuator command
@@ -2239,6 +2241,7 @@ In order to receive a command for a given data channel, the device must subscrib
 | v1/**username**/things/**clientID**/cmd/**channel**     |	  |	X |
 
 Payload will contain a command sequence number followed by the value. The Developer is responsible for managing the value format.
+
 +	(string) seq,value
 
 ### Send command response
@@ -2250,6 +2253,7 @@ In order to let the system know of an actuator command, the device must publish 
 | v1/**username**/things/**clientID**/response     |	X |	  |
 
 Payload must contain the status “ok” or “error”, as well as the command sequence number and an optional message that will be displayed to the user in case of error.
+
 +	(string) ok,seq
 +	(string) error,seq=message
 
