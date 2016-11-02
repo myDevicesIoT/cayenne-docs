@@ -645,9 +645,9 @@ To properly handle actuator commands with Cayenne, make sure your code covers th
 
    **Note:** Cayenne will inform the listener which Channel was effected as well as what the new state is.
 
-3. Inform Cayenne what the correct current status is.
+3. After changing (or attempting) to change the actuator state, inform Cayenne what the current status now is.
 
-   **Note:** It's very important to inform Cayenne that the event was handled. This ensures that the dashboard confirms to the user that the actuator was changed and the dashboard can properly reflect the correct state of the device.
+   **Note:** It's very important to inform Cayenne what the correct state is. This ensures that the dashboard properly reflects the correct current state of the device.
 
 4. Inform Cayenne whether the event was handled OK or had an Error.
 
@@ -686,7 +686,7 @@ For the purposes of our example we will make use of <a href="http://www.mqttfx.o
 
 ### Install MQTT.fx
 
-To begin using MQTT.fx, we must download and install it. Doing so is easy and straight forward. Simply visit the <a href="http://mqttfx.jfx4ee.org/index.php/download" target="_blank">MQTT.fx download page</a>. Download and install the correct version for the Operating System that you are using. Once installed, launch the MQTT.fx client.
+To begin using MQTT.fx, we must download and install it. Doing so is easy and straight forward. Simply visit the <a href="http://mqttfx.jfx4ee.org/index.php/download" target="_blank">MQTT.fx download page</a>. Download and install the correct version for the Operating System that you are using. Once installed, launch the MQTT.fx client to get started.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-1-initial-launch.png" width="660" height="500" alt="mqtt-fx-1-initial-launch"><br/><br/></p>
 
@@ -694,7 +694,7 @@ To begin using MQTT.fx, we must download and install it. Doing so is easy and st
 
 In order to connect to the Cayenne Cloud, you will need to setup a **Connection Profile** in MQTT.fx. To do so, click on the **cogwheel** icon or select **Extras** > **Edit Connection Profiles** from the menu. The *Edit Connection Profiles* screen appears. From this screen you can enter in all the required information needed to complete a profile for connecting to Cayenne.
 
-All of the required information we need can be found on the Cayenne dashboard’s Connect screen. Refer to the Connect screen and the informaiton below to complete creating your connection profile to Cayenne.
+*TIP: All of the required information we need can be found on the Cayenne dashboard’s Connect screen. Refer to the Connect screen and the informaiton below to complete creating your connection profile to Cayenne.*
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
 
@@ -722,15 +722,15 @@ Now that our profile is setup, we can connect to Cayenne. To do so, click on the
 
 ### Send sensor data to Cayenne
 
-Now that we have a connection to the Cayenne MQTT server, let's put our connection to use by simulating sending sensor data to our dashboard. For our example, we will simulate having a Temperature sensor connected by publishing a sensor reading up to our dashboard. To do this, switch to MQTT.fx and make sure the *Publish* tab is selected. From here we can enter in the MQTT details to publish our sensor's data.
+Now that we have a connection to the Cayenne MQTT server, let's put our connection to use by simulating sending sensor data to our dashboard. For our example, we will simulate having a Temperature sensor connected by publishing a sensor reading up to our dashboard. To do this, switch to MQTT.fx and make sure the *Publish* tab is selected. From here we can enter in the MQTT details to publish sample  sensor data to Cayenne.
 
-To publish sensor data to Cayenne using MQTT, we refer to the [MQTT Messaging Topics - Send sensor data](#bring-your-own-thing-api-mqtt-messaging-topics-send-sensor-data) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Sending sensor data expects the following:
+To publish sensor data to Cayenne using MQTT, we refer to the [MQTT Messaging Topics - Send sensor data](#bring-your-own-thing-api-mqtt-messaging-topics-send-sensor-data) section of the docs. There, we find the details on which MQTT call to make. According to the docs, Sending sensor data expects:
 
 ```
 v1/username/things/clientID/data/channel
 ```
 
-We then substitute in the values for our account, board and sensor into this string.
+We then substitute in the values for our account, board and sensor.
 
 + Replace **username** with the **MQTT Username** for your account.
 + Replace **clientID** with the **Client ID** for your board.
@@ -743,19 +743,21 @@ We then substitute in the values for our account, board and sensor into this str
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-screen.png" width="660" height="394" alt="api-configure-screen"><br/><br/></p>
 
 
-Next, we need to send some actual data. According to the docs, we need to send this in the following form:
+Next, we need to send some actual data. According to the documentation, we need to send this in the following form:
 
 ```
 type,unit=value
 ```
 
-We want to send Temperature data, so we can refer to the [Supported Data Types](#bring-your-own-thing-api-supported-data-types) to determine what values to put here. For our example, let's assume that we want to send our temperature in Celsius. We'll use a sample sensor data, say 20.7 Celsius to be sent to Cayenne. With this in mind, and after examining the chart for the Temperature data type, we determine the following values should be used:
+The Cayenne documentation provides a complete list of [Supported Data Types](#bring-your-own-thing-api-supported-data-types) that can be referred to when you need to know what details to put here. We want to send Temperature data, so we find **Temperature** in the supported data types section. For our example, let's assume that we want to send our temperature in Celsius. We'll use a sample sensor data, say 20.7 Celsius to be sent to Cayenne. With this in mind, and after examining the chart for the Temperature data type, we determine the following values should be used:
 
 + **Type (Temperature):** temp
 + **Unit (Celsius):** c
 + **Value:** 20.7
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-8-send-temp-sensor-data.png" width="660" height="498" alt="mqtt-fx-8-send-temp-sensor-data"><br/><br/></p>
+
+*TIP: If you want the Cayenne Cloud to retain the last published value for a sensor, be sure to click on the **Retained** button in MQTT.fx. Without this, you may find that your widget disappear when you refresh the page.*
 
 After entering in the MQTT details for publishing our sample sensor data, click on the **Publish** button to send the data to Cayenne. Cayenne will receive this data and automatically add a widget for it! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
@@ -765,9 +767,9 @@ After entering in the MQTT details for publishing our sample sensor data, click 
 
 ### Control a Light actuator
 
-Now that we have our connection to Cayenne and  successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. When users change the state of actuators using the dashboard widgets, Cayenne publishes *COMMAND* messages. By subscring to these messages, we will be informed when our actuator's state was changed.
+Now that we have our connection to Cayenne and  successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. When users change the state of actuators using the dashboard widgets, Cayenne publishes *COMMAND* messages. By subscring to these messages, you will be informed when our actuator's state was changed.
 
-For this example, we will setup a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. We will then cover the steps that Cayenne wants well behaved clients to perform when interacting with actuators via MQTT.
+For this example, we will setup a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. In doing so, we will also cover the steps that Cayenne expects well behaved clients to perform when interacting with actuators via MQTT.
 
 #### Add dashboard widget
 
@@ -788,15 +790,15 @@ Let's start by adding a Button widget on the dashboard. From the Cayenne dashboa
 
 #### Testing the actuator
 
-In order to test out our actuator, it first helps to understand a bit about how Cyanne expects a well behaved client to react to actuator commands it sends. Cayenne expects a client to perform the following tasks:
+In order to test out our actuator, it first helps to understand a bit about how Cyanne expects a well behaved client to react to actuator commands. Cayenne expects a client to:
 
 1. Subscribe to *COMMAND* messages from Cayenne.
 2. When a new *COMMAND* arrives, handle changing the status of the actuator connected to the board.
 
    **Note:** Cayenne will inform the listener which Channel was effected as well as what the new state is.
-3. Inform Cayenne what the correct current status is.
+3. After changing (or attempting) to change the actuator state, inform Cayenne what the current status now is.
 
-   **Note:** It's very important to inform Cayenne that the event was handled. This ensures that the dashboard confirms to the user that the actuator was changed and the dashboard can properly reflect the correct state of the device.
+   **Note:** It's very important to inform Cayenne what the correct state is. This ensures that the dashboard properly reflects the correct current state of the device.
 
 4. Inform Cayenne whether the event was handled OK or had an Error.
 
@@ -806,13 +808,13 @@ With that background in place, let's go over performing each of these steps usin
 
 ##### Receive Actuator command
 
-In order to receive the *Command* messages that Cayenne sends for changes to our actuator, we must first Subscribe to it. To subscribe to actuator command messages, we refer to the [MQTT Messaging Topics - Receive actuator command](#bring-your-own-thing-api-mqtt-messaging-topics-receive-actuator-command) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Subscribing to actuator commands expects the following:
+In order to receive the *COMMAND* messages that Cayenne sends for changes to our actuator, we must first Subscribe to them. To subscribe to actuator command messages, we refer to the [MQTT Messaging Topics - Receive actuator command](#bring-your-own-thing-api-mqtt-messaging-topics-receive-actuator-command) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Subscribing to actuator commands expects:
 
 ```
 v1/username/things/clientID/cmd/channel
 ```
 
-We then substitute in the values for our account, board and actuator into this string.
+We then substitute in the values for our account, board and actuator.
 
 + Replace **username** with the **MQTT Username** for your account.
 + Replace **clientID** with the **Client ID** for your board.
@@ -822,38 +824,38 @@ We then substitute in the values for our account, board and actuator into this s
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-11-subscribe-command-messages.png" width="660" height="499" alt="mqtt-fx-11-subscribe-command-messages"><br/><br/></p>
 
-After entering in the details needed to subscribe to the Command messages for our actuator, click on the **Publish** button in MQTT.fx. We are now subscribe to the command messages that Cayenne sends when our actuator state is changed.
+After entering in the details needed to subscribe to the Command messages for our actuator, click on the **Publish** button in MQTT.fx. We are now subscribed to the *COMMAND* messages that Cayenne sends when our actuator state is changed.
 
 ##### Send Actuator Updated Value
 
-Now that we'll be notified when our actuator's state is changed on the dashboard, let's try it out. Switch to the Cayenne dashboard and click on the button for your light actuator. Cayenne issues a *Command* to our board and the dashboard widget will enter a *Waiting* state as it awaits confirmation from the board that the actuator's state was changed.
+Now that we'll be notified when our actuator's state is changed on the dashboard, let's try it out. Using the Cayenne dashboard, click on the Button for your Light actuator. Cayenne publishes a *COMMAND* message and the dashboard widget will enter a *Waiting* state as it awaits confirmation that the actuator's state was changed.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-actuator-waiting.png" width="660" height="395" alt="actuator waiting"><br/><br/></p>
 
 Examining MQTT.fx, we can see the Command message arrive from Cayenne. The message from Cayenne includes two parts:
 
-1. A *Sequence* identifier. This is a randomly generated string that is used by the Cayenne Cloud to tie which widget this command is associated with. Keep this value in mind for now, we will need this identifier in the next step, when we send a command response back to Cayenne.
+1. A **Sequence** identifier. This is a randomly generated string that is used by the Cayenne Cloud to tie which widget this command is associated with. Keep this value in mind for now as we will need this identifier in the next step when we send a command response back to Cayenne.
 
-2. A *Value*. This indicates what the new value of the actuator should be. In the case of our Light actuator, Cayenne is informing us that the new state should be 1 - "On".
+2. A **Value**. This indicates what the new value of the actuator should be. In the case of our Light actuator, Cayenne is informing us that the new state should be 1 - "On".
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-12b-command-message-from-cayenne.png" width="660" height="499" alt="mqtt-fx-12b-command-message-from-cayenne"><br/><br/></p>
 
-Normally, at this point we would handle actually changing the state of our actuator. For example, our code would interact with the actuator and change its state. Since we're just faking some data, there's nothing for us to actually change, but we do need to inform Cayenne that the actuator's state was changed. We do so by sending an updated value to Cayenne for what the updated state is. Cayenne wanted us to turn on the Light, so let's tell Cayenne that's what happened.
+Normally, at this point we would handle actually changing the state of our actuator. For example, our code would interact with the actuator and change its state. Since we're just faking some data, there's nothing for us to actually change, but we do need to inform Cayenne that the actuator's state was changed. We do so by sending a value to Cayenne for what the new state is. Cayenne wanted us to turn on the Light, so let's simply tell Cayenne that's what happened.
 
-To tell Cayenne what the updated value is, we refer to the [Send Actuator Updated Value](#http://www.cayenne-mydevices.com/CayenneStaging/docs/#bring-your-own-thing-api-mqtt-messaging-topics-send-actuator-updated-value) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Cayenne expects one of the following:
+To tell Cayenne what the updated value is, we refer to the [Send Actuator Updated Value](#bring-your-own-thing-api-mqtt-messaging-topics-send-actuator-updated-value) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Cayenne expects one of the following:
 
 ```
 v1/username/things/clientID/digital/channel
 v1/username/things/clientID/analog/channel
 ```
 
-In our case, we're using a Digital (0/1) actuator, so we use the first form. Once again, we then substitute in the values for our account, board and actuator into this string.
+In our case, we're using a Digital (0/1) actuator, so we use the first form. Once again, we then substitute in the values for our account, board and actuator.
 
 + Replace **username** with the **MQTT Username** for your account.
 + Replace **clientID** with the **Client ID** for your board.
 + Replace **channel** with the appropriate channel that this actuator is connected to. For this example, we chose Channel 1 for our Light actuator.
 
-Next, we need to inform Cayenne what the actual value for our actuator is. Cayenne asked for the new status to be 1 (meaning On), so we'll respond with 1.
+Next, we need to inform Cayenne what the actual value for our actuator is. Cayenne asked for the new status to be 1 (meaning On), so we'll give it the value of **1**.
 
 **Note:** Be sure to inform Cayenne what the **actual** status of the actuator is. For example, if changing the actuator state failed, be sure to tell Cayenne what the correct current value is. Cayenne needs to receive the current value so that the dashboard correctly informs the user what the actual state of their device is.
 
@@ -865,17 +867,16 @@ Once the dashboard receives an updated value for the widget, our Light actuator 
 
 ##### Send command response
 
-The final step in completing our actuator change is to inform Cayenne as to whether the actuator state change was handled OK, or if there was a problem that needs to be displayed to the user. This gives Cayenne an opportunity to display an error message to the user if needed. To send this to Cayenne, we use the [Send Command response](#bring-your-own-thing-api-mqtt-messaging-topics-send-command-response) call. Examining the docs for this call, we see Cayenne wants the following:
+The final step in completing our actuator change is to inform Cayenne as to whether the actuator state change was handled OK, or if there was a problem. This gives Cayenne an opportunity to display an error message to the user if needed. To send this to Cayenne, we use the [Send Command response](#bring-your-own-thing-api-mqtt-messaging-topics-send-command-response) call. Examining the docs for this call, we see Cayenne expects:
 
 ```
 v1/username/things/clientID/response
 ```
 
-Once again, we then substitute in the values for our account, board and actuator into this string.
+Once again, we then substitute in the values for our account and board.
 
 + Replace **username** with the **MQTT Username** for your account.
 + Replace **clientID** with the **Client ID** for your board.
-+ Replace **channel** with the appropriate channel that this actuator is connected to. For this example, we chose Channel 1 for our Light actuator.
 
 Next, we need to tell Cayenne if there was an error or if things were handled OK. According to the docs, we need to send this in one of the following forms (depending on OK vs Error):
 
@@ -884,11 +885,11 @@ ok,seq
 error,seq=message
 ```
 
-Given that we're use a make believe actuator, changing our actuator's state can't fail. So in this case let's just tell Cayenene that everything was handled without incident. We need to provide the following two pieces of information for this:
+We're use a make believe actuator, so changing our actuator's state can't fail. So in this case let's just tell Cayenene that everything was handled without incident. We need to provide the following two pieces of information for this:
 
-1. The string value "ok". This lets Cayenne know things are handled OK, no errors to display to the user on the dashboard.
+1. The string **Value** "ok". This lets Cayenne know things were handled OK, no errors to display to the user on the dashboard.
 
-2. The *Sequence* identifier. Remember, this value was provided to use when we received the *Command* message from Cayenne. We provide it here so that Cayenne knows what we're responding to.
+2. The **Sequence** identifier. If you'll recall, this value was provided to us when we received the *COMMAND* message from Cayenne. We provide it here so that Cayenne knows what we're responding to.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-14-response-to-cayenne.png" width="660" height="497" alt="mqtt-fx-14-response-to-cayenne"><br/><br/></p>
 
@@ -2456,7 +2457,7 @@ In order to receive a command for a given data channel, the device must subscrib
 
 | Topic	| PUB |	SUB |
 |-------|-------------------------------------------|---|---|
-| v1/**username**/things/**clientID**/cmd/**channel**     |	  |	X |
+| v1/**username**/things/**clientID**/cmd/**channel**     |	&nbsp;  |	X |
 
 Payload will contain a command sequence number followed by the value. The Developer is responsible for managing the value format.
 
@@ -2468,8 +2469,8 @@ n order to let the dashboard know of the current status of an actuator, the devi
 
 | Topic	| PUB |	SUB |
 |-------|-------------------------------------------|---|---|
-| v1/**username**/things/**clientID**/digital/**channel**     |	X |	  |
-| v1/**username**/things/**clientID**/analog/**channel**     |	X |	  |
+| v1/**username**/things/**clientID**/digital/**channel**     |	X |	&nbsp;  |
+| v1/**username**/things/**clientID**/analog/**channel**     |	X |	&nbsp;  |
 
 Payload must contain simply the true binary value of a digital actuator (1/0) or numerical value for analog actuators (slider widgets).
 
@@ -2482,7 +2483,7 @@ In order to let the system know of an actuator command, the device must publish 
 
 | Topic	| PUB |	SUB |
 |-------|-------------------------------------------|---|---|
-| v1/**username**/things/**clientID**/response     |	X |	  |
+| v1/**username**/things/**clientID**/response     |	X |	&nbsp;  |
 
 Payload must contain the status “ok” or “error”, as well as the command sequence number and an optional message that will be displayed to the user in case of error.
 
@@ -2495,9 +2496,9 @@ When adding a widget from the dashboard, the backend will publish activation on 
 
 | Topic	| PUB |	SUB |
 |-------|-------------------------------------------|---|---|
-| v1/**username**/things/**clientID**/conf/**channel**     |	  |	X |
-| v1/**username**/things/**clientID**/digital-conf/**channel**     |	  |	X |
-| v1/**username**/things/**clientID**/analog-conf/**channel**     |	  |	X |
+| v1/**username**/things/**clientID**/conf/**channel**     |	&nbsp;  |	X |
+| v1/**username**/things/**clientID**/digital-conf/**channel**     |	&nbsp;  |	X |
+| v1/**username**/things/**clientID**/analog-conf/**channel**     |	&nbsp;  |	X |
 
 Payload will simply contain “on” or “off”
 
