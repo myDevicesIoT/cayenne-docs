@@ -35,7 +35,7 @@ If you are integrating Cayenne into your existing or custom program, you may wis
 
 If you fall into this camp, you can jump straight to the [MQTT Messaging Topics](#bring-your-own-thing-api-mqtt-messaging-topics) section where you’ll find the API details for MQTT, including the raw MQTT details on topics and behavior. We have also prepared a tutorial for using an MQTT client to manually publish and subscribe data so that you can test out using MQTT with Cayenne.
 
-+ [Manually Sending / Verifying data](#bring-your-own-thing-api-manually-sending-verifying-data) - This will walk you through using the MQTT.fx client to manually publish and subscribe to Cayenne. This can help you test out using MQTT with Cayenne.
++ [Manually Sending / Verifying data](#bring-your-own-thing-api-manually-sending-verifying-data) - This will walk you through using the MQTT.fx client to manually publish and subscribe to Cayenne. This can help you test out using MQTT with Cayenne without having to connect an actual board or sensors. If you are using the MQTT API directly, this is a great way to become familiar with doing so.
 
 ## MQTT Clients
 To interact with an MQTT broker you’ll need an MQTT client. Here’s a quick list of MQTT clients and resources:
