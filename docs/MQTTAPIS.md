@@ -749,7 +749,7 @@ Next, we need to send some actual data. According to the documentation, we need 
 type,unit=value
 ```
 
-The Cayenne documentation provides a complete list of [Supported Data Types](#bring-your-own-thing-api-supported-data-types) that can be referred to when you need to know what details to put here. We want to send Temperature data, so we find **Temperature** in the supported data types section. For our example, let's assume that we want to send our temperature in Celsius. We'll use a sample sensor data, say 20.7 Celsius to be sent to Cayenne. With this in mind, and after examining the chart for the Temperature data type, we determine the following values should be used:
+The Cayenne documentation provides a complete list of [Supported Data Types](#bring-your-own-thing-api-supported-data-types) that can be referred to when you need to know what details to put here. We want to send Temperature data, so we find **Temperature** in the supported data types section. For our example, let's assume that we want to send our temperature in Celsius. We'll use a sample sensor value, say 20.7 Celsius to be sent to Cayenne. With this in mind, and after examining the chart for the Temperature data type, we determine the following values should be used:
 
 + **Type (Temperature):** temp
 + **Unit (Celsius):** c
@@ -757,7 +757,7 @@ The Cayenne documentation provides a complete list of [Supported Data Types](#br
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-8-send-temp-sensor-data.png" width="660" height="498" alt="mqtt-fx-8-send-temp-sensor-data"><br/><br/></p>
 
-*TIP: If you want the Cayenne Cloud to retain the last published value for a sensor, be sure to click on the **Retained** button in MQTT.fx. Without this, you may find that your widget disappear when you refresh the page.*
+*TIP: If you want the Cayenne Cloud to retain the last published value for a sensor, be sure to click on the **Retained** button in MQTT.fx. Without this, you may find that your widget disappears when you refresh the page.*
 
 After entering in the MQTT details for publishing our sample sensor data, click on the **Publish** button to send the data to Cayenne. Cayenne will receive this data and automatically add a widget for it! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
@@ -818,7 +818,7 @@ We then substitute in the values for our account, board and actuator.
 
 + Replace **username** with the **MQTT Username** for your account.
 + Replace **clientID** with the **Client ID** for your board.
-+ Replace **channel** with the appropriate channel that this actuator is connected to. For this example, we chose Channel 1 for our Light actuator.
++ Replace **channel** with the appropriate channel that this actuator is connected to. For this example, we've already chosen Channel 1 when our Light actuator widget was setup.
 
 *TIP: For the purposes of testing with MQTT, you could also use the wildcard **#** which would subscribe to all channels. Cayenne supports all of the usually filtering and control from MQTT that you'd expect. But since we know the specific Channel that we want to subscribe to in our example, we'll use that.*
 
