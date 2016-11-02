@@ -216,7 +216,7 @@ The Cayenne C++ library will give you everything you need to quickly get your bo
 
 **Example: using the library**
 
-In this section we will  walk through setting up and connecting a <a href="https://developer.mbed.org/platforms/ST-Nucleo-F446RE/" target="_blank">Nucleo board with WiFi shield</a>. We will use the <a href="https://www.mbed.com/en/" target="_blank">mbed online IDE</a>, a free online code editor and compiler in which the code is written and compiled within a web browser, and compiled on the cloud using the ARMCC C/C++ compiler. After writing code to connect our board, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of the Nucleo's onboard LED from our dashboard.
+In this section we will walk through setting up and connecting a <a href="https://developer.mbed.org/platforms/ST-Nucleo-F446RE/" target="_blank">Nucleo board with WiFi shield</a>. We will use the <a href="https://www.mbed.com/en/" target="_blank">mbed online IDE</a>, a free online code editor and compiler in which the code is written and compiled within a web browser, and compiled on the cloud using the ARMCC C/C++ compiler. After writing code to connect our board, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of the Nucleo's onboard LED from our dashboard.
 
 To accomplish this goal, we will cover the following topics:
 
@@ -673,8 +673,146 @@ After filling in your MQTT credentials into the code example, we are ready to ru
 
 ## Manually Sending / Verifying data
 
-**TODO: walkthrough info for manually sending/verifying data with MQTT.fx program**
+This section will walk you through using raw MQTT calls to manually publish and subscribe to the Cayenne Cloud. This can help you test out using MQTT with Cayenne. We will walk through an example of faking a board connecting to Cayenne, publishing temperature data to our dashboard and finally by adding a Light actuator and subscribing to its messages sent by our Cayenne dashboard.
 
+For the purposes of our example we will make use of <a href="http://www.mqttfx.org/" target="_blank">MQTT.fx</a>, a JavaFX based MQTT client.
+
+**TODO: Walk through video here**
+
+### Install MQTT.fx
+
+To begin using MQTT.fx, we must download and install it. Doing so is easy and straight forward. Simply visit the <a href="http://mqttfx.jfx4ee.org/index.php/download" target="_blank">MQTT.fx download page</a>. Download and install the correct version for the Operating System that you are using. Once installed, launch the MQTT.fx client.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-1-initial-launch.png" width="660" height="500" alt="mqtt-fx-1-initial-launch"><br/><br/></p>
+
+### Add Connection Profile
+
+In order to connect to the Cayenne Cloud, you will need to setup a **Connection Profile** in MQTT.fx. To do so, click on the **cogwheel** icon or select **Extras** > **Edit Connection Profiles** from the menu. The *Edit Connection Profiles* screen appears. From this screen you can enter in all the required information needed to complete a profile for connecting to Cayenne.
+
+All of the required information we need can be found on the Cayenne dashboard’s Connect screen. Refer to the Connect screen and the informaiton below to complete creating your connection profile to Cayenne.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
+
+1. Give the profile a name, such as CayenneMQTT, in the **Profile Name** field.
+2. Copy & paste the **MQTT Server** URL from the Connect screen into the **Broker Address** field.
+3. Leave the **Broker Port** at its default of 1883.
+4. Copy & paste the **CLIENT ID** field from the Connect screen into the **Client ID** field.
+5. On the *User Credentials* tab, copy & paste **MQTT Username** from the Connect screen into the **User Name** field.
+6. Also on the *User Credentials* tab, copy & paste **MQTT Password** from the Connect screen into the **Password** field.
+7. The default values for fields in the other tabs are OK to leave as is. Click the **OK** button to save our profile.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-2-Connection-Profile.png" width="660" height="483" alt="mqtt-fx-2-connection-profile"><br/><br/></p>
+
+We can now make use of our profile to connect to the Cayenne MQTT server and test out publishing and subscribing to data.
+
+### Connect board to Cayenne
+
+Now that our profile is setup, we can connect to Cayenne. To do so, click on the **Connect** button. This will establish a connection to Cayenne and it will also mimic our board coming online. Switching back to examining our browser, you'll find that the Connect screen will disappear and the default dashboard for our device will appear.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-3-profile-created.png" width="660" height="499" alt="mqtt-fx-3-profile-created"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-5-device-dashboard.png" width="660" height="395" alt="mqtt-fx-5-device-dashboard"><br/><br/></p>
+
+**Congrats! You are now connected to the Cayenne cloud using MQTT.**
+
+### Send sensor data to Cayenne
+
+Now that we have a connection to the Cayenne MQTT server, let's put our connection to use by simulating sending sensor data to our dashboard. For our example, we will simulate having a Temperature sensor connected by publishing a sensor reading up to our dashboard. To do this, switch to MQTT.fx and make sure the *Publish* tab is selected. From here we can enter in the MQTT details to publish our sensor's data.
+
+To publish sensor data to Cayenne using MQTT, we must refer to the [MQTT Messaging Topics - Send sensor data](#bring-your-own-thing-api-mqtt-messaging-topics-send-sensor-data) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Sending sensor data expects the following:
+
+```
+v1/username/things/clientID/data/channel
+```
+
+We then substitute in the values for our account, board and sensor into this string.
+
++ Replace **username** with the **MQTT Username** for your account.
++ Replace **clientID** with the **Client ID** for your board.
++ Replace **channel** with the appropriate channel that this sensor is connected to. For this example, we'll assume that we have a temperature sensor connected and using Channel 0.
+
+*TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the **cogwheel** menu for your board and then the **Configure** option. In the configuration screen that appears, you'll find the values that you need.*
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-screen.png" width="660" height="394" alt="api-configure-screen"><br/><br/></p>
+
+
+Next, we need to send some actual data. According to the docs, we need to send this in the following form:
+
+```
+type,unit=value
+```
+
+We want to send Temperature data, so we can refer to the [Supported Data Types](#bring-your-own-thing-api-supported-data-types) to determine what values to put here. For our example, let's assume that we want to send our temperature in Celsius. We'll use a sample sensor data, say 20.7 Celsius to be sent to Cayenne. With this in mind, and after examining the chart for the Temperature data type, we determine the following values should be used:
+
++ **Type (Temperature):** temp
++ **Unit (Celsius):** c
++ **Value:** 20.7
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-8-send-temp-sensor-data.png" width="660" height="498" alt="mqtt-fx-8-send-temp-sensor-data"><br/><br/></p>
+
+After entering in the MQTT details for publishing our sample sensor data, click on the **Publish** button to send the data to Cayenne. Cayenne will receive this data and automatically add a widget for it! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-9-temp-widget-created.png" width="660" height="395" alt="mqtt-fx-9-temp-widget-created"><br/><br/></p>
+
+**Congrats! You are now sending data to the Cayenne Cloud!**
+
+### Control a Light actuator
+
+Now that we have our connection to Cayenne and  successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. When users change the state of actuators using the dashboard widgets, Cayenne publishes *COMMAND* messages. By subscring to these messages, we will be informed when our actuator's state was changed.
+
+For this example, we will setup a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. We will then cover the steps that Cayenne wants well behaved clients to perform when interacting with actuators via MQTT.
+
+#### Add dashboard widget
+
+Let's start by adding a Button widget on the dashboard. From the Cayenne dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
+
+1. Choose **Custom Widget** > **Button**.
+2. Give your actuator a name, for example enter “Test Light” into the **Name** field.
+3. We’ll be adding this actuator to our custom device, so make sure your device is selected in the **Device** field.
+4. Select 1 from the **Channel** field.
+5. We can specify an **Icon** for our actuator. Say we’re using it to control a Light, so let’s select a Light icon here.
+6. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-10-actuator-settings.png" width="660" height="395" alt="mqtt-fx-10-actuator-settings"><br/><br/></p>
+
+#### Testing the actuator
+
+In order to test out our actuator, it first helps to understand a bit about how Cyanne expects a well behaved client to react to actuator commands it sends. Cayenne expects a client to perform the following tasks:
+
+1. Subscribe to *COMMAND* messages from Cayenne.
+2. When a new *COMMAND* arrives, handle changing the status of the actuator connected to the board.
+
+   **Note:** Cayenne will inform the listener which Channel was effected as well as what the new state is.
+3. Inform Cayenne that the state change was handled and confirm to Cayenne what the new state is.
+
+   **Note:** It's very important to inform Cayenne that the event was handled. This ensures that the dashboard confirms to the user that the actuator was changed and the dashboard can properly reflect the correct status of the device.
+
+With that background in place, let's go over performing each of these steps using MQTT.fx.
+
+##### Subscribe to Command messages
+
+todo
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-11-subscribe-command-messages.png" width="660" height="499" alt="mqtt-fx-11-subscribe-command-messages"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-12-command-message-from-cayenne.png" width="660" height="499" alt="mqtt-fx-12-command-message-from-cayenne"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-13-inform-cayenne-actuator-state.png" width="660" height="499" alt="mqtt-fx-13-inform-cayenne-actuator-state"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-14-response-to-cayenne.png" width="660" height="497" alt="mqtt-fx-14-response-to-cayenne"><br/><br/></p>
+
+
+##### Change status of the actuator
+
+todo
+
+##### Subscribe to Command messages
+
+todo
 
 ## Supported Data Types
 
