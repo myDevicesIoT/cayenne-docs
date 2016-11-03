@@ -476,261 +476,220 @@ Once you have written code to handle the actuator, click on the Compile button a
 
 ## Using C++
 
-The Cayenne C++ library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C++ language. There are several versions of Cayenne C++ library, from the base library to versions that have been customized for working with specific toolchain/IDE's and supporting specific board types. To see all of the various versions supported, see the README on the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP" target="_blank">Cayenne C++ Github</a>.
+The Cayenne C++ library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C++ language. You can find this library, and the example code presented in this section, in our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP" target="_blank">Cayenne C++ Github</a> repository.
 
-**NOTE:** There are many different ways to implement your project using the C++ library, in this section we’ll take you through one such example. If you would like to review an example that includes more advanced topics related to extending one of our libraries to support a custom board, you may wish to also review the [Embedded C Library](#bring-your-own-thing-api-using-embedded-c) section.
+**NOTE:** There are many different ways to implement your project using the C++ library, in this section we’ll take you through one such example by discussing some technical details of writing code to support a Linux-based board. The details of this section are written for a more advanced user who is looking for examples on how to extend one of the Cayenne base libraries to support their board. You may also wish to also review the [mbed MQTT Library](#bring-your-own-thing-api-using-mbed-mqtt) example which provides additional specifics by implementing some of the concepts provided here with specific hardware.
 
 **Example: using the library**
 
-In this section we will walk through setting up and connecting a <a href="https://developer.mbed.org/platforms/ST-Nucleo-F446RE/" target="_blank">Nucleo board with WiFi shield</a>. We will use the <a href="https://www.mbed.com/en/" target="_blank">mbed online IDE</a>, a free online code editor and compiler in which the code is written and compiled within a web browser, and compiled on the cloud using the ARMCC C/C++ compiler. After writing code to connect our board, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of the Nucleo's onboard LED from our dashboard.
+In this section we will walk through setting up and connecting a [Raspberry Pi 3 Model B](#supported-hardware-single-board-computers-raspberry-pi-model-b) to Cayenne using MQTT. Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the Embedded C library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending example sensor data to our dashboard. Finally, we will examine code that handles reacting to a user changing the status of an example Light actuator widget on our dashboard.
 
 To accomplish this goal, we will cover the following topics:
 
 + [Connect the board](#bring-your-own-thing-api-using-c-connect-the-board)
-+ [Create an mbed account](#bring-your-own-thing-api-using-c-create-mbed-account)
-+ [Setup an mbed platform](#bring-your-own-thing-api-using-c-setup-mbed-platform)
-+ [Import the Cayenne C++ library](#bring-your-own-thing-api-using-c-import-cayenne-c-library)
-+ [Add WiFI & MQTT Credentials to our code](#bring-your-own-thing-api-using-c-add-wifi-mqtt-credentials)
-+ [Connect the board to Cayenne](#bring-your-own-thing-api-using-c-connect-board-to-cayenne)
-+ [Send Temperature sensor data to Cayenne](#bring-your-own-thing-api-using-c-send-sensor-data)
-+ [Control a Light actuator](#bring-your-own-thing-api-using-c-control-a-light-actuator)
++ [Install compiler](#bring-your-own-thing-api-using-c-install-compiler)
++ [Install C++ library](#bring-your-own-thing-api-using-c-install-c-library)
++ [Writing code to support your board/platform](#bring-your-own-thing-api-using-c-writing-code-to-support-your-boardplatform)
+    + [Implement support for your platform/board](#bring-your-own-thing-api-using-c-writing-code-to-support-your-boardplatform-implement-support-for-your-platformboard)
+    + [Implementing Networking code](#bring-your-own-thing-api-using-c-writing-code-to-support-your-boardplatform-implementing-networking-code)
+    + [Implementing Timer code](#bring-your-own-thing-api-using-c-writing-code-to-support-your-boardplatform-implementing-timer-code)
++ [Code examples](#bring-your-own-thing-api-using-c-code-examples)
+  + [Connect board to Cayenne](#bring-your-own-thing-api-using-c-code-examples-connect-board-to-cayenne)
+  + [Send sensor data to Cayenne](#bring-your-own-thing-api-using-c-code-examples-send-sensor-data-to-cayenne)
+  + [Respond to actuator commands](#bring-your-own-thing-api-using-c-code-examples-respond-to-actuator-commands)
 
 **TODO: Walk through video here**
 
-*TIP: You can also refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code covered in this section for Sending sensor data and Controlling an actuator.*
 
 ### Connect the board
 
-Before you program your board, make sure to connect your board to your computer. Since we are using the Nucleo board, we connect the board to our computer using a USB cable. On Windows, this will automatically download all required drivers and open a shared folder. We will use that shared folder later to upload our compiled binary generated using mbed.
+For our example we will use a Raspberry Pi 3. We recommend that you install the <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">Raspbian OS</a> onto your Pi. Raspbian comes with the GNU compiler, making it easy for us to write code for our project.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/nucleo-shared-folder.png" width="660" height="356" alt="nucleo-shared-folder"><br/><br/></p>
+1. Power on your Raspberry Pi. Connect the power adapter to your Raspberry Pi.
+2. Connect the Pi to the Internet. Connect your Raspberry Pi to the Internet using an Ethernet cable. Or, if you have a Wi-Fi dongle setup already this works too.
+3. Make sure the Raspbian operating system is installed. Cayenne works with Jessie OS versions of Raspbian. Please make sure one of these is pre-installed to the sd card. If you need to install the Raspbian operating system, <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">click here</a>.
 
-### Create mbed account
-
-In order to use the mbed IDE you will need to have an account. To get started, visit <a href="http://developer.mbed.org" target="_blank">developer.mbed.org</a> and sign into your account. If you do not already have an account, click on the <a href="https://developer.mbed.org/account/login/?next=/account/signup/" target="_blank">Log in/Signup link</a> and create an account.
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-signup.png" width="660" height="395" alt="mbed-signup"><br/><br/></p>
-
-Once your device is setup and you have your mbed account ready to be used, you may proceed with adding the Cayenne C++ library into mbed.
-
-### Setup mbed platform
-
-Before you can program your board, you need setup mbed for the **platform** that you will be using. If your platform is not already setup, you must do so now.
-
-*TIP: If you have been using the mbed IDE for a while, you may already have several platforms setup. Make sure that the correct platform is selected before continuing.*
-
-Let’s walk through adding the **Nucleo-F446RE** to mbed. To begin, visit <a href="https://developer.mbed.org/platforms/" target="_blank">mbed’s platforms page</a> and select the Nucleo-F446RE there.
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-1.png" width="660" height="395" alt="mbed-add-plaftorm-1"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-2-select-Nucleo.png" width="660" height="395" alt="mbed-add-plaftorm-2-select-nucleo"><br/><br/></p>
-
-After selecting your platform, the platform page will appear. Select **Add to your mbed Compiler** to add this platform. You will see a confirmation that the platform has been added and the mbed IDE will now show this platform available. You can now proceed with Importing the Cayenne C++ library into mbed.
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-3.png" width="660" height="394" alt="mbed-add-plaftorm-3"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-4.png" width="660" height="395" alt="mbed-add-plaftorm-4"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-5-Nucleo-platform-added.png" width="660" height="396" alt="mbed-add-plaftorm-5-nucleo-platform-added"><br/><br/></p>
-
-### Import Cayenne C++ library
-
-The Cayenne C++ Library is a collection of code, support libraries, an MQTT client and example code files designed to help you quickly connect your board to Cayenne using MQTT. There are several versions of the C++ library available and you should select the most appropriate version based upon the board and toolchain/IDE you are using. In our example we’ll be programming a <a href="https://developer.mbed.org/platforms/ST-Nucleo-F446RE/" target="_blank">Nucleo board with WiFi shield (F446RE)</a> with the mbed IDE. Cayenne offers a C++ library that supports this board in the mbed IDE, so we will use that library here.
-
-*TIP: If Cayenne does not currently your board, toolchain/IDE, or you want more advanced guidance on customizing the Cayenne library, see the [Using Embedded C walkthrough](#bring-your-own-thing-api-using-embedded-c) which covers more on these topics.*
+   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160128155812/raspberry-pi-actual.png" width="600" height="610" alt="Raspberry Pi"></p>
 
 
-To begin using this library, visit the <a href="https://developer.mbed.org/teams/myDevicesIoT/" target="_blank">Cayenne mbed repository</a> which contains a list of the various Cayenne MQTT mbed projects available. For our Nucleo board, we select the **Cayenne-X-NUCLEO-IDW01M1** library from the list. This will open a page on mbed from which we can import it into our compiler.
+### Install compiler
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-MQTT-mbed-libraries.png" width="660" height="395" alt="cayenne-mqtt-mbed-libraries"><br/><br/></p>
+If you are using the recommended Raspbian OS, the GNU compiler will already be installed. You can verify this by checking the version.
+```
+gcc -v
+```
 
-From the Nucleo library page, click on the **Import into Compiler** button. The Import Program dialog will appear. From this dialog you can give your program a name. We’ll accept the defaults and just click **Import** to continue.
+If your compiler is not yet installed and you are using a Debian distribution, you can easily get all the packages you need by installing the *build-essential* package.
+```
+apt-get install build-essential
+```
+After verifying that your compiler is ready to be used, you can move on to installing the Cayenne C++ library.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Import-Cayenne-library.png" width="660" height="394" alt="mbed-import-cayenne-library"><br/><br/></p>
+### Install C++ library
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Import-Cayenne-library2.png" width="660" height="395" alt="mbed-import-cayenne-library2"><br/><br/></p>
+The Cayenne C++ library and its examples can be found on our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP" target="_blank">Github repository</a>. To make use of the library, make a clone of the library repository in your project workspace.
 
-The Arduino MQTT library has now been imported and mbed has created a new program in our workspace. We can now proceed with examining Cayenne’s example code and customizing it with our WiFi and MQTT Credentials so that we can connect our board to Cayenne.
+For example, to clone the C++ library into a new project called *CayenneMQTTTest*:
+```
+mkdir CayenneMQTTTest
+cd CayenneMQTTTest
+git clone https://github.com/myDevicesIoT/Cayenne-MQTT-CPP.git
+```
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-library-imported-to-new-program.png" width="660" height="395" alt="mbed-library-imported-to-new-program"><br/><br/></p>
+### Writing code to support your board/platform
 
-### Add WiFi & MQTT Credentials
+The C++ library bundles all of the basic code needed to connect to Cayenne using MQTT, including the <a href="http://www.eclipse.org/paho/" target="_blank">Eclipse Paho MQTT client</a>. In order to operate successfully, the MQTT code requires an implementation of **Timer** and **Networking** code that will work for your platform. In addition, you may find it necessary to account for the idiosyncrasies of the specific board that you need to support. This section will help guide you in writing code to support your board/platform.
 
-With the Arduino MQTT library imported into mbed, we can now examine the example source code and customize it. Since our Nucleo board will connect using WiFi, we will need to specify the WiFi information. We will also need to enter in the required MQTT Credentials that will identify this board and allow it to be connected into our Cayenne account. Without this information, our board will not successfully connect to Cayenne.
+#### Implement support for your platform/board
 
-Expand the program tree in your mbed workspace and find the example file, **main.cpp**. Click to open this file in the mbed editor. For our example, the only code that we need to examine & customize is located in this file.
+At a mimimum, you must implement the needed **Timer** and **Networking** functions that are used by Cayenne's MQTT code. Without these implemented for your platform, networking will not work and the library code will not be able to *Publish* or *Subscribe* data to the Cayenne Cloud.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-example-file.png" width="434" height="706" alt="mbed-example-file"><br/><br/></p>
+**Linux Example**
 
-#### Fill in the Wireless network information
+Currently, the C++ library includes a working example for the Linux Operating System. You can find this implementation under the **<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/tree/master/src/Platform/Linux" target="_blank">Platform/Linux</a>** subfolder in the library files. If you are using a Linux based device, you can use the Linux code we've provided as-is.
 
-The Nucleo board we’ve chosen includes a WiFi network connection, so we will need to program our board so that it can connect to our wireless network. Without this information, our board will be unable to establish proper Internet connectivity and will be unable to communicate with the Cayenne cloud. Refer to the **main.cpp** file and fill in the **SSID** and **WIFI Password** for your wireless connection. The example code includes placeholders for these values, so we just need to update them with the correct information for our wireless network.
+**Supporting other platforms**
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-customize-example-code-file-wifi.png" width="660" height="395" alt="mbed-customize-example-code-file-wifi"><br/><br/></p>
+To support a different Operating System, such as say Windows, you will need to accomplish the following tasks to support your platform:
 
-#### Fill in the MQTT Credentials
+1. Implement Networking code, used by the library for connectivity.
+2. Implement Timer code, used by the library for countdown timing.
+3. Pass your Networking & Timer classes as template parameters to the MQTTClient class.
 
-After filling in the network information, we will need to fill in the required MQTT Credentials for our account and this board. Refer to the *Connect your Device* screen on your Cayenne dashboard, copying & pasting your **MQTT Username**, **MQTT Password** and **Client ID** into the example code. The example code includes placeholders for these values as well, so we just need to update them with the values provided to us on the Connect screen.
+#### Implementing Networking code
+
+In order for the C++ library and its MQTT client to have proper connectivity, you will need to provide a Network implementation that can be used. This code is needed, for example, to create a tcp connection and provide read/write functions so that the code can connect to the Cayenne Cloud. Because the code needed for this is platform dependent, you will need to provide a working implementation for your platform. We have documented this process in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/CayenneMQTTClient/NetworkInterface.h" target="_blank">NetworkInterface.h include file</a>. In addition, you can refer to the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/tree/master/src/Platform/Linux" target="_blank">Linux</a> implementation included with the library.
+
+After implementing your network code, be sure to pass your Network class to the MQTT Client as templated paramater. You can find an example of this in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/tree/master/src/Platform/Linux/examples" target="_blank">Linux platform examples</a>. The MQTT client used by the library will not function without a working networking implementation for your platform.
+
+#### Implementing Timer code
+
+In order for the C++ library and its MQTT client to handle countdown timing, you will need to provide a Timer implementation that can be used. For example, this code is used for countdown timers, e.g. when to ping, when to timeout of a call. Because the code needed for this is platform dependent, you will need to provide a working implementation for your platform. We have documented this process in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/CayenneMQTTClient/TimerInterface.h" target="_blank">NetworkInterface.h include file</a>. In addition, you can refer to the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/tree/master/src/Platform/Linux" target="_blank">Linux</a> implementation included with the library.
+
+After implementing your timer code, be sure to pass your Timer class to the MQTT Client as templated paramater. You can find an example of this in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/tree/master/src/Platform/Linux/examples" target="_blank">Linux platform examples</a>. The MQTT client used by the library will not function without a working timer implementation for your platform.
+
+### Code examples
+
+If you are using a Linux-based board, the C++ library includes working examples for connecting your board, publishing data and subscribing to data from Cayenne. In the next few sections we will discuss these examples and give you some details on how the code uses MQTT to accomplish these tasks.
+
+**Exploring the examples**
+The C++ library includes three helpful examples located in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/tree/master/src/Platform/Linux/examples" target="_blank">Linux code</a> folder. In the next few sections we will walk through portions of these examples and use them to cover the following concepts:
+
++ [Connecting your board to Cayenne](#bring-your-own-thing-api-using-c-code-examples-connect-board-to-cayenne) so that your device shows up in your dashboard.
++ [Sending sensor data to Cayenne](#bring-your-own-thing-api-using-c-code-examples-send-sensor-data-to-cayenne) so that your dashboard is populated with widgets.
++ [Responding to actuator commands](#bring-your-own-thing-api-using-c-code-examples-respond-to-actuator-commands) where we add a Button on our dashboard and tell our board to change the state of an actuator.
+
+*Examples included in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/tree/master/src/Platform/Linux/examples" target="_blank">Linux platform code</a>:*
+
++ **<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimplePublish.cpp" target="_blank">SimplePublish</a>** - Provides an example of connecting to Cayenne and Publishing dummy sensor data. Cayenne will automatically created dashboard Widgets for sensor data received in this manner.
++ **<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimpleSubscribe.cpp" target="_blank">SimpleSubscribe</a>** - Provides an example of Subscribing to MQTT topics, demonstrating how to listen for changes to your connected devices issued from the Cayenne dashboard.
++ **<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/CayenneClient.cpp" target="_blank">CayenneClient</a>** - An all inclusive example that performs both sending and receiving example data using the Cayenne Cloud.
+
+#### Connect board to Cayenne
+
+The first step in verifying that your board is communicating and working with Cayenne is to establish a connection. The *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimplePublish.cpp" target="_blank">SimplePublish</a>* example provides the easiest example of doing so. You can find this example in **Platform/Linux/Examples** folder included with the library. It includes a complete example of connecting to the Cayenne Cloud and sending some simple test data to verify the connection is working. We will use this example for demonstrating connecting your board to Cayenne.
+
+**Adding your MQTT Credentials**
+
+In order for your MQTT connection to be successful, you must fill in the required MQTT Credentials for our account and this board. Refer to the *Connect your Device* screen on your Cayenne dashboard, copying & pasting your **MQTT Username**, **MQTT Password** and **Client ID** into the example code provided in *SimplePublish.c*. The example code includes placeholders for these values as well, so we just need to update them with the values provided to us on the Connect screen.
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Connect screen so that the correct values are used for your device.*
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-customize-example-code-file-mqtt-creds.png" width="660" height="395" alt="mbed-customize-example-code-file-mqtt-creds"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
 
-Once our program has now been customized, it is ready to be compiled and uploaded to the device so that it can connect to Cayenne.
+**Compile, Upload and connect to Cayenne**
 
-### Connect board to Cayenne
-
-After customizing the example file with the required connection and MQTT Credentials, we can now proceed with compiling our program, uploading it to our board and connecting it to the Cayenne cloud.
-
-To compile our program, click on the **Compile** button in mbed. Your program will be compiled and mbed will automatically download the compiled binary to your computer. Drag & drop this binary file to your board’s shared folder to upload it to the board.
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-compile-complete.png" width="660" height="346" alt="mbed-compile-complete"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-drag-n-drop-binary.png" width="660" height="353" alt="mbed-drag-n-drop-binary"><br/><br/></p>
-
-After you drag & drop the binary into the device, the Nucleo board will automatically run it. As soon as your device comes online and connects to Cayenne, your device’s dashboard will appear.
-
-*TIP: Not all boards will automatically run the binary file. Be sure to read the documentation for your board to see if additional actions are necessary.*
+After filling in your MQTT credentials into the code example, we are ready to run the *SimplePublish* example. The C++ library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimplePublish* program. As soon as your device comes online and connects to Cayenne, the *Connect* screen will switch automatically to display your device's dashboard.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
 
 **Congrats! Your hardware is now connected to the Cayenne Cloud!**
 
-### Send sensor data
+#### Send sensor data to Cayenne
 
-Once our board is connected to our Cayenne dashboard, we can send some sensor data and get our very first widget added. For this example, we’ll be using a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36). Begin by making sure that your sensor is connected to the board.
+Once our board is connected to our Cayenne dashboard, we can send some test data and get our very first widget added. For this example, we can continue to refer to the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimplePublish.cpp" target="_blank">SimplePublish</a>* example. In addition to connecting to our dashboard, this example also includes two examples of sending example data to our dashboard.
 
-*TIP: There are many ways to read and send sensor data, we’re only showing you one such example here. Depending upon what device you are using and what goals you have in mind, you may choose a very different way. As a reminder, you can refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code mentioned in this section.*
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-publish-data.png" width="660" height="329" alt="embedded-c-code-publish-data"><br/><br/></p>
 
-#### Import the TMP36 library
+Once our board comes online, it will send two test data points to our dashboard, a temperature value and a luminosity value. As soon as Cayenne receives this data, it will automatically add widgets for them! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
-In order to use a TMP36 sensor with mbed, we will import a library that will support reading data from this sensor and converting its readings into temperature readings. There are many such options for sensor libraries in mbed, you may choose a different library than we do for this example.
-
-To import our sensor library, click on the **Import** button in mbed. From the Libraries screen that appears, you can use the **Search** field to find appropriate libraries.
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-sensor-library.png" width="660" height="395" alt="mbed-import-sensor-library"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-library-search.png" width="660" height="395" alt="mbed-import-library-search"><br/><br/></p>
-
-*TIP: the mbed site (outside of the compiler screen) also includes a search function that can be used to find libraries. One advantage of using this search is that you can also find more information and discussions on using libraries. You may wish to combine both searches to find what you’re looking for!*
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-search.png" width="660" height="396" alt="mbed-search"><br/><br/></p>
-
-To save time, you may use the following <a href="https://developer.mbed.org/users/zchen311/code/TMP36/" target="_blank">direct link</a> to the TMP36 library we'll be using. Clicking on the library link will open a direct page for the library where you can then click **Import into Compiler** button which will import the TMP36 library and its code into your program’s workspace. Once you have the library imported, you can continue with writing code that makes use of this library to read your sensor’s data.
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-library-completed.png" width="660" height="395" alt="mbed-import-tmp36-library-completed"><br/><br/></p>
-
-#### Reading the TMP36 sensor data
-
-Now that we have a library that we can use with our sensor, we can write some code that will read its value using that library. We will write this code in the **main.cpp** file. If you use a different library, or different sensors, be sure to refer to the instructions that come with them for details, including what code you must include for reading data from the sensor.
-
-At a high level, for the library we'll be using, we implement the following tasks in our code for reading from our sensors:
-
-1. Include the TMP36 header for our library.
-
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-1-zoom.png" width="660" height="472" alt="mbed-sensor-step-1"><br/><br/></p>
-
-2. Initialize a TMP36 object from our library with the correct Pin information based on how we connected our sensor.
-
-   The TMP36 library that we're using provides a TMP36 class that includes easy to use functions for reading from our sensor. We create an instance by telling it which pin our sensor is connected to. For this example, our sensor is connected to Pin 5.
-
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-2-zoom.png" width="660" height="428" alt="mbed-sensor-step-2"><br/><br/></p>
-
-3. Read the sensor's value using the TMP36 object.
-
-   The TMP36 library makes reading our sensors value very easy. With a single call, the library will read the sensor's value and convert it into a temperature in Celsius for us.
-
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-read-sensor-value-zoom.png" width="660" height="428" alt="tmp 36 read sensor value"><br/><br/></p>
-   
-
-#### Send Temperature reading to Cayenne
-
-Once we’ve implemented reading our sensor’s value in our code, we can continue with sending our sensor’s data up to Cayenne. This is easily accomplished with a single publish function call provided by the C++ library. Since our sensor is connected to Pin 5, we'll publish the data to MQTT on Channel 5.
-
-*TIP: For more information on MQTT Publishing, you may wish to check out the [MQTT Messaging Topics](#bring-your-own-thing-api-mqtt-messaging-topics) section.*
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-send-sensor-value-zoom.png" width="660" height="422" alt="send sensor value"><br/><br/></p>
-
-Once you have written code to handle the TMP36, click on the **Compile** button and download the binary file from mbed. Drag & drop the updated binary file to your device’s folder. Even though we already have a binary file in place in our Nucleo board’s folder, that won’t matter. The Nucleo board will use the newest binary, removing the old file already there. Shortly after placing the updated binary in the shared folder, the Nucleo board will run the program.
-
-Once our board comes online, it will read the current sensor data from our TMP36 sensor and send the readings to Cayenne. Cayenne will receive this data and automatically add a widget for it! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/CWalkthrough-Dashboard-with-temp-widget.png" width="660" height="395" alt="cwalkthrough-dashboard-with-temp-widget"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-dashboard-simple-publish.png" width="660" height="460" alt="embedded-c-dashboard-simple-publish"><br/><br/></p>
 
 **Congrats! Your hardware is now sending sensor data to the Cayenne Cloud!**
 
-### Control a Light actuator
+#### Respond to actuator commands
 
-Now that we have our board connected to Cayenne and it has successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. The Nucleo board includes an onboard LED already. Let’s make use of this and create a Button widget on our dashboard that will let us turn this light ON/OFF.
+Now that we have our board connected to Cayenne and it has successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. When users change the state of actuators using the dashboard widgets, Cayenne publishes *COMMAND* messages. By subscring to these messages, we will be informed when our actuator's state was changed. We can then take action in response, such as telling a connected Light to turn on or off.
 
-*TIP: Although we’ll be using the Nucleo’s onboard light, the method of adding an additional external digital actuator is the same as what’s shown here for our Nucleo board. Every board type is different however. Refer to the documentation and code examples for your specific board to see how to program specifically for it.*
+For this example, we will setup a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. We will then take a look at the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimpleSubscribe.cpp" target="_blank">SimpleSubscribe</a>* code example that subscribes to data from Cayenne so that we know when our actuator's state was changed on the dashboard.
 
-In order for Cayenne to be able to control the Nucleo’s onboard light, we must perform the following tasks:
+##### Add dashboard widget
 
-1. Create a dashboard widget that can be used to change its state (e.g. ON/OFF).
-2. Write code so that our actuator changes state when Cayenne tells us it was changed from the dashboard.
-
-#### Add dashboard widget
-
-Click **Add New** > **Device / Widget**.
+Let's start by adding a Button widget on the dashboard. From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
 
 1. Choose **Custom Widget** > **Button**.
 2. Give your actuator a name, for example enter “Light” into the **Name** field.
-3. We’ll be adding this actuator to our new Arduino device, so make sure your device is selected in the **Device** field.
-4. On the Nucleo board, the onboard LED1 is controlled using Pin 0, so select 0 from the **Channel** field. We would want to make sure the Channel we use here matches what we put in our code later - in the case of the first onboard LED (LED1), this choice is made for us (it’s always pin 0).
+3. We’ll be adding this actuator to our custom device, so make sure your device is selected in the **Device** field.
+4. Select 0 from the **Channel** field.
 
-   *TIP: Be sure to refer to the code that you write to make sure that the Channel you select for your widget matches what you use in code.*
+  **Note:** The *SimpleSubscribe* code doesn't care what channel our device is connected to, but normally we would want to make sure the Channel selected here matches up with the channel that our code uses later when watching for *COMMAND* messages sent from Cayenne. Our recommendation is to stick to using *Channel == the Pin your actuator is connected to*.
 
-5. We can specify an **Icon** for our actuator. We’re using it to control a Light, so let’s select a Light icon here.
+5. We can specify an **Icon** for our actuator. Say we’re using it to control a Light, so let’s select a Light icon here.
 6. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="dashboard-add-actuator"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="Dashboard settings - add actuator"><br/><br/></p>
 
-#### Write code for the actuator
 
-Cayenne is now setup to send *COMMAND* events to our actuator, but nobody is listening. We now need to write code so that our board will listen for Cayenne to inform us when the actuator’s state was changed on the dashboard, and to appropriate change its state.
+##### Write code for the actuator
 
-At a high level, we must implement the following coding tasks:
+To properly handle actuator commands with Cayenne, make sure your code covers the following:
 
-1. Add an LED1 object to our code so that we can control it.
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-step-1-zoom.png" width="650" height="598" alt="mbed-actuator-step-1"><br/><br/></p>
+1. Subscribe to *COMMAND* messages from Cayenne.
+2. When a new *COMMAND* arrives, handle changing the status of the actuator connected to the board.
 
-2. Subscribe to the COMMAND messages that Cayenne sends to our LED.
+   **Note:** Cayenne will inform the listener which Channel was effected as well as what the new state is.
 
-   TIP: Using the Nucleo library, this task is automatically handled. There’s no need for us to subscribe to Command topics.
+3. After changing (or attempting) to change the actuator state, inform Cayenne what the current status now is.
 
-3. Change the LED’s state based on what Cayenne tells us the new state is.
+   **Note:** It's very important to inform Cayenne what the correct state is. This ensures that the dashboard properly reflects the correct current state of the device.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-set-LED-state-zoom.png" width="639" height="598" alt="set LED state"><br/><br/></p>
+4. Inform Cayenne whether the event was handled OK or had an Error.
 
-4. Publish the updated LED state to Cayenne dashboard.
+   **Note:** If there was an error, Cayenne will handle showing the error to the user so that they're aware of it.
 
-  **Note:** This ensures that the correct state for our actuator is reflected on the dashboard.
+The *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimpleSubscribe.cpp" target="_blank">SimpleSubscribe</a>* example provides provides the easiest example of reacting to command messages from Cayenne. You can find this example in **Platform/Linux/Examples** folder included with the library. It includes code to listen and react to all *COMMAND* messages received from Cayenne, making it easy for us to quickly test an example of controlling an actuator with the dashboard.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-inform-dashboard-of-LED-state-zoom.png" width="660" height="396" alt="mbed-actuator-inform-dashboard-of-led-state-zoom"><br/><br/></p>
+**Note:** The *SimpleSubscribe* example handles messages received from Cayenne by simplying responding back that the state was successfully changed. In order to be useful in your program, you will want to also make sure your code makes changes to your actuator's physical state. The code for accomplishing this is left for you to write for your device, just be sure to do so!
 
-5. Inform Cayenne that the actuator state change has been handled without errors.
+**Adding your MQTT Credentials**
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-publish-response-zoom.png" width="660" height="430" alt="mbed-actuator-publish-response-zoom"><br/><br/></p>
+As before with the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimplePublish.cpp" target="_blank">SimplePublish</a>* example, we need to fill in our MQTT Credentials into the code for the *SimpleSubscribe* example code. If we fail to do so, our device will not be able to connect to our account. Refer to the *Connect your Device* screen on your Cayenne dashboard, copying & pasting your **MQTT Username**, **MQTT Password** and **Client ID** into the example code provided in *SimplePublish.c*. The example code includes placeholders for these values as well, so we just need to update them with the values provided to us on the Connect screen.
 
-*TIP: As a reminder, you can refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code mentioned in this section.*
+*TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Connect screen so that the correct values are used for your device.*
 
-Once you have written code to handle the actuator, click on the Compile button and download the binary file from mbed. Drag & drop the updated binary file to your device’s folder. Even though we already have a binary file in place in our Nucleo board’s folder, that won’t matter. The Nucleo board will use the newest binary, removing the old file already there. Shortly after placing the updated binary in the shared folder, the Nucleo board will run the program. As soon as your board comes online, you can use the dashboard to interact with your actuator.
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-with-test-widgets.png" width="660" height="395" alt="dashboard-with-test-widgets"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
 
-**Congrats! You can now use the button to control the status of the onboard LED.**
+**Compile, Upload and connect to Cayenne**
+
+After filling in your MQTT credentials into the code example, we are ready to run the *SimpleSubscribe* example. The Embedded C library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimpleSubscribe* program. As soon as your device comes online and connects to Cayenne, you can use the Button widget on the dashboard to send your board actuator commands. The *SimpleSubscribe* code will handle these commands by replying back to our dashboard that the actuator was successfully changed and our dashboard will update to show the changed state.
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-dashboard-simple-subscribe.png" width="660" height="460" alt="embedded-c-dashboard-simple-subscribe"><br/><br/></p>
+
+**Congrats! You can now use the button to send actuator commands to your board.**
 
 
 ## Using Embedded C
 
 The Cayenne Embedded C library will give you everything you need to quickly get your board connected with Cayenne using MQTT and the C language. You can find this library, and the example code presented in this section, in our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C" target="_blank">Cayenne Embedded C Github</a> repository.
 
-**NOTE:** There are many different ways to implement your project using the C library, in this section we’ll take you through one such example by discussing some technical details of writing code to support a Linux-based board. The details of this section are written for a more advanced user who is looking for examples on how to extend the C library to support their board. You may also wish to also review the [Cayenne C++ Library](#bring-your-own-thing-api-using-c) example which provides additional focus by covering use of the library with specific hardware.
+**NOTE:** There are many different ways to implement your project using the C library, in this section we’ll take you through one such example by discussing some technical details of writing code to support a Linux-based board. The details of this section are written for a more advanced user who is looking for examples on how to extend one of the Cayenne base libraries to support their board. You may also wish to also review the [mbed MQTT Library](#bring-your-own-thing-api-using-mbed-mqtt) example which provides additional specifics by implementing some of the concepts provided here with specific hardware.
+
 
 **Example: using the library**
 
@@ -814,17 +773,14 @@ To support a different Operating System, such as say Windows, you will need to a
 
 In order for the Embedded C library and its MQTT client to have proper connectivity, you will need to provide a Network implementation that can be used. This code is needed, for example, to create a tcp connection and provide read/write functions so that the code can connect to the Cayenne Cloud. Because the code needed for this is platform dependent, you will need to provide a working implementation for your platform. We have documented this process in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader include file</a>. In addition, you can refer to the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/tree/master/src/Platform/Linux" target="_blank">Linux</a> implementation included with the library.
 
-After implementing your timer code, be sure to then include a link to your file(s) in <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader.h</a>. The MQTT client used by the library will not function without a working timer implementation for your platform.
+After implementing your timer code, be sure to then include a link to your file(s) in <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader.h</a>. The MQTT client used by the library will not function without a working networking implementation for your platform.
 
-*TIP: If need should need to accomplish this in [C++ Library](#bring-your-own-thing-api-using-c), you can find helpful hints for implementing this in the NetworkInterface.h file.*
 
 #### Implementing Timer code
 
-In order for the Embedded C library and its MQTT client to have proper connectivity, you will need to provide a Timer implementation that can be used. We have documented this process in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader include file</a>. In addition, you can refer to the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/tree/master/src/Platform/Linux" target="_blank">Linux</a> implementation included with the library.
+In order for the Embedded C library and its MQTT client to have proper connectivity, you will need to provide a Timer implementation that can be used. For example, this code is used for countdown timers, e.g. when to ping, when to timeout of a call. We have documented this process in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader include file</a>. In addition, you can refer to the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/tree/master/src/Platform/Linux" target="_blank">Linux</a> implementation included with the library.
 
 After implementing your timer code, be sure to then include a link to your file(s) in <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">PlatformHeader.h</a>. The MQTT client used by the library will not function without a working timer implementation for your platform.
-
-*TIP: If need should need to accomplish this in [C++ Library](#bring-your-own-thing-api-using-c), you can find helpful hints for implementing this in the Timer.h file.*
 
 ### Code examples
 
@@ -970,7 +926,7 @@ In order to connect to the Cayenne Cloud, you will need to setup a **Connection 
 4. Copy & paste the **CLIENT ID** field from the Connect screen into the **Client ID** field.
 5. On the *User Credentials* tab, copy & paste **MQTT Username** from the Connect screen into the **User Name** field.
 6. Also on the *User Credentials* tab, copy & paste **MQTT Password** from the Connect screen into the **Password** field.
-7. The default values for fields in the other tabs are OK to leave as is. Click the **OK** button to save our profile.
+7. The default values for fields in the other tabs are OK to leave as-is. Click the **OK** button to save our profile.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-2-Connection-Profile.png" width="660" height="483" alt="mqtt-fx-2-connection-profile"><br/><br/></p>
 
