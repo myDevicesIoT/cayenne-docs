@@ -25,7 +25,7 @@ We have prepared walkthroughs and libraries for some of the most common toolchai
 
 + [Arduino MQTT Library](#bring-your-own-thing-api-using-arduino-mqtt) - For Beginner users. This is the easiest way to get started with using Arduino MQTT in your project. This section covers installing and configuring the popular Arduino IDE to use Cayenne's Arduino MQTT library. It also includes a walkthrough of setting up an Arduino board, sending sensor data to Cayenne and controlling an actuator from the Cayenne dashboard.
 
-+ [mbed MQTT Library](#bring-your-own-thing-api-using-mbed-mqtt) - For Intermediate users. This section walks you through using the mbed C++ MQTT Library in your project. It includes an example of connecting a Nucleo board to Cayenne, writing code to send sensor data as well as control an onboard LED from the Cayenne dashboard.
++ [mbed MQTT Library](#bring-your-own-thing-api-using-mbed-mqtt) - For Intermediate users. This section walks you through using the mbed C++ MQTT Library in your project that uses the mbed IDE. It includes an example of connecting a Nucleo board to Cayenne, writing code to send sensor data as well as control an onboard LED from the Cayenne dashboard.
 
 + [C++ MQTT Library](#bring-your-own-thing-api-using-c) - For Advanced users. This section discusses the steps needed to make use of the Cayenne C++ MQTT library in your code. It also includes advice from the Cayenne team as to which areas of the code need to be updated/customized in order to implement support for new boards in a Cayenne library.
 
@@ -35,7 +35,7 @@ We have prepared walkthroughs and libraries for some of the most common toolchai
 
 If you are integrating Cayenne into your existing or custom program, you may wish to only use raw MQTT calls for interacting with Cayenne. Typically you will have already chosen your own MQTT client, will already have implemented your own networking code, and you just need the *Publish-Subscribe* details for Cayenne’s BYOT API.
 
-If you fall into this camp, you can jump straight to the [MQTT Messaging Topics](#bring-your-own-thing-api-mqtt-messaging-topics) section where you’ll find the API details for MQTT, including the raw MQTT details on topics and behavior. We have also prepared a tutorial for using an MQTT client to manually publish and subscribe data so that you can test out using MQTT with Cayenne.
+If you fall into this camp, you can jump straight to the [MQTT Messaging Topics](#bring-your-own-thing-api-mqtt-messaging-topics) section where you’ll find the details for Cayenne's MQTT calls. We have also prepared a tutorial for using an MQTT client to manually publish and subscribe data so that you can test out using MQTT with Cayenne.
 
 + [Manually Publishing / Subscribing](#bring-your-own-thing-api-manually-publishing-subscribing) - This will walk you through using the MQTT.fx client to manually publish and subscribe to Cayenne. This can help you test out using MQTT with Cayenne without having to connect an actual board or sensors. This is a great way to become familiar with the fundamentals of using MQTT with Cayenne.
 
