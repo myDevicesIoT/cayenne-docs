@@ -599,7 +599,7 @@ In order for your MQTT connection to be successful, you must fill in the require
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cpp-code-mqtt-credentials2.png" width="660" height="484" alt="Add your MQTT credentials"><br/><br/></p>
 
 **Compile, Upload and connect to Cayenne**
 
@@ -613,7 +613,7 @@ After filling in your MQTT credentials into the code example, we are ready to ru
 
 Once our board is connected to our Cayenne dashboard, we can send some test data and get our very first widget added. For this example, we can continue to refer to the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimplePublish.cpp" target="_blank">SimplePublish</a>* example. In addition to connecting to our dashboard, this example also includes two examples of publishing test data to our dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-publish-data.png" width="660" height="329" alt="embedded-c-code-publish-data"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cpp-code-publish-data2.png" width="660" height="312" alt="publish data"><br/><br/></p>
 
 Once our board comes online, it will send two test data points to our dashboard, a temperature value and a luminosity value. As soon as Cayenne receives this data, it will automatically add widgets for them! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
