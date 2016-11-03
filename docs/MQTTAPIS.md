@@ -66,8 +66,6 @@ Includes everything you need for using Cayenne and MQTT in your Arduino IDE base
 Includes everything you need for using Cayenne and MQTT in your mbed IDE based project.
 
    + Refer to the README located in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-mbed" target="_blank">mbed MQTT Github</a> for information on using & obtaining mbed library versions.
-   
-      + **Note:** If you are using the mbed IDE, check out our <a href="https://developer.mbed.org/teams/myDevicesIoT/" target="_blank">Cayenne mbed repository</a>.
    + [Documentation](#bring-your-own-thing-api-using-c)
 
 **Cayenne C++ MQTT**
