@@ -1046,7 +1046,7 @@ We then substitute in the values for our account, board and actuator.
 
 + Replace **username** with the **MQTT Username** for your account.
 + Replace **clientID** with the **Client ID** for your board.
-+ Replace **channel** with the appropriate channel that this actuator is connected to. For this example, we've already chosen Channel 1 when our Light actuator widget was setup.
++ Replace **channel** with the appropriate channel that this actuator is connected to. For this example, we've already chosen Channel **1** when our Light actuator widget was setup.
 
 *TIP: For the purposes of testing with MQTT, you could also use the wildcard __#__ which would subscribe to all channels. Cayenne supports all of the usually filtering and control from MQTT that you'd expect. But since we know the specific Channel that we want to subscribe to in our example, we'll use that.*
 
@@ -1068,7 +1068,7 @@ Examining MQTT.fx, we can see the Command message arrive from Cayenne. The messa
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-12b-command-message-from-cayenne.png" width="660" height="499" alt="mqtt-fx-12b-command-message-from-cayenne"><br/><br/></p>
 
-Normally, at this point we would handle actually changing the state of our actuator. For example, our code would interact with the actuator and change its state. Since we're just faking some data, there's nothing for us to actually change, but we do need to inform Cayenne that the actuator's state was changed. We do so by sending a value to Cayenne for what the new state is. Cayenne wanted us to turn on the Light, so let's simply tell Cayenne that's what happened.
+**Note:** Normally, at this point we would handle actually changing the state of our actuator. For example, our code would interact with the actuator and change its state. Since we're just faking some data, there's nothing for us to actually change, but we do need to inform Cayenne that the actuator's state was changed. We do so by sending a value to Cayenne for what the new state is. Cayenne wanted us to turn on the Light, so let's simply tell Cayenne that's what happened.
 
 To tell Cayenne what the updated value is, we refer to the [Send Actuator Updated Value](#bring-your-own-thing-api-mqtt-messaging-topics-send-actuator-updated-value) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Cayenne expects one of the following:
 
@@ -1113,11 +1113,13 @@ ok,seq
 error,seq=message
 ```
 
-We're use a make believe actuator, so changing our actuator's state can't fail. So in this case let's just tell Cayenene that everything was handled without incident. We need to provide the following two pieces of information for this:
+We're using a make believe actuator, so changing our actuator's state can't fail. So in this case let's just tell Cayenene that everything was handled without incident. We need to provide the following two pieces of information for this:
 
 1. The string **Value** "ok". This lets Cayenne know things were handled OK, no errors to display to the user on the dashboard.
 
 2. The **Sequence** identifier. If you'll recall, this value was provided to us when we received the *COMMAND* message from Cayenne. We provide it here so that Cayenne knows what we're responding to.
+
+Click on the **Publish** button to send the command response to Cayenne. If you send an error message, Cayenne will display it in the dashboard.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-14-response-to-cayenne.png" width="660" height="497" alt="mqtt-fx-14-response-to-cayenne"><br/><br/></p>
 
