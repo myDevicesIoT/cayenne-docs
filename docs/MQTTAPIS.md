@@ -573,6 +573,7 @@ After implementing your timer code, be sure to pass your Timer class to the MQTT
 If you are using a Linux-based board, the C++ library includes working examples for connecting your board, publishing data and subscribing to data from Cayenne. In the next few sections we will discuss these examples and give you some details on how the code uses MQTT to accomplish these tasks.
 
 **Exploring the examples**
+
 The C++ library includes three helpful examples located in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/tree/master/src/Platform/Linux/examples" target="_blank">Platform/Linux examples</a> folder. In the next few sections we will walk through portions of these examples and use them to cover the following concepts:
 
 + [Connecting your board to Cayenne](#bring-your-own-thing-api-using-c-code-examples-connect-board-to-cayenne) so that your device shows up in your dashboard.
@@ -671,7 +672,7 @@ With that background in place, let's discuss how to implement these tasks in cod
 
 As before with the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimplePublish.cpp" target="_blank">SimplePublish</a>* example, we need to fill in our MQTT Credentials into the code for the *SimpleSubscribe* example code. If we fail to do so, our device will not be able to connect to our account.
 
-*TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the **cogwheel** menu for your board and then the **Configure** option. In the configuration screen that appears, you'll find the values that you need.*
+*TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the __cogwheel__ menu for your board and then the __Configure__ option. In the configuration screen that appears, you'll find the values that you need.*
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
 
@@ -888,7 +889,7 @@ With that background in place, let's discuss how to implement these tasks in cod
 
 As before with the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimplePublish.c" target="_blank">SimplePublish</a>* example, we need to fill in our MQTT Credentials into the code for the *SimpleSubscribe* example code. If we fail to do so, our device will not be able to connect to our account.
 
-*TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the **cogwheel** menu for your board and then the **Configure** option. In the configuration screen that appears, you'll find the values that you need.*
+*TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the __cogwheel__ menu for your board and then the __Configure__ option. In the configuration screen that appears, you'll find the values that you need.*
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
 
@@ -965,7 +966,7 @@ We then substitute in the values for our account, board and sensor.
 + Replace **clientID** with the **Client ID** for your board.
 + Replace **channel** with the appropriate channel that this sensor is connected to. For this example, we'll assume that we have a temperature sensor connected and using Channel 0.
 
-*TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the **cogwheel** menu for your board and then the **Configure** option. In the configuration screen that appears, you'll find the values that you need.*
+*TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the __cogwheel__ menu for your board and then the __Configure__ option. In the configuration screen that appears, you'll find the values that you need.*
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
 
@@ -986,7 +987,7 @@ The Cayenne documentation provides a complete list of [Supported Data Types](#br
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-8-send-temp-sensor-data.png" width="660" height="498" alt="mqtt-fx-8-send-temp-sensor-data"><br/><br/></p>
 
-*TIP: If you want the Cayenne Cloud to retain the last published value for a sensor, be sure to click on the **Retained** button in MQTT.fx. Without this, you may find that your widget disappears when you refresh the page.*
+*TIP: If you want the Cayenne Cloud to retain the last published value for a sensor, be sure to click on the __Retained__ button in MQTT.fx. Without this, you may find that your widget disappears when you refresh the page.*
 
 After entering in the MQTT details for publishing our sample sensor data, click on the **Publish** button to send the data to Cayenne. Cayenne will receive this data and automatically add a widget for it! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
@@ -1049,7 +1050,7 @@ We then substitute in the values for our account, board and actuator.
 + Replace **clientID** with the **Client ID** for your board.
 + Replace **channel** with the appropriate channel that this actuator is connected to. For this example, we've already chosen Channel 1 when our Light actuator widget was setup.
 
-*TIP: For the purposes of testing with MQTT, you could also use the wildcard **#** which would subscribe to all channels. Cayenne supports all of the usually filtering and control from MQTT that you'd expect. But since we know the specific Channel that we want to subscribe to in our example, we'll use that.*
+*TIP: For the purposes of testing with MQTT, you could also use the wildcard __#__ which would subscribe to all channels. Cayenne supports all of the usually filtering and control from MQTT that you'd expect. But since we know the specific Channel that we want to subscribe to in our example, we'll use that.*
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-11-subscribe-command-messages.png" width="660" height="499" alt="mqtt-fx-11-subscribe-command-messages"><br/><br/></p>
 
