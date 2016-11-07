@@ -447,7 +447,7 @@ At a high level, we must implement the following coding tasks:
 
 2. Subscribe to the COMMAND messages that Cayenne sends to our LED.
 
-   TIP: Using the Nucleo library, this task is automatically handled. There’s no need for us to subscribe to Command topics.
+   *TIP: Using the Nucleo library, this task is automatically handled for us! There’s no need for us to subscribe to Command topics.*
 
 3. Change the LED’s state based on what Cayenne tells us the new state is.
 
