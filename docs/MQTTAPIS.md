@@ -203,7 +203,7 @@ From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
  
-1. Choose **Actuator** > **Light** > **Luminosity**.
+1. Choose **Custom Widgets** > **Slider**.
 2. Give your actuator a name, for example enter “Light” into the **Name** field.
 3. We’ll be adding this actuator to our new Arduino device, so make sure your device is selected in the **Device** field.
 4. Our actuator is connected to Pin 6, so select 6 from the **Channel** field.
@@ -2695,7 +2695,7 @@ Payload will contain a command sequence number followed by the value. The Develo
 
 ### Send Actuator Updated Value
 
-n order to let the dashboard know of the current status of an actuator, the device must publish that value to the corresponding channel.  This will ensure that the widget state (on/off) remains consistent with the state of the actuator.
+In order to let the dashboard know of the current status of an actuator, the device must publish that value to the corresponding channel.  This will ensure that the widget state (on/off) remains consistent with the state of the actuator.
 
 | Topic	| PUB |	SUB |
 |-------|-------------------------------------------|---|---|
@@ -2742,15 +2742,27 @@ temp,c=20.7
 
 **Receive Actuator Command on Channel 3**
 
-⇒ SUB v1/username/things/0123-4567-89AB-CDEF/cmd/3
+⇒ SUB v1/A1234B5678C/things/0123-4567-89AB-CDEF/cmd/3
 
-⇐ 5,0
+⇐ 2otoExGxnMJz0Jn,0
 
-**Send a Command Response**
+**Send updated Actuator value on Channel 3**
 
-⇒ PUB v1/username/things/0123-4567-89AB-CDEF/response
+⇒ PUB v1/A1234B5678C/things/0123-4567-89AB-CDEF/digital/3
 
-ok,5
+1
+
+**Send a Command Response - OK**
+
+⇒ PUB v1/A1234B5678C/things/0123-4567-89AB-CDEF/response
+
+ok,2otoExGxnMJz0Jn
+
+**Send a Command Response - Error**
+
+⇒ PUB v1/A1234B5678C/things/0123-4567-89AB-CDEF/response 
+
+error,2otoExGxn=ERROR MESSAGE  
 
 
 ## FAQs
