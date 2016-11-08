@@ -100,7 +100,7 @@ After creating your account, Cayenne will ask you which type of device you wish 
 
 The Cayenne Arduino MQTT library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board. In this section we will walk you through setting up the Arduino IDE software so that you can write code that uses the Arduino MQTT library. We will then walk through an example of using the library, setting up and connecting an [Arduino Uno board](#supported-hardware-microcontrollers-arduino-arduino-uno), adding a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36) and finally by adding a Light actuator which we will control from our Cayenne dashboard.
 
-**TODO: Walk through video here**
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/3kCD5S7N6zE" frameborder="0" allowfullscreen></iframe></p>
 
 ### Install Arduino IDE
 
@@ -240,7 +240,8 @@ To accomplish this goal, we will cover the following topics:
 + [Send Temperature sensor data to Cayenne](#bring-your-own-thing-api-using-mbed-mqtt-send-sensor-data)
 + [Control a Light actuator](#bring-your-own-thing-api-using-mbed-mqtt-control-a-light-actuator)
 
-**TODO: Walk through video here**
+**TODO: Update this link with final video**
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/3kCD5S7N6zE" frameborder="0" allowfullscreen></iframe></p>
 
 *TIP: You can also refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code covered in this section for Sending sensor data and Controlling an actuator.*
 
@@ -496,8 +497,6 @@ To accomplish this goal, we will cover the following topics:
   + [Send sensor data to Cayenne](#bring-your-own-thing-api-using-c-code-examples-send-sensor-data-to-cayenne)
   + [Respond to actuator commands](#bring-your-own-thing-api-using-c-code-examples-respond-to-actuator-commands)
 
-**TODO: Walk through video here**
-
 
 ### Connect the board
 
@@ -711,8 +710,6 @@ To accomplish this goal, we will cover the following topics:
   + [Connect board to Cayenne](#bring-your-own-thing-api-using-embedded-c-code-examples-connect-board-to-cayenne)
   + [Send sensor data to Cayenne](#bring-your-own-thing-api-using-embedded-c-code-examples-send-sensor-data-to-cayenne)
   + [Respond to actuator commands](#bring-your-own-thing-api-using-embedded-c-code-examples-respond-to-actuator-commands)
-
-**TODO: Walk through video here**
 
 ### Connect the board
 
