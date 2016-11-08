@@ -240,8 +240,7 @@ To accomplish this goal, we will cover the following topics:
 + [Send Temperature sensor data to Cayenne](#bring-your-own-thing-api-using-mbed-mqtt-send-sensor-data)
 + [Control a Light actuator](#bring-your-own-thing-api-using-mbed-mqtt-control-a-light-actuator)
 
-**TODO: Update this link with final video**
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/3kCD5S7N6zE" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/zlQd2RoEQb8" frameborder="0" allowfullscreen></iframe></p>
 
 *TIP: You can also refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code covered in this section for Sending sensor data and Controlling an actuator.*
 
@@ -1314,9 +1313,9 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Absolute Humidity</span></td>
 <td><span>ABSOLUTE_HUMIDITY</span></td>
 <td><span>abs_hum</span></td>
-<td><span>Kilograms per cubic meter</span></td>
-<td><span>KGM3</span></td>
-<td><span>kgm3</span></td>
+<td><span>Grams per cubic meter</span></td>
+<td><span>GRAMS_PER_METER3</span></td>
+<td><span>gm3</span></td>
 <td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
