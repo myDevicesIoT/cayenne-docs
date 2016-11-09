@@ -604,7 +604,7 @@ If you don't know your DevEUI, click on **Generate new device**. Loriot will gen
 
 #### Import existing device
 
-If you have existing devices, select either the **Import existing OTAA* or **Import existing ABP** button, depending upon whether your devices use Over the Air Activation or Activation by Personalization. You will then need to enter in all of the required information for your device.
+If you have existing devices, select either the **Import existing OTAA** or **Import existing ABP** button, depending upon whether your devices use Over the Air Activation or Activation by Personalization. You will then need to enter in all of the required information for your device.
 
 **Note:** You will only use this feature if you have an existing device deployed in the field and are not able to re-personalize the device. In all other cases, you will want to use the new [device enrollement process](#lora-loriot-network-manually-register-device-enroll-new-device).
 
