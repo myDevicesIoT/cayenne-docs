@@ -668,7 +668,7 @@ With that background in place, let's discuss how to implement these tasks in cod
 
 **Note:** The *SimpleSubscribe* example handles messages received from Cayenne by simplying responding back that the state was successfully changed. In order to be useful in your program, you will want to also make sure your code makes changes to your actuator's physical state. The code for accomplishing this is left for you to write for your device, just be sure to do so!
 
-*TIP: To get more of a background on the steps of interacting with Actuators using MQTT and Cayenne, you may wish to also check out the [Manually Publishing / Subscribing](#bring-your-own-thing-api-manually-publishing-subscribing) section which covers this topic in detail.*
+*TIP: If you want more details beyond the sample code provided with the library, the [Manually Publishing / Subscribing - Actuator's section](#bring-your-own-thing-api-manually-publishing-subscribing-control-a-light-actuator-testing-the-actuator) also covers these steps in more detail.*
 
 **Adding your MQTT Credentials**
 
@@ -885,7 +885,7 @@ With that background in place, let's discuss how to implement these tasks in cod
 
 **Note:** The *SimpleSubscribe* example handles messages received from Cayenne by simplying responding back that the state was successfully changed. In order to be useful in your program, you will want to also make sure your code makes changes to your actuator's physical state. The code for accomplishing this is left for you to write for your device, just be sure to do so!
 
-*TIP: To get more of a background on the steps of interacting with Actuators using MQTT and Cayenne, you may wish to also check out the [Manually Publishing / Subscribing](#bring-your-own-thing-api-manually-publishing-subscribing) section which covers this topic in detail.*
+*TIP: If you want more details beyond the sample code provided with the library, the [Manually Publishing / Subscribing - Actuator's section](#bring-your-own-thing-api-manually-publishing-subscribing-control-a-light-actuator-testing-the-actuator) also covers these steps in more detail.*
 
 **Adding your MQTT Credentials**
 
