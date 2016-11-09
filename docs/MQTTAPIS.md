@@ -548,11 +548,13 @@ Currently, the C++ library includes a working example for the Linux Operating Sy
 
 **Supporting other platforms**
 
-To support a different Operating System, such as say Windows, you will need to accomplish the following tasks to support your platform:
+Although the Cayenne library includes some working implementation for certain platforms, the library may not include support for the platform that you wish to use. In such instances, you will need to accomplish the following tasks to support your platform:
 
 1. Implement Networking code, used by the library for connectivity.
 2. Implement Timer code, used by the library for countdown timing.
 3. Pass your Networking & Timer classes as template parameters to the MQTTClient class.
+
+*TIP: Even if you may not be using one of the platforms included as examples with the library, you can use the examples as reference when implementing support for your platform. For the remainder of this documentation we will refer back to the Linux example files included with the library as we discuss what the Cayenne team implemented in order to support this platform.*
 
 #### Implementing Networking code
 
@@ -761,13 +763,13 @@ Currently, the Embedded C library includes a working example for the Linux Opera
 
 **Supporting other platforms**
 
-To support a different Operating System, such as say Windows, you will need to accomplish the following tasks to support your platform:
+Although the Cayenne library includes some working implementation for certain platforms, the library may not include support for the platform that you wish to use. In such instances, you will need to accomplish the following tasks to support your platform:
 
 1. Implement Networking code, used by the library for connectivity.
 2. Implement Timer code, used by the library for countdown timing.
 3. Update the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/CayenneMQTTClient/PlatformHeader.h" target="_blank">CayenneMQTTClient/PlatformHeader.h</a> to reference your new Timer, Networking implementation.
 
-*TIP: Much of the information provided here also applies should you need to extend Cayenne's [C++ Library](#bring-your-own-thing-api-using-c). However, in the case of the C++ library, Step 3 is accomplished by passing your classes as template parameters to the MQTTClient class. See the notes below on where to accomplish this for Timer and Networking.*
+*TIP: Even if you may not be using one of the platforms included as examples with the library, you can use the examples as reference when implementing support for your platform. For the remainder of this documentation we will refer back to the Linux example files included with the library as we discuss what the Cayenne team implemented in order to support this platform.*
 
 #### Implementing Networking code
 
