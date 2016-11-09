@@ -147,9 +147,9 @@ Open the **File** > **Examples** > **CayenneMQTT** > **Connections** menu and se
 
 The example sketch file includes everything we need to connect to Cayenne and publish our first set of test data, but it is missing our unique MQTT credentials that will allow us to connect this device into our account. Let’s add those now.
 
-All of the required information we need can be found on the Cayenne dashboard’s Connect screen. Refer to the Connect screen and copy & paste your **MQTT Username**, **MQTT Password** and **Client ID** into the sketch file. The example sketch file includes placeholders for these values, so we just need to update them with the values provided to us on the Connect screen.
+All of the required information we need can be found on the Cayenne dashboard’s Connect screen. Refer to the 'Choose SDK and connect your device' screen and copy & paste your **MQTT Username**, **MQTT Password** and **Client ID** into the sketch file. The example sketch file includes placeholders for these values, so we just need to update them with the values provided to us on our dashboard.
 
-*TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Connect screen so that the correct values are used for your device.*
+*TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Cayenne dashboard screen so that the correct values are used for your device.*
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
 
@@ -319,7 +319,7 @@ After filling in the network information, we will need to fill in the required M
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Connect screen so that the correct values are used for your device.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-customize-example-code-file-mqtt-creds.png" width="660" height="395" alt="mbed-customize-example-code-file-mqtt-creds"><br/><br/></p>
 
@@ -590,11 +590,11 @@ The first step in verifying that your board is communicating and working with Ca
 
 **Adding your MQTT Credentials**
 
-In order for your MQTT connection to be successful, you must fill in the required MQTT Credentials for our account and this board. Refer to the *Connect your Device* screen on your Cayenne dashboard, copying & pasting your **MQTT Username**, **MQTT Password** and **Client ID** into the example code provided in *SimplePublish.cpp*. The example code includes placeholders for these values as well, so we just need to update them with the values provided to us on the Connect screen.
+In order for your MQTT connection to be successful, you must fill in the required MQTT Credentials for our account and this board. Refer to the *Choose SDK and connect your device* screen on your Cayenne dashboard, copying & pasting your **MQTT Username**, **MQTT Password** and **Client ID** into the example code provided in *SimplePublish.cpp*. The example code includes placeholders for these values as well, so we just need to update them with the values provided to us on our dashboard.
 
-*TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Connect screen so that the correct values are used for your device.*
+*TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste values from your dashboard so that the correct values are used for your device.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cpp-code-mqtt-credentials2.png" width="660" height="484" alt="Add your MQTT credentials"><br/><br/></p>
 
@@ -809,7 +809,7 @@ In order for your MQTT connection to be successful, you must fill in the require
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Connect screen so that the correct values are used for your device.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
 
@@ -906,8 +906,6 @@ This section will walk you through using raw MQTT calls to manually publish and 
 
 For the purposes of our example we will make use of <a href="http://www.mqttfx.org/" target="_blank">MQTT.fx</a>, a JavaFX based MQTT client.
 
-**TODO: Walk through video here**
-
 ### Install MQTT.fx
 
 To begin using MQTT.fx, we must download and install it. Doing so is easy and straight forward. Simply visit the <a href="http://mqttfx.jfx4ee.org/index.php/download" target="_blank">MQTT.fx download page</a>. Download and install the correct version for the Operating System that you are using. Once installed, launch the MQTT.fx client to get started.
@@ -918,9 +916,9 @@ To begin using MQTT.fx, we must download and install it. Doing so is easy and st
 
 In order to connect to the Cayenne Cloud, you will need to setup a **Connection Profile** in MQTT.fx. To do so, click on the **cogwheel** icon or select **Extras** > **Edit Connection Profiles** from the menu. The *Edit Connection Profiles* screen appears. From this screen you can enter in all the required information needed to complete a profile for connecting to Cayenne.
 
-*TIP: All of the required information we need can be found on the Cayenne dashboard’s Connect screen. Refer to the Connect screen and the informaiton below to complete creating your connection profile to Cayenne.*
+*TIP: All of the required information we need can be found on the Cayenne dashboard’s 'Choose SDK and connect your device' screen. Refer to this screen and the informaiton below to complete creating your connection profile to Cayenne.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Connect-screen.png" width="660" height="395" alt="cayenne-dashboard-connect-screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
 1. Give the profile a name, such as CayenneMQTT, in the **Profile Name** field.
 2. Copy & paste the **MQTT Server** URL from the Connect screen into the **Broker Address** field.
