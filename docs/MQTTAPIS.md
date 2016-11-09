@@ -604,7 +604,7 @@ In order for your MQTT connection to be successful, you must fill in the require
 
 **Compile, Upload and connect to Cayenne**
 
-After filling in your MQTT credentials into the code example, we are ready to run the *SimplePublish* example. The C++ library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimplePublish* program. As soon as your device comes online and connects to Cayenne, the *Connect* screen will switch automatically to display your device's dashboard.
+After filling in your MQTT credentials into the code example, we are ready to run the *SimplePublish* example. The C++ library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimplePublish* program. As soon as your device comes online and connects to Cayenne, the *Choose SDK and connect your device* screen will switch automatically to display your device's dashboard.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
 
@@ -819,7 +819,7 @@ In order for your MQTT connection to be successful, you must fill in the require
 
 **Compile, Upload and connect to Cayenne**
 
-After filling in your MQTT credentials into the code example, we are ready to run the *SimplePublish* example. The Embedded C library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimplePublish* program. As soon as your device comes online and connects to Cayenne, the *Connect* screen will switch automatically to display your device's dashboard.
+After filling in your MQTT credentials into the code example, we are ready to run the *SimplePublish* example. The Embedded C library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimplePublish* program. As soon as your device comes online and connects to Cayenne, the *Choose SDK and connect your device* screen will switch automatically to display your device's dashboard.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
 
