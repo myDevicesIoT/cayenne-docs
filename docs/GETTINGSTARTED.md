@@ -441,9 +441,16 @@ Begin by verifying that you have your LoRa network provider account and device i
 
 **1\. Make sure your device is powered on and connected**
 
-Your LoRa devices will need to already be connected to either a public or private LoRa network. If you are using a private network, make sure the gateway you will be using is configured and your devices are powered on. Contact your network provider if you need help verifying your connection status.
+Your LoRa devices will need to already be connected to either a public or private LoRa network. Contact your network provider if you need help verifying your connection status.
 
-In case of public LoRa network, make sure your devices are powered on and the LoRa coverage of your public network provider is available where you want to use your devices.
+In case of public LoRa network, make sure your devices are powered on and the LoRa coverage of your public network provider is available where you want to use your devices. If you are using a private network, make sure the gateway you will be using is configured and your devices are powered on.
+
+Need a gateway? Here are some helpful links to purchasing and configuring a gateway based on which network you’ll be using.
+
+*   [Setup gateway with Actility](#lora-actility-setup-gateway-device)
+*   [Setup gateway with Senet](#lora-senet-network-setup-gateway-device)
+*   [Setup gateway with Loriot](#lora-loriot-network-setup-gateway-device)
+
 
 **2\. Make sure you have your LoRa account information**
 
@@ -453,6 +460,7 @@ Need an account? Here are some helpful links to creating an account based on whi
 
 *   [Creating Actility account](#lora-actility-create-account)
 *   [Creating Senet account](#lora-senet-network-create-account)
+*   [Creating Loriot account](#lora-loriot-network-create-account)
 
 **3\. Make sure you have the information on your LoRa devices being connected**
 
@@ -482,3 +490,4 @@ When adding the LoRa device, the settings, supported activation modes and accoun
 
 *   [Using the Actility Network](#lora-actility)
 *   [Using the Senet Network](#lora-senet-network)
+*   [Using the Loriot Network](#lora-loriot-network)
