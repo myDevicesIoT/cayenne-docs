@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -10,18 +11,19 @@
     <meta name="description" content="Create and rapid prototype Internet of Things products with Cayenne, an IoT project builder for developers and makers to quickly create their connected device projects.">
     <meta name="robots" content="noindex">
 
+
+
     <!-- Flatdoc -->
     <script src='support/vendor/jquery.js'></script>
     <script src='legacy.js'></script>
     <script src='flatdoc.js'></script>
     <script src='addons.js'></script>
 
-    <!-- Cayenne CSS -->
+    <!-- Flatdoc theme -->
     <link rel="stylesheet" id="sage/css-css" href="http://www.cayenne-mydevices.com/wp-content/themes/cayenne/dist/styles/main.css" type="text/css" media="all">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Flatdoc theme -->
     <link href="theme-white/navbar-default.css" rel="stylesheet">
+
     <link  href='theme-white/style.css' rel='stylesheet'>
     <link  href='theme-white/navbar.css' rel='stylesheet'>
     <script src='theme-white/script.js'></script>
@@ -39,7 +41,8 @@
                 'docs/CUSTOMWIDGETS.md',
                 'docs/SKETCHFILES.md',
                 'docs/LORA.md',
-                'docs/SUPPORTEDHARDWARE.md'
+                'docs/SUPPORTEDHARDWARE.md',
+                'docs/MQTTAPIS.md'
             ])
         });
     </script>
@@ -98,12 +101,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="javascript"></script>
 
 <script>
-    //Enables hamburger toggle menu in navigation
+    var resources = $('.nav-resources a');
+
+//    resources.click(function(){
+//        resources.next('ul.dropdown-menu').toggleClass('display');
+//    });
+
     var toggle = $('button.navbar-toggle');
 
     toggle.click(function(){
        $('#navbar.navbar-collapse').toggleClass('collapse');
     });
+
 </script>
 
 </body>
