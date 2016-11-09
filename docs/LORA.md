@@ -530,13 +530,13 @@ To create your Loriot account, visit the <a href="https://loriot.io/register.htm
 
 **NOTE:** Loriot has many servers that you can use, but you will need an account on each of them in order to use that server.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Loriot account registration"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Account-Registration.png" width="660" height="399" alt="Loriot account registration"><br/><br/></p>
 
 ### Setup gateway device
 
-In order for your LoRa devices to connect to the Loriot network, you must have purchased and configured a gateway device. Loriot has a <a href="https://us1.loriot.io/lora-gateways.html" target="_blank">Gateway page</a> with costs and recommendations. Once you have purchased the gatewa you want to use, Loriot offers guides for how to set it up for use. When logged into your account, refer to the **Documentation > Gateways** section on the Loriot portal for information.
+In order for your LoRa devices to connect to the Loriot network, you must have purchased and configured a gateway device. Loriot has a <a href="https://us1.loriot.io/lora-gateways.html" target="_blank">Gateway page</a> with costs and recommendations. Once you have purchased the gateway you want to use, Loriot offers guides for how to set it up for use. When logged into your account, refer to the **Documentation > Gateways** section on the Loriot portal for information.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Loriot setup gateway"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Setup-gateway.png" width="660" height="396" alt="Loriot setup gateway"><br/><br/></p>
    
 **Be sure that you have an appropriate Loriot gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
@@ -547,21 +547,21 @@ In order for your LoRa devices to connect to the Loriot network, you must have p
 
 In order for data from your device to reach Cayenne, you must configured your devices in the Loriot portal to forward data to Cayenne. The Loriot portal groups devices in what they call **Applications**. If you want to use a group of devices with Cayenne, you will need to perform some configuration on the portal. You only need to perform this step once for each Application that you want to use. To set this up, click on the **Applications** button in the portal. The *Network Applications* screen appears.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="applications button highlighted"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Applications-highlight.png" width="660" height="478" alt="applications button highlighted"><br/><br/></p>
 
 From the *Network Applications* screen, click on the name of the Application that you want to configure. This will open the dashboard for your Application.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Network Applications screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Network-Applications-screen.png" width="660" height="395" alt="Network Applications screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="application dashboard"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Dashboard.png" width="660" height="395" alt="application dashboard"><br/><br/></p>
 
 From the Application screen for your device, find the **Data Output** option and click on the **Edit Output** button to change it. The *Application Output* screen will appear.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="myDevices app dash with data output highlight"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Application-Output-screen.png" width="660" height="395" alt="myDevices app dash with data output highlight"><br/><br/></p>
 
 On the *Application Output* screen, next to the **Data Output** option select the **Change** button and a list of output types will appear. From the list of types, select the **HTTP Push** option.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Edit output type with list"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Output-list.png" width="660" height="395" alt="Edit output type with list"><br/><br/></p>
 
 Enter the Cayenne Loriot URL into the **Target URL for POSTs** entry field and then click on the **Confirm change** button to save the change.
 
@@ -569,7 +569,7 @@ Enter the Cayenne Loriot URL into the **Target URL for POSTs** entry field and t
 https://longrangeapi.mydevices.com/longrange/api/loriot/messages/add
 ```
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="data output url change"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Change-Data-Output.png" width="660" height="395" alt="data output url change"><br/><br/></p>
 
 ### Manually register device
 
@@ -580,11 +580,11 @@ Before you can use your LoRa device on the Loriot network, it must be registered
 
 Devices must be added into an **Application** in the Loriot portal. To enroll a new device, click on **Applications** and then select which Application your device will be added to. This will open your application's dashboard.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="application dashboard"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Dashboard.png" width="660" height="395" alt="application dashboard"><br/><br/></p>
 
 From the application dashboard screen, click on **Managed devices** and the *Devices* screen appears. From the *Devices* screen, you can enroll new devices or you can import existing devices.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Devices screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Devices-screen.png" width="660" height="394" alt="Devices screen"><br/><br/></p>
 
 #### Enroll new device
 
@@ -594,13 +594,13 @@ Loriot makes enrolling a new device easy, all you need is the [DevEUI](#lora-abo
 
 If you know the DevEUI for your device, select **Enroll new device**. In the *Enroll* screen that appears, enter in your DevEUI into the **Device EUI** field and click the **Enroll** button. Loriot will take care of assigning all other keys (APPKEY, APPSKEY, NWKSKEY) and identifiers (DevAddr) for your device automatically.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="enroll new device"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Enroll-new-device-screen.png" width="660" height="394" alt="enroll new device"><br/><br/></p>
 
 **If you don't know your DevEUI**
 
-If you don't know your DevEUI, click on **Generate new device**. Loriot will generate your device's DevEUI and all other keys and identifiers needed.
+If you don't know your DevEUI, click on **Generate new device**. Loriot will generate your device's DevEUI and all other keys and identifiers needed and then add a device entry into your list of devices.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Devices screen generate highlight"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Devices-screen-generate-highlight.png" width="660" height="394" alt="Devices screen generate highlight"><br/><br/></p>
 
 #### Import existing device
 
@@ -608,9 +608,9 @@ If you have existing devices, select either the **Import existing OTAA* or **Imp
 
 **Note:** You will only use this feature if you have an existing device deployed in the field and are not able to re-personalize the device. In all other cases, you will want to use the new [device enrollement process](#lora-loriot-network-manually-register-device-enroll-new-device).
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Loriot OTAA"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Import-OTAA.png" width="660" height="394" alt="Loriot OTAA"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Loriot ABP"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Import-ABP.png" width="660" height="394" alt="Loriot ABP"><br/><br/></p>
 
 ###  Programming the device
 
@@ -633,7 +633,7 @@ From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, select the **LoRa** category and then the **Loriot** Network option to view a list of Loriot supported devices.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Add devie with loriot selected"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Loriot-Network-list.png" width="660" height="395" alt="Add devie with loriot selected"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -648,12 +648,13 @@ If your device has been previously registered on the Loriot network, it can be q
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4. What is your Loriot **Application ID**? You can obtain your App ID from your Application's dashboard on the Loriot portal.
 
-   <p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="app dashboard App ID highlight"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Dashboard-App-ID-highlight.png" width="660" height="395" alt="app dashboard App ID highlight"><br/><br/></p>
 
-5. What is your Loriot **Security Token**? YOu can obtain your Token by clicking on **Security tokens** from your Application's dashboard on the Loriot portal.
+5. What is your Loriot **Security Token**? Yuu can obtain your Token by clicking on **Security tokens** from your Application's dashboard on the Loriot portal.
 
-   <p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="App dashboard Security token highlight"><br/><br/></p>
-   <p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Security token"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Dashboard-Security-Token-higlight.png" width="660" height="441" alt="App dashboard Security token highlight"><br/><br/></p>
+
+   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Security-Token-screen.png" width="660" height="394" alt="Security token"><br/><br/></p>
 
 To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-lora-pulse) which was previously registered under an [Loriot account](#lora-loriot-network-create-account).
 
@@ -661,13 +662,13 @@ To see how easy it is, let’s walk through an example of connecting an [Adeunis
 
 Make sure the **Loriot** network is selected in the list of Networks.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Loriot network selected"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Loriot-Network-list.png" width="660" height="395" alt="Loriot network selected"><br/><br/></p>
 
 **2\. Select the Device**
 
 Select your device from among the list supported Loriot devices. In this case, we’ll select the **Adeunis LoRa Pulse**.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Loriot device list"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Loriot-device-highlight.png" width="660" height="395" alt="Loriot device highlight"><br/><br/></p>
 
 **3\. Enter Settings & Add device**
 
@@ -681,7 +682,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 6. Enter in the **Loriot Token** for the Application this device uses on the Loriot portal.
 4. Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="Loriot Pulse settings"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-pulse-settings.png" width="660" height="394" alt="Loriot Pulse settings"><br/><br/></p>
 
 The LoRa Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
