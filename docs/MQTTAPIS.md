@@ -177,7 +177,7 @@ The first step in handling our TMP36 sensor is to write some code to read the se
 
 *Tip: Refer to the documentation for whatever sensor you are using in order to determine what kind of code needs to be written to read its sensor data.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-tmp36-read-and-convert-sensor.png" width="WIDTH" height="HEIGHT" alt="arduino-ide-tmp36-read-and-convert-sensor"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-tmp36-read-and-convert-sensor.png" width="660" height="553" alt="arduino-ide-tmp36-read-and-convert-sensor"><br/><br/></p>
 
 #### Send Temperature reading to Cayenne
 
