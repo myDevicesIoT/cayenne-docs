@@ -214,6 +214,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 
 **Links:** <br/>
@@ -236,6 +237,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -255,6 +257,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -276,6 +279,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -299,6 +303,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -316,6 +321,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -333,6 +339,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -356,6 +363,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -377,6 +385,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -400,6 +409,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -426,6 +436,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Sensors included:**
 
@@ -442,6 +453,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -465,6 +477,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -490,6 +503,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -510,6 +524,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -534,6 +549,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -554,6 +570,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -574,6 +591,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
