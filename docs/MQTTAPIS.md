@@ -19,7 +19,7 @@ Cayenne MQTT is straightforward and easy to use, offering several different ways
 
 #### Option 1: Use the Cayenne MQTT Libraries
 
-This is the easiest way to get started with using MQTT with Cayenne. We have implemented various MQTT libraries that bundle an [MQTT client](#bring-your-own-thing-api-mqtt-clients) and support libraries for supporting MQTT. Using these, you’ll have access to all of the libraries and code examples you’ll need to quickly program and connect your board to Cayenne.
+Using one of our libraries is the easiest way to get started using MQTT with Cayenne. The Cayenne libraries bundle an [MQTT client](#bring-your-own-thing-api-mqtt-clients) and all of the code examples you'll need to get your board connected and using MQTT with Cayenne.
 
 We have prepared walkthroughs and libraries for some of the most common toolchain/IDE combinations to help get you up and running as quickly as possible. If you would like to use [one of our libraries](#bring-your-own-thing-api-libraries), the easiest way to get started is to jump to a section below and read through the information and guides provided there.
 
@@ -52,6 +52,8 @@ To interact with an MQTT broker you’ll need an MQTT client. Here’s a quick l
 
 ## Libraries
 
+Using one of our libraries is the easiest way to get started using MQTT with Cayenne. The Cayenne libraries bundle an [MQTT client](#bring-your-own-thing-api-mqtt-clients) and all of the code examples you'll need to get your board connected and using MQTT with Cayenne.
+
 **Cayenne Arduino MQTT**
 
 Includes everything you need for using Cayenne and MQTT in your Arduino IDE based project.
@@ -59,28 +61,28 @@ Includes everything you need for using Cayenne and MQTT in your Arduino IDE base
    + The Arduino MQTT Library is available directly through the Arduino IDE *Library Manager*. This is the recommended way of obtaining this library. See [Add MQTT Library to Arduino IDE](#bring-your-own-thing-api-using-arduino-mqtt-add-mqtt-library-to-arduino-ide) for a walkthrough of performing this.
       + You may also find the library in our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">Arduino MQTT Github</a> repository.
 
-   + [Documentation](#bring-your-own-thing-api-using-arduino-mqtt)
+   + [Documentation](#bring-your-own-thing-api-using-arduino-mqtt) - Covers installing and configuring the popular Arduino IDE to use Cayenne's Arduino MQTT library. It also includes a walkthrough of setting up an Arduino board, sending sensor data to Cayenne and controlling an actuator from the Cayenne dashboard.
 
 **Cayenne mbed MQTT**
 
 Includes everything you need for using Cayenne and MQTT in your mbed IDE based project.
 
    + Refer to the README located in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-mbed" target="_blank">mbed MQTT Github</a> for information on using & obtaining mbed library versions.
-   + [Documentation](#bring-your-own-thing-api-using-c)
+   + [Documentation](#bring-your-own-thing-api-using-c) - Walks you through using the mbed C++ MQTT Library in your project that uses the mbed IDE. It includes an example of connecting a Nucleo board to Cayenne, writing code to send sensor data as well as control an onboard LED from the Cayenne dashboard.
 
 **Cayenne C++ MQTT**
 
 Includes everything you need for using Cayenne and MQTT in your project that uses the C++ language.
 
    + Refer to the README located in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP" target="_blank">C++ Github</a> for information on using & obtaining C++ library versions.
-   + [Documentation](#bring-your-own-thing-api-using-c)
+   + [Documentation](#bring-your-own-thing-api-using-c) - Discusses the steps needed to make use of the Cayenne C++ MQTT library in your code. It also includes advice from the Cayenne team as to which areas of the code need to be updated/customized in order to implement support for new boards in a Cayenne library.
 
 **Cayenne Embedded C MQTT**
 
 Includes everything you need for using Cayenne and MQTT in your project that uses the C language.
 
    + Refer to the README located in the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C" target="_blank">Embedded C Github</a> for information on using & obtaining C++ library versions.
-   + [Documentation](#bring-your-own-thing-api-using-embedded-c)
+   + [Documentation](#bring-your-own-thing-api-using-embedded-c) - Discusses the steps needed to make use of the Embedded C MQTT library in your code. It also includes advice from the Cayenne team as to which areas of the code need to be updated/customized in order to implement support for new boards in a Cayenne library.
 
 ## Using the MQTT Libraries
 
