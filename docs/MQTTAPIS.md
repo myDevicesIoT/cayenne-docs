@@ -2701,13 +2701,12 @@ In order to let the dashboard know of the current status of an actuator, the dev
 
 | Topic	| PUB |	SUB |
 |-------|-------------------------------------------|---|---|
-| v1/**username**/things/**clientID**/digital/**channel**     |	X |	&nbsp;  |
-| v1/**username**/things/**clientID**/analog/**channel**     |	X |	&nbsp;  |
+| v1/**username**/things/**clientID**/data/channel | X | &nbsp; |
 
-Payload must contain simply the true binary value of a digital actuator (1/0) or numerical value for analog actuators (slider widgets).
+Payload must contain simply the true binary value of a digital actuator (1/0) or numerical value for analog actuators.
 
 + (string) 1
-+ (string) 2
++ (string) 0.8
 
 ### Send command response
 
@@ -2721,18 +2720,6 @@ Payload must contain the status “ok” or “error”, as well as the command 
 
 +	(string) ok,seq
 +	(string) error,seq=message
-
-### Receive channel configuration
-
-When adding a widget from the dashboard, the backend will publish activation on the appropriate topic. This is useful for the developer to initialize I/O lookup and send data. As the backend sends configuration in retained mode, the device will receive the last configuration right after subscribing.
-
-| Topic	| PUB |	SUB |
-|-------|-------------------------------------------|---|---|
-| v1/**username**/things/**clientID**/conf/**channel**     |	&nbsp;  |	X |
-| v1/**username**/things/**clientID**/digital-conf/**channel**     |	&nbsp;  |	X |
-| v1/**username**/things/**clientID**/analog-conf/**channel**     |	&nbsp;  |	X |
-
-Payload will simply contain “on” or “off”
 
 ### Examples
 
