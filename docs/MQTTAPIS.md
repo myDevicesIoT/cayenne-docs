@@ -1162,7 +1162,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2">HVAC (coming Soon), <a href="#slider-control">Slider</a></td>
 </tr>
 <tr>
-<td><span>* Celsius</span></td>
+<td><span>\* Celsius</span></td>
 <td><span>CELSIUS</span></td>
 <td><span>c</span></td>
 </tr>
@@ -1179,7 +1179,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Light Switch</span></td>
 <td rowspan="3"><span>LIGHT_SWITCH_ACT</span></td>
 <td rowspan="3"><span>lt_switch_act</span></td>
-<td><span>* Off/On</span></td>
+<td><span>\* Off/On</span></td>
 <td><span>OFF_ON</span></td>
 <td><span>null</span></td>
 <td rowspan="3"><span><a href="#lighting-widget">Lighting (coming soon)</a>, <a href="#button-control">Button</a>, <a href="#switch-widget">Switch (coming soon)</a></span></td>
@@ -1207,7 +1207,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="4"><span>Lighting.Luminosity</span></td>
 <td rowspan="4"><span>LIGHTING_LUMINOSITY</span></td>
 <td rowspan="4"><span>lt_lum</span></td>
-<td><span>* % (0 to 100)</span></td>
+<td><span>\* % (0 to 100)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
 <td rowspan="4"><span><a href="#lighting-widget">Lighting (coming soon)</a>, <a href="#slider-control">Slider</a></span></td>
@@ -1231,7 +1231,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Motor</span></td>
 <td rowspan="3"><span>MOTOR</span></td>
 <td rowspan="3"><span>motor</span></td>
-<td><span>* Off/On</span></td>
+<td><span>\* Off/On</span></td>
 <td><span>OFF_ON</span></td>
 <td><span>null</span></td>
 <td rowspan="3"><span><a href="#button-control">Button</a>, <a href="#slider-control">Slider</a>, <a href="#switch-widget">Switch (coming soon)</a></span></td>
@@ -1250,7 +1250,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Relay</span></td>
 <td rowspan="2"><span>RELAY</span></td>
 <td rowspan="2"><span>relay</span></td>
-<td><span>* Off/On</span></td>
+<td><span>\* Off/On</span></td>
 <td><span>OFF_ON</span></td>
 <td><span>null</span></td>
 <td rowspan="2"><span><a href="#button-control">Button</a></span></td>
@@ -1264,7 +1264,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Switch</span></td>
 <td rowspan="3"><span>SWITCH</span></td>
 <td rowspan="3"><span>switch</span></td>
-<td><span>* Off/On</span></td>
+<td><span>\* Off/On</span></td>
 <td><span>OFF_ON</span></td>
 <td><span>null</span></td>
 <td rowspan="3"><span><a href="#switch-widget">Switch (coming soon)</a>, <a href="#button-control">Button</a></span></td>
@@ -1283,7 +1283,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Valve</span></td>
 <td rowspan="3"><span>VALVE</span></td>
 <td rowspan="3"><span>valve</span></td>
-<td><span>* Off/On</span></td>
+<td><span>\* Off/On</span></td>
 <td><span>OFF_ON</span></td>
 <td><span>null</span></td>
 <td rowspan="3"><span><a href="#switch-widget">Switch (coming soon)</a>, <a href="#button-control">Button</a></span></td>
@@ -1327,7 +1327,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Absorbed Radiation</span></td>
 <td rowspan="2"><span>ABSORBED_RADIATION</span></td>
 <td rowspan="2"><span>absrb_rad</span></td>
-<td><span>* Rad</span></td>
+<td><span>\* Rad</span></td>
 <td><span>RAD</span></td>
 <td><span>rad</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1368,7 +1368,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Altitude</span></td>
 <td rowspan="2"><span>ALTITUDE</span></td>
 <td rowspan="2"><span>alt</span></td>
-<td><span>* Meters above sea level</span></td>
+<td><span>\* Meters above sea level</span></td>
 <td><span>METER</span></td>
 <td><span>m</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1406,7 +1406,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Hecto Pascal</span></td>
+<td><span>\* Hecto Pascal</span></td>
 <td><span>HECTOPASCAL</span></td>
 <td><span>hpa</span></td>
 </tr>
@@ -1414,7 +1414,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Battery</span></td>
 <td rowspan="3"><span>BATTERY</span></td>
 <td rowspan="3"><span>batt</span></td>
-<td><span>* % (0 to 100)</span></td>
+<td><span>\* % (0 to 100)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
 <td rowspan="3"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
@@ -1442,7 +1442,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Blood Count</span></td>
 <td rowspan="2"><span>BLOOD</span></td>
 <td rowspan="2"><span>blood</span></td>
-<td><span>* Cells by cubic millimeter</span></td>
+<td><span>\* Cells by cubic millimeter</span></td>
 <td><span>CELLS_MM3</span></td>
 <td><span>cmm</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1462,7 +1462,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="6"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Bytes</span></td>
+<td><span>\* Bytes</span></td>
 <td><span>BYTE</span></td>
 <td><span>byte</span></td>
 </tr>
@@ -1499,7 +1499,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Carbon Dioxide</span></td>
 <td rowspan="2"><span>CO2</span></td>
 <td rowspan="2"><span>co2</span></td>
-<td><span>* Parts per milliion</span></td>
+<td><span>\* Parts per milliion</span></td>
 <td><span>PPM</span></td>
 <td><span>ppm</span></td>
 <td rowspan="2"><span>CO2 Detector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1528,7 +1528,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Milligrams/deciliter</span></td>
+<td><span>\* Milligrams/deciliter</span></td>
 <td><span>MG_DL</span></td>
 <td><span>mgdl</span></td>
 </tr>
@@ -1536,7 +1536,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Color</span></td>
 <td rowspan="3"><span>COLOR</span></td>
 <td rowspan="3"><span>color</span></td>
-<td><span>* RGB</span></td>
+<td><span>\* RGB</span></td>
 <td><span>RGB</span></td>
 <td><span>null</span></td>
 <td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1619,7 +1619,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Force</span></td>
 <td rowspan="2"><span>FORCE</span></td>
 <td rowspan="2"><span>force</span></td>
-<td><span>* Newtons</span></td>
+<td><span>\* Newtons</span></td>
 <td><span>NEWTON</span></td>
 <td><span>null</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1642,7 +1642,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Gas</span></td>
 <td rowspan="3"><span>GAS</span></td>
 <td rowspan="3"><span>gas</span></td>
-<td><span>* Pascal</span></td>
+<td><span>\* Pascal</span></td>
 <td><span>PASCAL</span></td>
 <td><span>pa</span></td>
 <td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1667,7 +1667,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Milligrams/deciliter</span></td>
+<td><span>\* Milligrams/deciliter</span></td>
 <td><span>MG_DL</span></td>
 <td><span>mgdl</span></td>
 </tr>
@@ -1675,7 +1675,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>GPS</span></td>
 <td rowspan="2"><span>GPS</span></td>
 <td rowspan="2"><span>gps</span></td>
-<td><span>* Global Positioning System</span></td>
+<td><span>\* Global Positioning System</span></td>
 <td><span>GPS</span></td>
 <td><span>gps</span></td>
 <td rowspan="2"><span><a href="#map-widget">Map</a></span></td>
@@ -1695,7 +1695,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2">Gravity (coming soon), <a href="#donut-widget">Donut (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></td>
 </tr>
 <tr>
-<td><span>* Meters per second squared</span></td>
+<td><span>\* Meters per second squared</span></td>
 <td><span>METER_PER_SEC_SQ</span></td>
 <td><span>ms2</span></td>
 </tr>
@@ -1709,7 +1709,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2">Gravity (coming soon), <a href="#donut-widget">Donut (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></td>
 </tr>
 <tr>
-<td><span>* Meters per second squared</span></td>
+<td><span>\* Meters per second squared</span></td>
 <td><span>METER_PER_SEC_SQ</span></td>
 <td><span>ms2</span></td>
 </tr>
@@ -1723,7 +1723,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Gravity (coming soon), <a href="#donut-widget">Donut (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Meters per second squared</span></td>
+<td><span>\* Meters per second squared</span></td>
 <td><span>METER_PER_SEC_SQ</span></td>
 <td><span>ms2</span></td>
 </tr>
@@ -1731,7 +1731,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Gyroscope.rate of rotation around x axis</span></td>
 <td rowspan="2"><span>GYRO_X</span></td>
 <td rowspan="2"><span>gyro_x</span></td>
-<td><span>* Rotation speed</span></td>
+<td><span>\* Rotation speed</span></td>
 <td><span>ROTATION</span></td>
 <td><span>rot</span></td>
 <td rowspan="2"><span><a href="#gyroscope-widget">Gyroscope (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1745,7 +1745,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Gyroscope.rate of rotation around y axis</span></td>
 <td rowspan="2"><span>GYRO_Y</span></td>
 <td rowspan="2"><span>gyro_y</span></td>
-<td><span>* Rotation speed</span></td>
+<td><span>\* Rotation speed</span></td>
 <td><span>ROTATION</span></td>
 <td><span>rot</span></td>
 <td rowspan="2"><span><a href="#gyroscope-widget">Gyroscope (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1759,7 +1759,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Gyroscope.rate of rotation around z axis</span></td>
 <td rowspan="2"><span>GYRO_Z</span></td>
 <td rowspan="2"><span>gyro_z</span></td>
-<td><span>* Rotation speed</span></td>
+<td><span>\* Rotation speed</span></td>
 <td><span>ROTATION</span></td>
 <td><span>rot</span></td>
 <td rowspan="2"><span><a href="#gyroscope-widget">Gyroscope (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1854,7 +1854,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Ionizing Radiation</span></td>
 <td rowspan="3"><span>IONIZING_RADIATION</span></td>
 <td rowspan="3"><span>ion_rad</span></td>
-<td><span>* Electron Volts</span></td>
+<td><span>\* Electron Volts</span></td>
 <td><span>ELECTRON_VOLT</span></td>
 <td><span>ev</span></td>
 <td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1873,7 +1873,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Length</span></td>
 <td rowspan="3"><span>LENGTH</span></td>
 <td rowspan="3"><span>len</span></td>
-<td><span>* Meter</span></td>
+<td><span>\* Meter</span></td>
 <td><span>METER</span></td>
 <td><span>m</span></td>
 <td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1898,7 +1898,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="4"><span><a href="#lighting-widget">Lighting (coming soon)</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Lux</span></td>
+<td><span>\* Lux</span></td>
 <td><span>LUX</span></td>
 <td><span>lux</span></td>
 </tr>
@@ -1943,7 +1943,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="4"><span>Liquid</span></td>
 <td rowspan="4"><span>LIQUID</span></td>
 <td rowspan="4"><span>liquid</span></td>
-<td><span>* Liter</span></td>
+<td><span>\* Liter</span></td>
 <td><span>LITER</span></td>
 <td><span>l</span></td>
 <td rowspan="4"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -1985,7 +1985,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="4"><span>Luminosity</span></td>
 <td rowspan="4"><span>LUMINOSITY</span></td>
 <td rowspan="4"><span>lum</span></td>
-<td><span>* Lux</span></td>
+<td><span>\* Lux</span></td>
 <td><span>LUX</span></td>
 <td><span>lux</span></td>
 <td rowspan="4"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2069,7 +2069,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Megabytes</span></td>
+<td><span>\* Megabytes</span></td>
 <td><span>MB_BYTE</span></td>
 <td><span>mb</span></td>
 </tr>
@@ -2097,7 +2097,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* gallon</span></td>
+<td><span>\* gallon</span></td>
 <td><span>GALLON</span></td>
 <td><span>gal</span></td>
 </tr>
@@ -2173,7 +2173,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="7"><span>Pressure</span></td>
 <td rowspan="7"><span>PRESSURE</span></td>
 <td rowspan="7"><span>press</span></td>
-<td><span>* Pascal</span></td>
+<td><span>\* Pascal</span></td>
 <td><span>PASCAL</span></td>
 <td><span>pa</span></td>
 <td rowspan="7"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2212,10 +2212,10 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Proximity</span></td>
 <td rowspan="3"><span>PROXIMITY</span></td>
 <td rowspan="3"><span>prox</span></td>
-<td><span>* Centimeter</span></td>
+<td><span>\* Centimeter</span></td>
 <td><span>CENTIMETER</span></td>
 <td><span>cm</span></td>
-<td rowspan="2"><span><a href="#proximity-widget">Proximity (coming soon)</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
+<td rowspan="3"><span><a href="#proximity-widget">Proximity (coming soon)</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Meter</span></td>
@@ -2237,7 +2237,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Curie</span></td>
+<td><span>\* Curie</span></td>
 <td><span>CURIE</span></td>
 <td><span>ci</span></td>
 </tr>
@@ -2245,7 +2245,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Radiation Exposure</span></td>
 <td rowspan="2"><span>EXPOSURE_RADIATION</span></td>
 <td rowspan="2"><span>expo_rad</span></td>
-<td><span>* Roentgen</span></td>
+<td><span>\* Roentgen</span></td>
 <td><span>ROENTGEN</span></td>
 <td><span>roent</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2259,7 +2259,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Relative Humidity</span></td>
 <td rowspan="2"><span>RELATIVE_HUMIDITY</span></td>
 <td rowspan="2"><span>rel_hum</span></td>
-<td><span>* % (0 to 100)</span></td>
+<td><span>\* % (0 to 100)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2288,7 +2288,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Revolutions per second</span></td>
+<td><span>\* Revolutions per second</span></td>
 <td><span>RPMS</span></td>
 <td><span>rpms</span></td>
 </tr>
@@ -2310,7 +2310,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Rotation Vector.x axis</span></td>
 <td><span>ROTATION_X</span></td>
 <td><span>rot_x</span></td>
-<td><span>X * sin (0/2)</span></td>
+<td><span>X \* sin (0/2)</span></td>
 <td><span>ROT_X</span></td>
 <td><span>null</span></td>
 <td><span>Rotation Vector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2319,7 +2319,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Rotation Vector.y axis</span></td>
 <td><span>ROTATION_Y</span></td>
 <td><span>rot_y</span></td>
-<td><span>Y * sin (0/2)</span></td>
+<td><span>Y \* sin (0/2)</span></td>
 <td><span>ROT_Y</span></td>
 <td><span>null</span></td>
 <td><span>Rotation Vector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2328,7 +2328,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Rotation Vector.z axis</span></td>
 <td><span>ROTATION_Z</span></td>
 <td><span>rot_z</span></td>
-<td><span>Z * sin (0/2)</span></td>
+<td><span>Z \* sin (0/2)</span></td>
 <td><span>ROT_Z</span></td>
 <td><span>null</span></td>
 <td><span>Rotation Vector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2343,7 +2343,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Volts</span></td>
+<td><span>\* Volts</span></td>
 <td><span>VOLTS</span></td>
 <td><span>v</span></td>
 </tr>
@@ -2376,7 +2376,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>pz</span></td>
 </tr>
 <tr>
-<td><span>* Kiloelectron Volts</span></td>
+<td><span>\* Kiloelectron Volts</span></td>
 <td><span>KILOELEC_VOLT</span></td>
 <td><span>kev</span></td>
 </tr>
@@ -2417,7 +2417,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Miles per hour</span></td>
+<td><span>\* Miles per hour</span></td>
 <td><span>MPH</span></td>
 <td><span>mph</span></td>
 </tr>
@@ -2445,7 +2445,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>kb</span></td>
 </tr>
 <tr>
-<td><span>* Megabytes</span></td>
+<td><span>\* Megabytes</span></td>
 <td><span>MB_BYTE</span></td>
 <td><span>mb</span></td>
 </tr>
@@ -2469,7 +2469,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Hecto Pascal</span></td>
+<td><span>\* Hecto Pascal</span></td>
 <td><span>HECTOPASCAL</span></td>
 <td><span>hpa</span></td>
 </tr>
@@ -2488,7 +2488,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span><a href="#value-display">Value</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a></span></td>
 </tr>
 <tr>
-<td><span>* Celsius</span></td>
+<td><span>\* Celsius</span></td>
 <td><span>CELSIUS</span></td>
 <td><span>c</span></td>
 </tr>
@@ -2501,7 +2501,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="7"><span>Time</span></td>
 <td rowspan="7"><span>TIME</span></td>
 <td rowspan="7"><span>time</span></td>
-<td><span>* Second</span></td>
+<td><span>\* Second</span></td>
 <td><span>s</span></td>
 <td><span>sec</span></td>
 <td rowspan="7"><span>Time (coming soon), <a href="#lcd-widget">LCD (coming soon)</a>, <a href="#value-display">Value</a></span></td>
@@ -2540,7 +2540,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Torque</span></td>
 <td rowspan="2"><span>TORQUE</span></td>
 <td rowspan="2"><span>torq</span></td>
-<td><span>* Newton-meter</span></td>
+<td><span>\* Newton-meter</span></td>
 <td><span>nm</span></td>
 <td><span>newtm</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2560,7 +2560,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>* Formazin Turbidity Unit</span></td>
+<td><span>\* Formazin Turbidity Unit</span></td>
 <td><span>ftu</span></td>
 <td><span>ftu</span></td>
 </tr>
@@ -2595,7 +2595,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Voltage</span></td>
 <td rowspan="2"><span>VOLTAGE</span></td>
 <td rowspan="2"><span>voltage</span></td>
-<td><span>* Volts</span></td>
+<td><span>\* Volts</span></td>
 <td><span>VOLTS</span></td>
 <td><span>v</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2618,7 +2618,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Water</span></td>
 <td rowspan="2"><span>WATER</span></td>
 <td rowspan="2"><span>h20</span></td>
-<td><span>* Gallons per minute</span></td>
+<td><span>\* Gallons per minute</span></td>
 <td><span>GPM</span></td>
 <td><span>gpm</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
@@ -2641,7 +2641,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="2"><span>Weight</span></td>
 <td rowspan="2"><span>WEIGHT</span></td>
 <td rowspan="2"><span>weight</span></td>
-<td><span>* Pounds</span></td>
+<td><span>\* Pounds</span></td>
 <td><span>POUND</span></td>
 <td><span>lbs</span></td>
 <td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
