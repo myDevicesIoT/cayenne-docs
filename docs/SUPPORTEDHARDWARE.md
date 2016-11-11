@@ -466,6 +466,32 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   GPS
 *   Accelerometer
 
+### Haxiot
+
+#### Haxiot Arduino Shield
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Haxiot-Arduino-Shield.png" width="383" height="138" class="noborder" alt="GlobalSat LT-100"></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
+
+**Links:**
+
+*   <a href="http://haxiot.com/shop/arduino-lorawan-shield-eu868/" target="_blank">Product Page (EU)</a>
+*   <a href="http://haxiot.com/shop/arduino-lorawan-us900/" target="_blank">Product Page (US)</a>
+*   <a href="http://haxiot.com/download/11414/" target="_blank">User Guide</a>
+
+**Sensors included:**
+
+*   Temperature
+*   Accelerometer
+
+**Other:**
+
+*   Supports LoRaWAN
 
 ### Multitech
 
@@ -493,6 +519,25 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   Accelerometer
 *   GPS
 
+#### XDot
+
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MultiConnect-xDot.png" width="383" height="138" class="noborder" alt="xDot"></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
+
+**Links:**
+
+*   <a href="http://www.multitech.com/brands/multiconnect-xdot" target="_blank">Product Page</a>
+*   <a href="http://www.multitech.com/documents/publications/data-sheets/86002182.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.multitech.com/documents/publications/manuals/82101900l.pdf" target="_blank">User Guide</a>
+
+**Other:**
+
+*   LoRaWAN Gateway Device
 
 ### NKE Watteco
 
