@@ -411,7 +411,7 @@ Once our board comes online, it will read the current sensor data from our TMP36
 
 Now that we have our board connected to Cayenne and it has successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. The Nucleo board includes an onboard LED already. Let’s make use of this and create a Button widget on our dashboard that will let us turn this light ON/OFF.
 
-*TIP: Although we’ll be using the Nucleo’s onboard light, the method of adding an additional external digital actuator is the same as what’s shown here for our Nucleo board. Every board type is different however. Refer to the documentation and code examples for your specific board to see how to program specifically for it.*
+*TIP: Although we’ll be using the Nucleo’s onboard light, the method of adding an additional external actuator is the same as what’s shown here for our Nucleo board. Every board type is different however. Refer to the documentation and code examples for your specific board to see how to program specifically for it.*
 
 In order for Cayenne to be able to control the Nucleo’s onboard light, we must perform the following tasks:
 
@@ -1075,11 +1075,10 @@ Examining MQTT.fx, we can see the Command message arrive from Cayenne. The messa
 To tell Cayenne what the updated value is, we refer to the [Send Actuator Updated Value](#bring-your-own-thing-api-mqtt-messaging-topics-send-actuator-updated-value) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Cayenne expects one of the following:
 
 ```
-v1/username/things/clientID/digital/channel
-v1/username/things/clientID/analog/channel
+v1/username/things/clientID/data/channel
 ```
 
-In our case, we're using a Digital (0/1) actuator, so we use the first form. Once again, we then substitute in the values for our account, board and actuator.
+Once again, we then substitute in the values for our account, board and actuator.
 
 + Replace **username** with the **MQTT Username** for your account.
 + Replace **clientID** with the **Client ID** for your board.
