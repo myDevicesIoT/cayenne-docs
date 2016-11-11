@@ -1412,13 +1412,23 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>hpa</span></td>
 </tr>
 <tr>
-<td><span>Battery</span></td>
-<td><span>BATTERY</span></td>
-<td><span>batt</span></td>
-<td><span>% (0 to 100)</span></td>
+<td rowspan="3"><span>Battery</span></td>
+<td rowspan="3"><span>BATTERY</span></td>
+<td rowspan="3"><span>batt</span></td>
+<td><span>* % (0 to 100)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
-<td><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
+<td rowspan="3"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td><span>Ratio</span></td>
+<td><span>RATIO</span></td>
+<td><span>r</span></td>
+</tr>
+<tr>
+<td><span>Volts</span></td>
+<td><span>VOLTS</span></td>
+<td><span>v</span></td>
 </tr>
 <tr>
 <td><span>Biometric</span></td>
@@ -2200,13 +2210,18 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>psi</span></td>
 </tr>
 <tr>
-<td rowspan="2"><span>Proximity</span></td>
-<td rowspan="2"><span>PROXIMITY</span></td>
-<td rowspan="2"><span>prox</span></td>
+<td rowspan="3"><span>Proximity</span></td>
+<td rowspan="3"><span>PROXIMITY</span></td>
+<td rowspan="3"><span>prox</span></td>
 <td><span>* Centimeter</span></td>
 <td><span>CENTIMETER</span></td>
 <td><span>cm</span></td>
-<td rowspan="2"><span><a href="#proximity-widget">Proximity (coming soon)</a>, <a href="#2-state-display">2 State</a>, <a href="#line-chart-display">Line Chart</a></span></td>
+<td rowspan="2"><span><a href="#proximity-widget">Proximity (coming soon)</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td><span>Meter</span></td>
+<td><span>METER</span></td>
+<td><span>m</span></td>
 </tr>
 <tr>
 <td><span>Digital (0/1)</span></td>
@@ -2242,13 +2257,18 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>ckg</span></td>
 </tr>
 <tr>
-<td><span>Relative Humidity</span></td>
-<td><span>RELATIVE_HUMIDITY</span></td>
-<td><span>rel_hum</span></td>
-<td><span>Relative Humidity</span></td>
-<td><span>REL_HUMIDITY</span></td>
-<td><span>rel_hum</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+<td rowspan="2"><span>Relative Humidity</span></td>
+<td rowspan="2"><span>RELATIVE_HUMIDITY</span></td>
+<td rowspan="2"><span>rel_hum</span></td>
+<td><span>* % (0 to 100)</span></td>
+<td><span>PERCENT</span></td>
+<td><span>p</span></td>
+<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td><span>Ratio</span></td>
+<td><span>RATIO</span></td>
+<td><span>r</span></td>
 </tr>
 <tr>
 <td><span>Resistance</span></td>
@@ -2460,13 +2480,13 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>psi</span></td>
 </tr>
 <tr>
-<td rowspan="6"><span>Temperature</span></td>
-<td rowspan="6"><span>TEMPERATURE</span></td>
-<td rowspan="6"><span>temp</span></td>
+<td rowspan="3"><span>Temperature</span></td>
+<td rowspan="3"><span>TEMPERATURE</span></td>
+<td rowspan="3"><span>temp</span></td>
 <td><span>Fahrenheit</span></td>
 <td><span>FAHRENHEIT</span></td>
 <td><span>f</span></td>
-<td rowspan="6"><span><a href="#value-display">Value</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a></span></td>
+<td rowspan="3"><span><a href="#value-display">Value</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a></span></td>
 </tr>
 <tr>
 <td><span>* Celsius</span></td>
@@ -2477,21 +2497,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Kelvin</span></td>
 <td><span>KELVIN</span></td>
 <td><span>k</span></td>
-</tr>
-<tr>
-<td><span>Volts</span></td>
-<td><span>VOLTS</span></td>
-<td><span>v</span></td>
-</tr>
-<tr>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-</tr>
-<tr>
-<td><span>Ratio</span></td>
-<td><span>RATIO</span></td>
-<td><span>r</span></td>
 </tr>
 <tr>
 <td rowspan="7"><span>Time</span></td>
@@ -2588,13 +2593,18 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>Voltage</span></td>
-<td><span>VOLTAGE</span></td>
-<td><span>voltage</span></td>
-<td><span>Volts</span></td>
+<td rowspan="2"><span>Voltage</span></td>
+<td rowspan="2"><span>VOLTAGE</span></td>
+<td rowspan="2"><span>voltage</span></td>
+<td><span>* Volts</span></td>
 <td><span>VOLTS</span></td>
 <td><span>v</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td><span>Millivolts</span></td>
+<td><span>MILLIVOLTS</span></td>
+<td><span>mv</span></td>
 </tr>
 <tr>
 <td><span>Volume</span></td>
