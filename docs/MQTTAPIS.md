@@ -1072,7 +1072,7 @@ Examining MQTT.fx, we can see the Command message arrive from Cayenne. The messa
 
 **Note:** Normally, at this point we would handle actually changing the state of our actuator. For example, our code would interact with the actuator and change its state. Since we're just faking some data, there's nothing for us to actually change, but we do need to inform Cayenne that the actuator's state was changed. We do so by sending a value to Cayenne for what the new state is. Cayenne wanted us to turn on the Light, so let's simply tell Cayenne that's what happened.
 
-To tell Cayenne what the updated value is, we refer to the [Send Actuator Updated Value](#bring-your-own-thing-api-mqtt-messaging-topics-send-actuator-updated-value) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Cayenne expects one of the following:
+To tell Cayenne what the updated value is, we refer to the [Send Actuator Updated Value](#bring-your-own-thing-api-mqtt-messaging-topics-send-actuator-updated-value) section of the docs. There, we find the details on what MQTT call to make. According to the docs, Cayenne expects:
 
 ```
 v1/username/things/clientID/data/channel
