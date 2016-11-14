@@ -295,9 +295,9 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### Ascoel
 
-#### Ascoel Door Switch
+#### Ascoel CM868LR / CMUS915LR
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823080851/Component-images_0001_Ascoel-Door-Switch.png" width="346" height="138" class="noborder" alt="Ascoel Door Switch"></p>
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823080851/Component-images_0001_Ascoel-Door-Switch.png" width="346" height="138" class="noborder" alt="Ascoel CM868LR / CMUS915LR"></p>
 
 **Networks supported:**
 
@@ -313,9 +313,9 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   Door Switch
 
-#### Ascoel Motion Sensor
+#### Ascoel CM868LRTH / CMUS915LRTH
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823081133/Component-images_0000_Ascoel-Motion-Sensor.png" width="346" height="134" class="noborder" alt="Ascoel Motion Sensor"></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Ascoel-CM__LRTH.png" width="383" height="138" class="noborder" alt="Ascoel CM868LRTH / CMUS915LRTH"></p>
 
 **Networks supported:**
 
@@ -325,16 +325,17 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Links:**
 
-*   <a href="http://www.ascoel.it/index.php?lang=en" target="_blank">Product Page</a>
-*   <a href="http://www.ascoel.it/images/pdf_ascoel/IR868LR_eng.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.ascoel.it/images/pdf_ascoel/CM868LRTH_eng.pdf" target="_blank">Datasheet</a>
 
 **Sensors included:**
 
-*   Motion
+*   Door Switch
+*   Temperature
+*   Humidity
 
-#### Ascoel CO2
+#### Ascoel CO868LR / COUS915LR
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Ascoel CO2"></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Ascoel CO868LR / COUS915LR"></p>
 
 **Networks supported:**
 
@@ -351,6 +352,25 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   Temperature
 *   Humidity
 *   CO2
+
+#### Ascoel IR868LR / IRUS915LR
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823081133/Component-images_0000_Ascoel-Motion-Sensor.png" width="346" height="134" class="noborder" alt="Ascoel IR868LR / IRUS915LR"></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
+
+**Links:**
+
+*   <a href="http://www.ascoel.it/index.php?lang=en" target="_blank">Product Page</a>
+*   <a href="http://www.ascoel.it/images/pdf_ascoel/IR868LR_eng.pdf" target="_blank">Datasheet</a>
+
+**Sensors included:**
+
+*   Motion
 
 
 ### Elsys
