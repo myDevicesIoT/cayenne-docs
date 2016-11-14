@@ -286,24 +286,28 @@ The Pulse has been added to your dashboard and Cayenne will automatically add wi
 **Actility network devices supported by Cayenne**
 Cayenne currently supports the following devices on the Actility network. Support for more devices is constantly ongoing.
 
-*   [Adeunis LoRa Demonstrator](#supported-hardware-lora-devices-adeunis-lora-demonstrator)
-*   [Adeunis LoRa Field Test Device](#supported-hardware-lora-devices-adeunis-lora-field-test-device)
-*   [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-lora-pulse)
-*   [Adeunis LoRa Sensors](#supported-hardware-lora-devices-adeunis-lora-sensors)
-*   [Ascoel CO2](#supported-hardware-lora-devices-ascoel-ascoel-co2)
-*   [Ascoel Door Switch](#supported-hardware-lora-devices-ascoel-ascoel-door-switch)
-*   [Ascoel Motion Sensor](#supported-hardware-lora-devices-ascoel-ascoel-motion-sensor)
+*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
+*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
+*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
+*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
+*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
+*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
+*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
+*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
 *   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
 *   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
+*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
 *   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
 *   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-mdotbox)
-*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-watteco-smart-plug)
-*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-thr)
+*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
+*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
+*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
+*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
+*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
 *   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRa Motes EU](#supported-hardware-lora-devices-semtech-lora-motes-eu)
-*   [Semtech LoRa Motes US](#supported-hardware-lora-devices-semtech-lora-motes-usa)
+*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
+*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
+
 
 **Actility Device Profiles by device**
 
@@ -454,7 +458,7 @@ Once your device has been previously registered on the Senet network, it can be 
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-senet-network-manual-register-device) if you need help with manually registering your device on the network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 
-To see how easy it is, let’s walk through an example of connecting an [Multitech mDotBox](#supported-hardware-lora-devices-multitech-mdotbox) which was previously registered under a [Senet account](#lora-senet-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox) which was previously registered under a [Senet account](#lora-senet-network-create-account).
 
 **1\. Choose the Network** <br/>
 Make sure the **Senet** network is selected in the list of Networks.
@@ -486,20 +490,24 @@ The Multitech mDotBox device has been added to your dashboard and Cayenne will a
 
 Cayenne currently supports the following devices on the Senet network. Support for more devices is constantly ongoing.
 
-*   [Adeunis LoRa Field Test Device](#supported-hardware-lora-devices-adeunis-lora-field-test-device)
-*   [Ascoel CO2](#supported-hardware-lora-devices-ascoel-ascoel-co2)
-*   [Ascoel Door Switch](#supported-hardware-lora-devices-ascoel-ascoel-door-switch)
-*   [Ascoel Motion Sensor](#supported-hardware-lora-devices-ascoel-ascoel-motion-sensor)
+*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
+*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
+*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
+*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
+*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
 *   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
 *   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
+*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
 *   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
 *   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-mdotbox)
-*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-watteco-smart-plug)
-*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-thr)
+*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
+*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
+*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
+*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
+*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
 *   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRa Motes US](#supported-hardware-lora-devices-semtech-lora-motes-usa)
+*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
+
 
 ## Loriot Network
 
@@ -656,7 +664,7 @@ If your device has been previously registered on the Loriot network, it can be q
 
    <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Security-Token-screen.png" width="660" height="394" alt="Security token"><br/><br/></p>
 
-To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under an [Loriot account](#lora-loriot-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under an [Loriot account](#lora-loriot-network-create-account).
 
 **1\. Choose the Network**
 
@@ -695,21 +703,24 @@ The Pulse has been added to your dashboard and Cayenne will automatically add wi
 
 Cayenne currently supports the following devices on the Loriot network. Support for more devices is constantly ongoing.
 
-*   [Adeunis LoRa Demonstrator](#supported-hardware-lora-devices-adeunis-lora-demonstrator)
-*   [Adeunis LoRa Field Test Device](#supported-hardware-lora-devices-adeunis-lora-field-test-device)
-*   [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-lora-pulse)
-*   [Adeunis LoRa Sensors](#supported-hardware-lora-devices-adeunis-lora-sensors)
-*   [Ascoel CO2](#supported-hardware-lora-devices-ascoel-ascoel-co2)
-*   [Ascoel Door Switch](#supported-hardware-lora-devices-ascoel-ascoel-door-switch)
-*   [Ascoel Motion Sensor](#supported-hardware-lora-devices-ascoel-ascoel-motion-sensor)
+*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
+*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
+*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
+*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
+*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
+*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
+*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
+*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
 *   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
 *   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
+*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
 *   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
 *   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-mdotbox)
-*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-watteco-smart-plug)
-*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-thr)
+*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
+*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
+*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
+*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
+*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
 *   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRa Motes EU](#supported-hardware-lora-devices-semtech-lora-motes-eu)
-*   [Semtech LoRa Motes US](#supported-hardware-lora-devices-semtech-lora-motes-usa)
+*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
+*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
