@@ -253,7 +253,7 @@ If your device has been previously registered on the Actility network, it can be
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-actility-manually-register-device) if you need help with manually registering your device on a network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 
-To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-lora-pulse) which was previously registered under an [Actility account](#lora-actility-create-account).
+To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under an [Actility account](#lora-actility-create-account).
 
 **1\. Choose the Network** <br/>
 Make sure the **Actility** network is selected in the list of Networks.'
@@ -261,7 +261,7 @@ Make sure the **Actility** network is selected in the list of Networks.'
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Actility-menu-1.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 **2\. Select the Device** <br/>
-Select your device from among the list supported Actility devices. In this case, we’ll select the **Adeunis LoRa Pulse**.
+Select your device from among the list supported Actility devices. In this case, we’ll select the **Adeunis Pulse**.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Pulse-selected.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
@@ -276,7 +276,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-Actility-LoRa-Pulse-already-registered.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
-The LoRa Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
+The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
@@ -656,7 +656,7 @@ If your device has been previously registered on the Loriot network, it can be q
 
    <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Security-Token-screen.png" width="660" height="394" alt="Security token"><br/><br/></p>
 
-To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-lora-pulse) which was previously registered under an [Loriot account](#lora-loriot-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under an [Loriot account](#lora-loriot-network-create-account).
 
 **1\. Choose the Network**
 
@@ -666,7 +666,7 @@ Make sure the **Loriot** network is selected in the list of Networks.
 
 **2\. Select the Device**
 
-Select your device from among the list supported Loriot devices. In this case, we’ll select the **Adeunis LoRa Pulse**.
+Select your device from among the list supported Loriot devices. In this case, we’ll select the **Adeunis Pulse**.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Loriot-device-highlight.png" width="660" height="395" alt="Loriot device highlight"><br/><br/></p>
 
@@ -684,7 +684,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-pulse-settings.png" width="660" height="394" alt="Loriot Pulse settings"><br/><br/></p>
 
-The LoRa Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
+The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
 
