@@ -207,9 +207,9 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### Adeunis
 
-#### LoRa Demonstrator
+#### Adeunis Demonstrator
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083258/Component-images_0002_Adeunis-LoRa-Demonstrator.png" width="346" height="118" class="noborder" alt="LoRa Demonstrator"></p>
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083258/Component-images_0002_Adeunis-LoRa-Demonstrator.png" width="346" height="118" class="noborder" alt="Adeunis Demonstrator"></p>
 
 **Networks supported:**
 
@@ -225,34 +225,33 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Sensors included:** 
 
+*   GPS
 *   Temperature
 *   Accelerometer
-*   GPS
 
 
-#### LoRa Sensors
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083430/Component-images_0001_Adeunis-LoRa-Sensors.png" width="346" height="131" class="noborder" alt="LoRa Sensors"></p>
+#### Adeunis Field Test Device
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
 
 **Links:**
 
-*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-sensors" target="_blank">Product Page</a>
-*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">Datasheet</a>
-*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">User Guide</a>
+*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/field_test_device_lorawan_868" target="_blank">Product Page</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/188/trad_file/eng/arf_lorawan_field_test_device_868_data_sheet_v1.0_fr_gb.pdf" target="_blank">Datasheet</a>
 
 **Sensors included:**
 
-*   Any type of 0-10V, 4-20mA & Dry contacts sensor
+*   Temperature
+*   Accelerometer
+*   GPS
 
+#### Adeunis Pulse
 
-#### LoRa Pulse
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083603/Component-images_0000_Adeunis-Pulse.png" width="346" height="120" class="noborder" alt="LoRa Pulse"></p>
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083603/Component-images_0000_Adeunis-Pulse.png" width="346" height="120" class="noborder" alt="Adeunis Pulse"></p>
 
 **Networks supported:**
 
@@ -272,25 +271,25 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   Electricity
 *   Heat
 
+#### Adeunis Sensors
 
-#### LoRa Field Test Device
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083430/Component-images_0001_Adeunis-LoRa-Sensors.png" width="346" height="131" class="noborder" alt="Adeunis Sensors transceiver"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
-*   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
 
 **Links:**
 
-*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/field_test_device_lorawan_868" target="_blank">Product Page</a>
-*   <a href="http://www.adeunis-rf.com/media/downloads/188/trad_file/eng/arf_lorawan_field_test_device_868_data_sheet_v1.0_fr_gb.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-sensors" target="_blank">Product Page</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">User Guide</a>
 
 **Sensors included:**
 
-*   Temperature
-*   Accelerometer
-*   GPS
+*   Supports up to 2 sensors
+*   Any type of 0-10V, 4-20mA & Dry contacts sensor
 
 
 ### Ascoel
@@ -349,9 +348,9 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Sensors included:**
 
+*   CO2
 *   Temperature
 *   Humidity
-*   CO2
 
 #### Ascoel IR868LR / IRUS915LR
 
@@ -392,14 +391,15 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Sensors included:**
 
+*   Analog
+*   Digital
 *   Temperature
 *   Humidity
-*   Analog
 
 
 #### Elsys ESM5k
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ESM5k.png" width="383" height="138" class="noborder" alt="Elysys ESM5k"></p>
 
 **Networks supported:**
 
@@ -419,6 +419,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   Humidity
 *   Accelerometer
 *   Light
+*   Motion (optional)
 
 
 #### Elsys ERS
@@ -441,9 +442,9 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   Temperature
 *   Humidity
-*   CO2
 *   Light
 *   Motion
+*   CO2 (optional)
 
 
 ### GlobalSat
@@ -515,7 +516,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### Multitech
 
-#### mDotBox
+#### Multitech mDotBox
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823082013/Component-images_0000_mDotBox.png" width="346" height="139" class="noborder" alt="mDotBox"></p>
 
@@ -539,7 +540,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   Accelerometer
 *   GPS
 
-#### XDot
+#### Multitech XDot
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MultiConnect-xDot.png" width="383" height="138" class="noborder" alt="xDot"></p>
 
@@ -561,7 +562,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### NKE Watteco
 
-#### Watteco Smart Plug
+#### NKE Watteco Smart Plug
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823084310/Component-images_0001_Watteco-Smart-Plug.png" width="346" height="129" class="noborder" alt="Watteco Smart Plug"></p>
 
@@ -582,7 +583,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   ON/Off Switch
 
 
-#### THr
+#### NKE Watteco THr
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823084342/Component-images_0000_Watteco-THr.png" width="346" height="141" class="noborder" alt="THr"></p>
 
@@ -628,7 +629,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### Semtech
 
-#### LoRa Motes EU
+#### Semtech LoRaMote EU
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822154357/Component-images_0002_Semtech-LoRa-Motes-EU.png" width="346" height="134" class="noborder" alt="LoRa Motes EU"></p>
 
@@ -644,12 +645,15 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Sensors included:**
 
+*   GPS
+*   Magnetometer
+*   Accelerometer
+*   Altimeter
 *   Temperature
 *   Pressure
-*   GPS
 
 
-#### LoRa Motes USA
+#### Semtech LoRaMote USA
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822153723/Component-images_0001_Semtech-LoRa-Motes-US.png" width="346" height="126" class="noborder" alt="LoRa Motes USA"></p>
 
@@ -665,9 +669,12 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Sensors included:**
 
+*   GPS
+*   Magnetometer
+*   Accelerometer
+*   Altimeter
 *   Temperature
 *   Pressure
-*   GPS
 
 
 ## Actuators
