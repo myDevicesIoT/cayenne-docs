@@ -376,7 +376,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Elsys ELT-1
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" alt="component-doc-image-elsys-elt1"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" class="noborder" alt="Elysys ELT-1"></p>
 
 **Networks supported:**
 
@@ -451,7 +451,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### GlobalSat LS-111 CO2
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" alt="component-doc-image-globalsat-ls111"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" class="noborder" alt="GlobalSat LS-111"></p>
 
 **Networks supported:**
 
