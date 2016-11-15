@@ -503,8 +503,6 @@ Cayenne currently supports the following devices on the Senet network. Support 
 *   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
 *   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
 *   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
-*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
-*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
 *   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
 *   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
 
