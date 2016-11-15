@@ -548,8 +548,7 @@ In order for your LoRa devices to connect to the Loriot network, you must have p
 
 ### Create Cayenne Data Output
 
-**TODO: Replace with video of this process**
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/rpZo-GKd7mY" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/euB4Axp1e2M" frameborder="0" allowfullscreen></iframe></p>
 
 In order for data from your device to reach Cayenne, you must configured your devices in the Loriot portal to forward data to Cayenne. The Loriot portal groups devices in what they call **Applications**. If you want to use a group of devices with Cayenne, you will need to perform some configuration on the portal. You only need to perform this step once for each Application that you want to use. To set this up, click on the **Applications** button in the portal. The *Network Applications* screen appears.
 
@@ -581,8 +580,7 @@ https://longrangeapi.mydevices.com/longrange/api/loriot/messages/add
 
 Before you can use your LoRa device on the Loriot network, it must be registered on the network. If you need to regsiter your device with Loriot, the following information will help guide you through this process using Loriot's portal.
 
-**TODO: Update link to new Loriot video**
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/hxhRwEalGvk" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/q6o1AzSuo9c" frameborder="0" allowfullscreen></iframe></p>
 
 Devices must be added into an **Application** in the Loriot portal. To enroll a new device, click on **Applications** and then select which Application your device will be added to. This will open your application's dashboard.
 
@@ -628,8 +626,7 @@ If your device needs to be programmed, you should now proceed with programming/f
 
 ### Add device to Cayenne
 
-**TODO: Update link to new Loriot video**
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/u6QuVJCUTo4" frameborder="0" allowfullscreen></iframe></p>
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/AwFwQ4cVpIg" frameborder="0" allowfullscreen></iframe></p>
 
 Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
 
