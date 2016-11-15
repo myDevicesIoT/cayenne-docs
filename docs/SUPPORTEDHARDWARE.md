@@ -503,6 +503,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   <a href="http://haxiot.com/shop/arduino-lorawan-shield-eu868/" target="_blank">Product Page (EU)</a>
 *   <a href="http://haxiot.com/shop/arduino-lorawan-us900/" target="_blank">Product Page (US)</a>
+*   <a href="http://haxiot.com/download/11330/" target="_blank">Datasheet</a>
 *   <a href="http://haxiot.com/download/11414/" target="_blank">User Guide</a>
 
 **Sensors included:**
