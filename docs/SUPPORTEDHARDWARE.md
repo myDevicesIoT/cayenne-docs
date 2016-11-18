@@ -2268,7 +2268,7 @@ Connect power from the Pi Cobbler to the TMP102 (VCC).
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122641/RPI-TMP102-Step-1.png" width="757" height="245" class="noborder" alt="TMP102"></p>
 
 ###### Step 2
-Connect power from the Pi Cobbler to the TMP102 (VCC).
+Connect ground from the Pi Cobbler to the TMP102 (GND).
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122641/RPI-TMP102-Step-2.png" width="757" height="245" class="noborder" alt="TMP102"></p>
 
@@ -2541,7 +2541,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 #### VCNL4000
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104127/Component-Doc-Image-Thermistor.png" width="346" height="124" alt="VCNL4000"></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-VCNL4000.png" width="383" height="138" alt="VCNL4000"></p>
 
 <p id="rpi-vcnl4000" class="anchor-link"></p>
 
