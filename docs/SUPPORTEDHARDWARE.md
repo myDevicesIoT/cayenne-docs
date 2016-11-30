@@ -1033,7 +1033,7 @@ A couple of notes before you get started:
 ###### Step 1
 Connect 5V power from the Arduino to the Servo Motor (red).
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122640/RPI-Servo-Step-1.png" width="757" height="387" class="noborder" alt="Servo Motor"></p>
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601113220/Arduino-Servo-Motor-Step-1.png" width="757" height="387" class="noborder" alt="Servo Motor"></p>
 
 ###### Step 2
 Connect ground from the Arduino to the Servo Motor (black).
