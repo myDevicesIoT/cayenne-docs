@@ -773,20 +773,22 @@ Start by going to your customer-specific OrbiWise portal and logging into your a
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-My-Devices-menu.png" width="600" height="248" alt="Orbiwise add device menu"><br/><br/></p>
 
-From the *My Devices* screen, click on the **Add Device** button to begin the process of adding a new device. The **Add New Device** dialog appears, allowing you to enter in the required information to add and activate your device. Depending upon the **Registration type** that you will be using ([Join Procedure](#lora-orbiwise-network-manual-register-device-join-procedure) or [Presonalized](#lora-orbiwise-network-manual-register-device-presonalized)), the information you need to provide is slightly different.
+From the *My Devices* screen, click on the **Add Device** button to begin the process of adding a new device. The **Add New Device** dialog appears, allowing you to enter in the required information to add and activate your device. Depending upon the **Registration type** that you will be using ([Join Procedure](#lora-orbiwise-network-manual-register-device-join-procedure) or [Presonalized](#lora-orbiwise-network-manual-register-device-presonalized)), the information you need to provide will be slightly different.
+
+img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Add-new-device-Join-Procedure.png" width="600" height="259" alt="Orbiwise OTA"><br/><br/></p>
 
 #### Join Procedure
 
-After selecting the **Registration type** > **Join Procedure** option, the list of fields will update to show you required fields. You will need to fill in all require fields to register & activate your device with OrbiWise. Below you will find notes on the fields seen for **Join Procedure** registration and specific notes as they relate to what needs to be selected in order to work with Cayenne.
+After selecting the **Registration type** > **Join Procedure** option, the list of fields will update to show you required fields needed for **Join Procedure** registration. This registration process is similar to *Over the Air Activation* that may see with other LoRa networks. You will need to fill in all require fields to register & activate your device with OrbiWise. Below you will find notes on the fields seen for **Join Procedure** registration and specific notes as they relate to what needs to be selected in order to work with Cayenne.
 
 + **Device EUI:** Enter the **DevEUI** for your device. This ID should come with the information included with your device, or can be found in the device configuration.
 + **Application EUI:** Enter the **AppEUI**. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
 
    _NOTE: The OrbiWise portal is currently under active development. Currently there is a bug in the OrbiWise portal wherein although the **AppEUI** field is required for *Join Procedure* registration, this field may not be present on the dialog. To work around this, perform the following steps:_
-   + _First select the **Registration type** > **Personalized** option to temporarily display the fields for the **Personalized** registration mode._
-   + _Enter in the **AppEUI** information into the field that *does* appear there. You only need to enter in the AppEUI here._
-   + _Then return to the **Join Precedure** tab by clicking back on **Join Procedure**._
-   + _You can then continue with activating using the **Join Procedure** registration._
+   1. _First select the **Registration type** > **Personalized** option to temporarily display the fields for the **Personalized** registration mode._
+   2. _Enter in the **AppEUI** information into the field that *does* appear there. You only need to enter in the AppEUI here._
+   3. _Then return to the **Join Precedure** tab by clicking back on **Join Procedure**._
+   4. _You can then continue with registering using the **Join Procedure** registration fields._
 + **Comment:** Optional. We recommend you enter in the device name, or a description so that you can easily refer to it on the OrbiWise dashboard.
 + Complete the device registration by clicking the **Add Device** button.
 
@@ -794,7 +796,7 @@ After selecting the **Registration type** > **Join Procedure** option, the list 
 
 #### Personalized
 
-After selecting the **Registration type** > **Personalized** option, the list of fields will update to show you required fields. You will need to fill in all require fields to register & activate your device with OrbiWise. Below you will find notes on the fields seen for Personalized registration and specific notes as they relate to what needs to be selected in order to work with Cayenne.
+After selecting the **Registration type** > **Personalized** option, the list of fields will update to show you required fields needed for **Personalized** registraiton. This registration process is similar to *Activation by Personalization* that may see with other LoRa networks. You will need to fill in all require fields to register & activate your device with OrbiWise. Below you will find notes on the fields seen for Personalized registration and specific notes as they relate to what needs to be selected in order to work with Cayenne.
 
 + **Device EUI:** Enter the **DevEUI** for your device. This ID should come with the information included with your device, or can be found in the device configuration.
 + **Application EUI:** Enter the **AppEUI**. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
@@ -809,7 +811,7 @@ After selecting the **Registration type** > **Personalized** option, the list of
 
 ### Setup device forwarding to Cayenne
 
-You do not need to configure any data forwarding to Cayenne. The OrbiWise gateway that you use should be configured to automatically forward the appropriate data to Cayenne. Once your gateway is working, and your device has been programmed, your devices will be ready to be added to your Cayenne dashboard.
+When using an OrbiWise gateway, you should not need to configure any additional data forwarding to Cayenne on the devices themselves. The OrbiWise gateway that you use should be configured to automatically forward the appropriate data to Cayenne. Once your gateway is setup and working, the LoRa devices connected to it will be ready to communicate their data with Cayenne.
 
 ###  Programming the device
 
@@ -819,15 +821,13 @@ If your device needs to be programmed, you should now proceed with programming/f
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
-*TIP: You should see data being reported on the OrbiWise portal's Data page. If you do not, double check the values entered for your device and consider programming/flashing the device again.*
-
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Data-menu.png" width="600" height="258" alt="Orbiwise data menu"><br/><br/></p>
+_TIP: You should see data being reported on the OrbiWise portal's **Data** > **Show Packets** page. If you do not, double check the values entered for your device and consider programming/flashing the device again._
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Data-packet-activity.png" width="600" height="344" alt="Orbiwise data activity"><br/><br/></p>
 
 ### Add device to Cayenne
 
-Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+Once your device has been registered, programmed, and connected to a gateway that is forwarding data to Cayenne, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
 
 From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
@@ -835,7 +835,7 @@ From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, click **LoRa** and select the **OrbiWise** Network option to view a list of OrbiWise supported devices.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Orbiwise-menu.png" width="600" height="362" alt="Orbiwise"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-OrbiWise-menu.png" width="600" height="363" alt="Cayenne dashboard showing Orbiwse network"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -854,12 +854,12 @@ To see how easy it is, let’s walk through an example of connecting an [Multite
 **1\. Choose the Network** <br/>
 Make sure the **OrbiWise** network is selected in the list of Networks.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Orbiwise-menu-1.png" width="600" height="362" alt="Orbiwise"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-OrbiWise-menu.png" width="600" height="363" alt="Cayenne dashboard showing Orbiwse network"><br/><br/></p>
 
 **2\. Select the Device** <br/>
 Select your device from among the list supported OrbiWise devices. In this case, we’ll select the **Multitech mDotBox**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-mDotBox-selected.png" width="600" height="362" alt="Orbiwise"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-OrbiWise-mDotBox-selected.png" width="600" height="363" alt="Cayenne dashboard with mDotBox device selected"><br/><br/></p>
 
 **3\. Enter Settings & Add device** <br/>
 In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
@@ -869,7 +869,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 3.  Our device has been previously manually registered with OrbiWise. Make sure “Already Registered” is selected in the **Activation Mode** field.
 4.  Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-Orbiwise-mDotBox-already-registered.png" width="600" height="362" alt="Orbiwise"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-OrbiWise-mDotBox-already-registered.png" width="600" height="363" alt="Cayenne dashboard with mDotBox device settings filled in"><br/><br/></p>
 
 The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
 
