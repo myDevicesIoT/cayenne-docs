@@ -742,17 +742,17 @@ We will walk you through these steps in the following sections.
 
 ### Create account
 
-To get an account with OrbiWise, you will need to work directly with your OrbiWise contact. Accounts cannot currently be created manually.
+To get an account with OrbiWise, you will need to work directly with OrbiWise. Accounts are not created manually through any sign up process.
 
 ### Setup gateway device
 
-In order for your LoRa devices to connect to the OrbiWise network, you should purchase and configure a gateway device. Currently, you will need to obtain a <a href="http://www.tektelic.com/portfolio/" target="_blank">Tektelic gateway</a> that has been configured for OrbiWise and Cayenne. At the moment, OrbiWise will perform this configuration for you. Afterwards, any devices that you add behind that gateway will be ready to forward their data for use with Cayenne.
+In order for your LoRa devices to connect to the OrbiWise network, you should purchase and configure a gateway device. Currently, you will obtain and use a <a href="http://www.tektelic.com/portfolio/" target="_blank">Tektelic gateway</a> that has been configured for OrbiWise and Cayenne. OrbiWise will perform this configuration for you. Since your gateway will be preconfigured to work with Cayenne, you will not need to configure any Cayenne-specific data forwarding for each device connected to that gateway.
 
 **Be sure that your devices are covered by an appropriate OrbiWise gateway, including having the gateway configured and working for Cayenne, before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
 #### Register new gateway device
 
-If you obtain your gateway from OrbiWise, your gateway will probably already be configured and registered. In such instances, you do not need to register your device prior to using it. If, however, you need to register your device you can do so using your OrbiWise portal.
+If you obtain your gateway from OrbiWise, your gateway may already be configured and registered. In such instances, you probably do not need to register your device prior to using it. If, however, you need to register your device you can do so using your OrbiWise portal.
 
 To view the gateways under your account, log into your customer-specific OrbiWise portal and select **My Gateways** > **List Of Gateways**. You will then see the current list of gateways for your account.
 
