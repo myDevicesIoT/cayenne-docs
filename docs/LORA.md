@@ -777,32 +777,32 @@ From the *My Devices* screen, click on the **Add Device** button to begin the pr
 
 #### Join Procedure
 
-After selecting the Join Procedure option, the list of fields will update to show you required fields. You will need to fill in all require fields to register & activate your device with OrbiWise. Below you will find notes on the fields seen for Join Procedure registration and specific notes as they relate to what needs to be selected in order to work with Cayenne.
+After selecting the **Registration type** > **Join Procedure** option, the list of fields will update to show you required fields. You will need to fill in all require fields to register & activate your device with OrbiWise. Below you will find notes on the fields seen for **Join Procedure** registration and specific notes as they relate to what needs to be selected in order to work with Cayenne.
 
-+ **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
-+ **Application EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
++ **Device EUI:** Enter the **DevEUI** for your device. This ID should come with the information included with your device, or can be found in the device configuration.
++ **Application EUI:** Enter the **AppEUI**. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
 
-   _NOTE: Currently there is a bug in the OrbiWise portal. Although the AppEUI is required for activation, this field may not be present when selecting the Join Procedure registration. To work around this, perform the following steps:
-   + First select the **Registration type** > **Personalize** option to temporarily display the fields for the *Personalized* registration mode.
-   + Enter in the **AppEUI** information into the field that *does* appear there. You only need to enter in the AppEUI here.
-   + Then return to the **Join Precedure** tab by clicking back on **Join Procedure*.
-   + You can then continue with activating using the Join Procedure activation._
+   _NOTE: The OrbiWise portal is currently under active development. Currently there is a bug in the OrbiWise portal wherein although the **AppEUI** field is required for *Join Procedure* registration, this field may not be present on the dialog. To work around this, perform the following steps:_
+   + _First select the **Registration type** > **Personalized** option to temporarily display the fields for the **Personalized** registration mode._
+   + _Enter in the **AppEUI** information into the field that *does* appear there. You only need to enter in the AppEUI here._
+   + _Then return to the **Join Precedure** tab by clicking back on **Join Procedure**._
+   + _You can then continue with activating using the **Join Procedure** registration._
 + **Comment:** Optional. We recommend you enter in the device name, or a description so that you can easily refer to it on the OrbiWise dashboard.
-+ Complete the device creation by clicking the **Add Device** button.
++ Complete the device registration by clicking the **Add Device** button.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Add-new-device-Join-Procedure.png" width="600" height="259" alt="Orbiwise OTA"><br/><br/></p>
 
 #### Personalized
 
-After selecting the Personalized option, the list of fields will update to show you required fields. You will need to fill in all require fields to register & activate your device with OrbiWise. Below you will find notes on the fields seen for Personalized registration and specific notes as they relate to what needs to be selected in order to work with Cayenne.
+After selecting the **Registration type** > **Personalized** option, the list of fields will update to show you required fields. You will need to fill in all require fields to register & activate your device with OrbiWise. Below you will find notes on the fields seen for Personalized registration and specific notes as they relate to what needs to be selected in order to work with Cayenne.
 
-+ **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
-+ **Application EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
++ **Device EUI:** Enter the **DevEUI** for your device. This ID should come with the information included with your device, or can be found in the device configuration.
++ **Application EUI:** Enter the **AppEUI**. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
 
    *TIP: If you do not have an Applicate EUI, you can create one yourself. It must be a unique string composed of 16 alphanumeric characters.*
 + **Comment:** Optional. We recommend you enter in the device name, or a description so that you can easily refer to it on the OrbiWise dashboard.
 + **DevAddr:** When using Personalized registration, you will need to manually enter the 4 byte hardware address here.
-+ **NwkSKey:** Enter the NwkSKey. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
++ **NwkSKey:** Enter the **NwkSKey**. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
 + Complete the device creation by clicking the **Add Device** button.
 
 <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Add-new-device-Personalized.png" width="600" height="344" alt="Orbiwise ABP"><br/><br/></p>
