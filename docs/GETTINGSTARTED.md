@@ -16,7 +16,7 @@ On the <a href="https://cayenne.mydevices.com/cayenne/signup?_ga=1.165612799.152
 ## Choose Device
 Cayenne currently supports Raspberry Pi, Arduino and LoRa devices. Select the device you would like to get started with in your IoT project.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/step-1-choose-device-category-2.png" width="600" height="359" alt="Choose device category"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/step-1-choose-device-category-2.png" width="600" height="359" alt="Choose device category"><br/><br/></p>
 
 The next section covers getting started with a Raspberry Pi device.  If you’re using an Arduino device to get started, [click here](#getting-started-arduino). If you’re using a LoRa device to get started, [click here](#getting-started-lora).
 
@@ -179,7 +179,7 @@ Begin by verifying that your Arduino board and PC/Mac are correctly set up befor
 #### Connect the Arduino to the Internet
 
 Make sure your Arduino is connected to the Internet. On most Arduino boards, you will need to connect an [Ethernet or Wi-Fi shield](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) in order to connect your board to the Internet. Verify that you have a shield supported by Cayenne installed and working.
-   
+
 #### Connect the Arduino to a PC/Mac
 
 Power on your Arduino by connecting your Arduino with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the power LED lit on your board.
@@ -206,9 +206,9 @@ The Cayenne Library is a collection of code, known as sketch files, that makes i
 
 The Cayenne Library is available directly from the Arduino IDE Libraries list. To install the library, select **Sketch** > **Include library** > **Manage Libraries**. The *Library Manager* dialog will appear. From here, search for the **Cayenne** library and install it.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-manage-libraries.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/arduino-ide-manage-libraries.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-add-Cayenne-lib-using-Lib-Manager.png" width="600" height="542" alt="arduino-ide-add-cayenne-lib-using-lib-manager"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Arduino-IDE-add-Cayenne-lib-using-Lib-Manager.png" width="600" height="542" alt="arduino-ide-add-cayenne-lib-using-lib-manager"><br/><br/></p>
 
 The Cayenne library has now been expanded in the libraries folder in your Arduino sketches directory. You can verify this by going to the **Sketch** > **Include Library** menu where you should now see the Cayenne library at the bottom of the drop-down menu under *Contributed Libraries*. The Cayenne library is now ready to be used in your project.
 
@@ -219,14 +219,14 @@ The Cayenne library has now been expanded in the libraries folder in your Arduin
 #### Configure Arduino IDE
 
 In order to successfully program your Arduino board, you will need to verify that the appropriate Board and Port are selected in the Arduino IDE.
- 
+
 First, verify that the correct Board is selected in the **Tools** > **Board** menu. Be sure to select the board type that you will be programming.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-board-selection.png" width="660" height="552" alt="Arduino IDE board selection"><br/><br/></p>
- 
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Arduino-IDE-board-selection.png" width="660" height="552" alt="Arduino IDE board selection"><br/><br/></p>
+
 Then, verify that you have the correct **Port** selected for communicating with your Arduino. Pick the correct port based upon how you are connecting your Arduino to your PC/Mac.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-port-selection.png" width="660" height="552" alt="Arduino IDE port selection"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Arduino-IDE-port-selection.png" width="660" height="552" alt="Arduino IDE port selection"><br/><br/></p>
 
 #### Connect your Arduino
 
@@ -345,7 +345,7 @@ We’ve integrated some specific sensors and actuators, but there are thousands 
 
 **EXAMPLE:** Let’s see how easy it is to use a Custom Widget in Cayenne. We will switch on an LED connected to your Raspberry Pi using a custom Button widget.
 
-Connect an LED to Digital Pin 8 as shown here. [View light switch tutorial](http://www.cayenne-mydevices.com/CayenneStaging/docs#arduino-light-switch)
+Connect an LED to Digital Pin 8 as shown here. [View light switch tutorial](http://mydevices.com/cayenne/docs#arduino-light-switch)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601105118/Arduino_LED_step2_bb.png" width="600" height="317" alt="Arduino LED Step 2"></p>
 
@@ -386,10 +386,10 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
    On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have [a shield supported by Cayenne](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) installed and working.
 
    *TIP: Double check that the board connection #include in your sketch file is correct for the shield that you are using. The Cayenne sketch file examples assume that you have a W5100 connected. If this line does not match your connection, your board will fail to connect to Cayenne.*
-      
+
    ```
    #include <CayenneEthernet.h>
-  
+
    ```
    <br/>
 2. **Make sure your Arduino is connected to a PC/Mac via the USB cable**
@@ -465,15 +465,15 @@ In addition to adding previously activated devices, Cayenne is capable of activa
 
 To begin the process of adding a LoRa device to Cayenne, select the LoRa option from the list of devices. A list of LoRa Networks and supported devices will appear.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/step-1-choose-device-category-2.png" width="600" height="359" alt="step-1-choose-device-category"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/step-1-choose-device-category-2.png" width="600" height="359" alt="step-1-choose-device-category"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-Choose-Network-and-Device.png" width="600" height="363" alt="Add LoRa Device"></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/LoRa-Choose-Network-and-Device.png" width="600" height="363" alt="Add LoRa Device"></p>
 
 After selecting the LoRa Network and Device that you want to add, you will then enter in the required settings for adding and activating the LoRa device. Once completed, your dashboard will automatically appear and Cayenne will automatically add widgets for all sensors on your device.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-Choose-Network-and-Device.png" width="600" height="363" alt="Add LoRa Device"></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/LoRa-Choose-Network-and-Device.png" width="600" height="363" alt="Add LoRa Device"></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard-1.png" width="600" height="363" alt="Add LoRa Device"></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/LoRa-dashboard-1.png" width="600" height="363" alt="Add LoRa Device"></p>
 
 
 **Guided walkthrough**

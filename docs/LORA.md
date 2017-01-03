@@ -70,7 +70,7 @@ We will walk you through these steps in the following sections.
 
 To create your Actility account, visit the <a href="http://actility.thingpark.com/thingpark-store/authentication" target="_blank">Actility ThingPark Portal</a>. Follow the **Create your account** process located there to get started.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Actility-portal-landing.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Actility-portal-landing.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 
 ### Setup gateway device
@@ -81,7 +81,7 @@ In order for your LoRa devices to connect to the Actility network, you must have
    + You can purchase a <a href="http://actility.thingpark.com/thingpark-store/development-kit/178-multitech-conduit-eu868.html" target="_blank">Multitech Conduit EU868 here</a>
 + For use in the United States of America, we recommend the **Multitech Conduit US915**
    + You can purchase a <a href="http://actility.thingpark.com/thingpark-store/development-kit/193-multitech-conduit-us915.html" target="_blank">Multitech Conduit US915 here</a>
-   
+
 **Be sure that you have an appropriate Actility gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
 
@@ -91,30 +91,30 @@ In order for your LoRa devices to connect to the Actility network, you must have
 
 In order for data from your device to reach Cayenne, you must create an **AS Routing Profile** in the Actility portal. You only need to perform this step once. Any devices that you wish to add to Cayenne will then need to be configured to use this routing profile or Cayenne will not receive their data. To create this profile select the **AS routing profiles** entry on the portal. From the screen that appears, click on the **Add** button to begin creating a new profile.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-1.png" width="600" height="359" alt="create-routing-profile-1"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Create-Routing-Profile-1.png" width="600" height="359" alt="create-routing-profile-1"><br/><br/></p>
 
 Give your profile a name and click the **Create** button.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-2.png" width="600" height="145" alt="create-routing-profile-2"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Create-Routing-Profile-2.png" width="600" height="145" alt="create-routing-profile-2"><br/><br/></p>
 
 The *Routing Profile* screen will appear with details for your profile. We want to add a new route to our profile, select the **Add** button to begin doing so.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-3.png" width="600" height="360" alt="create-routing-profile-3"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Create-Routing-Profile-3.png" width="600" height="360" alt="create-routing-profile-3"><br/><br/></p>
 
 In the **Destinations** field, select the existing *ThingPark Cloud* and click on the **Edit** button. The *Edit destination* dialog will appear.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-4.png" width="600" height="359" alt="create-routing-profile-4"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Create-Routing-Profile-4.png" width="600" height="359" alt="create-routing-profile-4"><br/><br/></p>
 
-In the *Edit destination* dialog, change the dropdown for **Type** to *Third party AS (HTTP)*. In the **Destination** field, enter in the Cayenne Actility URL and then click on the **Edit** button to save your changes. 
+In the *Edit destination* dialog, change the dropdown for **Type** to *Third party AS (HTTP)*. In the **Destination** field, enter in the Cayenne Actility URL and then click on the **Edit** button to save your changes.
 ```
 https://longrangeapi.mydevices.com/longrange/api/actility/messages/add
 ```
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-5.png" width="600" height="284" alt="Cayenne URL"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Create-Routing-Profile-5.png" width="600" height="284" alt="Cayenne URL"><br/><br/></p>
 
 After saving your changes, you will be returned to the previous screen. Be sure to click on the **Save** button to save the changes to your profile. You may now continue with creating a device that uses this profile.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-6.png" width="600" height="359" alt="create-routing-profile-6"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Create-Routing-Profile-6.png" width="600" height="359" alt="create-routing-profile-6"><br/><br/></p>
 
 ### Manually register device
 
@@ -154,7 +154,7 @@ After selecting the OTAA activation mode, the list of fields will update to show
     + **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
     + **Device Address:** Skip – When selecting OTAA activation, the device address will automatically be generated based on the DevEUI.
     + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Be sure to select the correct profile for your device and which network it will be using.
-    
+
         *TIP: You can refer to the [Supported devices section](#lora-actility-supported-devices) where we have more details on which Device Profile to select for devices.*
 + Application layer
     + **Application EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
@@ -176,7 +176,7 @@ After selecting the OTAA activation mode, the list of fields will update to show
 
 Once added, you will see your new device listed in the device list on the portal.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
 
 Once your device has been created, continue by making sure that your device has been [programmed/flashed](#lora-actility-programming-the-device).
 
@@ -190,7 +190,7 @@ After selecting the APB activation mode, the list of fields will update to show 
     + **Device EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
     + **Device Address:** When using APB, you will need to manually enter the hardware address here.
     + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Be sure to select the correct profile for your device and which network it will be using.
-    
+
         *TIP: You can refer to the [Supported devices section](#lora-actility-supported-devices) where we have more details on which Device Profile to select for devices.*
     + **Application session key:** Enter the AppSKey. The AppSKey is an application session key specific for the end-device. It is used by both the network server and the end-device to encrypt and decrypt the payload field of application-specific data messages.
     + **Network session key:** Enter the NwkSKey. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
@@ -214,7 +214,7 @@ After selecting the APB activation mode, the list of fields will update to show 
 
 Once added, you will see your new device listed in the device list on the portal.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
 
 Once your device has been created, continue by making sure that your device has been [programmed/flashed](#lora-actility-programming-the-device).
 
@@ -239,7 +239,7 @@ From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, select the **LoRa** category and then the **Actility** Network option to view a list of Actility supported devices.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Actility-menu.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Add-LoRa-device-Actility-menu.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -258,12 +258,12 @@ To see how easy it is, let’s walk through an example of connecting an [Adeunis
 **1\. Choose the Network** <br/>
 Make sure the **Actility** network is selected in the list of Networks.'
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Actility-menu-1.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Add-LoRa-device-Actility-menu-1.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 **2\. Select the Device** <br/>
 Select your device from among the list supported Actility devices. In this case, we’ll select the **Adeunis LoRa Pulse**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Pulse-selected.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Add-LoRa-device-Pulse-selected.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 **3\. Enter Settings & Add device**
 
@@ -274,11 +274,11 @@ In order to add the device, Cayenne needs to know some information about the dev
 3.  Our device has been previously manually registered with Actility. Select “Already Registered” in the **Activation Mode** field.
 4.  Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-Actility-LoRa-Pulse-already-registered.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Add-Device-Actility-LoRa-Pulse-already-registered.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 The LoRa Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 
 ### Supported devices
@@ -344,7 +344,7 @@ We will walk you through these steps in the following sections.
 
 To create your Senet account, visit the <a href="https://portal.senetco.com/" target="_blank">Senet Portal</a>. Follow the **Register as a new user** process located there to get started.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-portal-register-account.png" width="600" height="363" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Senet-portal-register-account.png" width="600" height="363" alt="Senet"><br/><br/></p>
 
 
 ### Setup gateway device
@@ -359,9 +359,9 @@ If you need to register a new gateway device, the Senet portal has instructions 
 
 **Note:** Gateway Registration and Software Installation is only required for devices that are new to the Senet Network. If Senet provided your device no further action is necessary.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-access-gateway-guide.png" width="600" height="299" alt="senet-access-gateway-guide"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Senet-access-gateway-guide.png" width="600" height="299" alt="senet-access-gateway-guide"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-downlod-gateway-software.png" width="600" height="359" alt="senet-downlod-gateway-software"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Senet-downlod-gateway-software.png" width="600" height="359" alt="senet-downlod-gateway-software"><br/><br/></p>
 
 
 ### Manual register device
@@ -388,7 +388,7 @@ From the *New node* screen, enter in the **Device ID** (this will be the *DevEUI
 
 Click on the **Back to Node List** button to return to the landing screen. Your device will now appear in the list of devices shown here.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
 
 
 ### Setup device forwarding to Cayenne
@@ -415,7 +415,7 @@ From the *Device Setup/Edit* screen we can setup the device so that it forwards 
    ```
 5. Click the **Update** button to save changes.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-device-setup-using-URL.png" width="600" height="216" alt="senet-device-setup-using-url"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Senet-device-setup-using-URL.png" width="600" height="216" alt="senet-device-setup-using-url"><br/><br/></p>
 
 ###  Programming the device
 
@@ -427,7 +427,7 @@ If your device needs to be programmed, you should now proceed with programming/f
 
 *TIP: You should see data being reported on the Senet portal's device list for your device. If you do not, double check the values entered for your device and consider programming/flashing the device again.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
 
 
 ### Add device to Cayenne
@@ -440,7 +440,7 @@ From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, click **LoRa** and select the **Senet** Network option to view a list of Senet supported devices.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Senet-menu.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Add-LoRa-device-Senet-menu.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -459,12 +459,12 @@ To see how easy it is, let’s walk through an example of connecting an [Multite
 **1\. Choose the Network** <br/>
 Make sure the **Senet** network is selected in the list of Networks.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Senet-menu-1.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Add-LoRa-device-Senet-menu-1.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
 **2\. Select the Device** <br/>
 Select your device from among the list supported Senet devices. In this case, we’ll select the **Multitech mDotBox**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-mDotBox-selected.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Add-LoRa-device-mDotBox-selected.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
 **3\. Enter Settings & Add device** <br/>
 In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
@@ -474,11 +474,11 @@ In order to add the device, Cayenne needs to know some information about the dev
 3.  Our device has been previously manually registered with Senet. Make sure “Already Registered” is selected in the **Activation Mode** field.
 4.  Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-Senet-mDotBox-already-registered.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Add-Device-Senet-mDotBox-already-registered.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
 The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 ### Supported devices
 

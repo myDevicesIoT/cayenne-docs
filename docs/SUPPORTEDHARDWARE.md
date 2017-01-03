@@ -117,7 +117,7 @@ Using an Arduino ethernet shield or WiFi shield gives your Arduino the ability t
 
 You can use the following information to help you identify and connect your Arduino to the Internet. Once you’ve identified how your Arduino will connect, you can continue with connecting your Arduino to Cayenne. [Read about Adding Cayenne Library to Arduino IDE](#getting-started-arduino-arduino-setup-using-cayenne-arduino-library-add-cayenne-library-to-arduino-ide)
 
-<br/> 
+<br/>
 
 **EthernetShieldW5100**
 
@@ -125,13 +125,13 @@ You can use the following information to help you identify and connect your Ardu
 
 Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5100/EthernetShieldW5100.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoEthernetShield" target="_blank">Arduino Ethernet Shield W5100</a>.
 
-<br/> 
+<br/>
 
 **ManualConnection**
 
 Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/ManualConnection/ManualConnection.ino" target="_blank">sketch file</a> if manually connecting to the Arduino Ethernet Shield to the internet. You’ll need to specify the MAC address, IP, and gateway in the sketch file, as well as select the type of Ethernet Shield you are using.
 
-<br/> 
+<br/>
 
 **EthernetShieldW5200**
 
@@ -141,7 +141,7 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/m
 
 *Remember to download and install the W5200 library to your Ardiuno IDE. Then, add it to your sketch file.*
 
-<br/> 
+<br/>
 
 **EthernetShieldW5500**
 
@@ -160,13 +160,13 @@ Please also make sure the correct Ethernet2 library is downloaded to your Arduin
 
 <a href="https://github.com/arduino-org/Arduino/tree/master/libraries/Ethernet2" target="_blank">Arduino.org Ethernet2 Library</a>
 
-<br/> 
+<br/>
 
 **SerialUSBconnection**
 
 Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/SerialUSBConnection/SerialUSBConnection.ino" target="_blank">sketch file</a> if getting internet connection from the serial USB port on your computer. You can read more about this <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Connections/ArduinoSerialUSB" target="_blank">here</a>.
 
-<br/> 
+<br/>
 
 **WiFiShield**
 
@@ -174,7 +174,7 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/m
 
 Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/WiFiShield/WiFiShield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield</a>.
 
-<br/> 
+<br/>
 
 **WiFi101Shield**
 
@@ -184,7 +184,7 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/m
 
 *Remember to download and install the WiFi101 library to your Arduino IDE. Then, add it to your sketch file.*
 
-<br/> 
+<br/>
 
 **ArduinoYun**
 
@@ -222,7 +222,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 * <a href="http://www.adeunis-rf.com/media/downloads/172/trad_file/eng/arf_lorawan_demonstrator_868_data_sheet_v1-2_gb.pdf" target="_blank">Datasheet</a>
 * <a href="http://www.adeunis-rf.com/media/downloads/185/trad_file/eng/ug_lorawan_demonstrator_user_v1.1.pdf" target="_blank">User Guide</a>
 
-**Sensors included:** 
+**Sensors included:**
 
 *   Temperature
 *   Accelerometer
@@ -328,7 +328,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Ascoel CO2
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Ascoel CO2"></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Ascoel CO2"></p>
 
 **Networks supported:**
 
@@ -350,7 +350,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Elsys ELT-1
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" alt="component-doc-image-elsys-elt1"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" alt="component-doc-image-elsys-elt1"><br/><br/></p>
 
 **Networks supported:**
 
@@ -371,7 +371,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Elsys ESM5k
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
 
 **Networks supported:**
 
@@ -394,7 +394,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Elsys ERS
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ERS.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ERS.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
 
 **Networks supported:**
 
@@ -420,7 +420,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### GlobalSat LS-111 CO2
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" alt="component-doc-image-globalsat-ls111"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" alt="component-doc-image-globalsat-ls111"><br/><br/></p>
 
 **Networks supported:**
 
@@ -436,7 +436,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### GlobalSat LT-100
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LT-100"></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LT-100"></p>
 
 **Networks supported:**
 
@@ -528,7 +528,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Rising HF RHF1S001
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Rising-HF-RHF1S001.png" width="346" height="141" class="noborder" alt="THr"></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Rising-HF-RHF1S001.png" width="346" height="141" class="noborder" alt="THr"></p>
 
 **Networks supported:**
 
@@ -692,7 +692,7 @@ Connect the relay (K1) common (CO) pin to ground. Also connect the normally open
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121343/RPI-Relay-Switch-Step-5.png" width="757" height="266" class="noborder" alt="Light Switch"></p>
 
 ###### Step 6
-You’re done! You can now add the Relay Switch to the dashboard and use it to control the LED on GPIO 13. 
+You’re done! You can now add the Relay Switch to the dashboard and use it to control the LED on GPIO 13.
 
 <p id="arduino-light-switch" class="anchor-link"></p>
 

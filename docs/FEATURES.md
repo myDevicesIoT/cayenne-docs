@@ -14,7 +14,7 @@ From the Cayenne dashboard you can:
 + View [device and sensor data history](#features-visualization-data-history).
 + Setup [automatic triggers](#features-triggers) and receive [notification alerts](#features-alerts).
 + [Schedule actions](#features-scheduling) and commands.
-+ [Create IoT projects](http://www.cayenne-mydevices.com/CayenneStaging/docs/#features-projects).
++ [Create IoT projects](http://mydevices.com/cayenne/docs/#features-projects).
 + [Remotely manage](#features-remote-control) devices and sensors.
 + [Track Assets](#features-asset-tracking) and display them on a map.
 
@@ -148,38 +148,38 @@ From here, you can fill in all the details required for creation of your schedul
 3. Let’s begin by giving our scheduled event a name. Enter **“At 10 pm, Turn off Light and Fan”** into the **Event title** field.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144407/ScheduleEvent-01.jpg" width="345" height="365" alt="Schedule Event"><br/><br/></p>
-   
+
 4. In the Date and Time fields, enter the date you want to start the scheduled event and the time.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144430/ScheduleEvent-02.jpg" width="345" height="365" alt="Schedule Event"><br/><br/></p>
-   
+
 5. Select the Timezone of when you want the scheduled event to run. By Default, the scheduled event runs in the **default browser timezone** of the computer or phone you are on.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144501/ScheduleEvent-03.jpg" width="346" height="400" alt="Schedule Event"><br/><br/></p>
-   
+
 6. Select how often you want the scheduled event to occur. By default, the scheduled event only occurs one time. For this example we will have the scheduled event happen Every Day. Select the **Repeat** frequency and choose the **Every Day** option.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144544/ScheduleEvent-04.jpg" width="346" height="400" alt="Schedule Event"><br/><br/></p>
-   
+
 7. You can optionally choose to receive notifications whenever this event runs. Events can be delivered by email and/or text message. For this example, we will choose to receive notification by email and text message. Select the checkbox next to each option and enter the phone number and email address you would like to receive the notification into the appropriate fields.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144636/ScheduleEvent-05.jpg" width="346" height="410" alt="Schedule Event"><br/><br/></p>
-   
+
 8. To complete your scheduled event, add the action that you want to occur at your scheduled time. For this example, we will add two different actions in our scheduled event.
 
 9. Click the **+ Action** button to create a new event.
-   
+
    Using the **Device** field, select the device that will take the action.
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144712/ScheduleEvent-06.jpg" width="346" height="619" alt="Schedule Event"><br/><br/></p>
-      
+
    After selecting the device for the action, use the **Action** field to choose what type of action will be triggered. The list of actions that you see displayed will always be appropriate based upon the device you selected for the action.
-   
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144827/ScheduleEvent-07.jpg" width="346" height="546" alt="Schedule Event"><br/><br/></p>
 
    Repeat the process for adding another device and action for this scheduled event.
-   
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144848/ScheduleEvent-08.jpg" width="346" height="546" alt="Schedule Event"><br/><br/></p>
-   
+
 10. You’re done. Click **Save**, and your Scheduled Event will be added to Cayenne. Cayenne will automatically take care of synchronizing with your devices and running the event at the appropriate time.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602144957/Scheduling-MonthView.jpg" width="600" height="413" alt="Month View"></p>
@@ -213,13 +213,13 @@ Let’s create our first trigger. We’ll create a trigger to turn on our light 
 
 
 1. To begin creating a Trigger, click **Add New Trigger** from top right navigation.
-   
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"><br/></p>
 
 2. The Create Trigger screen appears.
-   
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145622/Triggers-000.jpg" width="600" height="376" alt="Triggers"><br/></p>
-   
+
    From here, you can fill in all the details required for creation of your trigger. When creating a new trigger, the empty screen serves as an overview of the creation process. All triggers follow the general format of **IF** my device senses something, **THEN** do something in response.
 
 3. Let’s begin by giving our trigger a name. Enter **“Arduino Uno TMP36 is above 80, Turn on Raspberry Pi Light Switch”** into the Trigger Name field.
@@ -227,15 +227,15 @@ Let’s create our first trigger. We’ll create a trigger to turn on our light 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145732/Triggers-01.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
 
 4. We’re going to trigger a light turning on when a temperature sensor on the Arduino device is above 80 degrees. The TMP36 temperature sensor is located on our Arduino device, so drag & drop the **Arduino** device into the **IF** statement.
-   
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145843/Triggers-02.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
-   
+
 5. After selecting the TMP36 temperature sensor, we can choose whether we want to trigger an action if temperature is above or below a certain value.
 
    We want to react to the temperature being high, so we select **Temperature** from the list and select **Temperature Above** in the options presented and choose 80 degrees for this example.
-   
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145950/Triggers-03.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
-   
+
 6. We want to take action once the temperature is high by turning on the light in our **Raspberry Pi*. Drag & drop the Raspberry Pi device into the **THEN** statement area.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150032/Triggers-04.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
@@ -247,11 +247,11 @@ Let’s create our first trigger. We’ll create a trigger to turn on our light 
 8. We’re done! Click **Save Trigger** to complete our trigger and return to the Triggers list where our new trigger is shown.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150219/Triggers-06.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
-   
+
 Cayenne will will now start monitoring the temperature sensor and when it reaches the correct temperature your trigger will automatically run.
-   
-   
-   
+
+
+
 ## Alerts
 
 ### What is an alert?
@@ -267,15 +267,15 @@ Let’s create our first notification alert. We’ll send a text message and ema
 1. To begin creating a Trigger Notification Alert, open the up the feature by selecting **Triggers** from **Add New navigation**.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"><br/></p>
-   
+
 2. The Create Trigger screen appears.
-   
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145622/Triggers-000.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
-   
+
    From here, you can fill in all the details required for creation of your notification alert. To make this process easy, you will be guided through triggered alert creation that is easy to follow and select the devices and actions that you want.
 
 3. Let’s begin by giving our trigger a name. Enter **“Tmp36 is above 80, Send Notification”** into the Trigger Name field.
-   
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150757/Triggers-01-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
 
 4. We’re going to trigger a notification alert when Tmp36 is above 80 degrees. The TMP36 temperature sensor is located on our Arduino device, so drag & drop the **Arduino** device into the **IF** statement.
@@ -285,13 +285,13 @@ Let’s create our first notification alert. We’ll send a text message and ema
 5. After selecting the TMP36 temperature sensor, we can choose whether we want to trigger a notification if temperature is above or below a certain value.
 
    We want to react to the temperature being high, so we select **Temperature** from the list and select **Temperature Above** in the options presented and choose **80 degrees** for this example.
-   
+
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150957/Triggers-03-NOtification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
-   
+
 6. We want to receive a triggered alert notification by text message and email each time TMP36 is above 80 degrees. Click **Setup notification**.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151034/Triggers-04-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
-   
+
 7. You can choose to receive notifications by text message and/or email. We want both, so we will choose **Select All**.   
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151059/Triggers-05-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
@@ -299,14 +299,14 @@ Let’s create our first notification alert. We’ll send a text message and ema
 8. Click **Add custom recipient** and enter in phone number to receive text. Then click **Add more recipients**? and add in the email address.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151114/Triggers-06-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>   
-   
+
 9. We’re done! Click **Save Trigger** to complete our trigger alert and return to the Triggers list where our new trigger alert is shown.
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151206/Triggers-07-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>   
-   
+
 Cayenne will will now start monitoring the temperature sensor and when it reaches the correct temperature a notification alert will be send by email and text message. <br/><br/>
-   
- 
+
+
 ### Receiving alerts
 
 ### SMS
@@ -331,7 +331,7 @@ Cayenne makes it easy to manage your connected devices from anywhere. Using the 
 * **Online Dashboard** – You can access the Cayenne online dashboard from anywhere using a web browser. No matter where you are, as long as you can access the dashboard, you can manage your devices.
 * **Mobile app** – The Cayenne app has been designed to give you an easy way to manage your devices from your mobile device, with the easy to use mobile experience that you expect.
 
- 
+
 **Manually control device**
 
 Cayenne makes it easy to add widgets to your device and project dashboards for quickly changing the state of your device. Using Actuators or Custom Widgets, you can easily manually take action on your device. For example, you can create a custom [Button widget](#custom-widgets-button) that lets you easily toggle your light on/off. Or you can add a [Servo Motor](#supported-hardware-actuators-motor-servo-motor) that lets you adjust a motor using a [Slider widget](#custom-widgets-slider).
@@ -344,7 +344,7 @@ Cayenne has a growing [list of widgets available](#custom-widgets) to help you m
 * [Lighting](#custom-widgets-lighting): Changes the color, adjusts the luminosity and has ability to turn on or off a light, LED or light source.
 * [Slider](#custom-widgets-slider): Change the value of the connected device, such as dimming a light.
 * [Switch](#custom-widgets-switch): Used to change between 2 states, such as switching between power voltage levels used. Similar to a button.
- 
+
 
 **Scheduling actions**
 
@@ -361,7 +361,7 @@ Cayenne allows you to create triggered actions on and between your LoRa devices,
 ## Asset Tracking
 
 Need to find a lost device, or need to monitor the movement of your devices during the day? Using Cayenne’s asset tracking features, you can see the past & present location of all of your devices connected to Cayenne.
- 
+
 **Asset tracking types**
 
 Depending upon the type of device being added, there may be several Location settings available for enabling asset tracking.
@@ -371,7 +371,7 @@ Depending upon the type of device being added, there may be several Location set
 * Sensors connected directly to a parent device (such as Arduino, Raspberry Pi).
 * Wireless sensors that can move independently from the device they’re connected to.
 * Custom Widgets for devices that may be stationary or may move.
- 
+
 **Asset tracking visualization**
 
 After setting up asset tracking on all your connected devices, Cayenne gives you an easy way to visualize their current and past locations. The [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) allows you to view the location history of a single device and any connected sensors. Using the [Project Map widget](#features-asset-tracking-map-tracking-features-project-map-features), you can examine the location and history for multiple devices at once. <br/>
@@ -469,7 +469,7 @@ If your LoRa device provides location data and will move around, the Location fi
 
 When adding an Arduino microcontroller to Cayenne, asset tracking will automatically default to manual tracking and the **Location setting** will be set to “This device doesn’t move”. After adding your Arduino device to Cayenne, your device dashboard will appear and a [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) will be automatically added.
 
- 
+
 **Manual Asset Tracking (Arduino)**
 
 You can manually set the the address of your device in the map widget or by opening settings for the widget. To set the address manually using the widget, simply enter the address into the widget and confirm. If you wish to change the address, hover over the address shown and click on the edit icon.
@@ -495,7 +495,7 @@ If your Arduino device will move around, you can setup automatic asset tracking 
 #### Raspberry Pi
 
 When adding a Raspberry Pi computer to Cayenne, asset tracking will automatically default to manual tracking and the **Location setting** will be set to “This device doesn’t move”. After adding your Raspberry Pi device to Cayenne, your device dashboard will appear and a [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) will be automatically added.
- 
+
 **Manual Asset Tracking (Raspberry Pi)**
 
 You can manually set the the address of your device in the map widget or by opening settings for the widget.
@@ -510,7 +510,7 @@ Coming soon!
 #### Custom Widgets
 
 When adding a Custom Widget, you will be asked whether the widget is attached to a parent device, or whether this widget will move independently from the device it communicates with. For example, you might have custom sensors, each outfitted with GPS devices, sending their data back to a Raspberry Pi that monitors all sensor data.
- 
+
 **Connected to a Device**
 
 When adding a Custom Widget to Cayenne, the location settings will default to using the same location as the device to which this device is connected to. If you are connecting a sensor which is wired directly to its parent device, there is no additional information needed for this widget’s location – the location of your widget will automatically share the location of its parent. You may click on the parent device marker on the map widget to see the location and status information for your device, including your custom widget’s status.
@@ -521,7 +521,7 @@ When adding a Custom Widget to Cayenne, the location settings will default to us
 **Manual Asset Tracking**
 
 If you have a Custom Widget that is not located in the same place as the device it communicates with, you can enter a manual location for the device. To configure your Custom Widget for manual tracking, be sure to change the **Location** for the widget to “Manual”. You will then be given the option to enter in the Address for your widget.
- 
+
 **Moves independently**
 
 If you have a device that is capable of moving independently of its parent, you can configure your Custom Widget to obtain its location automatically. To configure your Custom Widget for automatic location tracking, be sure to change the **Location** for the widget to “Moves independently”. You will then be asked to enter in the required information that let’s Cayenne know where to obtain the location information for this device. For example, when connecting to an Arduino board, you will be asked for the Virtual Pin that provides location data. See more information on specifying automatic location tracking settings for [Raspberry Pi](#features-asset-tracking-configuring-tracking-raspberry-pi), [Arduino devices](#features-asset-tracking-configuring-tracking-arduino) or [LoRa devices](#features-asset-tracking-configuring-tracking-lora-devices).
@@ -538,7 +538,7 @@ Many of the sensors supported in Cayenne’s Add Device process will be wired di
 
 Some sensors contain GPS or other wireless location tracking onboard. When adding these devices, you will have the option of allowing the sensor to be tracked independently of the device it communicates to.
 
- 
+
 **Moves independently**
 
 By default, the **Location** for wireless sensors will be set to “Moves independently”. You will then be asked to enter in the required information that let’s Cayenne know where to obtain the location information for this device. For example, with a wireless sensor that communicates its data with an Arduino board, you will be asked for the Virtual Pin that will contain the location data. See more information on specifying automatic location tracking settings for [Raspberry Pi](#features-asset-tracking-configuring-tracking-raspberry-pi), [Arduino devices](#features-asset-tracking-configuring-tracking-arduino) or [LoRa devices](#features-asset-tracking-configuring-tracking-lora-devices).
@@ -547,7 +547,7 @@ By default, the **Location** for wireless sensors will be set to “Moves indepe
 ### Map Tracking Features
 
 Cayenne’s Map Widget makes it easy to view the current or past location data for your devices. Whenever you add a Device to Cayenne, a [Device Map Widget](#features-asset-tracking-map-tracking-features-device-map-features) is automatically added for you. This Device Map widget allows you to visualize the location data for your single device. If you want to view multiple devices at once, check out the [Project Map Widget](#features-asset-tracking-map-tracking-features-project-map-features).
- 
+
 **Zooming and scrolling**
 
 Using the Map Widget, you can zoom in and zoom out and scroll the map view around to get the best view of your data.<br/><br/>
@@ -613,7 +613,7 @@ Whenever you add a [Project](#features-projects) to Cayenne, a Project Map widge
 The Project Map widget can display several devices at once. You can either add individual devices or you can add a batch of devices.
 
 To add a single device, drag & drop that device from the side device list into the map widget. The device will then be added. To add multiple devices, drag & drop a group of devices into the map. When you drop the group onto the map, a dialog will open asking you which devices to add. Select the devices you want added and click **Add** and all of the selected devices will be added to the map.
- 
+
 **Details popup**
 
 Clicking on a device marker in the map opens a popup dialog with additional information on the device and its location at that point in time.
@@ -666,4 +666,3 @@ Once your code has been uploaded to your Arduino, and a corresponding widget add
 ### Raspberry Pi
 
 Coming soon
-

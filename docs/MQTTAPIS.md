@@ -90,13 +90,13 @@ Includes everything you need for using Cayenne and MQTT in your project that use
 
 In order to use the Cayenne MQTT API, you will need to first create a Cayenne account. Visit the <a href="http://www.cayenne-mydevices.com/" target="_blank">Cayenne website</a> and create an account.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/get-started-for-free.png" width="660" height="438" alt="get started for free"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/get-started-for-free.png" width="660" height="438" alt="get started for free"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/account-sign-up.png" width="660" height="438" alt="account sign up"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/account-sign-up.png" width="660" height="438" alt="account sign up"><br/><br/></p>
 
 After creating your account, Cayenne will ask you which type of device you wish to add to your project. To add a device using the API, select **Bring Your Own Thing** from the list of devices presented. You will then be taken to a screen with details needed to help you connect your board to Cayenne.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/step-1-choose-device-category-2.png" width="660" height="395" alt="Step 1 - Select device category"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/step-1-choose-device-category-2.png" width="660" height="395" alt="Step 1 - Select device category"><br/><br/></p>
 
 ## Using Arduino MQTT
 
@@ -113,27 +113,27 @@ To use the Cayenne Arduino MQTT Library, the Arduino IDE software should be inst
 The Cayenne Arduino MQTT Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards using MQTT. Cayenne sketch files can be [combined with other sketch files](#sketch-files-using-sketch-files-combining-sketch-files) for your IoT projects.
 
 The Cayenne Arduino MQTT Library is available directly from the Arduino IDE Libraries list. To install the library, select **Sketch** > **Include library** > **Manage Libraries**. The *Library Manager* dialog will appear. From here, search for the **Cayenne MQTT** library and install it.
- 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-manage-libraries.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-add-mqtt-library.png" width="660" height="552" alt="arduino-ide-add-mqtt-library"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/arduino-ide-manage-libraries.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
 
- 
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/arduino-ide-add-mqtt-library.png" width="660" height="552" alt="arduino-ide-add-mqtt-library"><br/><br/></p>
+
+
 The Cayenne MQTT library has now been expanded in the libraries folder in your Arduino sketches directory. You can verify this by going to the **Sketch** > **Include Library** menu where you should now see the Cayenne MQTT library at the bottom of the drop-down menu under *Contributed Libraries*. The Cayenne MQTT library is now ready to be used in your project.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-mqtt-library-menu.png" width="660" height="553" alt="arduino-ide-mqtt-library-menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/arduino-ide-mqtt-library-menu.png" width="660" height="553" alt="arduino-ide-mqtt-library-menu"><br/><br/></p>
 
 ### Configure Arduino IDE
 
 In order to successfully program your Arduino board, you will need to verify that the appropriate **Board** and **Port** are selected in the Arduino IDE.
- 
+
 First, verify that the correct **Board** is selected in the **Tools** > **Board** menu. Be sure to select the board type that you will be programming.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-board-selection.png" width="660" height="552" alt="Arduino IDE board selection"><br/><br/></p>
- 
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Arduino-IDE-board-selection.png" width="660" height="552" alt="Arduino IDE board selection"><br/><br/></p>
+
 Then, verify that you have the correct **Port** selected for communicating with your Arduino. Pick the correct port based upon how you are connecting your Arduino to your PC/Mac.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-IDE-port-selection.png" width="660" height="552" alt="Arduino IDE port selection"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Arduino-IDE-port-selection.png" width="660" height="552" alt="Arduino IDE port selection"><br/><br/></p>
 
 ### Load the example sketch file
 
@@ -143,7 +143,7 @@ Open the **File** > **Examples** > **CayenneMQTT** > **Connections** menu and se
 
 *TIP: If you aren’t sure which connection type you have, you can refer to [Arduino Ethernet and WiFi Shields](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) for more information.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-connect-example-loaded.png" width="660" height="596" alt="arduino-ide-connect-example-loaded"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/arduino-ide-connect-example-loaded.png" width="660" height="596" alt="arduino-ide-connect-example-loaded"><br/><br/></p>
 
 ### Add MQTT Credentials
 
@@ -153,15 +153,15 @@ All of the required information we need can be found on the Cayenne dashboard’
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Cayenne dashboard screen so that the correct values are used for your device.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-example-filled-in.png" width="660" height="552" alt="arduino-ide-example-filled-in"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/arduino-ide-example-filled-in.png" width="660" height="552" alt="arduino-ide-example-filled-in"><br/><br/></p>
 
 ### Connect board to Cayenne
 
 Once you have double-checked the sketch file, select **Sketch** > **Upload** to upload the sketch file to your device. As soon as your Arduino device comes online and connects to Cayenne, your device’s dashboard will appear.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
 
 **Congrats! Your hardware is now connected to the Cayenne Cloud!**
 
@@ -177,7 +177,7 @@ The first step in handling our TMP36 sensor is to write some code to read the se
 
 *Tip: Refer to the documentation for whatever sensor you are using in order to determine what kind of code needs to be written to read its sensor data.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-tmp36-read-and-convert-sensor.png" width="WIDTH" height="HEIGHT" alt="arduino-ide-tmp36-read-and-convert-sensor"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/arduino-ide-tmp36-read-and-convert-sensor.png" width="WIDTH" height="HEIGHT" alt="arduino-ide-tmp36-read-and-convert-sensor"><br/><br/></p>
 
 #### Send Temperature reading to Cayenne
 
@@ -185,11 +185,11 @@ Now let’s send our TMP36 temperature data up to Cayenne. This is easily accomp
 
 *TIP: There are many ways to read and send sensor data. Depending upon what device you are using and what goals you have in mind, you may choose a different way.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/arduino-ide-tmp36-send-sensor-data.png" width="660" height="553" alt="arduino-ide-tmp36-send-sensor-data"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/arduino-ide-tmp36-send-sensor-data.png" width="660" height="553" alt="arduino-ide-tmp36-send-sensor-data"><br/><br/></p>
 
 Once you have double-checked the sketch file, select **Sketch** > **Upload** to upload the sketch file to your device. Shortly after our board comes online, it will read the current temperature of our TMP36 sensor and send the reading to Cayenne. Cayenne will receive this data and automatically add a widget for it! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-With-Temp-added.png" width="660" height="395" alt="dashboard-with-temp-added"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-With-Temp-added.png" width="660" height="395" alt="dashboard-with-temp-added"><br/><br/></p>
 
 **Congrats! Your hardware is now sending sensor data to the Cayenne Cloud!**
 
@@ -199,12 +199,12 @@ Now that we have our board connected to Cayenne and it has successfully sent tes
 
 *TIP: If you need help with wiring up a test LED, you can refer to the [Luminosity hardware tutorial](#arduino-luminosity).*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Arduino-Luminosity-Step-2.png" width="660" height="338" alt="Arduino-Luminosity-Step-2"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Arduino-Luminosity-Step-2.png" width="660" height="338" alt="Arduino-Luminosity-Step-2"><br/><br/></p>
 
 From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
- 
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
+
 1. Choose **Custom Widgets** > **Slider**.
 2. Give your actuator a name, for example enter “Light” into the **Name** field.
 3. We’ll be adding this actuator to our new Arduino device, so make sure your device is selected in the **Device** field.
@@ -214,11 +214,11 @@ From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
 5. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Settings-Light-Slider.png" width="660" height="395" alt="settings-light-slider"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Settings-Light-Slider.png" width="660" height="395" alt="settings-light-slider"><br/><br/></p>
 
 Your actuator will be added to your dashboard and we can now use it to control our light, no coding needed when using the Arduino MQTT library!
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-With-Temp-added-and-Light.png" width="660" height="395" alt="dashboard-with-temp-added-and-light"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-With-Temp-added-and-Light.png" width="660" height="395" alt="dashboard-with-temp-added-and-light"><br/><br/></p>
 
 **Congrats! You can now use the slider to control the brightness of the light.**
 
@@ -250,13 +250,13 @@ To accomplish this goal, we will cover the following topics:
 
 Before you program your board, make sure to connect your board to your computer. Since we are using the Nucleo board, we connect the board to our computer using a USB cable. On Windows, this will automatically download all required drivers and open a shared folder. We will use that shared folder later to upload our compiled binary generated using mbed.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/nucleo-shared-folder.png" width="660" height="356" alt="nucleo-shared-folder"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/nucleo-shared-folder.png" width="660" height="356" alt="nucleo-shared-folder"><br/><br/></p>
 
 ### Create mbed account
 
 In order to use the mbed IDE you will need to have an account. To get started, visit <a href="http://developer.mbed.org" target="_blank">developer.mbed.org</a> and sign into your account. If you do not already have an account, click on the <a href="https://developer.mbed.org/account/login/?next=/account/signup/" target="_blank">Log in/Signup link</a> and create an account.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-signup.png" width="660" height="395" alt="mbed-signup"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-signup.png" width="660" height="395" alt="mbed-signup"><br/><br/></p>
 
 Once your device is setup and you have your mbed account ready to be used, you may proceed with adding the Cayenne C++ library into mbed.
 
@@ -268,17 +268,17 @@ Before you can program your board, you need setup mbed for the **platform** that
 
 Let’s walk through adding the **Nucleo-F446RE** to mbed. To begin, visit <a href="https://developer.mbed.org/platforms/" target="_blank">mbed’s platforms page</a> and select the Nucleo-F446RE there.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-1.png" width="660" height="395" alt="mbed-add-plaftorm-1"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Add-plaftorm-1.png" width="660" height="395" alt="mbed-add-plaftorm-1"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-2-select-Nucleo.png" width="660" height="395" alt="mbed-add-plaftorm-2-select-nucleo"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Add-plaftorm-2-select-Nucleo.png" width="660" height="395" alt="mbed-add-plaftorm-2-select-nucleo"><br/><br/></p>
 
 After selecting your platform, the platform page will appear. Select **Add to your mbed Compiler** to add this platform. You will see a confirmation that the platform has been added and the mbed IDE will now show this platform available. You can now proceed with Importing the Cayenne C++ library into mbed.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-3.png" width="660" height="394" alt="mbed-add-plaftorm-3"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Add-plaftorm-3.png" width="660" height="394" alt="mbed-add-plaftorm-3"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-4.png" width="660" height="395" alt="mbed-add-plaftorm-4"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Add-plaftorm-4.png" width="660" height="395" alt="mbed-add-plaftorm-4"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Add-plaftorm-5-Nucleo-platform-added.png" width="660" height="396" alt="mbed-add-plaftorm-5-nucleo-platform-added"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Add-plaftorm-5-Nucleo-platform-added.png" width="660" height="396" alt="mbed-add-plaftorm-5-nucleo-platform-added"><br/><br/></p>
 
 ### Import mbed library
 
@@ -289,17 +289,17 @@ The Cayenne mbed Library is a collection of code, support libraries, an MQTT cli
 
 To begin using this library, visit the <a href="https://developer.mbed.org/teams/myDevicesIoT/" target="_blank">Cayenne mbed repository</a> which contains a list of the various Cayenne MQTT mbed projects available. For our Nucleo board, we select the **Cayenne-X-NUCLEO-IDW01M1** library from the list. This will open a page on mbed from which we can import it into our compiler.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-MQTT-mbed-libraries.png" width="660" height="395" alt="cayenne-mqtt-mbed-libraries"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Cayenne-MQTT-mbed-libraries.png" width="660" height="395" alt="cayenne-mqtt-mbed-libraries"><br/><br/></p>
 
 From the Nucleo library page, click on the **Import into Compiler** button. The Import Program dialog will appear. From this dialog you can give your program a name. We’ll accept the defaults and just click **Import** to continue.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Import-Cayenne-library.png" width="660" height="394" alt="mbed-import-cayenne-library"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Import-Cayenne-library.png" width="660" height="394" alt="mbed-import-cayenne-library"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Import-Cayenne-library2.png" width="660" height="395" alt="mbed-import-cayenne-library2"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Import-Cayenne-library2.png" width="660" height="395" alt="mbed-import-cayenne-library2"><br/><br/></p>
 
 The Arduino MQTT library has now been imported and mbed has created a new program in our workspace. We can now proceed with examining Cayenne’s example code and customizing it with our WiFi and MQTT Credentials so that we can connect our board to Cayenne.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-library-imported-to-new-program.png" width="660" height="395" alt="mbed-library-imported-to-new-program"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-library-imported-to-new-program.png" width="660" height="395" alt="mbed-library-imported-to-new-program"><br/><br/></p>
 
 ### Add WiFi & MQTT Credentials
 
@@ -307,13 +307,13 @@ With the Arduino MQTT library imported into mbed, we can now examine the example
 
 Expand the program tree in your mbed workspace and find the example file, **main.cpp**. Click to open this file in the mbed editor. For our example, the only code that we need to examine & customize is located in this file.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-example-file.png" width="434" height="706" alt="mbed-example-file"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-example-file.png" width="434" height="706" alt="mbed-example-file"><br/><br/></p>
 
 #### Fill in the Wireless network information
 
 The Nucleo board we’ve chosen includes a WiFi network connection, so we will need to program our board so that it can connect to our wireless network. Without this information, our board will be unable to establish proper Internet connectivity and will be unable to communicate with the Cayenne cloud. Refer to the **main.cpp** file and fill in the **SSID** and **WIFI Password** for your wireless connection. The example code includes placeholders for these values, so we just need to update them with the correct information for our wireless network.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-customize-example-code-file-wifi.png" width="660" height="395" alt="mbed-customize-example-code-file-wifi"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-customize-example-code-file-wifi.png" width="660" height="395" alt="mbed-customize-example-code-file-wifi"><br/><br/></p>
 
 #### Fill in the MQTT Credentials
 
@@ -321,9 +321,9 @@ After filling in the network information, we will need to fill in the required M
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Cayenne dashboard screen so that the correct values are used for your device.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-customize-example-code-file-mqtt-creds.png" width="660" height="395" alt="mbed-customize-example-code-file-mqtt-creds"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-customize-example-code-file-mqtt-creds.png" width="660" height="395" alt="mbed-customize-example-code-file-mqtt-creds"><br/><br/></p>
 
 Once our program has now been customized, it is ready to be compiled and uploaded to the device so that it can connect to Cayenne.
 
@@ -333,15 +333,15 @@ After customizing the example file with the required connection and MQTT Credent
 
 To compile our program, click on the **Compile** button in mbed. Your program will be compiled and mbed will automatically download the compiled binary to your computer. Drag & drop this binary file to your board’s shared folder to upload it to the board.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-compile-complete.png" width="660" height="346" alt="mbed-compile-complete"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-compile-complete.png" width="660" height="346" alt="mbed-compile-complete"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-drag-n-drop-binary.png" width="660" height="353" alt="mbed-drag-n-drop-binary"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-drag-n-drop-binary.png" width="660" height="353" alt="mbed-drag-n-drop-binary"><br/><br/></p>
 
 After you drag & drop the binary into the device, the Nucleo board will automatically run it. As soon as your device comes online and connects to Cayenne, your device’s dashboard will appear.
 
 *TIP: Not all boards will automatically run the binary file. Be sure to read the documentation for your board to see if additional actions are necessary.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
 
 **Congrats! Your hardware is now connected to the Cayenne Cloud!**
 
@@ -357,17 +357,17 @@ In order to use a TMP36 sensor with mbed, we will import a library that will sup
 
 To import our sensor library, click on the **Import** button in mbed. From the Libraries screen that appears, you can use the **Search** field to find appropriate libraries.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-sensor-library.png" width="660" height="395" alt="mbed-import-sensor-library"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-import-sensor-library.png" width="660" height="395" alt="mbed-import-sensor-library"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-library-search.png" width="660" height="395" alt="mbed-import-library-search"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-import-library-search.png" width="660" height="395" alt="mbed-import-library-search"><br/><br/></p>
 
 *TIP: the mbed site (outside of the compiler screen) also includes a search function that can be used to find libraries. One advantage of using this search is that you can also find more information and discussions on using libraries. You may wish to combine both searches to find what you’re looking for!*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-search.png" width="660" height="396" alt="mbed-search"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-search.png" width="660" height="396" alt="mbed-search"><br/><br/></p>
 
 To save time, you may use the following <a href="https://developer.mbed.org/users/zchen311/code/TMP36/" target="_blank">direct link</a> to the TMP36 library we'll be using. Clicking on the library link will open a direct page for the library where you can then click **Import into Compiler** button which will import the TMP36 library and its code into your program’s workspace. Once you have the library imported, you can continue with writing code that makes use of this library to read your sensor’s data.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-library-completed.png" width="660" height="395" alt="mbed-import-tmp36-library-completed"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-import-tmp36-library-completed.png" width="660" height="395" alt="mbed-import-tmp36-library-completed"><br/><br/></p>
 
 #### Reading the TMP36 sensor data
 
@@ -377,19 +377,19 @@ At a high level, for the library we'll be using, we implement the following task
 
 1. Include the TMP36 header for our library.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-1-zoom.png" width="660" height="472" alt="mbed-sensor-step-1"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Sensor-step-1-zoom.png" width="660" height="472" alt="mbed-sensor-step-1"><br/><br/></p>
 
 2. Initialize a TMP36 object from our library with the correct Pin information based on how we connected our sensor.
 
    The TMP36 library that we're using provides a TMP36 class that includes easy to use functions for reading from our sensor. We create an instance by telling it which pin our sensor is connected to. For this example, our sensor is connected to Pin 5.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Sensor-step-2-zoom.png" width="660" height="428" alt="mbed-sensor-step-2"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Sensor-step-2-zoom.png" width="660" height="428" alt="mbed-sensor-step-2"><br/><br/></p>
 
 3. Read the sensor's value using the TMP36 object.
 
    The TMP36 library makes reading our sensors value very easy. With a single call, the library will read the sensor's value and convert it into a temperature in Celsius for us.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-read-sensor-value-zoom.png" width="660" height="428" alt="tmp 36 read sensor value"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-import-tmp36-read-sensor-value-zoom.png" width="660" height="428" alt="tmp 36 read sensor value"><br/><br/></p>
 
 *TIP: To get more of a background on how Publishing sensor data to Cayenne works, you may wish to check out the [Manually Publishing / Subscribing](#bring-your-own-thing-api-manually-publishing-subscribing) section which covers this topic in detail.*
 
@@ -397,13 +397,13 @@ At a high level, for the library we'll be using, we implement the following task
 
 Once we’ve implemented reading our sensor’s value in our code, we can continue with sending our sensor’s data up to Cayenne. This is easily accomplished with a single publish function call provided by the library. Since our sensor is connected to Pin 5, we'll publish the data to MQTT on Channel 5.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-import-tmp36-send-sensor-value-zoom.png" width="660" height="422" alt="send sensor value"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-import-tmp36-send-sensor-value-zoom.png" width="660" height="422" alt="send sensor value"><br/><br/></p>
 
 Once you have written code to handle the TMP36, click on the **Compile** button and download the binary file from mbed. Drag & drop the updated binary file to your device’s folder. Even though we already have a binary file in place in our Nucleo board’s folder, that won’t matter. The Nucleo board will use the newest binary, removing the old file already there. Shortly after placing the updated binary in the shared folder, the Nucleo board will run the program.
 
 Once our board comes online, it will read the current sensor data from our TMP36 sensor and send the readings to Cayenne. Cayenne will receive this data and automatically add a widget for it! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/CWalkthrough-Dashboard-with-temp-widget.png" width="660" height="395" alt="cwalkthrough-dashboard-with-temp-widget"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/CWalkthrough-Dashboard-with-temp-widget.png" width="660" height="395" alt="cwalkthrough-dashboard-with-temp-widget"><br/><br/></p>
 
 **Congrats! Your hardware is now sending sensor data to the Cayenne Cloud!**
 
@@ -424,7 +424,7 @@ In order for Cayenne to be able to control the Nucleo’s onboard light, we must
 
 Click **Add New** > **Device / Widget**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
 
 1. Choose **Custom Widget** > **Button**.
 2. Give your actuator a name, for example enter “Light” into the **Name** field.
@@ -436,7 +436,7 @@ Click **Add New** > **Device / Widget**.
 5. We can specify an **Icon** for our actuator. We’re using it to control a Light, so let’s select a Light icon here.
 6. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="dashboard-add-actuator"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="dashboard-add-actuator"><br/><br/></p>
 
 #### Write code for the actuator
 
@@ -445,7 +445,7 @@ Cayenne is now setup to send *COMMAND* events to our actuator, but nobody is lis
 At a high level, we must implement the following coding tasks:
 
 1. Add an LED1 object to our code so that we can control it.
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-step-1-zoom.png" width="650" height="598" alt="mbed-actuator-step-1"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Actuator-step-1-zoom.png" width="650" height="598" alt="mbed-actuator-step-1"><br/><br/></p>
 
 2. Subscribe to the COMMAND messages that Cayenne sends to our LED.
 
@@ -453,23 +453,23 @@ At a high level, we must implement the following coding tasks:
 
 3. Change the LED’s state based on what Cayenne tells us the new state is.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-set-LED-state-zoom.png" width="639" height="598" alt="set LED state"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Actuator-set-LED-state-zoom.png" width="639" height="598" alt="set LED state"><br/><br/></p>
 
 4. Publish the updated LED state to Cayenne dashboard.
 
   **Note:** This ensures that the correct state for our actuator is reflected on the dashboard.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-inform-dashboard-of-LED-state-zoom.png" width="660" height="396" alt="mbed-actuator-inform-dashboard-of-led-state-zoom"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Actuator-inform-dashboard-of-LED-state-zoom.png" width="660" height="396" alt="mbed-actuator-inform-dashboard-of-led-state-zoom"><br/><br/></p>
 
 5. Inform Cayenne that the actuator state change has been handled without errors.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/mbed-Actuator-publish-response-zoom.png" width="660" height="430" alt="mbed-actuator-publish-response-zoom"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/mbed-Actuator-publish-response-zoom.png" width="660" height="430" alt="mbed-actuator-publish-response-zoom"><br/><br/></p>
 
 *TIP: As a reminder, you can refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code mentioned in this section.*
 
 Once you have written code to handle the actuator, click on the Compile button and download the binary file from mbed. Drag & drop the updated binary file to your device’s folder. Even though we already have a binary file in place in our Nucleo board’s folder, that won’t matter. The Nucleo board will use the newest binary, removing the old file already there. Shortly after placing the updated binary in the shared folder, the Nucleo board will run the program. As soon as your board comes online, you can use the dashboard to interact with your actuator.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-with-test-widgets.png" width="660" height="395" alt="dashboard-with-test-widgets"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-with-test-widgets.png" width="660" height="395" alt="dashboard-with-test-widgets"><br/><br/></p>
 
 **Congrats! You can now use the button to control the status of the onboard LED.**
 
@@ -598,15 +598,15 @@ In order for your MQTT connection to be successful, you must fill in the require
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste values from your dashboard so that the correct values are used for your device.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cpp-code-mqtt-credentials2.png" width="660" height="484" alt="Add your MQTT credentials"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Cpp-code-mqtt-credentials2.png" width="660" height="484" alt="Add your MQTT credentials"><br/><br/></p>
 
 **Compile, Upload and connect to Cayenne**
 
 After filling in your MQTT credentials into the code example, we are ready to run the *SimplePublish* example. The C++ library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimplePublish* program. As soon as your device comes online and connects to Cayenne, the *Choose SDK and connect your device* screen will switch automatically to display your device's dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
 
 **Congrats! Your hardware is now connected to the Cayenne Cloud!**
 
@@ -614,11 +614,11 @@ After filling in your MQTT credentials into the code example, we are ready to ru
 
 Once our board is connected to our Cayenne dashboard, we can send some test data and get our very first widget added. For this example, we can continue to refer to the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimplePublish.cpp" target="_blank">SimplePublish</a>* example. In addition to connecting to our dashboard, this example also includes two examples of publishing test data to our dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cpp-code-publish-data2.png" width="660" height="312" alt="publish data"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Cpp-code-publish-data2.png" width="660" height="312" alt="publish data"><br/><br/></p>
 
 Once our board comes online, it will send two test data points to our dashboard, a temperature value and a luminosity value. As soon as Cayenne receives this data, it will automatically add widgets for them! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-dashboard-simple-publish.png" width="660" height="460" alt="embedded-c-dashboard-simple-publish"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Embedded-C-dashboard-simple-publish.png" width="660" height="460" alt="embedded-c-dashboard-simple-publish"><br/><br/></p>
 
 **Congrats! Your hardware is now sending sensor data to the Cayenne Cloud!**
 
@@ -632,7 +632,7 @@ For this example, we will setup a [Button widget](#custom-widgets-button) on our
 
 Let's start by adding a Button widget on the dashboard. From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
 
 1. Choose **Custom Widget** > **Button**.
 2. Give your actuator a name, for example enter “Light” into the **Name** field.
@@ -644,7 +644,7 @@ Let's start by adding a Button widget on the dashboard. From the Cayenne dashboa
 5. We can specify an **Icon** for our actuator. Say we’re using it to control a Light, so let’s select a Light icon here.
 6. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="Dashboard settings - add actuator"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="Dashboard settings - add actuator"><br/><br/></p>
 
 
 ##### Write code for the actuator
@@ -676,17 +676,17 @@ As before with the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/bl
 
 *TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the __cogwheel__ menu for your board and then the __Configure__ option. In the configuration screen that appears, you'll find the values that you need.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-screen.png" width="660" height="394" alt="api-configure-screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/API-Configure-screen.png" width="660" height="394" alt="api-configure-screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
 
 **Compile, Upload and connect to Cayenne**
 
 After filling in your MQTT credentials into the code example, we are ready to run the *SimpleSubscribe* example. The C++ library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimpleSubscribe* program. As soon as your device comes online and connects to Cayenne, you can use the Button widget on the dashboard, triggering actuator *COMMAND* messages to be sent to your board. The *SimpleSubscribe* code will handle these messages by replying back to our dashboard that the actuator was successfully changed and our dashboard will update to show the changed state.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-dashboard-simple-subscribe.png" width="660" height="460" alt="embedded-c-dashboard-simple-subscribe"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Embedded-C-dashboard-simple-subscribe.png" width="660" height="460" alt="embedded-c-dashboard-simple-subscribe"><br/><br/></p>
 
 **Congrats! You can now use the button to send actuator commands to your board.**
 
@@ -815,15 +815,15 @@ In order for your MQTT connection to be successful, you must fill in the require
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the dashboard so that the correct values are used for your device.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
 
 **Compile, Upload and connect to Cayenne**
 
 After filling in your MQTT credentials into the code example, we are ready to run the *SimplePublish* example. The Embedded C library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimplePublish* program. As soon as your device comes online and connects to Cayenne, the *Choose SDK and connect your device* screen will switch automatically to display your device's dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
 
 **Congrats! Your hardware is now connected to the Cayenne Cloud!**
 
@@ -831,11 +831,11 @@ After filling in your MQTT credentials into the code example, we are ready to ru
 
 Once our board is connected to our Cayenne dashboard, we can send some test data and get our very first widget added. For this example, we can continue to refer to the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimplePublish.c" target="_blank">SimplePublish</a>* example. In addition to connecting to our dashboard, this example also includes two examples of publishing test data to our dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-publish-data.png" width="660" height="329" alt="embedded-c-code-publish-data"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Embedded-C-code-publish-data.png" width="660" height="329" alt="embedded-c-code-publish-data"><br/><br/></p>
 
 Once our board comes online, it will send two test data points to our dashboard, a temperature value and a luminosity value. As soon as Cayenne receives this data, it will automatically add widgets for them! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-dashboard-simple-publish.png" width="660" height="460" alt="embedded-c-dashboard-simple-publish"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Embedded-C-dashboard-simple-publish.png" width="660" height="460" alt="embedded-c-dashboard-simple-publish"><br/><br/></p>
 
 **Congrats! Your hardware is now sending sensor data to the Cayenne Cloud!**
 
@@ -849,7 +849,7 @@ For this example, we will setup a [Button widget](#custom-widgets-button) on our
 
 Let's start by adding a Button widget on the dashboard. From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
 
 1. Choose **Custom Widget** > **Button**.
 2. Give your actuator a name, for example enter “Light” into the **Name** field.
@@ -861,7 +861,7 @@ Let's start by adding a Button widget on the dashboard. From the Cayenne dashboa
 5. We can specify an **Icon** for our actuator. Say we’re using it to control a Light, so let’s select a Light icon here.
 6. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="Dashboard settings - add actuator"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Dashboard-add-Actuator.png" width="660" height="395" alt="Dashboard settings - add actuator"><br/><br/></p>
 
 
 ##### Write code for the actuator
@@ -893,17 +893,17 @@ As before with the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob
 
 *TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the __cogwheel__ menu for your board and then the __Configure__ option. In the configuration screen that appears, you'll find the values that you need.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-screen.png" width="660" height="394" alt="api-configure-screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/API-Configure-screen.png" width="660" height="394" alt="api-configure-screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
 
 **Compile, Upload and connect to Cayenne**
 
 After filling in your MQTT credentials into the code example, we are ready to run the *SimpleSubscribe* example. The Embedded C library includes a Makefile for building the examples. To use the Makefile, navigate to this file in source and run the *make* command. You can then run the *SimpleSubscribe* program. As soon as your device comes online and connects to Cayenne, you can use the Button widget on the dashboard, triggering actuator *COMMAND* messages to be sent to your board. The *SimpleSubscribe* code will handle these messages by replying back to our dashboard that the actuator was successfully changed and our dashboard will update to show the changed state.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Embedded-C-dashboard-simple-subscribe.png" width="660" height="460" alt="embedded-c-dashboard-simple-subscribe"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Embedded-C-dashboard-simple-subscribe.png" width="660" height="460" alt="embedded-c-dashboard-simple-subscribe"><br/><br/></p>
 
 **Congrats! You can now use the button to send actuator commands to your board.**
 
@@ -918,7 +918,7 @@ For the purposes of our example we will make use of <a href="http://www.mqttfx.o
 
 To begin using MQTT.fx, we must download and install it. Doing so is easy and straight forward. Simply visit the <a href="http://mqttfx.jfx4ee.org/index.php/download" target="_blank">MQTT.fx download page</a>. Download and install the correct version for the Operating System that you are using. Once installed, launch the MQTT.fx client to get started.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-1-initial-launch.png" width="660" height="500" alt="mqtt-fx-1-initial-launch"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-1-initial-launch.png" width="660" height="500" alt="mqtt-fx-1-initial-launch"><br/><br/></p>
 
 ### Add Connection Profile
 
@@ -926,7 +926,7 @@ In order to connect to the Cayenne Cloud, you will need to setup a **Connection 
 
 *TIP: All of the required information we need can be found on the Cayenne dashboard’s 'Choose SDK and connect your device' screen. Refer to this screen and the informaiton below to complete creating your connection profile to Cayenne.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
 1. Give the profile a name, such as CayenneMQTT, in the **Profile Name** field.
 2. Copy & paste the **MQTT Server** URL from the dashboard into the **Broker Address** field.
@@ -936,7 +936,7 @@ In order to connect to the Cayenne Cloud, you will need to setup a **Connection 
 6. Also on the *User Credentials* tab, copy & paste **MQTT Password** from the dashboard into the **Password** field.
 7. The default values for fields in the other tabs are OK to leave as-is. Click the **OK** button to save our profile.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-2-Connection-Profile.png" width="660" height="483" alt="mqtt-fx-2-connection-profile"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-2-Connection-Profile.png" width="660" height="483" alt="mqtt-fx-2-connection-profile"><br/><br/></p>
 
 We can now make use of our profile to connect to the Cayenne MQTT server and test out publishing and subscribing to data.
 
@@ -944,9 +944,9 @@ We can now make use of our profile to connect to the Cayenne MQTT server and tes
 
 Now that our profile is setup, we can connect to Cayenne. To do so, click on the **Connect** button. This will establish a connection to Cayenne and it will also mimic our board coming online. Switching back to examining our browser, you'll find that the *Choose SDK and connect your device* screen will disappear and the default dashboard for our device will appear.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-3-profile-created.png" width="660" height="499" alt="mqtt-fx-3-profile-created"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-3-profile-created.png" width="660" height="499" alt="mqtt-fx-3-profile-created"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-5-device-dashboard.png" width="660" height="395" alt="mqtt-fx-5-device-dashboard"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-5-device-dashboard.png" width="660" height="395" alt="mqtt-fx-5-device-dashboard"><br/><br/></p>
 
 **Congrats! You are now connected to the Cayenne cloud using MQTT.**
 
@@ -968,9 +968,9 @@ We then substitute in the values for our account, board and sensor.
 
 *TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the __cogwheel__ menu for your board and then the __Configure__ option. In the configuration screen that appears, you'll find the values that you need.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-Configure-screen.png" width="660" height="394" alt="api-configure-screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/API-Configure-screen.png" width="660" height="394" alt="api-configure-screen"><br/><br/></p>
 
 
 Next, we need to send some actual data. According to the documentation, we need to send this in the following form:
@@ -985,13 +985,13 @@ The Cayenne documentation provides a complete list of [Supported Data Types](#br
 + **Unit (Celsius):** c
 + **Value:** 20.7
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-8-send-temp-sensor-data.png" width="660" height="498" alt="mqtt-fx-8-send-temp-sensor-data"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-8-send-temp-sensor-data.png" width="660" height="498" alt="mqtt-fx-8-send-temp-sensor-data"><br/><br/></p>
 
 *TIP: If you want the Cayenne Cloud to retain the last published value for a sensor, be sure to click on the __Retained__ button in MQTT.fx. Without this, you may find that your widget disappears when you refresh the page.*
 
 After entering in the MQTT details for publishing our sample sensor data, click on the **Publish** button to send the data to Cayenne. Cayenne will receive this data and automatically add a widget for it! Cayenne will do this automatically for any new MQTT data that you send it. Widgets created in this way are temporary by default, giving you an easy way to test sending new data to Cayenne. If you want to keep this widget permanently, simply click on the widget tile and it will become a permanent widget in your dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-9-temp-widget-created.png" width="660" height="395" alt="mqtt-fx-9-temp-widget-created"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-9-temp-widget-created.png" width="660" height="395" alt="mqtt-fx-9-temp-widget-created"><br/><br/></p>
 
 **Congrats! You are now sending data to the Cayenne Cloud!**
 
@@ -1005,7 +1005,7 @@ For this example, we will setup a [Button widget](#custom-widgets-button) on our
 
 Let's start by adding a Button widget on the dashboard. From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
 
 1. Choose **Custom Widget** > **Button**.
 2. Give your actuator a name, for example enter “Test Light” into the **Name** field.
@@ -1014,9 +1014,9 @@ Let's start by adding a Button widget on the dashboard. From the Cayenne dashboa
 5. We can specify an **Icon** for our actuator. Say we’re using it to control a Light, so let’s select a Light icon here.
 6. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-10-actuator-settings.png" width="660" height="395" alt="mqtt-fx-10-actuator-settings"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-10-actuator-settings.png" width="660" height="395" alt="mqtt-fx-10-actuator-settings"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-actuator-off.png" width="660" height="395" alt="actuator off"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/API-actuator-off.png" width="660" height="395" alt="actuator off"><br/><br/></p>
 
 #### Testing the actuator
 
@@ -1052,7 +1052,7 @@ We then substitute in the values for our account, board and actuator.
 
 *TIP: For the purposes of testing with MQTT, you could also use the wildcard __#__ which would subscribe to all channels. Cayenne supports all of the usually filtering and control from MQTT that you'd expect. But since we know the specific Channel that we want to subscribe to in our example, we'll use that.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-11-subscribe-command-messages.png" width="660" height="499" alt="mqtt-fx-11-subscribe-command-messages"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-11-subscribe-command-messages.png" width="660" height="499" alt="mqtt-fx-11-subscribe-command-messages"><br/><br/></p>
 
 After entering in the details needed to subscribe to the Command messages for our actuator, click on the **Publish** button in MQTT.fx. We are now subscribed to the *COMMAND* messages that Cayenne sends when our actuator state is changed.
 
@@ -1060,7 +1060,7 @@ After entering in the details needed to subscribe to the Command messages for ou
 
 Now that we'll be notified when our actuator's state is changed on the dashboard, let's try it out. Using the Cayenne dashboard, click on the Button for your Light actuator. Cayenne publishes a *COMMAND* message and the dashboard widget will enter a *Waiting* state as it awaits confirmation that the actuator's state was changed.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-actuator-waiting.png" width="660" height="395" alt="actuator waiting"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/API-actuator-waiting.png" width="660" height="395" alt="actuator waiting"><br/><br/></p>
 
 Examining MQTT.fx, we can see the Command message arrive from Cayenne. The message from Cayenne includes two parts:
 
@@ -1068,7 +1068,7 @@ Examining MQTT.fx, we can see the Command message arrive from Cayenne. The messa
 
 2. A **Value**. This indicates what the new value of the actuator should be. In the case of our Light actuator, Cayenne is informing us that the new state should be 1 - "On".
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-12b-command-message-from-cayenne.png" width="660" height="499" alt="mqtt-fx-12b-command-message-from-cayenne"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-12b-command-message-from-cayenne.png" width="660" height="499" alt="mqtt-fx-12b-command-message-from-cayenne"><br/><br/></p>
 
 **Note:** Normally, at this point we would handle actually changing the state of our actuator. For example, our code would interact with the actuator and change its state. Since we're just faking some data, there's nothing for us to actually change, but we do need to inform Cayenne that the actuator's state was changed. We do so by sending a value to Cayenne for what the new state is. Cayenne wanted us to turn on the Light, so let's simply tell Cayenne that's what happened.
 
@@ -1089,11 +1089,11 @@ Next, we need to inform Cayenne what the actual value for our actuator is. Cayen
 
 **Note:** Be sure to inform Cayenne what the **actual** status of the actuator is. For example, if changing the actuator state failed, be sure to tell Cayenne what the correct current value is. Cayenne needs to receive the current value so that the dashboard correctly informs the user what the actual state of their device is.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-13-inform-cayenne-actuator-state.png" width="660" height="499" alt="mqtt-fx-13-inform-cayenne-actuator-state"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-13-inform-cayenne-actuator-state.png" width="660" height="499" alt="mqtt-fx-13-inform-cayenne-actuator-state"><br/><br/></p>
 
 Once the dashboard receives an updated value for the widget, our Light actuator switches out of the *Waiting* state and now reflects the fact that our Light is On.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/API-actuator-on.png" width="660" height="395" alt="actuator on"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/API-actuator-on.png" width="660" height="395" alt="actuator on"><br/><br/></p>
 
 ##### Send command response
 
@@ -1123,7 +1123,7 @@ We're using a make believe actuator, so changing our actuator's state can't fail
 
 Click on the **Publish** button to send the command response to Cayenne. If you send an error message, Cayenne will display it in the dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MQTT.fx-14-response-to-cayenne.png" width="660" height="497" alt="mqtt-fx-14-response-to-cayenne"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/MQTT.fx-14-response-to-cayenne.png" width="660" height="497" alt="mqtt-fx-14-response-to-cayenne"><br/><br/></p>
 
 **Congrats! You can now handle actuator messages sent by the Cayenne Cloud!**
 
@@ -2762,7 +2762,7 @@ ok,2otoExGxnMJz0Jn
 
 **Send a Command Response - Error**
 
-⇒ PUB v1/A1234B5678C/things/0123-4567-89AB-CDEF/response 
+⇒ PUB v1/A1234B5678C/things/0123-4567-89AB-CDEF/response
 
 error,2otoExGxn=ERROR MESSAGE  
 
