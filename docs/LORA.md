@@ -252,6 +252,8 @@ If your device has been previously registered on the Actility network, it can be
 1.  Which [LoRa device](#lora-actility-supported-devices) is being added?
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-actility-manually-register-device) if you need help with manually registering your device on a network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+4.  Which Actility ThingPark Server are you using?
+5.  Your Actility ThingPark Email and ThingPark Password.
 
 To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under an [Actility account](#lora-actility-create-account).
 
@@ -272,9 +274,11 @@ In order to add the device, Cayenne needs to know some information about the dev
 1.  Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
 3.  Our device has been previously manually registered with Actility. Select “Already Registered” in the **Activation Mode** field.
-4.  Click **Add LoRa device**.
+4.  From the **ThingPark Server** field, be sure to select the correct server that you are using.
+5.  Enter your **ThingPark Email** and **ThingPark Password** into the corresponding fields.
+6.  Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-Device-Actility-LoRa-Pulse-already-registered.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170118131239/Add-Device-Actility-LoRa-Pulse-already-registered2.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
