@@ -312,17 +312,370 @@ FF D7
 For full information about IPSO Smart Objects, see <a href="http://www.ipso-alliance.org/" target="_blank">http://www.ipso-alliance.org/</a>.
 
 ```
+IPSO Smart Objects are based on the object model specified in OMA LightWeight M2M [1] Chapter 6, 
+Identifiers and Resources.
+					
+An IPSO Smart Object is a specified collection of reusable resources (See Table 2, Reusable Resources) 
+that has a well-known object ID (See Table 1, Smart Objects) and which represents a particular type of 
+physical sensor, actuator, connected object or other data source. The reusable resources,which make up 
+the Smart Object, represent static and dynamic properties of the connected physical object and the 
+embedded software contained therein.
+					
+This document defines a set of IPSO Smart Objects, which conform to the OMA LWM2MObject Model, and 
+which can be used as data objects, or web objects, to represent common sensors, actuators, and data 
+sources.
+					
+Although OMA LWM2M is based on the IETF CoAP [2] protocol, these objects may be used with other 
+transport protocols (e.g. HTTP [3] with REST [4]) by supporting the Content-Types and access methods 
+defined in [1]. 
+```
+IPSO Smart Objects Guideline - Starter Pack - Version 1.0 ©2014 IPSO Alliance
 
-IPSO Smart Objects are based on the object model specified in OMA LightWeight M2M [1] Chapter 6, Identifiers and Resources.
-					
-An IPSO Smart Object is a specified collection of reusable resources (See Table 2, Reusable Resources) that has a well-known object ID (See Table 1, Smart Objects) and which represents a particular type of physical sensor, actuator, connected object or other data source. The reusable resources,which make up the Smart Object, represent static and dynamic properties of the connected physical object and the embedded software contained therein.
-					
-This document defines a set of IPSO Smart Objects, which conform to the OMA LWM2MObject Model, and which can be used as data objects, or web objects, to represent common sensors, actuators, and data sources.
-					
-Although OMA LWM2M is based on the IETF CoAP [2] protocol, these objects may be used with other transport protocols (e.g. HTTP [3] with REST [4]) by supporting the Content-Types and access methods defined in [1]. 
+The following section provides information extracted from the IPSO Smart Objects specifications.  It includes all of the Data Types (object ID) that can be used with Cayenne LPP. **Therefore, the current implementation is limited to the data types listed in the [Data Types section](#lora-cayenne-low-power-payload-data-types).**
+
+#### Starter Pack Data Types
+
+For full specification, see <a href="http://www.ipso-alliance.org/so-starter-pack/" target="_blank">http://www.ipso-alliance.org/so-starter-pack/</a>.
+
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170118152251/Cayenne-LPP-Starter-Pack-Data-Types.png" width="660" height="851" alt="IPSO Starter Pack Data Types"><br/><br/></p>
+
+#### Expansion Pack Data Types
+
+For full specification, see  <a href="http://www.ipso-alliance.org/so-expansion-pack/" target="_blank">http://www.ipso-alliance.org/so-expansion-pack/</a>.
+
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170118152253/Cayenne-LPP-Expansion-Pack-Data-Types.png" width="660" height="1051" alt="IPSO Expansion Pack Data Types"><br/><br/></p>
+
+### Reference Implementation
+
+#### Cayenne LPP C/C++ constants definitions
+
+```
+#define LPP_DIGITAL_INPUT       0       // 1 byte
+#define LPP_DIGITAL_OUTPUT      1       // 1 byte
+#define LPP_ANALOG_INPUT        2       // 2 bytes, 0.01 signed
+#define LPP_ANALOG_OUTPUT       3       // 2 bytes, 0.01 signed
+#define LPP_LUMINOSITY          101     // 2 bytes, 1 lux unsigned
+#define LPP_PRESENCE            102     // 1 byte, 1
+#define LPP_TEMPERATURE         103     // 2 bytes, 0.1°C signed
+#define LPP_RELATIVE_HUMIDITY   104     // 1 byte, 0.5% unsigned
+#define LPP_ACCELEROMETER       113     // 2 bytes per axis, 0.001G
+#define LPP_BAROMETRIC_PRESSURE 115     // 2 bytes 0.1 hPa Unsigned
+#define LPP_GYROMETER           134     // 2 bytes per axis, 0.01 °/s
+#define LPP_GPS                 136     // 3 byte lon/lat 0.0001 °, 3 bytes alt 0.01m
+
+
+// Data ID + Data Type + Data Size
+#define LPP_DIGITAL_INPUT_SIZE       3
+#define LPP_DIGITAL_OUTPUT_SIZE      3
+#define LPP_ANALOG_INPUT_SIZE        4
+#define LPP_ANALOG_OUTPUT_SIZE       4
+#define LPP_LUMINOSITY_SIZE          4
+#define LPP_PRESENCE_SIZE            3
+#define LPP_TEMPERATURE_SIZE         4
+#define LPP_RELATIVE_HUMIDITY_SIZE   3
+#define LPP_ACCELEROMETER_SIZE       8
+#define LPP_BAROMETRIC_PRESSURE_SIZE 4
+#define LPP_GYROMETER_SIZE           8
+#define LPP_GPS_SIZE                 11
 ```
 
-asdf
+#### Cayenne LPP C++ payload builder
+
+This chapter describes the C++ class definition of the reference myDevices implementation, followed with by the implementation details. 
+
+```
+class CayenneLPP {
+    public:
+        CayenneLPP(uint8_t size);
+        ~CayenneLPP();
+        
+        void reset(void);
+        uint8_t getSize(void);
+        uint8_t* getBuffer(void);
+        uint8_t copy(uint8_t* buffer);
+        
+        uint8_t addDigitalInput(uint8_t channel, uint8_t value);
+        uint8_t addDigitalOutput(uint8_t channel, uint8_t value);
+
+        uint8_t addAnalogInput(uint8_t channel, float value);
+        uint8_t addAnalogOutput(uint8_t channel, float value);
+
+        uint8_t addLuminosity(uint8_t channel, uint16_t lux);
+        uint8_t addPresence(uint8_t channel, uint8_t value);
+        uint8_t addTemperature(uint8_t channel, float celsius);
+        uint8_t addRelativeHumidity(uint8_t channel, float rh);
+        uint8_t addAccelerometer(uint8_t channel, float x, float y, float z);
+        uint8_t addBarometricPressure(uint8_t channel, float hpa);
+        uint8_t addGyrometer(uint8_t channel, float x, float y, float z);
+        uint8_t addGPS(uint8_t channel, float latitude, float longitude, float meters);
+    
+    private:
+        uint8_t *buffer;
+        uint8_t maxsize;
+        uint8_t cursor;
+        
+        
+};
+```
+
+**CayenneLPP::CayenneLPP(uint8_t size) : maxsize(size)**
+```
+Initialize the payload buffer with the given maximum size.
+{
+    buffer = (uint8_t*) malloc(size);
+    cursor = 0;
+}
+```
+
+**CayenneLPP::~CayenneLPP(void)**
+```
+{
+    free(buffer);
+}
+```
+
+**void CayenneLPP::reset(void)**
+```
+Reset the payload, to call before building a frame payload
+{
+    cursor = 0;
+}
+```
+
+**uint8_t CayenneLPP::getSize(void)**
+```
+Returns the current size of the payload
+{
+    return cursor;
+}
+```
+
+**uint8_t* CayenneLPP::getBuffer(void)**
+```
+Return the payload buffer
+{
+    return buffer;
+}
+```
+
+**uint8_t CayenneLPP::copy(uint8_t* dst)**
+```
+{
+    memcpy(dst, buffer, cursor);
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addDigitalInput(uint8_t channel, uint8_t value)**
+```
+{
+    if ((cursor + LPP_DIGITAL_INPUT_SIZE) > maxsize) {
+        return 0;
+    }
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_DIGITAL_INPUT; 
+    buffer[cursor++] = value; 
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addDigitalOutput(uint8_t channel, uint8_t value)**
+```
+{
+    if ((cursor + LPP_DIGITAL_OUTPUT_SIZE) > maxsize) {
+        return 0;
+    }
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_DIGITAL_OUTPUT; 
+    buffer[cursor++] = value; 
+
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addAnalogInput(uint8_t channel, float value)**
+```
+{
+    if ((cursor + LPP_ANALOG_INPUT_SIZE) > maxsize) {
+        return 0;
+    }
+    
+    int16_t val = value * 100;
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_ANALOG_INPUT; 
+    buffer[cursor++] = val >> 8; 
+    buffer[cursor++] = val; 
+
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addAnalogOutput(uint8_t channel, float value)**
+```
+{
+    if ((cursor + LPP_ANALOG_OUTPUT_SIZE) > maxsize) {
+        return 0;
+    }
+    int16_t val = value * 100;
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_ANALOG_OUTPUT;
+    buffer[cursor++] = value;
+    buffer[cursor++] = val >> 8; 
+    buffer[cursor++] = val; 
+    
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addLuminosity(uint8_t channel, uint16_t lux)**
+```
+{
+    if ((cursor + LPP_LUMINOSITY_SIZE) > maxsize) {
+        return 0;
+    }
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_LUMINOSITY; 
+    buffer[cursor++] = lux >> 8; 
+    buffer[cursor++] = lux; 
+
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addPresence(uint8_t channel, uint8_t value)**
+```
+{
+    if ((cursor + LPP_PRESENCE_SIZE) > maxsize) {
+        return 0;
+    }
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_PRESENCE; 
+    buffer[cursor++] = value; 
+
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addTemperature(uint8_t channel, float celsius)**
+```
+{
+    if ((cursor + LPP_TEMPERATURE_SIZE) > maxsize) {
+        return 0;
+    }
+    int16_t val = celsius * 10;
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_TEMPERATURE; 
+    buffer[cursor++] = val >> 8; 
+    buffer[cursor++] = val; 
+
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addRelativeHumidity(uint8_t channel, float rh)**
+```
+{
+    if ((cursor + LPP_RELATIVE_HUMIDITY_SIZE) > maxsize) {
+        return 0;
+    }
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_RELATIVE_HUMIDITY; 
+    buffer[cursor++] = rh * 2; 
+
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addAccelerometer(uint8_t channel, float x, float y, float z)**
+```
+{
+    if ((cursor + LPP_ACCELEROMETER_SIZE) > maxsize) {
+        return 0;
+    }
+    int16_t vx = x * 1000;
+    int16_t vy = y * 1000;
+    int16_t vz = z * 1000;
+    
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_ACCELEROMETER; 
+    buffer[cursor++] = vx >> 8; 
+    buffer[cursor++] = vx; 
+    buffer[cursor++] = vy >> 8; 
+    buffer[cursor++] = vy; 
+    buffer[cursor++] = vz >> 8; 
+    buffer[cursor++] = vz; 
+
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addBarometricPressure(uint8_t channel, float hpa)**
+```
+{
+    if ((cursor + LPP_BAROMETRIC_PRESSURE_SIZE) > maxsize) {
+        return 0;
+    }
+    int16_t val = hpa * 10;
+    
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_BAROMETRIC_PRESSURE; 
+    buffer[cursor++] = val >> 8; 
+    buffer[cursor++] = val; 
+
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addGyrometer(uint8_t channel, float x, float y, float z)**
+```
+{
+    if ((cursor + LPP_GYROMETER_SIZE) > maxsize) {
+        return 0;
+    }
+    int16_t vx = x * 100;
+    int16_t vy = y * 100;
+    int16_t vz = z * 100;
+    
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_GYROMETER; 
+    buffer[cursor++] = vx >> 8; 
+    buffer[cursor++] = vx; 
+    buffer[cursor++] = vy >> 8; 
+    buffer[cursor++] = vy; 
+    buffer[cursor++] = vz >> 8; 
+    buffer[cursor++] = vz; 
+
+    return cursor;
+}
+```
+
+**uint8_t CayenneLPP::addGPS(uint8_t channel, float latitude, float longitude, float meters)**
+```
+{
+    if ((cursor + LPP_GPS_SIZE) > maxsize) {
+        return 0;
+    }
+    int32_t lat = latitude * 10000;
+    int32_t lon = longitude * 10000;
+    int32_t alt = meters * 100;
+    
+    buffer[cursor++] = channel; 
+    buffer[cursor++] = LPP_GPS; 
+
+    buffer[cursor++] = lat >> 16; 
+    buffer[cursor++] = lat >> 8; 
+    buffer[cursor++] = lat; 
+    buffer[cursor++] = lon >> 16; 
+    buffer[cursor++] = lon >> 8; 
+    buffer[cursor++] = lon; 
+    buffer[cursor++] = alt >> 16; 
+    buffer[cursor++] = alt >> 8;
+    buffer[cursor++] = alt;
+
+    return cursor;
+}
+```
+
 
 ## Using a public network
 Using a public LoRa network is the easiest way to get started using LoRa. In order to get started using a public LoRa network, you will want to first verify that yours sensors will be covered by an appropriate Network Operator. Once you know which network operator you will connect with, you can purchase devices that work on that network. You will then need an account with that operator so that you can add your devices to the network.
