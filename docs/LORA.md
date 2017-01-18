@@ -61,7 +61,7 @@ LPP_DATA_TYPE = IPSO_OBJECT_ID - 3200
 
 Each data type can use 1 or more bytes to send the data according to the following table.
 
-<table style="width: 100%;" border="1">
+<table style="width: 100%;">
 <tbody>
 </tbody><tbody>
 <tr>
@@ -181,12 +181,12 @@ Each data type can use 1 or more bytes to send the data according to the followi
 
 #### Device with 2 temperature sensors
 
-<table style="width: 100%;" border="1">
+<table style="width: 100%;">
 <tbody>
 </tbody><tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
-<td style="font-size: 15px; padding: 10px;">
+<td style="font-size: 15px; padding: 10px;" colspan="2">
 03
 <b>67</b>
 01 10
@@ -216,12 +216,12 @@ Each data type can use 1 or more bytes to send the data according to the followi
 #### Device with temperature and acceleration sensors
 
 **Frame N**
-<table style="width: 100%;" border="1">
+<table style="width: 100%;">
 <tbody>
 </tbody><tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
-<td style="font-size: 15px; padding: 10px;">
+<td style="font-size: 15px; padding: 10px;" colspan="2">
 01
 <b>67</b>
 FF D7
@@ -246,7 +246,7 @@ FF D7
 </tbody><tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
-<td style="font-size: 15px; padding: 10px;">
+<td style="font-size: 15px; padding: 10px;" colspan="2">
 06
 <b>71</b>
 04 D2
@@ -275,12 +275,12 @@ FF D7
 
 #### Device with GPS
 
-<table style="width: 100%;" border="1">
+<table style="width: 100%;">
 <tbody>
 </tbody><tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
-<td style="font-size: 15px; padding: 10px;">
+<td style="font-size: 15px; padding: 10px;" colspan="2">
 01
 <b>88</b>
 06 76 5f
@@ -329,7 +329,8 @@ Although OMA LWM2M is based on the IETF CoAP [2] protocol, these objects may be 
 transport protocols (e.g. HTTP [3] with REST [4]) by supporting the Content-Types and access methods 
 defined in [1]. 
 ```
-IPSO Smart Objects Guideline - Starter Pack - Version 1.0 ©2014 IPSO Alliance
+   IPSO Smart Objects Guideline - Starter Pack - Version 1.0 ©2014 IPSO Alliance
+
 
 The following section provides information extracted from the IPSO Smart Objects specifications.  It includes all of the Data Types (object ID) that can be used with Cayenne LPP. **Therefore, the current implementation is limited to the data types listed in the [Data Types section](#lora-cayenne-low-power-payload-data-types).**
 
@@ -418,6 +419,7 @@ class CayenneLPP {
 };
 ```
 
+
 **CayenneLPP::CayenneLPP(uint8_t size) : maxsize(size)**
 ```
 Initialize the payload buffer with the given maximum size.
@@ -427,12 +429,14 @@ Initialize the payload buffer with the given maximum size.
 }
 ```
 
+
 **CayenneLPP::~CayenneLPP(void)**
 ```
 {
     free(buffer);
 }
 ```
+
 
 **void CayenneLPP::reset(void)**
 ```
@@ -442,6 +446,7 @@ Reset the payload, to call before building a frame payload
 }
 ```
 
+
 **uint8_t CayenneLPP::getSize(void)**
 ```
 Returns the current size of the payload
@@ -449,6 +454,7 @@ Returns the current size of the payload
     return cursor;
 }
 ```
+
 
 **uint8_t* CayenneLPP::getBuffer(void)**
 ```
@@ -458,6 +464,7 @@ Return the payload buffer
 }
 ```
 
+
 **uint8_t CayenneLPP::copy(uint8_t* dst)**
 ```
 {
@@ -465,6 +472,7 @@ Return the payload buffer
     return cursor;
 }
 ```
+
 
 **uint8_t CayenneLPP::addDigitalInput(uint8_t channel, uint8_t value)**
 ```
@@ -479,6 +487,7 @@ Return the payload buffer
 }
 ```
 
+
 **uint8_t CayenneLPP::addDigitalOutput(uint8_t channel, uint8_t value)**
 ```
 {
@@ -492,6 +501,7 @@ Return the payload buffer
     return cursor;
 }
 ```
+
 
 **uint8_t CayenneLPP::addAnalogInput(uint8_t channel, float value)**
 ```
@@ -510,6 +520,7 @@ Return the payload buffer
 }
 ```
 
+
 **uint8_t CayenneLPP::addAnalogOutput(uint8_t channel, float value)**
 ```
 {
@@ -527,6 +538,7 @@ Return the payload buffer
 }
 ```
 
+
 **uint8_t CayenneLPP::addLuminosity(uint8_t channel, uint16_t lux)**
 ```
 {
@@ -542,6 +554,7 @@ Return the payload buffer
 }
 ```
 
+
 **uint8_t CayenneLPP::addPresence(uint8_t channel, uint8_t value)**
 ```
 {
@@ -555,6 +568,7 @@ Return the payload buffer
     return cursor;
 }
 ```
+
 
 **uint8_t CayenneLPP::addTemperature(uint8_t channel, float celsius)**
 ```
@@ -571,6 +585,7 @@ Return the payload buffer
     return cursor;
 }
 ```
+
 
 **uint8_t CayenneLPP::addRelativeHumidity(uint8_t channel, float rh)**
 ```
@@ -609,6 +624,7 @@ Return the payload buffer
 }
 ```
 
+
 **uint8_t CayenneLPP::addBarometricPressure(uint8_t channel, float hpa)**
 ```
 {
@@ -625,6 +641,7 @@ Return the payload buffer
     return cursor;
 }
 ```
+
 
 **uint8_t CayenneLPP::addGyrometer(uint8_t channel, float x, float y, float z)**
 ```
@@ -648,6 +665,7 @@ Return the payload buffer
     return cursor;
 }
 ```
+
 
 **uint8_t CayenneLPP::addGPS(uint8_t channel, float latitude, float longitude, float meters)**
 ```
