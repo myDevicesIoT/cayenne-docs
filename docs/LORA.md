@@ -34,6 +34,295 @@ LoRa devices have a unique identifier (DevEUI) that is assigned to the device by
 
 <p id="using-a-public-gateway-lora" class="anchor-link"></p>
 
+## Cayenne Low Power Payload
+
+### Overview
+
+The Cayenne Low Power Payload (LPP) provides a convenient and easy way to send data over LPWAN networks such as LoRaWAN.  The Cayenne LPP is compliant with the payload size restriction, which can be lowered down to 11 bytes, and allows the device to send multiple sensor data at one time.  
+
+Additionally, the Cayenne LPP allows the device to send different sensor data in different frames. In order to do that, each sensor data must be prefixed with two bytes:
+
+- **Data Channel:** Uniquely identifies each sensor in the device across frames, eg. “indoor sensor”
+- **Data Type:** Identifies the data type in the frame, eg. “temperature”.
+
+### Payload structure
+
+| 1 Byte | 1 Byte | N Bytes | 1 Byte | 1 Byte | M Bytes | ... |
+:---: | :---: | :---: | :---: | :---: | :---: | :---:
+Data1 Ch. | Data1 Type | Data1 | Data2 Ch. | Data2 Type | Data2 | ...
+
+### Data Types
+
+Data Types conform to the IPSO Alliance Smart Objects Guidelines, which identifies each data type with an “Object ID”.  However, as shown below, a conversion is made to fit the Object ID into a single byte.
+
+```
+LPP_DATA_TYPE = IPSO_OBJECT_ID - 3200
+```
+
+Each data type can use 1 or more bytes to send the data according to the following table.
+
+<table style="width: 100%;" border="1">
+<tbody>
+</tbody><tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Type</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>IPSO</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>LPP</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Hex</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Data Size</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Data Resolution per bit</b></td>
+</tr>
+<tr>
+<td>Digital Input</td>
+<td>3200</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Digital Output</td>
+<td>3201</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Analog Input</td>
+<td>3202</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>0.01 Signed</td>
+</tr>
+<tr>
+<td>Analog Output</td>
+<td>3203</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>0.01 Signed</td>
+</tr>
+<tr>
+<td>Illuminance Sensor</td>
+<td>3301</td>
+<td>101</td>
+<td>65</td>
+<td>2</td>
+<td>1 Lux Unsigned MSB</td>
+</tr>
+<tr>
+<td>Presence Sensor</td>
+<td>3302</td>
+<td>102</td>
+<td>66</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Temperature Sensor</td>
+<td>3303</td>
+<td>103</td>
+<td>67</td>
+<td>2</td>
+<td>0.1 °C Signed MSB</td>
+</tr>
+<tr>
+<td>Humidity Sensor</td>
+<td>3304</td>
+<td>104</td>
+<td>68</td>
+<td>1</td>
+<td>0.5 % Unsigned</td>
+</tr>
+<tr>
+<td>Accelerometer</td>
+<td>3313</td>
+<td>113</td>
+<td>71</td>
+<td>6</td>
+<td>0.001 G Signed MSB per axis</td>
+</tr>
+<tr>
+<td>Barometer</td>
+<td>3315</td>
+<td>115</td>
+<td>73</td>
+<td>2</td>
+<td>0.1 hPa Unsigned MSB</td>
+</tr>
+<tr>
+<td>Gyrometer</td>
+<td>3334</td>
+<td>134</td>
+<td>86</td>
+<td>6</td>
+<td>0.01 °/s Signed MSB per axis</td>
+</tr>
+<tr>
+<td rowspan="3">GPS Location</td>
+<td rowspan="3">3336</td>
+<td rowspan="3">136</td>
+<td rowspan="3">88</td>
+<td rowspan="3">9</td>
+<td>Latitude : 0.0001 ° Signed MSB</td>
+</tr>
+<tr>
+<td>Longitude : 0.0001 ° Signed MSB</td>
+</tr>
+<tr>
+<td>Altitude : 0.01 meter Signed MSB</td>
+</tr>
+</tbody>
+</table>
+
+### Examples
+
+#### Device with 2 temperature sensors
+
+<table style="width: 100%;" border="1">
+<tbody>
+</tbody><tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
+<td style="font-size: 15px; padding: 10px;">
+03
+<b>67</b>
+01 10
+<b>05</b>
+67
+<b>00 FF</b>
+</td>
+</tr>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Data Channel</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Type</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Value</b></td>
+</tr>
+<tr>
+<td>03 ⇒ 3</td>
+<td><b>67</b> ⇒ Temperature</td>
+<td>0110 = 272 ⇒ <b>27.2°C</b></td>
+</tr>
+<tr>
+<td><b>05</b> ⇒ 5</td>
+<td>67 ⇒ Temperature</td>
+<td><b>00FF</b> = 255 ⇒ <b>25.5°C</b></td>
+</tr>
+</tbody>
+</table>
+
+#### Device with temperature and acceleration sensors
+
+**Frame N**
+<table style="width: 100%;" border="1">
+<tbody>
+</tbody><tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
+<td style="font-size: 15px; padding: 10px;">
+01
+<b>67</b>
+FF D7
+</td>
+</tr>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Data Channel</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Type</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Value</b></td>
+</tr>
+<tr>
+<td>01 ⇒ 1</td>
+<td><b>67</b> ⇒ Temperature</td>
+<td>FFD7 = -41 ⇒ <b>-4.1°C</b></td>
+</tr>
+</tbody>
+</table>
+
+**Frame N+1**
+<table style="width: 100%;" border="1">
+<tbody>
+</tbody><tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
+<td style="font-size: 15px; padding: 10px;">
+06
+<b>71</b>
+04 D2
+<b><i>FB 2E</i></b>
+<i>00 00</i>
+</td>
+</tr>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Data Channel</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Type</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Value</b></td>
+</tr>
+<tr>
+<td rowspan="3">06 ⇒ 6</td>
+<td rowspan="3"><b>71</b> ⇒ Accelerometer</td>
+<td><b>X:</b> 04D2 = <b>+1234</b> ⇒ <b>+1.234G</b></td>
+</tr>
+<tr>
+<td><i>Y: FB2E = -1234 ⇒ -1.234G</i></td>
+</tr>
+<tr>
+<td><i><b>Z:</b> 0000 = <b>0</b> ⇒ <b>0G</b></i></td>
+</tr>
+</tbody>
+</table>
+
+#### Device with GPS
+
+<table style="width: 100%;" border="1">
+<tbody>
+</tbody><tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
+<td style="font-size: 15px; padding: 10px;">
+01
+<b>88</b>
+06 76 5f
+<b><i>f2 96 0a</i></b>
+<i>00 03 e8</i>
+</td>
+</tr>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Data Channel</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Type</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Value</b></td>
+</tr>
+<tr>
+<td rowspan="3">01 ⇒ 1</td>
+<td rowspan="3"><b>88</b> ⇒ GPS</td>
+<td><b>Latitude:</b> 06765f ⇒ <b>42.3519</b></td>
+</tr>
+<tr>
+<td><i>Longitude: F2960a ⇒ -87.9094</i></td>
+</tr>
+<tr>
+<td><i><b>Altitude:</b> 0003E8 ⇒ <b>10 meters</b></i></td>
+</tr>
+</tbody>
+</table>
+
+### IPSO Smart Objects Reference
+
+For full information about IPSO Smart Objects, see <a href="http://www.ipso-alliance.org/" target="_blank">http://www.ipso-alliance.org/</a>.
+
+```
+
+IPSO Smart Objects are based on the object model specified in OMA LightWeight M2M [1] Chapter 6, Identifiers and Resources.
+					
+An IPSO Smart Object is a specified collection of reusable resources (See Table 2, Reusable Resources) that has a well-known object ID (See Table 1, Smart Objects) and which represents a particular type of physical sensor, actuator, connected object or other data source. The reusable resources,which make up the Smart Object, represent static and dynamic properties of the connected physical object and the embedded software contained therein.
+					
+This document defines a set of IPSO Smart Objects, which conform to the OMA LWM2MObject Model, and which can be used as data objects, or web objects, to represent common sensors, actuators, and data sources.
+					
+Although OMA LWM2M is based on the IETF CoAP [2] protocol, these objects may be used with other transport protocols (e.g. HTTP [3] with REST [4]) by supporting the Content-Types and access methods defined in [1]. 
+```
+
+asdf
 
 ## Using a public network
 Using a public LoRa network is the easiest way to get started using LoRa. In order to get started using a public LoRa network, you will want to first verify that yours sensors will be covered by an appropriate Network Operator. Once you know which network operator you will connect with, you can purchase devices that work on that network. You will then need an account with that operator so that you can add your devices to the network.
