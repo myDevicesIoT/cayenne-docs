@@ -17,7 +17,7 @@
     <script src='addons.js'></script>
 
     <!-- Cayenne CSS -->
-    <link rel="stylesheet" id="sage/css-css" href="http://www.cayenne-mydevices.com/wp-content/themes/cayenne/dist/styles/main.css" type="text/css" media="all">
+    <link rel="stylesheet" id="sage/css-css" href="http://mdswp-staging.mydevices.com/wp-content/themes/mydevices/dist/styles/main.css" type="text/css" media="all">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Flatdoc theme -->
@@ -44,46 +44,131 @@
             ])
         });
     </script>
+    
+    <style>
+
+        .navbar-brand {
+            font-size: 22px;
+            margin-right: 0;
+        }
+
+        @media only screen and (min-width: 992px) {
+            nav.navbar .container .navbar-header .navbar-brand {
+                margin-right: 10px;
+            }
+        }
+
+        .navbar-header {
+            width: 140px;
+
+        }
+        @media only screen and (min-width: 1200px) {
+            .navbar-header {
+                margin-right: 110px;
+                width: 170px;
+                margin-top: -3px;
+
+            }
+
+            .navbar-nav {
+                margin-left: 10px;
+
+            }
+        }
+
+        @media only screen and (min-width: 1919px) {
+            nav.navbar .container #navbar .navbar-nav li a {
+                font-size: 17px;
+
+            }
+
+            nav.navbar .container #navbar .navbar-nav li {
+                margin-right: 14px;
+
+            }
+
+            nav.navbar .container #navbar .navbar-right {
+                float: left !important;
+            }
+
+        }
+
+        #nav-container {
+            display: block;
+
+        }
+        
+    </style>
 
 
 </head>
 <body role='flatdoc'>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container" id="nav-container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://cayenne-mydevices.com">Cayenne</a>
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+
+            <div class="navbar-brand">
+                <div class="navbar-logo">
+                    <a href="http://mdswp-staging.mydevices.com">
+                        Cayenne Docs
+                    </a>
+                </div>
+            </div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="nav-community"><a href="http://community.mydevices.com/?_ga=1.72117331.1524412540.1457034675">Community</a></li>
-                <li class="dropdown nav-resources">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/resources/">Overview</a></li>
-                        <li><a href="/resources/videos">Videos</a></li>
-                        <li><a href="/resources/articles/">Articles</a></li>
-                        <li><a href="/projects">Projects</a></li>
-                    </ul>
+                <li>
+                    <a href="#" navbar-item="cayenne">
+                        <span class="navbar-item">Home</span>
+                    </a>
                 </li>
-                <li class="nav-docs"><a href="/docs/">Docs</a></li>
-                <li class="nav-docs"><a href="/Supported-Hardware/">Supported Hardware</a></li>
+                <li>
+                    <a href="http://mdswp-staging.mydevices.com/cayenne/solutions" navbar-item="solutions">
+                        <span class="navbar-item">Forum</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mdswp-staging.mydevices.com/cayenne/projects" navbar-item="community">
+                        <span class="navbar-item">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mdswp-staging.mydevices.com/cayenne/videos" navbar-item="company">
+                        <span class="navbar-item">Videos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mdswp-staging.mydevices.com/cayenne/supported-hardware" navbar-item="company">
+                        <span class="navbar-item">Supported Hardware</span>
+                    </a>
+                </li>
+                <li><a href="/cayenne/signin">Sign In</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/signin">Sign In</a></li>
-                <li><div name="next" type="submit" class="getstarted-container">
-                    <a href="/signup" class="nav-getstarted getstarted">Get Started for Free</a>
-                </div></li>
+                <li>
+                    <a class="signup-button" href="/cayenne/signup">
+                        <button class="sign-up-free"
+                                onclick="dataLayer.push({
+                                       'event': 'wp-scrolling',
+                                       'eventCategory': 'Scrolling',
+                                       'eventAction': 'Homepage',
+                                       'eventLabel': 'Fixed Pane'});">
+                            Sign Up Free
+                        </button>
+                    </a>
+                </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+
 
 
 <div class='content-root'>
