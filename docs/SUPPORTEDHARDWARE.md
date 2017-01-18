@@ -314,7 +314,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Ascoel CM868LRTH / CMUS915LRTH
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Ascoel-CM__LRTH.png" width="383" height="138" class="noborder" alt="Ascoel CM868LRTH / CMUS915LRTH"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Ascoel-CM__LRTH.png" width="383" height="138" class="noborder" alt="Ascoel CM868LRTH / CMUS915LRTH"></p>
 
 **Networks supported:**
 
@@ -334,7 +334,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Ascoel CO868LR / COUS915LR
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Ascoel CO868LR / COUS915LR"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Ascoel CO868LR / COUS915LR"></p>
 
 **Networks supported:**
 
@@ -376,7 +376,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Elsys ELT-1
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" class="noborder" alt="Elysys ELT-1"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" class="noborder" alt="Elysys ELT-1"></p>
 
 **Networks supported:**
 
@@ -399,7 +399,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Elsys ESM5k
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ESM5k.png" width="383" height="138" class="noborder" alt="Elysys ESM5k"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ESM5k.png" width="383" height="138" class="noborder" alt="Elysys ESM5k"></p>
 
 **Networks supported:**
 
@@ -424,7 +424,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Elsys ERS
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Elsys-ERS.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ERS.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
 
 **Networks supported:**
 
@@ -451,7 +451,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### GlobalSat LS-111 CO2
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" class="noborder" alt="GlobalSat LS-111"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" class="noborder" alt="GlobalSat LS-111"></p>
 
 **Networks supported:**
 
@@ -468,7 +468,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### GlobalSat LT-100
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LT-100"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LT-100"></p>
 
 **Networks supported:**
 
@@ -491,7 +491,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Haxiot Arduino Shield
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Haxiot-Arduino-Shield.png" width="383" height="138" class="noborder" alt="GlobalSat LT-100"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Haxiot-Arduino-Shield.png" width="383" height="138" class="noborder" alt="GlobalSat LT-100"></p>
 
 **Networks supported:**
 
@@ -543,7 +543,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Multitech XDot
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/MultiConnect-xDot.png" width="383" height="138" class="noborder" alt="xDot"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/MultiConnect-xDot.png" width="383" height="138" class="noborder" alt="xDot"></p>
 
 **Networks supported:**
 
@@ -610,7 +610,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Rising HF RHF1S001
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-Rising-HF-RHF1S001.png" width="346" height="141" class="noborder" alt="THr"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Rising-HF-RHF1S001.png" width="346" height="141" class="noborder" alt="THr"></p>
 
 **Networks supported:**
 
@@ -2541,7 +2541,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 #### VCNL4000
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Component-Doc-Image-VCNL4000.png" width="383" height="138" alt="VCNL4000"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-VCNL4000.png" width="383" height="138" alt="VCNL4000"></p>
 
 <p id="rpi-vcnl4000" class="anchor-link"></p>
 

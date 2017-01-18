@@ -70,7 +70,7 @@ We will walk you through these steps in the following sections.
 
 To create your Actility account, visit the <a href="http://actility.thingpark.com/thingpark-store/authentication" target="_blank">Actility ThingPark Portal</a>. Follow the **Create your account** process located there to get started.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Actility-portal-landing.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Actility-portal-landing.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 
 ### Setup gateway device
@@ -91,30 +91,30 @@ In order for your LoRa devices to connect to the Actility network, you must have
 
 In order for data from your device to reach Cayenne, you must create an **AS Routing Profile** in the Actility portal. You only need to perform this step once. Any devices that you wish to add to Cayenne will then need to be configured to use this routing profile or Cayenne will not receive their data. To create this profile select the **AS routing profiles** entry on the portal. From the screen that appears, click on the **Add** button to begin creating a new profile.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-1.png" width="600" height="359" alt="create-routing-profile-1"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-1.png" width="600" height="359" alt="create-routing-profile-1"><br/><br/></p>
 
 Give your profile a name and click the **Create** button.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-2.png" width="600" height="145" alt="create-routing-profile-2"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-2.png" width="600" height="145" alt="create-routing-profile-2"><br/><br/></p>
 
 The *Routing Profile* screen will appear with details for your profile. We want to add a new route to our profile, select the **Add** button to begin doing so.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-3.png" width="600" height="360" alt="create-routing-profile-3"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-3.png" width="600" height="360" alt="create-routing-profile-3"><br/><br/></p>
 
 In the **Destinations** field, select the existing *ThingPark Cloud* and click on the **Edit** button. The *Edit destination* dialog will appear.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-4.png" width="600" height="359" alt="create-routing-profile-4"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-4.png" width="600" height="359" alt="create-routing-profile-4"><br/><br/></p>
 
 In the *Edit destination* dialog, change the dropdown for **Type** to *Third party AS (HTTP)*. In the **Destination** field, enter in the Cayenne Actility URL and then click on the **Edit** button to save your changes. 
 ```
 https://longrangeapi.mydevices.com/longrange/api/actility/messages/add
 ```
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-5.png" width="600" height="284" alt="Cayenne URL"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-5.png" width="600" height="284" alt="Cayenne URL"><br/><br/></p>
 
 After saving your changes, you will be returned to the previous screen. Be sure to click on the **Save** button to save the changes to your profile. You may now continue with creating a device that uses this profile.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Create-Routing-Profile-6.png" width="600" height="359" alt="create-routing-profile-6"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-6.png" width="600" height="359" alt="create-routing-profile-6"><br/><br/></p>
 
 ### Manually register device
 
@@ -176,7 +176,7 @@ After selecting the OTAA activation mode, the list of fields will update to show
 
 Once added, you will see your new device listed in the device list on the portal.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
 
 Once your device has been created, continue by making sure that your device has been [programmed/flashed](#lora-actility-programming-the-device).
 
@@ -214,7 +214,7 @@ After selecting the APB activation mode, the list of fields will update to show 
 
 Once added, you will see your new device listed in the device list on the portal.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/ThingPark-device-list.png" width="600" height="406" alt="Actility"><br/><br/></p>
 
 Once your device has been created, continue by making sure that your device has been [programmed/flashed](#lora-actility-programming-the-device).
 
@@ -239,7 +239,7 @@ From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, select the **LoRa** category and then the **Actility** Network option to view a list of Actility supported devices.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Actility-menu.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Actility-menu.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -258,12 +258,12 @@ To see how easy it is, let’s walk through an example of connecting an [Adeunis
 **1\. Choose the Network** <br/>
 Make sure the **Actility** network is selected in the list of Networks.'
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Actility-menu-1.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Actility-menu-1.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 **2\. Select the Device** <br/>
 Select your device from among the list supported Actility devices. In this case, we’ll select the **Adeunis Pulse**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Pulse-selected.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Pulse-selected.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 **3\. Enter Settings & Add device**
 
@@ -274,11 +274,11 @@ In order to add the device, Cayenne needs to know some information about the dev
 3.  Our device has been previously manually registered with Actility. Select “Already Registered” in the **Activation Mode** field.
 4.  Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-Actility-LoRa-Pulse-already-registered.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-Device-Actility-LoRa-Pulse-already-registered.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 
 ### Supported devices
@@ -348,7 +348,7 @@ We will walk you through these steps in the following sections.
 
 To create your Senet account, visit the <a href="https://portal.senetco.com/" target="_blank">Senet Portal</a>. Follow the **Register as a new user** process located there to get started.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-portal-register-account.png" width="600" height="363" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-portal-register-account.png" width="600" height="363" alt="Senet"><br/><br/></p>
 
 
 ### Setup gateway device
@@ -363,9 +363,9 @@ If you need to register a new gateway device, the Senet portal has instructions 
 
 **Note:** Gateway Registration and Software Installation is only required for devices that are new to the Senet Network. If Senet provided your device no further action is necessary.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-access-gateway-guide.png" width="600" height="299" alt="senet-access-gateway-guide"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-access-gateway-guide.png" width="600" height="299" alt="senet-access-gateway-guide"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-downlod-gateway-software.png" width="600" height="359" alt="senet-downlod-gateway-software"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-downlod-gateway-software.png" width="600" height="359" alt="senet-downlod-gateway-software"><br/><br/></p>
 
 
 ### Manual register device
@@ -392,7 +392,7 @@ From the *New node* screen, enter in the **Device ID** (this will be the *DevEUI
 
 Click on the **Back to Node List** button to return to the landing screen. Your device will now appear in the list of devices shown here.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
 
 
 ### Setup device forwarding to Cayenne
@@ -419,7 +419,7 @@ From the *Device Setup/Edit* screen we can setup the device so that it forwards 
    ```
 5. Click the **Update** button to save changes.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-device-setup-using-URL.png" width="600" height="216" alt="senet-device-setup-using-url"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-device-setup-using-URL.png" width="600" height="216" alt="senet-device-setup-using-url"><br/><br/></p>
 
 ###  Programming the device
 
@@ -431,7 +431,7 @@ If your device needs to be programmed, you should now proceed with programming/f
 
 *TIP: You should see data being reported on the Senet portal's device list for your device. If you do not, double check the values entered for your device and consider programming/flashing the device again.*
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
 
 
 ### Add device to Cayenne
@@ -444,7 +444,7 @@ From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, click **LoRa** and select the **Senet** Network option to view a list of Senet supported devices.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Senet-menu.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Senet-menu.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -463,12 +463,12 @@ To see how easy it is, let’s walk through an example of connecting an [Multite
 **1\. Choose the Network** <br/>
 Make sure the **Senet** network is selected in the list of Networks.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-Senet-menu-1.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Senet-menu-1.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
 **2\. Select the Device** <br/>
 Select your device from among the list supported Senet devices. In this case, we’ll select the **Multitech mDotBox**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-mDotBox-selected.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-mDotBox-selected.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
 **3\. Enter Settings & Add device** <br/>
 In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
@@ -478,11 +478,11 @@ In order to add the device, Cayenne needs to know some information about the dev
 3.  Our device has been previously manually registered with Senet. Make sure “Already Registered” is selected in the **Activation Mode** field.
 4.  Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-Senet-mDotBox-already-registered.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-Device-Senet-mDotBox-already-registered.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
 The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 ### Supported devices
 
@@ -536,13 +536,13 @@ To create your Loriot account, visit the <a href="https://loriot.io/register.htm
 
 **NOTE:** Loriot has many servers that you can use, but you will need an account on each of them in order to use that server.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Account-Registration.png" width="660" height="399" alt="Loriot account registration"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Account-Registration.png" width="660" height="399" alt="Loriot account registration"><br/><br/></p>
 
 ### Setup gateway device
 
 In order for your LoRa devices to connect to the Loriot network, you must have purchased and configured a gateway device. Loriot has a <a href="https://us1.loriot.io/lora-gateways.html" target="_blank">Gateway page</a> with costs and recommendations. Once you have purchased the gateway you want to use, Loriot offers guides for how to set it up for use. When logged into your account, refer to the **Documentation > Gateways** section on the Loriot portal for information.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Setup-gateway.png" width="660" height="396" alt="Loriot setup gateway"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Setup-gateway.png" width="660" height="396" alt="Loriot setup gateway"><br/><br/></p>
    
 **Be sure that you have an appropriate Loriot gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
@@ -552,21 +552,21 @@ In order for your LoRa devices to connect to the Loriot network, you must have p
 
 In order for data from your device to reach Cayenne, you must configured your devices in the Loriot portal to forward data to Cayenne. The Loriot portal groups devices in what they call **Applications**. If you want to use a group of devices with Cayenne, you will need to perform some configuration on the portal. You only need to perform this step once for each Application that you want to use. To set this up, click on the **Applications** button in the portal. The *Network Applications* screen appears.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Applications-highlight.png" width="660" height="478" alt="applications button highlighted"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Applications-highlight.png" width="660" height="478" alt="applications button highlighted"><br/><br/></p>
 
 From the *Network Applications* screen, click on the name of the Application that you want to configure. This will open the dashboard for your Application.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Network-Applications-screen.png" width="660" height="395" alt="Network Applications screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Network-Applications-screen.png" width="660" height="395" alt="Network Applications screen"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Dashboard.png" width="660" height="395" alt="application dashboard"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-App-Dashboard.png" width="660" height="395" alt="application dashboard"><br/><br/></p>
 
 From the Application screen for your device, find the **Data Output** option and click on the **Edit Output** button to change it. The *Application Output* screen will appear.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Application-Output-screen.png" width="660" height="395" alt="myDevices app dash with data output highlight"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Application-Output-screen.png" width="660" height="395" alt="myDevices app dash with data output highlight"><br/><br/></p>
 
 On the *Application Output* screen, next to the **Data Output** option select the **Change** button and a list of output types will appear. From the list of types, select the **HTTP Push** option.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Output-list.png" width="660" height="395" alt="Edit output type with list"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-App-Output-list.png" width="660" height="395" alt="Edit output type with list"><br/><br/></p>
 
 Enter the Cayenne Loriot URL into the **Target URL for POSTs** entry field and then click on the **Confirm change** button to save the change.
 
@@ -574,7 +574,7 @@ Enter the Cayenne Loriot URL into the **Target URL for POSTs** entry field and t
 https://longrangeapi.mydevices.com/longrange/api/loriot/messages/add
 ```
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Change-Data-Output.png" width="660" height="395" alt="data output url change"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Change-Data-Output.png" width="660" height="395" alt="data output url change"><br/><br/></p>
 
 ### Manually register device
 
@@ -584,11 +584,11 @@ Before you can use your LoRa device on the Loriot network, it must be registered
 
 Devices must be added into an **Application** in the Loriot portal. To enroll a new device, click on **Applications** and then select which Application your device will be added to. This will open your application's dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Dashboard.png" width="660" height="395" alt="application dashboard"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-App-Dashboard.png" width="660" height="395" alt="application dashboard"><br/><br/></p>
 
 From the application dashboard screen, click on **Managed devices** and the *Devices* screen appears. From the *Devices* screen, you can enroll new devices or you can import existing devices.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Devices-screen.png" width="660" height="394" alt="Devices screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Devices-screen.png" width="660" height="394" alt="Devices screen"><br/><br/></p>
 
 #### Enroll new device
 
@@ -598,13 +598,13 @@ Loriot makes enrolling a new device easy, all you need is the [DevEUI](#lora-abo
 
 If you know the DevEUI for your device, select **Enroll new device**. In the *Enroll* screen that appears, enter in your DevEUI into the **Device EUI** field and click the **Enroll** button. Loriot will take care of assigning all other keys (APPKEY, APPSKEY, NWKSKEY) and identifiers (DevAddr) for your device automatically.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Enroll-new-device-screen.png" width="660" height="394" alt="enroll new device"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Enroll-new-device-screen.png" width="660" height="394" alt="enroll new device"><br/><br/></p>
 
 **If you don't know your DevEUI**
 
 If you don't know your DevEUI, click on **Generate new device**. Loriot will generate your device's DevEUI and all other keys and identifiers needed and then add a device entry into your list of devices.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Devices-screen-generate-highlight.png" width="660" height="394" alt="Devices screen generate highlight"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Devices-screen-generate-highlight.png" width="660" height="394" alt="Devices screen generate highlight"><br/><br/></p>
 
 #### Import existing device
 
@@ -612,9 +612,9 @@ If you have existing devices, select either the **Import existing OTAA** or **Im
 
 **Note:** You will only use this feature if you have an existing device deployed in the field and are not able to re-personalize the device. In all other cases, you will want to use the new [device enrollement process](#lora-loriot-network-manually-register-device-enroll-new-device).
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Import-OTAA.png" width="660" height="394" alt="Loriot OTAA"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Import-OTAA.png" width="660" height="394" alt="Loriot OTAA"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Import-ABP.png" width="660" height="394" alt="Loriot ABP"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Import-ABP.png" width="660" height="394" alt="Loriot ABP"><br/><br/></p>
 
 ###  Programming the device
 
@@ -636,7 +636,7 @@ From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, select the **LoRa** category and then the **Loriot** Network option to view a list of Loriot supported devices.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Loriot-Network-list.png" width="660" height="395" alt="Add devie with loriot selected"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Cayenne-dashboard-Loriot-Network-list.png" width="660" height="395" alt="Add devie with loriot selected"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -651,13 +651,13 @@ If your device has been previously registered on the Loriot network, it can be q
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4. What is your Loriot **Application ID**? You can obtain your App ID from your Application's dashboard on the Loriot portal.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Dashboard-App-ID-highlight.png" width="660" height="395" alt="app dashboard App ID highlight"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-App-Dashboard-App-ID-highlight.png" width="660" height="395" alt="app dashboard App ID highlight"><br/><br/></p>
 
 5. What is your Loriot **Security Token**? Yuu can obtain your Token by clicking on **Security tokens** from your Application's dashboard on the Loriot portal.
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-App-Dashboard-Security-Token-higlight.png" width="660" height="441" alt="App dashboard Security token highlight"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-App-Dashboard-Security-Token-higlight.png" width="660" height="441" alt="App dashboard Security token highlight"><br/><br/></p>
 
-   <p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-Security-Token-screen.png" width="660" height="394" alt="Security token"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Security-Token-screen.png" width="660" height="394" alt="Security token"><br/><br/></p>
 
 To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under an [Loriot account](#lora-loriot-network-create-account).
 
@@ -665,13 +665,13 @@ To see how easy it is, let’s walk through an example of connecting an [Adeunis
 
 Make sure the **Loriot** network is selected in the list of Networks.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Loriot-Network-list.png" width="660" height="395" alt="Loriot network selected"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Cayenne-dashboard-Loriot-Network-list.png" width="660" height="395" alt="Loriot network selected"><br/><br/></p>
 
 **2\. Select the Device**
 
 Select your device from among the list supported Loriot devices. In this case, we’ll select the **Adeunis Pulse**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Cayenne-dashboard-Loriot-device-highlight.png" width="660" height="395" alt="Loriot device highlight"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Cayenne-dashboard-Loriot-device-highlight.png" width="660" height="395" alt="Loriot device highlight"><br/><br/></p>
 
 **3\. Enter Settings & Add device**
 
@@ -685,11 +685,11 @@ In order to add the device, Cayenne needs to know some information about the dev
 6. Enter in the **Loriot Token** for the Application this device uses on the Loriot portal.
 4. Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Loriot-pulse-settings.png" width="660" height="394" alt="Loriot Pulse settings"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-pulse-settings.png" width="660" height="394" alt="Loriot Pulse settings"><br/><br/></p>
 
 The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
 
 
 ### Supported devices
@@ -756,11 +756,11 @@ If you obtain your gateway from OrbiWise, your gateway may already be configured
 
 To view the gateways under your account, log into your customer-specific OrbiWise portal and select **My Gateways** > **List Of Gateways**. You will then see the current list of gateways for your account.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-My-Gateways-menu.png" width="600" height="257" alt="OrbiWise gateway screen and menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/OrbiWise-My-Gateways-menu.png" width="600" height="257" alt="OrbiWise gateway screen and menu"><br/><br/></p>
 
 To register a new gateway, click on the **Add Gateway** button and the *Add Gateway* dialog appears. The only information you'll need is the **Gateway ID** for the gateway you'll be adding. Enter this ID into the **Gateway ID** field and click **Add Gateway** to add your gateway.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Add-Gateway.png" width="600" height="192" alt="OrbiWise add gateway dialog"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/OrbiWise-Add-Gateway.png" width="600" height="192" alt="OrbiWise add gateway dialog"><br/><br/></p>
 
 
 ### Manual register device
@@ -771,11 +771,11 @@ Before you can use your LoRa device on the OrbiWise network, it must be register
 
 Start by going to your customer-specific OrbiWise portal and logging into your account. Once logged in, you can proceed with registering a new device. From the **My Devices** menu, select **List of Devices** and the *My Devices* screen appears.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-My-Devices-menu.png" width="600" height="248" alt="Orbiwise add device menu"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/OrbiWise-My-Devices-menu.png" width="600" height="248" alt="Orbiwise add device menu"><br/><br/></p>
 
 From the *My Devices* screen, click on the **Add Device** button to begin the process of adding a new device. The **Add New Device** dialog appears, allowing you to enter in the required information to add and activate your device. Depending upon the **Registration type** that you will be using ([Join Procedure](#lora-orbiwise-network-manual-register-device-join-procedure) or [Presonalized](#lora-orbiwise-network-manual-register-device-presonalized)), the information you need to provide will be slightly different.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Add-new-device-Join-Procedure.png" width="600" height="259" alt="Orbiwise OTA"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/OrbiWise-Add-new-device-Join-Procedure.png" width="600" height="259" alt="Orbiwise OTA"><br/><br/></p>
 
 #### Join Procedure
 
@@ -792,7 +792,7 @@ After selecting the **Registration type** > **Join Procedure** option, the list 
 + **Comment:** Optional. We recommend you enter in the device name, or a description so that you can easily refer to it on the OrbiWise dashboard.
 + Complete the device registration by clicking the **Add Device** button.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Add-new-device-Join-Procedure.png" width="600" height="259" alt="Orbiwise OTA"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/OrbiWise-Add-new-device-Join-Procedure.png" width="600" height="259" alt="Orbiwise OTA"><br/><br/></p>
 
 #### Personalized
 
@@ -807,7 +807,7 @@ After selecting the **Registration type** > **Personalized** option, the list of
 + **NwkSKey:** Enter the **NwkSKey**. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
 + Complete the device creation by clicking the **Add Device** button.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Add-new-device-Personalized.png" width="600" height="344" alt="Orbiwise ABP"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/OrbiWise-Add-new-device-Personalized.png" width="600" height="344" alt="Orbiwise ABP"><br/><br/></p>
 
 ### Setup device forwarding to Cayenne
 
@@ -823,7 +823,7 @@ If your device needs to be programmed, you should now proceed with programming/f
 
 _TIP: You should see data being reported on the OrbiWise portal's **Data** > **Show Packets** page. If you do not, double check the values entered for your device and consider programming/flashing the device again._
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/OrbiWise-Data-packet-activity.png" width="600" height="344" alt="Orbiwise data activity"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/OrbiWise-Data-packet-activity.png" width="600" height="344" alt="Orbiwise data activity"><br/><br/></p>
 
 ### Add device to Cayenne
 
@@ -835,7 +835,7 @@ From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, click **LoRa** and select the **OrbiWise** Network option to view a list of OrbiWise supported devices.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-OrbiWise-menu.png" width="600" height="363" alt="Cayenne dashboard showing Orbiwse network"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-OrbiWise-menu.png" width="600" height="363" alt="Cayenne dashboard showing Orbiwse network"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -854,12 +854,12 @@ To see how easy it is, let’s walk through an example of connecting an [Multite
 **1\. Choose the Network** <br/>
 Make sure the **OrbiWise** network is selected in the list of Networks.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-OrbiWise-menu.png" width="600" height="363" alt="Cayenne dashboard showing Orbiwse network"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-OrbiWise-menu.png" width="600" height="363" alt="Cayenne dashboard showing Orbiwse network"><br/><br/></p>
 
 **2\. Select the Device** <br/>
 Select your device from among the list supported OrbiWise devices. In this case, we’ll select the **Multitech mDotBox**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-LoRa-device-OrbiWise-mDotBox-selected.png" width="600" height="363" alt="Cayenne dashboard with mDotBox device selected"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-OrbiWise-mDotBox-selected.png" width="600" height="363" alt="Cayenne dashboard with mDotBox device selected"><br/><br/></p>
 
 **3\. Enter Settings & Add device** <br/>
 In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
@@ -869,11 +869,11 @@ In order to add the device, Cayenne needs to know some information about the dev
 3.  Our device has been previously manually registered with OrbiWise. Make sure “Already Registered” is selected in the **Activation Mode** field.
 4.  Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/Add-Device-OrbiWise-mDotBox-already-registered.png" width="600" height="363" alt="Cayenne dashboard with mDotBox device settings filled in"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-Device-OrbiWise-mDotBox-already-registered.png" width="600" height="363" alt="Cayenne dashboard with mDotBox device settings filled in"><br/><br/></p>
 
 The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
 
-<p style="text-align:center"><br/><img src="http://www.cayenne-mydevices.com/CayenneStaging/wp-content/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 ### Supported devices
 
