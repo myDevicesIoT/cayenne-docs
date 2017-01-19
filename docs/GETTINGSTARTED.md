@@ -8,7 +8,7 @@ You can create an account from [Mobile](#downloads-mobile-apps) or online. Mobil
 
 On the <a href="https://cayenne.mydevices.com/cayenne/signup?_ga=1.165612799.1524412540.1457034675" target="_blank">Sign Up page</a>, enter your Name, Email and create a Password.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601095407/Sign-Up.png" width="600" height="610" alt="Sign up for Cayenne"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/20160601095407/Sign-Up.png" width="600" height="610" alt="Sign up for Cayenne"></p>
 
 <p id="choose-device" class="anchor-link"></p>
 
