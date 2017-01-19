@@ -245,7 +245,7 @@ Each data type can use 1 or more bytes to send the data according to the followi
 </table>
 
 **Frame N+1**
-<table style="width: 100%;" border="1">
+<table style="width: 100%;">
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
