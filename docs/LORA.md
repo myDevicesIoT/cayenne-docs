@@ -739,32 +739,42 @@ In order for your LoRa devices to connect to the Actility network, you must have
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/rpZo-GKd7mY" frameborder="0" allowfullscreen></iframe></p>
 
-In order for data from your device to reach Cayenne, you must create an **AS Routing Profile** in the Actility portal. You only need to perform this step once. Any devices that you wish to add to Cayenne will then need to be configured to use this routing profile or Cayenne will not receive their data. To create this profile select the **AS routing profiles** entry on the portal. From the screen that appears, click on the **Add** button to begin creating a new profile.
+In order for data from your device to reach Cayenne, you must create an **Application Server** that points to Cayenne in the Actility portal. You will also need to add an **AS Routing Profile** that uses this server. You only need to perform this step once. Any devices that you wish to add to Cayenne will then need to be configured to use the routing profile or Cayenne will not receive their data.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-1.png" width="600" height="359" alt="create-routing-profile-1"><br/><br/></p>
+Begin by creating the **Application Server**. From the device manager, select the **Application Servers** entry and from the screen that appears, click on the **Create** button to begin creating a new server.
 
-Give your profile a name and click the **Create** button.
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090424/Actility-Routing-Profile-1-App-Server.png" width="600" height="358" alt="Create new app server highlight"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-2.png" width="600" height="145" alt="create-routing-profile-2"><br/><br/></p>
+Give the new entry an appropriate name that you can refer to later, such as "Cayenne". After proceeding, you will see the *Application Server* screen where you can enter in information for the application server. From this screen, click on the **Add** button located in the **Add a route** section.
 
-The *Routing Profile* screen will appear with details for your profile. We want to add a new route to our profile, select the **Add** button to begin doing so.
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090427/Actility-Routing-Profile-2-App-Server-Route.png" width="600" height="360" alt="Add new route button highlight"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-3.png" width="600" height="360" alt="create-routing-profile-3"><br/><br/></p>
+In the *Route* section that gets added to the screen, click on the **Add** button to start adding a destination.
 
-In the **Destinations** field, select the existing *ThingPark Cloud* and click on the **Edit** button. The *Edit destination* dialog will appear.
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090428/Actility-Routing-Profile-2.5-App-Server-Route.png" width="600" height="361" alt="Destintation Add button highlight"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-4.png" width="600" height="359" alt="create-routing-profile-4"><br/><br/></p>
+In the *Add Destination* dialog that appears, enter in the Cayenne Actility URL and then click on the **Add** button to save your changes.
 
-In the *Edit destination* dialog, change the dropdown for **Type** to *Third party AS (HTTP)*. In the **Destination** field, enter in the Cayenne Actility URL and then click on the **Edit** button to save your changes. 
 ```
-https://longrangeapi.mydevices.com/longrange/api/actility/messages/add
+https://longrangapi.mydevices.com/longrange/api/actility/messages.add
 ```
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-5.png" width="600" height="284" alt="Cayenne URL"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090430/Actility-Routing-Profile-3-App-Server-Destination.png" width="600" height="240" alt="Paste in Cayenne destination url"><br/><br/></p>
+
+Now that the Application Server has been setup, we need to create the AS Routing Profile. To create this profile select the **AS routing profiles** entry on the portal. From the screen that appears, click on the **Create** button to begin creating a new profile.
+
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090432/Actility-Routing-Profile-4-Profile-main.png" width="600" height="359" alt="Create new profile highlight"><br/><br/></p>
+
+Give your profile an appropriate name, such as "Cayenne" so that you can refer to it later when you configure your devices. After giving your profile a name, you will see the *AS Routing Profile* screen. Click on the **Add** button located in the **Destinations** section.
+
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090433/Actility-Routing-Profile-5-Profile-new.png" width="600" height="360" alt="Add destination button highlight"><br/><br/></p>
+
+From the *Add Destinations* dialog that appears, be sure that the **Type** dropdown is set to *Application Server*. In the **Destinations** dropdown, be sure to select the Application Server you created earlier for Cayenne.
+
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090435/Actility-Routing-Profile-6-Profile-destination.png" width="600" height="268" alt="Select app server in profile"><br/><br/></p>
 
 After saving your changes, you will be returned to the previous screen. Be sure to click on the **Save** button to save the changes to your profile. You may now continue with creating a device that uses this profile.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Create-Routing-Profile-6.png" width="600" height="359" alt="create-routing-profile-6"><br/><br/></p>
 
 ### Manually register device
 
