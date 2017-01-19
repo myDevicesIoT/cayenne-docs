@@ -46,10 +46,28 @@ Additionally, the Cayenne LPP allows the device to send different sensor data in
 - **Data Type:** Identifies the data type in the frame, eg. “temperature”.
 
 ### Payload structure
-
-| 1 Byte | 1 Byte | N Bytes | 1 Byte | 1 Byte | M Bytes | ... |
-:---: | :---: | :---: | :---: | :---: | :---: | :---:
-Data1 Ch. | Data1 Type | Data1 | Data2 Ch. | Data2 Type | Data2 | ...
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>1 Byte</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>1 Byte</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>N Bytes</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>1 Byte</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>1 Byte</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>M Bytes</b></td>
+<td style="font-size: 15px; padding: 10px;"><b> ... </b></td>
+</tr>
+<tr>
+<td>Data1 Ch.</td>
+<td>Data1 Type</td>
+<td>Data1</td>
+<td>Data2 Ch.</td>
+<td>Data2 Type</td>
+<td>Data2</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
 
 ### Data Types
 
@@ -63,7 +81,6 @@ Each data type can use 1 or more bytes to send the data according to the followi
 
 <table style="width: 100%;">
 <tbody>
-</tbody><tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Type</b></td>
 <td style="font-size: 15px; padding: 10px;"><b>IPSO</b></td>
@@ -183,17 +200,9 @@ Each data type can use 1 or more bytes to send the data according to the followi
 
 <table style="width: 100%;">
 <tbody>
-</tbody><tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
-<td style="font-size: 15px; padding: 10px;" colspan="2">
-03
-<b>67</b>
-01 10
-<b>05</b>
-67
-<b>00 FF</b>
-</td>
+<td style="font-size: 15px; padding: 10px;" colspan="2">03 67 01 10 05 67 00 FF</td>
 </tr>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Data Channel</b></td>
@@ -202,13 +211,13 @@ Each data type can use 1 or more bytes to send the data according to the followi
 </tr>
 <tr>
 <td>03 ⇒ 3</td>
-<td><b>67</b> ⇒ Temperature</td>
-<td>0110 = 272 ⇒ <b>27.2°C</b></td>
+<td>67 ⇒ Temperature</td>
+<td>0110 = 272 ⇒ 27.2°C</td>
 </tr>
 <tr>
-<td><b>05</b> ⇒ 5</td>
+<td>05 ⇒ 5</td>
 <td>67 ⇒ Temperature</td>
-<td><b>00FF</b> = 255 ⇒ <b>25.5°C</b></td>
+<td>00FF = 255 ⇒ 25.5°C</td>
 </tr>
 </tbody>
 </table>
@@ -218,14 +227,9 @@ Each data type can use 1 or more bytes to send the data according to the followi
 **Frame N**
 <table style="width: 100%;">
 <tbody>
-</tbody><tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
-<td style="font-size: 15px; padding: 10px;" colspan="2">
-01
-<b>67</b>
-FF D7
-</td>
+<td style="font-size: 15px; padding: 10px;" colspan="2">01 67 FF D7</td>
 </tr>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Data Channel</b></td>
@@ -234,8 +238,8 @@ FF D7
 </tr>
 <tr>
 <td>01 ⇒ 1</td>
-<td><b>67</b> ⇒ Temperature</td>
-<td>FFD7 = -41 ⇒ <b>-4.1°C</b></td>
+<td>67 ⇒ Temperature</td>
+<td>FFD7 = -41 ⇒ -4.1°C</td>
 </tr>
 </tbody>
 </table>
@@ -243,16 +247,9 @@ FF D7
 **Frame N+1**
 <table style="width: 100%;" border="1">
 <tbody>
-</tbody><tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
-<td style="font-size: 15px; padding: 10px;" colspan="2">
-06
-<b>71</b>
-04 D2
-<b><i>FB 2E</i></b>
-<i>00 00</i>
-</td>
+<td style="font-size: 15px; padding: 10px;" colspan="2">06 71 04 D2 <i>FB 2E</i> <i>00 00</i></td>
 </tr>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Data Channel</b></td>
@@ -261,14 +258,14 @@ FF D7
 </tr>
 <tr>
 <td rowspan="3">06 ⇒ 6</td>
-<td rowspan="3"><b>71</b> ⇒ Accelerometer</td>
-<td><b>X:</b> 04D2 = <b>+1234</b> ⇒ <b>+1.234G</b></td>
+<td rowspan="3">71 ⇒ Accelerometer</td>
+<td>X: 04D2 = +1234 ⇒ +1.234G</td>
 </tr>
 <tr>
 <td><i>Y: FB2E = -1234 ⇒ -1.234G</i></td>
 </tr>
 <tr>
-<td><i><b>Z:</b> 0000 = <b>0</b> ⇒ <b>0G</b></i></td>
+<td><i>Z: 0000 = 0 ⇒ 0G</i></td>
 </tr>
 </tbody>
 </table>
@@ -277,16 +274,9 @@ FF D7
 
 <table style="width: 100%;">
 <tbody>
-</tbody><tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
-<td style="font-size: 15px; padding: 10px;" colspan="2">
-01
-<b>88</b>
-06 76 5f
-<b><i>f2 96 0a</i></b>
-<i>00 03 e8</i>
-</td>
+<td style="font-size: 15px; padding: 10px;" colspan="2">01 88 06 76 5f <i>f2 96 0a</i> <i>00 03 e8</i></td>
 </tr>
 <tr>
 <td style="font-size: 15px; padding: 10px;"><b>Data Channel</b></td>
@@ -295,14 +285,14 @@ FF D7
 </tr>
 <tr>
 <td rowspan="3">01 ⇒ 1</td>
-<td rowspan="3"><b>88</b> ⇒ GPS</td>
-<td><b>Latitude:</b> 06765f ⇒ <b>42.3519</b></td>
+<td rowspan="3">88 ⇒ GPS</td>
+<td>Latitude: 06765f ⇒ 42.3519</td>
 </tr>
 <tr>
 <td><i>Longitude: F2960a ⇒ -87.9094</i></td>
 </tr>
 <tr>
-<td><i><b>Altitude:</b> 0003E8 ⇒ <b>10 meters</b></i></td>
+<td><i>Altitude: 0003E8 ⇒ 10 meters</i></td>
 </tr>
 </tbody>
 </table>
