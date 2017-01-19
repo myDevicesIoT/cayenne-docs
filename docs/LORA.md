@@ -694,6 +694,8 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
 
 
 ## Actility
