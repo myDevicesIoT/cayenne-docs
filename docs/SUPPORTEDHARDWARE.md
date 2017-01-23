@@ -3075,17 +3075,17 @@ A couple of notes before you get started:
 ###### Step 1
 Connect 3v power from the Pi Cobbler to the pushbutton, through the resistor.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121205/RPI-Digital-Input-Button-Step-1.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170123111931/RPI-Digital-Input-Button-Step-1.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
 
 ###### Step 2
 Connect ground from the Pi Cobbler to the pushbutton.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121206/RPI-Digital-Input-Button-Step-2.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170123111933/RPI-Digital-Input-Button-Step-2.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
 
 ###### Step 3
 Connect the pushbutton (using the same pin as the resistor) to one of the GPIO pins on the Pi Cobbler, in this case GPIO 17.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121206/RPI-Digital-Input-Button-Step-3.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170123111935/RPI-Digital-Input-Button-Step-3.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
 
 ###### Step 4
 You’re done! You can now add the Digital Input to your dashboard and use it to read the button state using GPIO 17.
