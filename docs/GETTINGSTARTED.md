@@ -65,6 +65,8 @@ After verifying your Raspberry Pi is setup and powered on, you can continue with
 
 The instructions for installing Cayenne onto your device are displayed on screen. Follow the on screen instructions to start the installation process. If you need additional help on this step, refer to the video tutorial above.
 
+_**NOTE:** The commands displayed on screen will be customized uniquely for the device being added and for your account. Do not share or re-use the installer downloaded from these commands - If you need to install additional devices, or reinstall onto this same device, you should follow the installation process again for each device._
+
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616133821/1st-Experience-RPI-Step-3-connect-rpi.png" width="600" height="382" alt="Raspberry Pi Step 3"></p>
 
 **2. As soon as the installation process starts, the Installing screen automatically appears. From here you can check on the installation process as it completes.**
