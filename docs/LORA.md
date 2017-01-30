@@ -758,7 +758,7 @@ In the *Route* section that gets added to the screen, click on the **Add** butto
 In the *Add Destination* dialog that appears, enter in the Cayenne Actility URL and then click on the **Add** button to save your changes.
 
 ```
-https://longrangapi.mydevices.com/longrange/api/actility/messages.add
+https://longrangeapi.mydevices.com/longrange/api/actility/messages/add
 ```
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090430/Actility-Routing-Profile-3-App-Server-Destination.png" width="600" height="240" alt="Paste in Cayenne destination url"><br/><br/></p>
