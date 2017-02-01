@@ -360,188 +360,45 @@ Cayenne allows you to create triggered actions on and between your LoRa devices,
 
 ## Asset Tracking
 
-Need to find a lost device, or need to monitor the movement of your devices during the day? Using Cayenne’s asset tracking features, you can see the past & present location of all of your devices connected to Cayenne.
- 
-**Asset tracking types**
+Need to find a lost device, or need to monitor the movement of your devices during the day? Using Cayenne’s asset tracking features, you can see the past & present location of your devices connected to Cayenne.
 
-Depending upon the type of device being added, there may be several Location settings available for enabling asset tracking.
+*NOTE: Cayenne currently supports GPS-enabled LoRa devices. Additional tracking options and tracking for other devices is coming soon.*
 
-* Devices that move.
-* Devices that do not move.
-* Sensors connected directly to a parent device (such as Arduino, Raspberry Pi).
-* Wireless sensors that can move independently from the device they’re connected to.
-* Custom Widgets for devices that may be stationary or may move.
- 
 **Asset tracking visualization**
 
-After setting up asset tracking on all your connected devices, Cayenne gives you an easy way to visualize their current and past locations. The [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) allows you to view the location history of a single device and any connected sensors. Using the [Project Map widget](#features-asset-tracking-map-tracking-features-project-map-features), you can examine the location and history for multiple devices at once. <br/>
+After setting up asset tracking on your connected devices, Cayenne gives you an easy way to visualize their current and past locations. The [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) allows you to view the location history of a single device and any connected sensors. Using the [Project Tracking tab](#features-asset-tracking-map-tracking-features-project-tracking-map-features), you can examine the location and history for multiple devices at once. <br/>
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712114534/Device-Tracking-map-highlight.png" width="600" height="363" alt="Asset Tracking"><br/><br/></p>
 
 
 ### Configuring Tracking
 
-Cayenne will guide you through enabling tracking as a part of the setup process for each of your devices. As you add your device through the Cayenne dashboard, you will be asked to enter in any required information needed to enable asset tracking.<br/><br/>
-
-<table style="width: 100%;" border="1" class="data-types-table">
-<tbody>
-</tbody><tbody>
-<tr>
-<td style="font-size: 15px; padding: 10px;"><b>Device</b></td>
-<td style="font-size: 15px; padding: 10px;"><b>Location Setting</b></td>
-<td style="font-size: 15px; padding: 10px;"><b>Setup needed</b></td>
-</tr>
-<tr>
-<td rowspan="2"><span><a href="#lora-devices-device-tracking">LoRa device</a></span></td>
-<td><span>Device doesn’t move</span></td>
-<td><span>Manually enter device location</span></td>
-</tr>
-<tr>
-<td><span>Device moves</span></td>
-<td><span>Setup automatic location tracking</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span><a href="#arduino-device-tracking">Arduino</a></span></td>
-<td><span>Device doesn’t move</span></td>
-<td><span>Manually set location</span></td>
-</tr>
-<tr>
-<td><span>Device moves</span></td>
-<td><span>Setup automatic location tracking</span></td>
-</tr>
-<tr>
-</tr><tr>
-<td rowspan="2"><span><a href="#raspberry-pi-device-tracking">Raspberry Pi</a></span></td>
-<td><span>Device doesn’t move</span></td>
-<td><span>Manually enter device location</span></td>
-</tr>
-<tr>
-<td><span>Device moves</span></td>
-<td><span><em>Coming Soon!</em></span></td>
-</tr>
-<tr><td rowspan="2"><span><a href="#custom-widgets-device-tracking">Custom Widget</a></span></td>
-<td><span>Connected to Arduino / Raspberry Pi</span></td>
-<td><span>None. Location is obtained automatically from parent</span></td>
-</tr>
-<tr>
-<td><span>Device moves independently</span></td>
-<td><span>Setup automatic location tracking</span></td>
-</tr>
-<tr>
-<td><span><a href="#connected-sensors-device-tracking">Connected Sensor</a></span></td>
-<td><span>Connected to Arduino / Raspberry Pi</span></td>
-<td><span>None. Location is obtained automatically from parent</span></td>
-</tr>
-<tr>
-<td><span><a href="#wireless-sensors-device-tracking">Wireless Sensor</a></span></td>
-<td><span>Device moves independently</span></td>
-<td><span>Setup automatic location tracking</span></td>
-</tr>
-</tbody>
-</table>
-
+Cayenne will guide you through enabling tracking as a part of the setup process for each of your GPS-enabled LoRa devices. As you add your device through the Cayenne dashboard, you will be asked to enter in any required information needed to enable asset tracking.<br/><br/>
 
 #### LoRa Devices
 
 Some LoRa devices move around and support automatic location updating, while other devices will remain stationary. If the device supports automatic location tracking, Cayenne will automatically configure it. If the device does not support automatic location tracking, or you do not wish to use it, you can manually set your device’s location.
 
+*TIP: Cayenne currently only supports asset tracking for GPS-enabled devices. If your LoRa device does not have on-board GPS, you may not see the tracking fields available. In the future, you will be able to track all of your devices, whether they support GPS or not.*
+
 **Manual Asset Tracking (LoRa)**
 
-If your LoRa device will remain stationary, set the **Location** field for the device to “This device doesn’t move”. You can then set the **Data Type** and **Units** so that you can manually enter in an address or coordinates for the device. After adding the device, you will see a Map Widget that will allow you to manually set the device’s location.
+If your LoRa device will remain stationary, set the **Location** field for the device to “This device doesn’t move”. You can then  manually enter in an address or coordinates for the device using the **Address** field. After adding the device, you will see your device shown on the map at that location.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926143957/LoRa-Settings-Device-doesnt-move1.png" width="600" height="363" alt="LoRa Tracking"><br/><br/></p>
 
-To set the address manually using the widget, simply enter the address into the widget and confirm. If you wish to change the address, hover over the address shown and click on the edit icon.
+If you wish to change the address, access the map using the **settings cogwheel** menu to open the *Settings* dialog where you can change the address in the **Address** field.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926144726/LoRa-Map-widget-Manual-location-default1.png" width="600" height="416" alt="LoRa Tracking"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170201095452/LoRa-manual-tracking-February-2017.png" width="600" height="485" alt="LoRa Tracking"><br/><br/></p>
 
 
 **Enabling Automatic Asset Tracking (LoRa)**
 
-If your LoRa device provides location data and will move around, the Location field for the device will default to “This device moves”. You can then set the Data Type and Units to customize how the location data will be shown on the map. After adding the device, you will it shown on a Map Widget and the location information for the device will be automatically kept up to date as the device moves.
+If your LoRa device provides location data and will move around, the **Location** field for the device will default to “This device moves”. After adding the device, you will see the device shown at its current location on the map and the location information for the device will be automatically kept up to date as the device moves.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926144159/LoRa-Settings-Automatic-location-tracking1.png" width="600" height="363" alt="LoRa Tracking"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804145558/Map-view-Device-Map-trails1.png" width="600" height="416" alt="LoRa Tracking"><br/><br/></p>
-
-
-#### Arduino
-
-When adding an Arduino microcontroller to Cayenne, asset tracking will automatically default to manual tracking and the **Location setting** will be set to “This device doesn’t move”. After adding your Arduino device to Cayenne, your device dashboard will appear and a [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) will be automatically added.
-
- 
-**Manual Asset Tracking (Arduino)**
-
-You can manually set the the address of your device in the map widget or by opening settings for the widget. To set the address manually using the widget, simply enter the address into the widget and confirm. If you wish to change the address, hover over the address shown and click on the edit icon.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926142127/Arduino-Map-Widget-Manual-location-default1.png" width="600" height="363" alt="LoRa Tracking"><br/><br/></p>
-
-
-**Enabling Automatic Asset Tracking (Arduino)**<br/>
-
-If your Arduino device will move around, you can setup automatic asset tracking through settings for the widget.
-
-1. Click on the **cogwheel icon** located in the widget tile to open settings for the widget.
-2. Under the **MAP** settings, change **Location** to “This devices moves”.
-3. Location information can only be obtained from a Virtual Pin. Select the **Pin** that will be used to provide the Location data for this device.
-4. Make sure the **Data Type** and **Units** for the device are correct based upon the data being provided to your Virtual Pin.
-5. The **Address** field will become read-only and will display the last obtained location information for your device.
-
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804140233/Device-Map-Widget-Settings-Arduino-Device-moves1.png" width="346" height="382" alt="Arduino Map Settings"><br/><br/></p>
-
-
-
-#### Raspberry Pi
-
-When adding a Raspberry Pi computer to Cayenne, asset tracking will automatically default to manual tracking and the **Location setting** will be set to “This device doesn’t move”. After adding your Raspberry Pi device to Cayenne, your device dashboard will appear and a [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) will be automatically added.
- 
-**Manual Asset Tracking (Raspberry Pi)**
-
-You can manually set the the address of your device in the map widget or by opening settings for the widget.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926141955/RPI-Map-Widget-Manual-location-default1.png" width="600" height="363" alt="Raspberry Pi Tracking"><br/><br/></p>
-
-
-**Enabling Automatic Asset Tracking (Raspberry Pi)**
-
-Coming soon!
-
-#### Custom Widgets
-
-When adding a Custom Widget, you will be asked whether the widget is attached to a parent device, or whether this widget will move independently from the device it communicates with. For example, you might have custom sensors, each outfitted with GPS devices, sending their data back to a Raspberry Pi that monitors all sensor data.
- 
-**Connected to a Device**
-
-When adding a Custom Widget to Cayenne, the location settings will default to using the same location as the device to which this device is connected to. If you are connecting a sensor which is wired directly to its parent device, there is no additional information needed for this widget’s location – the location of your widget will automatically share the location of its parent. You may click on the parent device marker on the map widget to see the location and status information for your device, including your custom widget’s status.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926142800/Custom-Widget-Map-Widget-connected-sensor1.png" width="600" height="363" alt="Connected to a Device"><br/><br/></p>
-
-
-**Manual Asset Tracking**
-
-If you have a Custom Widget that is not located in the same place as the device it communicates with, you can enter a manual location for the device. To configure your Custom Widget for manual tracking, be sure to change the **Location** for the widget to “Manual”. You will then be given the option to enter in the Address for your widget.
- 
-**Moves independently**
-
-If you have a device that is capable of moving independently of its parent, you can configure your Custom Widget to obtain its location automatically. To configure your Custom Widget for automatic location tracking, be sure to change the **Location** for the widget to “Moves independently”. You will then be asked to enter in the required information that let’s Cayenne know where to obtain the location information for this device. For example, when connecting to an Arduino board, you will be asked for the Virtual Pin that provides location data. See more information on specifying automatic location tracking settings for [Raspberry Pi](#features-asset-tracking-configuring-tracking-raspberry-pi), [Arduino devices](#features-asset-tracking-configuring-tracking-arduino) or [LoRa devices](#features-asset-tracking-configuring-tracking-lora-devices).
-
-#### Connected Sensors
-
-Many of the sensors supported in Cayenne’s Add Device process will be wired directly to an Arduino or Raspberry Pi device. These sensors will share the location data for their parent device. When adding these devices, you will find that the **Location** field will automatically be set to “Connected to Raspberry Pi” or “Connected to Arduino”. There is no additional location information needed for this device. You will see these sensors shown when you view the details for a location marker. [View Map Widget Features](#features-asset-tracking-map-tracking-features-device-map-features)
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804141842/lora-device-connect-sensors-info.png" width="600" height="416" alt="Connected Sensors"><br/><br/></p>
-
-
-
-#### Wireless Sensors
-
-Some sensors contain GPS or other wireless location tracking onboard. When adding these devices, you will have the option of allowing the sensor to be tracked independently of the device it communicates to.
-
- 
-**Moves independently**
-
-By default, the **Location** for wireless sensors will be set to “Moves independently”. You will then be asked to enter in the required information that let’s Cayenne know where to obtain the location information for this device. For example, with a wireless sensor that communicates its data with an Arduino board, you will be asked for the Virtual Pin that will contain the location data. See more information on specifying automatic location tracking settings for [Raspberry Pi](#features-asset-tracking-configuring-tracking-raspberry-pi), [Arduino devices](#features-asset-tracking-configuring-tracking-arduino) or [LoRa devices](#features-asset-tracking-configuring-tracking-lora-devices).
 
 
 ### Map Tracking Features
@@ -594,35 +451,25 @@ The Map widget makes it easy to see your device and all connected sensors. Senso
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804150250/Map-view-Device-Map-popup-details1.png" width="600" height="416" alt="Device Map Features"><br/><br/></p>
 
 
-**Viewing Independent Devices**
+#### Project Tracking Map Features
 
-The Device Map also displays sensors that are configured to move independently from the device they communicate to. These sensors receive their own location trail and markers for previous location data points. As with the parent device, you can click on the independent sensor or one of its location markers to get additional details.
-
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804150528/Map-view-Device-Map-wireless-sensor1.png" width="600" height="416" alt="Device Map Features"><br/><br/></p>
-
-
-#### Project Map Features
-
-Whenever you add a [Project](#features-projects) to Cayenne, a Project Map widget is automatically added for you. This widget allows you to visualize the location data for multiple devices at one time.
+You can use the **Tracking** tab found in your [Projects](#features-projects) to visualize the location data for multiple devices at one time.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712143333/Map-view-Project-Map-highlight.png" width="600" height="363" alt="Project Map Features"><br/><br/></p>
 
 **Adding Devices**
 
-The Project Map widget can display several devices at once. You can either add individual devices or you can add a batch of devices.
-
-To add a single device, drag & drop that device from the side device list into the map widget. The device will then be added. To add multiple devices, drag & drop a group of devices into the map. When you drop the group onto the map, a dialog will open asking you which devices to add. Select the devices you want added and click **Add** and all of the selected devices will be added to the map.
+The Tracking tab will automatically display a locaiton marker for each device that has been added to the Project. To do so, simply [add one or more](#features-projects-creating-a-project-adding-widgets) of the device's widgets to the project dashboard. The Tracking tab will then automatically include that device on the map.
  
 **Details popup**
 
-Clicking on a device marker in the map opens a popup dialog with additional information on the device and its location at that point in time.
+Clicking on a device marker in the map opens a popup dialog with additional information on the device and its location, specific to the currently shown Data and Time.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712143550/Map-view-Project-Map-popup-details.png" width="600" height="363" alt="Project Map Features"><br/><br/></p>
 
 **Filtering by Date**
 
-Using the controls in the widget, you can update the map widget to display a different day of location data for all devices on the map. You can use the **left arrow** or **right arrow** next to the date to quickly jump backward or forward a day at a time. Alternatively, you can on the current displayed date to open a **date picker** that will let you choose the date. After changing the date, the map widget will update to display the location of all devices on the map at that point in time.
+Using the on-screen controls, you can update the tracking map to display a different day of location data for all devices on the map. You can use the **left arrow** or **right arrow** next to the date to quickly jump backward or forward a day at a time. Alternatively, you can on the current displayed date to open a **date picker** that will let you choose the date. After changing the date, the map  will update to display the location of all devices on the map at that point in time.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160712143656/Map-view-Project-Map-date-filter.png" width="600" height="363" alt="Project Map Features"><br/><br/></p>
 
