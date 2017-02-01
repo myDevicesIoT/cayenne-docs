@@ -362,8 +362,6 @@ Cayenne allows you to create triggered actions on and between your LoRa devices,
 
 Need to find a lost device, or need to monitor the movement of your devices during the day? Using Cayenne’s asset tracking features, you can see the past & present location of your devices connected to Cayenne.
 
-*NOTE: Cayenne currently supports GPS-enabled LoRa devices. Additional tracking options and tracking for other devices is coming soon.*
-
 **Asset tracking visualization**
 
 After setting up asset tracking on your connected devices, Cayenne gives you an easy way to visualize their current and past locations. The [Device Map widget](#features-asset-tracking-map-tracking-features-device-map-features) allows you to view the location history of a single device and any connected sensors. Using the [Project Tracking tab](#features-asset-tracking-map-tracking-features-project-tracking-map-features), you can examine the location and history for multiple devices at once. <br/>
@@ -373,13 +371,23 @@ After setting up asset tracking on your connected devices, Cayenne gives you an 
 
 ### Configuring Tracking
 
-Cayenne will guide you through enabling tracking as a part of the setup process for each of your GPS-enabled LoRa devices. As you add your device through the Cayenne dashboard, you will be asked to enter in any required information needed to enable asset tracking.<br/><br/>
+Cayenne will guide you through enabling tracking as a part of the setup process for each of your GPS-enabled LoRa devices. As you add your device through the Cayenne dashboard, you will be asked to enter in any required information needed to enable asset tracking.
+
+*NOTE: Cayenne currently supports GPS-enabled LoRa devices. Additional tracking options and tracking for other devices is coming soon.*
 
 #### LoRa Devices
 
 Some LoRa devices move around and support automatic location updating, while other devices will remain stationary. If the device supports automatic location tracking, Cayenne will automatically configure it. If the device does not support automatic location tracking, or you do not wish to use it, you can manually set your device’s location.
 
-*TIP: Cayenne currently only supports asset tracking for GPS-enabled devices. If your LoRa device does not have on-board GPS, you may not see the tracking fields available. In the future, you will be able to track all of your devices, whether they support GPS or not.*
+*NOTE: If your LoRa device does not have on-board GPS, you may not see the tracking fields available. In the future, you will be able to track all of your LoRa devices, whether they support GPS or not.*
+
+**Enabling Automatic Asset Tracking (LoRa)**
+
+If your LoRa device provides location data and will move around, the **Location** field for the device will default to “This device moves”. After adding the device, you will see the device shown at its current location on the map and the location information for the device will be automatically kept up to date as the device moves.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926144159/LoRa-Settings-Automatic-location-tracking1.png" width="600" height="363" alt="LoRa Tracking"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804145558/Map-view-Device-Map-trails1.png" width="600" height="416" alt="LoRa Tracking"><br/><br/></p>
 
 **Manual Asset Tracking (LoRa)**
 
@@ -390,15 +398,6 @@ If your LoRa device will remain stationary, set the **Location** field for the d
 If you wish to change the address, access the map using the **settings cogwheel** menu to open the *Settings* dialog where you can change the address in the **Address** field.
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170201095452/LoRa-manual-tracking-February-2017.png" width="600" height="485" alt="LoRa Tracking"><br/><br/></p>
-
-
-**Enabling Automatic Asset Tracking (LoRa)**
-
-If your LoRa device provides location data and will move around, the **Location** field for the device will default to “This device moves”. After adding the device, you will see the device shown at its current location on the map and the location information for the device will be automatically kept up to date as the device moves.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926144159/LoRa-Settings-Automatic-location-tracking1.png" width="600" height="363" alt="LoRa Tracking"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804145558/Map-view-Device-Map-trails1.png" width="600" height="416" alt="LoRa Tracking"><br/><br/></p>
 
 
 ### Map Tracking Features
