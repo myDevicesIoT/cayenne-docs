@@ -1,4 +1,6 @@
-# LoRa
+<p id="lora" class="anchor-link"></p>
+
+# LoRa®
 
 <p id="lora-information" class="anchor-link"></p>
 <p id="overview-lora" class="anchor-link"></p>
@@ -8,13 +10,13 @@ LoRa is a wireless technology developed to create the low-power, wide-area netwo
 
 A network based on LoRa wireless technology can provide coverage that is greater in range compared to that of existing cellular networks. In fact, many mobile network operators have chosen to complement their existing cellular/wireless networks with a LPWAN based on LoRa technology because it is easy to plug into their existing infrastructure and also allows them to offer their customers a solution to serve more IoT battery-operated applications.
 
-LoRa technology was originally developed by Semtech, but is now coordinated by the 300+ member LoRa Alliance, a non-profit organization focused on standardizing LoRa for IoT/M2M and creating a strong ecosystem to scale the technology. To date, the alliance has developed a global LPWAN specification, known as LoRaWAN™, to help standardize LPWANs and foster the adoption of these networks to enable IoT, M2M, smart city, and industrial applications.
+LoRa technology originally developed by Semtech is now utilized by the over 400 members of the LoRa Alliance, a non-profit organization focused on standardizing LoRa Technology for IoT/M2M and creating a strong ecosystem to scale the technology. To date, the alliance has developed a global LPWAN specification, known as LoRaWAN™, to help standardize LPWANs and foster the adoption of these networks to enable IoT, M2M, smart city, and industrial applications.
 
 <p id="how-it-works-lora" class="anchor-link"></p>
+<p id="lora-how-lorawan-works" class="anchor-link"></p>
 
-
-## How LoRaWAN works
-LoRaWAN is a Data + Network Protocol built on top of LoRa. LoRaWAN targets the basic needs of LoRa usage for IoT by providing Addressing, Routing and Security.
+## How LoRaWAN™ works
+LoRaWAN™ is a protocol specification based on the LoRa technology developed by the LoRa Alliance. LoRaWAN targets the basic needs of LoRa usage for IoT by providing Addressing, Routing and Security.
 
 Topology of a LoRaWAN network consists of several elements.
 
@@ -22,8 +24,6 @@ Topology of a LoRaWAN network consists of several elements.
 * **Concentrator / Gateway:** Gateways are access points for for end nodes (e.g. sensors), aggregating data and communicating that data to a central network server via standard IP connections. Several gateways can be co-located in an area and can transparently share a single connection to the network server.
 * **Network Server:** The LoRa Network Server acts to eliminate duplicate packets, manages security and data rates.
 * **Application Server:** Application Servers manage payload security and performs analysis to utilize sensor data. Cayenne operates as an Application Server.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160819110810/LoRaWAN.png" width="600" height="320" alt="Using Sketch Files"><br/><br/></p>
 
 <p id="device-information-lora" class="anchor-link"></p>
 
@@ -911,7 +911,7 @@ If your device has been previously registered on the Actility network, it can be
 
 **Items you will need:**
 
-1.  Which [LoRa device](#lora-actility-supported-devices) is being added?
+1.  Which [LoRa technology device](#lora-actility-supported-devices) is being added?
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-actility-manually-register-device) if you need help with manually registering your device on a network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4.  Which Actility ThingPark Server are you using?
@@ -938,7 +938,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 3.  Our device has been previously manually registered with Actility. Select “Already Registered” in the **Activation Mode** field.
 4.  From the **ThingPark Server** field, be sure to select the correct server that you are using.
 5.  Enter your **ThingPark Email** and **ThingPark Password** into the corresponding fields.
-6.  Click **Add LoRa device**.
+6.  Click **Add device**.
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170118131239/Add-Device-Actility-LoRa-Pulse-already-registered2.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
@@ -998,7 +998,7 @@ Senet, a contributing member of the LoRa® Alliance, is the first and only publi
 
 **Using Senet with Cayenne**
 
-Cayenne makes it easy to use your LoRa device and the Senet network. You will need to:
+Cayenne makes it easy to use your LoRa technology device and the Senet network. You will need to:
 
 1. [Create / Log into your account on the Senet portal](#lora-senet-network-create-account)
 2. [Setup gateway device](#lora-senet-network-setup-gateway-device)
@@ -1019,7 +1019,7 @@ To create your Senet account, visit the <a href="https://portal.senetco.com/" ta
 
 ### Setup gateway device
 
-In order for your LoRa devices to connect to the Senet network, you should purchase and configure a gateway device. When using the Senet network, it is recommended that you use a MultiConnect Conduit gateway device. You can find links to an appropriate LoRa version of this device on the <a href="http://multitech.com/brands/multiconnect-conduit" target="_blank">Multitech MultiConnect Conduit page</a>.
+In order for your LoRa technology devices to connect to the Senet network, you should purchase and configure a gateway device. When using the Senet network, it is recommended that you use a MultiConnect Conduit gateway device. You can find links to an appropriate version of this device on the <a href="http://multitech.com/brands/multiconnect-conduit" target="_blank">Multitech MultiConnect Conduit page</a>.
 
 **Be sure that your devices are covered by the Senet network, including having an appropriate gateway configured and working if needed, before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
@@ -1036,7 +1036,7 @@ If you need to register a new gateway device, the Senet portal has instructions 
 
 ### Manual register device
 
-Before you can use your LoRa device on the Senet network, it must be registered on the network using the Senet portal. The following information will help guide you through this process.
+Before you can use your LoRa technology device on the Senet network, it must be registered on the network using the Senet portal. The following information will help guide you through this process.
 
 **Log into the Senet portal**
 
@@ -1120,7 +1120,7 @@ Once your device has been previously registered on the Senet network, it can be 
 
 **Items you will need:**
 
-1.  Which [LoRa device](#lora-senet-network-supported-devices) is being added?
+1.  Which [LoRa technology device](#lora-senet-network-supported-devices) is being added?
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-senet-network-manual-register-device) if you need help with manually registering your device on the network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 
@@ -1142,7 +1142,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 1.  Give the device a name. In our case, we’ll enter “mDotBox” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
 3.  Our device has been previously manually registered with Senet. Make sure “Already Registered” is selected in the **Activation Mode** field.
-4.  Click **Add LoRa device**.
+4.  Click **Add device**.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-Device-Senet-mDotBox-already-registered.png" width="600" height="362" alt="Senet"><br/><br/></p>
 
@@ -1206,7 +1206,7 @@ To create your Loriot account, visit the <a href="https://loriot.io/register.htm
 
 ### Setup gateway device
 
-In order for your LoRa devices to connect to the Loriot network, you must have purchased and configured a gateway device. Loriot has a <a href="https://us1.loriot.io/lora-gateways.html" target="_blank">Gateway page</a> with costs and recommendations. Once you have purchased the gateway you want to use, Loriot offers guides for how to set it up for use. When logged into your account, refer to the **Documentation > Gateways** section on the Loriot portal for information.
+In order for your LoRa technology devices to connect to the Loriot network, you must have purchased and configured a gateway device. Loriot has a <a href="https://us1.loriot.io/lora-gateways.html" target="_blank">Gateway page</a> with costs and recommendations. Once you have purchased the gateway you want to use, Loriot offers guides for how to set it up for use. When logged into your account, refer to the **Documentation > Gateways** section on the Loriot portal for information.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Setup-gateway.png" width="660" height="396" alt="Loriot setup gateway"><br/><br/></p>
    
@@ -1244,7 +1244,7 @@ https://longrangeapi.mydevices.com/longrange/api/loriot/messages/add
 
 ### Manually register device
 
-Before you can use your LoRa device on the Loriot network, it must be registered on the network. If you need to regsiter your device with Loriot, the following information will help guide you through this process using Loriot's portal.
+Before you can use your device on the Loriot network, it must be registered on the network. If you need to regsiter your device with Loriot, the following information will help guide you through this process using Loriot's portal.
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/q6o1AzSuo9c" frameborder="0" allowfullscreen></iframe></p>
 
@@ -1312,7 +1312,7 @@ If your device has been previously registered on the Loriot network, it can be q
 
 **Items you will need:**
 
-1. Which [LoRa device](#lora-loriot-network-supported-devices) is being added?
+1. Which [LoRa technology device](#lora-loriot-network-supported-devices) is being added?
 2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-loriot-network-manually-register-device) if you need help with manually registering your device on a network.
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4. What is your Loriot **Application ID**? You can obtain your App ID from your Application's dashboard on the Loriot portal.
@@ -1349,7 +1349,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 4. Select which server your device uses from the **Loriot Server** dropdown.
 5. Enter in the **Loriot App ID** for the Application this device uses on the Loriot portal.
 6. Enter in the **Loriot Token** for the Application this device uses on the Loriot portal.
-4. Click **Add LoRa device**.
+4. Click **Add device**.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-pulse-settings.png" width="660" height="394" alt="Loriot Pulse settings"><br/><br/></p>
 
@@ -1412,7 +1412,7 @@ To get an account with OrbiWise, you will need to work directly with OrbiWise. A
 
 ### Setup gateway device
 
-In order for your LoRa devices to connect to the OrbiWise network, you should purchase and configure a gateway device. Currently, you will obtain and use a <a href="http://www.tektelic.com/portfolio/" target="_blank">Tektelic gateway</a> that has been configured for OrbiWise and Cayenne. OrbiWise will perform this configuration for you. Since your gateway will be preconfigured to work with Cayenne, you will not need to configure any Cayenne-specific data forwarding for each device connected to that gateway.
+In order for your LoRa technology devices to connect to the OrbiWise network, you should purchase and configure a gateway device. Currently, you will obtain and use a <a href="http://www.tektelic.com/portfolio/" target="_blank">Tektelic gateway</a> that has been configured for OrbiWise and Cayenne. OrbiWise will perform this configuration for you. Since your gateway will be preconfigured to work with Cayenne, you will not need to configure any Cayenne-specific data forwarding for each device connected to that gateway.
 
 **Be sure that your devices are covered by an appropriate OrbiWise gateway, including having the gateway configured and working for Cayenne, before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
@@ -1431,7 +1431,7 @@ To register a new gateway, click on the **Add Gateway** button and the *Add Gate
 
 ### Manual register device
 
-Before you can use your LoRa device on the OrbiWise network, it must be registered on the network using the OrbiWise portal. The following information will help guide you through this process.
+Before you can use your device on the OrbiWise network, it must be registered on the network using the OrbiWise portal. The following information will help guide you through this process.
 
 **Register new device**
 
