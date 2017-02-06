@@ -193,23 +193,23 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/m
 Want to use the Arduino Yun on-board WiFi? Check out <a href="https://www.arduino.cc/en/Guide/ArduinoYun#toc14" target="_blank">this tutorial</a> on the Arduino website.
 
 <p id="lora-hardware-supported-devices" class="anchor-link"></p>
+<p id="supported-hardware-lora-devices" class="anchor-link"></p>
 
-
-## LoRa devices
+## LoRa technology devices
 
 Cayenne can be used with a range of LoRa devices, supported by several different LoRa network providers.
 
-**Need a LoRa device?**
-<a href="http://actility.thingpark.com/thingpark-store/" target="_blank">Visit the ThingPark store</a> to find a LoRa device for your use.
+**Need a LoRa technology device?**
+<a href="http://actility.thingpark.com/thingpark-store/" target="_blank">Visit the ThingPark store</a> to find a device for your use.
 
-Additional guidance on finding providers of LoRa sensors and other devices can be found using the <a href="http://www.semtech.com/lora/ecosystem/" target="_blank">LoRaWAN Products & Services</a> page.
+Additional guidance on finding providers of sensors and other devices can be found using the <a href="http://www.semtech.com/lora/ecosystem/" target="_blank">LoRaWAN Products & Services</a> page.
 
 
 ### Adeunis
 
 #### Adeunis Demonstrator
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083258/Component-images_0002_Adeunis-LoRa-Demonstrator.png" width="346" height="118" class="noborder" alt="Adeunis Demonstrator"></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170206082410/Adeunis-Demonstrator.png" width="346" height="118" class="noborder" alt="Adeunis Demonstrator"></p>
 
 **Networks supported:**
 
