@@ -433,19 +433,19 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
    If you don’t, this means your board is not connected to the Internet to send data to the Cayenne cloud. You will need to verify that your Arduino is connected to the Internet. If you don’t see any outptut in the Serial Monitor, leave it open and Reset your Arduino board.
 
 
-## LoRa
+## LoRa®
 
-Before you can manage your LoRa device using the online dashboard, you must make sure your device is setup and add it to your Cayenne dashboard.
+Before you can manage your LoRa technology device using the online dashboard, you must make sure your device is setup and add it to your Cayenne dashboard.
 
-### LoRa setup
+### LoRaWAN™ setup
 
-Begin by verifying that you have your LoRa network provider account and device information handy, and verify that the hardware is connected to a LoRa gateway in case you are using a private LoRa network (not needed for public LoRa network).
+Begin by verifying that you have your LoRa network provider account and device information handy, and verify that the hardware is connected to a LoRaWAN gateway in case you are using a private LoRa network (not needed for public LoRaWAN network).
 
 **1\. Make sure your device is powered on and connected**
 
-Your LoRa devices will need to already be connected to either a public or private LoRa network. Contact your network provider if you need help verifying your connection status.
+Your LoRa devices will need to already be connected to either a public or private LoRaWAN network. Contact your network provider if you need help verifying your connection status.
 
-In case of public LoRa network, make sure your devices are powered on and the LoRa coverage of your public network provider is available where you want to use your devices. If you are using a private network, make sure the gateway you will be using is configured and your devices are powered on.
+In case of public LoRaWAN network, make sure your devices are powered on and the LoRaWAN coverage of your public network provider is available where you want to use your devices. If you are using a private network, make sure the gateway you will be using is configured and your devices are powered on.
 
 Need a gateway? Here are some helpful links to purchasing and configuring a gateway based on which network you’ll be using.
 
@@ -454,9 +454,9 @@ Need a gateway? Here are some helpful links to purchasing and configuring a gate
 *   [Setup gateway with Loriot](#lora-loriot-network-setup-gateway-device)
 
 
-**2\. Make sure you have your LoRa account information**
+**2\. Make sure you have your LoRaWAN account information**
 
-If your device has not been previously registered with your LoRa network provider, you will need to provide your account information for the chosen LoRa network. You will only need to enter this information once for each network provider used.
+If your device has not been previously registered with your LoRaWAN network provider, you will need to provide your account information for the chosen LoRa network. You will only need to enter this information once for each network provider used.
 
 Need an account? Here are some helpful links to creating an account based on which network you’ll be using.
 
@@ -468,18 +468,17 @@ Need an account? Here are some helpful links to creating an account based on whi
 
 In order to connect Cayenne to your LoRa device, you will need to know the DEVEUI for your device. [What’s this?](#lora-about-deveuis)
 
-In addition to adding previously activated devices, Cayenne is capable of activating new devices on some LoRa provider networks. If you will be activating your device on the network for the first time, you will also need additional information for the activation process, such as your Appkey or AppEUI. The information required will depend upon which activation mode you select for your device and which network you will be using.
+In addition to adding previously activated devices, Cayenne is capable of activating new devices on some LoRaWAN provider networks. If you will be activating your device on the network for the first time, you will also need additional information for the activation process, such as your Appkey or AppEUI. The information required will depend upon which activation mode you select for your device and which network you will be using.
 
+### Add LoRa technology device
 
-### Add LoRa device
-
-To begin the process of adding a LoRa device to Cayenne, select the LoRa option from the list of devices. A list of LoRa Networks and supported devices will appear.
+To begin the process of adding a LoRa device to Cayenne, select the LoRa option from the list of devices. A list of LoRaWAN Networks and supported devices will appear.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/step-1-choose-device-category-2.png" width="600" height="359" alt="step-1-choose-device-category"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-Choose-Network-and-Device.png" width="600" height="363" alt="Add LoRa Device"></p>
 
-After selecting the LoRa Network and Device that you want to add, you will then enter in the required settings for adding and activating the LoRa device. Once completed, your dashboard will automatically appear and Cayenne will automatically add widgets for all sensors on your device.
+After selecting the LoRaWAN Network and Device that you want to add, you will then enter in the required settings for adding and activating the LoRa device. Once completed, your dashboard will automatically appear and Cayenne will automatically add widgets for all sensors on your device.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-Choose-Network-and-Device.png" width="600" height="363" alt="Add LoRa Device"></p>
 
