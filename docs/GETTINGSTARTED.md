@@ -450,8 +450,9 @@ In case of public LoRaWAN network, make sure your devices are powered on and the
 Need a gateway? Here are some helpful links to purchasing and configuring a gateway based on which network you’ll be using.
 
 *   [Setup gateway with Actility](#lora-actility-setup-gateway-device)
-*   [Setup gateway with Senet](#lora-senet-network-setup-gateway-device)
 *   [Setup gateway with Loriot](#lora-loriot-network-setup-gateway-device)
+*   [Setup gateway with Senet](#lora-senet-network-setup-gateway-device)
+*   [Setup gateway with OrbiWise](#lora-orbiwise-network-setup-gateway-device)
 
 
 **2\. Make sure you have your LoRaWAN account information**
@@ -461,12 +462,14 @@ If your device has not been previously registered with your LoRaWAN network prov
 Need an account? Here are some helpful links to creating an account based on which network you’ll be using.
 
 *   [Creating Actility account](#lora-actility-create-account)
-*   [Creating Senet account](#lora-senet-network-create-account)
 *   [Creating Loriot account](#lora-loriot-network-create-account)
+*   [Creating Senet account](#lora-senet-network-create-account)
+*   [Creating OrbiWise account](#lora-orbiwise-network-create-account)
 
-**3\. Make sure you have the information on your LoRa devices being connected**
 
-In order to connect Cayenne to your LoRa device, you will need to know the DEVEUI for your device. [What’s this?](#lora-about-deveuis)
+**3\. Make sure you have the information on your devices being connected**
+
+In order to connect Cayenne to your LoRa technology device, you will need to know the DEVEUI for your device. [What’s this?](#lora-about-deveuis)
 
 In addition to adding previously activated devices, Cayenne is capable of activating new devices on some LoRaWAN provider networks. If you will be activating your device on the network for the first time, you will also need additional information for the activation process, such as your Appkey or AppEUI. The information required will depend upon which activation mode you select for your device and which network you will be using.
 
@@ -490,5 +493,6 @@ After selecting the LoRaWAN Network and Device that you want to add, you will th
 When adding the LoRa device, the settings, supported activation modes and account information required will depend upon which network is selected. Click on the appropriate link below to jump to the section on your network, each of which contains a detailed walkthrough that will help you add your LoRa device to Cayenne.
 
 *   [Using the Actility Network](#lora-actility)
-*   [Using the Senet Network](#lora-senet-network)
 *   [Using the Loriot Network](#lora-loriot-network)
+*   [Using the Senet Network](#lora-senet-network)
+*   [Using the OrbiWise Network](#lora-orbiwise-network)
