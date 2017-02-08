@@ -181,7 +181,7 @@ The first step in handling our TMP36 sensor is to write some code to read the se
 
 #### Send Temperature reading to Cayenne
 
-Now let’s send our TMP36 temperature data up to Cayenne. This is easily accomplished, requiring only a single line of code. In this case, we’ll send the data to Cyanne using MQTT Channel 0.
+Now let’s send our TMP36 temperature data up to Cayenne. This is easily accomplished, requiring only a single line of code. In this case, we’ll send the data to Cayenne using MQTT Channel 0.
 
 *TIP: There are many ways to read and send sensor data. Depending upon what device you are using and what goals you have in mind, you may choose a different way.*
 
@@ -649,7 +649,7 @@ Let's start by adding a Button widget on the dashboard. From the Cayenne dashboa
 
 ##### Write code for the actuator
 
-To properly handle actuator commands with Cayenne, it first helps to understand a bit about how Cyanne expects a well behaved client to react to actuator commands. Cayenne expects a client to:
+To properly handle actuator commands with Cayenne, it first helps to understand a bit about how Cayenne expects a well behaved client to react to actuator commands. Cayenne expects a client to:
 
 1. Subscribe to *COMMAND* messages from Cayenne.
 2. When a new *COMMAND* arrives, handle changing the status of the actuator connected to the board.
@@ -866,7 +866,7 @@ Let's start by adding a Button widget on the dashboard. From the Cayenne dashboa
 
 ##### Write code for the actuator
 
-To properly handle actuator commands with Cayenne, it first helps to understand a bit about how Cyanne expects a well behaved client to react to actuator commands. Cayenne expects a client to:
+To properly handle actuator commands with Cayenne, it first helps to understand a bit about how Cayenne expects a well behaved client to react to actuator commands. Cayenne expects a client to:
 
 1. Subscribe to *COMMAND* messages from Cayenne.
 2. When a new *COMMAND* arrives, handle changing the status of the actuator connected to the board.
@@ -1020,7 +1020,7 @@ Let's start by adding a Button widget on the dashboard. From the Cayenne dashboa
 
 #### Testing the actuator
 
-In order to test out our actuator, it first helps to understand a bit about how Cyanne expects a well behaved client to react to actuator commands. Cayenne expects a client to:
+In order to test out our actuator, it first helps to understand a bit about how Cayenne expects a well behaved client to react to actuator commands. Cayenne expects a client to:
 
 1. Subscribe to *COMMAND* messages from Cayenne.
 2. When a new *COMMAND* arrives, handle changing the status of the actuator connected to the board.
