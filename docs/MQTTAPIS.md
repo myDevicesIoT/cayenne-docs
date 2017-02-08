@@ -1144,6 +1144,24 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td style="font-size: 15px; padding: 10px;"><b>Widgets</b></td>
 </tr>
 <tr>
+<td><span>Analog Actuator</span></td>
+<td><span>ANALOG_ACTUATOR</span></td>
+<td><span>analog_actuator</span></td>
+<td><span>Analog</span></td>
+<td><span>ANALOG</span></td>
+<td><span>null</span></td>
+<td><a href="#slider-control">Slider</a></td>
+</tr>
+<tr>
+<td><span>Digital Actuator</span></td>
+<td><span>DIGITAL_ACTUATOR</span></td>
+<td><span>digital_actuator</span></td>
+<td><span>Digital (0/1)</span></td>
+<td><span>DIGITAL</span></td>
+<td><span>null</span></td>
+<td><a href="#button-control">Button</a></td>
+</tr>
+<tr>
 <td><span>HVAC.Change State</span></td>
 <td><span>HVAC_CHANGE_STATE</span></td>
 <td><span>hvac_state</span></td>
@@ -1315,13 +1333,31 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td style="font-size: 15px; padding: 10px;"><b>Widgets</b></td>
 </tr>
 <tr>
+<td><span>Digital Sensor</span></td>
+<td><span>DIGITAL_SENSOR</span></td>
+<td><span>digital_sensor</span></td>
+<td><span>Digital (0/1)</span></td>
+<td><span>DIGITAL</span></td>
+<td><span>null</span></td>
+<td><span><a href="#2-state-display">2 State</a></span></td>
+</tr>
+<tr>
+<td><span>Analog Sensor</span></td>
+<td><span>ANALOG_SENSOR</span></td>
+<td><span>analog_sensor</span></td>
+<td><span>Analog</span></td>
+<td><span>ANALOG</span></td>
+<td><span>null</span></td>
+<td><span><a href="#value-display">Value</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a></span></td>
+</tr>
+<tr>
 <td><span>Absolute Humidity</span></td>
 <td><span>ABSOLUTE_HUMIDITY</span></td>
 <td><span>abs_hum</span></td>
 <td><span>Grams per cubic meter</span></td>
 <td><span>GRAMS_PER_METER3</span></td>
 <td><span>gm3</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+<td><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td rowspan="2"><span>Absorbed Radiation</span></td>
@@ -1459,7 +1495,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Bits</span></td>
 <td><span>BIT</span></td>
 <td><span>bit</span></td>
-<td rowspan="6"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
+<td rowspan="6"><span><a href="#value-display">Value</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a></span></td>
 </tr>
 <tr>
 <td><span>\* Bytes</span></td>
@@ -1561,6 +1597,15 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
+<td><span>Counter</span></td>
+<td><span>COUNTER</span></td>
+<td><span>counter</span></td>
+<td><span>Analog</span></td>
+<td><span>ANALOG</span></td>
+<td><span>null</span></td>
+<td><span><a href="#value-display">Value</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a></span></td>
+</tr>
+<tr>
 <td><span>CPU</span></td>
 <td><span>CPU</span></td>
 <td><span>cpu</span></td>
@@ -1614,6 +1659,24 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>SieVert per Hour</span></td>
 <td><span>SIEVERT_HOUR</span></td>
 <td><span>svph</span></td>
+</tr>
+<tr>
+<td rowspan="3"><span>Energy</span></td>
+<td rowspan="3"><span>ENERGY</span></td>
+<td rowspan="3"><span>energy</span></td>
+<td><span>Killowatts per hour</span></td>
+<td><span>KW_PER_H</span></td>
+<td><span>kwh</span></td>
+<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td rowspan="3"><span>External Waterleak</span></td>
+<td rowspan="3"><span>EXT_WATERLEAK</span></td>
+<td rowspan="3"><span>ext_wleak</span></td>
+<td><span>Analog</span></td>
+<td><span>ANALOG</span></td>
+<td><span>null</span></td>
+<td><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td rowspan="2"><span>Force</span></td>
@@ -1988,7 +2051,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Lux</span></td>
 <td><span>LUX</span></td>
 <td><span>lux</span></td>
-<td rowspan="4"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+<td rowspan="4"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Volts</span></td>
@@ -2215,7 +2278,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Centimeter</span></td>
 <td><span>CENTIMETER</span></td>
 <td><span>cm</span></td>
-<td rowspan="3"><span><a href="#proximity-widget">Proximity (coming soon)</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
+<td rowspan="3"><span><a href="#proximity-widget">Proximity (coming soon)</a>, <a href="#value-display">Value</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a></span></td>
 </tr>
 <tr>
 <td><span>Meter</span></td>
@@ -2256,13 +2319,27 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>ckg</span></td>
 </tr>
 <tr>
+<td rowspan="2"><span>Rain Level</span></td>
+<td rowspan="2"><span>RAIN_LEVEL</span></td>
+<td rowspan="2"><span>rain_level</span></td>
+<td><span>Centimeter</span></td>
+<td><span>CENTIMETER</span></td>
+<td><span>cm</span></td>
+<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td><span>\* Millimeter</span></td>
+<td><span>MILLIMETER</span></td>
+<td><span>mm</span></td>
+</tr>
+<tr>
 <td rowspan="2"><span>Relative Humidity</span></td>
 <td rowspan="2"><span>RELATIVE_HUMIDITY</span></td>
 <td rowspan="2"><span>rel_hum</span></td>
 <td><span>\* % (0 to 100)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+<td rowspan="2"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Ratio</span></td>
@@ -2353,6 +2430,15 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>cmhz</span></td>
 </tr>
 <tr>
+<td><span>Signal Noise Ratio</span></td>
+<td><span>SNR</span></td>
+<td><span>snr</span></td>
+<td><span>Decibels</span></td>
+<td><span>DB</span></td>
+<td><span>db</span></td>
+<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
 <td><span>Signal Strength</span></td>
 <td><span>SIGNAL_STRENGTH</span></td>
 <td><span>sig_str</span></td>
@@ -2379,6 +2465,38 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Kiloelectron Volts</span></td>
 <td><span>KILOELEC_VOLT</span></td>
 <td><span>kev</span></td>
+</tr>
+<tr>
+<td><span>Soil Moisture</span></td>
+<td><span>SOIL_MOISTURE</span></td>
+<td><span>soil_moist</span></td>
+<td><span>% (0 to 100)</span></td>
+<td><span>PERCENT</span></td>
+<td><span>p</span></td>
+<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td><span>Soil pH</span></td>
+<td><span>SOIL_PH</span></td>
+<td><span>soil_ph</span></td>
+<td><span>Analog</span></td>
+<td><span>ANALOG</span></td>
+<td><span>null</span></td>
+<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td rowspan="2"><span>Soil Water Tension</span></td>
+<td rowspan="2"><span>SOIL_WATER_TENSION</span></td>
+<td rowspan="2"><span>soil_w_ten</span></td>
+<td><span>\* Kilopascal</span></td>
+<td><span>KILOPASCAL</span></td>
+<td><span>kpa</span></td>
+<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td><span>Pascal</span></td>
+<td><span>PASCAL</span></td>
+<td><span>pa</span></td>
 </tr>
 <tr>
 <td><span>Solid Volume</span></td>
@@ -2477,6 +2595,15 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Pounds per square inch</span></td>
 <td><span>PSI</span></td>
 <td><span>psi</span></td>
+</tr>
+<tr>
+<td><span>Tank Level</span></td>
+<td><span>TANK_LEVEL</span></td>
+<td><span>tl</span></td>
+<td><span>Analog</span></td>
+<td><span>ANALOG</span></td>
+<td><span>null</span></td>
+<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td rowspan="3"><span>Temperature</span></td>
@@ -2598,7 +2725,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Volts</span></td>
 <td><span>VOLTS</span></td>
 <td><span>v</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+<td rowspan="2"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Millivolts</span></td>
@@ -2650,6 +2777,24 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Kilogram</span></td>
 <td><span>KILOGRAM</span></td>
 <td><span>kg</span></td>
+</tr>
+<tr>
+<td><span>Received signal strength indicator</span></td>
+<td><span>RSSI</span></td>
+<td><span>rssi</span></td>
+<td><span>RSSI</span></td>
+<td><span>DBM</span></td>
+<td><span>dbm</span></td>
+<td><span><a href="#line-chart-display">Line Chart</a></span></td>
+</tr>
+<tr>
+<td><span>Wind Speed</span></td>
+<td><span>WIND_SPEED</span></td>
+<td><span>wind_speed</span></td>
+<td><span>Kilometer per hour</span></td>
+<td><span>KM_PER_H</span></td>
+<td><span>kmh</span></td>
+<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 </tbody>
 </table>
