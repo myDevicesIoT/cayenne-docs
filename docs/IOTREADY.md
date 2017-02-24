@@ -61,7 +61,7 @@ Regardless of which type of device you are submitting, the hardware submission a
  - **Verifying Company and Hardware information.** The myDevices team will verify that we have all required Company information as well as well information on the hardware to be integrated. If needed, you may be contacted by a member of the team for clarification or questions on supporting your device.
  - **Verification and testing of hardware.** Before your device can be integrated, testing will be performed to verify that the device is working properly with Cayenne. Submitting test hardware for verification is required as a part of the submission process. Be sure to have your hardware delivered promptly to the Cayenne team in order to minimize any delays in the approval process.
  - **Integration and operational testing.** The Cayenne team will start preparing to list your Company and product on the myDevices website and the Cayenne dashboard.
-3. Approval and Live. After final verification from the myDevices and Cayenne teams, your device will then be made live. Users will then be able to select your hardware directly from the Cayenne dashboard.
+3. **Approval and Live.** After final verification from the myDevices and Cayenne teams, your device will then be made live. Users will then be able to select your hardware directly from the Cayenne dashboard.
 
 ### Starting A New Submission
 
@@ -189,15 +189,13 @@ As a part of each new hardware submission, you will need to send test hardware t
 
 Please send at least 1 sample device to:
 
-**myDevices**
-
-**Attn: Camrin Roczey**
-
-**23801 Calabasas Road, Ste. 2005**
-
-**Calabasas, CA 91302**
-
-**Phone: 818-591-9600**
+```
+myDevices
+Attn: Camrin Roczey
+23801 Calabasas Road, Ste. 2005
+Calabasas, CA 91302
+Phone: 818-591-9600
+```
 
 If you have any questions, contact us at <a href="mailto:iotready@mydevices.com">IoTReady@myDevices.com</a>
 
