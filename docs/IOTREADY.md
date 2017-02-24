@@ -8,7 +8,7 @@ Using the Cayenne IoT Ready Program™, you can enable your hardware with Cayenn
 - Your IoT ready hardware will be added to the Cayenne library accessible to thousands of developers that are already using Cayenne to build projects and solutions.
 - Your devices will seamlessly work with other devices. Developers will be empowered to design solutions by mixing-and-matching hardware to create IoT products.
 
-To get started, follow the [Enrollment process](#iot-ready-program-enrollment-sign-up) to create your free account. After creating your account you can [submit your hardware](#iot-ready-program-enrollment-submitting-hardware-requests) for review and inclusion into Cayenne.
+To get started, follow the [Enrollment process](#iot-ready-program-enrollment-sign-up) to create your free account. After creating your account you can [submit your hardware](#iot-ready-program-submitting-hardware-requests) for review and inclusion into Cayenne.
 
 ## Enrollment / Sign Up
 
@@ -16,13 +16,13 @@ To join the IoT Ready Program, visit the <a href=”http://mydevices.com/for-har
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224130622/iot-ready-program-signup-form.png" width="660" height="376" alt="Sign up form"><br/><br/></p>
 
-After creating your account you will then be taken into your account on the <a href=”http://iotready.mydevices.com”>IoT Ready Program website</a> where you will need to read over and accept the licensing terms for the program and then fill out the information on your company, product and contacts.
+After creating your account you will then be taken into your account on the <a href=”http://iotready.mydevices.com” target="_blank">IoT Ready Program website</a> where you will need to read over and accept the licensing terms for the program and then fill out the information on your company, product and contacts.
 
 ### Company Information
 
 The information that you add to the company information form will not only be used by myDevices team when verifying your company, but will also be displayed on both the myDevices and Cayenne websites. You must complete the Company Information section before you can continue and submit devices to Cayenne.
 
-Be sure that the information you provide here is how you want it displayed to your users. In addition to the <a href=”http://mydevices.com/partners/”>Partners</a> page, your company name, description and logo may also be displayed to users as they select your hardware when using the Cayenne dashboard.
+Be sure that the information you provide here is how you want it displayed to your users. In addition to the <a href=”http://mydevices.com/partners/” target="_blank">Partners</a> page, your company name, description and logo may also be displayed to users as they select your hardware when using the Cayenne dashboard.
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224130821/iot-ready-program-company-information.png" width="660" height="416" alt="Company Information screen"><br/><br/></p>
 
@@ -33,7 +33,7 @@ To help guide you in entering your company information correctly, it may help yo
 - **Description:** be sure to enter in a brief description of your company that customers can use to get a quick overview of your company.
 - **Logo:** be sure to upload an image file to be used when displaying your company’s logo. When customers view information on your company, or select your company’s hardware in Cayenne dashboard, they will see this logo.
 
-  *TIP: We recommend a high quality, 600x600 pixel image.*
+  *TIP: We recommend using a high quality, 600x600 pixel image for the logo.*
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224130941/mydevices-partners-page-highlights.png" width="660" height="421" alt="myDevices Partners page"><br/><br/></p>
 
@@ -111,8 +111,8 @@ _TIP: During the process you may leave certain portions here unanswered (such as
 
 The type of information asked for here will depend upon how your device will connect to Cayenne.
 
-- [LoRa technology device](#iot-ready-program-submitting-hardware-requests-lora): Start a new hardware submission for a device that uses LoRa technology.
-- [Device using MQTT](#iot-ready-program-submitting-hardware-requests-mqtt): Start a new hardware submission for a device that will communicate with Cayenne using [MQTT](#bring-your-own-thing-api-overview-about-mqtt), including Cayenne’s [Bring Your Own Thing API](#bring-your-own-thing-api).
+- [LoRa technology device](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-lora-technology-device): Start a new hardware submission for a device that uses LoRa technology.
+- [Device using MQTT](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-mqtt): Start a new hardware submission for a device that will communicate with Cayenne using [MQTT](#bring-your-own-thing-api-overview-about-mqtt), including Cayenne’s [Bring Your Own Thing API](#bring-your-own-thing-api).
 
 ##### LoRa technology device
 
@@ -181,7 +181,7 @@ When all sections have been filled out and you are ready to do so, click on the 
 
 If you have additional devices you can use the **Submit Another Device** button to start the process of adding a new device.
 
-Don’t forget, you can use the [View Submissions](#iot-ready-program-viewing-submissions) link to view the current status of your submission. And remember to [send your hardware](#iot-ready-program-submitting-hardware-requests-hardware-sending-hardware-for-validation) to the Cayenne team so that they can complete the review and testing process - not doing so will delay the approval process.
+Don’t forget, you can use the [View Submissions](#iot-ready-program-viewing-submissions) link to view the current status of your submission. And remember to [send your hardware](#iot-ready-program-submitting-hardware-requests-sending-hardware-for-validation) to the Cayenne team so that they can complete the review and testing process - not doing so will delay the approval process.
 
 ### Sending Hardware for validation
 
@@ -217,7 +217,9 @@ From the *Hardware Submission Status* screen will be a list of all the past hard
  - **Rejected:** Occasionally devices may need to be rejected for a variety of reasons. If this happens, you will be notified by email with more information and next steps on how to proceed. We’re happy to work with you to resolve the problems in order to get your hardware integrated successfully.
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224135113/iot-ready-program-hardware-submission-status-pending-highlights.png" width="660" height="206" alt="View Submissions screen with highlights"><br/><br/></p>
+
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224135202/iot-ready-program-view-submissions-approved-highlight.png" width="660" height="185" alt="Submissions screen showing Approved example"><br/><br/></p>
+
 ### Reviewing submission details
 
 From the *Hardware Submission Status* screen you can review the details of your submission. To do so, simply click on the device entry in the list. The details of your submission will then be loaded so that you can review what was entered.
