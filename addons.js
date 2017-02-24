@@ -160,6 +160,20 @@
             mqttList.slideToggle("slow");
 
         });
+        
+        //IoT Ready navigation
+        var iotReadyItem = $("li#iot-ready-program-item");
+        var iotReadyList = $("ul#iot-ready-program-list");
+
+        iotReadyItem.prepend( $("<div class='toggle-menu'></div>") );
+        iotReadyList.hide();
+        var iotE = $("#iot-ready-program-item > div.toggle-menu");
+
+        iotE.click(function(){
+            $(this).toggleClass("expand");
+            iotReadyList.slideToggle("slow");
+
+        });
 
         // $window.resize(function () {
         //     var viewportWidth = $window.width();
