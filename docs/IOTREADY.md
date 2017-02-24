@@ -12,17 +12,17 @@ To get started, follow the [Enrollment process](#iot-ready-program-enrollment-si
 
 ## Enrollment / Sign Up
 
-To join the IoT Ready Program, visit the <a href=”http://mydevices.com/for-hardware-manufacturers/iot-ready-program/” target=”_blank”>Sign Up</a> page. Fill in the details to begin creating your account and click on the **Submit** button to continue.
+To join the IoT Ready Program, visit the <a href="http://mydevices.com/for-hardware-manufacturers/iot-ready-program/" target="_blank">Sign Up</a> page. Fill in the details to begin creating your account and click on the **Submit** button to continue.
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224130622/iot-ready-program-signup-form.png" width="660" height="376" alt="Sign up form"><br/><br/></p>
 
-After creating your account you will then be taken into your account on the <a href=”http://iotready.mydevices.com” target="_blank">IoT Ready Program website</a> where you will need to read over and accept the licensing terms for the program and then fill out the information on your company, product and contacts.
+After creating your account you will then be taken into your account on the <a href="http://iotready.mydevices.com" target="_blank">IoT Ready Program website</a> where you will need to read over and accept the licensing terms for the program and then fill out the information on your company, product and contacts.
 
 ### Company Information
 
 The information that you add to the company information form will not only be used by myDevices team when verifying your company, but will also be displayed on both the myDevices and Cayenne websites. You must complete the Company Information section before you can continue and submit devices to Cayenne.
 
-Be sure that the information you provide here is how you want it displayed to your users. In addition to the <a href=”http://mydevices.com/partners/” target="_blank">Partners</a> page, your company name, description and logo may also be displayed to users as they select your hardware when using the Cayenne dashboard.
+Be sure that the information you provide here is how you want it displayed to your users. In addition to the <a href="http://mydevices.com/partners/" target="_blank">Partners</a> page, your company name, description and logo may also be displayed to users as they select your hardware when using the Cayenne dashboard.
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224130821/iot-ready-program-company-information.png" width="660" height="416" alt="Company Information screen"><br/><br/></p>
 
@@ -199,7 +199,7 @@ Please send at least 1 sample device to:
 
 **Phone: 818-591-9600**
 
-If you have any questions, contact us at <a href=“mailto:iotready@mydevices.com”>IoTReady@myDevices.com</a>
+If you have any questions, contact us at <a href="mailto:iotready@mydevices.com">IoTReady@myDevices.com</a>
 
 ## Viewing Submissions
 
@@ -224,6 +224,6 @@ From the *Hardware Submission Status* screen will be a list of all the past hard
 
 From the *Hardware Submission Status* screen you can review the details of your submission. To do so, simply click on the device entry in the list. The details of your submission will then be loaded so that you can review what was entered.
 
-*Note: After submitting your hardware the information shown here will be read only. If you need to update the myDevices team for any reason, please contact us at <a href=“mailto:iotready@mydevices.com”>IoTReady@myDevices.com</a>.*
+*Note: After submitting your hardware the information shown here will be read only. If you need to update the myDevices team for any reason, please contact us at <a href="mailto:iotready@mydevices.com">IoTReady@myDevices.com</a>.*
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224135318/iot-ready-program-viewing-submitted-info.png" width="660" height="416" alt="Reviewing old submitted request"><br/><br/></p>
