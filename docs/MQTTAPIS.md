@@ -61,7 +61,7 @@ Includes everything you need for using Cayenne and MQTT in your Arduino IDE base
    + The Arduino MQTT Library is available directly through the Arduino IDE *Library Manager*. This is the recommended way of obtaining this library. See [Add MQTT Library to Arduino IDE](#bring-your-own-thing-api-using-arduino-mqtt-add-mqtt-library-to-arduino-ide) for a walkthrough of performing this.
       + You may also find the library in our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">Arduino MQTT Github</a> repository.
 
-   + [Documentation](#bring-your-own-thing-api-using-arduino-mqtt) - Covers installing and configuring the popular Arduino IDE to use Cayenne's Arduino MQTT library. It also includes a walkthrough of setting up an Arduino board, sending sensor data to Cayenne and controlling an actuator from the Cayenne dashboard.
+   + [Documentation](#bring-your-own-thing-api-using-arduino-mqtt) - Covers installing and configuring the popular Arduino IDE to use Cayenne's Arduino MQTT library. It also includes a walkthrough of setting up an Arduino board and sending sensor data to Cayenne.
 
 **Cayenne mbed MQTT**
 
@@ -100,7 +100,7 @@ After creating your account, Cayenne will ask you which type of device you wish 
 
 ## Using Arduino MQTT
 
-The Cayenne Arduino MQTT library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board. In this section we will walk you through setting up the Arduino IDE software so that you can write code that uses the Arduino MQTT library. We will then walk through an example of using the library, setting up and connecting an [Arduino Uno board](#supported-hardware-microcontrollers-arduino-arduino-uno), adding a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36) and finally by adding a Light actuator which we will control from our Cayenne dashboard.
+The Cayenne Arduino MQTT library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board. In this section we will walk you through setting up the Arduino IDE software so that you can write code that uses the Arduino MQTT library. We will then walk through an example of using the library, setting up and connecting an [Arduino Uno board](#supported-hardware-microcontrollers-arduino-arduino-uno), adding a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36).
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/3kCD5S7N6zE" frameborder="0" allowfullscreen></iframe></p>
 
@@ -192,35 +192,6 @@ Once you have double-checked the sketch file, select **Sketch** > **Upload** to 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Dashboard-With-Temp-added.png" width="660" height="395" alt="dashboard-with-temp-added"><br/><br/></p>
 
 **Congrats! Your hardware is now sending sensor data to the Cayenne Cloud!**
-
-### Control a Light actuator
-
-Now that we have our board connected to Cayenne and it has successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. For this example, attach a LED to a PWM-enabled Pin on your Arduino Uno. Let’s use Digital Pin 6 in this example.
-
-*TIP: If you need help with wiring up a test LED, you can refer to the [Luminosity hardware tutorial](#arduino-luminosity).*
-
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Arduino-Luminosity-Step-2.png" width="660" height="338" alt="Arduino-Luminosity-Step-2"><br/><br/></p>
-
-From the Cayenne dashboard, click **Add New** > **Device / Widget**.
-
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
- 
-1. Choose **Custom Widgets** > **Slider**.
-2. Give your actuator a name, for example enter “Light” into the **Name** field.
-3. We’ll be adding this actuator to our new Arduino device, so make sure your device is selected in the **Device** field.
-4. Our actuator is connected to Pin 6, so select 6 from the **Channel** field.
-
-   *TIP: The Arduino IDE library makes connecting your actuator really easy, without the need for you to write any code for actuators! Communication to and from your actuator will use an MQTT Channel equal to the pin number your actuator is connected on. So in this example pin D6 will be routed to MQTT Channel 6 automatically by the library. Thus, we select Channel 6 in the Channel field and the library will take care of everything else.*
-
-5. Click the **Step 2: Add Actuator** button. The light widget will then be added to our dashboard.
-
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Settings-Light-Slider.png" width="660" height="395" alt="settings-light-slider"><br/><br/></p>
-
-Your actuator will be added to your dashboard and we can now use it to control our light, no coding needed when using the Arduino MQTT library!
-
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Dashboard-With-Temp-added-and-Light.png" width="660" height="395" alt="dashboard-with-temp-added-and-light"><br/><br/></p>
-
-**Congrats! You can now use the slider to control the brightness of the light.**
 
 
 ## Using mbed MQTT
