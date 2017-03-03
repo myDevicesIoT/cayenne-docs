@@ -77,7 +77,7 @@ Let’s look at each dropdown field that will be used when adding your sensor.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628101415/Widget-2StateSettings.png" width="346" height="534" alt="2 State Widget"><br/><br/></p>
 
 **Name** <br/>
-Give your sensor a name.
+Give your sensor a name. 
 
 **Device** <br/>
 Select your Arduino device.
@@ -222,7 +222,7 @@ Let’s look at each dropdown field that will be used when adding your actuator.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628101932/Widget-ButtonSettings.png" width="346" height="539" alt="Widget Tutorial Form"><br/><br/></p>
 
 **Name** <br/>
-Give your actuator a name.
+Give your actuator a name. 
 
 **Device** <br/>
 Select your Arduino device.
@@ -234,7 +234,7 @@ Select your method of connectivity; will the button widget be connected to a dig
 You can control the actuator state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Icon** <br/>
 Select an Icon to be used for the widget. For example, a light switch might have a light bulb icon.
@@ -304,7 +304,7 @@ Let’s look at each dropdown field that will be used when adding your widget.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628105652/Widget-DialKnobSettings.png" width="346" height="674" alt="Dial Knob Tutorial"><br/><br/></p>
 
 **Name** <br/>
-Give your widget a name.
+Give your widget a name. 
 
 **Device** <br/>
 Select your Arduino device.
@@ -316,7 +316,7 @@ Select your method of connectivity; will the button widget be connected to a dig
 You can control the actuator state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a light dimmer might have Data type of voltage and Units of percentage.
@@ -356,7 +356,7 @@ Let’s look at each dropdown field that will be used when adding your widget.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628110143/Widget-DonutSettings.png" width="346" height="778" alt="Donut Tutorial"><br/><br/></p>
 
 **Name** <br/>
-Give your widget a name.
+Give your widget a name. 
 
 **Device** <br/>
 Select your Arduino device.
@@ -364,15 +364,15 @@ Select your Arduino device.
 **I/O** <br/>
 Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
 
-
+   
    - **Analog** <br/>
    If you’re reading data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.
-
+   
    - **Digital** <br/>
 A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a disk space widget could have a Data type of storage and Units of kilobytes.
@@ -412,7 +412,7 @@ Let’s look at each dropdown field that will be used when adding your sensor.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628102132/Widget-GaugeSettings1.png" width="346" height="674" alt="Gauge Settings"><br/><br/></p>
 
 **Name** <br/>
-Give your sensor a name.
+Give your sensor a name. 
 
 **Device** <br/>
 Select your Arduino device.
@@ -423,7 +423,7 @@ Select your method of connectivity; is your sensor connected to Analog pins, or 
    - **Analog** <br/>
 If you’re trying to read data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a temperature monitor could have a Data type of temperature and Units of Celsius.
@@ -432,7 +432,7 @@ Select the Data type and the Units to be used for the widget. For example, a tem
 Input the minimum and maximum values that you’d like the gauge widget to use when displaying the range of data for your sensor. This can help improve the visualization of your sensor data as it displays on the gauge widget.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Gauge code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/GaugeWidget/GaugeWidget.ino" target="_blank">Gauge Widget sketch file</a>. See [Using Sketch Files](http://mydevices.com/cayenne/docs/#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Gauge code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/GaugeWidget/GaugeWidget.ino" target="_blank">Gauge Widget sketch file</a>. See [Using Sketch Files](http://www.cayenne-mydevices.com/CayenneStaging/docs/#using-sketch-files-arduino) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.
@@ -506,7 +506,7 @@ Select your method of connectivity; will the gyroscope use the Digital pins, or 
    - **Digital** <br/>
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit**<br/>
 Select the Data type and the Units to be used for the widget.
@@ -555,7 +555,7 @@ Select your method of connectivity; will the gyroscope use the Digital pins, or 
    - **Digital** <br/>
 You can control the widget state (high / low) through the digital pin on the Arduino.<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Step 1: Sketch File**<br/>
 If you haven’t already uploaded the Intrusion code for this widget to your Arduino, click the Sketch File button to open the <a href="" target="_blank">Intrusion Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
@@ -598,7 +598,7 @@ Select your method of connectivity; will the joystick widget use the physical PW
    - **Digital** <br/>
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a light dimmer might have Data type of voltage and Units of percentage.
@@ -646,7 +646,7 @@ Select your Arduino device.
 Select the Virtual pin that your LCD will use when displaying values.
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Step 1: Sketch File** <br/>
 If you haven’t already uploaded the LCD code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon)LCD Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
@@ -691,7 +691,7 @@ Select your method of connectivity; will the lighting widget use the physical PW
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a light dimmer might have Data type of voltage and Units of percentage.
@@ -730,7 +730,7 @@ Let’s look at each dropdown field that will be used when adding your sensor.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628102243/Widget-LineChartSettings.png" width="346" height="682" alt="Line Chart Tutorial"><br/><br/></p>
 
 **Name** <br/>
-Give your sensor a name.
+Give your sensor a name. 
 
 **Device** <br/>
 Select your Arduino device.
@@ -741,7 +741,7 @@ Select your method of connectivity; is your sensor connected to Analog pins, or 
    - **Analog** <br/>
 If you’re trying to read data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a temperature chart could have a Data type of temperature and Units of Celsius.
 
@@ -791,7 +791,7 @@ Select your method of connectivity; will the lighting widget use the physical PW
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget.
@@ -842,7 +842,7 @@ Select the Virtual pin that your map will use for location values.
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a map of GPS devices might have Data type of Location and Units of GPS coordinates.
@@ -890,7 +890,7 @@ Select your method of connectivity; is your widget connected to Analog pins, Dig
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a liquid level widget could have a Data type of Liquid and Units of Gallons.
@@ -1121,7 +1121,7 @@ Let’s look at each dropdown field that will be used when adding your actuator.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628102351/Widget-SliderSettings.png" width="346" height="668" alt="Slider Tutorial Form"><br/><br/></p>
 
 **Name** <br/>
-Give your actuator a name.
+Give your actuator a name. 
 
 **Device** <br/>
 Select your Arduino device.
@@ -1133,7 +1133,7 @@ Select your method of connectivity; will the slider widget use the physical PWM 
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a light dimmer might have Data type of voltage and Units of percentage.
@@ -1172,7 +1172,7 @@ Let’s look at each dropdown field that will be used when adding your actuator.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160630112654/Widget-SwitchSettings.png" width="346" height="573" alt="Switch Tutorial Form"><br/><br/></p>
 
 **Name** <br/>
-Give your actuator a name.
+Give your actuator a name. 
 
 **Device** <br/>
 Select your Arduino device.
@@ -1184,7 +1184,7 @@ Select your method of connectivity; will the button widget be connected to a dig
 You can control the actuator state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Off Label/On Label** <br/>
 Specify the labels to be shown on the widget for the On and Off state names.
@@ -1256,7 +1256,7 @@ Let’s look at each dropdown field that will be used when adding your sensor.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628102441/Widget-ValueSettings.png" width="346" height="637" alt="Value Display"><br/><br/></p>
 
 **Name** <br/>
-Give your sensor a name.
+Give your sensor a name. 
 
 **Device** <br/>
 Select your Arduino device.
@@ -1267,7 +1267,7 @@ Select your method of connectivity; is your sensor connected to Analog pins, or 
    - **Analog** <br/>
 If you’re trying to read data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.
    - **Virtual** <br/>
-[Virtual pins](http://mydevices.com/cayenne/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 **Data, Unit, Icon** <br/>
 Select the Data type, the Units, and the Icon to be used for the widget. For example, a temperature sensor could have a Data type of temperature, Units of Celsius, and a thermometer Icon.
 

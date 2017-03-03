@@ -117,37 +117,37 @@ Using an Arduino ethernet shield or WiFi shield gives your Arduino the ability t
 
 You can use the following information to help you identify and connect your Arduino to the Internet. Once you’ve identified how your Arduino will connect, you can continue with connecting your Arduino to Cayenne. [Read about Adding Cayenne Library to Arduino IDE](#getting-started-arduino-arduino-setup-using-cayenne-arduino-library-add-cayenne-library-to-arduino-ide)
 
-<br/>
+<br/> 
 
 **EthernetShieldW5100**
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615143609/ArduinoEthernetShield_R3_Front.jpg" class="noborder" width="346" height="245" alt="Ethernet Shield W5100"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/EthernetShieldW5100/EthernetShieldW5100.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoEthernetShield" target="_blank">Arduino Ethernet Shield W5100</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5100/EthernetShieldW5100.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoEthernetShield" target="_blank">Arduino Ethernet Shield W5100</a>.
 
-<br/>
+<br/> 
 
 **ManualConnection**
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/ManualConnection/ManualConnection.ino" target="_blank">sketch file</a> if manually connecting to the Arduino Ethernet Shield to the internet. You’ll need to specify the MAC address, IP, and gateway in the sketch file, as well as select the type of Ethernet Shield you are using.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/ManualConnection/ManualConnection.ino" target="_blank">sketch file</a> if manually connecting to the Arduino Ethernet Shield to the internet. You’ll need to specify the MAC address, IP, and gateway in the sketch file, as well as select the type of Ethernet Shield you are using.
 
-<br/>
+<br/> 
 
 **EthernetShieldW5200**
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615143613/ethernet-shield-for-arduino-w5200.jpg" class="noborder" width="346" height="246" alt="Ethernet Shield W5200"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/EthernetShieldW5200/EthernetShieldW5200.ino" target="_blank">sketch file</a> if using the <a href="http://www.dfrobot.com/index.php?route=product/product&product_id=1028#.V2GAB_krKhc" target="_blank">Arduino Ethernet Shield W5200</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5200/EthernetShieldW5200.ino" target="_blank">sketch file</a> if using the <a href="http://www.dfrobot.com/index.php?route=product/product&product_id=1028#.V2GAB_krKhc" target="_blank">Arduino Ethernet Shield W5200</a>.
 
 *Remember to download and install the W5200 library to your Ardiuno IDE. Then, add it to your sketch file.*
 
-<br/>
+<br/> 
 
 **EthernetShieldW5500**
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615154542/W5500.jpg" width="346" height="276" class="noborder" alt="Ethernet Shield W5500"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/EthernetShieldW5500/EthernetShieldW5500.ino" target="_blank">sketch file</a> if using the <a href="http://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0" target="_blank">Arduino Ethernet Shield W5500</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5500/EthernetShieldW5500.ino" target="_blank">sketch file</a> if using the <a href="http://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0" target="_blank">Arduino Ethernet Shield W5500</a>.
 
 
 *Remember to download and install the W5500 library to your Arduino IDE. Then, add it to your sketch file.*
@@ -160,60 +160,61 @@ Please also make sure the correct Ethernet2 library is downloaded to your Arduin
 
 <a href="https://github.com/arduino-org/Arduino/tree/master/libraries/Ethernet2" target="_blank">Arduino.org Ethernet2 Library</a>
 
-<br/>
+<br/> 
 
 **SerialUSBconnection**
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/SerialUSBConnection/SerialUSBConnection.ino" target="_blank">sketch file</a> if getting internet connection from the serial USB port on your computer. You can read more about this <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Connections/ArduinoSerialUSB" target="_blank">here</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/SerialUSBConnection/SerialUSBConnection.ino" target="_blank">sketch file</a> if getting internet connection from the serial USB port on your computer. You can read more about this <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Connections/ArduinoSerialUSB" target="_blank">here</a>.
 
-<br/>
+<br/> 
 
 **WiFiShield**
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615143603/Arduino_WiFi_Shield.jpg" width="346" height="244" class="noborder" alt="WiFiShield"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/WiFiShield/WiFiShield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/WiFiShield/WiFiShield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield</a>.
 
-<br/>
+<br/> 
 
 **WiFi101Shield**
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615154328/Arduino_WiFi_101_Shield.jpg" width="346" height="291" class="noborder" alt="WiFi101Shield"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/WiFi101Shield/WiFi101Shield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield 101</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/WiFi101Shield/WiFi101Shield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield 101</a>.
 
 *Remember to download and install the WiFi101 library to your Arduino IDE. Then, add it to your sketch file.*
 
-<br/>
+<br/> 
 
 **ArduinoYun**
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/ArduinoYun/ArduinoYun.ino" target="_blank">sketch file</a> when using the <a href="https://www.arduino.cc/en/Main/ArduinoBoardYun" target="_blank">Arduino Yun</a> connected to an ethernet cable.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/ArduinoYun/ArduinoYun.ino" target="_blank">sketch file</a> when using the <a href="https://www.arduino.cc/en/Main/ArduinoBoardYun" target="_blank">Arduino Yun</a> connected to an ethernet cable.
 
 Want to use the Arduino Yun on-board WiFi? Check out <a href="https://www.arduino.cc/en/Guide/ArduinoYun#toc14" target="_blank">this tutorial</a> on the Arduino website.
 
 <p id="lora-hardware-supported-devices" class="anchor-link"></p>
+<p id="supported-hardware-lora-devices" class="anchor-link"></p>
 
-
-## LoRa devices
+## LoRa technology devices
 
 Cayenne can be used with a range of LoRa devices, supported by several different LoRa network providers.
 
-**Need a LoRa device?**
-<a href="http://actility.thingpark.com/thingpark-store/" target="_blank">Visit the ThingPark store</a> to find a LoRa device for your use.
+**Need a LoRa technology device?**
+<a href="http://actility.thingpark.com/thingpark-store/" target="_blank">Visit the ThingPark store</a> to find a device for your use.
 
-Additional guidance on finding providers of LoRa sensors and other devices can be found using the <a href="http://www.semtech.com/lora/ecosystem/" target="_blank">LoRaWAN Products & Services</a> page.
+Additional guidance on finding providers of sensors and other devices can be found using the <a href="http://www.semtech.com/lora/ecosystem/" target="_blank">LoRaWAN Products & Services</a> page.
 
 
 ### Adeunis
 
-#### LoRa Demonstrator
+#### Adeunis Demonstrator
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083258/Component-images_0002_Adeunis-LoRa-Demonstrator.png" width="346" height="118" class="noborder" alt="LoRa Demonstrator"></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170206082410/Adeunis-Demonstrator.png" width="346" height="118" class="noborder" alt="Adeunis Demonstrator"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 
 **Links:** <br/>
@@ -222,39 +223,40 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 * <a href="http://www.adeunis-rf.com/media/downloads/172/trad_file/eng/arf_lorawan_demonstrator_868_data_sheet_v1-2_gb.pdf" target="_blank">Datasheet</a>
 * <a href="http://www.adeunis-rf.com/media/downloads/185/trad_file/eng/ug_lorawan_demonstrator_user_v1.1.pdf" target="_blank">User Guide</a>
 
+**Sensors included:** 
+
+*   GPS
+*   Temperature
+*   Accelerometer
+
+
+#### Adeunis Field Test Device
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
+
+**Links:**
+
+*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/field_test_device_lorawan_868" target="_blank">Product Page</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/188/trad_file/eng/arf_lorawan_field_test_device_868_data_sheet_v1.0_fr_gb.pdf" target="_blank">Datasheet</a>
+
 **Sensors included:**
 
 *   Temperature
 *   Accelerometer
 *   GPS
 
+#### Adeunis Pulse
 
-#### LoRa Sensors
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083430/Component-images_0001_Adeunis-LoRa-Sensors.png" width="346" height="131" class="noborder" alt="LoRa Sensors"></p>
-
-**Networks supported:**
-
-*   [Actility](#lora-actility)
-
-**Links:**
-
-*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-sensors" target="_blank">Product Page</a>
-*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">Datasheet</a>
-*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">User Guide</a>
-
-**Sensors included:**
-
-*   Any type of 0-10V, 4-20mA & Dry contacts sensor
-
-
-#### LoRa Pulse
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083603/Component-images_0000_Adeunis-Pulse.png" width="346" height="120" class="noborder" alt="LoRa Pulse"></p>
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083603/Component-images_0000_Adeunis-Pulse.png" width="346" height="120" class="noborder" alt="Adeunis Pulse"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -269,36 +271,38 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   Electricity
 *   Heat
 
+#### Adeunis Sensors
 
-#### LoRa Field Test Device
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823083430/Component-images_0001_Adeunis-LoRa-Sensors.png" width="346" height="131" class="noborder" alt="Adeunis Sensors transceiver"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
-*   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
-*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/field_test_device_lorawan_868" target="_blank">Product Page</a>
-*   <a href="http://www.adeunis-rf.com/media/downloads/188/trad_file/eng/arf_lorawan_field_test_device_868_data_sheet_v1.0_fr_gb.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.adeunis-rf.com/en/products/lorawan-products/lorawan-sensors" target="_blank">Product Page</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.adeunis-rf.com/media/downloads/173/trad_file/eng/arf_lorawan_sensors_data_sheet_v1-3-gb.pdf" target="_blank">User Guide</a>
 
 **Sensors included:**
 
-*   Temperature
-*   Accelerometer
-*   GPS
+*   Supports up to 2 sensors
+*   Any type of 0-10V, 4-20mA & Dry contacts sensor
 
 
 ### Ascoel
 
-#### Ascoel Door Switch
+#### Ascoel CM868LR / CMUS915LR
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823080851/Component-images_0001_Ascoel-Door-Switch.png" width="346" height="138" class="noborder" alt="Ascoel Door Switch"></p>
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823080851/Component-images_0001_Ascoel-Door-Switch.png" width="346" height="138" class="noborder" alt="Ascoel CM868LR / CMUS915LR"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -308,14 +312,55 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   Door Switch
 
-#### Ascoel Motion Sensor
+#### Ascoel CM868LRTH / CMUS915LRTH
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823081133/Component-images_0000_Ascoel-Motion-Sensor.png" width="346" height="134" class="noborder" alt="Ascoel Motion Sensor"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Ascoel-CM__LRTH.png" width="383" height="138" class="noborder" alt="Ascoel CM868LRTH / CMUS915LRTH"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
+
+**Links:**
+
+*   <a href="http://www.ascoel.it/images/pdf_ascoel/CM868LRTH_eng.pdf" target="_blank">Datasheet</a>
+
+**Sensors included:**
+
+*   Door Switch
+*   Temperature
+*   Humidity
+
+#### Ascoel CO868LR / COUS915LR
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Ascoel CO868LR / COUS915LR"></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
+
+**Links:**
+
+*   <a href="http://www.ascoel.it/index.php?lang=en" target="_blank">Product Page</a>
+*   <a href="http://www.ascoel.it/images/pdf_ascoel/CO868LR_eng.pdf" target="_blank">Datasheet</a>
+
+**Sensors included:**
+
+*   CO2
+*   Temperature
+*   Humidity
+
+#### Ascoel IR868LR / IRUS915LR
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823081133/Component-images_0000_Ascoel-Motion-Sensor.png" width="346" height="134" class="noborder" alt="Ascoel IR868LR / IRUS915LR"></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -326,36 +371,18 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   Motion
 
-#### Ascoel CO2
-
-<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Ascoel CO2"></p>
-
-**Networks supported:**
-
-*   [Actility](#lora-actility)
-
-**Links:**
-
-*   <a href="http://www.ascoel.it/index.php?lang=en" target="_blank">Product Page</a>
-*   <a href="http://www.ascoel.it/images/pdf_ascoel/CO868LR_eng.pdf" target="_blank">Datasheet</a>
-
-**Sensors included:**
-
-*   Temperature
-*   Humidity
-*   CO2
-
 
 ### Elsys
 
 #### Elsys ELT-1
 
-<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" alt="component-doc-image-elsys-elt1"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ELT1.png" width="383" height="138" class="noborder" alt="Elysys ELT-1"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -364,19 +391,21 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Sensors included:**
 
+*   Analog
+*   Digital
 *   Temperature
 *   Humidity
-*   Analog
 
 
 #### Elsys ESM5k
 
-<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Ascoel-CO2.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ESM5k.png" width="383" height="138" class="noborder" alt="Elysys ESM5k"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -390,16 +419,18 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   Humidity
 *   Accelerometer
 *   Light
+*   Motion (optional)
 
 
 #### Elsys ERS
 
-<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ERS.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Elsys-ERS.png" width="379" height="136" class="noborder" alt="Elysys ESM5k"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -411,21 +442,22 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   Temperature
 *   Humidity
-*   CO2
 *   Light
 *   Motion
+*   CO2 (optional)
 
 
 ### GlobalSat
 
 #### GlobalSat LS-111 CO2
 
-<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" alt="component-doc-image-globalsat-ls111"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-GlobalSat-LS111.png" width="383" height="138" class="noborder" alt="GlobalSat LS-111"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Sensors included:**
 
@@ -436,12 +468,13 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### GlobalSat LT-100
 
-<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LT-100"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-GlobalSat-LT100.png" width="379" height="136" class="noborder" alt="GlobalSat LT-100"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -454,10 +487,37 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   GPS
 *   Accelerometer
 
+### Haxiot
+
+#### Haxiot Arduino Shield
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Haxiot-Arduino-Shield.png" width="383" height="138" class="noborder" alt="GlobalSat LT-100"></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
+
+**Links:**
+
+*   <a href="http://haxiot.com/shop/arduino-lorawan-shield-eu868/" target="_blank">Product Page (EU)</a>
+*   <a href="http://haxiot.com/shop/arduino-lorawan-us900/" target="_blank">Product Page (US)</a>
+*   <a href="http://haxiot.com/download/11330/" target="_blank">Datasheet</a>
+*   <a href="http://haxiot.com/download/11414/" target="_blank">User Guide</a>
+
+**Sensors included:**
+
+*   Temperature
+*   Accelerometer
+
+**Other:**
+
+*   Supports LoRaWAN
 
 ### Multitech
 
-#### mDotBox
+#### Multitech mDotBox
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823082013/Component-images_0000_mDotBox.png" width="346" height="139" class="noborder" alt="mDotBox"></p>
 
@@ -465,6 +525,7 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -480,16 +541,36 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   Accelerometer
 *   GPS
 
+#### Multitech XDot
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/MultiConnect-xDot.png" width="383" height="138" class="noborder" alt="xDot"></p>
+
+**Networks supported:**
+
+*   [Actility](#lora-actility)
+*   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
+
+**Links:**
+
+*   <a href="http://www.multitech.com/brands/multiconnect-xdot" target="_blank">Product Page</a>
+*   <a href="http://www.multitech.com/documents/publications/data-sheets/86002182.pdf" target="_blank">Datasheet</a>
+*   <a href="http://www.multitech.com/documents/publications/manuals/82101900l.pdf" target="_blank">User Guide</a>
+
+**Other:**
+
+*   LoRaWAN Gateway Device
 
 ### NKE Watteco
 
-#### Watteco Smart Plug
+#### NKE Watteco Smart Plug
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823084310/Component-images_0001_Watteco-Smart-Plug.png" width="346" height="129" class="noborder" alt="Watteco Smart Plug"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -503,13 +584,14 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 *   ON/Off Switch
 
 
-#### THr
+#### NKE Watteco THr
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160823084342/Component-images_0000_Watteco-THr.png" width="346" height="141" class="noborder" alt="THr"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -528,12 +610,13 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 #### Rising HF RHF1S001
 
-<p style="text-align:center"><br/><img src="http://mydevices.com/cayenne/uploads/Component-Doc-Image-Rising-HF-RHF1S001.png" width="346" height="141" class="noborder" alt="THr"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-Rising-HF-RHF1S001.png" width="346" height="141" class="noborder" alt="THr"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -547,13 +630,14 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 ### Semtech
 
-#### LoRa Motes EU
+#### Semtech LoRaMote EU
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822154357/Component-images_0002_Semtech-LoRa-Motes-EU.png" width="346" height="134" class="noborder" alt="LoRa Motes EU"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -562,18 +646,22 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Sensors included:**
 
+*   GPS
+*   Magnetometer
+*   Accelerometer
+*   Altimeter
 *   Temperature
 *   Pressure
-*   GPS
 
 
-#### LoRa Motes USA
+#### Semtech LoRaMote USA
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822153723/Component-images_0001_Semtech-LoRa-Motes-US.png" width="346" height="126" class="noborder" alt="LoRa Motes USA"></p>
 
 **Networks supported:**
 
 *   [Actility](#lora-actility)
+*   [Loriot](#lora-loriot-network)
 
 **Links:**
 
@@ -582,9 +670,12 @@ Additional guidance on finding providers of LoRa sensors and other devices can b
 
 **Sensors included:**
 
+*   GPS
+*   Magnetometer
+*   Accelerometer
+*   Altimeter
 *   Temperature
 *   Pressure
-*   GPS
 
 
 ## Actuators
@@ -692,7 +783,7 @@ Connect the relay (K1) common (CO) pin to ground. Also connect the normally open
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121343/RPI-Relay-Switch-Step-5.png" width="757" height="266" class="noborder" alt="Light Switch"></p>
 
 ###### Step 6
-You’re done! You can now add the Relay Switch to the dashboard and use it to control the LED on GPIO 13.
+You’re done! You can now add the Relay Switch to the dashboard and use it to control the LED on GPIO 13. 
 
 <p id="arduino-light-switch" class="anchor-link"></p>
 
@@ -942,7 +1033,7 @@ A couple of notes before you get started:
 ###### Step 1
 Connect 5V power from the Arduino to the Servo Motor (red).
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122640/RPI-Servo-Step-1.png" width="757" height="387" class="noborder" alt="Servo Motor"></p>
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601113220/Arduino-Servo-Motor-Step-1.png" width="757" height="387" class="noborder" alt="Servo Motor"></p>
 
 ###### Step 2
 Connect ground from the Arduino to the Servo Motor (black).
@@ -2177,7 +2268,7 @@ Connect power from the Pi Cobbler to the TMP102 (VCC).
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122641/RPI-TMP102-Step-1.png" width="757" height="245" class="noborder" alt="TMP102"></p>
 
 ###### Step 2
-Connect power from the Pi Cobbler to the TMP102 (VCC).
+Connect ground from the Pi Cobbler to the TMP102 (GND).
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122641/RPI-TMP102-Step-2.png" width="757" height="245" class="noborder" alt="TMP102"></p>
 
@@ -2450,7 +2541,7 @@ Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Librar
 
 #### VCNL4000
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606104127/Component-Doc-Image-Thermistor.png" width="346" height="124" alt="VCNL4000"></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Component-Doc-Image-VCNL4000.png" width="383" height="138" alt="VCNL4000"></p>
 
 <p id="rpi-vcnl4000" class="anchor-link"></p>
 
@@ -2984,17 +3075,17 @@ A couple of notes before you get started:
 ###### Step 1
 Connect 3v power from the Pi Cobbler to the pushbutton, through the resistor.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121205/RPI-Digital-Input-Button-Step-1.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170123111931/RPI-Digital-Input-Button-Step-1.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
 
 ###### Step 2
 Connect ground from the Pi Cobbler to the pushbutton.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121206/RPI-Digital-Input-Button-Step-2.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170123111933/RPI-Digital-Input-Button-Step-2.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
 
 ###### Step 3
 Connect the pushbutton (using the same pin as the resistor) to one of the GPIO pins on the Pi Cobbler, in this case GPIO 17.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121206/RPI-Digital-Input-Button-Step-3.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
+<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170123111935/RPI-Digital-Input-Button-Step-3.png" width="757" height="245" class="noborder" alt="Digital Input"></p>
 
 ###### Step 4
 You’re done! You can now add the Digital Input to your dashboard and use it to read the button state using GPIO 17.
