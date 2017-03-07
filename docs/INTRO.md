@@ -29,3 +29,5 @@ A Raspberry Pi or Arduino device connected to the Internet, or a LoRa device con
 Cayenne was designed to work from iOS and Android smartphones and popular browsers.
 
 *TIP: Setup from the mobile device is the easiest way to get started.*
+
+\*LoRa for iOS and Android coming soon.
