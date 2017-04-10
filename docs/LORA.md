@@ -720,7 +720,7 @@ We will walk you through these steps in the following sections.
 
 ### Create account
 
-To create your ThingPark account, visit the <a href="https://partners.thingpark.com/en" target="_blank">Actility ThingPark Partner's Portal</a> and click on <a href="https://partners.thingpark.com/explorer/register" target="_blank">Create free account</a> button to begin the process of creating your account.
+To create your ThingPark account, visit the <a href="https://partners.thingpark.com/en" target="_blank">Actility ThingPark Partner's Portal</a> and click on **Try** or the <a href="https://partners.thingpark.com/explorer/register" target="_blank">Create free account</a> button to begin the process of creating your account.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170410102508/Actility-account-creation-highlight.png" width="600" height="338" alt="ThingPark create account link"><br/><br/></p>
 
@@ -728,13 +728,13 @@ Once your account has been created, you can <a href="https://partners.thingpark.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170410103255/Actility-login-link.png" width="600" height="168" alt="ThingPark account login link"><br/><br/></p>
 
-After logging into your account you will see the ThingPark Partner dashboard page. From here, click to access the **side menu** and select the **Device Manager** link.
+After logging into your account you will see the ThingPark Partner dashboard page. You will primarily use the *Device Manager* screen for the remainder of the documentation when configuring your account and devices to communicate with Cayenne. To access this screen, open the **side menu** and select the **Device Manager** link.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170410103431/ThingPark-partner-dashboard-with-highlight.png" width="600" height="376" alt="ThingPark dashboard with menu highlight"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170410103645/ThingPark-portal-side-menu.png" width="323" height="877" alt="Menu with device link highlght"><br/><br/></p>
 
-After selecting the **Device Manager** link, your *Device Manager* screen will open. You will primarily use this screen for the remainder of the documentation when configuring your account and devices to communicate with Cayenne.
+After selecting the **Device Manager** link, your *Device Manager* screen will open.
 
 _Tip: Take note of which server your account is using. For most people this will probably be **dev1.thingpark.com**. You will need to know which server you are using later when adding a device to Cayenne._
 
@@ -795,16 +795,7 @@ After saving your changes, you will be returned to the previous screen. Be sure 
 
 ### Manually register device
 
-Before you can use your LoRa device on the Actility network, it must be registered on the network. The following information will help guide you through this process using Actility's ThingPark portal.
-
-**Log into the ThingPark portal**
-
-If you aren't already logged in, start by going to the <a href="https://demo.thingpark.com/deviceManager/" target="_blank">Actility portal</a> and logging into your account. You will then see the Actility dashboard.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822144157/ThingPark-login2.png" width="300" height="362" alt="Actility"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160824134621/ThingPark-landing-dashboard.png" width="600" height="407" alt="Actility"><br/><br/></p>
-
+Before you can use your LoRa device on the Actility network, it must be registered on the network. The following information will help guide you through this process using Actility's ThingPark portal and the *Device Manager* screen.
 
 **Create new device**
 
