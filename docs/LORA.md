@@ -720,19 +720,34 @@ We will walk you through these steps in the following sections.
 
 ### Create account
 
-To create your Actility account, visit the <a href="http://actility.thingpark.com/thingpark-store/authentication" target="_blank">Actility ThingPark Portal</a>. Follow the **Create your account** process located there to get started.
+To create your ThingPark account, visit the <a href="https://partners.thingpark.com/en" target="_blank">Actility ThingPark Partner's Portal</a> and click on <a href="https://partners.thingpark.com/explorer/register" target="_blank">Create free account</a> button to begin the process of creating your account.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Actility-portal-landing.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170410102508/Actility-account-creation-highlight.png" width="600" height="338" alt="ThingPark create account link"><br/><br/></p>
 
+Once your account has been created, you can <a href="https://partners.thingpark.com/en/user/login" target="_blank">log into your account</a> from the Partner portal.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170410103255/Actility-login-link.png" width="600" height="168" alt="ThingPark account login link"><br/><br/></p>
+
+After logging into your account you will see the ThingPark Partner dashboard page. From here, click to access the **side menu** and select the **Device Manager** link.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170410103431/ThingPark-partner-dashboard-with-highlight.png" width="600" height="376" alt="ThingPark dashboard with menu highlight"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170410103645/ThingPark-portal-side-menu.png" width="323" height="877" alt="Menu with device link highlght"><br/><br/></p>
+
+After selecting the **Device Manager** link, your *Device Manager* screen will open. You will primarily use this screen for the remainder of the documentation when configuring your account and devices to communicate with Cayenne.
+
+_Tip: Take note of which server your account is using. For most people this will probably be **dev1.thingpark.com**. You will need to know which server you are using later when adding a device to Cayenne._
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170410104008/ThingPark-dev-server-with-highlight.png" width="600" height="393" alt="ThingPark device dashboard"><br/><br/></p>
 
 ### Setup gateway device
 
 In order for your LoRa devices to connect to the Actility network, you must have purchased and configured a gateway device. When using the Actility network, we recommend that you purchase and configure one of the following gateway devices:
 
 + For use in the European Union, we recommend the **Multitech Conduit EU868**
-   + You can purchase a <a href="http://actility.thingpark.com/thingpark-store/development-kit/178-multitech-conduit-eu868.html" target="_blank">Multitech Conduit EU868 here</a>
+   + You can purchase a <a href="https://market.thingpark.com/catalogsearch/result/?q=+eu868+gateway" target="_blank">Multitech Conduit EU868 here</a>
 + For use in the United States of America, we recommend the **Multitech Conduit US915**
-   + You can purchase a <a href="http://actility.thingpark.com/thingpark-store/development-kit/193-multitech-conduit-us915.html" target="_blank">Multitech Conduit US915 here</a>
+   + You can purchase a <a href="https://market.thingpark.com/catalogsearch/result/?q=US915" target="_blank">Multitech Conduit US915 here</a>
    
 **Be sure that you have an appropriate Actility gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
@@ -758,7 +773,7 @@ In the *Route* section that gets added to the screen, click on the **Add** butto
 In the *Add Destination* dialog that appears, enter in the Cayenne Actility URL and then click on the **Add** button to save your changes.
 
 ```
-https://longrangeapi.mydevices.com/longrange/api/actility/messages/add
+https://lora.mydevices.com/v1/networks/actility/uplink
 ```
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090430/Actility-Routing-Profile-3-App-Server-Destination.png" width="600" height="240" alt="Paste in Cayenne destination url"><br/><br/></p>
