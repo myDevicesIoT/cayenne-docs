@@ -1165,12 +1165,12 @@ In order to add the device, Cayenne needs to know some information about the dev
   
   **Note: Once generated on the Senet Portal, your API key is not shown to you again. Be sure to copy & save off your API key for later reference! Failing to do so may cause you to need to regenerate your key. If you do so, remember that you will need to update the settings for all previously added devices in Cayenne as well.**
   
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412143938/Senet-Access-Account-Info.png" width="600" height="213" alt="Senet access Account Info"><br/><br/></p>
+  <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412143938/Senet-Access-Account-Info.png" width="600" height="213" alt="Senet access Account Info"><br/><br/></p>
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412150043/Senet-API-Key.png" width="600" height="377" alt="Senet portal showing API key section"><br/><br/></p>    
+  <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412150043/Senet-API-Key.png" width="600" height="377" alt="Senet portal showing API key section"><br/><br/></p>    
 5.  Click **Add device**.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-Device-Senet-mDotBox-already-registered.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412144153/myDevices-Senet-updated-Add-Device.png" width="600" height="376" alt="Cayenne Add Device with all Senet fields shown"><br/><br/></p>
 
 The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
 
