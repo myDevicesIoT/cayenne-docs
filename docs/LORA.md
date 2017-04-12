@@ -1065,6 +1065,8 @@ To get started with a new device, click on the **Register Devices** button. From
 
 From the *Register Device* dialog that appears, enter in the **Device EUI** (or allocate one from here) and a description for the device. Click **Register New Device** to complete registering the device.
 
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412112920/Senet-register-device-dialog.png" width="600" height="291" alt="Register new device dialog"><br/><br/></p>
+
 Your device will now appear in the list of devices shown on your dashboard. You can now setup device forwarding to Cayenne.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412113335/Senet-dashboard-generic.png" width="600" height="376" alt="Senet dashboard showing devices"><br/><br/></p>
@@ -1074,27 +1076,32 @@ Your device will now appear in the list of devices shown on your dashboard. You 
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/k7V0FzuFf-I" frameborder="0" allowfullscreen></iframe></p>
 
-In order for Cayenne to be able to able to receive your device’s information, you will need to setup packet forwarding. To do so, click on the device in the device list and its dashboard screen will open.
+In order for Cayenne to be able to able to receive your device’s information, you will need to setup packet forwarding. To do so, expand the settings for the device and click on the **cogwheel** icon. The *Edit Device* screen appears.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125444/Senet-device-dashboard.png" width="600" height="410" alt="Senet"><br/><br/></p>
+*TIP: Alternatively you can click on the device tile itself and then select the **cogwheel** icon that also appears on the Device screen.*
 
-With the device dashboard screen open, click on the **cogwheel** menu and select **Device Edit**. The *Device Setup/Edit* screen appears.
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412132623/Senet-access-device-settings.png" width="528" height="310" alt="Accessing device settings"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125508/Senet-menu-device-edit.png" width="600" height="208" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133201/Senet-Edit-device-dialog.png" width="600" height="426" alt="Edit device dialog"><br/><br/></p>
 
-From the *Device Setup/Edit* screen we can setup the device so that it forwards data to Cayenne. To do so, enter the following information:
+From the *Edit Device* dialog we can setup the device so that it forwards data to Cayenne. To do so, perform the following:
 
-1. From the **Forward To** dropdown select the **HTTP Post** option.
-2. Leave the **Packet Format** at its default value of *JSON*.
-3. Make sure the **Forward RF Data** checkbox is selected to see signal strength data for your device in Cayenne.
-4. Enter in the Cayenne URL for the Senet API into the **URL** field.
+1. Select the **NOTIFICATION TARGET** tab. This will expose the fields needed for forwarding.
 
-   ```
-   https://longrangeapi.mydevices.com/longrange/api/senet/messages/add
-   ```
-5. Click the **Update** button to save changes.
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133750/Senet-Edit-device-with-highlight.png" width="600" height="426" alt="Edit device dialog"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-device-setup-using-URL.png" width="600" height="216" alt="senet-device-setup-using-url"><br/><br/></p>
+2. Open the **Forward To** dropdown and select the **myDevices Cayenne** profile.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133748/Senet-Edit-device-notification-target.png" width="600" height="423" alt="Edit device dialog"><br/><br/></p>
+
+3. Before data will begin forwarding, be sure that the **Status** slider is set to **Enabled**.
+
+4. Make sure that the **RF Data** checkbox is selected to see signal strength data for your device in Cayenne.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133747/Senet-Edit-device-notification-target-verify.png" width="600" height="397" alt="senet-device-setup-using-url"><br/><br/></p>
+
+5. Click **Save** to save the changes.
+
 
 ###  Programming the device
 
