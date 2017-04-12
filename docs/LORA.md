@@ -1041,7 +1041,7 @@ If you need to register a new gateway device, the Senet portal has instructions 
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111304/Senet-register-device-popup-with-gateway-highlight.png" width="600" height="215" alt="register gateway link highlighted"><br/><br/></p>
 
-The *Registery Gateway* dialog that appears will walk you through the process of adding your gateway device. You can refer to Senet's own <a href="http://docs.senetco.io/docs/gw/" target="_blank">gateway documentation</a> if you need help with this step.
+The *Register Gateway* dialog that appears will walk you through the process of adding your gateway device. You can refer to Senet's own <a href="http://docs.senetco.io/docs/gw/" target="_blank">gateway documentation</a> if you need help with this step.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111424/Senet-register-gateway-process.png" width="600" height="282" alt="Register gateway information"><br/><br/></p>
 
@@ -1057,7 +1057,7 @@ Start by going to the <a href="https://portal.senetco.io" target="_blank">Senet 
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/CrY-wAw58Ts" frameborder="0" allowfullscreen></iframe></p>
 
-To get started with a new device, click on the **Register Devices** button. From the dialog that appears, select the **Device**.
+To get started with a new device, click on the **Register Devices** button. From the dialog that appears, select the **Device** option.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111106/Senet-add-device-or-gateway-link.png" width="600" height="376" alt="senet portal with register device button highlight"><br/><br/></p>
 
@@ -1088,17 +1088,17 @@ From the *Edit Device* dialog we can setup the device so that it forwards data t
 
 1. Select the **NOTIFICATION TARGET** tab. This will expose the fields needed for forwarding.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133750/Senet-Edit-device-with-highlight.png" width="600" height="426" alt="Edit device dialog"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133750/Senet-Edit-device-with-highlight.png" width="600" height="426" alt="Edit device dialog"><br/><br/></p>
 
 2. Open the **Forward To** dropdown and select the **myDevices Cayenne** profile.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133748/Senet-Edit-device-notification-target.png" width="600" height="423" alt="Edit device dialog"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133748/Senet-Edit-device-notification-target.png" width="600" height="423" alt="Edit device dialog"><br/><br/></p>
 
 3. Before data will begin forwarding, be sure that the **Status** slider is set to **Enabled**.
 
 4. Make sure that the **RF Data** checkbox is selected to see signal strength data for your device in Cayenne.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133747/Senet-Edit-device-notification-target-verify.png" width="600" height="397" alt="senet-device-setup-using-url"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133747/Senet-Edit-device-notification-target-verify.png" width="600" height="397" alt="senet-device-setup-using-url"><br/><br/></p>
 
 5. Click **Save** to save the changes.
 
