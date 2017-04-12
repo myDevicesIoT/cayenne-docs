@@ -1088,17 +1088,17 @@ From the *Edit Device* dialog we can setup the device so that it forwards data t
 
 1. Select the **NOTIFICATION TARGET** tab. This will expose the fields needed for forwarding.
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133750/Senet-Edit-device-with-highlight.png" width="600" height="426" alt="Edit device dialog"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133750/Senet-Edit-device-with-highlight.png" width="600" height="426" alt="Edit device dialog with highlight for Notification target"><br/><br/></p>
 
 2. Open the **Forward To** dropdown and select the **myDevices Cayenne** profile.
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133748/Senet-Edit-device-notification-target.png" width="600" height="423" alt="Edit device dialog"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133748/Senet-Edit-device-notification-target.png" width="600" height="423" alt="Notification target tab with Forward To highlight"><br/><br/></p>
 
 3. Before data will begin forwarding, be sure that the **Status** slider is set to **Enabled**.
 
 4. Make sure that the **RF Data** checkbox is selected to see signal strength data for your device in Cayenne.
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133747/Senet-Edit-device-notification-target-verify.png" width="600" height="397" alt="senet-device-setup-using-url"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133747/Senet-Edit-device-notification-target-verify.png" width="600" height="397" alt="Notification target tab with all selections made"><br/><br/></p>
 
 5. Click **Save** to save the changes.
 
@@ -1113,7 +1113,7 @@ If your device needs to be programmed, you should now proceed with programming/f
 
 *TIP: You should see data being reported on the Senet portal's device list for your device. If you do not, double check the values entered for your device and consider programming/flashing the device again.*
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412135622/Senet-device-traffic.png" width="600" height="358" alt="Senet dashboard showing traffic from device"><br/><br/></p>
 
 
 ### Add device to Cayenne
