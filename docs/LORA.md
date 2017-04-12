@@ -1018,9 +1018,11 @@ We will walk you through these steps in the following sections.
 
 ### Create account
 
-To create your Senet account, visit the <a href="https://portal.senetco.com/" target="_blank">Senet Portal</a>. Follow the **Register as a new user** process located there to get started.
+To create your Senet account, visit the <a href="https://portal.senetco.io/" target="_blank">Senet Portal</a>. Click on the **Create New Account** to get started.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-portal-register-account.png" width="600" height="363" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412110645/Senet-portal-landing.png" width="600" height="377" alt="Senet portal with create new user highlight"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412110516/Senet-Portal-create-new-user.png" width="600" height="377" alt="Senet create user dialog"><br/><br/></p>
 
 
 ### Setup gateway device
@@ -1031,14 +1033,17 @@ In order for your LoRa technology devices to connect to the Senet network, you s
 
 #### Register new gateway device
 
-If you need to register a new gateway device, the Senet portal has instructions and the software for doing so. To begin this process, log into your Senet account and click on the **Download gateway software** link. This will open a detailed guide that Senet has created for the process of registering and installing software on the Multitech MultiTech Conduit gateway.
+If you need to register a new gateway device, the Senet portal has instructions and the software for doing so. To begin this process, log into your Senet account and click on the **Register Devices** button. Select **Gateway** from the dialog that appears to begin the process of adding your gateway device.
 
-**Note:** Gateway Registration and Software Installation is only required for devices that are new to the Senet Network. If Senet provided your device no further action is necessary.
+**Note:** Currently only the MultiTech Conduit gateway can be registered through the Senet Portal.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-access-gateway-guide.png" width="600" height="299" alt="senet-access-gateway-guide"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111106/Senet-add-device-or-gateway-link.png" width="600" height="376" alt="senet portal with register device button highlight"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-downlod-gateway-software.png" width="600" height="359" alt="senet-downlod-gateway-software"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111304/Senet-register-device-popup-with-gateway-highlight.png" width="600" height="215" alt="register gateway link highlighted"><br/><br/></p>
 
+The *Registery Gateway* dialog that appears will walk you through the process of adding your gateway device. You can refer to Senet's own <a href="http://docs.senetco.io/docs/gw/" target="_blank">gateway documentation</a> if you need help with this step.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111424/Senet-register-gateway-process.png" width="600" height="282" alt="Register gateway information"><br/><br/></p>
 
 ### Manual register device
 
@@ -1046,25 +1051,23 @@ Before you can use your LoRa technology device on the Senet network, it must be 
 
 **Log into the Senet portal**
 
-Start by going to the <a href="https://portal.senetco.com/" target="_blank">Senet portal</a> and logging into your account. Once logged in, you can proceed with registering a new device.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125129/Senet-login.png" width="600" height="318" alt="Senet"><br/><br/></p>
+Start by going to the <a href="https://portal.senetco.io" target="_blank">Senet portal</a> and logging into your account. Once logged in, you can proceed with registering a new device.
 
 **Register new device**
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/CrY-wAw58Ts" frameborder="0" allowfullscreen></iframe></p>
 
-To get started with a new device, click on the **Register new device** button. The *New node* screen will appear.
+To get started with a new device, click on the **Register Devices** button. From the dialog that appears, select the **Device**.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125357/Senet-register-button-hlt.png" width="600" height="336" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111106/Senet-add-device-or-gateway-link.png" width="600" height="376" alt="senet portal with register device button highlight"><br/><br/></p>
 
-From the *New node* screen, enter in the **Device ID** (this will be the *DevEUI* located on the device or given to you when purchased) and a description for the device. Click **Submit** to complete registering the device.
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412112304/Senet-register-device-popup-with-device-highlight.png" width="600" height="215" alt="Register new device highlight"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160822125416/Senet-new-node.png" width="600" height="291" alt="Senet"><br/><br/></p>
+From the *Register Device* dialog that appears, enter in the **Device EUI** (or allocate one from here) and a description for the device. Click **Register New Device** to complete registering the device.
 
-Click on the **Back to Node List** button to return to the landing screen. Your device will now appear in the list of devices shown here.
+Your device will now appear in the list of devices shown on your dashboard. You can now setup device forwarding to Cayenne.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Senet-landing-dash.png" width="600" height="336" alt="senet-landing-dash"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412113335/Senet-dashboard-generic.png" width="600" height="376" alt="Senet dashboard showing devices"><br/><br/></p>
 
 
 ### Setup device forwarding to Cayenne
