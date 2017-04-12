@@ -776,7 +776,7 @@ In the *Add Destination* dialog that appears, enter in the Cayenne Actility URL 
 https://lora.mydevices.com/v1/networks/actility/uplink
 ```
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170119090430/Actility-Routing-Profile-3-App-Server-Destination.png" width="600" height="240" alt="Paste in Cayenne destination url"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412073138/Create-Routing-Profile-add-destination.png" width="600" height="249" alt="Paste in Cayenne destination url"><br/><br/></p>
 
 Now that the Application Server has been setup, we need to create the AS Routing Profile. To create this profile select the **AS routing profiles** entry on the portal. From the screen that appears, click on the **Create** button to begin creating a new profile.
 
