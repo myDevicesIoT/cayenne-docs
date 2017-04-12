@@ -1161,13 +1161,13 @@ In order to add the device, Cayenne needs to know some information about the dev
 3.  Our device has been previously manually registered with Senet. Make sure “Already Registered” is selected in the **Activation Mode** field.
 4.  Enter your unique **Senet Account API Key** for your Senet account. This will allow Cayenne to send downlink commands to your device.
 
-  *TIP: If you have not generated your API Key it can be found on the Senet Portal under your Account Information.*
+    *TIP: If you have not generated your API Key it can be found on the Senet Portal under your Account Information.*
   
-  **Note: Once generated on the Senet Portal, your API key is not shown to you again. Be sure to copy & save off your API key for later reference! Failing to do so may cause you to need to regenerate your key. If you do so, remember that you will need to update the settings for all previously added devices in Cayenne as well.**
+    **Note: Once generated on the Senet Portal, your API key is not shown to you again. Be sure to copy & save off your API key for later reference! Failing to do so may cause you to need to regenerate your key. If you do so, remember that you will need to update the settings for all previously added devices in Cayenne as well.**
   
-  <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412143938/Senet-Access-Account-Info.png" width="600" height="213" alt="Senet access Account Info"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412143938/Senet-Access-Account-Info.png" width="600" height="213" alt="Senet access Account Info"><br/><br/></p>
 
-  <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412150043/Senet-API-Key.png" width="600" height="377" alt="Senet portal showing API key section"><br/><br/></p>    
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412150043/Senet-API-Key.png" width="600" height="377" alt="Senet portal showing API key section"><br/><br/></p>    
 5.  Click **Add device**.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412144153/myDevices-Senet-updated-Add-Device.png" width="600" height="376" alt="Cayenne Add Device with all Senet fields shown"><br/><br/></p>
