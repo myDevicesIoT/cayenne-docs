@@ -1270,7 +1270,7 @@ Before you can use your device on the Loriot network, it must be registered on t
 
 Devices must be added into an **Application** in the Loriot portal. To enroll a new device, click on **Applications** and then select which Application your device will be added to. This will open your application's dashboard.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-App-Dashboard.png" width="660" height="395" alt="application dashboard"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170413105236/Loriot-App-Dashboard-2.png" width="660" height="415" alt="application dashboard"><br/><br/></p>
 
 From the application dashboard screen, click on **Managed devices** and the *Devices* screen appears. From the *Devices* screen, you can enroll new devices or you can import existing devices.
 
@@ -1337,11 +1337,11 @@ If your device has been previously registered on the Loriot network, it can be q
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4. What is your Loriot **Application ID**? You can obtain your App ID from your Application's dashboard on the Loriot portal.
 
-   <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-App-Dashboard-App-ID-highlight.png" width="660" height="395" alt="app dashboard App ID highlight"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170413105438/Loriot-App-Dashboard-App-ID-highlight-2.png" width="660" height="415" alt="app dashboard App ID highlight"><br/><br/></p>
 
 5. What is your Loriot **Security Token**? Yuu can obtain your Token by clicking on **Security tokens** from your Application's dashboard on the Loriot portal.
 
-   <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-App-Dashboard-Security-Token-higlight.png" width="660" height="441" alt="App dashboard Security token highlight"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170413105707/Loriot-App-Dashboard-Security-Token-higlight-2.png" width="660" height="441" alt="App dashboard Security token highlight"><br/><br/></p>
 
    <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Security-Token-screen.png" width="660" height="394" alt="Security token"><br/><br/></p>
 
