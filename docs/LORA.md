@@ -1256,17 +1256,11 @@ From the Application screen for your device, find the **Data Output** option and
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Application-Output-screen.png" width="660" height="395" alt="myDevices app dash with data output highlight"><br/><br/></p>
 
-On the *Application Output* screen, next to the **Data Output** option select the **Change** button and a list of output types will appear. From the list of types, select the **HTTP Push** option.
+On the *Application Output* screen, next to the **Data Output** option select the **Change** button and a list of output types will appear. From the list of types, select the **myDevices Cayenne** option and then click on the **Confirm change** button to save the change.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-App-Output-list.png" width="660" height="395" alt="Edit output type with list"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170413102532/Loriot-App-Output-list-updated.png" width="660" height="414" alt="Select Cayenne from output list"><br/><br/></p>
 
-Enter the Cayenne Loriot URL into the **Target URL for POSTs** entry field and then click on the **Confirm change** button to save the change.
-
-```
-https://longrangeapi.mydevices.com/longrange/api/loriot/messages/add
-```
-
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Change-Data-Output.png" width="660" height="395" alt="data output url change"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170413102829/Loriot-Change-Data-Output-updated.png" width="660" height="413" alt="Confirm data output change"><br/><br/></p>
 
 ### Manually register device
 
