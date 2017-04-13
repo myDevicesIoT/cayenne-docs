@@ -1260,7 +1260,7 @@ On the *Application Output* screen, next to the **Data Output** option select th
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170413102532/Loriot-App-Output-list-updated.png" width="660" height="414" alt="Select Cayenne from output list"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170413102829/Loriot-Change-Data-Output-updated.png" width="660" height="413" alt="Confirm data output change"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170413103214/Loriot-Change-Data-Output-updated.png" width="660" height="413" alt="Confirm data output change"><br/><br/></p>
 
 ### Manually register device
 
