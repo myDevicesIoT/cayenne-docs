@@ -520,10 +520,9 @@ Return the payload buffer
     int16_t val = value * 100;
     buffer[cursor++] = channel; 
     buffer[cursor++] = LPP_ANALOG_OUTPUT;
-    buffer[cursor++] = value;
     buffer[cursor++] = val >> 8; 
     buffer[cursor++] = val; 
-    
+
     return cursor;
 }
 ```
