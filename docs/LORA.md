@@ -1611,7 +1611,7 @@ To create your account, visit The Things Network <a href="https://account.thethi
 
 **Open The Things Network Console**
 
-Once you have your account and have signed in, you will want to access the **Console** which is where you can configure your Applications and Gateway devices. To access the console, expand your user menu and select the **CONSOLE** option. This will open the <a href="https://console.thethingsnetwork.org/" target="_blank">Console page</a>. If you have not 
+Once you have your account and have signed in, you will want to access the **Console** which is where you can configure your Applications and Gateway devices. To access the console, expand your user menu and select the **CONSOLE** option. This will open the <a href="https://console.thethingsnetwork.org/" target="_blank">Console page</a>.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419085621/TTN-User-menu-expanded.png" width="660" height="278" alt="User menu expanded"><br/><br/></p>
 
