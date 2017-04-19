@@ -1619,7 +1619,7 @@ Once you have your account and have signed in, you will want to access the **Con
 
 ### Setup gateway device
 
-In order for your LoRa technology devices to connect to The Things Network, you must have purchased and configured a gateway device. The Things Network has a <a href="https://www.thethingsnetwork.org/docs/gateways/" target="_blank">Gateway page</a> with information on hardware supported, including (Comgin Soon!) their own <a href="https://www.kickstarter.com/projects/419277966/the-things-network" target="_blank">Gateway device</a> that you can use.
+In order for your LoRa technology devices to connect to The Things Network, you must have purchased and configured a gateway device. The Things Network has a <a href="https://www.thethingsnetwork.org/docs/gateways/" target="_blank">Gateway page</a> with information on hardware supported, including (Coming Soon) their own <a href="https://www.kickstarter.com/projects/419277966/the-things-network" target="_blank">Gateway device</a> that you can use.
 
 **Be sure that you have an appropriate gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
