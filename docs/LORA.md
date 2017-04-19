@@ -1596,7 +1596,7 @@ Cayenne makes it easy to use your LoRa device and The Things Network. You will n
 
 1. [Create / Log into your account on The Things Network portal](#lora-the-things-network-create-account)
 2. [Setup gateway device](#lora-the-things-network-setup-gateway-device)
-3. [Create Cayenne Data Output](#lora-the-things-network-create-cayenne-data-output)
+3. [Create Application and configure Integration](#lora-the-things-network-create-application)
 4. [Register your device on The Things Network portal](#lora-the-things-network-manually-register-device)
 5. [Program/Flash your device](#lora-the-things-network-programming-the-device)
 6. [Add your device to your Cayenne dashboard](#lora-the-things-network-add-device-to-cayenne)
