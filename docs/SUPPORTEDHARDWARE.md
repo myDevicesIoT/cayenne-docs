@@ -215,6 +215,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 
 **Links:** <br/>
@@ -237,6 +238,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -257,6 +260,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -279,6 +283,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -303,6 +308,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -321,6 +328,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -340,6 +349,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -361,6 +372,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -383,6 +395,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -406,6 +420,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -431,6 +447,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -458,6 +476,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Sensors included:**
 
@@ -475,6 +495,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -498,6 +520,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -526,6 +550,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -550,6 +576,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -571,6 +598,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -592,6 +620,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -617,6 +646,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -638,6 +669,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -662,6 +694,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
