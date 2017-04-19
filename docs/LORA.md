@@ -1605,13 +1605,13 @@ We will walk you through these steps in the following sections.
 
 ### Create account
 
-To create your account, visit the <a href="https://account.thethingsnetwork.org/register" target="_blank">Sign Up</a> page. From here you can enter in all the required details for creating your account.
+To create your account, visit The Things Network <a href="https://account.thethingsnetwork.org/register" target="_blank">Sign Up</a> page. From here you can enter in all the required details for creating your account.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419085534/TTN-Account-Signup.png" width="660" height="414" alt="Account Sign Up"><br/><br/></p>
 
 **Open The Things Network Console**
 
-Once you have your account and have sign in, you will want to access the **Console** which is where you can configure your account and add Gateway and Devices. To access the console, expand your user menu and select the **CONSOLE** option. This will open the <a href="https://console.thethingsnetwork.org/" target="_blank">Console page</a>.
+Once you have your account and have signed in, you will want to access the **Console** which is where you can configure your Applications and Gateway devices. To access the console, expand your user menu and select the **CONSOLE** option. This will open the <a href="https://console.thethingsnetwork.org/" target="_blank">Console page</a>. If you have not 
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419085621/TTN-User-menu-expanded.png" width="660" height="278" alt="User menu expanded"><br/><br/></p>
 
@@ -1619,7 +1619,7 @@ Once you have your account and have sign in, you will want to access the **Conso
 
 ### Setup gateway device
 
-In order for your LoRa technology devices to connect to The Things Network, you must have purchased and configured a gateway device. The Things Network has a <a href="https://www.thethingsnetwork.org/docs/gateways/" target="_blank">Gateway page</a> with information on supported hardware, including their own <a href="https://www.kickstarter.com/projects/419277966/the-things-network" target="_blank">Gateway device</a>.
+In order for your LoRa technology devices to connect to The Things Network, you must have purchased and configured a gateway device. The Things Network has a <a href="https://www.thethingsnetwork.org/docs/gateways/" target="_blank">Gateway page</a> with information on hardware supported, including (Comgin Soon!) their own <a href="https://www.kickstarter.com/projects/419277966/the-things-network" target="_blank">Gateway device</a> that you can use.
 
 **Be sure that you have an appropriate gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
@@ -1631,7 +1631,9 @@ If you need to register a new gateway device, you can do so from The Things Netw
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419090415/TTN-gateway-register-highlight.png" width="660" height="288" alt="Console screen with gateways highlight"><br/><br/></p>
 
-You will then be guided through setting up your gateway device. If you should need help with this process, The Things Network has in-depth documentation on <a href="https://www.thethingsnetwork.org/docs/gateways/registration.html" target="_blank">registerting your gateway</a> available.
+You will then be guided through setting up your gateway device.
+
+*If you should need help with this process, The Things Network has in-depth documentation on <a href="https://www.thethingsnetwork.org/docs/gateways/registration.html" target="_blank">registerting your gateway</a> available.*
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419090740/TTN-Register-Gateway.png" width="660" height="415" alt="Register gateway screen"><br/><br/></p>
 
@@ -1642,13 +1644,16 @@ In order for data from your device to reach Cayenne, you must configured your de
 
 To create an application, click <a href="https://console.thethingsnetwork.org/applications/add" target="_blank">add application</a> in the console. The *Add Application* screen appears.
 
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091041/TTN-Applications-with-highlight.png" width="660" height="343" alt="Add Application screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091041/TTN-Applications-with-highlight.png" width="660" height="343" alt="Add Application screen"><br/><br/></p>
+
+Fill in the required information to create your new Application.
 *Tip: If you need help with this part of the process, you can refer to The Things Network <a href="https://www.thethingsnetwork.org/docs/applications/add.html" target="_blank">documentation on this step</a>.*
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091041/TTN-Applications-with-highlight.png" width="660" height="343" alt="Add Application screen"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091041/TTN-Applications-with-highlight.png" width="660" height="343" alt="Add Application screen"><br/><br/></p>
-
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091227/TTN-Add-new-Application.png" width="660" height="396" alt="Add Application screen"><br/><br/></p>
+
+Once you have an application that you want to use, you can then proceed with configuring it to work with Cayenne.
 
 
 #### Add Cayenne Integration
@@ -1669,34 +1674,35 @@ To configure your Application to forward data to Cayenne you will need to add an
 
     <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092139/TTN-Integrations-screen-with-highlight.png" width="660" height="301" alt="Integrations screen with add link highlight"><br/><br/></p>
 
-4. Click to select the Cayenne integration.
+4. Click to select the Cayenne integration option shown in the list. A list of options for the Cayenne Integration will then be shown.
 
     <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092236/TTN-Cayenne-integration.png" width="660" height="328" alt="Add integration screen with Cayenne option"><br/><br/></p>
 
-5. Configure the Cayenne integration by entering in a **Process ID**. This can be any string of text that you wan, such as "cayenne-ID".
+5. Configure the Cayenne integration by entering in a **Process ID**. This can be any string of text that you want, such as "cayenne-ID".
 
 6. Complete the Cayenne integration by selecting the **Access Key** to be used for downlink commands. In most cases you will simply need to select the *default key* for your application.
 
     <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092329/TTN-Cayenne-Integration-ready-to-add.png" width="660" height="393" alt="Cayenne integration screen with filled in values"><br/><br/></p>
 	
-7. Click **Add Integration** to complete the setup. Your application is now configured to forward data to Cayenne. You can now proceed with adding devices that use the application.
+7. Click **Add Integration** to complete the setup.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092439/TTN-Cayenne-integration-done.png" width="660" height="406" alt="Integrations screen with Cayenne shown as configured"><br/><br/></p>
 
+Your application is now configured to forward data to Cayenne. You can now proceed with adding devices that use the application.
 
 ### Manually register device
 
-Before you can use your device on The Things Network, it must be registered on the network. If you need to regsiter your device with The Things Network, the following information will help guide you through this process using The Things Network console.
-
-Devices must be added into an **Application** in The Things Network console.
+Before you can use your device on The Things Network, it must be registered on the network. To accomplish this, devices must be added into an **Application** in The Things Network console. The following information will help guide you through this process.
 
 1. In the Console, from the Application or an application’s Devices screen, click **register device**.
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092603/TTN-Register-new-device.png" width="660" height="394" alt="Register Device screen"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419112909/TTN-Devices-screen-with-highlight.png" width="660" height="307" alt="Device screen with register link highlight"><br/><br/></p>
 
 2. Fill in the required information for registering your device.
 
     *TIP: If you need help with this part of the process you can refer to The Things Network <a href="https://www.thethingsnetwork.org/docs/devices/registration.html" target="_blank">device registration</a> documentation.*
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092603/TTN-Register-new-device.png" width="660" height="394" alt="Register Device screen"><br/><br/></p>
 
 3. Click **Register** to complete adding your device.
 	
