@@ -695,6 +695,7 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
 *   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 
 ## Actility
@@ -1580,4 +1581,211 @@ Cayenne currently supports the following devices on the OrbiWise network. Suppo
 *   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
 *   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
 *   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
+*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
+
+## The Things Network
+
+**About The Things Network**
+
+The Things Network is building a global, open, crowd-sourced Internet of Things data network which is owned and operated by its users. It is based on the technology called LoRaWAN which is perfect for the Internet of Things as it is low energy, long range and low bandwidth. The entire city of Amsterdam was covered with this network in less than 6 weeks and inspired hundreds of cities around the world to do the same.
+
+
+**Using The Things Network with Cayenne**
+
+Cayenne makes it easy to use your LoRa device and The Things Network. You will need to:
+
+1. [Create / Log into your account on The Things Network portal](#lora-the-things-network-create-account)
+2. [Setup gateway device](#lora-the-things-network-setup-gateway-device)
+3. [Create Cayenne Data Output](#lora-the-things-network-create-cayenne-data-output)
+4. [Register your device on The Things Network portal](#lora-the-things-network-manually-register-device)
+5. [Program/Flash your device](#lora-the-things-network-programming-the-device)
+6. [Add your device to your Cayenne dashboard](#lora-the-things-network-add-device-to-cayenne)
+
+We will walk you through these steps in the following sections.
+
+### Create account
+
+To create your account, visit the <a href="https://account.thethingsnetwork.org/register" target="_blank">Sign Up</a> page. From here you can enter in all the required details for creating your account.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419085534/TTN-Account-Signup.png" width="660" height="414" alt="Account Sign Up"><br/><br/></p>
+
+**Open The Things Network Console**
+
+Once you have your account and have sign in, you will want to access the **Console** which is where you can configure your account and add Gateway and Devices. To access the console, expand your user menu and select the **CONSOLE** option. This will open the <a href="https://console.thethingsnetwork.org/" target="_blank">Console page</a>.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419085621/TTN-User-menu-expanded.png" width="660" height="278" alt="User menu expanded"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419085659/TTN-Console-landing-screen.png" width="660" height="414" alt="Console landing screen"><br/><br/></p>
+
+### Setup gateway device
+
+In order for your LoRa technology devices to connect to The Things Network, you must have purchased and configured a gateway device. The Things Network has a <a href="https://www.thethingsnetwork.org/docs/gateways/" target="_blank">Gateway page</a> with information on supported hardware, including their own <a href="https://www.kickstarter.com/projects/419277966/the-things-network" target="_blank">Gateway device</a>.
+
+**Be sure that you have an appropriate gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
+
+#### Register gateway device
+
+If you need to register a new gateway device, you can do so from The Things Network console. To begin this process, log into your account and open the <a href="https://console.thethingsnetwork.org/" target="_blank">Console page</a>. Select the **Gateways** link to open the *Gateways* screen. From here, select the **register gateway** link to begin the process of registering a new gateway.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419090054/TTN-Console-gateway-highlight.png" width="660" height="414" alt="Console screen with gateways highlight"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419090415/TTN-gateway-register-highlight.png" width="660" height="288" alt="Console screen with gateways highlight"><br/><br/></p>
+
+You will then be guided through setting up your gateway device. If you should need help with this process, The Things Network has in-depth documentation on <a href="https://www.thethingsnetwork.org/docs/gateways/registration.html" target="_blank">registerting your gateway</a> available.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419090740/TTN-Register-Gateway.png" width="660" height="415" alt="Register gateway screen"><br/><br/></p>
+
+
+### Create Application
+
+In order for data from your device to reach Cayenne, you must configured your devices in The Things Network portal to forward data to Cayenne. The Things Netowrk portal groups devices in what they call **Applications**. If you want to use a group of devices with Cayenne, you will need to configure your Application to use the Cayenne. You only need to perform this step once for each Application that you want to use.
+
+To create an application, click <a href="https://console.thethingsnetwork.org/applications/add" target="_blank">add application</a> in the console. The *Add Application* screen appears.
+
+*Tip: If you need help with this part of the process, you can refer to The Things Network <a href="https://www.thethingsnetwork.org/docs/applications/add.html" target="_blank">documentation on this step</a>.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091041/TTN-Applications-with-highlight.png" width="660" height="343" alt="Add Application screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091041/TTN-Applications-with-highlight.png" width="660" height="343" alt="Add Application screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091227/TTN-Add-new-Application.png" width="660" height="396" alt="Add Application screen"><br/><br/></p>
+
+
+#### Add Cayenne Integration
+
+To configure your Application to forward data to Cayenne you will need to add an **Integration**. To add the Cayenne integration, perform the following steps:
+
+*TIP: If you need additional help with this step you can also refer to The Things Network <a href="https://www.thethingsnetwork.org/docs/applications/integrations.html#add-an-integration" target="_blank">Add an Integration</a> documentation for generic help on adding integrations.*
+
+1. Open your existing Application in the console.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091821/TTN-Application-Overview.png" width="660" height="415" alt="Application Overview"><br/><br/></p>
+
+2. Select **Integrations** from the top-right menu.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092016/TTN-Application-Integrations-link-highlight.png" width="660" height="415" alt="Application screen with Integrations highlight"><br/><br/></p>
+
+3. Click the **add integration** link.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092139/TTN-Integrations-screen-with-highlight.png" width="660" height="301" alt="Integrations screen with add link highlight"><br/><br/></p>
+
+4. Click to select the Cayenne integration.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092236/TTN-Cayenne-integration.png" width="660" height="328" alt="Add integration screen with Cayenne option"><br/><br/></p>
+
+5. Configure the Cayenne integration by entering in a **Process ID**. This can be any string of text that you wan, such as "cayenne-ID".
+
+6. Complete the Cayenne integration by selecting the **Access Key** to be used for downlink commands. In most cases you will simply need to select the *default key* for your application.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092329/TTN-Cayenne-Integration-ready-to-add.png" width="660" height="393" alt="Cayenne integration screen with filled in values"><br/><br/></p>
+	
+7. Click **Add Integration** to complete the setup. Your application is now configured to forward data to Cayenne. You can now proceed with adding devices that use the application.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092439/TTN-Cayenne-integration-done.png" width="660" height="406" alt="Integrations screen with Cayenne shown as configured"><br/><br/></p>
+
+
+### Manually register device
+
+Before you can use your device on The Things Network, it must be registered on the network. If you need to regsiter your device with The Things Network, the following information will help guide you through this process using The Things Network console.
+
+Devices must be added into an **Application** in The Things Network console.
+
+1. In the Console, from the Application or an application’s Devices screen, click **register device**.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092603/TTN-Register-new-device.png" width="660" height="394" alt="Register Device screen"><br/><br/></p>
+
+2. Fill in the required information for registering your device.
+
+    *TIP: If you need help with this part of the process you can refer to The Things Network <a href="https://www.thethingsnetwork.org/docs/devices/registration.html" target="_blank">device registration</a> documentation.*
+
+3. Click **Register** to complete adding your device.
+	
+###  Programming the device
+
+Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
+
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-the-things-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+
+**NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
+
+### Add device to Cayenne
+
+Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+
+From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Cayenne Add New menu"><br/><br/></p>
+
+From the list of devices & widgets that appears, select the **LoRa** category and then **The Things Network** option to view a list of supported devices.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092744/Cayenne-TTN-supported-devices.png" width="660" height="415" alt="Cayenne showing supported TTN devices"><br/><br/></p>
+
+After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
+
+#### Already Registered
+
+If your device has been previously registered on The Things Network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
+
+**Items you will need:**
+
+1. Which [LoRa technology device](#lora-the-things-network-supported-devices) is being added?
+2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-the-things-network-manually-register-device) if you need help with manually registering your device on a network.
+3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+
+To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under a [The Things Network account](#lora-the-things-network-create-account).
+
+**1\. Choose the Network**
+
+Make sure **The Things Network** is selected in the list of Networks.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092744/Cayenne-TTN-supported-devices.png" width="660" height="415" alt="Cayenne showing supported TTN devices"><br/><br/></p>
+
+**2\. Select the Device**
+
+Select your device from among the list supported The Things Network devices. In this case, we’ll select the **Adeunis Pulse**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092906/Cayenne-TTN-Pulse-highlighted.png" width="660" height="416" alt="TTN with Pulse device highlight"><br/><br/></p>
+
+**3\. Enter Settings & Add device**
+
+In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
+
+1. Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
+2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
+3. Our device has been previously manually registered with The Things Network. Make sure “Already Registered” is selected in the **Activation Mode** field.
+4. Click **Add device**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092952/Cayenne-TTN-Pulse-settings.png" width="660" height="413" alt="TTN Pulse settings"><br/><br/></p>
+
+The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
+
+
+### Supported devices
+
+**The Things Network devices supported by Cayenne**
+
+Cayenne currently supports the following devices on The Things Network. Support for more devices is constantly ongoing.
+
+*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
+*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
+*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
+*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
+*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
+*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
+*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
+*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
+*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
+*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
+*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
+*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
+*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
+*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
+*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
+*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
+*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
+*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
+*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
+*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
 *   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
