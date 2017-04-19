@@ -1242,7 +1242,7 @@ In order for your LoRa technology devices to connect to the Loriot network, you 
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/euB4Axp1e2M" frameborder="0" allowfullscreen></iframe></p>
 
-In order for data from your device to reach Cayenne, you must configured your devices in the Loriot portal to forward data to Cayenne. The Loriot portal groups devices in what they call **Applications**. If you want to use a group of devices with Cayenne, you will need to perform some configuration on the portal. You only need to perform this step once for each Application that you want to use. To set this up, click on the **Applications** button in the portal. The *Network Applications* screen appears.
+In order for data from your device to reach Cayenne, you must configure your devices in the Loriot portal to forward data to Cayenne. The Loriot portal groups devices in what they call **Applications**. If you want to use a group of devices with Cayenne, you will need to perform some configuration on the portal. You only need to perform this step once for each Application that you want to use. To set this up, click on the **Applications** button in the portal. The *Network Applications* screen appears.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Applications-highlight.png" width="660" height="478" alt="applications button highlighted"><br/><br/></p>
 
@@ -1633,14 +1633,14 @@ If you need to register a new gateway device, you can do so from The Things Netw
 
 You will then be guided through setting up your gateway device.
 
-*If you should need help with this process, The Things Network has in-depth documentation on <a href="https://www.thethingsnetwork.org/docs/gateways/registration.html" target="_blank">registerting your gateway</a> available.*
+*TIP: The Things Network has in-depth documentation on <a href="https://www.thethingsnetwork.org/docs/gateways/registration.html" target="_blank">registering your gateway</a> available if you should need help with this process.*
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419090740/TTN-Register-Gateway.png" width="660" height="415" alt="Register gateway screen"><br/><br/></p>
 
 
 ### Create Application
 
-In order for data from your device to reach Cayenne, you must configured your devices in The Things Network portal to forward data to Cayenne. The Things Netowrk portal groups devices in what they call **Applications**. If you want to use a group of devices with Cayenne, you will need to configure your Application to use the Cayenne. You only need to perform this step once for each Application that you want to use.
+In order for data from your device to reach Cayenne, you must configure your devices in The Things Network portal to forward data to Cayenne. The Things Network portal groups devices in what they call **Applications**. If you want to use a group of devices with Cayenne, you will need to configure your Application to use the Cayenne. You only need to perform this step once for each Application that you want to use.
 
 To create an application, click <a href="https://console.thethingsnetwork.org/applications/add" target="_blank">add application</a> in the console. The *Add Application* screen appears.
 
@@ -1648,7 +1648,8 @@ To create an application, click <a href="https://console.thethingsnetwork.org/ap
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091041/TTN-Applications-with-highlight.png" width="660" height="343" alt="Add Application screen"><br/><br/></p>
 
-Fill in the required information to create your new Application.
+On the *Add Application*, fill in the required information to create your new Application.
+
 *Tip: If you need help with this part of the process, you can refer to The Things Network <a href="https://www.thethingsnetwork.org/docs/applications/add.html" target="_blank">documentation on this step</a>.*
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419091227/TTN-Add-new-Application.png" width="660" height="396" alt="Add Application screen"><br/><br/></p>
