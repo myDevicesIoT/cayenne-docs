@@ -695,6 +695,7 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
 *   [OrbiWise](#lora-orbiwise-network)
+*   [Stream](#lora-stream-network)
 *   [The Things Network](#lora-the-things-network)
 
 
@@ -1702,7 +1703,7 @@ Before you can use your device on the Stream network, it must be registered on t
 
     *TIP: If you need help with this part of the process you can refer to Stream's <a href="http://help.iot-x.com/userguide/lora/lora-user-actions/lora-application-user-actions/adding-devices-to-lora-applications" target="_blank">Adding devices to LoRa Applications</a> documentation.*
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123340/Stream-Add-a-Device-panel.png" width="660" height="453" alt="Add a device panel"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123340/Stream-Add-a-Device-panel.png" width="573" height="393" alt="Add a device panel"><br/><br/></p>
 
 4. Click **Add** to complete adding your device.
 	
