@@ -692,9 +692,10 @@ In order to activate a LoRa device on a network, you will need to have an accoun
 Cayenne currently supports the following LoRa networks. The list of networks that work with Cayenne will keep growing.
 
 *   [Actility](#lora-actility)
-*   [Senet](#lora-senet-network)
+*   [Kerlink](#lora-kerlink-network)
 *   [Loriot](#lora-loriot-network)
 *   [OrbiWise](#lora-orbiwise-network)
+*   [Senet](#lora-senet-network)
 *   [Stream](#lora-stream-network)
 *   [The Things Network](#lora-the-things-network)
 
@@ -891,7 +892,7 @@ Once your device has been created, continue by making sure that your device has 
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-senet-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-actility-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
@@ -997,193 +998,219 @@ When setting up your device on Actility's ThingPark portal, you must select the 
     And in the EU, select **LoRaWAN 1.0 class C - Rx2-SF12**
 
 
-## Senet Network
+## Kerlink Network
 
-**About Senet**
+**About Kerlink**
 
-Senet, a contributing member of the LoRa® Alliance, is the first and only public provider in North America of low-power wide-area networks (LPWANs) with its class-leading LoRa® modulation for IoT and M2M applications.
+Kerlink specialises in network solutions for the Internet of Things (IoT). Its mission is to provide its clients – telecom
+carriers, businesses and public authorities – with network solutions (equipment, software and services) dedicated to
+the Internet of Things.
 
-**Using Senet with Cayenne**
+**Using Kerlink with Cayenne**
 
-Cayenne makes it easy to use your LoRa technology device and the Senet network. You will need to:
+Cayenne makes it easy to use your LoRa device and the Kerlink network. You will need to:
 
-1. [Create / Log into your account on the Senet portal](#lora-senet-network-create-account)
-2. [Setup gateway device](#lora-senet-network-setup-gateway-device)
-3. [Register your device on the Senet portal](#lora-senet-network-manual-register-device)
-4. [Setup traffic forwarding to Cayenne](#lora-senet-network-setup-device-forwarding-to-cayenne)
-5. [Program/Flash your device](#lora-senet-network-programming-the-device)
-6. [Add your device to your Cayenne dashboard](#lora-senet-network-add-device-to-cayenne)
+1. [Setup gateway device](#lora-kerlink-network-setup-gateway-device)
+2. [Setup traffic forwarding to Cayenne](#lora-kerlink-network-setup-traffic-forwarding-to-cayenne)
+3. [Manually register device](#lora-kerlink-network-manually-register-device)
+4. [Program/Flash your device](#lora-kerlink-network-programming-the-device)
+5. [Add your device to your Cayenne dashboard](#lora-kerlink-network-add-device-to-cayenne)
 
 We will walk you through these steps in the following sections.
 
 
-### Create account
-
-To create your Senet account, visit the <a href="https://portal.senetco.io/" target="_blank">Senet Portal</a>. Click on the **Create New Account** to get started.
-
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412110645/Senet-portal-landing.png" width="600" height="377" alt="Senet portal with create new user highlight"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412110516/Senet-Portal-create-new-user.png" width="600" height="377" alt="Senet create user dialog"><br/><br/></p>
-
-
 ### Setup gateway device
 
-In order for your LoRa technology devices to connect to the Senet network, you should purchase and configure a gateway device. When using the Senet network, it is recommended that you use a MultiConnect Conduit gateway device. You can find links to an appropriate version of this device on the <a href="http://multitech.com/brands/multiconnect-conduit" target="_blank">Multitech MultiConnect Conduit page</a>.
+In order for your LoRa technology devices to connect to the Kerlink network, you must have purchased and configured a gateway device. Kerlink supports <a href="http://www.kerlink.fr/en/products" target="_blank">several different gateway devices</a>.
 
-**Be sure that your devices are covered by the Senet network, including having an appropriate gateway configured and working if needed, before continuing. Your devices will not be able to properly function without your gateway device in place.**
+- **NOTE:** At this time, connection between Kerlink and Cayenne is only supported with the <a href="http://www.kerlink.fr/en/products/lora-iot-station-2/wirma-station-spn" target="_blank">Kerlink Wirnet Station SPN</a>.
 
-#### Register new gateway device
+**Be sure that you have your gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
 
-If you need to register a new gateway device, the Senet portal has instructions and the software for doing so. To begin this process, log into your Senet account and click on the **Register Devices** button. Select **Gateway** from the dialog that appears to begin the process of adding your gateway device.
+#### Connect to your gateway device
 
-**Note:** Currently only the MultiTech Conduit gateway can be registered through the Senet Portal.
+Adding LoRa devices and forwarding their data to Cayenne must be configured on the Kerlink gateway device. You can do so using the gateway's web interface.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111106/Senet-add-device-or-gateway-link.png" width="600" height="376" alt="senet portal with register device button highlight"><br/><br/></p>
+**Log into the gateway device.**
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111304/Senet-register-device-popup-with-gateway-highlight.png" width="600" height="215" alt="register gateway link highlighted"><br/><br/></p>
+Connect with your browser to the URL / IP Address of your gateway device.
 
-The *Register Gateway* dialog that appears will walk you through the process of adding your gateway device. You can refer to Senet's own <a href="http://docs.senetco.io/docs/gw/" target="_blank">gateway documentation</a> if you need help with this step.
+*TIP: If needed you can use a network scanner, such as the <a href="https://www.fing.io/#fingapp" target="_blank">Fing app</a> to identify devices on your network.*
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111424/Senet-register-gateway-process.png" width="600" height="282" alt="Register gateway information"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420150425/Kerlink-IP-Address-example.png" width="365" height="85" alt="Example enter IP address in browser"><br/><br/></p>
 
-### Manual register device
+**Possible security warning seen on connection**
 
-Before you can use your LoRa technology device on the Senet network, it must be registered on the network using the Senet portal. The following information will help guide you through this process.
+When connecting to your gateway device, you may find that your web browser complains about the connection not being secure. Depending upon which browser you are using and its security settings, you may need <a href="http://www.inmotionhosting.com/support/website/ssl/self-signed-ssl-certificate-warning" target="_blank">to take actions to proceed</a> and access the gateway content.
 
-**Log into the Senet portal**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420150219/Kerlink-security-warning.png" width="660" height="392" alt="Example security warning from Chrome"><br/><br/></p>
 
-Start by going to the <a href="https://portal.senetco.io" target="_blank">Senet portal</a> and logging into your account. Once logged in, you can proceed with registering a new device.
+**Connected to gateway device**
 
-**Register new device**
+As soon as you are connected to the gateway device, you will see the landing screen for your device. You can proceed with configuring the gateway to forward data to Cayenne.
 
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/CrY-wAw58Ts" frameborder="0" allowfullscreen></iframe></p>
-
-To get started with a new device, click on the **Register Devices** button. From the dialog that appears, select the **Device** option.
-
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111106/Senet-add-device-or-gateway-link.png" width="600" height="376" alt="senet portal with register device button highlight"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412112304/Senet-register-device-popup-with-device-highlight.png" width="600" height="215" alt="Register new device highlight"><br/><br/></p>
-
-From the *Register Device* dialog that appears, enter in the **Device EUI** (or allocate one from here) and a description for the device. Click **Register New Device** to complete registering the device.
-
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412112920/Senet-register-device-dialog.png" width="600" height="291" alt="Register new device dialog"><br/><br/></p>
-
-Your device will now appear in the list of devices shown on your dashboard. You can now setup device forwarding to Cayenne.
-
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412113335/Senet-dashboard-generic.png" width="600" height="376" alt="Senet dashboard showing devices"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420150602/Kerlink-landing-screen.png" width="660" height="414" alt="Kerlink SPN landing screen"><br/><br/></p>
 
 
-### Setup device forwarding to Cayenne
+### Setup traffic forwarding to Cayenne
 
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/k7V0FzuFf-I" frameborder="0" allowfullscreen></iframe></p>
+In order for data from your devices to reach Cayenne, you must configure your gateway device to forward data to Cayenne. You will need to perform this step on each Kerlink gateway device. Once logged into your Kerlink gateway interface, click on the **HTTP transmitter** option located in the **Configuration** section.
 
-In order for Cayenne to be able to able to receive your device’s information, you will need to setup packet forwarding. To do so, expand the settings for the device and click on the **cogwheel** icon. The *Edit Device* screen appears.
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420151016/Kerlink-landing-screen-data-forward-highlight.png" width="660" height="414" alt="device routing feed screen"><br/><br/></p>
 
-*TIP: Alternatively you can click on the device tile itself and then select the **cogwheel** icon that also appears on the Device screen.*
+In the *HTTP transmitter* screen that appears, enter in the following information:
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412132623/Senet-access-device-settings.png" width="528" height="310" alt="Accessing device settings"><br/><br/></p>
+1. Click on the **Enable** checkbox to enable the fields shown here.
+2. In the **Address** field enter in the uplink URL for the Kerlink network.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133201/Senet-Edit-device-dialog.png" width="600" height="426" alt="Edit device dialog"><br/><br/></p>
+    ```
+    https://lora.mydevices.com/v1/networks/kerlink/uplink/
+    ```
 
-From the *Edit Device* dialog we can setup the device so that it forwards data to Cayenne. To do so, perform the following:
+3. Click **Save* to save the changes.
 
-1. Select the **NOTIFICATION TARGET** tab. This will expose the fields needed for forwarding.
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420150904/Kerlink-Cayenne-forwarding.png" width="660" height="297" alt="HTTP Transmitter configured for Cayenne"><br/><br/></p>
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133750/Senet-Edit-device-with-highlight.png" width="600" height="426" alt="Edit device dialog with highlight for Notification target"><br/><br/></p>
+Your gateway is now configured to forward data to Cayenne. You can now proceed with adding devices.
 
-2. Open the **Forward To** dropdown and select the **myDevices Cayenne** profile.
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133748/Senet-Edit-device-notification-target.png" width="600" height="423" alt="Notification target tab with Forward To highlight"><br/><br/></p>
+### Manually register device
 
-3. Before data will begin forwarding, be sure that the **Status** slider is set to **Enabled**.
+Before you can use your device on the Kerlink network, it must be registered on the network. To accomplish this, devices can be added to the gateway under what Kerlink calls "Fleet devices". The following information will help guide you through this process.
 
-4. Make sure that the **RF Data** checkbox is selected to see signal strength data for your device in Cayenne.
+Click on the **Fleet** option located near the top of the gateway menu. The *Fleet* screen appears and from here you can add devices.
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133747/Senet-Edit-device-notification-target-verify.png" width="600" height="397" alt="Notification target tab with all selections made"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420151837/Kerlink-landing-screen-fleet-highlight.png" width="660" height="414" alt="Landing screen with fleet option highlighted"><br/><br/></p>
 
-5. Click **Save** to save the changes.
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420152455/Kerlink-fleet-devices-landing.png" width="660" height="333" alt="Fleet devices default screen"><br/><br/></p>
 
+Kerlink supports two activation modes (OTAA, ABP). In most cases, you will want to select Over the Air Activation (OTAA). Let’s cover the information needed for both methods.
+
+- [Over the Air Activation (OTAA)](#lora-kerlink-manually-register-device-over-the-air-activation-otaa)
+- [Activation By Personalization (ABP)](#lora-kerlink-manually-register-device-activation-by-personalization-abp)
+
+#### Over the Air Activation (OTAA)
+
+Below you will find notes on the fields seen for OTAA and specific notes as they relate to what needs to be selected in order to work with Cayenne.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420153101/Kerlink-OTAA-activation.png" width="660" height="111" alt="Kerlink OTAA activation options"><br/><br/></p>
+
++ **Dev EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
++ **App EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
+
+    *TIP: If you do not have an Applicate EUI, you can create one yourself. It must be a unique string composed of 16 alphanumeric characters.*
+
++ **App key:** Enter the Appkey. The AppKey is a key specific for the end-device that is assigned by the application owner to the end-device and most likely derived from an application-specific root key exclusively known to and under the control of the application provider.
+
+    *TIP: If you do not have an Applicate key, you can create one yourself. It must be a unique string composed of 32 alphanumeric characters.*
+
++ **Class C:** Select whether or not your device operates in continuous listening mode. If not, leave this option unselected.
+
+    *TIP: Class C is a continuous listening mode making sense for devices that are connected to the electrical network. In this mode the network can at anytime transmit downlink message to the device.*
+	
+After filling in the fields for you device, click on the **Add** button to add the device. Once added, you will see your new device listed in the fleet device.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420154546/Kerlink-device-added.png" width="600" height="333" alt="Kerlink fleet device added"><br/><br/></p>
+
+Once your device has been created, continue by making sure that your device has been [programmed/flashed](#lora-kerlink-programming-the-device).
+
+#### Activation By Personalization (ABP)
+
+Below you will find notes on the fields seen for ABP and specific notes as they relate to what needs to be selected in order to work with Cayenne.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420153100/Kerlink-ABP-activation.png" width="660" height="98" alt="Kerlink ABP activation options"><br/><br/></p>
+
++ **Dev Addr:** When using ABP, you will need to manually enter the hardware address here.
+
+    **NOTE:** Kerlink's ABP fields does not ask you to enter the **Dev EUI** for the device. In order to properly add a device using ABP in Cayenne, an extra step is needed. Be sure to refer to the [Add your device to your Cayenne dashboard](#lora-kerlink-network-add-device-to-cayenne) section in order to make sure that your device is properly added to Cayenne.
+
++ **NwkSKey:** Enter the Network Session Key. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
++ **AppSKey:** Enter the Application Session Key. The AppSKey is an application session key specific for the end-device. It is used by both the network server and the end-device to encrypt and decrypt the payload field of application-specific data messages.
++ **Class C:** Select whether or not your device operates in continuous listening mode. If not, leave this option unselected.
+
+    *TIP: Class C is a continuous listening mode making sense for devices that are connected to the electrical network. In this mode the network can at anytime transmit downlink message to the device.*
+	
+After filling in the fields for you device, click on the **Add** button to add the device. Once added, you will see your new device listed in the fleet device.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420154546/Kerlink-device-added.png" width="600" height="333" alt="Kerlink fleet device added"><br/><br/></p>
+
+Once your device has been created, continue by making sure that your device has been [programmed/flashed](#lora-kerlink-programming-the-device).
 
 ###  Programming the device
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-senet-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-kerlink-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
-
-*TIP: You should see data being reported on the Senet portal's device list for your device. If you do not, double check the values entered for your device and consider programming/flashing the device again.*
-
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412135622/Senet-device-traffic.png" width="600" height="358" alt="Senet dashboard showing traffic from device"><br/><br/></p>
-
 
 ### Add device to Cayenne
 
 Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
 
-From the Cayenne dashboard, click **Add New** > **Device / Widget**.
+From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="200" height="192" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Cayenne Add New menu"><br/><br/></p>
 
-From the list of devices & widgets that appears, click **LoRa** and select the **Senet** Network option to view a list of Senet supported devices.
+From the list of devices & widgets that appears, select the **LoRa** category and then the **Kerlink** Network option to view a list of supported devices.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Senet-menu.png" width="600" height="362" alt="Senet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420160324/Cayenne-Kerlink-network-list.png" width="660" height="413" alt="Cayenne showing supported Kerlink devices"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
 #### Already Registered
 
-Once your device has been previously registered on the Senet network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
+If your device has been previously registered on the Kerlink network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
 
 **Items you will need:**
 
-1.  Which [LoRa technology device](#lora-senet-network-supported-devices) is being added?
-2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-senet-network-manual-register-device) if you need help with manually registering your device on the network.
-3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
-4.  What is your unique Senet account API Key?
+1. Which [LoRa technology device](#lora-kerlink-network-supported-devices) is being added?
+2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-kerlink-network-manually-register-device) if you need help with manually registering your device on a network.
+3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 
-To see how easy it is, let’s walk through an example of connecting an [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox) which was previously registered under a [Senet account](#lora-senet-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under a [the Kerlink network account](#lora-kerlink-network-create-account).
 
-**1\. Choose the Network** <br/>
-Make sure the **Senet** network is selected in the list of Networks.
+**1\. Choose the Network**
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Senet-menu-1.png" width="600" height="362" alt="Senet"><br/><br/></p>
+Make sure the **Kerlink** network is selected in the list of LoRaWAN Networks.
 
-**2\. Select the Device** <br/>
-Select your device from among the list supported Senet devices. In this case, we’ll select the **Multitech mDotBox**.
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420160324/Cayenne-Kerlink-network-list.png" width="660" height="413" alt="Cayenne showing supported Kerlink devices"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-mDotBox-selected.png" width="600" height="362" alt="Senet"><br/><br/></p>
+**2\. Select the Device**
 
-**3\. Enter Settings & Add device** <br/>
+Select your device from among the list supported the Kerlink network devices. In this case, we’ll select the **Adeunis Pulse**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420160445/Cayenne-Kerlink-Pulse-selected.png" width="660" height="413" alt="Kerlink with Pulse device highlight"><br/><br/></p>
+
+**3\. Enter Settings & Add device**
+
 In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
 
-1.  Give the device a name. In our case, we’ll enter “mDotBox” in the **Name** field.
-2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
-3.  Our device has been previously manually registered with Senet. Make sure “Already Registered” is selected in the **Activation Mode** field.
-4.  Enter your unique **Senet Account API Key** for your Senet account. This will allow Cayenne to send downlink commands to your device.
+1. Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
+2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
 
-    *TIP: If you have not generated your API Key it can be found on the Senet Portal under your Account Information.*
-  
-    **Note: Once generated on the Senet Portal, your API key is not shown to you again. Be sure to copy & save off your API key for later reference! Failing to do so may cause you to need to regenerate your key. If you do so, remember that you will need to update the settings for all previously added devices in Cayenne as well.**
-  
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412143938/Senet-Access-Account-Info.png" width="600" height="213" alt="Senet access Account Info"><br/><br/></p>
+    **NOTE: If your device was configured for Activation By Personalization (ABP), you will need to take a special step here -** Cayenne asks for the DevEUI but this information is not currently provided with Kerlink and ABP. To work around this issue, enter in 8 zeros (00000000) followed by the **Dev Addr** used during the ABP step on the gateway. Without performing this step, your ABP device will not work with Cayenne.
 
-    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412150043/Senet-API-Key.png" width="600" height="377" alt="Senet portal showing API key section"><br/><br/></p>    
-5.  Click **Add device**.
+3. Our device has been previously manually registered with the Kerlink network. Make sure “Already Registered” is selected in the **Activation Mode** field.
+4. Click **Add device**.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412144153/myDevices-Senet-updated-Add-Device.png" width="600" height="376" alt="Cayenne Add Device with all Senet fields shown"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123934/Cayenne-Stream-Pulse-device-settings.png" width="660" height="414" alt="Stream Pulse settings"><br/><br/></p>
 
-The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
+The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
+
 
 ### Supported devices
 
-**Senet network devices supported by Cayenne**
+**The Kerlink network devices supported by Cayenne**
 
-Cayenne currently supports the following devices on the Senet network. Support for more devices is constantly ongoing.
+Cayenne currently supports the following devices on the Kerlink network. Support for more devices is constantly ongoing.
 
+*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
 *   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
+*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
+*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
 *   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
 *   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
 *   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
@@ -1196,7 +1223,10 @@ Cayenne currently supports the following devices on the Senet network. Support 
 *   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
 *   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
 *   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
+*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
+*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
 *   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
+*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
 *   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
 
 
@@ -1583,6 +1613,209 @@ Cayenne currently supports the following devices on the OrbiWise network. Suppo
 *   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
 *   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
 *   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
+
+## Senet Network
+
+**About Senet**
+
+Senet, a contributing member of the LoRa® Alliance, is the first and only public provider in North America of low-power wide-area networks (LPWANs) with its class-leading LoRa® modulation for IoT and M2M applications.
+
+**Using Senet with Cayenne**
+
+Cayenne makes it easy to use your LoRa technology device and the Senet network. You will need to:
+
+1. [Create / Log into your account on the Senet portal](#lora-senet-network-create-account)
+2. [Setup gateway device](#lora-senet-network-setup-gateway-device)
+3. [Register your device on the Senet portal](#lora-senet-network-manual-register-device)
+4. [Setup traffic forwarding to Cayenne](#lora-senet-network-setup-device-forwarding-to-cayenne)
+5. [Program/Flash your device](#lora-senet-network-programming-the-device)
+6. [Add your device to your Cayenne dashboard](#lora-senet-network-add-device-to-cayenne)
+
+We will walk you through these steps in the following sections.
+
+
+### Create account
+
+To create your Senet account, visit the <a href="https://portal.senetco.io/" target="_blank">Senet Portal</a>. Click on the **Create New Account** to get started.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412110645/Senet-portal-landing.png" width="600" height="377" alt="Senet portal with create new user highlight"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412110516/Senet-Portal-create-new-user.png" width="600" height="377" alt="Senet create user dialog"><br/><br/></p>
+
+
+### Setup gateway device
+
+In order for your LoRa technology devices to connect to the Senet network, you should purchase and configure a gateway device. When using the Senet network, it is recommended that you use a MultiConnect Conduit gateway device. You can find links to an appropriate version of this device on the <a href="http://multitech.com/brands/multiconnect-conduit" target="_blank">Multitech MultiConnect Conduit page</a>.
+
+**Be sure that your devices are covered by the Senet network, including having an appropriate gateway configured and working if needed, before continuing. Your devices will not be able to properly function without your gateway device in place.**
+
+#### Register new gateway device
+
+If you need to register a new gateway device, the Senet portal has instructions and the software for doing so. To begin this process, log into your Senet account and click on the **Register Devices** button. Select **Gateway** from the dialog that appears to begin the process of adding your gateway device.
+
+**Note:** Currently only the MultiTech Conduit gateway can be registered through the Senet Portal.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111106/Senet-add-device-or-gateway-link.png" width="600" height="376" alt="senet portal with register device button highlight"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111304/Senet-register-device-popup-with-gateway-highlight.png" width="600" height="215" alt="register gateway link highlighted"><br/><br/></p>
+
+The *Register Gateway* dialog that appears will walk you through the process of adding your gateway device. You can refer to Senet's own <a href="http://docs.senetco.io/docs/gw/" target="_blank">gateway documentation</a> if you need help with this step.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111424/Senet-register-gateway-process.png" width="600" height="282" alt="Register gateway information"><br/><br/></p>
+
+### Manual register device
+
+Before you can use your LoRa technology device on the Senet network, it must be registered on the network using the Senet portal. The following information will help guide you through this process.
+
+**Log into the Senet portal**
+
+Start by going to the <a href="https://portal.senetco.io" target="_blank">Senet portal</a> and logging into your account. Once logged in, you can proceed with registering a new device.
+
+**Register new device**
+
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/CrY-wAw58Ts" frameborder="0" allowfullscreen></iframe></p>
+
+To get started with a new device, click on the **Register Devices** button. From the dialog that appears, select the **Device** option.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412111106/Senet-add-device-or-gateway-link.png" width="600" height="376" alt="senet portal with register device button highlight"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412112304/Senet-register-device-popup-with-device-highlight.png" width="600" height="215" alt="Register new device highlight"><br/><br/></p>
+
+From the *Register Device* dialog that appears, enter in the **Device EUI** (or allocate one from here) and a description for the device. Click **Register New Device** to complete registering the device.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412112920/Senet-register-device-dialog.png" width="600" height="291" alt="Register new device dialog"><br/><br/></p>
+
+Your device will now appear in the list of devices shown on your dashboard. You can now setup device forwarding to Cayenne.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412113335/Senet-dashboard-generic.png" width="600" height="376" alt="Senet dashboard showing devices"><br/><br/></p>
+
+
+### Setup device forwarding to Cayenne
+
+<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/k7V0FzuFf-I" frameborder="0" allowfullscreen></iframe></p>
+
+In order for Cayenne to be able to able to receive your device’s information, you will need to setup packet forwarding. To do so, expand the settings for the device and click on the **cogwheel** icon. The *Edit Device* screen appears.
+
+*TIP: Alternatively you can click on the device tile itself and then select the **cogwheel** icon that also appears on the Device screen.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412132623/Senet-access-device-settings.png" width="528" height="310" alt="Accessing device settings"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133201/Senet-Edit-device-dialog.png" width="600" height="426" alt="Edit device dialog"><br/><br/></p>
+
+From the *Edit Device* dialog we can setup the device so that it forwards data to Cayenne. To do so, perform the following:
+
+1. Select the **NOTIFICATION TARGET** tab. This will expose the fields needed for forwarding.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133750/Senet-Edit-device-with-highlight.png" width="600" height="426" alt="Edit device dialog with highlight for Notification target"><br/><br/></p>
+
+2. Open the **Forward To** dropdown and select the **myDevices Cayenne** profile.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133748/Senet-Edit-device-notification-target.png" width="600" height="423" alt="Notification target tab with Forward To highlight"><br/><br/></p>
+
+3. Before data will begin forwarding, be sure that the **Status** slider is set to **Enabled**.
+
+4. Make sure that the **RF Data** checkbox is selected to see signal strength data for your device in Cayenne.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412133747/Senet-Edit-device-notification-target-verify.png" width="600" height="397" alt="Notification target tab with all selections made"><br/><br/></p>
+
+5. Click **Save** to save the changes.
+
+
+###  Programming the device
+
+Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
+
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-senet-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+
+**NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
+
+*TIP: You should see data being reported on the Senet portal's device list for your device. If you do not, double check the values entered for your device and consider programming/flashing the device again.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412135622/Senet-device-traffic.png" width="600" height="358" alt="Senet dashboard showing traffic from device"><br/><br/></p>
+
+
+### Add device to Cayenne
+
+Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+
+From the Cayenne dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="200" height="192" alt="Senet"><br/><br/></p>
+
+From the list of devices & widgets that appears, click **LoRa** and select the **Senet** Network option to view a list of Senet supported devices.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Senet-menu.png" width="600" height="362" alt="Senet"><br/><br/></p>
+
+After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
+
+#### Already Registered
+
+Once your device has been previously registered on the Senet network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
+
+**Items you will need:**
+
+1.  Which [LoRa technology device](#lora-senet-network-supported-devices) is being added?
+2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-senet-network-manual-register-device) if you need help with manually registering your device on the network.
+3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+4.  What is your unique Senet account API Key?
+
+To see how easy it is, let’s walk through an example of connecting an [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox) which was previously registered under a [Senet account](#lora-senet-network-create-account).
+
+**1\. Choose the Network** <br/>
+Make sure the **Senet** network is selected in the list of Networks.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Senet-menu-1.png" width="600" height="362" alt="Senet"><br/><br/></p>
+
+**2\. Select the Device** <br/>
+Select your device from among the list supported Senet devices. In this case, we’ll select the **Multitech mDotBox**.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-mDotBox-selected.png" width="600" height="362" alt="Senet"><br/><br/></p>
+
+**3\. Enter Settings & Add device** <br/>
+In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
+
+1.  Give the device a name. In our case, we’ll enter “mDotBox” in the **Name** field.
+2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
+3.  Our device has been previously manually registered with Senet. Make sure “Already Registered” is selected in the **Activation Mode** field.
+4.  Enter your unique **Senet Account API Key** for your Senet account. This will allow Cayenne to send downlink commands to your device.
+
+    *TIP: If you have not generated your API Key it can be found on the Senet Portal under your Account Information.*
+  
+    **Note: Once generated on the Senet Portal, your API key is not shown to you again. Be sure to copy & save off your API key for later reference! Failing to do so may cause you to need to regenerate your key. If you do so, remember that you will need to update the settings for all previously added devices in Cayenne as well.**
+  
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412143938/Senet-Access-Account-Info.png" width="600" height="213" alt="Senet access Account Info"><br/><br/></p>
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412150043/Senet-API-Key.png" width="600" height="377" alt="Senet portal showing API key section"><br/><br/></p>    
+5.  Click **Add device**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412144153/myDevices-Senet-updated-Add-Device.png" width="600" height="376" alt="Cayenne Add Device with all Senet fields shown"><br/><br/></p>
+
+The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
+
+### Supported devices
+
+**Senet network devices supported by Cayenne**
+
+Cayenne currently supports the following devices on the Senet network. Support for more devices is constantly ongoing.
+
+*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
+*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
+*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
+*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
+*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
+*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
+*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
+*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
+*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
+*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
+*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
+*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
+*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
+*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
+*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
+
 
 ## Stream Network
 
