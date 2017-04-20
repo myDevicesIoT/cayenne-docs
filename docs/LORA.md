@@ -1583,6 +1583,220 @@ Cayenne currently supports the following devices on the OrbiWise network. Suppo
 *   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
 *   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
 
+## Stream Network
+
+**About Stream**
+
+Stream Technologies is the company behind IoT-X, a Connectivity Enablement, Management & Billing platform. 
+
+Designed for all operators of Cellular, Satellite & Low Power Wide Area networks, IoT-X is offered as a Platform as a Service (PaaS) and is fast being adopted by established network operators and new entrants into the M2M/IOT sector.
+
+**Using Stream with Cayenne**
+
+Cayenne makes it easy to use your LoRa device and the Stream network. You will need to:
+
+1. [Create / Log into your account on Stream's IoT-X portal](#lora-stream-network-create-account)
+2. [Setup gateway device](#lora-stream-network-setup-gateway-device)
+3. [Setup traffic forwarding to Cayenne](#lora-stream-network-setup-device-forwarding-to-cayenne)
+4. [Create Application](#lora-stream-network-create-application)
+5. [Register your device on the IoT-X portal](#lora-stream-network-manual-register-device)
+6. [Program/Flash your device](#lora-stream-network-programming-the-device)
+7. [Add your device to your Cayenne dashboard](#lora-stream-network-add-device-to-cayenne)
+
+We will walk you through these steps in the following sections.
+
+
+### Create account
+
+To register and configure your devices to work with Stream, you will need to use <a href="https://stream.iot-x.com/" target="_blank">Stream's IoT-X portal</a>. To get an account with Stream and to use the IoT-X portal, you will need to work directly with Stream. Accounts are not created manually through any sign up process.
+
+*TIP: If you need help logging into your Stream IoT-X account, you can refer to Stream's <a href="http://help.iot-x.com/quickstart" target="_blank">Quick-Start Guide</a> which includes information on logging in and what to do if you need help.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420121317/Stream-login.png" width="660" height="413" alt="iotx login screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420121353/Stream-landing.png" width="660" height="415" alt="iotx landing screen after login"><br/><br/></p>
+
+### Setup gateway device
+
+In order for your LoRa technology devices to connect to the Stream network, you must have purchased and configured a gateway device. The Stream network supports a few different gateway devices. Refer to the **Add a LoRa Gateway** process on the IoT-X portal and to Stream's <a href="http://help.iot-x.com/userguide/lora/lora-user-actions/lora-gateway-user-actions/adding-a-gateway-to-iot-x" target="_blank">Adding a Gateway documentation</a> for more information.
+
+**Be sure that you have an appropriate gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
+
+
+#### Register new gateway device
+
+If you need to register a new gateway device, you can do so from the IoT-X portal. To begin this process, <a href="https://stream.iot-x.com/login" target="_blank">log into your account</a> and expand the **LoRa** side menu. Select the **Gateways** option to open the *LoRa Gateways* screen.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420121549/Stream-LoRa-menu-gateway-highlight.png" width="660" height="421" alt="iotx dashboard with LoRa menu expanded"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420121739/Stream-gateways-screen-highlight.png" width="660" height="299" alt="lora gateways screen"><br/><br/></p>
+
+From the *LoRa Gateways* screen, click on the **Add Gateway** button to begin the process of adding a new gateway. On the *Add a LoRa Gateway* screen that appears, select the gateway device that you are adding and enter in the required information.
+
+*TIP: Stream has in-depth documentation on <a href="http://help.iot-x.com/userguide/lora/lora-user-actions/lora-gateway-user-actions/adding-a-gateway-to-iot-x" target="_blank">registering your gateway</a> available if you should need help with this process.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420121830/Stream-add-lora-gateway.png" width="660" height="310" alt="Add a LoRa Gateway screen"><br/><br/></p>
+
+### Setup traffic forwarding to Cayenne
+
+In order for data from your devices to reach Cayenne, you must configure your devices in the IoT-X portal to forward data to Cayenne. You only need to perform this step once for your account. To perform this step, expand the **Services** menu and select the **Data Routing** option. On the *Device Routing Feeds* screen that appears, click on the **Create** button to create a new device routing feed.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420122011/Stream-Services-menu.png" width="660" height="370" alt="iotx dashboard with Services menu expanded"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420122049/Stream-device-routing-feed.png" width="660" height="356" alt="device routing feed screen"><br/><br/></p>
+
+In the *Add Data Routing Destination* dialog that appears, enter in the following information:
+
+1. Give the feed a **Name** such as "Cayenne".
+2. Expand the **Output Type** dropdown and select the **HTTPS POST** option.
+3. In the **URL** field enter in the uplink URL for the Stream network.
+
+    ```
+    https://lora.mydevices.com/v1/networks/stream/uplink
+    ```
+
+	<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123544/Stream-Cayenne-routing-feed.png" width="660" height="410" alt="device routing feed screen"><br/><br/></p>
+
+4. Click **Add* to complete creation of your routing feed.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420122049/Stream-device-routing-feed.png" width="660" height="356" alt="device routing feed screen"><br/><br/></p>
+
+Your account is now configured to forward data to Cayenne. You can now proceed with creating an application and adding devices.
+
+### Create Application
+
+The IoT-X portal groups devices in what they call **Applications**. Before you can add devices you must have an application.
+
+To create an application, log into the <a href="https://stream.iot-x.com" target="_blank">IoT-X portal</a> and expand the **LoRa** side menu. Select the **Applications** option to open the *LoRa Applications* screen. Click on the **Create an Application** button to begin the process of adding an application.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420121547/Stream-LoRa-menu-application-highlight.png" width="660" height="421" alt="iotx dashboard with LoRa menu expanded"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420122536/Stream-LoRa-Apps-screen-with-highlight.png" width="660" height="304" alt="lora applications screen"><br/><br/></p>
+
+On the *Add a LoRa Application* screen that appears, enter in the required information for creating a new application.
+
+*TIP: Stream has in-depth documentation on <a href="http://help.iot-x.com/userguide/lora/lora-user-actions/lora-application-user-actions/creating-a-lora-application-in-iot-x" target="_blank">creating a LoRa Application</a> available if you should need help with this process.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420122639/Stream-add-new-application.png" width="660" height="301" alt="Add a LoRa Application screen"><br/><br/></p>
+
+Once you have an application that you want to use, you can then add your devices to it.
+
+
+### Manually register device
+
+Before you can use your device on the Stream network, it must be registered on the network. To accomplish this, devices must be added into an **Application** in IoT-X portal. The following information will help guide you through this process.
+
+1. Expand the **LoRa** side menu. Select the **Applications** option to open the *LoRa Applications* screen.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420121547/Stream-LoRa-menu-application-highlight.png" width="660" height="421" alt="iotx dashboard with LoRa menu expanded"><br/><br/></p>
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420122400/Stream-LoRa-Apps-screen.png" width="660" height="304" alt="lora applications screen"><br/><br/></p>
+
+2. Click on the name of the application you want to add the device to. From the screen that appears you can see the details of your application and can add devices.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123003/Stream-LoRa-Apps-highlight-an-app.png" width="660" height="304" alt="list of applications with highlight"><br/><br/></p>
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123216/Stream-demo-app-details.png" width="660" height="360" alt="App details screen shown for demo app"><br/><br/></p>
+
+3. Refer to the **Add a Device** panel. You can enter in all the required details for adding your device directly here. The Stream network supports both **OTAA** and **APB** activation.
+
+    *TIP: If you need help with this part of the process you can refer to Stream's <a href="http://help.iot-x.com/userguide/lora/lora-user-actions/lora-application-user-actions/adding-devices-to-lora-applications" target="_blank">Adding devices to LoRa Applications</a> documentation.*
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123340/Stream-Add-a-Device-panel.png" width="660" height="453" alt="Add a device panel"><br/><br/></p>
+
+4. Click **Add** to complete adding your device.
+	
+###  Programming the device
+
+Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
+
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-stream-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+
+**NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
+
+### Add device to Cayenne
+
+Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+
+From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Cayenne Add New menu"><br/><br/></p>
+
+From the list of devices & widgets that appears, select the **LoRa** category and then the **Stream** Network option to view a list of supported devices.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123748/Cayenne-Stream-network-list.png" width="660" height="415" alt="Cayenne showing supported Stream devices"><br/><br/></p>
+
+After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
+
+#### Already Registered
+
+If your device has been previously registered on the Stream network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
+
+**Items you will need:**
+
+1. Which [LoRa technology device](#lora-stream-network-supported-devices) is being added?
+2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-stream-network-manually-register-device) if you need help with manually registering your device on a network.
+3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+
+To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under a [the Stream network account](#lora-stream-network-create-account).
+
+**1\. Choose the Network**
+
+Make sure **the Stream network** is selected in the list of Networks.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123748/Cayenne-Stream-network-list.png" width="660" height="415" alt="Cayenne showing supported Stream devices"><br/><br/></p>
+
+**2\. Select the Device**
+
+Select your device from among the list supported the Stream network devices. In this case, we’ll select the **Adeunis Pulse**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123843/Cayenne-Stream-Pulse-selected.png" width="660" height="414" alt="Stream with Pulse device highlight"><br/><br/></p>
+
+**3\. Enter Settings & Add device**
+
+In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
+
+1. Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
+2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
+3. Our device has been previously manually registered with the Stream network. Make sure “Already Registered” is selected in the **Activation Mode** field.
+4. Click **Add device**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123934/Cayenne-Stream-Pulse-device-settings.png" width="660" height="414" alt="Stream Pulse settings"><br/><br/></p>
+
+The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
+
+
+### Supported devices
+
+**The Stream network devices supported by Cayenne**
+
+Cayenne currently supports the following devices on the Stream network. Support for more devices is constantly ongoing.
+
+*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
+*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
+*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
+*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
+*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
+*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
+*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
+*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
+*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
+*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
+*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
+*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
+*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
+*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
+*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
+*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
+*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
+*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
+*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
+*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
+*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
+
+
 ## The Things Network
 
 **About The Things Network**
