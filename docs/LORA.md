@@ -1067,7 +1067,7 @@ In the *HTTP transmitter* screen that appears, enter in the following informatio
     https://lora.mydevices.com/v1/networks/kerlink/uplink/
     ```
 
-3. Click **Save* to save the changes.
+3. Click **Save** to save the changes.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420150904/Kerlink-Cayenne-forwarding.png" width="660" height="297" alt="HTTP Transmitter configured for Cayenne"><br/><br/></p>
 
@@ -1096,6 +1096,7 @@ Below you will find notes on the fields seen for OTAA and specific notes as they
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420153101/Kerlink-OTAA-activation.png" width="660" height="111" alt="Kerlink OTAA activation options"><br/><br/></p>
 
 + **Dev EUI:** Enter the DevEUI for your device. This ID should come with the information included with your device, or can be found in the device configuration.
+
 + **App EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
 
     *TIP: If you do not have an Applicate EUI, you can create one yourself. It must be a unique string composed of 16 alphanumeric characters.*
@@ -1108,7 +1109,7 @@ Below you will find notes on the fields seen for OTAA and specific notes as they
 
     *TIP: Class C is a continuous listening mode making sense for devices that are connected to the electrical network. In this mode the network can at anytime transmit downlink message to the device.*
 	
-After filling in the fields for you device, click on the **Add** button to add the device. Once added, you will see your new device listed in the fleet device.
+After filling in the fields for you device, click on the **Add** button to add the device. Once added, you will see your new device listed on the *Fleet* screen.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420154546/Kerlink-device-added.png" width="600" height="333" alt="Kerlink fleet device added"><br/><br/></p>
 
@@ -1125,12 +1126,14 @@ Below you will find notes on the fields seen for ABP and specific notes as they 
     **NOTE:** Kerlink's ABP fields does not ask you to enter the **Dev EUI** for the device. In order to properly add a device using ABP in Cayenne, an extra step is needed. Be sure to refer to the [Add your device to your Cayenne dashboard](#lora-kerlink-network-add-device-to-cayenne) section in order to make sure that your device is properly added to Cayenne.
 
 + **NwkSKey:** Enter the Network Session Key. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
+
 + **AppSKey:** Enter the Application Session Key. The AppSKey is an application session key specific for the end-device. It is used by both the network server and the end-device to encrypt and decrypt the payload field of application-specific data messages.
+
 + **Class C:** Select whether or not your device operates in continuous listening mode. If not, leave this option unselected.
 
     *TIP: Class C is a continuous listening mode making sense for devices that are connected to the electrical network. In this mode the network can at anytime transmit downlink message to the device.*
 	
-After filling in the fields for you device, click on the **Add** button to add the device. Once added, you will see your new device listed in the fleet device.
+After filling in the fields for you device, click on the **Add** button to add the device. Once added, you will see your new device listed on the *Fleet* screen.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420154546/Kerlink-device-added.png" width="600" height="333" alt="Kerlink fleet device added"><br/><br/></p>
 
@@ -1168,7 +1171,7 @@ If your device has been previously registered on the Kerlink network, it can be 
 2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-kerlink-network-manually-register-device) if you need help with manually registering your device on a network.
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 
-To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under a [the Kerlink network account](#lora-kerlink-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was [previously registered](#lora-kerlink-network-manually-register-device) on our Kerlink gateway device.
 
 **1\. Choose the Network**
 
@@ -1180,7 +1183,7 @@ Make sure the **Kerlink** network is selected in the list of LoRaWAN Networks.
 
 Select your device from among the list supported the Kerlink network devices. In this case, we’ll select the **Adeunis Pulse**.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420160445/Cayenne-Kerlink-Pulse-selected.png" width="660" height="413" alt="Kerlink with Pulse device highlight"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170421081221/Cayenne-Kerlink-Pulse-selected2.png" width="660" height="413" alt="Kerlink with Pulse device highlight"><br/><br/></p>
 
 **3\. Enter Settings & Add device**
 
@@ -1189,7 +1192,9 @@ In order to add the device, Cayenne needs to know some information about the dev
 1. Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
 2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
 
-    **NOTE: If your device was configured for Activation By Personalization (ABP), you will need to take a special step here -** Cayenne asks for the DevEUI but this information is not currently provided with Kerlink and ABP. To work around this issue, enter in 8 zeros (00000000) followed by the **Dev Addr** used during the ABP step on the gateway. Without performing this step, your ABP device will not work with Cayenne.
+    **NOTE: If your device was configured for Activation By Personalization (ABP), you will need to take a special step here -** Cayenne asks for the DevEUI but this information is not currently provided with Kerlink and ABP. To work around this issue, enter in 8 zeros (00000000) followed by the **Dev Addr** used during the [register device with ABP step](#lora-kerlink-network-manually-register-device-activation-by-personalization-abp) on the gateway. Without performing this step, your ABP device will not work with Cayenne. This step is not necessary when using OTAA.
+    
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170421081852/Cayenne-Kerlink-Pulse-device-settings-ABP-highlight2.png" width="362" height="423" alt="Preceed Dev Addr with 8 zeros in Cayenne"><br/><br/></p>
 
 3. Our device has been previously manually registered with the Kerlink network. Make sure “Already Registered” is selected in the **Activation Mode** field.
 4. Click **Add device**.
