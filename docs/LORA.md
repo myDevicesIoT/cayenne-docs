@@ -1107,7 +1107,7 @@ Below you will find notes on the fields seen for OTAA and specific notes as they
 
 + **Class C:** Select whether or not your device operates in continuous listening mode. If not, leave this option unselected.
 
-    *TIP: Class C is a continuous listening mode making sense for devices that are connected to the electrical network. In this mode the network can at anytime transmit downlink message to the device.*
+    *TIP: Class C is a continuous listening mode making sense for devices that are connected to the electrical network. In this mode the network can at anytime transmit downlink message to the device. An example of such a device is the [NKE Watteco SmartPlug](#supported-hardware-lora-technology-devices-nke-watteco-nke-watteco-smart-plug).*
 	
 After filling in the fields for you device, click on the **Add** button to add the device. Once added, you will see your new device listed on the *Fleet* screen.
 
@@ -1131,7 +1131,7 @@ Below you will find notes on the fields seen for ABP and specific notes as they 
 
 + **Class C:** Select whether or not your device operates in continuous listening mode. If not, leave this option unselected.
 
-    *TIP: Class C is a continuous listening mode making sense for devices that are connected to the electrical network. In this mode the network can at anytime transmit downlink message to the device.*
+    *TIP: Class C is a continuous listening mode making sense for devices that are connected to the electrical network. In this mode the network can at anytime transmit downlink message to the device. An example of such a device is the [NKE Watteco SmartPlug](#supported-hardware-lora-technology-devices-nke-watteco-nke-watteco-smart-plug).*
 	
 After filling in the fields for you device, click on the **Add** button to add the device. Once added, you will see your new device listed on the *Fleet* screen.
 
