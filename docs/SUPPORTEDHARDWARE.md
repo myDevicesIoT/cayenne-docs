@@ -123,13 +123,13 @@ You can use the following information to help you identify and connect your Ardu
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615143609/ArduinoEthernetShield_R3_Front.jpg" class="noborder" width="346" height="245" alt="Ethernet Shield W5100"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5100/EthernetShieldW5100.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoEthernetShield" target="_blank">Arduino Ethernet Shield W5100</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/EthernetShieldW5100/EthernetShieldW5100.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoEthernetShield" target="_blank">Arduino Ethernet Shield W5100</a>.
 
 <br/> 
 
 **ManualConnection**
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/ManualConnection/ManualConnection.ino" target="_blank">sketch file</a> if manually connecting to the Arduino Ethernet Shield to the internet. You’ll need to specify the MAC address, IP, and gateway in the sketch file, as well as select the type of Ethernet Shield you are using.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/ManualConnection/ManualConnection.ino" target="_blank">sketch file</a> if manually connecting to the Arduino Ethernet Shield to the internet. You’ll need to specify the MAC address, IP, and gateway in the sketch file, as well as select the type of Ethernet Shield you are using.
 
 <br/> 
 
@@ -137,7 +137,7 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/m
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615143613/ethernet-shield-for-arduino-w5200.jpg" class="noborder" width="346" height="246" alt="Ethernet Shield W5200"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5200/EthernetShieldW5200.ino" target="_blank">sketch file</a> if using the <a href="http://www.dfrobot.com/index.php?route=product/product&product_id=1028#.V2GAB_krKhc" target="_blank">Arduino Ethernet Shield W5200</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/EthernetShieldW5200/EthernetShieldW5200.ino" target="_blank">sketch file</a> if using the <a href="http://www.dfrobot.com/index.php?route=product/product&product_id=1028#.V2GAB_krKhc" target="_blank">Arduino Ethernet Shield W5200</a>.
 
 *Remember to download and install the W5200 library to your Ardiuno IDE. Then, add it to your sketch file.*
 
@@ -147,7 +147,7 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/m
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615154542/W5500.jpg" width="346" height="276" class="noborder" alt="Ethernet Shield W5500"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/EthernetShieldW5500/EthernetShieldW5500.ino" target="_blank">sketch file</a> if using the <a href="http://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0" target="_blank">Arduino Ethernet Shield W5500</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/EthernetShieldW5500/EthernetShieldW5500.ino" target="_blank">sketch file</a> if using the <a href="http://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0" target="_blank">Arduino Ethernet Shield W5500</a>.
 
 
 *Remember to download and install the W5500 library to your Arduino IDE. Then, add it to your sketch file.*
@@ -164,7 +164,7 @@ Please also make sure the correct Ethernet2 library is downloaded to your Arduin
 
 **SerialUSBconnection**
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/SerialUSBConnection/SerialUSBConnection.ino" target="_blank">sketch file</a> if getting internet connection from the serial USB port on your computer. You can read more about this <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Connections/ArduinoSerialUSB" target="_blank">here</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/SerialUSBConnection/SerialUSBConnection.ino" target="_blank">sketch file</a> if getting internet connection from the serial USB port on your computer. You can read more about this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/tree/master/examples/InternetConnections/SerialUSBConnection" target="_blank">here</a>.
 
 <br/> 
 
@@ -172,7 +172,7 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/m
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615143603/Arduino_WiFi_Shield.jpg" width="346" height="244" class="noborder" alt="WiFiShield"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/WiFiShield/WiFiShield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/WiFiShield/WiFiShield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield</a>.
 
 <br/> 
 
@@ -180,7 +180,7 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/m
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160615154328/Arduino_WiFi_101_Shield.jpg" width="346" height="291" class="noborder" alt="WiFi101Shield"></p>
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/WiFi101Shield/WiFi101Shield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield 101</a>.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/WiFi101Shield/WiFi101Shield.ino" target="_blank">sketch file</a> if using the <a href="https://www.arduino.cc/en/Main/ArduinoWiFiShield" target="_blank">Arduino WiFi Shield 101</a>.
 
 *Remember to download and install the WiFi101 library to your Arduino IDE. Then, add it to your sketch file.*
 
@@ -188,7 +188,7 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/m
 
 **ArduinoYun**
 
-Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Connections/ArduinoYun/ArduinoYun.ino" target="_blank">sketch file</a> when using the <a href="https://www.arduino.cc/en/Main/ArduinoBoardYun" target="_blank">Arduino Yun</a> connected to an ethernet cable.
+Use this <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/ArduinoYun/ArduinoYun.ino" target="_blank">sketch file</a> when using the <a href="https://www.arduino.cc/en/Main/ArduinoBoardYun" target="_blank">Arduino Yun</a> connected to an ethernet cable.
 
 Want to use the Arduino Yun on-board WiFi? Check out <a href="https://www.arduino.cc/en/Guide/ArduinoYun#toc14" target="_blank">this tutorial</a> on the Arduino website.
 
@@ -215,6 +215,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 
 **Links:** <br/>
@@ -237,6 +238,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -257,6 +260,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -279,6 +283,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -303,6 +308,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -321,6 +328,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -340,6 +349,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -361,6 +372,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -383,6 +395,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -406,6 +420,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -431,6 +447,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -458,6 +476,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Sensors included:**
 
@@ -475,6 +495,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -498,6 +520,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -526,6 +550,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -550,6 +576,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -571,6 +598,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -592,6 +620,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -617,6 +646,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 *   [Actility](#lora-actility)
 *   [Senet](#lora-senet-network)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -638,6 +669,7 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
@@ -662,6 +694,8 @@ Additional guidance on finding providers of sensors and other devices can be fou
 
 *   [Actility](#lora-actility)
 *   [Loriot](#lora-loriot-network)
+*   [OrbiWise](#lora-orbiwise-network)
+*   [The Things Network](#lora-the-things-network)
 
 **Links:**
 
