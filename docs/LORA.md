@@ -944,7 +944,10 @@ In order to add the device, Cayenne needs to know some information about the dev
 1.  Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
 3.  Our device has been previously manually registered with Actility. Select “Already Registered” in the **Activation Mode** field.
-4.  From the **ThingPark Server** field, be sure to select the correct server that you are using.
+4.  From the **ThingPark Server** field, be sure to select the correct environment that you are using.
+
+    *TIP: If you don't find your ThingPark environment in the dropdown, please ask Actility for your **ThingPark DX Profile**, and manually enter it. It should be suffixed with `-api` such as `mycompany-api`.*
+
 5.  Enter your **ThingPark Email** and **ThingPark Password** into the corresponding fields.
 6.  Click **Add device**.
 
