@@ -20,7 +20,7 @@ In order to use the Cayenne API, you will need to first create a Cayenne account
 
 Before you can use the Cayenne API you will need to obtain your **Cayenne API Key**. This key will be unique at the **Account** level and you will obtain a different key for each **Application** that you create. In order for your custom application to successfully connect with Cayenne you will need to specify the API Key for that app when using the various Cayenne API function calls.
 
-To obtain this key, log into your account and go to X. Every application that you create in Cayenne will have its own unique API Key... **[TODO: need this info / UI to be added here]**
+To obtain this key, log into your account and go to X. Every application that you create in Cayenne will have its own unique API Key... **[TODO: need this info / UI to be added here - UX does not yet exist for documentation.]**
 
 ### Start using the API
 
@@ -53,6 +53,8 @@ Using the Cayenne iOS SDK to utilize the Cayenne API in your iOS app.
 
 When implementing your custom application you may wish to use the raw Cayenne API calls directly. In this section we will discuss the API function calls and walk you through some of the most common examples to help get you started.
 
+*TIP: If you already know how to use the Cayenne API, you may wish to jump directly to the full list of [available Cayenne API functions](#cayenne-api-using-the-cayenne-api-api-reference).*
+
 **TODO: [Sounds like there are several versions or sub-APIs here (things like Devices, Accounts, etc) so we should update our blurb here to spell out this info to the user.] E.g.**
 
 The Cayenne API consists of two parts:
@@ -68,8 +70,7 @@ The Cayenne API consists of two parts:
     - Setup Scheduling Jobs
     - Device Provisioning
 
-*TIP: If you already know how to use the Cayenne API, you may wish to jump directly to the full list of [available Cayenne API functions](#cayenne-api-using-the-cayenne-api-api-reference).*
-
+**TODO - NOTE:**
 Below items are common tasks user would perform to use the API. I suggest we show them how to Initialize / setup for use and then walk through common tasks. Ideally, we’d show the same set of tasks for the public API and the mobile SDK examples. Feel free to suggest different examples. Within each we would very briefly mention whatever they need to know to accomplish the task and/or include code to accomplish the task. The example can refer to more info found in the Public API reference section if you want to just put more detail in that section instead.
 
 ### Initializing the API
@@ -115,7 +116,7 @@ E.g. Cover sending a command to the actuator.
 
 ### API Reference
 
-**TODO**
+**TODO - NOTE:**
 Here we would put in the full API reference. In the previous sections we covered some of the common examples, but here we would put in all of the calls, their expected parameters and whatever else you want the user to know for what is available publicly. I put them here grouped under their respective sub-APIs but it doesn’t have to be that way if you think it’s better another way.
 
 #### Device HTTP API
@@ -135,7 +136,7 @@ The Cayenne iOS SDK is the easiest way to connect your custom iOS app to Cayenne
 
 *TIP: The walk through present here will only cover some of the common tasks and thus will not cover every function available in the mobile app SDK. You may also wish to refer to the [Cayenne iOS SDK reference documentation](#cayenne-api-using-the-cayenne-ios-sdk-sdk-reference) for additional reference on available functionality found in the SDK.*
 
-**TODO**
+**TODO - NOTE:**
 As with Public API section, below items are common tasks user would perform to use the SDK. I suggest we show them how to Initialize / setup SDK and IDE for use and then walk through common tasks. Ideally, we’d show the same set of tasks for the public API and the mobile SDK examples. Feel free to suggest different examples. Within each we would very briefly mention whatever they need to know to accomplish the task and include code to accomplish the task. The mobile examples can also refer back to the Public API reference section and the (external?) iOS SDK docs if desired.
 
 ### Configure Xcode IDE
