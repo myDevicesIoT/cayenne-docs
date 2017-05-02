@@ -58,15 +58,15 @@ When implementing your custom application you may wish to use the raw Cayenne AP
 The Cayenne API consists of two parts:
 
 - **Device HTTP API**
- - Send data to Cayenne
- - Receive data from Cayenne
+    - Send data to Cayenne
+    - Receive data from Cayenne
 
 - **Platform HTTP Restful API**
- - Manage Users
- - Manage Devices
- - Setup Rules
- - Setup Scheduling Jobs
- - Device Provisioning
+    - Manage Users
+    - Manage Devices
+    - Setup Rules
+    - Setup Scheduling Jobs
+    - Device Provisioning
 
 *TIP: If you already know how to use the Cayenne API, you may wish to jump directly to the full list of [available Cayenne API functions](#cayenne-api-using-the-cayenne-api-api-reference).*
 
