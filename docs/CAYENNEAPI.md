@@ -42,8 +42,8 @@ We have prepared walkthroughs and SDKs for common mobile platforms and toolchain
 
 Using the Cayenne iOS SDK to utilize the Cayenne API in your iOS app.
 
-Refer to the README located in the [Cayenne iOS SDK Github]() **TODO: link** for information on using and obtaining iOS SDK.
-Documentation - Walks you through setting up the Xcode IDE to work with the Cayenne iOS SDK and covers several common examples to help get you started using the Cayenne API in your iOS app.
+- Refer to the README located in the [Cayenne iOS SDK Github]() **TODO: Need this public link to fill in.** for information on using and obtaining iOS SDK.
+- [Documentation](#cayenne-api-using-the-cayenne-ios-sdk) - Walks you through setting up the Xcode IDE to work with the Cayenne iOS SDK and covers several common examples to help get you started using the Cayenne API in your iOS app.
 
 **Cayenne-SDK-Android**
 
