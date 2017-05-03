@@ -2,9 +2,12 @@
 
 ## Overview
 
-**TODO:** Brief introduction to what it is, what it allows you to do. E.g. Cayenne API is a RESTful API that allows you to connect your custom app to Cayenne. [Need help with this blurb. WHat else should we say?]
+**TODO:**
+```
+We need to add a brief introduction to what the Cayenne API is and what it allows the user to do. This should be a brief general overview and we can save any topics related to Mobile SDK or HTTP API details to dedicated sections below that also include Overview sections there.
 
-Example overview section content from existing docs: [BYOT (MQTT) Overview](#bring-your-own-thing-api-overview), [Cayenne LPP Overview](#lora-cayenne-low-power-payload-overview)
+Will need Dev to provide this (or jump on a call with me to talk through) and I can help word-smith from there.
+```
 
 ## Preparing to use the API
 
@@ -20,17 +23,22 @@ In order to use the Cayenne API, you will need to first create a Cayenne account
 
 Before you can use the Cayenne API you will need to obtain your **Cayenne API Key**. This key will be unique at the **Account** level and you will obtain a different key for each **Application** that you create. In order for your custom application to successfully connect with Cayenne you will need to specify the API Key for that app when using the various Cayenne API function calls.
 
-To obtain this key, log into your account and go to X. Every application that you create in Cayenne will have its own unique API Key... **[TODO: need this info / UI to be added here - UX does not yet exist for documentation.]**
+*TIP: For more information how this key is used, see the [Authentication section](#cayenne-api-using-the-cayenne-http-api-authentication) of the HTTP API documentation.*
+
+To obtain this key, log into your account and go to X. Every application that you create in Cayenne will have its own unique API Key... **TODO:**
+```
+[As soon as this UX exists, I can fill this section in by taking screens and telling the user how to go about this.]
+```
 
 ### Start using the API
 
 The Cayenne API is straightforward and easy to use, offering several different ways of connecting your custom application to Cayenne.
 
-#### Option 1: Use raw API calls
+#### Option 1: Use raw HTTP API calls
 
 If you are integrating Cayenne into your existing or custom program, you may wish to simply use the raw API calls for interacting with Cayenne.
 
-In the [Using the Cayenne API section](#cayenne-api-using-the-cayenne-api) you will find a reference for the APIs available and several examples of the most common tasks to help get you started with the API.
+In the [Using the Cayenne HTTP API section](#cayenne-api-using-the-cayenne-http-api) you will find a reference for the APIs available and several examples of the most common tasks to help get you started with the API.
 
 #### Option 2: Use a Mobile App SDK
 
@@ -49,86 +57,91 @@ Using the Cayenne iOS SDK to utilize the Cayenne API in your iOS app.
 
 *Coming Soon!* Use the Cayenne Android SDK to utilize the Cayenne API in your Android app.
 
-## Using the Cayenne API
+## Using the Cayenne HTTP API
 
-When implementing your custom application you may wish to use the raw Cayenne API calls directly. In this section we will discuss the API function calls and walk you through some of the most common examples to help get you started.
+**TODO:**
+```
+Here we would briefly mention the steps to use, starting with Authentication. This is just an overview of the process, we should leave any examples or in-depth information to subsequent sections that cover them in more detail. For example, we jump right into Authentication in the first section covered.
 
-*TIP: If you already know how to use the Cayenne API, you may wish to jump directly to the full list of [available Cayenne API functions](#cayenne-api-using-the-cayenne-api-api-reference).*
+Will need Dev to provide this (or jump on a call with me to talk through) and I can help word-smith as needed.
+```
 
-**TODO: [Sounds like there are several versions or sub-APIs here (things like Devices, Accounts, etc) so we should update our blurb here to spell out this info to the user.] E.g.**
+When implementing your custom application you may wish to use the raw Cayenne HTTP API calls directly. In this section we will discuss the HTTP API function calls and walk you through some of the most common examples to help get you started.
 
-The Cayenne API consists of two parts:
+*TIP: If you already know how to use the Cayenne HTTP API, you may wish to jump directly to the full list of [available HTTP API functions](#cayenne-api-using-the-cayenne-http-api-api-reference).*
 
-- **Device HTTP API**
-    - Send data to Cayenne
-    - Receive data from Cayenne
+### Authentication
 
-- **Platform HTTP Restful API**
-    - Manage Users
-    - Manage Devices
-    - Setup Rules
-    - Setup Scheduling Jobs
-    - Device Provisioning
+**TODO**
+```
+Discuss about Authentication and related items that need to be done in the HTTP API versus the mobile app SDKs.
 
-**TODO - NOTE:**
-Below items are common tasks user would perform to use the API. I suggest we show them how to Initialize / setup for use and then walk through common tasks. Ideally, we’d show the same set of tasks for the public API and the mobile SDK examples. Feel free to suggest different examples. Within each we would very briefly mention whatever they need to know to accomplish the task and/or include code to accomplish the task. The example can refer to more info found in the Public API reference section if you want to just put more detail in that section instead.
+Ideally, this section would start a running story of a walk through showing an end to end example of a user getting started to use the API, getting everything they need to use it, and then following through with using it on the most common examples we can come up with. We can leave the other topics to the dedicated API Reference section at the end that just lists out functions/parameters/etc.
+
+Will need Dev to provide this and I can help word-smith as desired.
+```
+
+### Device Provisioning
+
+**TODO**
+```
+This section continue our story example by explaining to the user how to provison a device. How to create a device, how do you get device credentials, etc.
+
+Will need Dev to provide this and I can help word-smith as desired.
+```
 
 ### Initializing the API
 
 **TODO**
-E.g. Setup stuff for using the API in all subsequent examples?
-Include example code section that can be shown to user.
+```
+Just a potential example of what we could do next in our story? Here we would initialize the API and set things up for all the other examples that follow which make use of the API.
+
+Will need Dev to provide this and I can help word-smith as desired.
+```
 
 ### Log in to account
 
 **TODO**
-E.g. Cover what calls to make to successfully log in to an existing account using the API.
-Include example code section that can be shown to user.
+```
+E.g. Continue our story by covering what calls to make to successfully log in to an existing account using the API?
 
-### Send sensor data
+Will need Dev to provide this and I can help word-smith as desired.
+```
 
-#### Add sensor
-
-**TODO**
-E.g. Cover adding a sample sensor (such as TMP36) to an account.
-
-#### Retrieve sensor data
+### Example 1 of using API
 
 **TODO**
-E.g. Cover retrieving sensor data from our newly added sensor.
+```
+E.g. Continue our story by starting to put the HTTP API into use by covering a common task. Not sure what this should be - this can be dictate by Dev team. Whataver you think it makes the most sense to cover.
 
-#### Publish sensor data
+Will need Dev to provide all these examples.
+```
 
-**TODO**
-E.g. Cover sending sensor data to Cayenne.
-
-### Control a Light actuator
-
-#### Add actuator
+### Example 2 of using API
 
 **TODO**
-E.g. Cover adding a Button widget to control a Light switch.
+```
+Continue our story by discussing another example of using the API.
+```
 
-#### Change actuator state
+### Last Example of using API
 
 **TODO**
-E.g. Cover sending a command to the actuator.
+```
+Last story discussing an example of using the API. We can have as many examples as you want, but I would limit it to just the major ones. Leave the API Reference to cover the rest.
+```
 
 ### API Reference
 
-**TODO - NOTE:**
-Here we would put in the full API reference. In the previous sections we covered some of the common examples, but here we would put in all of the calls, their expected parameters and whatever else you want the user to know for what is available publicly. I put them here grouped under their respective sub-APIs but it doesn’t have to be that way if you think it’s better another way.
+**TODO:**
 
-#### Device HTTP API
+```
+Here we would put in the full API reference. In the previous sections we covered some of the common examples, but here we would put in all of the calls, their expected parameters and whatever else you want the user to know for what is available publicly. The focus wouldn't be on examples for this section, but more of a dump of the technical details of each call.
 
-**TODO**
-Functions, examples and info you want the user to know for each API call available in the Device HTTP API.
+For example, this could be the content from the Google doc Dev created on the Cayenne API.
 
-#### Platform HTTP API
-
-**TODO**
-Functions, examples and info you want the user to know for each API call available in the Platform HTTP API.
-
+Dev would need to provide this, we will simply put in the info here. Similar to the BYOT docs we did, this reference section would just be imported (formatted as markdown ideally).
+```
 
 ## Using the Cayenne iOS SDK
 
@@ -136,63 +149,75 @@ The Cayenne iOS SDK is the easiest way to connect your custom iOS app to Cayenne
 
 *TIP: The walk through present here will only cover some of the common tasks and thus will not cover every function available in the mobile app SDK. You may also wish to refer to the [Cayenne iOS SDK reference documentation](#cayenne-api-using-the-cayenne-ios-sdk-sdk-reference) for additional reference on available functionality found in the SDK.*
 
-**TODO - NOTE:**
-As with Public API section, below items are common tasks user would perform to use the SDK. I suggest we show them how to Initialize / setup SDK and IDE for use and then walk through common tasks. Ideally, we’d show the same set of tasks for the public API and the mobile SDK examples. Feel free to suggest different examples. Within each we would very briefly mention whatever they need to know to accomplish the task and include code to accomplish the task. The mobile examples can also refer back to the Public API reference section and the (external?) iOS SDK docs if desired.
+**TODO:**
+
+```
+In this section we cover using the iOS SDK.
+
+I suggest we follow essentially the same layout as the HTTP API section, which I've duplicated below. The only difference will be that Tim indicated we need to help the user configure the Xcode IDE. Otherwise, I suggest we show similar examples as shown in the HTTP API section on how to use the API - albiet with the example code shown being the iOS SDK code. We then wrap it up with a link to the iOS SDK reference (which it sounds like from Tim could be hosted externally on github).
+```
 
 ### Configure Xcode IDE
 
 **TODO**
-E.g. How does the user configure the Xcode IDE to work with the SDK?
+```
+We being our story example by helping hte user configure the Xcode IDE to work with the SDK.
+
+Will need Tim to provide this. I can help word-smith with him on call if needed.
+```
 
 ### Initializing the SDK
 
 **TODO**
-E.g. Setup stuff for using the SDK in all subsequent examples?
-Include example code section that can be shown to user.
+```
+Continue our iOS story with same example of Initializing the SDK, but this time the code shown will be related to iOS/Xcode.
+
+Will need Tim to provide this.
+```
 
 ### Log in to account
 
 **TODO**
-E.g. Cover what calls to make to successfully log in to an existing account using the SDK.
-Include example code section that can be shown to user.
+```
+Continue our iOS story with same example of Logging into account, but this time the code shown will be related to iOS/Xcode.
 
-### Send sensor data
+Will need Tim to provide this.
+```
 
-#### Add sensor
-
-**TODO**
-E.g. Cover adding a sample sensor (such as TMP36) to an account.
-
-#### Retrieve sensor data
+### Example 1 of using API
 
 **TODO**
-E.g. Cover retrieving sensor data from our newly added sensor.
+```
+E.g. Maybe cover the same examples used in the HTTP API section, but of course this time showing code covering Xcode/iOS.
 
-#### Publish sensor data
+Will need Tim to provide content for all these examples.
+```
 
-**TODO**
-E.g. Cover sending sensor data to Cayenne. Is this common for mobile app SDK? If not, skip it since we’ll publish data below when we cover Actuators.
-
-### Control a Light actuator
-
-#### Add actuator
+### Example 2 of using API
 
 **TODO**
-E.g. Cover adding a Button widget to control a Light switch.
+```
+Continue our story by discussing another example of using the API and Xcode/iOS.
+```
 
-#### Change actuator state
+### Last Example of using API
 
 **TODO**
-E.g. Cover sending a command to the actuator.
+```
+Last story discussing an example of using the API and Xcode/iOS.
+```
 
 ### SDK Reference
 
 **TODO**
-Here I’m just linking to external iOS reference since the code is fully documented and this will be hosted externally.
+
+```
+Here I’m just linking to external iOS reference since it seems like the iOS code is fully documented and this will be hosted externally? If so, I'd recommend just leaving general information here and a link to the GitHub repositories for the remainder. I've put in a generic blurb and link back to the HTTP API, which the user can also reference. This is probably enough detail for the final version, unless we want to mention something specific in the iOS API Reference section (or if it isn't hosted externally as I currently think it might be).
+```
 
 The Cayenne iOS SDK contains code documentation for each function. You can refer to the documentation included with the SDK. For ease of reference, you can find find a hosted version of this [documentation on our github](TODO: link to external source).
 
-As the Cayenne mobile app SDKs are wrappers around the Cayenne API, you may also wish to refer to the raw [Cayenne API documentation](#cayenne-api-using-the-cayenne-api), and in particular to the [API reference section](#cayenne-api-using-the-cayenne-api-api-reference) which covers each function available in the API.
+As the Cayenne mobile app SDKs are wrappers around the Cayenne API, you may also wish to refer to the raw [Cayenne API documentation](#cayenne-api-using-the-cayenne-api), and in particular to the [API reference section](#cayenne-api-using-the-cayenne-http-api-api-reference) which covers each function available in the API.
 
 ## Using the Cayenne Android SDK
 
