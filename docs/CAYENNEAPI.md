@@ -15,6 +15,12 @@ and I can help word-smith from there.
 
 ## Preparing to use the API
 
+```
+This section covers how to prepare to using the API. It contains generic info on creating the account, obtaining the key and then some jumping off point for how to read the rest of the documentation (based on whether the user proceeds with using the HTTP API or perhaps one of our mobile app SDKs.
+
+Brent to do this section, with input as needed from Devs.
+```
+
 ### Create a Cayenne account
 
 In order to use the Cayenne API, you will need to first create a Cayenne account. Visit the <a href="http://www.cayenne-mydevices.com/" target="_blank">Cayenne website</a> and create an account.
@@ -62,209 +68,438 @@ Using the Cayenne iOS SDK to utilize the Cayenne API in your iOS app.
 
 *Coming Soon!* Use the Cayenne Android SDK to utilize the Cayenne API in your Android app.
 
-## Using the Cayenne HTTP API
 
-**TODO:**
-```
-Here we would briefly mention the steps to use, starting with Authentication. 
-This is just an overview of the process, we should leave any examples or in-depth 
-information to subsequent sections that cover them in more detail. For example, we 
-jump right into Authentication in the first section covered.
-
-Will need Dev to provide this (or jump on a call with me to talk through) 
-and I can help word-smith as needed.
-```
-
-When implementing your custom application you may wish to use the raw Cayenne HTTP API calls directly. In this section we will discuss the HTTP API function calls and walk you through some of the most common examples to help get you started.
-
-*TIP: If you already know how to use the Cayenne HTTP API, you may wish to jump directly to the full list of [available HTTP API functions](#cayenne-api-using-the-cayenne-http-api-api-reference).*
-
-### Authentication
-
-**TODO**
-```
-Discuss about Authentication and related items that need to be done 
-in the HTTP API versus the mobile app SDKs.
-
-Ideally, this section would start a running story of a walk through showing 
-an end to end example of a user getting started to use the API, getting everything 
-they need to use it, and then following through with using it on the most common 
-examples we can come up with. We can leave the other topics to the dedicated API 
-Reference section at the end that just lists out functions/parameters/etc.
-
-Will need Dev to provide this and I can help word-smith as desired.
-```
-
-### Device Provisioning
-
-**TODO**
-```
-This section continue our story example by explaining to the user how to 
-provison a device. How to create a device, how do you get device credentials, etc.
-
-Will need Dev to provide this and I can help word-smith as desired.
-```
-
-### Initializing the API
-
-**TODO**
-```
-Just a potential example of what we could do next in our story? Here we 
-would initialize the API and set things up for all the other examples 
-that follow which make use of the API.
-
-Will need Dev to provide this and I can help word-smith as desired.
-```
-
-### Log in to account
-
-**TODO**
-```
-E.g. Continue our story by covering what calls to make to successfully log 
-in to an existing account using the API?
-
-Will need Dev to provide this and I can help word-smith as desired.
-```
-
-### Example 1 of using API
-
-**TODO**
-```
-E.g. Continue our story by starting to put the HTTP API into use by covering a 
-common task. Not sure what this should be - this can be dictate by Dev team. 
-Whataver you think it makes the most sense to cover.
-
-Will need Dev to provide all these examples.
-```
-
-### Example 2 of using API
-
-**TODO**
-```
-Continue our story by discussing another example of using the API.
-```
-
-### Last Example of using API
-
-**TODO**
-```
-Last story discussing an example of using the API. We can have as many 
-examples as you want, but I would limit it to just the major ones. 
-Leave the API Reference to cover the rest.
-```
-
-### API Reference
-
-**TODO:**
+## Cayenne API Reference
 
 ```
-Here we would put in the full API reference. In the previous sections we 
-covered some of the common examples, but here we would put in all of the 
-calls, their expected parameters and whatever else you want the user to 
-know for what is available publicly. The focus wouldn't be on examples for 
-this section, but more of a dump of the technical details of each call.
+This section will cover the API function calls available. In here you will find sections for the HTTP API, and each of the mobile app SDKs.
+```
+### HTTP API Reference
 
-For example, this could be the content from the Google doc Dev created 
-on the Cayenne API.
+```
+This section will cover the API function calls specifically for the HTTP API. I suggest we cover the following:
 
-Dev would need to provide this, we will simply put in the info here. 
-Similar to the BYOT docs we did, this reference section would just be 
-imported (formatted as markdown ideally).
+0. Any Overview info on the HTTP API and how it is arranged that the user needs to know.
+1. If the user needs to do any prep work to use specifically the HTTP API, cover it first. Examples here might be Authentication and Initalization?
+2. List every functon call that we have in the Public API.
+  A. Requirement: Group calls by "feature". E.g. Company, Location, Contacts, Gateways, Devices (Sensors, Actuators), Sensor Map, Reports, Automation, etc.
+  B. List functions available, parameters and an example for each.
+  C. Note that these will be referenced in the next major section, where we talk the user through each concept using the Monitor & Control solution as an example.
+  
+Note: I put in the list of groups & function calls that Spring already has in their API documentation. This seemed like a good base and it already kind of has the organization that Product wants to see it in. http://restaurant-springteam.mydevices.com:8082/documentation
+
+Dev to complete this section and all documentation located here, using the layout provided here as a base.
 ```
 
-## Using the Cayenne iOS SDK
+#### Preparing to use the API
+
+##### Authenticating
+##### Initialization
+
+#### Companies
+##### Add a company
+##### Remove a company
+##### Edit/Update a company
+##### Get company
+##### Get contacts for company
+##### Add a contact
+##### Update a contact for company
+##### Delete a contact for company
+##### Add a contact with location
+##### Delete a contact from location
+##### Add a location
+##### Get locations for company
+##### Update locations for company
+##### Get specified location
+##### Delete location for company
+##### Get contacts for location
+##### Add Gateway to location
+##### Get things added to location
+##### Add sensor to location
+##### Get sensor data history
+
+#### Locations
+##### Link contact with Location
+##### Get gateways
+
+#### Things
+##### Add sensor to location
+##### Delete a sensor
+##### Get sensor settings
+##### Edit sensor settings
+
+#### Users
+##### Log in to the system
+##### Forgot password
+##### Reset password
+##### Get Companies for user
+
+### iOS SDK Reference
+
+```
+This section would describe how to access the iOS SDK, how to prepare it for use and how to reference it's specific documentation.
+
+I have added some basic info for now and this can evolved as needed.
+```
 
 The Cayenne iOS SDK is the easiest way to connect your custom iOS app to Cayenne using the Cayenne API. In this section we will walk you through configuring the **Xcode** IDE to utilize the Cayenne API. We will then walk through several examples of common tasks using the API.
 
 *TIP: The walk through present here will only cover some of the common tasks and thus will not cover every function available in the mobile app SDK. You may also wish to refer to the [Cayenne iOS SDK reference documentation](#cayenne-api-using-the-cayenne-ios-sdk-sdk-reference) for additional reference on available functionality found in the SDK.*
 
-**TODO:**
+#### Configure Xcode IDE
 
 ```
-In this section we cover using the iOS SDK.
+Here we would walk the user through configuring the Xcode IDE so that the user is ready to use the iOS SDK with their project.
 
-I suggest we follow essentially the same layout as the HTTP API section, 
-which I've duplicated below. The only difference will be that Tim indicated
-we need to help the user configure the Xcode IDE. Otherwise, I suggest we 
-show similar examples as shown in the HTTP API section on how to use the 
-API - albiet with the example code shown being the iOS SDK code. We then 
-wrap it up with a link to the iOS SDK reference (which it sounds like from 
-Tim could be hosted externally on github).
+Brent & Tim to work together to create this info.
 ```
 
-### Configure Xcode IDE
-
-**TODO**
-```
-We being our story example by helping hte user configure the Xcode 
-IDE to work with the SDK.
-
-Will need Tim to provide this. I can help word-smith with him on 
-call if needed.
-```
-
-### Initializing the SDK
-
-**TODO**
-```
-Continue our iOS story with same example of Initializing the SDK, but this 
-time the code shown will be related to iOS/Xcode.
-
-Will need Tim to provide this.
-```
-
-### Log in to account
-
-**TODO**
-```
-Continue our iOS story with same example of Logging into account, but 
-this time the code shown will be related to iOS/Xcode.
-
-Will need Tim to provide this.
-```
-
-### Example 1 of using API
-
-**TODO**
-```
-E.g. Maybe cover the same examples used in the HTTP API section, but of 
-course this time showing code covering Xcode/iOS.
-
-Will need Tim to provide content for all these examples.
-```
-
-### Example 2 of using API
-
-**TODO**
-```
-Continue our story by discussing another example of using the API and Xcode/iOS.
-```
-
-### Last Example of using API
-
-**TODO**
-```
-Last story discussing an example of using the API and Xcode/iOS.
-```
-
-### SDK Reference
-
-**TODO**
+#### SDK Reference
 
 ```
-Here I’m just linking to external iOS reference since it seems like the iOS 
-code is fully documented and this will be hosted externally? If so, I'd 
-recommend just leaving general information here and a link to the GitHub 
-repositories for the remainder. I've put in a generic blurb and link back to 
-the HTTP API, which the user can also reference. This is probably enough detail 
-for the final version, unless we want to mention something specific in the iOS 
-API Reference section (or if it isn't hosted externally as I currently think it might be).
+Here we would have the SDK Reference. If we are going to include each function (as we do with the HTTP API Reference section), this is where it would go. But it sounds like Tim is documenting the source and we could just link to that on our GitHub. For now, I've written some generic text and this can serve as the text for this section unless something changes.
+
+Brent & Tim to update this section based on whatever is finalized for iOS Reference documentation.
 ```
 
 The Cayenne iOS SDK contains code documentation for each function. You can refer to the documentation included with the SDK. For ease of reference, you can find find a hosted version of this [documentation on our github](TODO: link to external source).
 
 As the Cayenne mobile app SDKs are wrappers around the Cayenne API, you may also wish to refer to the raw [Cayenne API documentation](#cayenne-api-using-the-cayenne-api), and in particular to the [API reference section](#cayenne-api-using-the-cayenne-http-api-api-reference) which covers each function available in the API.
 
-## Using the Cayenne Android SDK
+### Android SDK Reference
+
+```
+This would be similar info as for iOS. For now it will either not be included or will have a Coming Soon note.
+```
 
 *Coming Soon!*
+
+
+## Example usage: Monitor & Control
+
+```
+This section would cover putting the HTTP API into use by guiding the user through the Monitor & Control's major screens and for each we would tell the user how we used the API to accomplish each feature.
+
+Brent would write the descriptive intro text and attach screens for each portion here.
+Devs would add in example code blurbs that accomplish each task highlighted by Brent.
+```
+
+### Monitor & Control Overview
+
+```
+Brief description of what the Monitor & Control solution is - to give the user some perspective if they aren’t familiar with the solution and what they’ll be seeing in the examples shown here.
+
+Brent would write this text.
+```
+
+### Sign Up
+
+```
+This section would start out story narrative by having the user Create an account and log into the account.
+
+Brent to write intro brlub for this.
+```
+
+#### Create an account 
+
+```
+Start our story by walking the user through creating an account using the API.
+
+Brent to add blurb & screenshot of the M&C Create account screens.
+```
+
+```
+Devs to provide source code example for creating a fake test account that will be used for the rest of the narrative.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+#### Log into the account
+
+```
+Continue our story by having the user log into our newly created account.
+
+Brent to add blurb & screenshot of the M&C Create account screens.
+```
+
+```
+Devs to provide source code example for logging into our fake account example.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+#### Manage Company, Location
+
+```
+Now that we have an acccount to use, we continue our story by walking the user through Adding, editing and removing company, location and contacts via the Company/Location screen. Our example would walk them through creating a specific test company, location and contact(s). These would be used for the rest of our example stories.
+
+Brent to create intro blurb and screens from M&C for the Company/Location screens found below.
+```
+
+```
+Devs to provide source code examples for creating a test Company to be used in rest of the examples.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+```
+Devs to provide source code examples for creating a Contact for our test Company to be used in rest of the examples.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+```
+Devs to provide source code examples for creating a Location for our test Company which will be used in the rest of our examples.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+```
+Devs to provide source code examples for creating the following Location Contact scenarios:
+
+A. Create a new contact for this Location.
+B. Attach an existing Company contact to this Location.
+
+{
+Example code
+To accomplish these tasks
+Here
+}
+```
+
+#### Add Gateway
+
+```
+Now that we have a Company, we continue our example by showing the user how to Add a Gateway using the Add Gateway screen. So this continues our story example where we add a gateway that will be used for the rest of our example.
+
+Brent to provide intro blurb & screens for this.
+```
+
+```
+Devs to provide source code examples for adding a Gateway that will be used for the rest of the examples.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+#### Add Sensor device
+
+```
+Now that we have a Gateway, we walk the user through the process of adding a Sensor device. We will then continue the M&C 1st experience which allows the user to jump over to creating an Alert for the new sensor. We would choose an example Temperature sensor and create a temp alert for it. That way there is specifically a device type example we can show the user.
+
+Brent to add intro blurb & screens for this.
+```
+
+##### Add Temperature Sensor
+
+```
+Brent to add description and M&C screen from Add Device screen, showing Temperature device.
+```
+
+```
+Devs to provide source code examples for adding a specific Temperature sensor device.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+##### Create Temperature Alert
+
+```
+Brent to add description and M&C screen from Create Alert, showing Temperature Alert.
+```
+
+```
+Devs to provide source code examples for creating an Alert.
+
+A. Should be an alert for our newly created sensor.
+B. Should be of type 'Temperature'. Work with Brent to finalize what Conditions to trigger on.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+#### Add Actuator device
+
+```
+Here we follow the same thing we just did for Sensors, but this time we demonstrate how to cover an Actuator device. It is important that we demonstrate both to the user.
+
+Brent to add intro blurb & screens for this.
+```
+
+##### Add Door lock
+
+```
+Brent to add description and M&C screen from Add Device screen, showing Door Lock device.
+```
+
+```
+Devs to provide source code examples for adding a specific Door Lock actuator device.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+##### Create Lock Alert
+
+```
+Brent to add description and M&C screen from Create Alert, showing Lock/Unlock Alert.
+```
+
+```
+Devs to provide source code examples for creating an Alert.
+
+A. Should be an alert for our newly created Door actuator.
+B. Should be of type 'Locked/Unlocked'. Work with Brent to finalize what Conditions to trigger on.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+#### Manage Locations / Devices
+
+```
+In this section we would describe the Manage screen and its display of the overall status of Locations. We will show the user each feature of the Manage screen and show them how we accomplished what we did with Monitor & Control.
+
+Brent to add intro blurb & screens.
+```
+
+##### View Location status
+
+```
+Brent to add blurb and M&C screen for showing the default collapsed view in Manage (where it shows overall status for our test Company's locations.
+```
+
+```
+Devs to provide source code examples for how we get the information used to populate the collapsed view.
+
+E.g. 
+A. How we get the list of Companies (consisting of our test company).
+B. How we get the list of Locations for our test company.
+C. How we get the overall status for each Locations so that it can be displayed, how we know to display the Acknowledge All button.
+
+{
+Example code
+To accomplish these tasks
+Here
+}
+```
+
+##### View Device details
+
+```
+After describing the collapsed Manage view, we tell them how the user can tap to expand the list and then they can view Device details.
+
+Brent to add intro text and M&C screen showing expanded Manage screen, displaying all devices located under our test Location.
+```
+
+```
+Devs to provide source code examples for how we show device details here on the Manage screen.
+
+E.g. 
+A. How to get list of all devices under our test Location.
+B. How to get overall status of each device, how do we know to display the Acknowledge button, etc.
+C. How we know Gateways vs Sensors, etc.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+##### Interact with actuator devices
+
+```
+Once expanded the user can interact with Actuator devices directly from this Manage screen. We should tell the user how to do this.
+
+Brent to add intro text & screen highlights from M&C.
+```
+
+```
+Devs to provide source code examples for updating the status of an actuator device from here. E.g. for change of slider, toggle directly from here.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+##### View alert status
+
+```
+M&C allows the user to click on the alert icon located next to Devices in the Manage list. This produces a popup showing status details. Here we walk the user through how we get this data for display.
+
+Brent to add into blurb, M&C screen highlights.
+```
+
+```
+Devs to provide source code examples for how to fetch the alert status details for a device that we use to populate this dialog.
+
+{
+Example code
+To accomplish this task
+Here
+}
+```
+
+##### Viewing Device history
+
+```
+After covering the display of devices on the Manage screen, we continue our example by telling the user how they can click on a device in M&C and it will take the user to the Device details/history screens (which has multiple tabs). We will walk the user through each of these tabs so that they know how we populated & control the data displayed.
+
+Brent to write into blurb and add screens as needed here.
+```
+
+##### View Device History
+##### View Notifications
+##### View Chart
+##### View Settings
+
+#### Manage Alerts
+
+```
+In this section we would cover the Alerts screen and how to create alerts, view history, etc.
+```
+
+##### View Location Alerts
+##### View Alert History
+##### View Alert Notifications
+##### View Alert Chart
+##### View Alert Settings
