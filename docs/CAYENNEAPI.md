@@ -2,7 +2,6 @@
 
 ## Overview
 
-**TODO:**
 ```
 We need to add a brief introduction to what the Cayenne API is and what 
 it allows the user to do. This should be a brief general overview and 
@@ -35,7 +34,8 @@ Before you can use the Cayenne API you will need to obtain your **Cayenne API Ke
 
 *TIP: For more information how this key is used, see the [Authentication section](#cayenne-api-using-the-cayenne-http-api-authentication) of the HTTP API documentation.*
 
-To obtain this key, log into your account and go to X. Every application that you create in Cayenne will have its own unique API Key... **TODO:**
+To obtain this key, log into your account and go to X. Every application that you create in Cayenne will have its own unique API Key... 
+
 ```
 [As soon as this UX exists, I can fill this section in by taking 
 screens and telling the user how to go about this.]
@@ -74,6 +74,7 @@ Using the Cayenne iOS SDK to utilize the Cayenne API in your iOS app.
 ```
 This section will cover the API function calls available. In here you will find sections for the HTTP API, and each of the mobile app SDKs.
 ```
+
 ### HTTP API Reference
 
 ```
@@ -94,45 +95,140 @@ Dev to complete this section and all documentation located here, using the layou
 #### Preparing to use the API
 
 ##### Authenticating
+```
+Dev to add documenting the Authentication calls needed.
+```
 ##### Initialization
-
+```
+Dev to add documenting any Initialization required.
+```
 #### Companies
 ##### Add a company
+```
+Dev to rename/document this call as needed.
+```
 ##### Remove a company
+```
+Dev to rename/document this call as needed.
+```
 ##### Edit/Update a company
+```
+Dev to rename/document this call as needed.
+```
 ##### Get company
+```
+Dev to rename/document this call as needed.
+```
 ##### Get contacts for company
+```
+Dev to rename/document this call as needed.
+```
 ##### Add a contact
+```
+Dev to rename/document this call as needed.
+```
 ##### Update a contact for company
+```
+Dev to rename/document this call as needed.
+```
 ##### Delete a contact for company
+```
+Dev to rename/document this call as needed.
+```
 ##### Add a contact with location
+```
+Dev to rename/document this call as needed.
+```
 ##### Delete a contact from location
+```
+Dev to rename/document this call as needed.
+```
 ##### Add a location
+```
+Dev to rename/document this call as needed.
+```
 ##### Get locations for company
+```
+Dev to rename/document this call as needed.
+```
 ##### Update locations for company
+```
+Dev to rename/document this call as needed.
+```
 ##### Get specified location
+```
+Dev to rename/document this call as needed.
+```
 ##### Delete location for company
+```
+Dev to rename/document this call as needed.
+```
 ##### Get contacts for location
+```
+Dev to rename/document this call as needed.
+```
 ##### Add Gateway to location
+```
+Dev to rename/document this call as needed.
+```
 ##### Get things added to location
+```
+Dev to rename/document this call as needed.
+```
 ##### Add sensor to location
+```
+Dev to rename/document this call as needed.
+```
 ##### Get sensor data history
+```
+Dev to rename/document this call as needed.
+```
 
 #### Locations
 ##### Link contact with Location
+```
+Dev to rename/document this call as needed.
+```
 ##### Get gateways
+```
+Dev to rename/document this call as needed.
+```
 
 #### Things
 ##### Add sensor to location
+```
+Dev to rename/document this call as needed.
+```
 ##### Delete a sensor
+```
+Dev to rename/document this call as needed.
+```
 ##### Get sensor settings
+```
+Dev to rename/document this call as needed.
+```
 ##### Edit sensor settings
+```
+Dev to rename/document this call as needed.
+```
 
 #### Users
 ##### Log in to the system
+```
+Dev to rename/document this call as needed.
+```
 ##### Forgot password
+```
+Dev to rename/document this call as needed.
+```
 ##### Reset password
+```
+Dev to rename/document this call as needed.
+```
 ##### Get Companies for user
+```
+Dev to rename/document this call as needed.
+```
 
 ### iOS SDK Reference
 
