@@ -45,19 +45,72 @@ In addition to the examples provided, you will find additional code snippets and
 
 In this section we will cover practical examples of putting the Cayenne API into use. We will demonstrate each feature found in the Cayenne API, showing you images and code from examples such as our Sample App, the Cayenne product and other real-world solutions.
 
+```
+In this section we will cover all the features of the Cayenne public API. We can use the Sample App by default for most items. In some instances the Sample App may not cover the concept, or it may make sense to show additional examples. In such instances we can reference the Cayenne dashboard and the Monitor & Control solution as additional examples.
+
+The goal here is to have Brent provide basic Text covering what we're showing, Images of the Sample App or Cayenne solutions and then code snippets provided by Dev that demonstrate actual usage of the API. This mixture provides the most useful experience and makes it easy to read and follow.
+```
+
 #### Creating an account
+```
+Start a story narrative by creating an account using the API.
+```
+
 #### Logging into account
+```
+Log into our newly created account using API.
+```
 #### Forgot Password
+```
+Demonstrate how to use API to reset a forgotten password.
+```
 #### Provisioning a Device
+```
+Demonstrate how to provision a device using the API.
+```
 #### Activating a Device
+```
+Demonstrate how to activate our newly provisioned device using the API.
+
+0. Gateway example
+1. Sensor example
+2. Actuator example (if differs from Sensor)
+```
 #### Getting Real-Time Device Data
+```
+Demonstrate how to use the API to get real-time device data from our activated device.
+
+0. Sensor example
+1. Actuator example
+```
 #### Remote Control
+```
+Demonstrate how to use the API to remotely change the state of an example actuator device.
+```
 #### Getting Device History
 ##### Monitor & Control Sensor History example
+```
+Use M&C sensor history tab as example and show user how we fetch all that data for display.
+
+0. Sensor history
+1. Actuator history
+```
 ##### Cayenne Asset Tracking example
+```
+Use Cayenne Asset Tracking view and show how you can use the API to fetch history for devices and demonstrate a cool way of putting this information to use by displaying them on a map, allowing the user to visualize position but also to click on markers and get information.
+```
 #### Creating a Trigger & Alert
+```
+Demonstrate creation of an example Trigger (and alert notification?) using API.
+```
 #### Creating a Scheduled event
+```
+Demonstration of creating (and execution?) of a Scheduled event using the API.
+```
 #### Multi-Tenant
+```
+Demonstration of the multi-tenant features provided in the API. Most likely using the M&C solution as an example?
+```
 
 ### Samples
 
@@ -67,8 +120,8 @@ The Cayenne API repo on GitHub includes a number of samples illustrating the use
 Dev to provide GitHub repo for Samples and a list of samples that should be linked here in docs.
 ```
 
-- Example link 1: Short description of what the sample provides.
-- Example link 2: Short description of what the sample provides.
+- Sample App: We should describe and link to our sample app as the first example.
+- Another Example link: Short description of what the sample provides.
 
 ### Best practices
 
@@ -125,6 +178,10 @@ Example of function to be documented here.
 ```
 Example of function to be documented here.
 ```
+##### Forgot password
+```
+Example of function to be documented here.
+```
 ##### etc
 ```
 And so forth as needed in each category of functions.
@@ -132,6 +189,22 @@ And so forth as needed in each category of functions.
 #### Devices
 ```
 Dev to add list of related public API functions and information for each.
+```
+##### Provision a device
+```
+Example of function to be documented here.
+```
+##### Activating a device
+```
+Example of function to be documented here.
+```
+##### Get real-time device data
+```
+Example of function to be documented here.
+```
+##### Remote Control
+```
+Example of function to be documented here.
 ```
 #### Alerts
 ```
