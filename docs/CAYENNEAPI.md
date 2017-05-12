@@ -31,15 +31,15 @@ screens and telling the user how to go about this.]
 
 In this section you will find examples of how to put the Cayenne API into use.
 
-- Example Walkthrough: Guides you through using each feature of the API, covering real examples found in our Sample App, the Cayenne product as well as other real-world solutions.
-- Samples: Links to additional sample solutions found on our GitHub.
+- [Example Walkthrough](#cayenne-api-using-the-api-example-walkthrough): Guides you through using each feature of the API, covering real examples found in our Sample App, the Cayenne product as well as other real-world solutions.
+- [Samples](#cayenne-api-using-the-api-samples): Links to additional sample solutions found on our GitHub.
 
 In addition to the examples provided, you will find additional code snippets and notes throughout the API References. You may also wish to refer to the appropriate reference information for the API or SDK that you are using in our project.
 
-- Cayenne HTTP API Reference
-- Mobile App SDK Reference
-   - iOS
-   - Android
+- [Cayenne HTTP API Reference](#cayenne-api-http-api-reference)
+- Mobile App SDKs
+   - [iOS SDK Reference](#cayenne-api-ios-sdk-reference)
+   - [Android SDK Reference](#cayenne-api-android-sdk-reference)
 
 ### Example Walkthrough
 
@@ -253,7 +253,7 @@ The Cayenne iOS SDK contains code documentation for each function. You can refer
 
 As the Cayenne mobile app SDKs are wrappers around the Cayenne API, you may also wish to refer to the raw [Cayenne API documentation](#cayenne-api-using-the-cayenne-api), and in particular to the [API reference section](#cayenne-api-using-the-cayenne-http-api-api-reference) which covers each function available in the API.
 
-### Android SDK Reference
+## Android SDK Reference
 
 ```
 This would be similar info as for iOS. For now it will either not be included or will have a Coming Soon note.
