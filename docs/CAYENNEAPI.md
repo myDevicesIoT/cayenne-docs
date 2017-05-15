@@ -106,37 +106,68 @@ Dev to provide example code showing a call using the account info provided by th
 
 #### Provisioning Devices
 
-##### Provision a Device
+Before a device can be [activated](#cayenne-api-using-the-api-example-walkthrough-activating-a-device) in Cayenne, it must first be provisioned. In this section we'll examine some common scenarios for provisioning devices.
+
+*Note: The Cayenne applications such as the Sample App do not contain a UI component for this step. That said, the __Hardware IDs__ generated during device provision step are later used in the Sample App UI for device activation.*
+
+##### Provision single Devices
+
+Devices can be provisioned one at a time, allowing for tasks such as one-off or on demand provisioning of devices. Let's provision several devices which we will continue to use throughout the rest of our examples.
+
 ```
-Demonstrate how to provision a single device using the API.
+Dev to provide example code that demonstrates how to provision a single device using the API. We should show multiple examples here (even if they are the same call but generating different output Hardware IDs). These will be used later in examples of device activation, device data history, etc.
+
+0. Example in/out for a sample Gateway Device.
+1. Example in/out for Temperature Sensor.
+2. Example in/out for Door Lock Actuator.
 ```
 
 ##### Bulk Provisioning Devices
-```
-Demonstrate how to bulk provision a bunch of devices - there will not be UI for this.
-```
 
+If you have multiple devices that need to be provisioned, the Cayenne API allows you to batch or bulk provision the devices. Let's provision the same devices as seen in the [Single Device](#cayenne-api-using-the-api-example-walkthrough-provisioning-a-device-provision-single-devices) example, only this time we'll provision them all at once.
+
+**Note: There is a limit of 500 devices that can be provisioned at a time.**
+
+```
+Dev to provide example code that demonstrates how to bulk provision devices using the Cayenne API. The example shown here should bulk provision the same 3 devices used in the preceeding 'Single device' example. That way the user can see how to do them one a time or all in one, but it will be the same Hardware IDs generated for use in the examples that follow.
+```
 
 #### Activating a Device
-```
-Demonstrate how to activate our newly provisioned device using the API.
 
-0. Gateway example
-1. Sensor example
-2. Actuator example (if differs from Sensor)
+Once our devices have been provisioned, they can then be activated and become available for users to use. Let's examine the Sample App and see how it asks the user for the required device information and then take a look at the Cayenne API to see how device activation is accomplished.
+
+**TODO: Image of Sample App - Gateway activation screen**
+
+```
+Dev to provide example code that demonstrates activating the same 3 devices previously provisioned using the API.
+
+0. Gateway example.
+1. Temperature Sensor example.
+2. Door Lock Actuator example.
 ```
 
 #### Getting Real-Time Device Data
-```
-Demonstrate how to use the API to get real-time device data from our activated device.
 
-0. Sensor example
-1. Actuator example
+After devices are activated, they will start transmitting data to Cayenne. We can then query Cayenne for real-time device data and display it to the user. Let's take a look at the Sample App and see how it displays our example devices.
+
+**TODO: Image of Sample App - Manage screen with all devices shown**
+
+```
+Dev to provide example code that demonstratse how to use the API to get the current device data from our example devices that were previously provisioned and activated.
+
+0. Gateway example.
+1. Temperature Sensor example.
+2. Door Lock Actuator example.
 ```
 
 #### Remote Control
+
+Certain devices, such as Actuators can be remotely controlled. For example, we can change the state of our example **Door Lock** and remotely *Lock* or *Unlock* the device. Let's take a look at the Sample App and the Cayenne API to see how this is accomplished.
+
+**TODO: Image of Sample App - Manage screen with Door Actuator toggle and maybe Light Dimmer slider highlighted**
+
 ```
-Demonstrate how to use the API to remotely change the state of an example actuator device.
+Dev to provide example code that demonstrates how to use the API to remotely change the state of our example Door Lock Actuator.
 ```
 
 #### Getting Device History
