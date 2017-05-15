@@ -16,16 +16,13 @@ In order to use the Cayenne API, you will need to first create a Cayenne account
 
 ### Obtain your Cayenne API Key
 
-Before you can use the Cayenne API you will need to obtain your **Cayenne API Key**. This key will be unique at the **Account** level and you will obtain a different key for each **Application** that you create. In order for your custom application to successfully connect with Cayenne you will need to specify the API Key for that app when using the various Cayenne API function calls.
+Before you can use the Cayenne API you will need to obtain your **App Key** and **App Password**. In order for your custom application to successfully connect with Cayenne you will need to provide these keys when using the various Cayenne API function calls.
 
-*TIP: For more information how this key is used, see the [Authentication section](#cayenne-api-using-the-cayenne-http-api-authentication) of the HTTP API documentation.*
+*TIP: For more information how these keys are used, see the [Authentication section](#cayenne-api-http-api-reference-using-the-http-api-authenticating) of the HTTP API documentation.*
 
-To obtain this key, log into your account and go to X. Every application that you create in Cayenne will have its own unique API Key... 
+To obtain your keys, log into your account and select the **Create App** link. Cayenne will create your API keys and display them on the screen that appears.
 
-```
-[As soon as this UX exists, Brent will fill in this section in by taking 
-screens and telling the user how to go about this.]
-```
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170515085608/Cayenne-dashboard-Create-App.png" width="660" height="380" alt="Create App example"><br/><br/></p>
 
 ## Using the API
 
