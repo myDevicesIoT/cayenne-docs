@@ -57,14 +57,17 @@ Start a story narrative by creating an account using the API.
 ```
 Log into our newly created account using API.
 ```
+
 #### Forgot Password
 ```
 Demonstrate how to use API to reset a forgotten password.
 ```
+
 #### Provisioning a Device
 ```
 Demonstrate how to provision a device using the API.
 ```
+
 #### Activating a Device
 ```
 Demonstrate how to activate our newly provisioned device using the API.
@@ -73,6 +76,7 @@ Demonstrate how to activate our newly provisioned device using the API.
 1. Sensor example
 2. Actuator example (if differs from Sensor)
 ```
+
 #### Getting Real-Time Device Data
 ```
 Demonstrate how to use the API to get real-time device data from our activated device.
@@ -80,11 +84,14 @@ Demonstrate how to use the API to get real-time device data from our activated d
 0. Sensor example
 1. Actuator example
 ```
+
 #### Remote Control
 ```
 Demonstrate how to use the API to remotely change the state of an example actuator device.
 ```
+
 #### Getting Device History
+
 ##### Monitor & Control Sensor History example
 ```
 Use M&C sensor history tab as example and show user how we fetch all that data for display.
