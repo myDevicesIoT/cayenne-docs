@@ -49,24 +49,73 @@ The goal here is to have Brent provide basic Text covering what we're showing, I
 ```
 
 #### Creating an account
+
+Let's take a look at the Sample App and how we can use the Cayenne API to create a new account. To begin, the user is asked to provide the necessary account information used to create the new account.
+
+**TODO: Image of Sample App, account creation screen**
+
+Once we have the information from the user, we can use the Cayenne API to create the new account. If the account creation is successful, we can proceed with logging the user into their account.
+
 ```
-Start a story narrative by creating an account using the API.
+Dev to provide Sample App - account creation code example code to be put here.
+
+0. Example code for creating an account using fake info supplied by a user.
+1. Example output of successful account creation.
+```
+
+If the account creaiton fails, we can then take action such as displaying an error to the user for correction.
+
+```
+Dev to provide additional output showing error during account creation - Please use 'account already exists' so that in our next tutorial we can guide the user through resetting their password.
+
+```
+
+**TODO: Image of Sample App, account creation error 'account already exists' message shown**
+
+#### Reset Password
+
+In the event that a user has forgotten their password or needs to change it, we can use the Cayenne API to reset the password. Let's take a look at the Sample App once again and examine how it deals with this scenario. The process begins with the Sample App requesting the user's existing account credentials. We will need this information to proceed.
+
+**TODO: Image of Sample App, forgot password screen**
+
+```
+Dev to provide example code showing a call using the account info provided by the user from the Sample App - Forgot Password screen to reset their password.
 ```
 
 #### Logging into account
+
+Once the user has a valid account, they will need to be logged in to continue. Let's take a look at how this is accomplishd with the Sample App.
+
+##### Logging in after account creation
+
+The Sample App automatically logs a user into their account after having just created the user's account. This is a common user experience given that the user has already supplied their account credentials to the app. Let's build upon the [Create account](#cayenne-api-using-the-api-example-walkthrough-creating-an-account) example done earlier and see how the Cayenne API can be used to automatically log the user in.
+
 ```
-Log into our newly created account using API.
+Dev to provide example code that builds upon the previous 'Create Account' example and logs the user into their account.
 ```
 
-#### Forgot Password
+##### Logging into existing account
+
+In the event that a returning user is logging into an existing account, they can also use the Cayenne API to log into their account. Let's take a look at the Sample App and how it asks the user for their account credentails. We will then take a look at how the Cayenne API logs the user into their account using this information.
+
+**TODO: Image of Sample App, Login screen**
+
 ```
-Demonstrate how to use API to reset a forgotten password.
+Dev to provide example code showing a call using the account info provided by the user from the Sample App - Login screen to log into their account.
 ```
 
-#### Provisioning a Device
+#### Provisioning Devices
+
+##### Provision a Device
 ```
-Demonstrate how to provision a device using the API.
+Demonstrate how to provision a single device using the API.
 ```
+
+##### Bulk Provisioning Devices
+```
+Demonstrate how to bulk provision a bunch of devices - there will not be UI for this.
+```
+
 
 #### Activating a Device
 ```
