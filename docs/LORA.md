@@ -694,6 +694,7 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 *   [Actility](#lora-actility)
 *   [Kerlink](#lora-kerlink-network)
 *   [Loriot](#lora-loriot-network)
+*   [Objenious](#lora-objenious-network)
 *   [OrbiWise](#lora-orbiwise-network)
 *   [Senet](#lora-senet-network)
 *   [Stream](#lora-stream-network)
@@ -1516,7 +1517,9 @@ Once your device has been imported and is ready to be used, you can proceed with
 
 ### Setup device forwarding to Cayenne
 
-In order for Cayenne to be able to able to receive your device’s information, you will need to setup forwarding. When devices are imported into Objenious, they are imported into a group (Groupe). This setup will need to be performed once for each group of devices in your account. To perform this step, expand the **CONFIGURATION** option in the side menu and select **Scénarios et alertes**. On the *SCÉNARIOS ALERTES* screen that appears, click on the **CRÉER UN SCÉNARIO** button to begin creating a new scenario.
+In order for Cayenne to be able to able to receive your device’s information, you will need to setup forwarding. When devices are imported into Objenious, they are imported into a group (Groupe). This setup will need to be performed once for each group of devices in your account.
+
+To perform this step, expand the **CONFIGURATION** option in the side menu and select **Scénarios et alertes**. On the *SCÉNARIOS ALERTES* screen that appears, click on the **CRÉER UN SCÉNARIO** button to begin creating a new scenario.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154308/Objenius-scenarios-create-highlight.png" width="660" height="306" alt="Scenarios screen with create highlight"><br/><br/></p>
 
