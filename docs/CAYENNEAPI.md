@@ -172,21 +172,52 @@ Dev to provide example code that demonstrates how to use the API to remotely cha
 
 #### Getting Device History
 
-##### Monitor & Control Sensor History example
-```
-Use M&C sensor history tab as example and show user how we fetch all that data for display.
+Cayenne maintains historical information on data received for devices. Let's examine using the Cayenne API to get historical data for our example devices and some examples of how this type of data can be displayed to users.
 
-0. Sensor history
-1. Actuator history
+##### Monitor & Control Sensor History example
+
+Let's take a look at Cayenne's Monitor & Control solution. From the Manage screen the user can see the current status of their device, however they can also click on a device to access a *Device History* screen which displays historical device data. Let's explore how this is accomplished using the Cayenne API.
+
+**TODO: Image of Monitor & Control solution - Device History tab**
+
 ```
+Dev to provide example code for how the Monitor & Control Device history tab uses the Cayenne API to fetch the historical data for devices. We should have an example for both our exmaple sensor & actuator used so far in our examples.
+
+0. Example for Temperatue Sensor history.
+1. Example for Door Lock Actuator history.
+```
+
 ##### Cayenne Asset Tracking example
+
+Cayenne's [Asset Tracking](#features-asset-tracking) provides another great example of using historical device data in a unique way. In this case, for display of device location and status on a map. Let's take a look at the Asset Tracking feature and how the Cayenne API is used to accomplish this.
+
 ```
-Use Cayenne Asset Tracking view and show how you can use the API to fetch history for devices and demonstrate a cool way of putting this information to use by displaying them on a map, allowing the user to visualize position but also to click on markers and get information.
+Dev to provide example code for how to use the Cayenne API to fetch device information. In the following examples we will show them how to use this data to display it to the user as:
+
+0. Display of historical location markers on a map (Asset Tracking in Cayenne).
+1. Display of device status for one of those markers (e.g. user clicks on marker on map, sees status of device at that time).
+
+Note from Brent: I'm assuming a single call will provide location data as well as the historical device status at that time. If not, we should separate these and put them down below under the appropriate example highlighted to the user.
 ```
+
+**Displaying device location on a map**
+
+Cayenne's Asset Tracking feature allows the user to see the historical location information on a map. This unique presentation uses the historical device information provided in the Cayenne API to visualize device location data.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804145558/Map-view-Device-Map-trails1.png" width="600" height="416" alt="Cayenne LoRa Tracking example"><br/><br/></p>
+
+**Displaying device location on a map**
+
+In addition to visualizing the location of the device on a map, a Cayenne user can click on a device marker to pull up additional information. Within the popup dialog that appears, the historical information on the device is used to display the status of the device and its sensors at that point in time.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804150250/Map-view-Device-Map-popup-details1.png" width="600" height="416" alt="Device Map Features"><br/><br/></p>
+
+
 #### Creating a Trigger & Alert
 ```
 Demonstrate creation of an example Trigger (and alert notification?) using API.
 ```
+
 #### Creating a Scheduled event
 ```
 Demonstration of creating (and execution?) of a Scheduled event using the API.
