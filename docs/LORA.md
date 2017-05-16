@@ -1522,8 +1522,7 @@ In order for Cayenne to be able to able to receive your device’s information, 
 
 On the *CHOIX DU SCÉNARIO* page that appears, scroll down and select the HTTP Push Route (**ROUTAGE**) option. Then click on the **SUIVANT** button to continue to the next step.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="ALT"><br/><br/></p>
-**TODO: Image of HTTP Push / Routage option highlight**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154549/Objenius-route-highlight.png" width="660" height="407" alt="HTTP Push Routage option highlight"><br/><br/></p>
 
 On the Parameters screen (*PARAMÉTRAGE DU SCÉNARIO*), make the following choices:
 
@@ -1531,8 +1530,7 @@ On the Parameters screen (*PARAMÉTRAGE DU SCÉNARIO*), make the following choic
 - From the group (**GROUPE**) field, select which group of devices you want this rule to apply. *In the example shown here, our group is named **MyDevices**. Yours will be named differently.*
 - From the list of device types (**TYPE DE CAPTEUR**) select All (**TOUS**).
 
-    **TODO: Image of Parameters entered so far**
-    <p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="ALT"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154723/Objenius-route-parameters-1.png" width="660" height="450" alt="Parameters entered so far"><br/><br/></p>
 - In the destination URL field (**ENVOI D'UNE REQUÊTE HTTP**) enter in Cayenne's Objenious uplink URL.
 
     ```
@@ -1541,13 +1539,11 @@ On the Parameters screen (*PARAMÉTRAGE DU SCÉNARIO*), make the following choic
 - Under **CONTENU** be sure to select the **MESSAGE** option. This is required so that Cayenne receives the entire payload data and not just decoded values.
 - Finally, click on the create scenario (**Créer le scénario**) button to complete the creation.
 
-    **TODO: Image of Parameters showing last options and highlight**
-    <p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="ALT"><br/><br/></p>
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154724/Objenius-route-parameters-2.png" width="660" height="598" alt="Parameters showing last options and create highlight"><br/><br/></p>
 
 You will then see your completed route shown on the *SCÉNARIOS ALERTES* screen. Your group is now configured to forward data to Cayenne. You can now proceed with adding your devices in Cayenne.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="ALT"><br/><br/></p>
-**TODO: Image of Scenarios screen with Cayenne Forward option shown**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154934/Objenius-scenarios.png" width="660" height="306" alt="Scenarios screen with Cayenne Forward created"><br/><br/></p>
 
 ### Add device to Cayenne
 
@@ -1559,8 +1555,7 @@ From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, select the **LoRa** category and then **Objenious** option to view a list of supported devices.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="ALT"><br/><br/></p>
-**TODO: Image of Cayenne showing list of Objenious devices**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516155015/Cayenne-Objenious-network-list.png" width="660" height="413" alt="Cayenne showing list of Objenious devices"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -1580,15 +1575,13 @@ To see how easy it is, let’s walk through an example of connecting an [Adeunis
 
 Make sure **Objenious** is selected in the list of Networks.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="ALT"><br/><br/></p>
-**TODO: Image of Cayenne showing list of Objenious devices**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516155015/Cayenne-Objenious-network-list.png" width="660" height="413" alt="Cayenne showing list of Objenious devices"><br/><br/></p>
 
 **2\. Select the Device**
 
 Select your device from among the list supported Objenious devices. In this case, we’ll select the **Adeunis Pulse**.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="ALT"><br/><br/></p>
-**TODO: Image of Cayenne showing Objenious and Adeunis Pulse highlighted**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516155019/Cayenne-Objenious-Pulse-selected2.png" width="660" height="413" alt="Cayenne showing Objenious and Adeunis Pulse highlighted"><br/><br/></p>
 
 **3\. Enter Settings & Add device**
 
@@ -1599,8 +1592,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 3. Our device has been previously manually registered with Objenious. Make sure “Already Registered” is selected in the **Activation Mode** field.
 4. Click **Add device**.
 
-<p style="text-align:center"><br/><img src="IMAGE_URL" width="WIDTH" height="HEIGHT" alt="ALT"><br/><br/></p>
-**TODO: Objenious Pulse settings**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516155017/Cayenne-Objenious-Pulse-device-settings.png" width="660" height="414" alt="Cayenne showing Objenious Pulse settings"><br/><br/></p>
 
 The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
