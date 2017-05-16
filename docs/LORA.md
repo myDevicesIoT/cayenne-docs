@@ -1445,6 +1445,60 @@ Cayenne currently supports the following devices on the Loriot network. Support 
 *   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
 *   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
 
+## Objenious Network
+
+**About Objenious**
+
+Objenious, a Bouygues Telecom subsidiary, has selected LoRaWAN® technology, a global standard, in order to provide the best support to these businesses through every step of their transformation. Objenious also provides a network, an IoT platform called SPOT (stands for Smart Portal of Things) and tailored services to meet businesses needs.
+
+**Using Objenious with Cayenne**
+
+Cayenne makes it easy to use your LoRa device and the Objenious network. You will need to:
+
+1. [Create / Log into your account on the Objenious SPOT portal](#lora-objenious-network-create-account)
+2. [Setup gateway device](#lora-orbiwise-network-setup-gateway-device)
+3. [Register your device on the Orbiwise portal](#lora-orbiwise-network-manually-register-device)
+4. [Setup traffic forwarding to Cayenne](#lora-orbiwise-network-setup-device-forwarding-to-cayenne)
+5. [Program/Flash your device](#lora-orbiwise-network-programming-the-device)
+6. [Add your device to your Cayenne dashboard](#lora-orbiwise-network-add-device-to-cayenne)
+
+We will walk you through these steps in the following sections.
+
+*Note: At present the Objenious SPOT portal is currently shown in French only. The documentation shown in this section will reference the SPOT portal in French, but the steps should be easy enough to follow along.*
+
+### Create account
+
+To get an account with Objenious, you will need to work directly with Objenious. Although there is an <a href="https://spot.objenious.com/user/add-data-start-user" target="_blank">account creation link</a> on the SPOT portal, it requires an Activation Code that you must first obtain from Objenious.
+
+**Log into the SPOT portal**
+
+Once you have your account, you can proceed with the logging into the <a href="https://spot.objenious.com/login" target="_blank">SPOT portal</a>. After logging in, you will see your Dashboard and from there you can proceed with setting things up to connect with Cayenne.
+
+**TODO: Image of SPOT - login**
+
+**TODO: Image of SPOT - dashboard**
+
+### Manually register device
+
+Before you can use your LoRa device on the Objenious network, it must be registered on the network. The following information will help guide you through this process using Objenious's SPOT portal and the *CAPTEURS* screen.
+
+**Import Devices**
+
+To get started with adding new devices, click on the **CAPTEURS** link in the side menu shown on the SPOT dashboard. From the screen that appears, click on the **IMPORTER DES CAPTEURS** button.
+
+**TODO: Image of SPOT dashboard with CAPTEURS highlighted**
+
+**TODO: Image of screen with IMPORTER DES CAPTEURS highlighted**
+
+In order to import devices into Objenious, you will need to download and fill in a template file. Download the template by clicking on the **Téléchargez le template** button. Fill in the required information for the devices that you wish to import and **save** the template.
+
+*Note: If you need more information on this step, or run into trouble importing your devices, you may wish to refer to Objenious' <a href="https://spot.objenious.com/assets/documents/faq/faq.pdf?v1" target="_blank">FAQ document (FRENCH)</a> that contains a wealth of helpful information.*
+
+**TODO: Image of Import screen with template button highlighted**
+
+To complete importing your devices, click on **CHOISIR UN FICHIER** and browse to the template file that contains the devices you wish to importn. Click on the **IMPORTER** button and 
+
+
 ## OrbiWise Network
 
 **About OrbiWise**
