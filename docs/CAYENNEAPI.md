@@ -59,7 +59,9 @@ The example walkthrough shown here is arranged as a narrative that walks you thr
 
 In order to use the Tank Monitoring sample app, users are reqired to have an account. If they do not already have an account, they can create one directly from the app. To begin, the user is asked to provide the necessary account information used to create the new account.
 
-**TODO: Image of Sample App, account creation screen**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524163604/Tank-Monitoring-Create-account2.png" width="346" height="615" alt="Sample App Create Account 1"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524163607/Tank-Monitoring-Create-account3.png" width="346" height="615" alt="Sample App Create Account 2"><br/><br/></p>
 
 Once we have the information from the user, we can use the Cayenne API to create a new account. If the account creation is successful, we can proceed with logging the user into their account.
 
@@ -68,12 +70,6 @@ Dev to provide Sample App - account creation code example code to be put here.
 
 0. Example code for creating an account using fake info supplied by a user.
 1. Example output of successful account creation.
-```
-
-If account creation fails, we receive information as to why. We could then show an error message to the user containing this information.
-
-```
-Dev to provide additional example of account creation output showing error encountered.
 ```
 
 #### Logging into account
@@ -111,7 +107,7 @@ In order to reset the user's password, we will need some of the user's existing 
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524083818/Restaurant-iPhone_LogIn-1-3.png" width="346" height="615" alt="Sample App Forgot password screen"><br/><br/></p>
 
-**TODO: Image of password reset link**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524164225/Tank-Monitoring-Reset-Password.png" width="346" height="615" alt="Sample App Password reset email confirmation"><br/><br/></p>
 
 ```
 Dev to provide example code showing a call using the account info provided by the user from the Sample App - Forgot Password screen to generate this link/email.
@@ -121,7 +117,7 @@ Dev to provide example code showing a call using the account info provided by th
 
 The password reset email that the user receives includes a link that they can use to reset their password. Following this link takes the user to a screen where they can enter in a new password. Let's take a look at how the Cayenne API uses the password reset link and the user's new password to change the password.
 
-**TODO: Image of password reset form**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524164522/Tank-Monitoring-Change-password-web.png" width="256" height="210" alt="Example new password creation web page"><br/><br/></p>
 
 ```
 Dev to provide example code showing Cayenne API call to change the user's password.
