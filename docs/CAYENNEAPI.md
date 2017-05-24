@@ -40,7 +40,7 @@ In addition to the examples provided, you will find additional code snippets and
 
 ### Example Walkthrough
 
-In this section we will cover practical examples of putting the Cayenne API into use. We will demonstrate each feature found in the Cayenne API, showing you images and code from examples from our Tank Monitoring sample app.
+In this section we will cover practical examples of putting the Cayenne API into use. We will demonstrate each feature found in the Cayenne API, showing you images and code from examples found in our Tank Monitoring sample app.
 
 ```
 In this section we will cover all the features of the Cayenne public API. We can use the Sample App by default for most items.
@@ -67,7 +67,6 @@ If the account creaiton fails, we can then take action such as displaying an err
 
 ```
 Dev to provide additional output showing error during account creation - Please use 'account already exists' so that in our next tutorial we can guide the user through resetting their password.
-
 ```
 
 **TODO: Image of Sample App, account creation error 'account already exists' message shown**
@@ -200,6 +199,8 @@ Dev to provide example code for how to use the Cayenne API to fetch device infor
 1. Display of device status for one of those markers (e.g. user taps on marker on map in sample app, sees status of device at that time).
 
 Note from Brent: I'm assuming a single call will provide location data as well as the historical device status at that time. If not, we should separate these and put them down below under the appropriate example highlighted to the user.
+
+Also UNKNOWN: How does our API make use of the Google Maps API for this stuff? It would be nice to highlight this information in our docs, but I need help with the details.
 ```
 
 **Displaying device location on a map**
@@ -244,8 +245,9 @@ Dev to provide example code for how to manange existing alerts.
 ```
 
 #### Multi-Tenant
+
 ```
-Demonstration of the multi-tenant features provided in the API. Most likely using the M&C solution as an example?
+Demonstration of the multi-tenant features provided in the API. Most likely using the Monitoring & Control solution as an example?
 ```
 
 ### Samples
