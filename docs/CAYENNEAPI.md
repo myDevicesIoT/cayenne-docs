@@ -207,7 +207,7 @@ Also UNKNOWN: How does our API make use of the Google Maps API for this stuff? I
 
 On the *Map* screen in the Sample app, the user can see the location and movement of their devices on a map. This unique presentation uses the historical device information provided in the Cayenne API to visualize device location data.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524091320/Restaurant-iPhone_SensorMap-1-13.png" width="346" height="615" alt="Sample App rotated map screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524091320/Restaurant-iPhone_SensorMap-1-13.png" width="660" height="371" alt="Sample App rotated map screen"><br/><br/></p>
 
 **Displaying historical device data on a map**
 
