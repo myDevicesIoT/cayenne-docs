@@ -16,11 +16,11 @@ In order to use the Cayenne API, you will need to first create a Cayenne account
 
 ### Obtain your Cayenne API Key
 
-Before you can use the Cayenne API you will need to obtain your **App Key** and **App Password**. In order for your custom application to successfully connect with Cayenne you will need to provide these keys when using the various Cayenne API function calls.
+Before you can use the Cayenne API you will need to obtain your **App Key** and **App Password**. In order for your custom application to successfully connect with Cayenne you will need to provide these keys when using the Cayenne API.
 
 *TIP: For more information how these keys are used, see the [Authentication section](#cayenne-api-http-api-reference-using-the-http-api-authenticating) of the HTTP API documentation.*
 
-To obtain your keys, log into your account and select the **Create App** link. Cayenne will create your API keys and display them on the screen that appears.
+To obtain your keys, log into your account and select **Create App**. The *App Credentials* page that appears contains your keys. Copy & paste the **App Key** and **App Password** into your code.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170515085608/Cayenne-dashboard-Create-App.png" width="660" height="380" alt="Create App example"><br/><br/></p>
 
@@ -76,7 +76,7 @@ Dev to provide additional output showing error during account creation - Please 
 
 In the event that a user has forgotten their password or needs to change it, we can use the Cayenne API to reset the password. Let's take a look at the Sample App once again and examine how it deals with this scenario. The process begins with the Sample App requesting the user's existing account credentials. We will need this information to proceed.
 
-**TODO: Image of Sample App, forgot password screen**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524083818/Restaurant-iPhone_LogIn-1-3.png" width="346" height="615" alt="Sample App Forgot password screen"><br/><br/></p>
 
 ```
 Dev to provide example code showing a call using the account info provided by the user from the Sample App - Forgot Password screen to reset their password.
@@ -98,7 +98,7 @@ Dev to provide example code that builds upon the previous 'Create Account' examp
 
 In the event that a returning user is logging into an existing account, they can also use the Cayenne API to log into their account. Let's take a look at the Sample App and how it asks the user for their account credentails. We will then take a look at how the Cayenne API logs the user into their account using this information.
 
-**TODO: Image of Sample App, Login screen**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084310/Restaurant-iPhone_LogIn-1-2.png" width="346" height="615" alt="Sample App Login screen"><br/><br/></p>
 
 ```
 Dev to provide example code showing a call using the account info provided by the user from the Sample App - Login screen to log into their account.
@@ -136,7 +136,9 @@ Dev to provide example code that demonstrates how to bulk provision devices usin
 
 Once our devices have been provisioned, they can then be activated and become available for users to use. Let's examine the Sample App and see how it asks the user for the required device information and then take a look at the Cayenne API to see how device activation is accomplished.
 
-**TODO: Image of Sample App - Gateway activation screen**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084436/Restaurant-iPhone_AddGateway-1-2.png" width="346" height="615" alt="Sample App Add Gateway screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084522/Restaurant-iPhone_AddSensor-1-2.png" width="346" height="615" alt="Sample App Add Sensor screen"><br/><br/></p>
 
 ```
 Dev to provide example code that demonstrates activating the same 3 devices previously provisioned using the API.
@@ -150,7 +152,7 @@ Dev to provide example code that demonstrates activating the same 3 devices prev
 
 After devices are activated, they will start transmitting data to Cayenne. We can then query Cayenne for real-time device data and display it to the user. Let's take a look at the Sample App and see how it displays our example devices.
 
-**TODO: Image of Sample App - Manage screen with all devices shown**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084637/Restaurant-iPhone_Dashboard-1-4.png" width="346" height="615" alt="Sample App Manage screen"><br/><br/></p>
 
 ```
 Dev to provide example code that demonstratse how to use the API to get the current device data from our example devices that were previously provisioned and activated.
@@ -178,7 +180,7 @@ Cayenne maintains historical information on data received for devices. Let's exa
 
 Let's take a look at Cayenne's Monitor & Control solution. From the Manage screen the user can see the current status of their device, however they can also click on a device to access a *Device History* screen which displays historical device data. Let's explore how this is accomplished using the Cayenne API.
 
-**TODO: Image of Monitor & Control solution - Device History tab**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084752/Restaurant-iPhone_Sensor-1-1.png" width="346" height="615" alt="Sample App Device History screen"><br/><br/></p>
 
 ```
 Dev to provide example code for how the Monitor & Control Device history tab uses the Cayenne API to fetch the historical data for devices. We should have an example for both our exmaple sensor & actuator used so far in our examples.
