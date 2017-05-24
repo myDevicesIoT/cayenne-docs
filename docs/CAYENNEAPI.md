@@ -40,21 +40,28 @@ In addition to the examples provided, you will find additional code snippets and
 
 ### Example Walkthrough
 
-In this section we will cover practical examples of putting the Cayenne API into use. We will demonstrate each feature found in the Cayenne API, showing you images and code from examples found in our Tank Monitoring sample app.
+In this section we will cover practical examples of putting the Cayenne API into use.
 
-```
-In this section we will cover all the features of the Cayenne public API. We can use the Sample App by default for most items.
+The example walkthrough shown here is arranged as a narrative that walks you through the various API-related topics required to implement each screen found in the **Tank Monitoring sample app**. After covering the sample app, we will discuss other real-world solutions and cover some additional concepts.
 
-The goal here is to have Brent provide basic Text covering what we're showing, Images of the Sample App and then code snippets provided by Dev that demonstrate actual usage of the API. This mixture provides the most useful experience and makes it easy to read and follow.
-```
+1. **[Creating an account](#cayenne-api-using-the-api-example-walkthrough-creating-an-account)** - Creating a new account.
+2. **[Logging into an account](#cayenne-api-using-the-api-example-walkthrough-logging-into-account)** - Log into our account.
+3. **[Resetting password](#cayenne-api-using-the-api-example-walkthrough-reset-password)** - Resetting the account password.
+4. **[Provisioning devices](#cayenne-api-using-the-api-example-walkthrough-provisioning-devices)** - Provisioning a device so that it can be later activated.
+5. **[Activating devices](#cayenne-api-using-the-api-example-walkthrough-activating-a-device)** - Activating devices.
+6. **[Get real-time device data](#cayenne-api-using-the-api-example-walkthrough-getting-real-time-device-data)** - Fetching device status and current device data.
+7. **[Remote control](#cayenne-api-using-the-api-example-walkthrough-remote-control)** - Controlling devices remotely.
+8. **[Device History](#cayenne-api-using-the-api-example-walkthrough-getting-device-history)** - Fetching historical device data.
+9. **[Alerts](#cayenne-api-using-the-api-example-walkthrough-alerts)** - Creating and managing Alerts.
+10. **[Multi-Tenant](#cayenne-api-using-the-api-example-walkthrough-multi-tenant)** - Creating and managing Companies, Locations and Contacts.
 
 #### Creating an account
 
-Let's take a look at the Sample App and how we can use the Cayenne API to create a new account. To begin, the user is asked to provide the necessary account information used to create the new account.
+In order to use the Tank Monitoring sample app, users are reqired to have an account. If they do not already have an account, they can create one directly from the app. To begin, the user is asked to provide the necessary account information used to create the new account.
 
 **TODO: Image of Sample App, account creation screen**
 
-Once we have the information from the user, we can use the Cayenne API to create the new account. If the account creation is successful, we can proceed with logging the user into their account.
+Once we have the information from the user, we can use the Cayenne API to create a new account. If the account creation is successful, we can proceed with logging the user into their account.
 
 ```
 Dev to provide Sample App - account creation code example code to be put here.
@@ -63,31 +70,22 @@ Dev to provide Sample App - account creation code example code to be put here.
 1. Example output of successful account creation.
 ```
 
-If the account creaiton fails, we can then take action such as displaying an error to the user for correction.
+If account creation fails, we receive information as to why. We could then show an error message to the user containing this information.
 
 ```
-Dev to provide additional output showing error during account creation - Please use 'account already exists' so that in our next tutorial we can guide the user through resetting their password.
-```
-
-**TODO: Image of Sample App, account creation error 'account already exists' message shown**
-
-#### Reset Password
-
-In the event that a user has forgotten their password or needs to change it, we can use the Cayenne API to reset the password. Let's take a look at the Sample App once again and examine how it deals with this scenario. The process begins with the Sample App requesting the user's existing account credentials. We will need this information to proceed.
-
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524083818/Restaurant-iPhone_LogIn-1-3.png" width="346" height="615" alt="Sample App Forgot password screen"><br/><br/></p>
-
-```
-Dev to provide example code showing a call using the account info provided by the user from the Sample App - Forgot Password screen to reset their password.
+Dev to provide additional example of account creation output showing error encountered.
 ```
 
 #### Logging into account
 
-Once the user has a valid account, they will need to be logged in to continue. Let's take a look at how this is accomplishd with the Sample App.
+Once the user has a valid account, they will need to be logged in to continue. This is handled in the sample app in one of two ways:
+
+1. **[Log in after account creation](#cayenne-api-using-the-api-example-walkthrough-logging-into-account-logging-in-after-account-creation)** - How to log in automatically after account creation.
+2. **[Log in to existing account](#cayenne-api-using-the-api-example-walkthrough-logging-into-account-logging-into-existing-account)** - Log in to a returning users account.
 
 ##### Logging in after account creation
 
-The Sample App automatically logs a user into their account after having just created the user's account. This is a common user experience given that the user has already supplied their account credentials to the app. Let's build upon the [Create account](#cayenne-api-using-the-api-example-walkthrough-creating-an-account) example done earlier and see how the Cayenne API can be used to automatically log the user in.
+The Tank Monitoring sample app automatically logs a user into their account after having just created the user's account. This is a common user experience given that the user has already supplied their account credentials to the app. Let's build upon the [Create account](#cayenne-api-using-the-api-example-walkthrough-creating-an-account) example done earlier and see how the Cayenne API can be used to automatically log the user in.
 
 ```
 Dev to provide example code that builds upon the previous 'Create Account' example and logs the user into their account.
@@ -95,7 +93,7 @@ Dev to provide example code that builds upon the previous 'Create Account' examp
 
 ##### Logging into existing account
 
-In the event that a returning user is logging into an existing account, they can also use the Cayenne API to log into their account. Let's take a look at the Sample App and how it asks the user for their account credentails. We will then take a look at how the Cayenne API logs the user into their account using this information.
+Returning users will not need to create their account, instead they simply need to log into their existing account. Let's take a look at how the Tank Monitoring sample app and asks the user for their account credentails. We will then examine how the Cayenne API can be used to log the user into their existing account using this information.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084310/Restaurant-iPhone_LogIn-1-2.png" width="346" height="615" alt="Sample App Login screen"><br/><br/></p>
 
@@ -103,72 +101,115 @@ In the event that a returning user is logging into an existing account, they can
 Dev to provide example code showing a call using the account info provided by the user from the Sample App - Login screen to log into their account.
 ```
 
+#### Reset Password
+
+In the event that a user has forgotten their password, the Cayenne API can be used to reset the password. Let's take a look at the Tank Monitoring sample app and examine how it deals with this scenario.
+
+**Generate password reset email**
+
+In order to reset the user's password, we will need some of the user's existing account credentials. After providing this information, we can use the Cayenne API to generate and send an email containing a password reset link.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524083818/Restaurant-iPhone_LogIn-1-3.png" width="346" height="615" alt="Sample App Forgot password screen"><br/><br/></p>
+
+**TODO: Image of password reset link**
+
+```
+Dev to provide example code showing a call using the account info provided by the user from the Sample App - Forgot Password screen to generate this link/email.
+```
+
+**Changing the password**
+
+The password reset email that the user receives includes a link that they can use to reset their password. Following this link takes the user to a screen where they can enter in a new password. Let's take a look at how the Cayenne API uses the password reset link and the user's new password to change the password.
+
+**TODO: Image of password reset form**
+
+```
+Dev to provide example code showing Cayenne API call to change the user's password.
+```
+
 #### Provisioning Devices
 
-Before a device can be [activated](#cayenne-api-using-the-api-example-walkthrough-activating-a-device) in Cayenne, it must first be provisioned. In this section we'll examine some common scenarios for provisioning devices.
+Before a device can be activated using the Cayenne API, it must first be provisioned. Provisioning a device prepares the Cayenne backend to activate the device and generates the **Hardware IDs** that are required during the [Device Activation](#cayenne-api-using-the-api-example-walkthrough-activating-a-device) process.
 
-*Note: Provisioning of devices is done in the Cayenne backend services and as such this step of the process does not get exposed to the end user. That said, the __Hardware IDs__ generated from this provisioning step do get entered into fields by the user later during the [Activating a Device](#cayenne-api-using-the-api-example-walkthrough-activating-a-device) step.*
+Let's provision several devices which we will continue to use throughout the rest of our examples. The Cayenne API provides different ways for us to provision these devices.
+
+- **[Provision devices one at a time](#cayenne-api-using-the-api-example-walkthrough-provisioning-devices-provision-single-devices)** - How to provision devices one at a time.
+- **[Bulk provision the devices](#cayenne-api-using-the-api-example-walkthrough-provisioning-devices-bulk-provisioning-devices)** - How to provision multiple devices at once.
 
 ##### Provision single Devices
 
-Devices can be provisioned one at a time, allowing for tasks such as one-off or on demand provisioning of devices. Let's provision several devices which we will continue to use throughout the rest of our examples.
+Devices can be provisioned one at a time, allowing for tasks such as one-off or on demand provisioning of devices. Let's examine using the Cayenne API to provision our example devices, one at a time.
 
 ```
 Dev to provide example code that demonstrates how to provision a single device using the API. We should show multiple examples here (even if they are the same call but generating different output Hardware IDs). These will be used later in examples of device activation, device data history, etc.
 
 0. Example in/out for a sample Gateway Device.
-1. Example in/out for Temperature Sensor.
-2. Example in/out for Door Lock Actuator.
+1. Example in/out for Tank Level Sensor.
+2. Example in/out for an XXX Actuator (example TBD based on Sample App update due 5/25).
 ```
 
 ##### Bulk Provisioning Devices
 
-If you have multiple devices that need to be provisioned, the Cayenne API allows you to batch or bulk provision the devices. Let's provision the same devices as seen in the [Single Device](#cayenne-api-using-the-api-example-walkthrough-provisioning-a-device-provision-single-devices) example, only this time we'll provision them all at once.
+If you have multiple devices that need to be provisioned, the Cayenne API allows you to batch or bulk provision the devices. Let's provision the same devices as seen in the [Single Device](#cayenne-api-using-the-api-example-walkthrough-provisioning-a-device-provision-single-devices) example, only this time we'll see how they can be provisioned all at once.
 
 **Note: There is a limit of 500 devices that can be provisioned at a time.**
 
 ```
-Dev to provide example code that demonstrates how to bulk provision devices using the Cayenne API. The example shown here should bulk provision the same 3 devices used in the preceeding 'Single device' example. That way the user can see how to do them one a time or all in one, but it will be the same Hardware IDs generated for use in the examples that follow.
+Dev to provide example code that demonstrates how to bulk provision devices using the Cayenne API. The example shown here should bulk provision the same 3 devices used in the preceeding 'Single device' example. That way the user can see how to do them one a time or all in once. Please be sure that the example in/out uses those same devices as the other example.
 ```
 
 #### Activating a Device
 
-Once our devices have been provisioned, they can then be activated and become available for users to use. Let's examine the Sample App and see how it asks the user for the required device information and then take a look at the Cayenne API to see how device activation is accomplished.
+Once a device has been provisioned, it can then be activated and added to the user's account. Let's build upon the [provisioning example](/#cayenne-api-using-the-api-example-walkthrough-provisioning-devices) and examine how the user can activate the example devices using the Tank Monitoring sample app and the Cayenne API.
 
-*NOTE: Notice how the user is asked for the __Gateway ID__ or __Sensor ID__ during the activation process. This ID is the __Hardware ID__ generated earlier during the device provisioning step.*
+Let's begin by seeing how a Gateway device is activated. After selecting to add a Gateway device, the user is asked for device information needed to activate the gateway. After entering in the information, the Cayenne API can be used to activate the device.
+
+*NOTE: Notice how the user is asked for the __Gateway ID__ during the activation process. This ID is the __Hardware ID__ generated earlier during the device provisioning step.*
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084436/Restaurant-iPhone_AddGateway-1-2.png" width="346" height="615" alt="Sample App Add Gateway screen"><br/><br/></p>
+
+```
+Dev to provide example of activating the example Gateway device. The example in/out should match the provisioned device information from our provisioning example covered earlier.
+```
+
+After adding a Gateway device, we can then add sensors and actuators that will communicate with the gateway. Let's activate the sensor and actuator example devices that we previously provisioned. After selecting to add a Device, the user is asked for device information needed to activate the sensor or actuator. After entering in the information, the Cayenne API can be used to activate the device.
+
+*NOTE: Notice how the user is asked for the __Device ID__ during the activation process. This ID is the __Hardware ID__ generated earlier during the device provisioning step.*
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084522/Restaurant-iPhone_AddSensor-1-2.png" width="346" height="615" alt="Sample App Add Sensor screen"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524104638/Restaurant-iPhone_AddSensor-1-1.png" width="346" height="615" alt="Sample App Add Sensor screen2"><br/><br/></p>
 
 ```
-Dev to provide example code that demonstrates activating the same 3 devices previously provisioned using the API.
-
-0. Gateway example.
-1. Temperature Sensor example.
-2. Door Lock Actuator example.
+Dev to provide example of activating the example Sensor & Actuator device (only one example is OK as long as there is no difference between the in/out from activation call). The example in/out should match the provisioned device information from our provisioning example covered earlier.
 ```
 
 #### Getting Real-Time Device Data
 
-After devices are activated and transmitting data to Cayenne, we can then query Cayenne for real-time data on our device. Let's take a look at the Sample App and see how it fetches and displays the current status of devices on the *Status* screen.
+After devices are activated and begin transmitting data to Cayenne, the Cayenne API can be used to query real-time data on the device. Let's take a look at the Tank Monitoring sample app and see how it uses the Cayenne API to fetch current device status so that it can be displayed on the *Status* screen.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084637/Restaurant-iPhone_Dashboard-1-4.png" width="346" height="615" alt="Sample App Status screen"><br/><br/></p>
 
 ```
-Dev to provide example code that demonstratse how to use the API to get the current device data from our example devices that were previously provisioned and activated.
+Dev to provide example code that demonstrates how to use the API to get the current device data used to in the Sample App's Status screen. Ideally the in/out shown here would continue to match the same 3 example Gateway, Sensor, Actuator devices previously provisioned and activated.
 
-E.g.
-0. Gateway example.
-1. Temperature Sensor example.
-2. Door Lock Actuator example.
+As part of this, we should make sure the output includes the same content shown on the Status screen example. E.g.
+- Alert status
+- Name
+- Level
+- Signal strength
+- Battery
+etc
 ```
 
 #### Remote Control
 
-Certain devices, such as Actuators can be remotely controlled. For example, we can change the state of our example **Door Lock** and remotely *Lock* or *Unlock* the device. Let's take a look at the Sample App and the Cayenne API to see how this is accomplished.
+```
+Note from Brent: Unclear what actuator example will be present in the Tank Monitoring Sample App. This section to be updated
+when Ryan updates example mock on 5/25.
+```
+
+Certain devices, such as Actuators can be remotely controlled. For example, we can change the state of our example **Door Lock** and remotely *Lock* or *Unlock* the device. Let's take a look at the Tank Monitoring sample app and the Cayenne API to see how this is accomplished. Changing the status of an actuator can be done from the sample app's *Status* screen.
 
 **TODO: Image of Sample App - Manage screen with Door Actuator toggle and maybe Light Dimmer slider highlighted**
 
@@ -178,50 +219,49 @@ Dev to provide example code that demonstrates how to use the API to remotely cha
 
 #### Getting Device History
 
-Cayenne maintains historical information on data received for devices. Let's examine using the Cayenne API to get historical data for our example devices and some examples of how this type of data can be displayed to users.
+Cayenne maintains historical information on data received from connected devices. Let's examine using the Cayenne API to query historical data for our example devices and see some very different examples of how the Tank Monitoring sample app uses this data to display the information to the user.
 
 ##### Sensor History example
 
-Tapping on a device from the Sample App's *Status* screen opens a *Device History* screen which displays historical device data. Let's explore how this is accomplished using the Cayenne API.
+Tapping on a device from the Tank Monitoring sample app's *Status* screen opens the *Device History* screen which displays historical device data. The user can use this table view to filter and examine data. Let's explore how this is accomplished using the Cayenne API.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084752/Restaurant-iPhone_Sensor-1-1.png" width="346" height="615" alt="Sample App Device History screen"><br/><br/></p>
 
 ```
-Dev to provide example code for how the Monitor & Control Device history tab uses the Cayenne API to fetch the historical data for devices. We should have an example for both our exmaple sensor & actuator used so far in our examples.
+Dev to provide example code for how the Sample app history details screen uses the Cayenne API to fetch the historical data for display. 
 
-0. Example for Temperatue Sensor history.
-1. Example for Door Lock Actuator history.
+IF the Actuator and Temperature in/out differ, we should document both examples in code.
 ```
 
 ##### Asset Tracking example
 
-The Sample App's *Map* screen provides another great example of using historical device data in a unique way. In this case, for display of device location and status on a map. Let's take a look at the Asset Tracking feature and how the Cayenne API is used to accomplish this.
+The Tank Monitoring sample app's *Map* screen provides another great example of using historical device data in a unique way. In this case, for display of device location and status on a map. Let's take a look at this *Asset Tracking* feature and how the Cayenne API is used to accomplish this.
 
 **Displaying device location on a map**
 
-On the *Map* screen in the Sample app, the user can see the location and movement of their devices on a map. This unique presentation makes use of current and historical device information provided in the Cayenne API to visualize device location data.
+On the *Map* screen in the Tank Monitoring sample app, the user can see the location and movement of their devices on a map. This unique presentation makes use of current and historical device information provided in the Cayenne API to visualize device location data.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524091320/Restaurant-iPhone_SensorMap-1-13.png" width="660" height="371" alt="Sample App rotated map screen"><br/><br/></p>
 
 ```
-Dev to provide example code for how to the Sampe App fetches the current and past location data so that the map view can be shown to the user.
+Dev to provide example code for how to the Sampe App fetches the current and past location data so that the Map view can be shown to the user.
 
 Note from Brent: How does our API make use of the Google Maps API for the map? Should we be detailing how to make use of the Google Map API in our API as well? I didn't know if this was exposed to the user, or if it is something that our API does not yet provide.
 ```
 
 **Displaying historical device data on a map**
 
-In addition to visualizing the location of the device on a map, a user can tap on a device marker to pull up additional information. Within the popup dialog that appears, the historical information on the device is used to display the status of the device and its sensors at that point in time.
+In addition to visualizing the location of the device on a map, a user can tap on a device marker to pull up additional information. Within the popup dialog that appears, the historical information on the device is displayed. This allows the Tank Monitoring sample app user to not only see where the device was, but also to see its status at that time.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524091339/Restaurant-iPhone_SensorMap-1-9.png" width="346" height="615" alt="Sample App Map screen"><br/><br/></p>
 
 ```
-Dev to provide example code for how the Sampe App fetches historical device status, sensor status, etc as shown in popup opened for marker.
+Dev to provide example code for how the Sample App fetches historical device status, sensor status, etc as shown in Map screen details popup for a device.
 ```
 
 #### Alerts
 
-Alerts allow you to receive notifications when certain conditions are met. Let's take a look at the Sample app and see how the user can create an Alert and manage existing alerts.
+Alerts allow you to receive notifications when certain conditions are met. Let's take a look at the Tank Monitoring sample app and see how the user can create an Alert and manage existing alerts using the Cayenne API.
 
 **Creating an Alert**
 
@@ -235,7 +275,7 @@ Dev to provide example code for how to create an Alert using the information obt
 
 **Managing Alerts**
 
-After setting up alerts, users will want to be able to manage them. Let's take a look at the Sample App's *Alerts* screen. From this screen the user can see a list of existing alerts, information on each alert, and they can manage the alerts.
+After setting up alerts, users will want to be able to manage them. Let's take a look at the Tank Monitoring sample app's *Alerts* screen. From this screen the user can see a list of existing alerts, information on each alert, and they can manage the alerts.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524100107/Restaurant-iPhone_Alert-1-2.png" width="346" height="615" alt="Sample App Alerts screen"><br/><br/></p>
 
@@ -249,9 +289,33 @@ Dev to provide example code for how to manange existing alerts.
 
 #### Multi-Tenant
 
+Previoulsy we looked at the Tank Monitoring sample app and manging a few different devices, all of which were being managed together. But what if we have several different Gateways, or what if we are managing devices for multiple customers and at multiple locations? This is where the Multi-Tenant features of the Cayenne API can help.
+
+Let's take a look at Cayenne's own **Monitoring & Control solution** and how it uses the Cayenne API to demonstrate use of the Multi-Tenant features found in the Cayenne API.
+
+**TODO: Image of M&C Manage screen**
+
+##### Creating Companies, Locations
+
+After creating an account with Monitoring & Control, the user is automatically guided to create their first Company and Location. By doing so, the user can start to establish a hierarchy under which new Gateway and Devices can be added for later monitoring. The user is first asked to create a Company, entering in the required Information & Address as well as any Company Contacts. The Cayenne API can then be used to create the Company.
+
+**TODO: Image of M&C Add Company screen**
+
 ```
-Demonstration of the multi-tenant features provided in the API. Most likely using the Monitoring & Control solution as an example?
+Dev to provide example of how M&C uses Cayenne API to create a Company and Company Contacts.
 ```
+
+After creating a Company, the user is then guided to add one or more Locations for the Company. To do so, the user must provide Location Information & Address as well as any Location Contacts. The Cayenne API can then be used to create the Location.
+
+**TODO: Image of M&C Add Location screen**
+
+```
+Dev to provide example of how M&C uses Cayenne API to create a Company and Company Contacts.
+```
+
+##### Querying Company, Location
+
+TBD
 
 ### Samples
 
