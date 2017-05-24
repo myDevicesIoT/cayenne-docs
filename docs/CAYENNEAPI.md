@@ -16,19 +16,19 @@ In order to use the Cayenne API, you will need to first create a Cayenne account
 
 ### Obtain your Cayenne API Key
 
-Before you can use the Cayenne API you will need to obtain your **App Key** and **App Password**. In order for your custom application to successfully connect with Cayenne you will need to provide these keys when using the Cayenne API.
+Before you can use the Cayenne API you will need to obtain your **App Key** and **App Secret**. In order for your custom application to successfully connect with Cayenne you will need to provide these keys when using the Cayenne API.
 
 *TIP: For more information how these keys are used, see the [Authentication section](#cayenne-api-http-api-reference-using-the-http-api-authenticating) of the HTTP API documentation.*
 
-To obtain your keys, log into your account and select **Create App**. The *App Credentials* page that appears contains your keys. Copy & paste the **App Key** and **App Password** into your code.
+To obtain your keys, log into your account and select **Create App**. The *App Credentials* page that appears contains your keys. Copy & paste the **App Key** and **App Secret** into your code.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170515085608/Cayenne-dashboard-Create-App.png" width="660" height="380" alt="Create App example"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524085816/Caynne-API-Create-App.png" width="660" height="415" alt="Create App example"><br/><br/></p>
 
 ## Using the API
 
 In this section you will find examples of how to put the Cayenne API into use.
 
-- [Example Walkthrough](#cayenne-api-using-the-api-example-walkthrough): Guides you through using each feature of the API, covering real examples found in our Sample App, the Cayenne product as well as other real-world solutions.
+- [Example Walkthrough](#cayenne-api-using-the-api-example-walkthrough): Guides you through using each feature of the API, covering a real example found in our Tank Monitoring Sample App.
 - [Samples](#cayenne-api-using-the-api-samples): Links to additional sample solutions found on our GitHub.
 
 In addition to the examples provided, you will find additional code snippets and notes throughout the API References. You may also wish to refer to the appropriate reference information for the API or SDK that you are using in our project.
@@ -40,12 +40,12 @@ In addition to the examples provided, you will find additional code snippets and
 
 ### Example Walkthrough
 
-In this section we will cover practical examples of putting the Cayenne API into use. We will demonstrate each feature found in the Cayenne API, showing you images and code from examples such as our Sample App, the Cayenne product and other real-world solutions.
+In this section we will cover practical examples of putting the Cayenne API into use. We will demonstrate each feature found in the Cayenne API, showing you images and code from examples from our Tank Monitoring sample app.
 
 ```
-In this section we will cover all the features of the Cayenne public API. We can use the Sample App by default for most items. In some instances the Sample App may not cover the concept, or it may make sense to show additional examples. In such instances we can reference the Cayenne dashboard and the Monitor & Control solution as additional examples.
+In this section we will cover all the features of the Cayenne public API. We can use the Sample App by default for most items.
 
-The goal here is to have Brent provide basic Text covering what we're showing, Images of the Sample App or Cayenne solutions and then code snippets provided by Dev that demonstrate actual usage of the API. This mixture provides the most useful experience and makes it easy to read and follow.
+The goal here is to have Brent provide basic Text covering what we're showing, Images of the Sample App and then code snippets provided by Dev that demonstrate actual usage of the API. This mixture provides the most useful experience and makes it easy to read and follow.
 ```
 
 #### Creating an account
@@ -150,7 +150,7 @@ Dev to provide example code that demonstrates activating the same 3 devices prev
 
 #### Getting Real-Time Device Data
 
-After devices are activated, they will start transmitting data to Cayenne. We can then query Cayenne for real-time device data and display it to the user. Let's take a look at the Sample App and see how it displays our example devices.
+After devices are activated, they will start transmitting data to Cayenne. We can then query Cayenne for real-time device data and display it to the user. Let's take a look at the Sample App and see how it displays the current status of devices.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084637/Restaurant-iPhone_Dashboard-1-4.png" width="346" height="615" alt="Sample App Manage screen"><br/><br/></p>
 
@@ -176,9 +176,9 @@ Dev to provide example code that demonstrates how to use the API to remotely cha
 
 Cayenne maintains historical information on data received for devices. Let's examine using the Cayenne API to get historical data for our example devices and some examples of how this type of data can be displayed to users.
 
-##### Monitor & Control Sensor History example
+##### Sensor History example
 
-Let's take a look at Cayenne's Monitor & Control solution. From the Manage screen the user can see the current status of their device, however they can also click on a device to access a *Device History* screen which displays historical device data. Let's explore how this is accomplished using the Cayenne API.
+Tapping on a device from the Sample App's *Status* screen opens a *Device History* screen which displays historical device data. Let's explore how this is accomplished using the Cayenne API.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084752/Restaurant-iPhone_Sensor-1-1.png" width="346" height="615" alt="Sample App Device History screen"><br/><br/></p>
 
@@ -189,41 +189,60 @@ Dev to provide example code for how the Monitor & Control Device history tab use
 1. Example for Door Lock Actuator history.
 ```
 
-##### Cayenne Asset Tracking example
+##### Asset Tracking example
 
-Cayenne's [Asset Tracking](#features-asset-tracking) provides another great example of using historical device data in a unique way. In this case, for display of device location and status on a map. Let's take a look at the Asset Tracking feature and how the Cayenne API is used to accomplish this.
+The Sample App's *Map* screen provides another great example of using historical device data in a unique way. In this case, for display of device location and status on a map. Let's take a look at the Asset Tracking feature and how the Cayenne API is used to accomplish this.
 
 ```
 Dev to provide example code for how to use the Cayenne API to fetch device information. In the following examples we will show them how to use this data to display it to the user as:
 
-0. Display of historical location markers on a map (Asset Tracking in Cayenne).
-1. Display of device status for one of those markers (e.g. user clicks on marker on map, sees status of device at that time).
+0. Display of historical location markers on a map (Map view in Sample App).
+1. Display of device status for one of those markers (e.g. user taps on marker on map in sample app, sees status of device at that time).
 
 Note from Brent: I'm assuming a single call will provide location data as well as the historical device status at that time. If not, we should separate these and put them down below under the appropriate example highlighted to the user.
 ```
 
 **Displaying device location on a map**
 
-Cayenne's Asset Tracking feature allows the user to see the historical location information on a map. This unique presentation uses the historical device information provided in the Cayenne API to visualize device location data.
+On the *Map* screen in the Sample app, the user can see the location and movement of their devices on a map. This unique presentation uses the historical device information provided in the Cayenne API to visualize device location data.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804145558/Map-view-Device-Map-trails1.png" width="600" height="416" alt="Cayenne LoRa Tracking example"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524091320/Restaurant-iPhone_SensorMap-1-13.png" width="346" height="615" alt="Sample App rotated map screen"><br/><br/></p>
 
-**Displaying device location on a map**
+**Displaying historical device data on a map**
 
-In addition to visualizing the location of the device on a map, a Cayenne user can click on a device marker to pull up additional information. Within the popup dialog that appears, the historical information on the device is used to display the status of the device and its sensors at that point in time.
+In addition to visualizing the location of the device on a map, a user can tap on a device marker to pull up additional information. Within the popup dialog that appears, the historical information on the device is used to display the status of the device and its sensors at that point in time.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160804150250/Map-view-Device-Map-popup-details1.png" width="600" height="416" alt="Device Map Features"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524091339/Restaurant-iPhone_SensorMap-1-9.png" width="346" height="615" alt="Sample App Map screen"><br/><br/></p>
 
 
-#### Creating a Trigger & Alert
+#### Alerts
+
+Alerts allow you to receive notifications when certain conditions are met. Let's take a look at the Sample app and see how the user can create an Alert and manage existing alerts.
+
+**Creating an Alert**
+
+To create a new Alert, the user must specify information on what conditions should be met and who should be notified. After obtaining the information from the user, a new Alert can be created.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524100109/Restaurant-iPhone_Alert-1-4.png" width="346" height="615" alt="Sample App create alert screen"><br/><br/></p>
+
 ```
-Demonstrate creation of an example Trigger (and alert notification?) using API.
+Dev to provide example code for how to create an Alert using the information obtained from the user in the Sample App.
 ```
 
-#### Creating a Scheduled event
+**Managing Alerts**
+
+After setting up alerts, users will want to be able to manage them. Let's take a look at the Sample App's *Alerts* screen. From this screen the user can see a list of existing alerts, information on the alert, and they can manage the alerts.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524100107/Restaurant-iPhone_Alert-1-2.png" width="346" height="615" alt="Sample App Alerts screen"><br/><br/></p>
+
 ```
-Demonstration of creating (and execution?) of a Scheduled event using the API.
+Dev to provide example code for how to manange existing alerts.
+
+0. Example code for fetching information on current status (# times run, ON/OFF, name, etc) for display on Alerts screen in Sample App.
+1. Maybe example code for how to toggle an Alert on/off?
+2. Maybe example code for how to update existing Alert information? E.g. user edits and saves changes.
 ```
+
 #### Multi-Tenant
 ```
 Demonstration of the multi-tenant features provided in the API. Most likely using the M&C solution as an example?
