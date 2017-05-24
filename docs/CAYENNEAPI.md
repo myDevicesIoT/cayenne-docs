@@ -107,7 +107,7 @@ Dev to provide example code showing a call using the account info provided by th
 
 Before a device can be [activated](#cayenne-api-using-the-api-example-walkthrough-activating-a-device) in Cayenne, it must first be provisioned. In this section we'll examine some common scenarios for provisioning devices.
 
-*Note: The Cayenne applications such as the Sample App do not contain a UI component for this step. That said, the __Hardware IDs__ generated during device provision step are later used in the Sample App UI for device activation.*
+*Note: Provisioning of devices is done in the Cayenne backend services and as such this step of the process does not get exposed to the end user. That said, the __Hardware IDs__ generated from this provisioning step do get entered into fields by the user later during the [Activating a Device](#cayenne-api-using-the-api-example-walkthrough-activating-a-device) step.*
 
 ##### Provision single Devices
 
@@ -135,9 +135,13 @@ Dev to provide example code that demonstrates how to bulk provision devices usin
 
 Once our devices have been provisioned, they can then be activated and become available for users to use. Let's examine the Sample App and see how it asks the user for the required device information and then take a look at the Cayenne API to see how device activation is accomplished.
 
+*NOTE: Notice how the user is asked for the __Gateway ID__ or __Sensor ID__ during the activation process. This ID is the __Hardware ID__ generated earlier during the device provisioning step.*
+
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084436/Restaurant-iPhone_AddGateway-1-2.png" width="346" height="615" alt="Sample App Add Gateway screen"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084522/Restaurant-iPhone_AddSensor-1-2.png" width="346" height="615" alt="Sample App Add Sensor screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524104638/Restaurant-iPhone_AddSensor-1-1.png" width="346" height="615" alt="Sample App Add Sensor screen2"><br/><br/></p>
 
 ```
 Dev to provide example code that demonstrates activating the same 3 devices previously provisioned using the API.
@@ -149,13 +153,14 @@ Dev to provide example code that demonstrates activating the same 3 devices prev
 
 #### Getting Real-Time Device Data
 
-After devices are activated, they will start transmitting data to Cayenne. We can then query Cayenne for real-time device data and display it to the user. Let's take a look at the Sample App and see how it displays the current status of devices.
+After devices are activated and transmitting data to Cayenne, we can then query Cayenne for real-time data on our device. Let's take a look at the Sample App and see how it fetches and displays the current status of devices on the *Status* screen.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084637/Restaurant-iPhone_Dashboard-1-4.png" width="346" height="615" alt="Sample App Manage screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084637/Restaurant-iPhone_Dashboard-1-4.png" width="346" height="615" alt="Sample App Status screen"><br/><br/></p>
 
 ```
 Dev to provide example code that demonstratse how to use the API to get the current device data from our example devices that were previously provisioned and activated.
 
+E.g.
 0. Gateway example.
 1. Temperature Sensor example.
 2. Door Lock Actuator example.
@@ -192,22 +197,17 @@ Dev to provide example code for how the Monitor & Control Device history tab use
 
 The Sample App's *Map* screen provides another great example of using historical device data in a unique way. In this case, for display of device location and status on a map. Let's take a look at the Asset Tracking feature and how the Cayenne API is used to accomplish this.
 
-```
-Dev to provide example code for how to use the Cayenne API to fetch device information. In the following examples we will show them how to use this data to display it to the user as:
-
-0. Display of historical location markers on a map (Map view in Sample App).
-1. Display of device status for one of those markers (e.g. user taps on marker on map in sample app, sees status of device at that time).
-
-Note from Brent: I'm assuming a single call will provide location data as well as the historical device status at that time. If not, we should separate these and put them down below under the appropriate example highlighted to the user.
-
-Also UNKNOWN: How does our API make use of the Google Maps API for this stuff? It would be nice to highlight this information in our docs, but I need help with the details.
-```
-
 **Displaying device location on a map**
 
-On the *Map* screen in the Sample app, the user can see the location and movement of their devices on a map. This unique presentation uses the historical device information provided in the Cayenne API to visualize device location data.
+On the *Map* screen in the Sample app, the user can see the location and movement of their devices on a map. This unique presentation makes use of current and historical device information provided in the Cayenne API to visualize device location data.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524091320/Restaurant-iPhone_SensorMap-1-13.png" width="660" height="371" alt="Sample App rotated map screen"><br/><br/></p>
+
+```
+Dev to provide example code for how to the Sampe App fetches the current and past location data so that the map view can be shown to the user.
+
+Note from Brent: How does our API make use of the Google Maps API for the map? Should we be detailing how to make use of the Google Map API in our API as well? I didn't know if this was exposed to the user, or if it is something that our API does not yet provide.
+```
 
 **Displaying historical device data on a map**
 
@@ -215,6 +215,9 @@ In addition to visualizing the location of the device on a map, a user can tap o
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524091339/Restaurant-iPhone_SensorMap-1-9.png" width="346" height="615" alt="Sample App Map screen"><br/><br/></p>
 
+```
+Dev to provide example code for how the Sampe App fetches historical device status, sensor status, etc as shown in popup opened for marker.
+```
 
 #### Alerts
 
@@ -232,7 +235,7 @@ Dev to provide example code for how to create an Alert using the information obt
 
 **Managing Alerts**
 
-After setting up alerts, users will want to be able to manage them. Let's take a look at the Sample App's *Alerts* screen. From this screen the user can see a list of existing alerts, information on the alert, and they can manage the alerts.
+After setting up alerts, users will want to be able to manage them. Let's take a look at the Sample App's *Alerts* screen. From this screen the user can see a list of existing alerts, information on each alert, and they can manage the alerts.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524100107/Restaurant-iPhone_Alert-1-2.png" width="346" height="615" alt="Sample App Alerts screen"><br/><br/></p>
 
