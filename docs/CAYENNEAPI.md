@@ -28,7 +28,7 @@ To obtain your keys, log into your account and select **Create App**. The *App C
 
 In this section you will find examples of how to put the Cayenne API into use.
 
-- [Example Walkthrough](#cayenne-api-using-the-api-example-walkthrough): Guides you through using each feature of the API, covering a real example found in our Tank Monitoring Sample App.
+- [Example Walkthrough](#cayenne-api-using-the-api-example-walkthrough): Guides you through using each feature of the API, covering an example found in our Tank Monitoring Sample App.
 - [Samples](#cayenne-api-using-the-api-samples): Links to additional sample solutions found on our GitHub.
 
 In addition to the examples provided, you will find additional code snippets and notes throughout the API References. You may also wish to refer to the appropriate reference information for the API or SDK that you are using in our project.
@@ -42,7 +42,7 @@ In addition to the examples provided, you will find additional code snippets and
 
 In this section we will cover practical examples of putting the Cayenne API into use.
 
-The example walkthrough shown here is arranged as a narrative that walks you through the various API-related topics required to implement each screen found in the **Tank Monitoring sample app**. After covering the sample app, we will discuss other real-world solutions and cover some additional concepts.
+The example walkthrough shown here is arranged as a narrative that walks you through the various API-related topics required to implement each screen found in the **Tank Monitoring sample app**. After covering the sample app, we will discuss some additional API features.
 
 1. **[Creating an account](#cayenne-api-using-the-api-example-walkthrough-creating-an-account)** - Creating a new account.
 2. **[Logging into an account](#cayenne-api-using-the-api-example-walkthrough-logging-into-account)** - Log into our account.
@@ -81,7 +81,7 @@ Once the user has a valid account, they will need to be logged in to continue. T
 
 ##### Logging in after account creation
 
-The Tank Monitoring sample app automatically logs a user into their account after having just created the user's account. This is a common user experience given that the user has already supplied their account credentials to the app. Let's build upon the [Create account](#cayenne-api-using-the-api-example-walkthrough-creating-an-account) example done earlier and see how the Cayenne API can be used to automatically log the user in.
+The Tank Monitoring sample app automatically logs a user into their account after having just created the user's account. After being logged in, the user remains logged in until they log out of the app. This is a common user experience given that the user has already supplied their account credentials to the app. Let's build upon the [Create account](#cayenne-api-using-the-api-example-walkthrough-creating-an-account) example done earlier and see how the Cayenne API can be used to automatically log the user in.
 
 ```
 Dev to provide example code that builds upon the previous 'Create Account' example and logs the user into their account.
@@ -89,7 +89,7 @@ Dev to provide example code that builds upon the previous 'Create Account' examp
 
 ##### Logging into existing account
 
-Returning users will not need to create an account, instead they simply need to log into their existing account. Let's take a look at how the Tank Monitoring sample app and asks the user for their account credentails. We will then examine how the Cayenne API can be used to log the user into their existing account using the information provided.
+After logging out of the app, returning users will want to log into their existing account. Let's take a look at how the Tank Monitoring sample app and asks the user for their account credentails. We will then examine how the Cayenne API can be used to log the user into their existing account using the information provided.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084310/Restaurant-iPhone_LogIn-1-2.png" width="346" height="615" alt="Sample App Login screen"><br/><br/></p>
 
@@ -280,15 +280,15 @@ Dev to provide example code for how to manange existing alerts.
 
 #### Multi-Tenant
 
-In addition to manging Accounts and Devices, the Cayenne API also provides functionality to help create and manage Users. Using the Multi-Tenant features found in the Cayenne API, you can create Users and assign Roles and permissions. Let's examine Cayenne's own **Monitor & Control solution** which demonstrates these features.
+In addition to manging Accounts and Devices, the Cayenne API also provides functionality to help create and manage Users. Using the Multi-Tenant features found in the Cayenne API, you can create Users and assign Roles and permissions. Let's take a look at an example which demonstrates these features.
 
 ##### Creating Users, assigning Roles & Permissions
 
-Before you can manage users and assign permission, a new User must be created. In the Monitor & Control portal, this is done from the *Add User* screen. In order to get started with creating a new user, we must first get some basic information on the user.
+Before you can manage users and assign permission, a new User must be created. As an example, this can be done from an *Add User* screen. In order to get started with creating a new user, we must first get some basic information on the user.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525090358/Multi-Tenant-2.png" width="660" height="483" alt="Multi tenant Add User 1"><br/><br/></p>
 
-After capturing the basic user information, Monitor & Control then has us define the **Role** and **Permissions** available to the user. By adjusting the user's role and permissions, we can control what access the user has within the account. Setting the user's **Role** will automatic select certain **Permissions** available. If you want, you can override the default permissions by specifying what the user should have on a per-feature basis.
+After capturing the basic user information, we then select the **Role** and **Permissions** available to the user. By adjusting the user's role and permissions, we can control what access the user has within the account. Setting the user's **Role** will determine certain default **Permissions** available. If you want, you can override the default permissions by specifying what the user should have on a per-feature basis.
 
 - **View:** Allows the User to view this feature. Without this permission, the feature will not be visible to the user.
 - **Add/Edit:** Allows the User to modify items within this feature. For example, to Add device or Edit/Update information.
@@ -296,7 +296,7 @@ After capturing the basic user information, Monitor & Control then has us define
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525090412/Multi-Tenant-3.png" width="660" height="483" alt="Multi tenant Add User 2"><br/><br/></p>
 
-After gathering the information required to create a new User, Monitor & Control uses the Cayenne API to create a new user. Let's examine how this is accomplished.
+After gathering the information required to create a new User, we can then use the Cayenne API to create a new user. Let's examine how this is accomplished.
 
 ```
 Dev to provide example of creating a new User and assigning permissions using Cayenne API.
@@ -304,14 +304,14 @@ Dev to provide example of creating a new User and assigning permissions using Ca
 
 ##### Managing existing users
 
-After creating some Users, we need to be able to manage them. Let’s take a look at Monitor & Control's *Users* screen. From this screen you can see a list of existing users and we can manage the existing user from here. Let's see how these tasks are accomplished using the Cayenne API.
+After creating some Users, we need to be able to manage them. Let’s take a look at an example *Users* screen. From this screen you can see a list of existing users and we can manage the existing user from here. Let's see how these tasks are accomplished using the Cayenne API.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525090259/Multi-Tenant-1.png" width="660" height="290" alt="Multi tenant manage Users screen"><br/><br/></p>
 
 ```
 Dev to provide example code for how to manange existing users.
 
-0. Example code for fetching information on the user so that it can be displayed such as on M&C Users screen.
+0. Example code for fetching information on the user so that it can be displayed such as on an example Users screen.
 1. Maybe example code for how to update existing User information? E.g. user edits and saves changes.
 ```
 
