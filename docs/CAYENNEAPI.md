@@ -22,7 +22,7 @@ Before you can use the Cayenne API you will need to obtain your **App Key** and 
 
 To obtain your keys, log into your account and select **Create App**. The *App Credentials* page that appears contains your keys. Copy & paste the **App Key** and **App Secret** into your code.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524085816/Caynne-API-Create-App.png" width="660" height="415" alt="Create App example"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525132751/Caynne-API-Create-App.png" width="660" height="414" alt="Create App example"><br/><br/></p>
 
 ## Using the API
 
