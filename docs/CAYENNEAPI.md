@@ -187,7 +187,10 @@ After devices are activated and begin transmitting data to Cayenne, the Cayenne 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525074129/Tank-Monitoring-Status-screen.png" width="346" height="615" alt="Sample App Status screen"><br/><br/></p>
 
 ```
-Dev to provide example code that demonstrates how to use the API to get the current device data used to in the Sample App's Status screen. Ideally the in/out shown here would continue to match the same 3 example Gateway, Sensor, Actuator devices previously provisioned and activated.
+Dev to provide example code that demonstrates how to use the API to get the current device data used to in the Sample App's Status screen.
+
+
+1. Ideally the in/out shown here would continue to match the same 3 example Gateway, Sensor, Actuator devices previously provisioned and activated.
 
 As part of this, we should make sure the output includes the same content shown on the Status screen example. E.g.
 - Status
@@ -196,6 +199,8 @@ As part of this, we should make sure the output includes the same content shown 
 - Signal strength
 - Battery
 etc
+
+2. We should also cover how to use the API to filter results.
 ```
 
 #### Remote Control
