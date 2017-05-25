@@ -237,6 +237,9 @@ On the *Map* screen in the Tank Monitoring sample app, the user can see the loca
 ```
 Dev to provide example code for how to the Sampe App fetches the current and past location data so that the Map view can be shown to the user.
 
+0. Example of a device with a fixed (manual) address.
+1. Example of a device using GPS data.
+
 Note from Brent: How does our API make use of the Google Maps API for the map? Should we be detailing how to make use of the Google Map API in our API as well? I didn't know if this was exposed to the user, or if it is something that our API does not yet provide.
 ```
 
