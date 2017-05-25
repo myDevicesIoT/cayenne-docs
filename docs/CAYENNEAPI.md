@@ -53,7 +53,7 @@ The example walkthrough shown here is arranged as a narrative that walks you thr
 7. **[Remote control](#cayenne-api-using-the-api-example-walkthrough-remote-control)** - Controlling devices remotely.
 8. **[Device History](#cayenne-api-using-the-api-example-walkthrough-getting-device-history)** - Fetching historical device data.
 9. **[Alerts](#cayenne-api-using-the-api-example-walkthrough-alerts)** - Creating and managing Alerts.
-10. **[Multi-Tenant](#cayenne-api-using-the-api-example-walkthrough-multi-tenant)** - Creating and managing Companies, Locations and Contacts.
+10. **[Multi-Tenant](#cayenne-api-using-the-api-example-walkthrough-multi-tenant)** - Creating and managing Users.
 
 #### Creating an account
 
@@ -89,7 +89,7 @@ Dev to provide example code that builds upon the previous 'Create Account' examp
 
 ##### Logging into existing account
 
-Returning users will not need to create their account, instead they simply need to log into their existing account. Let's take a look at how the Tank Monitoring sample app and asks the user for their account credentails. We will then examine how the Cayenne API can be used to log the user into their existing account using this information.
+Returning users will not need to create an account, instead they simply need to log into their existing account. Let's take a look at how the Tank Monitoring sample app and asks the user for their account credentails. We will then examine how the Cayenne API can be used to log the user into their existing account using the information provided.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084310/Restaurant-iPhone_LogIn-1-2.png" width="346" height="615" alt="Sample App Login screen"><br/><br/></p>
 
@@ -103,7 +103,7 @@ In the event that a user has forgotten their password, the Cayenne API can be us
 
 **Generate password reset email**
 
-In order to reset the user's password, we will need some of the user's existing account credentials. After providing this information, we can use the Cayenne API to generate and send an email containing a password reset link.
+In order to reset the user's password, we first need to know the users login information. After providing this information, we can use the Cayenne API to generate and send an email containing a password reset link.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524083818/Restaurant-iPhone_LogIn-1-3.png" width="346" height="615" alt="Sample App Forgot password screen"><br/><br/></p>
 
@@ -115,7 +115,7 @@ Dev to provide example code showing a call using the account info provided by th
 
 **Changing the password**
 
-The password reset email that the user receives includes a link that they can use to reset their password. Following this link takes the user to a screen where they can enter in a new password. Let's take a look at how the Cayenne API uses the password reset link and the user's new password to change the password.
+The password reset email that the user receives includes a link that they can use to reset their password. Following this link takes the user to a screen where they can create a new password. Let's take a look at how the Cayenne API uses the password reset link and the user's desired new password to change the password.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524164522/Tank-Monitoring-Change-password-web.png" width="256" height="210" alt="Example new password creation web page"><br/><br/></p>
 
@@ -254,7 +254,7 @@ Dev to provide example code for how the Sample App fetches historical device sta
 
 Alerts allow you to receive notifications when certain conditions are met. Let's take a look at the Tank Monitoring sample app and see how the user can create an Alert and manage existing alerts using the Cayenne API.
 
-**Creating an Alert**
+##### Creating an Alert
 
 To create a new Alert, the user must specify information on what conditions should be met and who should be notified. After obtaining the information from the user, a new Alert can be created.
 
@@ -264,7 +264,7 @@ To create a new Alert, the user must specify information on what conditions shou
 Dev to provide example code for how to create an Alert using the information obtained from the user in the Sample App.
 ```
 
-**Managing Alerts**
+##### Managing Alerts
 
 After setting up alerts, users will want to be able to manage them. Let's take a look at the Tank Monitoring sample app's *Alerts* screen. From this screen the user can see a list of existing alerts, information on each alert, and they can manage the alerts.
 
@@ -280,43 +280,50 @@ Dev to provide example code for how to manange existing alerts.
 
 #### Multi-Tenant
 
-Previoulsy we looked at the Tank Monitoring sample app and manging a few different devices, all of which were being managed together. But what if we have several different Gateways, or what if we are managing devices for multiple customers and at multiple locations? This is where the Multi-Tenant features of the Cayenne API can help.
+In addition to manging Accounts and Devices, the Cayenne API also provides functionality to help create and manage Users. Using the Multi-Tenant features found in the Cayenne API, you can create Users and assign Roles and permissions. Let's examine Cayenne's own **Monitor & Control solution** which demonstrates these features.
 
-Let's take a look at Cayenne's own **Monitoring & Control solution** and how it uses the Cayenne API to demonstrate use of the Multi-Tenant features found in the Cayenne API.
+##### Creating Users, assigning Roles & Permissions
 
-**TODO: Image of M&C Manage screen**
+Before you can manage users and assign permission, a new User must be created. In the Monitor & Control portal, this is done from the *Add User* screen. In order to get started with creating a new user, we must first get some basic information on the user.
 
-##### Creating Companies, Locations
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525090358/Multi-Tenant-2.png" width="660" height="483" alt="Multi tenant Add User 1"><br/><br/></p>
 
-After creating an account with Monitoring & Control, the user is automatically guided to create their first Company and Location. By doing so, the user can start to establish a hierarchy under which new Gateway and Devices can be added for later monitoring. The user is first asked to create a Company, entering in the required Information & Address as well as any Company Contacts. The Cayenne API can then be used to create the Company.
+After capturing the basic user information, Monitor & Control then has us define the **Role** and **Permissions** available to the user. By adjusting the user's role and permissions, we can control what access the user has within the account. Setting the user's **Role** will automatic select certain **Permissions** available. If you want, you can override the default permissions by specifying what the user should have on a per-feature basis.
 
-**TODO: Image of M&C Add Company screen**
+- **View:** Allows the User to view this feature. Without this permission, the feature will not be visible to the user.
+- **Add/Edit:** Allows the User to modify items within this feature. For example, to Add device or Edit/Update information.
+- **Delete:** Allows the User to delete items within this feature. For example, to remove devices.
 
-```
-Dev to provide example of how M&C uses Cayenne API to create a Company and Company Contacts.
-```
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525090412/Multi-Tenant-3.png" width="660" height="483" alt="Multi tenant Add User 2"><br/><br/></p>
 
-After creating a Company, the user is then guided to add one or more Locations for the Company. To do so, the user must provide Location Information & Address as well as any Location Contacts. The Cayenne API can then be used to create the Location.
-
-**TODO: Image of M&C Add Location screen**
+After gathering the information required to create a new User, Monitor & Control uses the Cayenne API to create a new user. Let's examine how this is accomplished.
 
 ```
-Dev to provide example of how M&C uses Cayenne API to create a Company and Company Contacts.
+Dev to provide example of creating a new User and assigning permissions using Cayenne API.
 ```
 
-##### Querying Company, Location
+##### Managing existing users
 
-TBD
+After creating some Users, we need to be able to manage them. Let’s take a look at Monitor & Control's *Users* screen. From this screen you can see a list of existing users, information on their permissions, and we can manage the user from here.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525090259/Multi-Tenant-1.png" width="660" height="290" alt="Multi tenant manage Users screen"><br/><br/></p>
+
+```
+Dev to provide example code for how to manange existing users.
+
+0. Example code for fetching information on the user so that it can be displayed such as on M&C Users screen.
+1. Maybe example code for how to update existing User information? E.g. user edits and saves changes.
+```
 
 ### Samples
 
-The Cayenne API repo on GitHub includes a number of samples illustrating the use of the Cayenne API in your product.
+The Cayenne API repo on GitHub includes a number of additional samples that illustrate the use of the Cayenne API.
 
 ```
 Dev to provide GitHub repo for Samples and a list of samples that should be linked here in docs.
 ```
 
-- Sample App: We should describe and link to our sample app as the first example.
+- Tank Monitoring Sample App: A sample app that demonstrates the Cayenne API features. This is the sample app used throughout the [Example walkthrough section](#cayenne-api-using-the-api-example-walkthrough).
 - Another Example link: Short description of what the sample provides.
 
 ### Best practices
