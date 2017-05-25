@@ -127,7 +127,7 @@ Dev to provide example code showing Cayenne API call to change the user's passwo
 
 Before a device can be activated using the Cayenne API, it must first be provisioned. Provisioning a device prepares the Cayenne backend to activate the device and generates the **Hardware IDs** that are required during the [Device Activation](#cayenne-api-using-the-api-example-walkthrough-activating-a-device) process.
 
-Let's provision several devices which we will continue to use throughout the rest of our examples. The Cayenne API provides different ways for us to provision these devices.
+Let's provision an example Gateway, Sensor and Actuator which we will continue to use throughout the rest of our examples. The Cayenne API provides different ways for us to provision these devices.
 
 - **[Provision devices one at a time](#cayenne-api-using-the-api-example-walkthrough-provisioning-devices-provision-single-devices)** - How to provision devices one at a time.
 - **[Bulk provision the devices](#cayenne-api-using-the-api-example-walkthrough-provisioning-devices-bulk-provisioning-devices)** - How to provision multiple devices at once.
@@ -141,7 +141,7 @@ Dev to provide example code that demonstrates how to provision a single device u
 
 0. Example in/out for a sample Gateway Device.
 1. Example in/out for Tank Level Sensor.
-2. Example in/out for an XXX Actuator (example TBD based on Sample App update due 5/25).
+2. Example in/out for an Door ("Gate") Lock Actuator.
 ```
 
 ##### Bulk Provisioning Devices
@@ -170,7 +170,7 @@ Dev to provide example of activating the example Gateway device. The example in/
 
 After adding a Gateway device, we can then add sensors and actuators that will communicate with the gateway. Let's activate the sensor and actuator example devices that we previously provisioned. After selecting to add a Device, the user is asked for device information needed to activate the sensor or actuator. After entering in the information, the Cayenne API can be used to activate the device.
 
-*NOTE: Notice how the user is asked for the __Device ID__ during the activation process. This ID is the __Hardware ID__ generated earlier during the device provisioning step.*
+*NOTE: Notice how the user is asked for the __ID__ during the activation process. This ID is the __Hardware ID__ generated earlier during the device provisioning step.*
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084522/Restaurant-iPhone_AddSensor-1-2.png" width="346" height="615" alt="Sample App Add Sensor screen"><br/><br/></p>
 
@@ -184,15 +184,15 @@ Dev to provide example of activating the example Sensor & Actuator device (only 
 
 After devices are activated and begin transmitting data to Cayenne, the Cayenne API can be used to query real-time data on the device. Let's take a look at the Tank Monitoring sample app and see how it uses the Cayenne API to fetch current device status so that it can be displayed on the *Status* screen.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084637/Restaurant-iPhone_Dashboard-1-4.png" width="346" height="615" alt="Sample App Status screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525074129/Tank-Monitoring-Status-screen.png" width="346" height="615" alt="Sample App Status screen"><br/><br/></p>
 
 ```
 Dev to provide example code that demonstrates how to use the API to get the current device data used to in the Sample App's Status screen. Ideally the in/out shown here would continue to match the same 3 example Gateway, Sensor, Actuator devices previously provisioned and activated.
 
 As part of this, we should make sure the output includes the same content shown on the Status screen example. E.g.
-- Alert status
+- Status
 - Name
-- Level
+- Reading
 - Signal strength
 - Battery
 etc
@@ -200,17 +200,12 @@ etc
 
 #### Remote Control
 
-```
-Note from Brent: Unclear what actuator example will be present in the Tank Monitoring Sample App. This section to be updated
-when Ryan updates example mock on 5/25.
-```
+In addition to monitoring Sensor devices, the Cayenne API also supports Actuators. Actuators devices allow you to not only monitor the status of the actuator, but also to remotely control their state. For example, you can remotely lock or unlock a Door Lock, or change the brightness of a Light. The Tank Monitoring sample app includes an example of a Door Lock that we can exmaine. From the *Status* screen we see that there is a toggle shown next to the **Gate Lock** device. The user is able to tap on this button to switch the current lock state of the device. Let's take a look at how this is accomplish using the Cayenne API.
 
-Certain devices, such as Actuators can be remotely controlled. For example, we can change the state of our example **Door Lock** and remotely *Lock* or *Unlock* the device. Let's take a look at the Tank Monitoring sample app and the Cayenne API to see how this is accomplished. Changing the status of an actuator can be done from the sample app's *Status* screen.
-
-**TODO: Image of Sample App - Manage screen with Door Actuator toggle and maybe Light Dimmer slider highlighted**
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525074533/Tank-Monitoring-Status-screen-actuator-highlight.png" width="492" height="615" alt="Sample App Device History screen"><br/><br/></p>
 
 ```
-Dev to provide example code that demonstrates how to use the API to remotely change the state of our example Door Lock Actuator.
+Dev to provide example code that demonstrates how to use the API to remotely change the state of our example Door ("Gate") Lock Actuator.
 ```
 
 #### Getting Device History
