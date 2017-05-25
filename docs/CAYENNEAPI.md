@@ -266,7 +266,7 @@ Dev to provide example code for how to create an Alert using the information obt
 
 ##### Managing Alerts
 
-After setting up alerts, users will want to be able to manage them. Let's take a look at the Tank Monitoring sample app's *Alerts* screen. From this screen the user can see a list of existing alerts, information on each alert, and they can manage the alerts.
+After setting up alerts, users will want to be able to manage them. Let's take a look at the Tank Monitoring sample app's *Alerts* screen. From this screen the user can see a list of existing alerts, information on each alert, and they can manage the alerts. Let's see how these tasks are accomplished using the Cayenne API.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524100107/Restaurant-iPhone_Alert-1-2.png" width="346" height="615" alt="Sample App Alerts screen"><br/><br/></p>
 
@@ -304,7 +304,7 @@ Dev to provide example of creating a new User and assigning permissions using Ca
 
 ##### Managing existing users
 
-After creating some Users, we need to be able to manage them. Let’s take a look at Monitor & Control's *Users* screen. From this screen you can see a list of existing users, information on their permissions, and we can manage the user from here.
+After creating some Users, we need to be able to manage them. Let’s take a look at Monitor & Control's *Users* screen. From this screen you can see a list of existing users and we can manage the existing user from here. Let's see how these tasks are accomplished using the Cayenne API.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525090259/Multi-Tenant-1.png" width="660" height="290" alt="Multi tenant manage Users screen"><br/><br/></p>
 
