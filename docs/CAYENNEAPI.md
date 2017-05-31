@@ -384,8 +384,14 @@ All requests need to include a Authorization header and API version, for example
 
 ##### Create User
 
-| **POST**	| /users  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/users</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -422,8 +428,14 @@ All requests need to include a Authorization header and API version, for example
 
 Get specific user information by user Id.
 
-| **GET**	| /users/{userId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/users/{userId}</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -453,8 +465,14 @@ Get specific user information by user Id.
 
 This request can be used to update entire user attributes or just some. To update password, follow the password endpoint for more information. Email cannot be changed.
 
-| **PUT**	| /users/{userId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #d17e14; color: #ffffff;"><b>PUT</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #fce5cd; color: #000000;">/users/{userId}</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -488,8 +506,14 @@ To begin a password reset action, this API provides two endpoints that will crea
 
 ##### Initiate Password Reset
 
-| **POST**	| /password/forgot  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/password/forgot</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -510,8 +534,14 @@ To begin a password reset action, this API provides two endpoints that will crea
 
 ##### Change Password
 
-| **POST**	| /password/reset  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/password/rese</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -534,8 +564,14 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 
 ##### List applications
 
-| **GET**	| /applications  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/applications</td>
+</tr>
+</tbody>
+</table>
 
 **Query Parameters**
 
@@ -555,8 +591,14 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 
 ##### Create application
 
-| **POST**	| /applications  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/applications</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -577,8 +619,14 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 
 ##### Update application
 
-| **PUT**	| /applications/{applicationId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #d17e14; color: #ffffff;"><b>PUT</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #fce5cd; color: #000000;">/applications/{applicationId}</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -599,8 +647,14 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 
 ##### Get application
 
-| **GET**	| /applications/{applicationId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/applications/{applicationId}</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -623,8 +677,14 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 One of the Oauth important steps is to redirect your app to the authorization link.
 For that you need to authorize the redirect uri for your application.
 
-| **POST**	| /applications/{applicationId}/redirects  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/applications/{applicationId}/redirects</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -778,8 +838,14 @@ The user will now login, if not already logged in as a Cayenne user. If they are
 
 Requests for Resource owner and Refresh token are handled by one endpoint by assigning **grant_type** to password or refresh_token.
 
-| **POST**	| /oauth/token  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/oauth/token</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -830,9 +896,14 @@ Various response messages for all requests
 
 ##### Register your device type id by submitting thing type
 
-
-| **POST**	| /v1.1/things/types  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/types</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -867,8 +938,14 @@ Various response messages for all requests
 
 ##### Retrieve thing types
 
-| **GET**	| /v1.1/things/types  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/things/types</td>
+</tr>
+</tbody>
+</table>
 
 **Response**
 
@@ -896,8 +973,14 @@ Various response messages for all requests
 ```
 ##### Retrieve a thing type
 
-| **GET**	| /v1.1/things/types/{typeId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/things/types/{typeId}</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -930,8 +1013,14 @@ Various response messages for all requests
 
 ##### Update a thing type
 
-| **PUT**	| /v1.1/things/types/{type_id}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #d17e14; color: #ffffff;"><b>PUT</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #fce5cd; color: #000000;">/v1.1/things/types/{type_id}</td>
+</tr>
+</tbody>
+</table>
 
 #### Mqtt client
 
@@ -941,8 +1030,14 @@ All items within an application will share same mqtt credentials by default.
 At a later release the system will provide mqtt credentials per item or per thing type.
 Use the same request to also retrieve the credentials.
 
-| **POST**	| /v1.1/clients  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/clients</td>
+</tr>
+</tbody>
+</table>
 
 **Response**
 
@@ -978,8 +1073,14 @@ Everything in myDevices IoT that connects to our platform is categorized as a �
 
 ##### Create
 
-| **POST**	| /v1.1/things  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things </td>
+</tr>
+</tbody>
+</table>
 
 POST /v1.1/clients must be called before creating a thing.
 
@@ -1012,8 +1113,14 @@ POST /v1.1/clients must be called before creating a thing.
 
 ##### Batch provision single type of devices
 
-| **POST**	| /v1.1/things/batch  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/batch</td>
+</tr>
+</tbody>
+</table>
 
 There is a limit of 500 devices that can be provisioned at a time. 
 
@@ -1071,8 +1178,14 @@ Either in csv or json format depending on response_csv parameter.
 
 ##### Batch provision multiple types of devices
 
-| **POST**	| /v1.1/things/csv  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/csv</td>
+</tr>
+</tbody>
+</table>
 
 There is a limit of 500 devices that can be provisioned at a time. 
 The provisioned devices in this format can have different device types.
@@ -1097,8 +1210,14 @@ Form variables:
 
 Returns a collection of things associated with user or application. Only things with ``status`` set to *ACTIVE* will be provided.
 
-| **GET**	| /v1.1/things  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/things</td>
+</tr>
+</tbody>
+</table>
 
 **Response**
 
@@ -1118,8 +1237,14 @@ Returns a collection of things associated with user or application. Only things 
 
 ##### Get single thing
 
-| **GET**	| /v1.1/things/{thingId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/things/{thingId}</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -1146,8 +1271,14 @@ Returns a collection of things associated with user or application. Only things 
 
 ##### Get single thing
 
-| **GET**	| /v1.1/things/{thingId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/things/{thingId}</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -1176,8 +1307,14 @@ Returns a collection of things associated with user or application. Only things 
 
 This endpoint supports partial updates for thing’s attributes.
 
-| **PUT**	| /v1.1/things/{thing_id}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #d17e14; color: #ffffff;"><b>PUT</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #fce5cd; color: #000000;">/v1.1/things/{thing_id}</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters**
 
@@ -1211,13 +1348,25 @@ This endpoint supports partial updates for thing’s attributes.
 
 This endpoint does not actually removes a thing object from the database. Instead, the ``status`` attribute is set to *DEACTIVATED*.
 
-| **DELETE**	| /v1.1/things/{thing_id}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #cc0000; color: #ffffff;"><b>DELETE</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #f4cccc; color: #000000;">/v1.1/things/{thing_id}</td>
+</tr>
+</tbody>
+</table>
 
 ##### Sending a command to a mqtt channel through HTTP api
 
-| **POST**	| /v1.1/things/{thingsId}/cmd  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/{thingsId}/cmd</td>
+</tr>
+</tbody>
+</table>
 
 **Request application/json**
 
@@ -1293,8 +1442,14 @@ Retrieved from JWT authentication  | String |
 
 ##### Create a Job
 
-| **POST**	| /v1.1/jobs  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/jobs</td>
+</tr>
+</tbody>
+</table>
 
 **Request**
 
@@ -1346,8 +1501,14 @@ Retrieved from JWT authentication  | String |
 
 ##### List Jobs
 
-| **GET**	| /v1.1/jobs  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/jobs</td>
+</tr>
+</tbody>
+</table>
 
 **Response**
 
@@ -1380,8 +1541,14 @@ Retrieved from JWT authentication  | String |
 
 ##### List a Single Job
 
-| **GET**	| /v1.1/jobs/{jobId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/jobs/{jobId}</td>
+</tr>
+</tbody>
+</table>
 
 | URL Parameter	| Description |	Type |
 |--------------------|--------------------|---|
@@ -1414,8 +1581,14 @@ Retrieved from JWT authentication  | String |
 
 ##### Update an Existing Job
 
-| **PUT**	| /v1.1/jobs/{jobId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #d17e14; color: #ffffff;"><b>PUT</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #fce5cd; color: #000000;">/v1.1/jobs/{jobId}</td>
+</tr>
+</tbody>
+</table>
 
 | URL Parameter	| Description |	Type |
 |--------------------|--------------------|---|
@@ -1442,8 +1615,14 @@ Retrieved from JWT authentication  | String |
 
 ##### Delete a Job
 
-| **DELETE**	| /v1.1/jobs/{jobId}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #cc0000; color: #ffffff;"><b>DELETE</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #f4cccc; color: #000000;">/v1.1/jobs/{jobId}</td>
+</tr>
+</tbody>
+</table>
 
 | URL Parameter	| Description |	Type |
 |--------------------|--------------------|---|
@@ -1459,8 +1638,15 @@ Rules Collection [/v1.1/rules]
 
 ##### Create a New Rule
 
-| **POST**	| /v1.1/rules  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/rules</td>
+</tr>
+</tbody>
+</table>
+
 
 You may create your own rules using this action. It takes a JSON object containing a rule and certain fields.
 If an account is not available in token it can be provided in payload by “account_id”.
@@ -1539,8 +1725,14 @@ Http push is pending for support.
 Retrieves all rules from associated to an account. 
 If an account is not available in token it can be provided in query parameters by “account_id”.
 
-| **GET**	| /v1.1/rules  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/rules</td>
+</tr>
+</tbody>
+</table>
 
 **Response** 200 (application/json)
 
@@ -1549,8 +1741,14 @@ If an account is not available in token it can be provided in query parameters b
 List a rule by id. 
 If an account is not available in token it can be provided in query parameters by “account_id”.
 
-| **GET**	| /v1.1/rules/{rule_id}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/rules/{rule_id}</td>
+</tr>
+</tbody>
+</table>
 
 **Response** 200 (application/json)
 
@@ -1605,8 +1803,14 @@ If an account is not available in token it can be provided in query parameters b
 
 Updates an existing rule by id.
 
-| **PUT**	| /v1.1/rules/{rule_id}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #d17e14; color: #ffffff;"><b>PUT</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #fce5cd; color: #000000;">/v1.1/rules/{rule_id}</td>
+</tr>
+</tbody>
+</table>
 
 **Request** (application/json). Account_id is optional only for management applications.
 
@@ -1639,8 +1843,14 @@ Updates an existing rule by id.
 
 Delete existing rule by id.
 
-| **DELETE**	| /v1.1/rules/{rule_id}  |
-|-------|-------------------------------------------|
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #cc0000; color: #ffffff;"><b>DELETE</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #f4cccc; color: #000000;">/v1.1/rules/{rule_id}</td>
+</tr>
+</tbody>
+</table>
 
 **Parameters:** account_id is optional for management applications
 
