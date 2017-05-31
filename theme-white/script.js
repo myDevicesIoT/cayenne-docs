@@ -22,7 +22,7 @@
   */
 
  $document.on('flatdoc:ready', function() {
-   $('.menu a').anchorjump({offset: -30});
+   //$('.menu a').anchorjump({offset: -30});
  });
 
  /*
