@@ -344,95 +344,477 @@ Dev to provide this information.
 
 ## HTTP API Reference
 
-```
-This section will cover the API function calls specifically for the HTTP API. We should cover:
+The myDevices IoT platform is composed of micro services. By not having a monolith application, we can maintain a high level of uptime without taking down the whole platform. When issues arise, the system is still operational and just portions of the platform might not be reachable. Not to mention, the benefits of having micro service also is reflected in the speed and code quality.
 
-0. Any Overview info on the HTTP API and how it is arranged that the user needs to know.
-1. If the user needs to do any prep work to use specifically the HTTP API, cover it first. Examples here might be Authentication and Initalization?
-2. List every functon call that we have in the Public API.
-  A. Requirement: Group calls by feature/concept. I have stubbed out the groups here already. What's left is just to put in a list of functions underneath them.
-  B. List functions available, parameters and a examples of input/output for each. Our goal for this is to match the example of documentation provide by doc sources such as particle.io
-  
-Dev to complete this section and all documentation located here, using the layout provided here as a base. You guys have control over what is shown here, but please synch up with Brent to verify any changes in layout.
-```
-
-### Using the HTTP API
-
-```
-Starts with discussing any topics a developer needs to know to use the web API.
-```
+### Getting Started
 
 At a glance, we have a sandbox service that provide interactivity with the API to enhance and speed development while building applications. Before using the API users or applications need to authenticate to our authentication service to obtain a token. 
 
-#### Authenticating
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170531100529/Caynne-API-Getting-Started.png" width="660" height="563" alt="API Getting Started auth"><br/><br/></p>
+
+### Authentication, Users & Applications
+
+myDevices IoT API is protected by JWT tokens and established ACL rules. We use the oAuth2 protocol to authenticate users and applications. The authentication service that provide these tokens support all of the oAuth2 authentication grant types:
+
+- Authorization code grant
+- Resource owner grant
+- Refresh token grant 
+- Client credentials grant
+
+In addition to oAuth2, our authentication service also incorporates Single Sign On for internal and public facing applications, user management, password reset flows, and application management.
+
+| HTTP Status Code	| Reason  |
+|-------|-------------------------------------------|
+| 200  |  Operation success |
+| 201  |  Object added     |
+| 400  |  Bad Request: payload validation     |
+| 401  |  Unauthorized: Invalid or expired token used.     |
+
+All authentication requests are directed to **https://auth.mydevices.com**.
+
+#### User Management
+
+This authentication service also provides routes for user creation, modification and information.
+All requests need to include a Authorization header and API version, for example:
+
+| Header	| Value  |
+|-------|-------------------------------------------|
+| Authorization  |  Bearer JWT_TOKEN |
+| X-API-Version  |  1.0     |
+
+##### Create User
+
+| POST	| /users  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| first_name \*      | first name of user | String |
+| last_name \*       | last name of user | String |
+| email \*           | user’s email | String |
+| password \*        | user's password | String |
+| user_class_id      | identify user class | Integer |
+| user_group_id      | categorize user group | Integer |
+| application_id     | adds a user to an application | String |
+| permission_role_id | permission role associated with user | Integer |
+
+\* *required*
+
+**Response Model**
+
 ```
-Dev to add documenting the Authentication topics/calls needed.
-```
-#### Initialization
-```
-Dev to add documenting any Initialization topics/calls required.
+{
+  “id”: UUID,
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "",
+  "user_class_id": 0,
+  "permission_role_id": 0,
+  "user_groups_id": 0,
+  "application_id": “"
+}
 ```
 
-#### Accounts
+##### Get User
+
+Get specific user information by user Id.
+
+| GET	| /users/{userId}  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| userId \*      | required to obtain specific user | String |
+
+\* *required*
+
+**Response Model**
+
 ```
-Dev to add list of related public API functions and informatoin for each.
+{
+	"id": "XXXXXXXX",
+	"email": "some@email.com",
+	"first_name": "Name",
+	"last_name": "LastName",
+	"last_login": "2017-05-03T22:30:21.000Z",
+	"phone_number": null,
+	"created_at": "2017-05-03T22:30:21.000Z",
+	"updated_at": "2017-05-03T22:30:21.000Z",
+	"user_class_id": null
+}
 ```
-##### Create account
+
+##### Update User
+
+This request can be used to update entire user attributes or just some. To update password, follow the password endpoint for more information. Email cannot be changed.
+
+| PUT	| /users/{userId}  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+Same parameters as when creating an user can be send in this request.
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| first_name      |    | String |
+| ...      | ...   | ... |
+
+
+**Response Model**
+
 ```
-Example of function to be documented here.
+{
+  “id”: UUID,
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+
+  "user_class_id": 0,
+  "permission_role_id": 0,
+  "user_groups_id": 0,
+  "application_id": “"
+}
 ```
-##### Log into account
+
+#### User Password
+
+To begin a password reset action, this API provides two endpoints that will create a reset token and send out an email to the user.
+
+##### Initiate Password Reset
+
+| POST	| /password/forgot  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| email \*      | User’s email to send reset password link  | String |
+
+**Response Model**
+
 ```
-Example of function to be documented here.
+{
+  "first_name": "Foobar",
+  "last_name": "example",
+  "email": “foobar@example.com",
+  "token": "125a4s5as1as2a2"
+}
 ```
-##### Remove account
+
+##### Change Password
+
+| POST	| /password/reset  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| token \*      | token gathered from /password/forgot  | String |
+| password \*      | new password  | String |
+
+**Response Model**
+
 ```
-Example of function to be documented here.
+{
+  "success": true
+}
 ```
-##### Forgot password
+
+#### Applications
+
+One key importance of myDevices IoT API is to allow other customers to create application using our API. The following endpoints allow such operation and the credentials returned must be used across all other services.
+
+##### List applications
+
+| GET	| /applications  |
+|-------|-------------------------------------------|
+
+**Query Parameters**
+
+| Parameter	| Value |  Description |	Type |
+|-------------|--------------------|---|---|
+| status      | active (default), <br/> inactive, blocked  | application status to search for | String |
+
+**Response**
+
 ```
-Example of function to be documented here.
+[{
+  "id": “”,
+  “name”: “”,
+  “description”: “”
+}, …]
 ```
-##### etc
+
+##### Create application
+
+| POST	| /applications  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| name      | Application name  | String |
+| description      | Description  | String |
+
+**Response**
+
 ```
-And so forth as needed in each category of functions.
+{
+  "id": “”,
+  “name”: “”,
+  “description”: “”
+}
 ```
-#### Devices
+
+##### Update application
+
+| PUT	| /applications/{applicationId}  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| name      | Application name  | String |
+| description      | Description  | String |
+
+**Response**
+
 ```
-Dev to add list of related public API functions and information for each.
+{
+  "id": “”,
+  “name”: “”,
+  “description”: “”
+}
 ```
-##### Provision a device
+
+##### Get application
+
+| GET	| /applications/{applicationId}  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| applicationId      | Application Id  | String |
+
+**Response**
+
 ```
-Example of function to be documented here.
+{
+  "id": “”,
+  “name”: “”,
+  “description”: “”
+}
 ```
-##### Activating a device
+
+##### Set applications redirect uri
+
+One of the Oauth important steps is to redirect your app to the authorization link.
+For that you need to authorize the redirect uri for your application.
+
+| POST	| /applications/{applicationId}/redirects  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| redirect_uri      | Uri to redirect at auth step one. <br/>Example: http://localhost:8080  | String |
+
+**Response**
+
 ```
-Example of function to be documented here.
+{
+	"id": "38d8d299-9354-4155-8a76-75dac535825c",
+	"app_id": "5cb32d32-00fc-4555-8936-4bcef63c3163",
+	"redirect_uri": "http://localhost:8080",
+	"updated_at": "2017-05-01T23:21:21.000Z",
+	"created_at": "2017-05-01T23:21:21.000Z"
+}
 ```
-##### Get real-time device data
+
+#### Oauth Authentication Explicit Flow
+
+To authenticate users originating from a 3rd party server side application we utilize the explicit log in flow for OAuth. This requires a series of back and forth requests between the application server and the Cayenne authorization server. It should be noted that the explicit flow calls for the application secret to be passed which means this flow needs to be conducted from source which does not leak the secret publically (ie. from a single page application).
+
+##### Client Redirect to Authentication Server Step
+
+The user must be authenticated against the authorization server by directing them to the following link:
+
 ```
-Example of function to be documented here.
+GET http://va-prod-auth.mydevices.com?response_type=code&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
 ```
-##### Remote Control
+
+**Query parameters**
+
+- response_type - Should be **code** for this leg of the authentication flow. By passing code the 3rd party application will receive a code grant which will be exchanged for the users authorization token.
+- client_id - The identifier of the client application received upon application creation
+- redirect_uri - The URI which the client is expected to be returned after successfully authenticating with Cayenne. This redirect uri must have been added to the list of allowable redirects prior to authentication.
+- scope - A comma delimited list of grants that the 3rd party application wishes to receive on behalf of the user. Scopes are optional for now.
+- state - A randomly generated string utilized by the 3rd party application to protect against csrf attacks.
+
+**Error Behaviors:**
+
+- Missing or non-whitelisted redirect_uri - The request will be redirected back to the 3rd party application with an error stating an incorrect redirect_uri was presented
+- Incorrect client_id - Not passing a client id or sending one that does not match our records will result in redirection back to the 3rd party application with a corresponding error.
+- Incorrect response type - Passing a response_type of anything other than code for this leg of the process will result in a redirection back to 3rd party application with an appropriate error. 
+- Missing state - 3rd party applications should ensure they are securely authenticating their users and thus should utilize state to protect against CSRF attacks. Not including state will result in a redirection with an appropriate error.
+
+**Success Behavior:** The user will be directed to the Cayenne authorization server for authentication
+
+##### Client Authentication and Approval Step
+
+The user will now login, if not already logged in as a Cayenne user. If they are already logged in due to the presence of a secured SSO cookie they will be forwarded to the next step. Otherwise, they will fill out a sign-in form and if they are able to authenticate correctly, allow access to the grants specified to the application. The following describes the behavior of success and error conditions:
+
+**Error behaviors:**
+
+- The user cannot login after multiple attempts- The request will be redirected back to the 3rd party application with the appropriate error
+- The user does not accept the applications request for user scope - The request will be redirected back to the application with the corresponding error.
+
+**Success behavior:** After successfully authenticating and accepting the requested scope, the user will be redirected back to the **redirect_uri** provided by the prior step in the following fashion:
+
 ```
-Example of function to be documented here.
+<redirect_uri>?code=<authorization_code>&state=<state>
 ```
-#### Alerts
+
+**Query parameters:**
+
+- code - The code grant that signifies the user has successfully logged in and approved the applications access. It will be used in the following step. 
+- state - This state should be the same state value passed to the Cayenne Authorization server in the first step. If the client receives a different state than the one sent it should not continue the authorization process.
+
+##### Token Exchange Step
+
+With the user authenticated and the application allowed access, it must now exchange the code grant for an actual usable set of access and refresh tokens for the user. The application should thus make a **server side** request to the following URL:
+
 ```
-Dev to add list of related public API functions and information for each.
+POST http://va-prod-auth.mydevices.com/oauth/token
+{
+  “grant_type”: “authorization_code”,
+  “code”: “<authorization code>”,
+  “redirect_uri”: “<redirect_uri>”,
+  “client_id”: “<client_id>”,
+  “client_secret”: “<client_secret>”
+}
 ```
-#### Scheduling
+
+**Payload parameters:**
+
+- grant_type: should be **authorization_code** as this step is exchanging an authorization code for a token
+- code: the authorization code received from the previous step
+- redirect_uri: should be the same re-direct uri provided in the initial step of the process. 
+- client_id: the unique id for the 3rd party application
+- client_secret: a unique key provided when the 3rd party application was created. This key should only be sent by a server side application and never exposed to the client. 
+
+**Error behaviors:**
+
+- Incorrect grant_type - Not sending the grant_type of authorization_code
+- Incorrect code - Sending an authorization code which has expired or is missing
+- Missing or incorrect redirect_uri - The sent redirect uri should match the original redirect uri sent to obtain the authorization code. If it is not sent or different an error will be returned.
+- Incorrect client details - If the client_id or client_secret are missing or incorrect an error will be returned.
+
+**Success behavior:** Successfully exchanging the authorization code for a token will result in an access_token and refresh_token for that user.
+
+#### Oauth2 Authentication Implicit Flow
+
+The implicit flow is similar to the explicit flow except it is designed to be utilized by single page, mobile and other applications which cannot provide guarantees of protection for application secrets. Therefore there is no exchange of a code grant for an access and refresh token pair. Simply, if the initial authentication is successful an access token will be provided as a hash fragment to the redirected user. Also note that due to the insecure nature of these applications, a refresh token will not be issued. The following steps describe the flow in more detail:
+
+##### Client Redirect to Authentication Server Step
+
+The user must be authenticated against the authorization server by directing them to the following link:
+
 ```
-Dev to add list of related public API functions and information for each.
+GET http://va-prod-auth.mydevices.com?response_type=token&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
 ```
-#### Multi-tenant
+
+**Query parameters:**
+
+- response_type - Should be **token** for this leg of the implicit authentication flow. 
+- client_id - The identifier of the client application received upon application creation
+- redirect_uri - The URI which the client is expected to be returned after successfully authenticating with Cayenne. This redirect uri must have been added to the list of allowable redirects prior to authentication.
+- scope - A comma delimited list of grants that the 3rd party application wishes to receive on behalf of the user.
+- state - A randomly generated string utilized by the 3rd party application to protect against csrf attacks.
+
+**Error Behaviors:**
+
+- Missing or non-whitelisted redirect_uri - The request will be redirected back to the 3rd party application with an error stating an incorrect redirect_uri was presented
+- Incorrect client_id - Not passing a client id or sending one that does not match our records will result in redirection back to the 3rd party application with a corresponding error.
+- Incorrect response type - Passing a response_type of anything other than code for this leg of the process will result in a redirection back to 3rd party application with an appropriate error. 
+- Missing state - 3rd party applications should ensure they are securely authenticating their users and thus should utilize state to protect against CSRF attacks. Not including state will result in a redirection with an appropriate error.
+
+**Success Behavior:** The user will be directed to the Cayenne authorization server for authentication.
+
+##### Client Authentication and Approval Step
+
+The user will now login, if not already logged in as a Cayenne user. If they are already logged in due to the presence of a secured SSO cookie they will be forwarded to the next step. Otherwise, they will fill out a sign-in form and if they are able to authenticate correctly, allow access to the grants specified to the application. The following describes the behavior of success and error conditions:
+
+**Error behaviors:**
+
+- The user cannot login after multiple attempts- The request will be redirected back to the 3rd party application with the appropriate error
+- The user does not accept the applications request for user scope - The request will be redirected back to the application with the corresponding error.
+
+**Success behavior:** After successfully authenticating and accepting the requested scope, the user will be redirected back to the **redirect_uri** provided by the prior step in the following fashion:
+
 ```
-Dev to add list of related public API functions and information for each.
+<redirect_uri>#access_token=<access_token>&state=<state>
 ```
-#### History
+
+**Query parameters:**
+
+- access_token - This is the JWT access token for the user. It can then be utilized directly against the resource server. 
+- state - This state should be the same state value passed to the Cayenne Authorization server in the first step. If the client receives a different state than the one sent it should not continue the authorization process. 
+
+#### Resource Owner and Refresh Token Grants
+
+Requests for Resource owner and Refresh token are handled by one endpoint by assigning **grant_type** to password or refresh_token.
+
+| POST	| /oauth/token  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| email      | email login for password grant type  | String |
+| password      | user password for password grant type  | String |
+| refresh_token      | Sent upon request of new access token  | String |
+| client_id      | used to identify which application/client id is being used for user  | String |
+| grant_type      | defines grant type to route authentication (password/refresh_token)  | String |
+| scope      | scope of permissions requested  | String |
+
+**Response Object and Messages**
+
+Success Response (200)
+
 ```
-Dev to add list of related public API functions and information for each.
+{ 
+	“access_token”: “123456”,
+	“refresh_token”: “123456” 
+}
 ```
+
+#### Curl example using Resource Owner Grant
+
+```
+curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/json' -d 'grant_type=password&email=foobar%40example.com&password=example&client_id=123456' 'https://auth.mydevices.com/oauth/token'
+```
+
+#### Single Sign On
+
+Single sign on is provided for users as part of the authentication procedure. When a user has successfully logged in, the authorization server will create a secure cookie for that user only at the authorization domain. When the user returns to the authorization server whether for the same application or a different one, if the cookie is present, the user not be forced to login again and be redirected back to the source application as normal. This session will be valid for one week at which point the user will be forced to login again.
+
+
+
 
 ## iOS SDK Reference
 
