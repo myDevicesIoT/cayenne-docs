@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta charset='utf-8'>
@@ -15,6 +15,7 @@
     <script src='legacy.js'></script>
     <script src='flatdoc.js'></script>
     <script src='addons.js'></script>
+    <script src='jquery.lazyload.js'></script>
 
     <!-- Cayenne CSS -->
     <link rel="stylesheet" id="sage/css-css" href="//mydevices.com/wp-content/themes/mydevices/dist/styles/main.css" type="text/css" media="all">
@@ -30,6 +31,21 @@
 
     <!-- Initializer -->
     <script>
+
+        Flatdoc.transformer.mangle = function ($content) {
+            Flatdoc.transformer.addIDs($content);
+            Flatdoc.transformer.buttonize($content);
+            Flatdoc.transformer.smartquotes($content);
+
+
+            // custom transformation for image lazy loading:
+            $content.find('img').each(function (i, img) {
+                $(img).attr('original-data', $(img).attr('src'))
+                    .attr('src', '')
+                    .lazyload({ effect: 'fadeIn' });
+            });
+        };
+
         Flatdoc.run({
             fetcher: Flatdoc.file([
                 'docs/INTRO.md',
