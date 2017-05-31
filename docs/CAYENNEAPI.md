@@ -384,7 +384,7 @@ All requests need to include a Authorization header and API version, for example
 
 ##### Create User
 
-| POST	| /users  |
+| **POST**	| /users  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -422,7 +422,7 @@ All requests need to include a Authorization header and API version, for example
 
 Get specific user information by user Id.
 
-| GET	| /users/{userId}  |
+| **GET**	| /users/{userId}  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -453,7 +453,7 @@ Get specific user information by user Id.
 
 This request can be used to update entire user attributes or just some. To update password, follow the password endpoint for more information. Email cannot be changed.
 
-| PUT	| /users/{userId}  |
+| **PUT**	| /users/{userId}  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -488,7 +488,7 @@ To begin a password reset action, this API provides two endpoints that will crea
 
 ##### Initiate Password Reset
 
-| POST	| /password/forgot  |
+| **POST**	| /password/forgot  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -510,7 +510,7 @@ To begin a password reset action, this API provides two endpoints that will crea
 
 ##### Change Password
 
-| POST	| /password/reset  |
+| **POST**	| /password/reset  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -534,7 +534,7 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 
 ##### List applications
 
-| GET	| /applications  |
+| **GET**	| /applications  |
 |-------|-------------------------------------------|
 
 **Query Parameters**
@@ -555,7 +555,7 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 
 ##### Create application
 
-| POST	| /applications  |
+| **POST**	| /applications  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -577,7 +577,7 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 
 ##### Update application
 
-| PUT	| /applications/{applicationId}  |
+| **PUT**	| /applications/{applicationId}  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -599,7 +599,7 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 
 ##### Get application
 
-| GET	| /applications/{applicationId}  |
+| **GET**	| /applications/{applicationId}  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -623,7 +623,7 @@ One key importance of myDevices IoT API is to allow other customers to create ap
 One of the Oauth important steps is to redirect your app to the authorization link.
 For that you need to authorize the redirect uri for your application.
 
-| POST	| /applications/{applicationId}/redirects  |
+| **POST**	| /applications/{applicationId}/redirects  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -778,7 +778,7 @@ The user will now login, if not already logged in as a Cayenne user. If they are
 
 Requests for Resource owner and Refresh token are handled by one endpoint by assigning **grant_type** to password or refresh_token.
 
-| POST	| /oauth/token  |
+| **POST**	| /oauth/token  |
 |-------|-------------------------------------------|
 
 **Parameters**
@@ -813,8 +813,844 @@ curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header
 
 Single sign on is provided for users as part of the authentication procedure. When a user has successfully logged in, the authorization server will create a secure cookie for that user only at the authorization domain. When the user returns to the authorization server whether for the same application or a different one, if the cookie is present, the user not be forced to login again and be redirected back to the source application as normal. This session will be valid for one week at which point the user will be forced to login again.
 
+### API
+
+All other generic calls are provided through **api.mydevices.com**.
+
+Each request must include an Authorization and API version header, for example:
+
+| Header | Value  |
+|-------|-------------------------------------------|
+| Authorization | Bearer JWT_TOKEN |
+| X-API-Version | 1.0 |
+
+Various response messages for all requests
+
+#### Thing type
+
+##### Register your device type id by submitting thing type
 
 
+| **POST**	| /v1.1/things/types  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| name      | thing type name. Example: Arduino, Raspberry Pi, Actuator. Required.  | String |
+| description      | A brief description that can be displayed to the user. Required.  | String |
+| model      | Details about model of the device. Optional.  | String |
+| version      | Versioning. Optional.  | String |
+| manufacturer      | Manufacturer information. Optional  | String |
+| transport_protocol      | Default is mqtt. Other supported protocols are: tcp, http  | String |
+| protocol_version      | 1.1  | String |
+| category      | Values: 'sensor','actuator','computer','module'  | String |
+| subcategory      | Examples: lora, raspberrypi, arduino  | String |
+| data_type      | Can be a certain data type that was added to our system  | String |
+
+**Response 200**
+
+```
+{
+	"id": "878b4d60-3b52-11e7-a1d3-3b7a6118b612",
+	"created_at": "2017-05-17T22:45:30.000Z",
+	"updated_at": "2017-05-17T22:45:30.000Z",
+	"name": "test name 2",
+	"description": "test description 2",
+	"transport_protocol": "mqtt",
+	"category": "computer",
+	"child_constraint": "ALLOWED",
+	"parent_constraint": "NOT_ALLOWED"
+}
+```
+
+##### Retrieve thing types
+
+| **GET**	| /v1.1/things/types  |
+|-------|-------------------------------------------|
+
+**Response**
+
+```
+[
+	{
+		"id": "e74b5e10-3b53-11e7-8c1d-99e76be77663",
+		"name": "ExuinoBeta",
+		"description": "ExuinoBeta",
+		"category": "computer",
+		"subcategory": null,
+		"parent_constraint": "NOT_ALLOWED",
+		"child_constraint": "ALLOWED",
+		"model": null,
+		"version": null,
+		"manufacturer": null,
+		"transport_protocol": "mqtt",
+		"protocol_version": null,
+		"created_at": "2017-05-17T22:55:20.000Z",
+		"updated_at": "2017-05-17T22:55:20.000Z",
+		"data_type": null,
+		"proxy_handler": null
+	}
+]
+```
+##### Retrieve a thing type
+
+| **GET**	| /v1.1/things/types/{typeId}  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| typeId      | type id  | String (UUID) |
+
+**Response**
+
+```
+{
+	"id": "e74b5e10-3b53-11e7-8c1d-99e76be77663",
+	"name": "Exuino beta",
+	"description": "ExuinoBeta",
+	"category": "computer",
+	"subcategory": null,
+	"parent_constraint": "NOT_ALLOWED",
+	"child_constraint": "ALLOWED",
+	"model": null,
+	"version": null,
+	"manufacturer": null,
+	"transport_protocol": "mqtt",
+	"protocol_version": null,
+	"created_at": "2017-05-17T22:55:20.000Z",
+	"updated_at": "2017-05-17T22:55:20.000Z",
+	"data_type": null,
+	"proxy_handler": null
+}
+```
+
+##### Update a thing type
+
+| **PUT**	| /v1.1/things/types/{type_id}  |
+|-------|-------------------------------------------|
+
+#### Mqtt client
+
+##### Create a thing mqtt client credentials
+
+All items within an application will share same mqtt credentials by default.
+At a later release the system will provide mqtt credentials per item or per thing type.
+Use the same request to also retrieve the credentials.
+
+| **POST**	| /v1.1/clients  |
+|-------|-------------------------------------------|
+
+**Response**
+
+```
+{
+	"id": "67027a80-aa9a-11e6-be77-ad344203fbf7",
+	"clear_secret": "356410f5ea38448f96073bbbdb77c9e0e286f698"
+}
+```
+
+In order to create an mqtt connection to our servers use parameters from table below.
+
+| Parameter	| Description |
+|--------------------|--------------------|
+| Server      | mqtt.mydevices.com  |
+| Server port   | 1883  |
+| Server   | 1883  |
+| Websockets port   |   |
+| Username   | “id” retrieved from POST /v1.1/clients  |
+| Password   | “clear_secret” retrieved from POST /v1.1/clients  |
+| Client id   | Thing “id” that you created with POST /v1.1/things  |
+
+#### Things
+
+Everything in myDevices IoT that connects to our platform is categorized as a “thing”. Things have properties, values, and functions. 
+
+| HTTP Status Code	| Reason |
+|--------------------|--------------------|
+| 200      | Operation success  |
+| 201   | Object added  |
+| 400   | Bad Request: payload validation  |
+| 401   | Unauthorized: Invalid or expired token used.  |
+
+##### Create
+
+| **POST**	| /v1.1/things  |
+|-------|-------------------------------------------|
+
+POST /v1.1/clients must be called before creating a thing.
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| name      | thing name  | String |
+| device_type_id      | Id of the device type being added, default set to generic.  | String |
+| properties      | JSON object of device properties or device specific settings.  | String |
+| active      | Disable or Enable  | String |
+| status      | Active, Deactivated, Blocked  | String |
+| parent_id      | Establish device hierarchy by specifying a parent thing id.  | String |
+
+**Response**
+
+```
+{
+  “id”: “UUID”,
+  "name": "string",
+  "device_type_id": "string",
+  "parent_id": "string",
+  "hardware_id": "string",
+  "properties": {},
+  "active": 0,
+  "status": "string",
+  "last_online": 0
+}
+```
+
+##### Batch provision single type of devices
+
+| **POST**	| /v1.1/things/batch  |
+|-------|-------------------------------------------|
+
+There is a limit of 500 devices that can be provisioned at a time. 
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| name      | optional global thing name for all the devices  | String |
+| device_type_id      | Id of the device type being added, default set to generic.  | String |
+| hardware_ids      | Device IMEI, Serial Number in a array. Length must match count parameter if hardware_ids are provide.  | String |
+| count      | Number of devices to be activated. Limited to 500  | Number |
+| generate_auth_key      | true or false if authentication for each device is wanted. The authentication key will be used later to assign the device to an account. Default is false.  | Boolean |
+| response_csv      | Defaults to false meaning that the response is usual in json format.  | Boolean |
+
+**Response**
+
+Either in csv or json format depending on response_csv parameter.
+
+```
+[
+	{
+		"id": "fec28480-3b51-11e7-af5d-6fadb85df6ba",
+		"name": "our generic default name",
+		"hardware_id": null,
+		"device_type_id": "35d8719a-b1c6-4b0d-bf8e-075825aa6015",
+		"created_at": "2017-05-17T22:41:41.000Z",
+		"updated_at": "2017-05-17T22:41:41.000Z",
+		"last_online": null,
+		"deactivated_at": null,
+		"status": "PENDING",
+		"active": 0,
+		"parent_id": null,
+		"search_key": null,
+		"app_id": "5cb32d32-00fc-4555-8936-4bcef63c3163",
+		"auth_key": "ddy29g"
+	},
+	{
+		"id": "fec28481-3b51-11e7-af5d-6fadb85df6ba",
+		"name": "our generic default name",
+		"hardware_id": null,
+		"device_type_id": "35d8719a-b1c6-4b0d-bf8e-075825aa6015",
+		"created_at": "2017-05-17T22:41:41.000Z",
+		"updated_at": "2017-05-17T22:41:41.000Z",
+		"last_online": null,
+		"deactivated_at": null,
+		"status": "PENDING",
+		"active": 0,
+		"parent_id": null,
+		"search_key": null,
+		"app_id": "5cb32d32-00fc-4555-8936-4bcef63c3163",
+		"auth_key": "r6ubfq"
+	}
+]
+```
+
+##### Batch provision multiple types of devices
+
+| **POST**	| /v1.1/things/csv  |
+|-------|-------------------------------------------|
+
+There is a limit of 500 devices that can be provisioned at a time. 
+The provisioned devices in this format can have different device types.
+
+CSV File content per columns:
+File parameter name: file
+
+| Column	| Description |	Type |
+|--------------------|--------------------|---|
+| name      | optional thing name  | String |
+| device_type_id      | Id of the device type being added, default set to generic.  | String |
+| hardware_id      | Device IMEI, Serial Number  | String |
+
+Form variables:
+
+| Variable	| Description |	Type |
+|--------------------|--------------------|---|
+| generate_auth_key    | true or false if authentication for each device is wanted. The authentication key will be used later to assign the device to an account. Default is false.  | String |
+| response_csv      | Defaults to false meaning that the response is usual in json format.   | String |
+
+##### List Things
+
+Returns a collection of things associated with user or application. Only things with ``status`` set to *ACTIVE* will be provided.
+
+| **GET**	| /v1.1/things  |
+|-------|-------------------------------------------|
+
+**Response**
+
+```
+[{
+  “id”: “UUID”,
+  "name": "string",
+  "device_type_id": "string",
+  "parent_id": "string",
+  "hardware_id": "string",
+  "properties": {},
+  "active": 0,
+  "status": "string",
+  "last_online": 0
+}, …]
+```
+
+##### Get single thing
+
+| **GET**	| /v1.1/things/{thingId}  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| thingId      | thing id  | String (UUID) |
+
+**Response**
+
+```
+{
+  “id”: “UUID”,
+  "name": "string",
+  "device_type_id": "string",
+  "parent_id": "string",
+  "hardware_id": "string",
+  "properties": {},
+  “children”: [ Collection of things if parent ],
+  "active": 0,
+  "status": "string",
+  "last_online": 0
+}
+```
+
+##### Get single thing
+
+| **GET**	| /v1.1/things/{thingId}  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| thingId      | thing id  | String (UUID) |
+
+**Response**
+
+```
+{
+  “id”: “UUID”,
+  "name": "string",
+  "device_type_id": "string",
+  "parent_id": "string",
+  "hardware_id": "string",
+  "properties": {},
+  “children”: [ Collection of things if parent ],
+  "active": 0,
+  "status": "string",
+  "last_online": 0
+}
+```
+
+##### Update thing
+
+This endpoint supports partial updates for thing’s attributes.
+
+| **PUT**	| /v1.1/things/{thing_id}  |
+|-------|-------------------------------------------|
+
+**Parameters**
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| **name**      | thing name  | String |
+| device_type_id      | Id of the device type being added, default set to generic.  | String |
+| properties      | JSON object of device properties or device specific settings.  | String |
+| active      | Disable or Enable  | String |
+| **status**      | Active, Deactivated, Blocked  | String |
+| parent_id      | Establish device hierarchy by specifying a parent thing id.  | String |
+
+**Response**
+
+```
+{
+  “id”: “UUID”,
+  "name": "string",
+  "device_type_id": "string",
+  "parent_id": "string",
+  "hardware_id": "string",
+  "properties": {},
+  “children”: [ Collection of things if parent ],
+  "active": 0,
+  "status": "string",
+  "last_online": 0
+}
+```
+
+##### Remove thing
+
+This endpoint does not actually removes a thing object from the database. Instead, the ``status`` attribute is set to *DEACTIVATED*.
+
+| **DELETE**	| /v1.1/things/{thing_id}  |
+|-------|-------------------------------------------|
+
+##### Sending a command to a mqtt channel through HTTP api
+
+| **POST**	| /v1.1/things/{thingsId}/cmd  |
+|-------|-------------------------------------------|
+
+**Request application/json**
+
+```
+{
+  "value": 0,
+  "channel": “3”
+}
+```
+
+**Response  application/json**
+
+```
+{
+	"success": true
+}
+```
+
+#### Jobs
+
+Jobs is an API that allows consumers to create scheduled events with an action and/or notification to a user.
+
+**Data Parameter Objects and Arrays**
+
+| Job Object	| Description |	Type |
+|--------------------|--------------------|---|
+| \_id      | Unique Job id  | String UUID |
+| updated_at      | Date and time in which Job was last updated  | Date Object |
+| created_at      | Date and time in which Job was created  | Date Object |
+| title      | Title of the Job  | String |
+| account_id      | Account Id in which the Job was created under
+Retrieved from JWT authentication  | String |
+| next_runtime      | Date and time in which Job will execute next (**UTC Time**)  | Date Object |
+| \_\_v      |   | Int |
+| **config** \*      | Job scheduling configuration  | Object |
+| **notifications**      | Collection of Job notifications  | Object Array |
+| **http_push**      | Collection of Job HTTP executions  | Object Array |
+| **actions**      | Collection of Job actions to perform on specified thing  | Object Array |
+| active      | Indicates if Job is active, default true  | Boolean |
+
+| Config Object	| Description |	Type |
+|--------------------|--------------------|---|
+| interval      | Indicates how often Job will repeat if interval type  | Int |
+| start_date      | Date and time for Job’s first execution (**UTC Time**)  | Date Object |
+| tz      | The scheduled Job’s timezone  | String |
+| type      | Indicates if Job repeats or executes once (interval or date)  | String |
+| unit      | Indicates interval unit type (minute, hour, day, month, year)  | String |
+
+| Notifications	| Description |	Type |
+|--------------------|--------------------|---|
+| \_id      | Unique Job id  | String UUID |
+| Method      | Type of notification Job will execute  | String |
+| Value      | Indicates who will receive the job notification  | String |
+
+| HTTP Collections	| Description |	Type |
+|--------------------|--------------------|---|
+| \_id      | Unique Job id  | String UUID |
+| url      | URL for REST call  | String |
+| method      | REST method  | String |
+| headers      | Headers for REST call  | Object |
+| payload      | Payload for REST call  | Object |
+
+| Actions Collections	| Description |	Type |
+|--------------------|--------------------|---|
+| \_id      | Unique Job id  | String UUID |
+| thing_id      | Unique thing id  | String UUID |
+| sensor_id      | Unique sensor id  | String UUID |
+| unit      | Sensor unit type  | String |
+| value      | Sensor value received upon Job’s execution  | String |
+| channel      | Sensor’s channel  | String |
+
+\* *required for POST/PUT calls*
+
+##### Create a Job
+
+| **POST**	| /v1.1/jobs  |
+|-------|-------------------------------------------|
+
+**Request**
+
+```
+{
+	“title”: “My Event”,
+
+	“config”: {
+		“interval”: 1,
+		“start_date”: “2017-04-28 04:16”,
+		“tz”: “America/Los_Angeles”,
+		“type”: “interval”,
+		“unit”: “hour”
+	},
+	“notifications”: [
+		{
+			“method”: “email”,
+			“value”: “event@event.com” 
+		},
+		{
+			“method”: “sms”,
+			“value”: “3101234567
+		}
+	],
+	“http_push”: [
+		{ 
+			"url": "http://random.api.com/job",
+			“method”: “POST”,
+			“headers”: {
+				“Content-Type”: “application/json”
+			},
+			“payload”: {
+				“variable”: 1,
+				“sample”: 2
+			}
+		}
+	],
+	“actions”: [{ 
+		“thing_id”: “12345678-0000-0000-0000-000000000000”,
+		“sensor_id”: “987654321-0000-0000-0000-000000000000”,
+		“unit”: “float”,
+		“value”: “25”,
+		“channel”: “0”
+	}],
+}
+```
+
+**Response** 200 (application/json)
+
+##### List Jobs
+
+| **GET**	| /v1.1/jobs  |
+|-------|-------------------------------------------|
+
+**Response**
+
+```
+{
+	“_id”: “String”,
+	“updated_at”: Date,
+	“created_at”: Date,
+	“title”: “String”,
+	“account_id”: “String”,
+	“next_runtime”: Date,
+	“__v”: int,
+	“config”: {
+		“interval”: int,
+		“start_date”: “String”,
+		“tz”: “String”,
+		“type”: “String”,
+		“unit”: “String”
+	},
+	“notifications”: [{ Collection of Notifications }],
+	“http_push”: [{ Collection of HTTP Events }],
+	“actions”: [{ Collection of Actions }],
+	“active”: true
+},
+{ Job 1 },
+..
+..
+{ Job n }
+```
+
+##### List a Single Job
+
+| **GET**	| /v1.1/jobs/{jobId}  |
+|-------|-------------------------------------------|
+
+| URL Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| jobId      | Unique Job id  | String UUID |
+
+**Response**
+
+```
+{
+	“_id”: “String”,
+	“updated_at”: Date,
+	“created_at”: Date,
+	“title”: “String”,
+	“account_id”: “String”,
+	“next_runtime”: Date,
+	“__v”: int,
+	“config”: {
+		“interval”: int,
+		“start_date”: “String”,
+		“tz”: “String”,
+		“type”: “String”,
+		“unit”: “String”
+	},
+	“notifications”: [{ Collection of Notifications }],
+	“http_push”: [{ Collection of HTTP Events }],
+	“actions”: [{ Collection of Actions }],
+	“active”: true
+}
+```
+
+##### Update an Existing Job
+
+| **PUT**	| /v1.1/jobs/{jobId}  |
+|-------|-------------------------------------------|
+
+| URL Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| jobId      | Unique Job id  | UUID |
+
+**Request**
+
+```
+{
+	“title”: “String”,
+
+	“config”: {
+		“interval”: int,
+		“start_date”: “String”,
+		“tz”: “String”,
+		“type”: “String”,
+		“unit”: “String”
+	},
+	“notifications”: [{ Collection of Notifications }],
+	“http_push”: [{ Collection of HTTP Events }],
+	“actions”: [{ Collection of Actions }],
+}
+```
+
+##### Delete a Job
+
+| **DELETE**	| /v1.1/jobs/{jobId}  |
+|-------|-------------------------------------------|
+
+| URL Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| jobId      | Unique Job id  | UUID |
+
+**Response** Response 200 (application/json)
+
+#### Rules
+
+Rules is a simple API allowing consumers to get rules and update them.
+
+Rules Collection [/v1.1/rules]
+
+##### Create a New Rule
+
+| **POST**	| /v1.1/rules  |
+|-------|-------------------------------------------|
+
+You may create your own rules using this action. It takes a JSON object containing a rule and certain fields.
+If an account is not available in token it can be provided in payload by “account_id”.
+
+| Parameter	| Description |	Type |
+|--------------------|--------------------|---|
+| title      | rule name  | String |
+| account_id      | Account that rule belongs to  | String |
+| triggers      | JSON object of device properties and operators. Currently supported just one.  | Objects Array |
+| triggers_condition      | Currently for just one device. Future Values: OR, AND  | String |
+| enabled      | Rule should run or not  | Boolean |
+| actions      | Execution to other things actions. Currently supported just one.  | Objects Array |
+| notifications      | Email, sms and (not yet available) push notifications  | Objects Array |
+| http_push      | Http push to 3rd party services  | Objects Array |
+
+**Request**
+
+```
+{
+  "enabled": true,
+  "title": "My first rule",
+  "triggers": [
+    {
+      "id": "parent_device_id",
+      "channel": "some_channel_id",
+      "operator": "EQ",
+      "values": [
+        "0"
+      ],
+      "unit": "std"
+    }
+  ],
+  "actions": [
+    {
+      "id": "parent_device_id",
+      "channel": "some_channel_id",
+      "unit": "std",
+      "value": "0"
+    }
+  ],
+  "notifications": [
+    {
+      "method": "sms",
+      "value": "+10213543213"
+    }
+  ],
+  "http_push": [
+    {
+      "url": "string",
+      "method": "POST",
+      "payload": {},
+      "headers": {}
+    }
+  ],
+  "triggers_condition": "OR"
+}
+```
+
+Allowed triggers operators are: EQ, GT, LT
+Values are in a array for reserver operators like: IN, BETWEEN  
+Allowed notifications methods are: sms and email.
+Http push is pending for support.
+
+**Response** 200 (application/json)
+
+\+ Body
+
+```
+{
+	"id": "590667539f234af837fabcf9"
+}
+```
+
+##### List All Rules
+
+Retrieves all rules from associated to an account. 
+If an account is not available in token it can be provided in query parameters by “account_id”.
+
+| **GET**	| /v1.1/rules  |
+|-------|-------------------------------------------|
+
+**Response** 200 (application/json)
+
+##### List a Rule
+
+List a rule by id. 
+If an account is not available in token it can be provided in query parameters by “account_id”.
+
+| **GET**	| /v1.1/rules/{rule_id}  |
+|-------|-------------------------------------------|
+
+**Response** 200 (application/json)
+
+```
+{
+	"_id": "590667539f234af837fabcf9",
+	"enabled": true,
+	"account_id": "163200",
+	"triggers_condition": "OR",
+	"title": "TEST",
+	"updated_at": "1970-01-18T06:53:11.887Z",
+	"created_at": "1970-01-18T06:53:11.887Z",
+	"notifications": [
+		{
+			"method": "email",
+			"value": "foobar@example.com",
+			"_id": "590667539f234af837fabcfb"
+		}
+	],
+	"http_push": [
+		{
+			"url": "http://some.url.com",
+			"method": "POST",
+			"_id": "590667539f234af837fabcfc"
+		}
+	],
+	"actions": [
+		{
+			"id": "07bc0540-1355-11e7-b08e-b58900f876c2",
+			"channel": "2",
+			"unit": "std",
+			"value": "0",
+			"_id": "590667539f234af837fabcfa"
+		}
+	],
+	"triggers": [
+		{
+			"id": "07bc0540-1355-11e7-b08e-b58900f876c2",
+			"channel": "1",
+			"operator": "EQ",
+			"unit": "std",
+			"_id": "590667539f234af837fabcfd",
+			"values": [
+				"0"
+			]
+		}
+	]
+}
+```
+
+##### Update a Rule
+
+Updates an existing rule by id.
+
+| **PUT**	| /v1.1/rules/{rule_id}  |
+|-------|-------------------------------------------|
+
+**Request** (application/json). Account_id is optional only for management applications.
+
+```
+{
+	    "title":"TEST3",
+	    "account_id": "163200",
+		"triggers": [
+				{
+					"id": "07bc0540-1355-11e7-b08e-b58900f876c2",
+					"operator": "GT",
+					"unit": "std",
+					"values": [
+						"0"
+					]
+				}
+			]
+}
+```
+
+**Response** 200 (application/json)
+
+```
+{
+	"success": true
+}
+```
+
+##### Delete a Rule
+
+Delete existing rule by id.
+
+| **DELETE**	| /v1.1/rules/{rule_id}  |
+|-------|-------------------------------------------|
+
+**Parameters:** account_id is optional for management applications
+
+**Response** 200 (application/json)
+
+```
+{
+	"success": true
+}
+```
 
 ## iOS SDK Reference
 
