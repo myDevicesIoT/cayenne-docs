@@ -10,13 +10,6 @@
     <meta name="description" content="Create and rapid prototype Internet of Things products with Cayenne, an IoT project builder for developers and makers to quickly create their connected device projects.">
     <meta name="robots" content="noindex">
 
-    <!-- Flatdoc -->
-    <script src='support/vendor/jquery.js'></script>
-    <script src='legacy.js'></script>
-    <script src='flatdoc.js'></script>
-    <script src='addons.js'></script>
-    <script src='jquery.lazyload.js'></script>
-
     <!-- Cayenne CSS -->
     <link rel="stylesheet" id="sage/css-css" href="//mydevices.com/wp-content/themes/mydevices/dist/styles/main.css" type="text/css" media="all">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -25,43 +18,10 @@
     <link href="theme-white/navbar-default.css" rel="stylesheet">
     <link  href='theme-white/style.css' rel='stylesheet'>
     <link  href='theme-white/navbar.css' rel='stylesheet'>
-    <script src='theme-white/script.js'></script>
+    
     <link  href='support/theme.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:100,300,400i,600,700i" rel="stylesheet">
 
-    <!-- Initializer -->
-    <script>
-
-        Flatdoc.transformer.mangle = function ($content) {
-            Flatdoc.transformer.addIDs($content);
-            Flatdoc.transformer.buttonize($content);
-            Flatdoc.transformer.smartquotes($content);
-
-
-            // custom transformation for image lazy loading:
-            $content.find('img').each(function (i, img) {
-                $(img).attr('original-data', $(img).attr('src'))
-                    .attr('src', '')
-                    .lazyload({ effect: 'fadeIn' });
-            });
-        };
-
-        Flatdoc.run({
-            fetcher: Flatdoc.file([
-                'docs/INTRO.md',
-                'docs/DOWNLOADS.md',
-                'docs/GETTINGSTARTED.md',
-                'docs/FEATURES.md',
-                'docs/CUSTOMWIDGETS.md',
-                'docs/SKETCHFILES.md',
-                'docs/LORA.md',
-                'docs/SUPPORTEDHARDWARE.md',
-                'docs/MQTTAPIS.md',
-                'docs/IOTREADY.md'
-            ])
-        });
-    </script>
-    
     <style>
 
         .navbar-brand {
@@ -223,6 +183,50 @@
        $('#navbar.navbar-collapse').toggleClass('collapse');
     });
 </script>
+
+<!-- Flatdoc -->
+<!--<script src='support/vendor/jquery.js'></script>-->
+<script src='jquery.lazyload.js'></script>
+<script src='legacy.js'></script>
+<script src='flatdoc.js'></script>
+<script src='addons.js'></script>
+
+<script src='theme-white/script.js'></script>
+
+    <!-- Initializer -->
+    <script>
+
+        Flatdoc.transformer.mangle = function ($content) {
+            Flatdoc.transformer.addIDs($content);
+            Flatdoc.transformer.buttonize($content);
+            Flatdoc.transformer.smartquotes($content);
+
+
+            // custom transformation for image lazy loading:
+            $content.find('img').each(function (i, img) {
+                $(img).attr('data-original', $(img).attr('src'))
+                    .attr('src', '')
+                    .lazyload({ effect: 'fadeIn', threshold: 300 });
+            });
+        };
+
+        Flatdoc.run({
+            fetcher: Flatdoc.file([
+                'docs/INTRO.md',
+                'docs/DOWNLOADS.md',
+                'docs/GETTINGSTARTED.md',
+                'docs/FEATURES.md',
+                'docs/CUSTOMWIDGETS.md',
+                'docs/SKETCHFILES.md',
+                'docs/LORA.md',
+                'docs/SUPPORTEDHARDWARE.md',
+                'docs/MQTTAPIS.md',
+                'docs/IOTREADY.md'
+            ])
+        });
+    </script>
+
+
 
 </body>
 </html>
