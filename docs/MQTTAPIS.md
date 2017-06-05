@@ -1309,7 +1309,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>digital_sensor</span></td>
 <td><span>Digital (0/1)</span></td>
 <td><span>DIGITAL</span></td>
-<td><span>null</span></td>
+<td><span>d</span></td>
 <td><span><a href="#2-state-display">2 State</a></span></td>
 </tr>
 <tr>
