@@ -1397,8 +1397,7 @@ Jobs is an API that allows consumers to create scheduled events with an action a
 | updated_at      | Date and time in which Job was last updated  | Date Object |
 | created_at      | Date and time in which Job was created  | Date Object |
 | title      | Title of the Job  | String |
-| account_id      | Account Id in which the Job was created under
-Retrieved from JWT authentication  | String |
+| account_id      | Account Id in which the Job was created under<br/>Retrieved from JWT authentication  | String |
 | next_runtime      | Date and time in which Job will execute next (**UTC Time**)  | Date Object |
 | \_\_v      |   | Int |
 | **config** \*      | Job scheduling configuration  | Object |
