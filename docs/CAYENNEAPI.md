@@ -1889,7 +1889,7 @@ Brent & Tim to update this section based on whatever is finalized for iOS Refere
 
 The Cayenne iOS SDK contains code documentation for each function. You can refer to the documentation included with the SDK. For ease of reference, you can find find a hosted version of this [documentation on our github](TODO: link to external source).
 
-As the Cayenne mobile app SDKs are wrappers around the Cayenne REST API, you may also wish to refer to the raw [Cayenne REST API documentation](#cayenne-api-using-the-cayenne-api), and in particular to the [API reference section](#cayenne-rest-api-using-the-cayenne-http-api-api-reference) which covers each function available in the API.
+As the Cayenne mobile app SDKs are wrappers around the Cayenne REST API, you may also wish to refer to the raw [Cayenne REST API documentation](#cayenne-rest-api-using-the-cayenne-api), and in particular to the [API reference section](#cayenne-rest-api-using-the-cayenne-http-api-api-reference) which covers each function available in the API.
 
 ## Android SDK Reference
 
