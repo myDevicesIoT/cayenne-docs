@@ -1,3 +1,5 @@
+<p id="bring-your-own-thing-api" class="anchor-link"></p>
+
 # Cayenne MQTT API
 
 <p id="apis-2-2" class="anchor-link"></p>
