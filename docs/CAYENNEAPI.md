@@ -370,7 +370,7 @@ In addition to oAuth2, our authentication service also incorporates Single Sign 
 | 400  |  Bad Request: payload validation     |
 | 401  |  Unauthorized: Invalid or expired token used.     |
 
-All authentication requests are directed to **https://auth.mydevices.com**.
+All authentication requests are directed to ``https://auth.mydevices.com``.
 
 #### User Management
 
