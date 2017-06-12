@@ -713,7 +713,7 @@ To authenticate users originating from a 3rd party server side application we ut
 The user must be authenticated against the authorization server by directing them to the following link:
 
 ```
-GET http://va-prod-auth.mydevices.com?response_type=code&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
+GET http://auth.mydevices.com?response_type=code&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
 ```
 
 **Query parameters**
@@ -758,7 +758,7 @@ The user will now login, if not already logged in as a Cayenne user. If they are
 With the user authenticated and the application allowed access, it must now exchange the code grant for an actual usable set of access and refresh tokens for the user. The application should thus make a **server side** request to the following URL:
 
 ```
-POST http://va-prod-auth.mydevices.com/oauth/token
+POST http://auth.mydevices.com/oauth/token
 {
   “grant_type”: “authorization_code”,
   “code”: “<authorization code>”,
@@ -794,7 +794,7 @@ The implicit flow is similar to the explicit flow except it is designed to be ut
 The user must be authenticated against the authorization server by directing them to the following link:
 
 ```
-GET http://va-prod-auth.mydevices.com?response_type=token&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
+GET http://auth.mydevices.com?response_type=token&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
 ```
 
 **Query parameters:**
@@ -881,7 +881,7 @@ Single sign on is provided for users as part of the authentication procedure. Wh
 
 ### API
 
-All other generic calls are provided through **api.mydevices.com**.
+All other generic calls are provided through ``platform.mydevices.com``.
 
 Each request must include an Authorization and API version header, for example:
 
