@@ -1,24 +1,24 @@
-# Cayenne API
+# Cayenne REST API
 
 ## Overview
 
-The Cayenne API allows for interacting and creating applications using the myDevices IoT RESTful API.  REST is a lightweight, stateless web service standard that myDevices IoT provides to partners and customers. Our REST API is secured with OAuth2 standard, which offers increased security by using JWT access tokens. In addition to Authorization and Authentication mechanism, we encrypt all transport communications with TLS/SSL endpoints.
+The Cayenne REST API allows for interacting and creating applications using the myDevices IoT RESTful API.  REST is a lightweight, stateless web service standard that myDevices IoT provides to partners and customers. Our REST API is secured with OAuth2 standard, which offers increased security by using JWT access tokens. In addition to Authorization and Authentication mechanism, we encrypt all transport communications with TLS/SSL endpoints.
 
 ## Preparing to use the API
 
 ### Create a Cayenne account
 
-In order to use the Cayenne API, you will need to first create a Cayenne account. Visit the <a href="http://www.cayenne-mydevices.com/" target="_blank">Cayenne website</a> and create an account.
+In order to use the Cayenne REST API, you will need to first create a Cayenne account. Visit the <a href="http://www.cayenne-mydevices.com/" target="_blank">Cayenne website</a> and create an account.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/get-started-for-free.png" width="660" height="438" alt="get started for free"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/account-sign-up.png" width="660" height="438" alt="account sign up"><br/><br/></p>
 
-### Obtain your Cayenne API Key
+### Obtain your Cayenne REST API Key
 
-Before you can use the Cayenne API you will need to obtain your **App Key** and **App Secret**. In order for your custom application to successfully connect with Cayenne you will need to provide these keys when using the Cayenne API.
+Before you can use the Cayenne REST API you will need to obtain your **App Key** and **App Secret**. In order for your custom application to successfully connect with Cayenne you will need to provide these keys when using the Cayenne REST API.
 
-*TIP: For more information how these keys are used, see the [Authentication section](#cayenne-api-http-api-reference-using-the-http-api-authenticating) of the HTTP API documentation.*
+*TIP: For more information how these keys are used, see the [Authentication section](#cayenne-rest-api-http-api-reference-using-the-http-api-authenticating) of the HTTP API documentation.*
 
 To obtain your keys, log into your account and select **Create App**. The *App Credentials* page that appears contains your keys. Copy & paste the **App Key** and **App Secret** into your code.
 
@@ -26,34 +26,34 @@ To obtain your keys, log into your account and select **Create App**. The *App C
 
 ## Using the API
 
-In this section you will find examples of how to put the Cayenne API into use.
+In this section you will find examples of how to put the Cayenne REST API into use.
 
-- [Example Walkthrough](#cayenne-api-using-the-api-example-walkthrough): Guides you through using each feature of the API, covering an example found in our Tank Monitoring Sample App.
-- [Samples](#cayenne-api-using-the-api-samples): Links to additional sample solutions found on our GitHub.
+- [Example Walkthrough](#cayenne-rest-api-using-the-api-example-walkthrough): Guides you through using each feature of the API, covering an example found in our Tank Monitoring Sample App.
+- [Samples](#cayenne-rest-api-using-the-api-samples): Links to additional sample solutions found on our GitHub.
 
 In addition to the examples provided, you will find additional code snippets and notes throughout the API References. You may also wish to refer to the appropriate reference information for the API or SDK that you are using in our project.
 
-- [Cayenne HTTP API Reference](#cayenne-api-http-api-reference)
+- [Cayenne HTTP API Reference](#cayenne-rest-api-http-api-reference)
 - Mobile App SDKs
-   - [iOS SDK Reference](#cayenne-api-ios-sdk-reference)
-   - [Android SDK Reference](#cayenne-api-android-sdk-reference)
+   - [iOS SDK Reference](#cayenne-rest-api-ios-sdk-reference)
+   - [Android SDK Reference](#cayenne-rest-api-android-sdk-reference)
 
 ### Example Walkthrough
 
-In this section we will cover practical examples of putting the Cayenne API into use.
+In this section we will cover practical examples of putting the Cayenne REST API into use.
 
 The example walkthrough shown here is arranged as a narrative that walks you through the various API-related topics required to implement each screen found in the **Tank Monitoring sample app**. After covering the sample app, we will discuss some additional API features.
 
-1. **[Creating an account](#cayenne-api-using-the-api-example-walkthrough-creating-an-account)** - Creating a new account.
-2. **[Logging into an account](#cayenne-api-using-the-api-example-walkthrough-logging-into-account)** - Log into our account.
-3. **[Resetting password](#cayenne-api-using-the-api-example-walkthrough-reset-password)** - Resetting the account password.
-4. **[Provisioning devices](#cayenne-api-using-the-api-example-walkthrough-provisioning-devices)** - Provisioning a device so that it can be later activated.
-5. **[Activating devices](#cayenne-api-using-the-api-example-walkthrough-activating-a-device)** - Activating devices.
-6. **[Get real-time device data](#cayenne-api-using-the-api-example-walkthrough-getting-real-time-device-data)** - Fetching device status and current device data.
-7. **[Remote control](#cayenne-api-using-the-api-example-walkthrough-remote-control)** - Controlling devices remotely.
-8. **[Device History](#cayenne-api-using-the-api-example-walkthrough-getting-device-history)** - Fetching historical device data.
-9. **[Alerts](#cayenne-api-using-the-api-example-walkthrough-alerts)** - Creating and managing Alerts.
-10. **[Multi-Tenant](#cayenne-api-using-the-api-example-walkthrough-multi-tenant)** - Creating and managing Users.
+1. **[Creating an account](#cayenne-rest-api-using-the-api-example-walkthrough-creating-an-account)** - Creating a new account.
+2. **[Logging into an account](#cayenne-rest-api-using-the-api-example-walkthrough-logging-into-account)** - Log into our account.
+3. **[Resetting password](#cayenne-rest-api-using-the-api-example-walkthrough-reset-password)** - Resetting the account password.
+4. **[Provisioning devices](#cayenne-rest-api-using-the-api-example-walkthrough-provisioning-devices)** - Provisioning a device so that it can be later activated.
+5. **[Activating devices](#cayenne-rest-api-using-the-api-example-walkthrough-activating-a-device)** - Activating devices.
+6. **[Get real-time device data](#cayenne-rest-api-using-the-api-example-walkthrough-getting-real-time-device-data)** - Fetching device status and current device data.
+7. **[Remote control](#cayenne-rest-api-using-the-api-example-walkthrough-remote-control)** - Controlling devices remotely.
+8. **[Device History](#cayenne-rest-api-using-the-api-example-walkthrough-getting-device-history)** - Fetching historical device data.
+9. **[Alerts](#cayenne-rest-api-using-the-api-example-walkthrough-alerts)** - Creating and managing Alerts.
+10. **[Multi-Tenant](#cayenne-rest-api-using-the-api-example-walkthrough-multi-tenant)** - Creating and managing Users.
 
 #### Creating an account
 
@@ -63,7 +63,7 @@ In order to use the Tank Monitoring sample app, users are reqired to have an acc
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524163607/Tank-Monitoring-Create-account3.png" width="346" height="615" alt="Sample App Create Account 2"><br/><br/></p>
 
-Once we have the information from the user, we can use the Cayenne API to create a new account. If the account creation is successful, we can proceed with logging the user into their account.
+Once we have the information from the user, we can use the Cayenne REST API to create a new account. If the account creation is successful, we can proceed with logging the user into their account.
 
 ```
 Dev to provide Sample App - account creation code example code to be put here.
@@ -76,12 +76,12 @@ Dev to provide Sample App - account creation code example code to be put here.
 
 Once the user has a valid account, they will need to be logged in to continue. This is handled in the sample app in one of two ways:
 
-1. **[Log in after account creation](#cayenne-api-using-the-api-example-walkthrough-logging-into-account-logging-in-after-account-creation)** - How to log in automatically after account creation.
-2. **[Log in to existing account](#cayenne-api-using-the-api-example-walkthrough-logging-into-account-logging-into-existing-account)** - Log in to a returning users account.
+1. **[Log in after account creation](#cayenne-rest-api-using-the-api-example-walkthrough-logging-into-account-logging-in-after-account-creation)** - How to log in automatically after account creation.
+2. **[Log in to existing account](#cayenne-rest-api-using-the-api-example-walkthrough-logging-into-account-logging-into-existing-account)** - Log in to a returning users account.
 
 ##### Logging in after account creation
 
-The Tank Monitoring sample app automatically logs a user into their account after having just created the user's account. After being logged in, the user remains logged in until they log out of the app. This is a common user experience given that the user has already supplied their account credentials to the app. Let's build upon the [Create account](#cayenne-api-using-the-api-example-walkthrough-creating-an-account) example done earlier and see how the Cayenne API can be used to automatically log the user in.
+The Tank Monitoring sample app automatically logs a user into their account after having just created the user's account. After being logged in, the user remains logged in until they log out of the app. This is a common user experience given that the user has already supplied their account credentials to the app. Let's build upon the [Create account](#cayenne-rest-api-using-the-api-example-walkthrough-creating-an-account) example done earlier and see how the Cayenne REST API can be used to automatically log the user in.
 
 ```
 Dev to provide example code that builds upon the previous 'Create Account' example and logs the user into their account.
@@ -89,7 +89,7 @@ Dev to provide example code that builds upon the previous 'Create Account' examp
 
 ##### Logging into existing account
 
-After logging out of the app, returning users will want to log into their existing account. Let's take a look at how the Tank Monitoring sample app and asks the user for their account credentails. We will then examine how the Cayenne API can be used to log the user into their existing account using the information provided.
+After logging out of the app, returning users will want to log into their existing account. Let's take a look at how the Tank Monitoring sample app and asks the user for their account credentails. We will then examine how the Cayenne REST API can be used to log the user into their existing account using the information provided.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084310/Restaurant-iPhone_LogIn-1-2.png" width="346" height="615" alt="Sample App Login screen"><br/><br/></p>
 
@@ -99,11 +99,11 @@ Dev to provide example code showing a call using the account info provided by th
 
 #### Reset Password
 
-In the event that a user has forgotten their password, the Cayenne API can be used to reset the password. Let's take a look at the Tank Monitoring sample app and examine how it deals with this scenario.
+In the event that a user has forgotten their password, the Cayenne REST API can be used to reset the password. Let's take a look at the Tank Monitoring sample app and examine how it deals with this scenario.
 
 **Generate password reset email**
 
-In order to reset the user's password, we first need to know the users login information. After providing this information, we can use the Cayenne API to generate and send an email containing a password reset link.
+In order to reset the user's password, we first need to know the users login information. After providing this information, we can use the Cayenne REST API to generate and send an email containing a password reset link.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524083818/Restaurant-iPhone_LogIn-1-3.png" width="346" height="615" alt="Sample App Forgot password screen"><br/><br/></p>
 
@@ -115,26 +115,26 @@ Dev to provide example code showing a call using the account info provided by th
 
 **Changing the password**
 
-The password reset email that the user receives includes a link that they can use to reset their password. Following this link takes the user to a screen where they can create a new password. Let's take a look at how the Cayenne API uses the password reset link and the user's desired new password to change the password.
+The password reset email that the user receives includes a link that they can use to reset their password. Following this link takes the user to a screen where they can create a new password. Let's take a look at how the Cayenne REST API uses the password reset link and the user's desired new password to change the password.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524164522/Tank-Monitoring-Change-password-web.png" width="256" height="210" alt="Example new password creation web page"><br/><br/></p>
 
 ```
-Dev to provide example code showing Cayenne API call to change the user's password.
+Dev to provide example code showing Cayenne REST API call to change the user's password.
 ```
 
 #### Provisioning Devices
 
-Before a device can be activated using the Cayenne API, it must first be provisioned. Provisioning a device prepares the Cayenne backend to activate the device and generates the **Hardware IDs** that are required during the [Device Activation](#cayenne-api-using-the-api-example-walkthrough-activating-a-device) process.
+Before a device can be activated using the Cayenne REST API, it must first be provisioned. Provisioning a device prepares the Cayenne backend to activate the device and generates the **Hardware IDs** that are required during the [Device Activation](#cayenne-rest-api-using-the-api-example-walkthrough-activating-a-device) process.
 
-Let's provision an example Gateway, Sensor and Actuator which we will continue to use throughout the rest of our examples. The Cayenne API provides different ways for us to provision these devices.
+Let's provision an example Gateway, Sensor and Actuator which we will continue to use throughout the rest of our examples. The Cayenne REST API provides different ways for us to provision these devices.
 
-- **[Provision devices one at a time](#cayenne-api-using-the-api-example-walkthrough-provisioning-devices-provision-single-devices)** - How to provision devices one at a time.
-- **[Bulk provision the devices](#cayenne-api-using-the-api-example-walkthrough-provisioning-devices-bulk-provisioning-devices)** - How to provision multiple devices at once.
+- **[Provision devices one at a time](#cayenne-rest-api-using-the-api-example-walkthrough-provisioning-devices-provision-single-devices)** - How to provision devices one at a time.
+- **[Bulk provision the devices](#cayenne-rest-api-using-the-api-example-walkthrough-provisioning-devices-bulk-provisioning-devices)** - How to provision multiple devices at once.
 
 ##### Provision single Devices
 
-Devices can be provisioned one at a time, allowing for tasks such as one-off or on demand provisioning of devices. Let's examine using the Cayenne API to provision our example devices, one at a time.
+Devices can be provisioned one at a time, allowing for tasks such as one-off or on demand provisioning of devices. Let's examine using the Cayenne REST API to provision our example devices, one at a time.
 
 ```
 Dev to provide example code that demonstrates how to provision a single device using the API. We should show multiple examples here (even if they are the same call but generating different output Hardware IDs). These will be used later in examples of device activation, device data history, etc.
@@ -146,19 +146,19 @@ Dev to provide example code that demonstrates how to provision a single device u
 
 ##### Bulk Provisioning Devices
 
-If you have multiple devices that need to be provisioned, the Cayenne API allows you to batch or bulk provision the devices. Let's provision the same devices as seen in the [Single Device](#cayenne-api-using-the-api-example-walkthrough-provisioning-a-device-provision-single-devices) example, only this time we'll see how they can be provisioned all at once.
+If you have multiple devices that need to be provisioned, the Cayenne REST API allows you to batch or bulk provision the devices. Let's provision the same devices as seen in the [Single Device](#cayenne-rest-api-using-the-api-example-walkthrough-provisioning-a-device-provision-single-devices) example, only this time we'll see how they can be provisioned all at once.
 
 **Note: There is a limit of 500 devices that can be provisioned at a time.**
 
 ```
-Dev to provide example code that demonstrates how to bulk provision devices using the Cayenne API. The example shown here should bulk provision the same 3 devices used in the preceeding 'Single device' example. That way the user can see how to do them one a time or all in once. Please be sure that the example in/out uses those same devices as the other example.
+Dev to provide example code that demonstrates how to bulk provision devices using the Cayenne REST API. The example shown here should bulk provision the same 3 devices used in the preceeding 'Single device' example. That way the user can see how to do them one a time or all in once. Please be sure that the example in/out uses those same devices as the other example.
 ```
 
 #### Activating a Device
 
-Once a device has been provisioned, it can then be activated and added to the user's account. Let's build upon the [provisioning example](/#cayenne-api-using-the-api-example-walkthrough-provisioning-devices) and examine how the user can activate the example devices using the Tank Monitoring sample app and the Cayenne API.
+Once a device has been provisioned, it can then be activated and added to the user's account. Let's build upon the [provisioning example](/#cayenne-rest-api-using-the-api-example-walkthrough-provisioning-devices) and examine how the user can activate the example devices using the Tank Monitoring sample app and the Cayenne REST API.
 
-Let's begin by seeing how a Gateway device is activated. After selecting to add a Gateway device, the user is asked for device information needed to activate the gateway. After entering in the information, the Cayenne API can be used to activate the device.
+Let's begin by seeing how a Gateway device is activated. After selecting to add a Gateway device, the user is asked for device information needed to activate the gateway. After entering in the information, the Cayenne REST API can be used to activate the device.
 
 *NOTE: Notice how the user is asked for the __Gateway ID__ during the activation process. This ID is the __Hardware ID__ generated earlier during the device provisioning step.*
 
@@ -168,7 +168,7 @@ Let's begin by seeing how a Gateway device is activated. After selecting to add 
 Dev to provide example of activating the example Gateway device. The example in/out should match the provisioned device information from our provisioning example covered earlier.
 ```
 
-After adding a Gateway device, we can then add sensors and actuators that will communicate with the gateway. Let's activate the sensor and actuator example devices that we previously provisioned. After selecting to add a Device, the user is asked for device information needed to activate the sensor or actuator. After entering in the information, the Cayenne API can be used to activate the device.
+After adding a Gateway device, we can then add sensors and actuators that will communicate with the gateway. Let's activate the sensor and actuator example devices that we previously provisioned. After selecting to add a Device, the user is asked for device information needed to activate the sensor or actuator. After entering in the information, the Cayenne REST API can be used to activate the device.
 
 *NOTE: Notice how the user is asked for the __ID__ during the activation process. This ID is the __Hardware ID__ generated earlier during the device provisioning step.*
 
@@ -182,7 +182,7 @@ Dev to provide example of activating the example Sensor & Actuator device (only 
 
 #### Getting Real-Time Device Data
 
-After devices are activated and begin transmitting data to Cayenne, the Cayenne API can be used to query real-time data on the device. Let's take a look at the Tank Monitoring sample app and see how it uses the Cayenne API to fetch current device status so that it can be displayed on the *Status* screen.
+After devices are activated and begin transmitting data to Cayenne, the Cayenne REST API can be used to query real-time data on the device. Let's take a look at the Tank Monitoring sample app and see how it uses the Cayenne REST API to fetch current device status so that it can be displayed on the *Status* screen.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525074129/Tank-Monitoring-Status-screen.png" width="346" height="615" alt="Sample App Status screen"><br/><br/></p>
 
@@ -205,7 +205,7 @@ etc
 
 #### Remote Control
 
-In addition to monitoring Sensor devices, the Cayenne API also supports Actuators. Actuators devices allow you to not only monitor the status of the actuator, but also to remotely control their state. For example, you can remotely lock or unlock a Door Lock, or change the brightness of a Light. The Tank Monitoring sample app includes an example of a Door Lock that we can exmaine. From the *Status* screen we see that there is a toggle shown next to the **Gate Lock** device. The user is able to tap on this button to switch the current lock state of the device. Let's take a look at how this is accomplish using the Cayenne API.
+In addition to monitoring Sensor devices, the Cayenne REST API also supports Actuators. Actuators devices allow you to not only monitor the status of the actuator, but also to remotely control their state. For example, you can remotely lock or unlock a Door Lock, or change the brightness of a Light. The Tank Monitoring sample app includes an example of a Door Lock that we can exmaine. From the *Status* screen we see that there is a toggle shown next to the **Gate Lock** device. The user is able to tap on this button to switch the current lock state of the device. Let's take a look at how this is accomplish using the Cayenne REST API.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525074533/Tank-Monitoring-Status-screen-actuator-highlight.png" width="492" height="615" alt="Sample App Device History screen"><br/><br/></p>
 
@@ -215,27 +215,27 @@ Dev to provide example code that demonstrates how to use the API to remotely cha
 
 #### Getting Device History
 
-Cayenne maintains historical information on data received from connected devices. Let's examine using the Cayenne API to query historical data for our example devices and see some very different examples of how the Tank Monitoring sample app uses this data to display the information to the user.
+Cayenne maintains historical information on data received from connected devices. Let's examine using the Cayenne REST API to query historical data for our example devices and see some very different examples of how the Tank Monitoring sample app uses this data to display the information to the user.
 
 ##### Sensor History example
 
-Tapping on a device from the Tank Monitoring sample app's *Status* screen opens the *Device History* screen which displays historical device data. The user can use this table view to filter and examine data. Let's explore how this is accomplished using the Cayenne API.
+Tapping on a device from the Tank Monitoring sample app's *Status* screen opens the *Device History* screen which displays historical device data. The user can use this table view to filter and examine data. Let's explore how this is accomplished using the Cayenne REST API.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084752/Restaurant-iPhone_Sensor-1-1.png" width="346" height="615" alt="Sample App Device History screen"><br/><br/></p>
 
 ```
-Dev to provide example code for how the Sample app history details screen uses the Cayenne API to fetch the historical data for display. 
+Dev to provide example code for how the Sample app history details screen uses the Cayenne REST API to fetch the historical data for display. 
 
 IF the Actuator and Temperature in/out differ, we should document both examples in code.
 ```
 
 ##### Asset Tracking example
 
-The Tank Monitoring sample app's *Map* screen provides another great example of using historical device data in a unique way. In this case, for display of device location and status on a map. Let's take a look at this *Asset Tracking* feature and how the Cayenne API is used to accomplish this.
+The Tank Monitoring sample app's *Map* screen provides another great example of using historical device data in a unique way. In this case, for display of device location and status on a map. Let's take a look at this *Asset Tracking* feature and how the Cayenne REST API is used to accomplish this.
 
 **Displaying device location on a map**
 
-On the *Map* screen in the Tank Monitoring sample app, the user can see the location and movement of their devices on a map. This unique presentation makes use of current and historical device information provided in the Cayenne API to visualize device location data.
+On the *Map* screen in the Tank Monitoring sample app, the user can see the location and movement of their devices on a map. This unique presentation makes use of current and historical device information provided in the Cayenne REST API to visualize device location data.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524091320/Restaurant-iPhone_SensorMap-1-13.png" width="660" height="371" alt="Sample App rotated map screen"><br/><br/></p>
 
@@ -260,7 +260,7 @@ Dev to provide example code for how the Sample App fetches historical device sta
 
 #### Alerts
 
-Alerts allow you to receive notifications when certain conditions are met. Let's take a look at the Tank Monitoring sample app and see how the user can create an Alert and manage existing alerts using the Cayenne API.
+Alerts allow you to receive notifications when certain conditions are met. Let's take a look at the Tank Monitoring sample app and see how the user can create an Alert and manage existing alerts using the Cayenne REST API.
 
 ##### Creating an Alert
 
@@ -274,7 +274,7 @@ Dev to provide example code for how to create an Alert using the information obt
 
 ##### Managing Alerts
 
-After setting up alerts, users will want to be able to manage them. Let's take a look at the Tank Monitoring sample app's *Alerts* screen. From this screen the user can see a list of existing alerts, information on each alert, and they can manage the alerts. Let's see how these tasks are accomplished using the Cayenne API.
+After setting up alerts, users will want to be able to manage them. Let's take a look at the Tank Monitoring sample app's *Alerts* screen. From this screen the user can see a list of existing alerts, information on each alert, and they can manage the alerts. Let's see how these tasks are accomplished using the Cayenne REST API.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524100107/Restaurant-iPhone_Alert-1-2.png" width="346" height="615" alt="Sample App Alerts screen"><br/><br/></p>
 
@@ -288,7 +288,7 @@ Dev to provide example code for how to manange existing alerts.
 
 #### Multi-Tenant
 
-In addition to manging Accounts and Devices, the Cayenne API also provides functionality to help create and manage Users. Using the Multi-Tenant features found in the Cayenne API, you can create Users and assign Roles and permissions. Let's take a look at an example which demonstrates these features.
+In addition to manging Accounts and Devices, the Cayenne REST API also provides functionality to help create and manage Users. Using the Multi-Tenant features found in the Cayenne REST API, you can create Users and assign Roles and permissions. Let's take a look at an example which demonstrates these features.
 
 ##### Creating Users, assigning Roles & Permissions
 
@@ -304,15 +304,15 @@ After capturing the basic user information, we then select the **Role** and **Pe
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525090412/Multi-Tenant-3.png" width="660" height="483" alt="Multi tenant Add User 2"><br/><br/></p>
 
-After gathering the information required to create a new User, we can then use the Cayenne API to create a new user. Let's examine how this is accomplished.
+After gathering the information required to create a new User, we can then use the Cayenne REST API to create a new user. Let's examine how this is accomplished.
 
 ```
-Dev to provide example of creating a new User and assigning permissions using Cayenne API.
+Dev to provide example of creating a new User and assigning permissions using Cayenne REST API.
 ```
 
 ##### Managing existing users
 
-After creating some Users, we need to be able to manage them. Let’s take a look at an example *Users* screen. From this screen you can see a list of existing users and we can manage the existing user from here. Let's see how these tasks are accomplished using the Cayenne API.
+After creating some Users, we need to be able to manage them. Let’s take a look at an example *Users* screen. From this screen you can see a list of existing users and we can manage the existing user from here. Let's see how these tasks are accomplished using the Cayenne REST API.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170525090259/Multi-Tenant-1.png" width="660" height="290" alt="Multi tenant manage Users screen"><br/><br/></p>
 
@@ -325,13 +325,13 @@ Dev to provide example code for how to manange existing users.
 
 ### Samples
 
-The Cayenne API repo on GitHub includes a number of additional samples that illustrate the use of the Cayenne API.
+The Cayenne REST API repo on GitHub includes a number of additional samples that illustrate the use of the Cayenne REST API.
 
 ```
 Dev to provide GitHub repo for Samples and a list of samples that should be linked here in docs.
 ```
 
-- Tank Monitoring Sample App: A sample app that demonstrates the Cayenne API features. This is the sample app used throughout the [Example walkthrough section](#cayenne-api-using-the-api-example-walkthrough).
+- Tank Monitoring Sample App: A sample app that demonstrates the Cayenne REST API features. This is the sample app used throughout the [Example walkthrough section](#cayenne-rest-api-using-the-api-example-walkthrough).
 - Another Example link: Short description of what the sample provides.
 
 ### Best practices
@@ -1863,7 +1863,7 @@ Delete existing rule by id.
 
 ## iOS SDK Reference
 
-The Cayenne iOS SDK is the easiest way to connect your custom iOS app to Cayenne using the Cayenne API. In this section you will find information on obtaining the SDK, getting setup to use it, and links to additional resources that will help you in using it in your product.
+The Cayenne iOS SDK is the easiest way to connect your custom iOS app to Cayenne using the Cayenne REST API. In this section you will find information on obtaining the SDK, getting setup to use it, and links to additional resources that will help you in using it in your product.
 
 ### Using the iOS SDK
 
@@ -1871,7 +1871,7 @@ The Cayenne iOS SDK is the easiest way to connect your custom iOS app to Cayenne
 
 #### Configure Xcode IDE
 
-In this section we will walk you through configuring the **Xcode** IDE to utilize the Cayenne API.
+In this section we will walk you through configuring the **Xcode** IDE to utilize the Cayenne REST API.
 
 ```
 Here we would walk the user through configuring the Xcode IDE so that the user is ready to use the iOS SDK with their project.
@@ -1889,7 +1889,7 @@ Brent & Tim to update this section based on whatever is finalized for iOS Refere
 
 The Cayenne iOS SDK contains code documentation for each function. You can refer to the documentation included with the SDK. For ease of reference, you can find find a hosted version of this [documentation on our github](TODO: link to external source).
 
-As the Cayenne mobile app SDKs are wrappers around the Cayenne API, you may also wish to refer to the raw [Cayenne API documentation](#cayenne-api-using-the-cayenne-api), and in particular to the [API reference section](#cayenne-api-using-the-cayenne-http-api-api-reference) which covers each function available in the API.
+As the Cayenne mobile app SDKs are wrappers around the Cayenne REST API, you may also wish to refer to the raw [Cayenne REST API documentation](#cayenne-api-using-the-cayenne-api), and in particular to the [API reference section](#cayenne-rest-api-using-the-cayenne-http-api-api-reference) which covers each function available in the API.
 
 ## Android SDK Reference
 
