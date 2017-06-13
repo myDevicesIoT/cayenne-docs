@@ -1658,7 +1658,7 @@ Once your device has been previously registered on the OrbiWise network, it can 
 1.  Which [LoRa device](#lora-orbiwise-network-supported-devices) is being added?
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-orbiwise-network-manual-register-device) if you need help with manually registering your device on the network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
-4.  If you wish to use the downlink commands, you will need to know your user-specific **OrbiWise Server** address as well as your **Username** and **Password**.
+4.  If you wish to use downlink commands, you will need to know your user-specific **OrbiWise Server** address as well as your **Login** and **Password**.
 
 To see how easy it is, let’s walk through an example of connecting an [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox) which was previously registered under a [OrbiWise account](#lora-orbiwise-network-create-account).
 
@@ -1681,7 +1681,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 4.  (Optional) Enter in your OrbiWise account information to take advantage of downlink commands.
 
     - Enter the name of your customer-specific OrbiWise portal (e.g. ``us.xyz.orbiwise.com``) into the **OrbiWise Server** field.
-    - Enter your **OrbiWise Username** and **OrbiWise Password** into the corresponding fields.
+    - Enter your **OrbiWise Login** and **OrbiWise Password** into the corresponding fields.
 4.  Click **Add LoRa device**.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613145437/Add-Device-OrbiWise-mDotBox-already-registered-updated.png" width="600" height="363" alt="Cayenne dashboard with mDotBox device settings filled in"><br/><br/></p>
