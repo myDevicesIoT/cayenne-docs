@@ -1608,11 +1608,11 @@ After selecting the **Registration type** > **Personalized** option, the list of
 
 ### Setup device forwarding to Cayenne
 
-In order for data from your device to reach Cayenne, you must configure your devices in the OrbiWise portal to forward data to Cayenne. You only need to perform this step once. To set this up, open the **Applications** menu and select **HTTP Push configuration**.
+In order for data from your device to reach Cayenne, you must configure forwarding from within the settings found in your user-specific OrbiWise portal. You only need to perform this step once from the portal. To set this up, open the **Applications** menu and select **HTTP Push configuration**.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613142142/OrbiWise-Applications-menu.png" width="600" height="86" alt="Orbiwise Push menu"><br/><br/></p>
 
-From the *HTTP Push configuration* screen we can setup the device so that it forwards data to Cayenne. To do so, enter the following information:
+From the *HTTP Push configuration* screen we find the settings needed to forward data to Cayenne. To set this up, enter the following information:
 
 1. **Hostname:** ``https://lora.mydevices.com``
 2. **Port:** ``443``
@@ -1658,6 +1658,7 @@ Once your device has been previously registered on the OrbiWise network, it can 
 1.  Which [LoRa device](#lora-orbiwise-network-supported-devices) is being added?
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-orbiwise-network-manual-register-device) if you need help with manually registering your device on the network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+4.  If you wish to use the downlink commands, you will need to know your user-specific **OrbiWise Server** address as well as your **Username** and **Password**.
 
 To see how easy it is, let’s walk through an example of connecting an [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox) which was previously registered under a [OrbiWise account](#lora-orbiwise-network-create-account).
 
@@ -1677,7 +1678,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 1.  Give the device a name. In our case, we’ll enter “mDotBox” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
 3.  Our device has been previously manually registered with OrbiWise. Make sure “Already Registered” is selected in the **Activation Mode** field.
-4.  (Optional) If your device supports downlink commands, you will need to specify some additional OrbiWise information to take advantage of this functionality.
+4.  (Optional) Enter in your OrbiWise account information to take advantage of downlink commands.
 
     - Enter the name of your customer-specific OrbiWise portal (e.g. ``us.xyz.orbiwise.com``) into the **OrbiWise Server** field.
     - Enter your **OrbiWise Username** and **OrbiWise Password** into the corresponding fields.
