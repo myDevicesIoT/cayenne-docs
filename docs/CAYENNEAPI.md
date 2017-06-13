@@ -1119,7 +1119,7 @@ POST /v1.1/clients must be called before creating a thing.
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/batch</td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/registry/batch</td>
 </tr>
 </tbody>
 </table>
@@ -1130,11 +1130,10 @@ There is a limit of 500 devices that can be provisioned at a time.
 
 | Parameter	| Description |	Type |
 |--------------------|--------------------|---|
-| name      | optional global thing name for all the devices  | String |
 | device_type_id      | Id of the device type being added, default set to generic.  | String |
 | hardware_ids      | Device IMEI, Serial Number in a array. Length must match count parameter if hardware_ids are provide.  | String |
 | count      | Number of devices to be activated. Limited to 500  | Number |
-| generate_auth_key      | true or false if authentication for each device is wanted. The authentication key will be used later to assign the device to an account. Default is false.  | Boolean |
+| codec      | Codec to be provided for lora devices  | String |
 | response_csv      | Defaults to false meaning that the response is usual in json format.  | Boolean |
 
 **Response**
@@ -1144,36 +1143,22 @@ Either in csv or json format depending on response_csv parameter.
 ```
 [
 	{
-		"id": "fec28480-3b51-11e7-af5d-6fadb85df6ba",
-		"name": "our generic default name",
+		"id": "fcbbc900-508f-11e7-8dac-05888f0195a1",
+		"application_id": null,
 		"hardware_id": null,
 		"device_type_id": "35d8719a-b1c6-4b0d-bf8e-075825aa6015",
-		"created_at": "2017-05-17T22:41:41.000Z",
-		"updated_at": "2017-05-17T22:41:41.000Z",
-		"last_online": null,
-		"deactivated_at": null,
+		"codec": "some.codec.name",
 		"status": "PENDING",
-		"active": 0,
-		"parent_id": null,
-		"search_key": null,
-		"app_id": "5cb32d32-00fc-4555-8936-4bcef63c3163",
-		"auth_key": "ddy29g"
+		"created_at": "2017-06-13T23:28:20.000Z"
 	},
 	{
-		"id": "fec28481-3b51-11e7-af5d-6fadb85df6ba",
-		"name": "our generic default name",
+		"id": "fcbbf010-508f-11e7-8dac-05888f0195a1",
+		"application_id": null,
 		"hardware_id": null,
 		"device_type_id": "35d8719a-b1c6-4b0d-bf8e-075825aa6015",
-		"created_at": "2017-05-17T22:41:41.000Z",
-		"updated_at": "2017-05-17T22:41:41.000Z",
-		"last_online": null,
-		"deactivated_at": null,
+		"codec": "some.codec.name",
 		"status": "PENDING",
-		"active": 0,
-		"parent_id": null,
-		"search_key": null,
-		"app_id": "5cb32d32-00fc-4555-8936-4bcef63c3163",
-		"auth_key": "r6ubfq"
+		"created_at": "2017-06-13T23:28:20.000Z"
 	}
 ]
 ```
@@ -1184,7 +1169,7 @@ Either in csv or json format depending on response_csv parameter.
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/csv</td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/registry/csv</td>
 </tr>
 </tbody>
 </table>
@@ -1197,16 +1182,37 @@ File parameter name: file
 
 | Column	| Description |	Type |
 |--------------------|--------------------|---|
-| name      | optional thing name  | String |
-| device_type_id      | Id of the device type being added, default set to generic.  | String |
 | hardware_id      | Device IMEI, Serial Number  | String |
+| device_type_id      | Id of the device type being added, default set to generic.  | String |
+| codec      | Codec to be provided for lora devices  | String |
 
 Form variables:
 
 | Variable	| Description |	Type |
 |--------------------|--------------------|---|
-| generate_auth_key    | true or false if authentication for each device is wanted. The authentication key will be used later to assign the device to an account. Default is false.  | String |
 | response_csv      | Defaults to false meaning that the response is usual in json format.   | String |
+
+
+##### Pair a thing that was provisioned
+
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/parse</td>
+</tr>
+</tbody>
+</table>
+
+In order to activate an already provisioned device - registered device call the pair route you need to login into user account and use that token.
+The device will be asociated with the user account.
+
+Form variables:
+
+| Variable	| Description |	Type |
+|--------------------|--------------------|---|
+| hardware_id      | The hardware id that was added in the prebatch list. Can be DEVEUI, IMEI or other serial number.   | String |
+| name      | optional thing name  | String |
 
 ##### List Things
 
@@ -1672,12 +1678,17 @@ If an account is not available in token it can be provided in payload by “acco
   "triggers": [
     {
       "id": "parent_device_id",
+	  "unit": "Celsius",
       "channel": "some_channel_id",
+	  "geofence": false,//
       "operator": "EQ",
-      "values": [
-        "0"
-      ],
-      "unit": "std"
+	  conditions: [
+			operator: Joi.valid([
+				"eq" , "ne" , "lte" , "lt" , "gte" , "gt", "within", "near", "intersects"
+			]).required(),
+			value: Joi.number().required(),
+			geo: Joi.array().optional()
+		]
     }
   ],
   "actions": [
@@ -1706,7 +1717,7 @@ If an account is not available in token it can be provided in payload by “acco
 }
 ```
 
-Allowed triggers operators are: EQ, GT, LT
+Allowed triggers operators are: and, or, none
 Values are in a array for reserver operators like: IN, BETWEEN  
 Allowed notifications methods are: sms and email.
 Http push is pending for support.
