@@ -695,6 +695,7 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 *   [Everynet](#lora-everynet-network)
 *   [Kerlink](#lora-kerlink-network)
 *   [Loriot](#lora-loriot-network)
+*   [machineQ](#lora-machineq-network)
 *   [Objenious](#lora-objenious-network)
 *   [OrbiWise](#lora-orbiwise-network)
 *   [Senet](#lora-senet-network)
@@ -930,7 +931,7 @@ If your device has been previously registered on the Actility network, it can be
 To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under an [Actility account](#lora-actility-create-account).
 
 **1\. Choose the Network** <br/>
-Make sure the **Actility** network is selected in the list of Networks.'
+Make sure the **Actility** network is selected in the list of Networks.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-LoRa-device-Actility-menu-1.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
@@ -945,7 +946,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 
 1.  Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
-3.  Our device has been previously manually registered with Actility. Select “Already Registered” in the **Activation Mode** field.
+3.  Our device has been previously manually registered with Actility. Select ``Already Registered`` in the **Activation Mode** field.
 4.  From the **ThingPark Server** field, be sure to select the correct environment that you are using.
 
     *TIP: If you don't find your ThingPark environment in the dropdown, please ask Actility for your **ThingPark DX Profile**, and manually enter it. It should be suffixed with `-api` such as `mycompany-api`.*
@@ -1094,7 +1095,7 @@ From the Cayenne dashboard, click **Add New** > **Device / Widget**.
 
 From the list of devices & widgets that appears, click **LoRa** and select the **Everynet** Network option to view a list of Everynet supported devices.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613165802/Add-LoRa-device-OrbiWise-menu.png" width="660" height="399" alt="Everynet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170614085657/Add-LoRa-device-Everynet-menu.png" width="660" height="427" alt="Everynet network menu"><br/><br/></p>
 
 After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
 
@@ -1109,31 +1110,31 @@ Once your device has been previously registered on the Everynet network, it can 
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4.  What is your unique Everynet account API Key?
 
-To see how easy it is, let’s walk through an example of connecting an [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox) which was previously registered under a [Everynet account](#lora-everynet-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under an [Everynet account](#lora-everynet-network-create-account).
 
 **1\. Choose the Network** <br/>
 Make sure the **Everynet** network is selected in the list of Networks.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613165802/Add-LoRa-device-OrbiWise-menu.png" width="660" height="399" alt="Everynet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170614085657/Add-LoRa-device-Everynet-menu.png" width="660" height="427" alt="Everynet lora menu"><br/><br/></p>
 
 **2\. Select the Device** <br/>
-Select your device from among the list supported Everynet devices. In this case, we’ll select the **Multitech mDotBox**.
+Select your device from among the list supported Everynet devices. In this case, we’ll select the **Adeunis Pulse**.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613170151/Cayenne-Add-LoRa-device-Everynet-mDotBox-selected.png" width="660" height="427" alt="Everynet"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170614085841/Cayenne-Add-LoRa-device-Everynet-Adeunis-Pulse-selected.png" width="660" height="427" alt="Everynet"><br/><br/></p>
 
 **3\. Enter Settings & Add device** <br/>
 In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
 
 1.  Give the device a name. In our case, we’ll enter “mDotBox” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
-3.  Our device has been previously manually registered with Everynet. Make sure “Already Registered” is selected in the **Activation Mode** field.
+3.  Our device has been previously manually registered with Everynet. Make sure ``Already Registered`` is selected in the **Activation Mode** field.
 4.  Click **Add device**.
 
-<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613170528/Cayenne-Add-Device-Everynet-mDotBox-already-registered.png" width="660" height="427" alt="Cayenne Add Device with all Everynet fields shown"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170614085918/Cayenne-Add-Device-Everynet-Adeunis-Pulse-already-registered.png" width="660" height="427" alt="Cayenne Add Device with all Everynet fields shown"><br/><br/></p>
 
-The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
+The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
 
 
 ## Kerlink Network
@@ -1334,7 +1335,7 @@ In order to add the device, Cayenne needs to know some information about the dev
     
     <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170421081852/Cayenne-Kerlink-Pulse-device-settings-ABP-highlight2.png" width="362" height="423" alt="Preceed Dev Addr with 8 zeros in Cayenne"><br/><br/></p>
 
-3. Our device has been previously manually registered with the Kerlink network. Make sure “Already Registered” is selected in the **Activation Mode** field.
+3. Our device has been previously manually registered with the Kerlink network. Make sure ``Already Registered`` is selected in the **Activation Mode** field.
 4. Click **Add device**.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123934/Cayenne-Stream-Pulse-device-settings.png" width="660" height="414" alt="Stream Pulse settings"><br/><br/></p>
@@ -1510,13 +1511,86 @@ In order to add the device, Cayenne needs to know some information about the dev
 
 1. Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
 2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
-3. Our device has been previously manually registered with Loriot. Make sure “Already Registered” is selected in the **Activation Mode** field.
+3. Our device has been previously manually registered with Loriot. Make sure ``Already Registered`` is selected in the **Activation Mode** field.
 4. Select which server your device uses from the **Loriot Server** dropdown.
 5. Enter in the **Loriot App ID** for the Application this device uses on the Loriot portal.
 6. Enter in the **Loriot Token** for the Application this device uses on the Loriot portal.
 4. Click **Add device**.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-pulse-settings.png" width="660" height="394" alt="Loriot Pulse settings"><br/><br/></p>
+
+The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
+
+
+## machineQ Network
+
+**About machineQ**
+
+machineQ is an IoT  platform from Comcast Corp. CMCSA, a leading cable multi-service operator in the U.S. The machineQ platform will see Comcast working with some specified commercial business partners to use their networks and facilitate the gathering, transmitting and analyzing of data collected from connected devices.
+
+**Using machineQ with Cayenne**
+
+Cayenne makes it easy to use your LoRa device and the machineQ network. You will need to:
+
+1. [Setup traffic forwarding to Cayenne](#lora-machineq-network-setup-traffic-forwarding-to-cayenne)
+2. [Add your device to your Cayenne dashboard](#lora-machineq-network-add-device-to-cayenne)
+
+### Setup traffic forwarding to Cayenne
+
+In order for data from your devices to reach Cayenne, you must configure traffic forwarding on the machineQ platform. When configuring data forwarding be be sure to use the Cayenne machineQ URL: 
+
+```https://lora.mydevices.com/v1/networks/machineq/uplink```
+
+### Add device to Cayenne
+
+Once your device has been manually registered on the machineQ platform, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+
+From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Actility"><br/><br/></p>
+
+From the list of devices & widgets that appears, select the **LoRa** category and then the **Actility** Network option to view a list of Actility supported devices.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170614090444/Add-LoRa-device-machineQ-menu.png" width="660" height="414" alt="machineq list"><br/><br/></p>
+
+After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
+
+#### Already Registered
+
+If your device has been previously registered on the machineQ network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
+
+**Items you will need:**
+
+1.  Which [LoRa technology device](#lora-actility-supported-devices) is being added?
+2.  Your device will need to have been previously registered on the network.
+3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+4.  Your machineQ Email and machineQ Password.
+
+To see how easy it is, let’s walk through an example of connecting an [Adeunis LoRa Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously manually registered under a machineQ account.
+
+**1\. Choose the Network** <br/>
+Make sure the **machineQ** network is selected in the list of Networks.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170614090444/Add-LoRa-device-machineQ-menu.png" width="660" height="414" alt="machineq list"><br/><br/></p>
+
+**2\. Select the Device** <br/>
+Select your device from among the list supported machineQ devices. In this case, we’ll select the **Adeunis Pulse**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170614090949/Cayenne-Add-LoRa-device-machineQ-Adeunis-Pulse-selected.png" width="660" height="414" alt="Actility"><br/><br/></p>
+
+**3\. Enter Settings & Add device**
+
+In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
+
+1.  Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
+2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
+3.  Our device will have been previously manually registered with machineQ. Select ``Already Registered`` in the **Activation Mode** field.
+4.  Enter your **machineQ Email** and **machineQ Password** into the corresponding fields.
+5.  Click **Add device**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170614091030/Cayenne-Add-Device-machineQ-Adeunis-Pulse-already-registered.png" width="660" height="414" alt="Actility"><br/><br/></p>
 
 The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
@@ -1669,7 +1743,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 
 1. Give the device a name. In our case, we’ll enter "LoRa Pulse" in the **Name** field.
 2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
-3. Our device has been previously manually registered with Objenious. Make sure “Already Registered” is selected in the **Activation Mode** field.
+3. Our device has been previously manually registered with Objenious. Make sure ``Already Registered`` is selected in the **Activation Mode** field.
 4. Click **Add device**.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516155017/Cayenne-Objenious-Pulse-device-settings.png" width="660" height="414" alt="Cayenne showing Objenious Pulse settings"><br/><br/></p>
@@ -1839,7 +1913,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 
 1.  Give the device a name. In our case, we’ll enter “mDotBox” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
-3.  Our device has been previously manually registered with OrbiWise. Make sure “Already Registered” is selected in the **Activation Mode** field.
+3.  Our device has been previously manually registered with OrbiWise. Make sure ``Already Registered`` is selected in the **Activation Mode** field.
 4.  (Optional) Enter in your OrbiWise account information to take advantage of downlink commands.
 
     - Enter the name of your customer-specific OrbiWise portal (e.g. ``us.xyz.orbiwise.com``) into the **OrbiWise Server** field.
@@ -2015,7 +2089,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 
 1.  Give the device a name. In our case, we’ll enter “mDotBox” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
-3.  Our device has been previously manually registered with Senet. Make sure “Already Registered” is selected in the **Activation Mode** field.
+3.  Our device has been previously manually registered with Senet. Make sure ``Already Registered`` is selected in the **Activation Mode** field.
 4.  Enter your unique **Senet Account API Key** for your Senet account. This will allow Cayenne to send downlink commands to your device.
 
     *TIP: If you have not generated your API Key it can be found on the Senet Portal under your Account Information.*
@@ -2211,7 +2285,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 
 1. Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
 2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
-3. Our device has been previously manually registered with the Stream network. Make sure “Already Registered” is selected in the **Activation Mode** field.
+3. Our device has been previously manually registered with the Stream network. Make sure ``Already Registered`` is selected in the **Activation Mode** field.
 4. Click **Add device**.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170420123934/Cayenne-Stream-Pulse-device-settings.png" width="660" height="414" alt="Stream Pulse settings"><br/><br/></p>
@@ -2397,7 +2471,7 @@ In order to add the device, Cayenne needs to know some information about the dev
 
 1. Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
 2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
-3. Our device has been previously manually registered with The Things Network. Make sure “Already Registered” is selected in the **Activation Mode** field.
+3. Our device has been previously manually registered with The Things Network. Make sure ``Already Registered`` is selected in the **Activation Mode** field.
 4. Click **Add device**.
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170419092952/Cayenne-TTN-Pulse-settings.png" width="660" height="413" alt="TTN Pulse settings"><br/><br/></p>
