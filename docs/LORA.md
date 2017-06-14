@@ -692,6 +692,7 @@ In order to activate a LoRa device on a network, you will need to have an accoun
 Cayenne currently supports the following LoRa networks. The list of networks that work with Cayenne will keep growing.
 
 *   [Actility](#lora-actility)
+*   [Everynet](#lora-everynet-network)
 *   [Kerlink](#lora-kerlink-network)
 *   [Loriot](#lora-loriot-network)
 *   [Objenious](#lora-objenious-network)
@@ -972,6 +973,167 @@ When setting up your device on Actility's ThingPark portal, you must select the 
 
     For example, with the SmartPlug being used in the US, select **LoRaWAN 1.0 class C (-US-) Rx2-SF12**
     And in the EU, select **LoRaWAN 1.0 class C - Rx2-SF12**
+
+
+## Everynet Network
+
+**About Everynet**
+
+Everynet is a global IoT connectivity company, with a vision to make it simple to connect everyTHING. Providing very low cost network infrastructure and a Core Network Platform that together will offer the lowest device connection fee. An Innovative Everynet Partner Program that can facilitate participation in a Global Shared Network ensuring that devices are not limited by lack of coverage and a disruptive business model that has options to enable monetization of each network via third parties whilst serving network owner IoT needs. Everynet believe that two key barriers to large scale IoT deployment are cost and end device availability and work with both MNO and private network partners to ensure that these barriers are removed. Everynet is a contributor member of the LoRa Alliance and plays an active role in the activities of the Alliance.
+
+**Using Everynet with Cayenne**
+
+Cayenne makes it easy to use your LoRa technology device and the Everynet network. You will need to:
+
+1. [Create / Log into your account on the Everynet portal](#lora-everynet-network-create-account)
+2. [Setup gateway device](#lora-everynet-network-setup-gateway-device)
+3. [Create Application](#lora-everynet-network-create-application)
+3. [Register your device on the Everynet portal](#lora-everynet-network-manually-register-device)
+4. [Program/Flash your device](#lora-everynet-network-programming-the-device)
+5. [Add your device to your Cayenne dashboard](#lora-everynet-network-add-device-to-cayenne)
+
+We will walk you through these steps in the following sections.
+
+
+### Create account
+
+To create your Everynet account, visit the <a href="https://my.everynet.com/" target="_blank">Everynet Portal</a>. Click on **Sign Up** to get started.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613160732/Everynet-portal-login-landing.png" width="660" height="325" alt="Everynet portal login landing"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613160757/Everynet-Sign-Up.png" width="446" height="615" alt="Everynet sign up"><br/><br/></p>
+
+
+### Setup gateway device
+
+In order for your LoRa technology devices to connect to the Everynet network, you should purchase and configure a gateway device. You can find additional information on supported gateways on the <a href="http://docs.everynet.com/gateways/" target="_blank">Everynet Gateways page</a>.
+
+**Be sure that your devices are covered by the Everynet network, including having an appropriate gateway configured and working if needed, before continuing. Your devices will not be able to properly function without your gateway device in place.**
+
+#### Register new gateway device
+
+If you need to register a new gateway device, you can do so from the Everynet portal. To begin this process, log into your account and select the **Gateway Management** option.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613161113/Everynet-Gateways-with-highlight.png" width="660" height="189" alt="gateway management screen"><br/><br/></p>
+
+Expand the **+** menu and select the type of gateway that you will be adding.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613161154/Everynet-Add-Gateway-menu.png" width="579" height="553" alt="gateway management screen with add menu expanded"><br/><br/></p>
+
+On the *Gateway data* screen that appears, fill in the necessary information to add your gateway.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613161339/Everynet-add-gateway-data-screen.png" width="660" height="516" alt="gateway data screen"><br/><br/></p>
+
+### Create Application
+
+In order for data from your device to reach Cayenne, you must configure your devices in the Everynet portal to forward data to Cayenne. The Everynet portal groups devices in what they call Applications. If you want to use a group of devices with Cayenne, you will need to configure your Application to use Cayenne. You only need to perform this step once for each Application that you want to use.
+
+To create an application, log into the <a href="https://my.everynet.com/" target="_blank">Everynet Portal</a> and make sure the **Applications** tab is selected. Select the **+** button to add a new application.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613163101/Everynet-New-Application-highlight.png" width="660" height="455" alt="applications screen with new button highlight"><br/><br/></p>
+
+From the *Application Server Data* screen that appears, fill in the information needed to create the new application.
+
+1. Give the application a name, such as ``Cayenne``.
+2. Enter in an Application EUI or click on the button to have one generated.
+3. From the **Application interface** select ``Everynet Core API``.
+4. In the **Application Server URL** enter ``http://mydevices.adapter.eu-west-1.everynet.io/``.
+5. Click on **Submit** to complete your application and you will see your new application listed.
+
+*TIP: You may be able to find more help on setting up Cayenne with Everynet on the <a href="http://docs.everynet.com/iot-platforms-integration/mydevices/" target="_blank">Everynet myDevices doc page</a>.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613163440/Everynet-Application-data.png" width="660" height="566" alt="new application data screen"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613164044/Everynet-Application-created.png" width="660" height="344" alt="new application data screen"><br/><br/></p>
+
+Once you have an application that you want to use, you can then add your devices to it.
+
+### Manually register device
+
+Before you can use your LoRa technology device on the Everynet network, it must be registered on the network using the Everynet portal. The following information will help guide you through this process.
+
+**Log into the Everynet portal**
+
+Start by going to the <a href="https://my.everynet.com/" target="_blank">Everynet Portal</a> and logging into your account. Once logged in, you can proceed with registering a new device.
+
+**Register new device**
+
+To get started with a new device, click on the **Device Management** tab. From the *Device Management* screen, click on the **+** add device button to begin adding a new device.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613164405/Everynet-Add-Device-highlight.png" width="559" height="449" alt="device management with add button highlight"><br/><br/></p>
+
+From the *Device data* screen that appears, you must specify the data needed to register the device. Be sure to select the appropriate **Application** or your device data will not be forwarded to Cayenne.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613164626/Everynet-Add-device-data-screen.png" width="660" height="599" alt="Add device data screen"><br/><br/></p>
+
+Once added, your device will then appear in the list of devices shown on the Device Management screen.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613164847/Everynet-Device-management.png" width="660" height="214" alt="Everynet dashboard showing devices"><br/><br/></p>
+
+
+###  Programming the device
+
+Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
+
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#supported-hardware-lora-technology-devices) where you will find Product page, Datasheet and User Guides for your device.
+
+**NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
+
+*TIP: You should see data being reported on the Everynet portal's device list for your device. If you do not, double check the values entered for your device and consider programming/flashing the device again.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613165205/Everynet-Data-packets.png" width="660" height="343" alt="Everynet dashboard showing traffic from device"><br/><br/></p>
+
+
+### Add device to Cayenne
+
+Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+
+From the Cayenne dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="200" height="192" alt="Everynet"><br/><br/></p>
+
+From the list of devices & widgets that appears, click **LoRa** and select the **Everynet** Network option to view a list of Everynet supported devices.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613165802/Add-LoRa-device-OrbiWise-menu.png" width="660" height="399" alt="Everynet"><br/><br/></p>
+
+After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
+
+#### Already Registered
+
+Once your device has been previously registered on the Everynet network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
+
+**Items you will need:**
+
+1.  Which [LoRa technology device](#lora-everynet-network-supported-devices) is being added?
+2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-everynet-network-manually-register-device) if you need help with manually registering your device on the network.
+3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+4.  What is your unique Everynet account API Key?
+
+To see how easy it is, let’s walk through an example of connecting an [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox) which was previously registered under a [Everynet account](#lora-everynet-network-create-account).
+
+**1\. Choose the Network** <br/>
+Make sure the **Everynet** network is selected in the list of Networks.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613165802/Add-LoRa-device-OrbiWise-menu.png" width="660" height="399" alt="Everynet"><br/><br/></p>
+
+**2\. Select the Device** <br/>
+Select your device from among the list supported Everynet devices. In this case, we’ll select the **Multitech mDotBox**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613170151/Cayenne-Add-LoRa-device-Everynet-mDotBox-selected.png" width="660" height="427" alt="Everynet"><br/><br/></p>
+
+**3\. Enter Settings & Add device** <br/>
+In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
+
+1.  Give the device a name. In our case, we’ll enter “mDotBox” in the **Name** field.
+2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
+3.  Our device has been previously manually registered with Everynet. Make sure “Already Registered” is selected in the **Activation Mode** field.
+4.  Click **Add device**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613170528/Cayenne-Add-Device-Everynet-mDotBox-already-registered.png" width="660" height="427" alt="Cayenne Add Device with all Everynet fields shown"><br/><br/></p>
+
+The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 
 ## Kerlink Network
