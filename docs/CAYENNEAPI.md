@@ -1199,7 +1199,7 @@ Form variables:
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/parse</td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/v1.1/things/pair</td>
 </tr>
 </tbody>
 </table>
@@ -1680,12 +1680,10 @@ If an account is not available in token it can be provided in payload by “acco
       "id": "parent_device_id",
 	  "unit": "Celsius",
       "channel": "some_channel_id",
-	  "geofence": false,//
-      "operator": "EQ",
+	  "geofence": false,//optional boolean
+      "operator": "and",//"and", "or", "none"
 	  conditions: [
-			operator: Joi.valid([
-				"eq" , "ne" , "lte" , "lt" , "gte" , "gt", "within", "near", "intersects"
-			]).required(),
+			operator: eq, //"eq" , "ne" , "lte" , "lt" , "gte" , "gt", "within", "near", "intersects",
 			value: Joi.number().required(),
 			geo: Joi.array().optional()
 		]
