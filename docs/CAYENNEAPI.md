@@ -540,7 +540,7 @@ To begin a password reset action, this API provides two endpoints that will crea
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/password/rese</td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/password/reset</td>
 </tr>
 </tbody>
 </table>
@@ -874,7 +874,7 @@ Success Response (200)
 #### Curl example using Resource Owner Grant
 
 ```
-curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/json' -d 'grant_type=password&email=foobar%40example.com&password=example&client_id=123456' 'https://auth.mydevices.com/oauth/token'
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d 'grant_type=password&email=foobar%40example.com&password=example&client_id=123456' 'https://auth.mydevices.com/oauth/token'
 ```
 
 #### Single Sign On
@@ -1271,40 +1271,6 @@ Returns a collection of things associated with user or application. Only things 
 }
 ```
 
-##### Get single thing
-
-<table style="width: 100%;">
-<tbody>
-<tr>
-<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/v1.1/things/{thingId}</td>
-</tr>
-</tbody>
-</table>
-
-**Parameters**
-
-| Parameter	| Description |	Type |
-|--------------------|--------------------|---|
-| thingId      | thing id  | String (UUID) |
-
-**Response**
-
-```
-{
-  “id”: “UUID”,
-  "name": "string",
-  "device_type_id": "string",
-  "parent_id": "string",
-  "hardware_id": "string",
-  "properties": {},
-  “children”: [ Collection of things if parent ],
-  "active": 0,
-  "status": "string",
-  "last_online": 0
-}
-```
-
 ##### Update thing
 
 This endpoint supports partial updates for thing’s attributes.
@@ -1521,7 +1487,6 @@ Jobs is an API that allows consumers to create scheduled events with an action a
 	“title”: “String”,
 	“account_id”: “String”,
 	“next_runtime”: Date,
-	“__v”: int,
 	“config”: {
 		“interval”: int,
 		“start_date”: “String”,
@@ -1565,7 +1530,6 @@ Jobs is an API that allows consumers to create scheduled events with an action a
 	“title”: “String”,
 	“account_id”: “String”,
 	“next_runtime”: Date,
-	“__v”: int,
 	“config”: {
 		“interval”: int,
 		“start_date”: “String”,
