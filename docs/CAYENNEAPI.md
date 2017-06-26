@@ -715,7 +715,7 @@ To authenticate users originating from a 3rd party server side application we ut
 The user must be authenticated against the authorization server by directing them to the following link:
 
 ```
-GET http://auth.mydevices.com?response_type=code&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
+GET https://auth.mydevices.com/oauth/authorization?response_type=code&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
 ```
 
 **Query parameters**
@@ -796,7 +796,7 @@ The implicit flow is similar to the explicit flow except it is designed to be ut
 The user must be authenticated against the authorization server by directing them to the following link:
 
 ```
-GET http://auth.mydevices.com?response_type=token&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
+GET https://auth.mydevices.com/oauth/authorization?response_type=token&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
 ```
 
 **Query parameters:**
