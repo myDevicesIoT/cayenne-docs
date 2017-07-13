@@ -1114,7 +1114,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td style="font-size: 15px; padding: 10px;" colspan="2"><b>Type Constant &amp; Value</b></td>
 <td style="font-size: 15px; padding: 10px;"><b>Unit</b></td>
 <td style="font-size: 15px; padding: 10px;" colspan="2"><b>Unit Constant &amp; Value</b></td>
-<td style="font-size: 15px; padding: 10px;"><b>Widgets</b></td>
 </tr>
 <tr>
 <td><span>Analog Actuator</span></td>
@@ -1123,168 +1122,11 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
-<td><a href="#slider-control">Slider</a></td>
 </tr>
 <tr>
 <td><span>Digital Actuator</span></td>
 <td><span>DIGITAL_ACTUATOR</span></td>
 <td><span>digital_actuator</span></td>
-<td><span>Digital (0/1)</span></td>
-<td><span>DIGITAL</span></td>
-<td><span>null</span></td>
-<td><a href="#button-control">Button</a></td>
-</tr>
-<tr>
-<td><span>HVAC.Change State</span></td>
-<td><span>HVAC_CHANGE_STATE</span></td>
-<td><span>hvac_state</span></td>
-<td><span>State</span></td>
-<td><span>User defined</span></td>
-<td><span>null</span></td>
-<td>HVAC (coming Soon), <a href="#slider-control">Slider</a></td>
-</tr>
-<tr>
-<td rowspan="2"><span>HVAC.Change Temperature</span></td>
-<td rowspan="2"><span>HVAC_CHANGE_TEMP</span></td>
-<td rowspan="2"><span>hvac_temp</span></td>
-<td><span>Fahrenheit</span></td>
-<td><span>FAHRENHEIT</span></td>
-<td><span>f</span></td>
-<td rowspan="2">HVAC (coming Soon), <a href="#slider-control">Slider</a></td>
-</tr>
-<tr>
-<td><span>\* Celsius</span></td>
-<td><span>CELSIUS</span></td>
-<td><span>c</span></td>
-</tr>
-<tr>
-<td><span>HVAC.Off/On</span></td>
-<td><span>HVAC_OFF_ON</span></td>
-<td><span>hvac_off_on</span></td>
-<td><span>Off/On</span></td>
-<td><span>OFF_ON</span></td>
-<td><span>null</span></td>
-<td>HVAC (coming Soon), <a href="#button-control">Button</a></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Light Switch</span></td>
-<td rowspan="3"><span>LIGHT_SWITCH_ACT</span></td>
-<td rowspan="3"><span>lt_switch_act</span></td>
-<td><span>\* Off/On</span></td>
-<td><span>OFF_ON</span></td>
-<td><span>null</span></td>
-<td rowspan="3"><span><a href="#lighting-widget">Lighting (coming soon)</a>, <a href="#button-control">Button</a>, <a href="#switch-widget">Switch (coming soon)</a></span></td>
-</tr>
-<tr>
-<td><span>Digital (0/1)</span></td>
-<td><span>DIGITAL</span></td>
-<td><span>d</span></td>
-</tr>
-<tr>
-<td><span>Low/High</span></td>
-<td><span>LOW_HIGH</span></td>
-<td><span>null</span></td>
-</tr>
-<tr>
-<td><span>Lighting.Color</span></td>
-<td><span>LIGHTING_COLOR</span></td>
-<td><span>lt_color</span></td>
-<td><span>Hexadecimal</span></td>
-<td><span>HEX</span></td>
-<td><span>null</span></td>
-<td><span><a href="#lighting-widget">Lighting (coming soon)</a>, <a href="#slider-control">Slider</a></span></td>
-</tr>
-<tr>
-<td rowspan="4"><span>Lighting.Luminosity</span></td>
-<td rowspan="4"><span>LIGHTING_LUMINOSITY</span></td>
-<td rowspan="4"><span>lt_lum</span></td>
-<td><span>\* % (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-<td rowspan="4"><span><a href="#lighting-widget">Lighting (coming soon)</a>, <a href="#slider-control">Slider</a></span></td>
-</tr>
-<tr>
-<td><span>Lux</span></td>
-<td><span>LUX</span></td>
-<td><span>lux</span></td>
-</tr>
-<tr>
-<td><span>Volts</span></td>
-<td><span>VOLTS</span></td>
-<td><span>v</span></td>
-</tr>
-<tr>
-<td><span>Ratio</span></td>
-<td><span>RATIO</span></td>
-<td><span>r</span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Motor</span></td>
-<td rowspan="3"><span>MOTOR</span></td>
-<td rowspan="3"><span>motor</span></td>
-<td><span>\* Off/On</span></td>
-<td><span>OFF_ON</span></td>
-<td><span>null</span></td>
-<td rowspan="3"><span><a href="#button-control">Button</a>, <a href="#slider-control">Slider</a>, <a href="#switch-widget">Switch (coming soon)</a></span></td>
-</tr>
-<tr>
-<td><span>Low/High</span></td>
-<td><span>LOW_HIGH</span></td>
-<td><span>null</span></td>
-</tr>
-<tr>
-<td><span>Degree Angle</span></td>
-<td><span>DEGREE</span></td>
-<td><span>deg</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Relay</span></td>
-<td rowspan="2"><span>RELAY</span></td>
-<td rowspan="2"><span>relay</span></td>
-<td><span>\* Off/On</span></td>
-<td><span>OFF_ON</span></td>
-<td><span>null</span></td>
-<td rowspan="2"><span><a href="#button-control">Button</a></span></td>
-</tr>
-<tr>
-<td><span>Low/High</span></td>
-<td><span>LOW_HIGH</span></td>
-<td><span>null</span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Switch</span></td>
-<td rowspan="3"><span>SWITCH</span></td>
-<td rowspan="3"><span>switch</span></td>
-<td><span>\* Off/On</span></td>
-<td><span>OFF_ON</span></td>
-<td><span>null</span></td>
-<td rowspan="3"><span><a href="#switch-widget">Switch (coming soon)</a>, <a href="#button-control">Button</a></span></td>
-</tr>
-<tr>
-<td><span>Low/High</span></td>
-<td><span>LOW_HIGH</span></td>
-<td><span>null</span></td>
-</tr>
-<tr>
-<td><span>Digital (0/1)</span></td>
-<td><span>DIGITAL</span></td>
-<td><span>d</span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Valve</span></td>
-<td rowspan="3"><span>VALVE</span></td>
-<td rowspan="3"><span>valve</span></td>
-<td><span>\* Off/On</span></td>
-<td><span>OFF_ON</span></td>
-<td><span>null</span></td>
-<td rowspan="3"><span><a href="#switch-widget">Switch (coming soon)</a>, <a href="#button-control">Button</a></span></td>
-</tr>
-<tr>
-<td><span>Low/High</span></td>
-<td><span>LOW_HIGH</span></td>
-<td><span>null</span></td>
-</tr>
-<tr>
 <td><span>Digital (0/1)</span></td>
 <td><span>DIGITAL</span></td>
 <td><span>d</span></td>
@@ -1303,7 +1145,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td style="font-size: 15px; padding: 10px;" colspan="2"><b>Type Constant &amp; Value</b></td>
 <td style="font-size: 15px; padding: 10px;"><b>Unit</b></td>
 <td style="font-size: 15px; padding: 10px;" colspan="2"><b>Unit Constant &amp; Value</b></td>
-<td style="font-size: 15px; padding: 10px;"><b>Widgets</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Map</b></td>
 </tr>
 <tr>
 <td><span>Digital Sensor</span></td>
@@ -1312,7 +1154,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Digital (0/1)</span></td>
 <td><span>DIGITAL</span></td>
 <td><span>d</span></td>
-<td><span><a href="#2-state-display">2 State</a></span></td>
 </tr>
 <tr>
 <td><span>Analog Sensor</span></td>
@@ -1321,101 +1162,26 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
-<td><span><a href="#value-display">Value</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a></span></td>
 </tr>
 <tr>
-<td><span>Absolute Humidity</span></td>
-<td><span>ABSOLUTE_HUMIDITY</span></td>
-<td><span>abs_hum</span></td>
-<td><span>Grams per cubic meter</span></td>
-<td><span>GRAMS_PER_METER3</span></td>
-<td><span>gm3</span></td>
-<td><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Absorbed Radiation</span></td>
-<td rowspan="2"><span>ABSORBED_RADIATION</span></td>
-<td rowspan="2"><span>absrb_rad</span></td>
-<td><span>\* Rad</span></td>
-<td><span>RAD</span></td>
-<td><span>rad</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Gray</span></td>
-<td><span>GRAY</span></td>
-<td><span>gy</span></td>
-</tr>
-<tr>
-<td><span>Acceleration.gx axis</span></td>
-<td><span>ACCELERATION_GX</span></td>
-<td><span>gx</span></td>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>ms2</span></td>
-<td><span><a href="#accelerometer-widget">Accelerometer (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Acceleration.gy axis</span></td>
-<td><span>ACCELERATION_GY</span></td>
-<td><span>gy</span></td>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>ms2</span></td>
-<td><span><a href="#accelerometer-widget">Accelerometer (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Acceleration.gz axis</span></td>
-<td><span>ACCELERATION_GZ</span></td>
-<td><span>gz</span></td>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>ms2</span></td>
-<td><span><a href="#accelerometer-widget">Accelerometer (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Altitude</span></td>
-<td rowspan="2"><span>ALTITUDE</span></td>
-<td rowspan="2"><span>alt</span></td>
-<td><span>\* Meters above sea level</span></td>
-<td><span>METER</span></td>
-<td><span>m</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Feet above sea level</span></td>
-<td><span>FEET</span></td>
-<td><span>ft</span></td>
-</tr>
-<tr>
-<td><span>Amount of substance</span></td>
-<td><span>AMOUNT_SUBSTANCE</span></td>
-<td><span>amount</span></td>
-<td><span>Mole</span></td>
-<td><span>MOLE</span></td>
-<td><span>mol</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Area</span></td>
-<td><span>AREA</span></td>
-<td><span>area</span></td>
-<td><span>Square meter</span></td>
-<td><span>METER2</span></td>
-<td><span>m2</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+<td><span>Acceleration</span></td>
+<td><span>ACCELERATION</span></td>
+<td><span>accel</span></td>
+<td><span>Acceleration</span></td>
+<td><span>G</span></td>
+<td><span>g</span></td>
+<td>gx,gy,gz</td>
 </tr>
 <tr>
 <td rowspan="2"><span>Barometric pressure</span></td>
 <td rowspan="2"><span>BAROMETRIC_PRESSURE</span></td>
 <td rowspan="2"><span>bp</span></td>
-<td><span>Pascal</span></td>
+<td><span>\* Pascal</span></td>
 <td><span>PASCAL</span></td>
 <td><span>pa</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>\* Hecto Pascal</span></td>
+<td><span>Hecto Pascal</span></td>
 <td><span>HECTOPASCAL</span></td>
 <td><span>hpa</span></td>
 </tr>
@@ -1423,10 +1189,9 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td rowspan="3"><span>Battery</span></td>
 <td rowspan="3"><span>BATTERY</span></td>
 <td rowspan="3"><span>batt</span></td>
-<td><span>\* % (0 to 100)</span></td>
+<td><span>% (0 to 100)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
-<td rowspan="3"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Ratio</span></td>
@@ -1434,140 +1199,17 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>r</span></td>
 </tr>
 <tr>
-<td><span>Volts</span></td>
+<td><span>\* Volts</span></td>
 <td><span>VOLTS</span></td>
 <td><span>v</span></td>
 </tr>
 <tr>
-<td><span>Biometric</span></td>
-<td><span>BIOMETRIC</span></td>
-<td><span>bio</span></td>
-<td><span>Byte Array</span></td>
-<td><span>BYTE_ARRAY</span></td>
-<td><span>null</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a>, <a href="#2-state-display">2 State</a></span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Blood Count</span></td>
-<td rowspan="2"><span>BLOOD</span></td>
-<td rowspan="2"><span>blood</span></td>
-<td><span>\* Cells by cubic millimeter</span></td>
-<td><span>CELLS_MM3</span></td>
-<td><span>cmm</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-</tr>
-<tr>
-<td rowspan="6"><span>Bytes</span></td>
-<td rowspan="6"><span>BYTES</span></td>
-<td rowspan="6"><span>bytes</span></td>
-<td><span>Bits</span></td>
-<td><span>BIT</span></td>
-<td><span>bit</span></td>
-<td rowspan="6"><span><a href="#value-display">Value</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a></span></td>
-</tr>
-<tr>
-<td><span>\* Bytes</span></td>
-<td><span>BYTE</span></td>
-<td><span>byte</span></td>
-</tr>
-<tr>
-<td><span>Kilobytes</span></td>
-<td><span>KB_BYTE</span></td>
-<td><span>kb</span></td>
-</tr>
-<tr>
-<td><span>Megabytes</span></td>
-<td><span>MB_BYTE</span></td>
-<td><span>mb</span></td>
-</tr>
-<tr>
-<td><span>Gigabytes</span></td>
-<td><span>GB_BYTE</span></td>
-<td><span>gb</span></td>
-</tr>
-<tr>
-<td><span>Terabytes</span></td>
-<td><span>TB_BYTE</span></td>
-<td><span>tb</span></td>
-</tr>
-<tr>
-<td><span>Capacitance</span></td>
-<td><span>CAPACITANCE</span></td>
-<td><span>cap</span></td>
-<td><span>Farad</span></td>
-<td><span>FARAD</span></td>
-<td><span>farad</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Carbon Dioxide</span></td>
-<td rowspan="2"><span>CO2</span></td>
-<td rowspan="2"><span>co2</span></td>
-<td><span>\* Parts per milliion</span></td>
+<td><span>Carbon Dioxide</span></td>
+<td><span>CO2</span></td>
+<td><span>co2</span></td>
+<td><span>Parts per milliion</span></td>
 <td><span>PPM</span></td>
 <td><span>ppm</span></td>
-<td rowspan="2"><span>CO2 Detector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Units of Micromole</span></td>
-<td><span>UNITS_MICROMOLE</span></td>
-<td><span>wmoco2</span></td>
-</tr>
-<tr>
-<td><span>Charge</span></td>
-<td><span>CHARGE</span></td>
-<td><span>charge</span></td>
-<td><span>Coulomb</span></td>
-<td><span>COULOMB</span></td>
-<td><span>q</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Cholesterol</span></td>
-<td rowspan="2"><span>CHOLESTEROL</span></td>
-<td rowspan="2"><span>chol</span></td>
-<td><span>Millimoles/liter</span></td>
-<td><span>MMOL_L</span></td>
-<td><span>mmol</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Milligrams/deciliter</span></td>
-<td><span>MG_DL</span></td>
-<td><span>mgdl</span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Color</span></td>
-<td rowspan="3"><span>COLOR</span></td>
-<td rowspan="3"><span>color</span></td>
-<td><span>\* RGB</span></td>
-<td><span>RGB</span></td>
-<td><span>null</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>CYMK</span></td>
-<td><span>CYMK</span></td>
-<td><span>null</span></td>
-</tr>
-<tr>
-<td><span>Hexadecimal</span></td>
-<td><span>HEX</span></td>
-<td><span>null</span></td>
-</tr>
-<tr>
-<td><span>Conductance</span></td>
-<td><span>CONDUCTANCE</span></td>
-<td><span>conduct</span></td>
-<td><span>Siemen</span></td>
-<td><span>SIEMEN</span></td>
-<td><span>s</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Counter</span></td>
@@ -1576,94 +1218,35 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
-<td><span><a href="#value-display">Value</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a></span></td>
 </tr>
 <tr>
-<td><span>CPU</span></td>
-<td><span>CPU</span></td>
-<td><span>cpu</span></td>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-<td><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Current</span></td>
-<td><span>CURRENT</span></td>
-<td><span>current</span></td>
-<td><span>Ampere</span></td>
+<td rowspan="2"><span>Current</span></td>
+<td rowspan="2"><span>CURRENT</span></td>
+<td rowspan="2"><span>current</span></td>
+<td><span>\* Ampere</span></td>
 <td><span>AMP</span></td>
 <td><span>a</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>Current density</span></td>
-<td><span>CURRENT_DENSITY</span></td>
-<td><span>current_density</span></td>
-<td><span>Ampere per squre meter</span></td>
-<td><span>AMP_2_METER</span></td>
-<td><span>am2</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+<td><span>Milliampere</span></td>
+<td><span>MAMP</span></td>
+<td><span>ma</span></td>
 </tr>
 <tr>
-<td><span>Density</span></td>
-<td><span>DENSITY</span></td>
-<td><span>density</span></td>
-<td><span>Kilograms per cubic meter</span></td>
-<td><span>KGM3</span></td>
-<td><span>kgm3</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Effective Radiation</span></td>
-<td rowspan="3"><span>EFFECTIVE_RADATION</span></td>
-<td rowspan="3"><span>eff_rad</span></td>
-<td><span>Roentgen</span></td>
-<td><span>ROENTGEN</span></td>
-<td><span>roent</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Sievert</span></td>
-<td><span>SIEVERT</span></td>
-<td><span>sv</span></td>
-</tr>
-<tr>
-<td><span>SieVert per Hour</span></td>
-<td><span>SIEVERT_HOUR</span></td>
-<td><span>svph</span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Energy</span></td>
-<td rowspan="3"><span>ENERGY</span></td>
-<td rowspan="3"><span>energy</span></td>
-<td><span>Killowatts per hour</span></td>
-<td><span>KW_PER_H</span></td>
+<td><span>Energy</span></td>
+<td><span>ENERGY</span></td>
+<td><span>energy</span></td>
+<td><span>Killowatt Hour</span></td>
+<td><span>KWH</span></td>
 <td><span>kwh</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td rowspan="3"><span>External Waterleak</span></td>
-<td rowspan="3"><span>EXT_WATERLEAK</span></td>
-<td rowspan="3"><span>ext_wleak</span></td>
+<td><span>External Waterleak</span></td>
+<td><span>EXT_WATERLEAK</span></td>
+<td><span>ext_wleak</span></td>
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
-<td><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Force</span></td>
-<td rowspan="2"><span>FORCE</span></td>
-<td rowspan="2"><span>force</span></td>
-<td><span>\* Newtons</span></td>
-<td><span>NEWTON</span></td>
-<td><span>null</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Metric</span></td>
-<td><span>METRIC_FORCE</span></td>
-<td><span>force</span></td>
 </tr>
 <tr>
 <td><span>Frequency</span></td>
@@ -1672,350 +1255,30 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Hertz</span></td>
 <td><span>HERTZ</span></td>
 <td><span>hz</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td rowspan="3"><span>Gas</span></td>
-<td rowspan="3"><span>GAS</span></td>
-<td rowspan="3"><span>gas</span></td>
-<td><span>\* Pascal</span></td>
-<td><span>PASCAL</span></td>
-<td><span>pa</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Cubic meters</span></td>
-<td><span>METER3</span></td>
-<td><span>m3</span></td>
-</tr>
-<tr>
-<td><span>Kilograms per cubic meter</span></td>
-<td><span>KGM3</span></td>
-<td><span>kgm3</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Glucose</span></td>
-<td rowspan="2"><span>GLUCOSE</span></td>
-<td rowspan="2"><span>glucose</span></td>
-<td><span>Millimoles/liter</span></td>
-<td><span>MMOL_L</span></td>
-<td><span>mmol</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Milligrams/deciliter</span></td>
-<td><span>MG_DL</span></td>
-<td><span>mgdl</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>GPS</span></td>
-<td rowspan="2"><span>GPS</span></td>
-<td rowspan="2"><span>gps</span></td>
-<td><span>\* Global Positioning System</span></td>
+<td><span>GPS</span></td>
 <td><span>GPS</span></td>
 <td><span>gps</span></td>
-<td rowspan="2"><span><a href="#map-widget">Map</a></span></td>
-</tr>
-<tr>
-<td><span>Universal Transverse Mercator</span></td>
-<td><span>UTM</span></td>
-<td><span>utm</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Gravity.x axis</span></td>
-<td rowspan="2"><span>GRAVITY_X</span></td>
-<td rowspan="2"><span>grav_x</span></td>
-<td><span>Newtons per kilogram</span></td>
-<td><span>NEWTON_PER_KG</span></td>
-<td><span>nkg</span></td>
-<td rowspan="2">Gravity (coming soon), <a href="#donut-widget">Donut (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></td>
-</tr>
-<tr>
-<td><span>\* Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>ms2</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Gravity.y axis</span></td>
-<td rowspan="2"><span>GRAVITY_Y</span></td>
-<td rowspan="2"><span>grav_y</span></td>
-<td><span>Newtons per kilogram</span></td>
-<td><span>NEWTON_PER_KG</span></td>
-<td><span>nkg</span></td>
-<td rowspan="2">Gravity (coming soon), <a href="#donut-widget">Donut (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></td>
-</tr>
-<tr>
-<td><span>\* Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>ms2</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Gravity.z axis</span></td>
-<td rowspan="2"><span>GRAVITY_Z</span></td>
-<td rowspan="2"><span>grav_z</span></td>
-<td><span>Newtons per kilogram</span></td>
-<td><span>NEWTON_PER_KG</span></td>
-<td><span>nkg</span></td>
-<td rowspan="2"><span>Gravity (coming soon), <a href="#donut-widget">Donut (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>ms2</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Gyroscope.rate of rotation around x axis</span></td>
-<td rowspan="2"><span>GYRO_X</span></td>
-<td rowspan="2"><span>gyro_x</span></td>
-<td><span>\* Rotation speed</span></td>
-<td><span>ROTATION</span></td>
-<td><span>rot</span></td>
-<td rowspan="2"><span><a href="#gyroscope-widget">Gyroscope (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>mps2</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Gyroscope.rate of rotation around y axis</span></td>
-<td rowspan="2"><span>GYRO_Y</span></td>
-<td rowspan="2"><span>gyro_y</span></td>
-<td><span>\* Rotation speed</span></td>
-<td><span>ROTATION</span></td>
-<td><span>rot</span></td>
-<td rowspan="2"><span><a href="#gyroscope-widget">Gyroscope (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>mps2</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Gyroscope.rate of rotation around z axis</span></td>
-<td rowspan="2"><span>GYRO_Z</span></td>
-<td rowspan="2"><span>gyro_z</span></td>
-<td><span>\* Rotation speed</span></td>
-<td><span>ROTATION</span></td>
-<td><span>rot</span></td>
-<td rowspan="2"><span><a href="#gyroscope-widget">Gyroscope (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>mps2</span></td>
-</tr>
-<tr>
-<td><span>HVAC.Humdity</span></td>
-<td><span>HVAC_HUMIDITY</span></td>
-<td><span>hvac_hum</span></td>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-<td>HVAC (coming soon), <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></td>
-</tr>
-<tr>
-<td><span>Image</span></td>
-<td><span>IMAGE</span></td>
-<td><span>image</span></td>
-<td><span>Byte Array</span></td>
-<td><span>BYTE_ARRAY</span></td>
-<td><span>null</span></td>
-<td><span><a href="#camera-widget">Camera (Gallery)(coming soon)</a></span></td>
-</tr>
-<tr>
-<td><span>Impedance</span></td>
-<td><span>IMPEDANCE</span></td>
-<td><span>imped</span></td>
-<td><span>Ohm</span></td>
-<td><span>OHM</span></td>
-<td><span>ohm</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Inductance</span></td>
-<td><span>INDUCTANCE</span></td>
-<td><span>induct</span></td>
-<td><span>Henry</span></td>
-<td><span>HENRY</span></td>
-<td><span>h</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Ink Levels.Black</span></td>
-<td><span>INK_BLACK</span></td>
-<td><span>ink_blk</span></td>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-<td><span>Ink Levels (coming soon), <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Ink Levels.Cyan</span></td>
-<td><span>INK_CYAN</span></td>
-<td><span>ink_cya</span></td>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-<td><span>Ink Levels (coming soon), <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Ink Levels.Magenta</span></td>
-<td><span>INK_MEGENTA</span></td>
-<td><span>ink_mag</span></td>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-<td><span>Ink Levels (coming soon), <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Ink Levels.Yellow</span></td>
-<td><span>INK_YELLOW</span></td>
-<td><span>ink_yel</span></td>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-<td><span>Ink Levels (coming soon), <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Intrusion</span></td>
-<td><span>INTRUSION</span></td>
-<td><span>intrusion</span></td>
-<td><span>Digital (0/1)</span></td>
-<td><span>DIGITAL</span></td>
-<td><span>d</span></td>
-<td><span><a href="#intrusion-widget">Intrusion (coming soon)</a>, <a href="#2-state-display">2 State</a>, <a href="#line-chart-display">Line Chart</a></span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Ionizing Radiation</span></td>
-<td rowspan="3"><span>IONIZING_RADIATION</span></td>
-<td rowspan="3"><span>ion_rad</span></td>
-<td><span>\* Electron Volts</span></td>
-<td><span>ELECTRON_VOLT</span></td>
-<td><span>ev</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Ergs</span></td>
-<td><span>ERGS</span></td>
-<td><span>erg</span></td>
-</tr>
-<tr>
-<td><span>Joules</span></td>
-<td><span>JOULE</span></td>
-<td><span>j</span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Length</span></td>
-<td rowspan="3"><span>LENGTH</span></td>
-<td rowspan="3"><span>len</span></td>
-<td><span>\* Meter</span></td>
-<td><span>METER</span></td>
+<td><span>\* GPS</span></td>
+<td><span>GPS</span></td>
 <td><span>m</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+<td>lat,long,alt</td>
 </tr>
 <tr>
-<td><span>Digital (0/1)</span></td>
-<td><span>DIGITAL</span></td>
-<td><span>d</span></td>
+<td rowspan="2"><span>Gyroscope</span></td>
+<td rowspan="2"><span>GYROSCOPE</span></td>
+<td rowspan="2"><span>gyro</span></td>
+<td><span>\* Rotation per minute</span></td>
+<td><span>ROTATION_PER_MINUTE</span></td>
+<td><span>rpm</span></td>
+<td>gyro_x,gyro_y,gyro_z</td>
 </tr>
 <tr>
-<td><span>Low/High</span></td>
-<td><span>LOW_HIGH</span></td>
-<td><span>null</span></td>
-</tr>
-<tr>
-<td rowspan="4"><span>Lighting</span></td>
-<td rowspan="4"><span>LIGHTING_SENSE</span></td>
-<td rowspan="4"><span>lighting_sense</span></td>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-<td rowspan="4"><span><a href="#lighting-widget">Lighting (coming soon)</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Lux</span></td>
-<td><span>LUX</span></td>
-<td><span>lux</span></td>
-</tr>
-<tr>
-<td><span>Volts</span></td>
-<td><span>VOLTS</span></td>
-<td><span>v</span></td>
-</tr>
-<tr>
-<td><span>Ratio</span></td>
-<td><span>RATIO</span></td>
-<td><span>r</span></td>
-</tr>
-<tr>
-<td><span>Linear Acceleration.x axis</span></td>
-<td><span>LINEAR_ACCEL_X</span></td>
-<td><span>lin_acc_x</span></td>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>mps2</span></td>
-<td><span>Linear Acceleration (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Linear Acceleration.y axis</span></td>
-<td><span>LINEAR_ACCEL_Y</span></td>
-<td><span>lin_acc_y</span></td>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>mps2</span></td>
-<td><span>Linear Acceleration (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Linear Acceleration.z axis</span></td>
-<td><span>LINEAR_ACCEL_Z</span></td>
-<td><span>lin_acc_z</span></td>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC_SQ</span></td>
-<td><span>mps2</span></td>
-<td><span>Linear Acceleration (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="4"><span>Liquid</span></td>
-<td rowspan="4"><span>LIQUID</span></td>
-<td rowspan="4"><span>liquid</span></td>
-<td><span>\* Liter</span></td>
-<td><span>LITER</span></td>
-<td><span>l</span></td>
-<td rowspan="4"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Gallon</span></td>
-<td><span>GALLON</span></td>
-<td><span>gal</span></td>
-</tr>
-<tr>
-<td><span>Ounce</span></td>
-<td><span>OUNCE</span></td>
-<td><span>oz</span></td>
-</tr>
-<tr>
-<td><span>Cubic centimeter</span></td>
-<td><span>CUBIC_CENT</span></td>
-<td><span>cc</span></td>
-</tr>
-<tr>
-<td><span>Location.Latitude</span></td>
-<td><span>LOCATION_LAT</span></td>
-<td><span>loc_lat</span></td>
-<td><span>Latitude</span></td>
-<td><span>LATITUDE</span></td>
-<td><span>lat</span></td>
-<td><span><a href="#map-widget">Map</a></span></td>
-</tr>
-<tr>
-<td><span>Location.Longitude</span></td>
-<td><span>LOCATION_LONG</span></td>
-<td><span>loc_lon</span></td>
-<td><span>Longitude</span></td>
-<td><span>LONGITUDE</span></td>
-<td><span>long</span></td>
-<td><span><a href="#map-widget">Map</a></span></td>
+<td><span>Degree per second</span></td>
+<td><span>DEGREE_PER_SEC</span></td>
+<td><span>dps</span></td>
+<td>gyro_x,gyro_y,gyro_z</td>
 </tr>
 <tr>
 <td rowspan="4"><span>Luminosity</span></td>
@@ -2024,7 +1287,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Lux</span></td>
 <td><span>LUX</span></td>
 <td><span>lux</span></td>
-<td rowspan="4"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Volts</span></td>
@@ -2042,207 +1304,25 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>r</span></td>
 </tr>
 <tr>
-<td><span>Magnetic field strength H</span></td>
-<td><span>MAGNETIC_STRENGTH</span></td>
-<td><span>mag_str</span></td>
-<td><span>Amperes per meter</span></td>
-<td><span>AMP_METER</span></td>
-<td><span>ampm</span></td>
-<td><span>Magnetic Field H &amp; B (coming soon), <a href="#magnetometer-widget">Magnetometer (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Magnetic field.x axis</span></td>
-<td><span>MAGNETIC_AXIS_X</span></td>
-<td><span>mag_x</span></td>
-<td><span>Tesla</span></td>
-<td><span>TESLA</span></td>
-<td><span>tesla</span></td>
-<td><span><a href="#magnetometer-widget">Magnetometer (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Magnetic field.y axis</span></td>
-<td><span>MAGNETIC_AXIS_Y</span></td>
-<td><span>mag_y</span></td>
-<td><span>Tesla</span></td>
-<td><span>TESLA</span></td>
-<td><span>tesla</span></td>
-<td><span><a href="#magnetometer-widget">Magnetometer (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Magnetic field.z axis</span></td>
-<td><span>MAGNETIC_AXIS_Z</span></td>
-<td><span>mag_z</span></td>
-<td><span>Tesla</span></td>
-<td><span>TESLA</span></td>
-<td><span>tesla</span></td>
-<td><span><a href="#magnetometer-widget">Magnetometer (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Magnetic flux density B</span></td>
-<td><span>MAGNETIC_FLUX_DENSITY</span></td>
-<td><span>mag_flux</span></td>
-<td><span>Newton-meters per ampere</span></td>
-<td><span>NEWTON_METERS_AMP</span></td>
-<td><span>nma</span></td>
-<td><span>Magnetic Field H &amp; B (coming soon), <a href="#magnetometer-widget">Magnetometer (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Mass</span></td>
-<td><span>MASS</span></td>
-<td><span>mass</span></td>
-<td><span>Kilogram</span></td>
-<td><span>KILOGRAM</span></td>
-<td><span>kg</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Memory</span></td>
-<td rowspan="3"><span>MEMORY</span></td>
-<td rowspan="3"><span>mem</span></td>
-<td><span>Kilobytes</span></td>
-<td><span>KB_BYTE</span></td>
-<td><span>kb</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Megabytes</span></td>
-<td><span>MB_BYTE</span></td>
-<td><span>mb</span></td>
-</tr>
-<tr>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-</tr>
-<tr>
 <td><span>Motion</span></td>
 <td><span>MOTION</span></td>
 <td><span>motion</span></td>
 <td><span>Digital (0/1)</span></td>
 <td><span>DIGITAL</span></td>
 <td><span>d</span></td>
-<td><span><a href="#motion-widget">Motion (coming soon)</a>, <a href="#2-state-display">2 State</a>, <a href="#line-chart-display">Line Chart</a></span></td>
 </tr>
 <tr>
-<td rowspan="3"><span>Oil</span></td>
-<td rowspan="3"><span>OIL</span></td>
-<td rowspan="3"><span>oil</span></td>
-<td><span>Oil Barrel</span></td>
-<td><span>BARREL</span></td>
-<td><span>bbl</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* gallon</span></td>
-<td><span>GALLON</span></td>
-<td><span>gal</span></td>
-</tr>
-<tr>
-<td><span>liter</span></td>
-<td><span>LITER</span></td>
-<td><span>l</span></td>
-</tr>
-<tr>
-<td><span>Orientation.Azimuth</span></td>
-<td><span>ORIENT_AZIMUTH</span></td>
-<td><span>ori_azim</span></td>
-<td><span>Degree Angle</span></td>
-<td><span>DEGREE</span></td>
-<td><span>deg</span></td>
-<td><span>Orientation (coming soon), <a href="#meter-widget">Meter (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Orientation.Pitch</span></td>
-<td><span>ORIENT_PITCH</span></td>
-<td><span>ori_pitch</span></td>
-<td><span>Degree Angle</span></td>
-<td><span>DEGREE</span></td>
-<td><span>deg</span></td>
-<td><span>Orientation (coming soon), <a href="#meter-widget">Meter (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Orientation.Roll</span></td>
-<td><span>ORIENT_ROLL</span></td>
-<td><span>ori_roll</span></td>
-<td><span>Degree Angle</span></td>
-<td><span>DEGREE</span></td>
-<td><span>deg</span></td>
-<td><span>Orientation (coming soon), <a href="#meter-widget">Meter (coming soon)</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>pH-Acidity</span></td>
-<td><span>ACIDITY</span></td>
-<td><span>acid</span></td>
-<td><span>Acidity</span></td>
-<td><span>ACIDITY</span></td>
-<td><span>acid</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Power</span></td>
-<td><span>POWER</span></td>
-<td><span>pow</span></td>
-<td><span>Watts</span></td>
+<td rowspan="2"><span>Power</span></td>
+<td rowspan="2"><span>POWER</span></td>
+<td rowspan="2"><span>pow</span></td>
+<td><span>\* Watts</span></td>
 <td><span>WATT</span></td>
 <td><span>w</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
-<td><span>Pollution.Nitrogen</span></td>
-<td><span>POLLUTION_NO2</span></td>
-<td><span>no2</span></td>
-<td><span>Nitrogen dioxide</span></td>
-<td><span>NO2</span></td>
-<td><span>no2</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>,<a href="#gauge-display">Gauge</a>,<a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Pollution.Ozone</span></td>
-<td><span>POLLUTION_O3</span></td>
-<td><span>o3</span></td>
-<td><span>Ozone</span></td>
-<td><span>O3</span></td>
-<td><span>o3</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>,<a href="#gauge-display">Gauge</a>,<a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="7"><span>Pressure</span></td>
-<td rowspan="7"><span>PRESSURE</span></td>
-<td rowspan="7"><span>press</span></td>
-<td><span>\* Pascal</span></td>
-<td><span>PASCAL</span></td>
-<td><span>pa</span></td>
-<td rowspan="7"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Hecto Pascal</span></td>
-<td><span>HECTOPASCAL</span></td>
-<td><span>hpa</span></td>
-</tr>
-<tr>
-<td><span>Bar</span></td>
-<td><span>BAR</span></td>
-<td><span>bar</span></td>
-</tr>
-<tr>
-<td><span>Technical atmosphere</span></td>
-<td><span>TECH_ATMO</span></td>
-<td><span>at</span></td>
-</tr>
-<tr>
-<td><span>Standard atmosphere</span></td>
-<td><span>STD_ATMO</span></td>
-<td><span>atm</span></td>
-</tr>
-<tr>
-<td><span>Torr</span></td>
-<td><span>TORR</span></td>
-<td><span>torr</span></td>
-</tr>
-<tr>
-<td><span>Pounds per square inch</span></td>
-<td><span>PSI</span></td>
-<td><span>psi</span></td>
+<td><span>Kilowatts</span></td>
+<td><span>KILOWATT</span></td>
+<td><span>kw</span></td>
 </tr>
 <tr>
 <td rowspan="3"><span>Proximity</span></td>
@@ -2251,7 +1331,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Centimeter</span></td>
 <td><span>CENTIMETER</span></td>
 <td><span>cm</span></td>
-<td rowspan="3"><span><a href="#proximity-widget">Proximity (coming soon)</a>, <a href="#value-display">Value</a>, <a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a></span></td>
 </tr>
 <tr>
 <td><span>Meter</span></td>
@@ -2264,41 +1343,12 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>d</span></td>
 </tr>
 <tr>
-<td rowspan="2"><span>Radioactivity</span></td>
-<td rowspan="2"><span>RADIOACTIVITY</span></td>
-<td rowspan="2"><span>rad</span></td>
-<td><span>Becquerel</span></td>
-<td><span>BECQUEREL</span></td>
-<td><span>bq</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Curie</span></td>
-<td><span>CURIE</span></td>
-<td><span>ci</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Radiation Exposure</span></td>
-<td rowspan="2"><span>EXPOSURE_RADIATION</span></td>
-<td rowspan="2"><span>expo_rad</span></td>
-<td><span>\* Roentgen</span></td>
-<td><span>ROENTGEN</span></td>
-<td><span>roent</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Coulomb/Kilogram</span></td>
-<td><span>COULOMB_PER_KG</span></td>
-<td><span>ckg</span></td>
-</tr>
-<tr>
 <td rowspan="2"><span>Rain Level</span></td>
 <td rowspan="2"><span>RAIN_LEVEL</span></td>
 <td rowspan="2"><span>rain_level</span></td>
 <td><span>Centimeter</span></td>
 <td><span>CENTIMETER</span></td>
 <td><span>cm</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>\* Millimeter</span></td>
@@ -2306,13 +1356,20 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>mm</span></td>
 </tr>
 <tr>
+<td><span>Received signal strength indicator</span></td>
+<td><span>RSSI</span></td>
+<td><span>rssi</span></td>
+<td><span>dBm</span></td>
+<td><span>DBM</span></td>
+<td><span>dbm</span></td>
+</tr>
+<tr>
 <td rowspan="2"><span>Relative Humidity</span></td>
 <td rowspan="2"><span>RELATIVE_HUMIDITY</span></td>
 <td rowspan="2"><span>rel_hum</span></td>
-<td><span>\* % (0 to 100)</span></td>
+<td><span>\* Percent (%)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
-<td rowspan="2"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Ratio</span></td>
@@ -2326,81 +1383,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Ohm</span></td>
 <td><span>OHM</span></td>
 <td><span>ohm</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Rotation</span></td>
-<td rowspan="3"><span>ROTATION</span></td>
-<td rowspan="3"><span>rot</span></td>
-<td><span>Revolutions per minute</span></td>
-<td><span>RPM</span></td>
-<td><span>rpm</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Revolutions per second</span></td>
-<td><span>RPMS</span></td>
-<td><span>rpms</span></td>
-</tr>
-<tr>
-<td><span>Radians per second</span></td>
-<td><span>rad/s</span></td>
-<td><span>radianps</span></td>
-</tr>
-<tr>
-<td><span>Rotation Vector.scalar</span></td>
-<td><span>ROTATION_SCALAR</span></td>
-<td><span>rot_scal</span></td>
-<td><span>Cos(0/2)</span></td>
-<td><span>ROT_SCAL</span></td>
-<td><span>null</span></td>
-<td><span>Rotation Vector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Rotation Vector.x axis</span></td>
-<td><span>ROTATION_X</span></td>
-<td><span>rot_x</span></td>
-<td><span>X \* sin (0/2)</span></td>
-<td><span>ROT_X</span></td>
-<td><span>null</span></td>
-<td><span>Rotation Vector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Rotation Vector.y axis</span></td>
-<td><span>ROTATION_Y</span></td>
-<td><span>rot_y</span></td>
-<td><span>Y \* sin (0/2)</span></td>
-<td><span>ROT_Y</span></td>
-<td><span>null</span></td>
-<td><span>Rotation Vector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Rotation Vector.z axis</span></td>
-<td><span>ROTATION_Z</span></td>
-<td><span>rot_z</span></td>
-<td><span>Z \* sin (0/2)</span></td>
-<td><span>ROT_Z</span></td>
-<td><span>null</span></td>
-<td><span>Rotation Vector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Seismometer</span></td>
-<td rowspan="3"><span>SEISMOMETER</span></td>
-<td rowspan="3"><span>seis</span></td>
-<td><span>Microns (micrometers) /second,</span></td>
-<td><span>MICROS_PER_SEC</span></td>
-<td><span>micps</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Volts</span></td>
-<td><span>VOLTS</span></td>
-<td><span>v</span></td>
-</tr>
-<tr>
-<td><span>Spectral Amplitude</span></td>
-<td><span>cm/hertz</span></td>
-<td><span>cmhz</span></td>
 </tr>
 <tr>
 <td><span>Signal Noise Ratio</span></td>
@@ -2409,44 +1391,14 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Decibels</span></td>
 <td><span>DB</span></td>
 <td><span>db</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Signal Strength</span></td>
-<td><span>SIGNAL_STRENGTH</span></td>
-<td><span>sig_str</span></td>
-<td><span>Decibels per milliwatt</span></td>
-<td><span>DBM</span></td>
-<td><span>dbm</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Smoke</span></td>
-<td rowspan="3"><span>SMOKE</span></td>
-<td rowspan="3"><span>smoke</span></td>
-<td><span>% (0 to 100)</span></td>
-<td><span>PERCENT</span></td>
-<td><span>p</span></td>
-<td rowspan="3"><span>Smoke Detector (coming soon), <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Photodiode</span></td>
-<td><span>PHOTODIODE</span></td>
-<td><span>pz</span></td>
-</tr>
-<tr>
-<td><span>\* Kiloelectron Volts</span></td>
-<td><span>KILOELEC_VOLT</span></td>
-<td><span>kev</span></td>
 </tr>
 <tr>
 <td><span>Soil Moisture</span></td>
 <td><span>SOIL_MOISTURE</span></td>
 <td><span>soil_moist</span></td>
-<td><span>% (0 to 100)</span></td>
+<td><span>Percent (%)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Soil pH</span></td>
@@ -2455,7 +1407,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td rowspan="2"><span>Soil Water Tension</span></td>
@@ -2464,110 +1415,11 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Kilopascal</span></td>
 <td><span>KILOPASCAL</span></td>
 <td><span>kpa</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Pascal</span></td>
 <td><span>PASCAL</span></td>
 <td><span>pa</span></td>
-</tr>
-<tr>
-<td><span>Solid Volume</span></td>
-<td><span>SOLID_VOLUME</span></td>
-<td><span>solid_vol</span></td>
-<td><span>Cubic meter</span></td>
-<td><span>CUBIC_METER</span></td>
-<td><span>m3</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Sound</span></td>
-<td><span>SOUND</span></td>
-<td><span>sound</span></td>
-<td><span>Decibels per milliwatt</span></td>
-<td><span>DBM</span></td>
-<td><span>dbm</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Specific Humidity</span></td>
-<td><span>SPECIFIC_HUMIDITY</span></td>
-<td><span>spec_hum</span></td>
-<td><span>Grams/Kilograms</span></td>
-<td><span>G_PER_KG</span></td>
-<td><span>gkg</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Speed</span></td>
-<td rowspan="2"><span>SPEED</span></td>
-<td rowspan="2"><span>speed</span></td>
-<td><span>Kilometer per hour</span></td>
-<td><span>KM_PER_H</span></td>
-<td><span>kmh</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Miles per hour</span></td>
-<td><span>MPH</span></td>
-<td><span>mph</span></td>
-</tr>
-<tr>
-<td><span>Steps</span></td>
-<td><span>STEPS</span></td>
-<td><span>steps</span></td>
-<td><span>Steps</span></td>
-<td><span>STEPS</span></td>
-<td><span>null</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="5"><span>Storage</span></td>
-<td rowspan="5"><span>STORAGE</span></td>
-<td rowspan="5"><span>storage</span></td>
-<td><span>Bytes</span></td>
-<td><span>BYTE</span></td>
-<td><span>byte</span></td>
-<td rowspan="5"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Kilobytes</span></td>
-<td><span>KB_BYTE</span></td>
-<td><span>kb</span></td>
-</tr>
-<tr>
-<td><span>\* Megabytes</span></td>
-<td><span>MB_BYTE</span></td>
-<td><span>mb</span></td>
-</tr>
-<tr>
-<td><span>Gigabytes</span></td>
-<td><span>GB_BYTE</span></td>
-<td><span>gb</span></td>
-</tr>
-<tr>
-<td><span>Terabytes</span></td>
-<td><span>TB_BYTE</span></td>
-<td><span>tb</span></td>
-</tr>
-<tr>
-<td rowspan="3"><span>Stress</span></td>
-<td rowspan="3"><span>STRESS</span></td>
-<td rowspan="3"><span>stress</span></td>
-<td><span>Pascal</span></td>
-<td><span>PASCAL</span></td>
-<td><span>pa</span></td>
-<td rowspan="3"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Hecto Pascal</span></td>
-<td><span>HECTOPASCAL</span></td>
-<td><span>hpa</span></td>
-</tr>
-<tr>
-<td><span>Pounds per square inch</span></td>
-<td><span>PSI</span></td>
-<td><span>psi</span></td>
 </tr>
 <tr>
 <td><span>Tank Level</span></td>
@@ -2576,7 +1428,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td rowspan="3"><span>Temperature</span></td>
@@ -2585,7 +1436,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Fahrenheit</span></td>
 <td><span>FAHRENHEIT</span></td>
 <td><span>f</span></td>
-<td rowspan="3"><span><a href="#value-display">Value</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a></span></td>
 </tr>
 <tr>
 <td><span>\* Celsius</span></td>
@@ -2598,167 +1448,17 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>k</span></td>
 </tr>
 <tr>
-<td rowspan="7"><span>Time</span></td>
-<td rowspan="7"><span>TIME</span></td>
-<td rowspan="7"><span>time</span></td>
-<td><span>\* Second</span></td>
-<td><span>s</span></td>
-<td><span>sec</span></td>
-<td rowspan="7"><span>Time (coming soon), <a href="#lcd-widget">LCD (coming soon)</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Milliseconds</span></td>
-<td><span>ms</span></td>
-<td><span>msec</span></td>
-</tr>
-<tr>
-<td><span>minute</span></td>
-<td><span>mb</span></td>
-<td><span>min</span></td>
-</tr>
-<tr>
-<td><span>hour</span></td>
-<td><span>h</span></td>
-<td><span>hour</span></td>
-</tr>
-<tr>
-<td><span>day</span></td>
-<td><span>d</span></td>
-<td><span>day</span></td>
-</tr>
-<tr>
-<td><span>month</span></td>
-<td><span>m</span></td>
-<td><span>month</span></td>
-</tr>
-<tr>
-<td><span>year</span></td>
-<td><span>y</span></td>
-<td><span>year</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Torque</span></td>
-<td rowspan="2"><span>TORQUE</span></td>
-<td rowspan="2"><span>torq</span></td>
-<td><span>\* Newton-meter</span></td>
-<td><span>nm</span></td>
-<td><span>newtm</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Joule</span></td>
-<td><span>j</span></td>
-<td><span>j</span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Turbidity</span></td>
-<td rowspan="2"><span>TURBIDITY</span></td>
-<td rowspan="2"><span>turb</span></td>
-<td><span>Nephelometric Turbidity Unit</span></td>
-<td><span>ntu</span></td>
-<td><span>ntu</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>\* Formazin Turbidity Unit</span></td>
-<td><span>ftu</span></td>
-<td><span>ftu</span></td>
-</tr>
-<tr>
-<td><span>Ultrasonic</span></td>
-<td><span>ULTRASONIC</span></td>
-<td><span>ultra</span></td>
-<td><span>Kilohertz</span></td>
-<td><span>khz</span></td>
-<td><span>khz</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Velocity</span></td>
-<td><span>VELOCITY</span></td>
-<td><span>velo</span></td>
-<td><span>Meters per second squared</span></td>
-<td><span>METER_PER_SEC</span></td>
-<td><span>mps</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Viscosity</span></td>
-<td><span>VISCOSITY</span></td>
-<td><span>visco</span></td>
-<td><span>Millipascal-second</span></td>
-<td><span>MILLIPASCAL_SEC</span></td>
-<td><span>mpas</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
 <td rowspan="2"><span>Voltage</span></td>
 <td rowspan="2"><span>VOLTAGE</span></td>
 <td rowspan="2"><span>voltage</span></td>
 <td><span>\* Volts</span></td>
 <td><span>VOLTS</span></td>
 <td><span>v</span></td>
-<td rowspan="2"><span><a href="#gauge-display">Gauge</a>, <a href="#line-chart-display">Line Chart</a>, <a href="#value-display">Value</a></span></td>
 </tr>
 <tr>
 <td><span>Millivolts</span></td>
 <td><span>MILLIVOLTS</span></td>
 <td><span>mv</span></td>
-</tr>
-<tr>
-<td><span>Volume</span></td>
-<td><span>VOLUME</span></td>
-<td><span>vol</span></td>
-<td><span>Cubic meter</span></td>
-<td><span>CUBIC_METER</span></td>
-<td><span>m3</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Water</span></td>
-<td rowspan="2"><span>WATER</span></td>
-<td rowspan="2"><span>h20</span></td>
-<td><span>\* Gallons per minute</span></td>
-<td><span>GPM</span></td>
-<td><span>gpm</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Cubic feet per second</span></td>
-<td><span>CUBIC_FEET_SEC</span></td>
-<td><span>cfs</span></td>
-</tr>
-<tr>
-<td><span>Wavelength</span></td>
-<td><span>WAVELENGTH</span></td>
-<td><span>wave</span></td>
-<td><span>Meters</span></td>
-<td><span>METER</span></td>
-<td><span>m</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td rowspan="2"><span>Weight</span></td>
-<td rowspan="2"><span>WEIGHT</span></td>
-<td rowspan="2"><span>weight</span></td>
-<td><span>\* Pounds</span></td>
-<td><span>POUND</span></td>
-<td><span>lbs</span></td>
-<td rowspan="2"><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
-</tr>
-<tr>
-<td><span>Kilogram</span></td>
-<td><span>KILOGRAM</span></td>
-<td><span>kg</span></td>
-</tr>
-<tr>
-<td><span>Received signal strength indicator</span></td>
-<td><span>RSSI</span></td>
-<td><span>rssi</span></td>
-<td><span>RSSI</span></td>
-<td><span>DBM</span></td>
-<td><span>dbm</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a></span></td>
 </tr>
 <tr>
 <td><span>Wind Speed</span></td>
@@ -2767,7 +1467,15 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Kilometer per hour</span></td>
 <td><span>KM_PER_H</span></td>
 <td><span>kmh</span></td>
-<td><span><a href="#line-chart-display">Line Chart</a>, <a href="#gauge-display">Gauge</a>, <a href="#value-display">Value</a></span></td>
+</tr>
+<tr>
+<td><span>LT100GPS</span></td>
+<td><span>LT100GPS</span></td>
+<td><span>LT100GPS</span></td>
+<td><span>LT100GPS</span></td>
+<td><span>LT100GPS</span></td>
+<td><span>m</span></td>
+<td>lat,long,alt,rept</td>
 </tr>
 </tbody>
 </table>
