@@ -1154,6 +1154,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Digital (0/1)</span></td>
 <td><span>DIGITAL</span></td>
 <td><span>d</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Analog Sensor</span></td>
@@ -1162,6 +1163,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Acceleration</span></td>
@@ -1179,11 +1181,13 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Pascal</span></td>
 <td><span>PASCAL</span></td>
 <td><span>pa</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Hecto Pascal</span></td>
 <td><span>HECTOPASCAL</span></td>
 <td><span>hpa</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="3"><span>Battery</span></td>
@@ -1192,16 +1196,19 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>% (0 to 100)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Ratio</span></td>
 <td><span>RATIO</span></td>
 <td><span>r</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>\* Volts</span></td>
 <td><span>VOLTS</span></td>
 <td><span>v</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Carbon Dioxide</span></td>
@@ -1210,6 +1217,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Parts per milliion</span></td>
 <td><span>PPM</span></td>
 <td><span>ppm</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Counter</span></td>
@@ -1218,6 +1226,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><span>Current</span></td>
@@ -1226,11 +1235,13 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Ampere</span></td>
 <td><span>AMP</span></td>
 <td><span>a</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Milliampere</span></td>
 <td><span>MAMP</span></td>
 <td><span>ma</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Energy</span></td>
@@ -1239,6 +1250,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Killowatt Hour</span></td>
 <td><span>KWH</span></td>
 <td><span>kwh</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>External Waterleak</span></td>
@@ -1247,6 +1259,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Frequency</span></td>
@@ -1255,6 +1268,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Hertz</span></td>
 <td><span>HERTZ</span></td>
 <td><span>hz</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>GPS</span></td>
@@ -1287,21 +1301,25 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Lux</span></td>
 <td><span>LUX</span></td>
 <td><span>lux</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Volts</span></td>
 <td><span>VOLTS</span></td>
 <td><span>v</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>% (0 to 100)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Ratio</span></td>
 <td><span>RATIO</span></td>
 <td><span>r</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Motion</span></td>
@@ -1310,6 +1328,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Digital (0/1)</span></td>
 <td><span>DIGITAL</span></td>
 <td><span>d</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><span>Power</span></td>
@@ -1318,11 +1337,13 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Watts</span></td>
 <td><span>WATT</span></td>
 <td><span>w</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Kilowatts</span></td>
 <td><span>KILOWATT</span></td>
 <td><span>kw</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="3"><span>Proximity</span></td>
@@ -1331,16 +1352,19 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Centimeter</span></td>
 <td><span>CENTIMETER</span></td>
 <td><span>cm</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Meter</span></td>
 <td><span>METER</span></td>
 <td><span>m</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Digital (0/1)</span></td>
 <td><span>DIGITAL</span></td>
 <td><span>d</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><span>Rain Level</span></td>
@@ -1349,11 +1373,13 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Centimeter</span></td>
 <td><span>CENTIMETER</span></td>
 <td><span>cm</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>\* Millimeter</span></td>
 <td><span>MILLIMETER</span></td>
 <td><span>mm</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Received signal strength indicator</span></td>
@@ -1362,6 +1388,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>dBm</span></td>
 <td><span>DBM</span></td>
 <td><span>dbm</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><span>Relative Humidity</span></td>
@@ -1370,11 +1397,13 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Percent (%)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Ratio</span></td>
 <td><span>RATIO</span></td>
 <td><span>r</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Resistance</span></td>
@@ -1383,6 +1412,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Ohm</span></td>
 <td><span>OHM</span></td>
 <td><span>ohm</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Signal Noise Ratio</span></td>
@@ -1391,6 +1421,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Decibels</span></td>
 <td><span>DB</span></td>
 <td><span>db</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Soil Moisture</span></td>
@@ -1399,6 +1430,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Percent (%)</span></td>
 <td><span>PERCENT</span></td>
 <td><span>p</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Soil pH</span></td>
@@ -1407,6 +1439,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><span>Soil Water Tension</span></td>
@@ -1415,11 +1448,13 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Kilopascal</span></td>
 <td><span>KILOPASCAL</span></td>
 <td><span>kpa</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Pascal</span></td>
 <td><span>PASCAL</span></td>
 <td><span>pa</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Tank Level</span></td>
@@ -1428,6 +1463,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Analog</span></td>
 <td><span>ANALOG</span></td>
 <td><span>null</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="3"><span>Temperature</span></td>
@@ -1436,16 +1472,19 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Fahrenheit</span></td>
 <td><span>FAHRENHEIT</span></td>
 <td><span>f</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>\* Celsius</span></td>
 <td><span>CELSIUS</span></td>
 <td><span>c</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Kelvin</span></td>
 <td><span>KELVIN</span></td>
 <td><span>k</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><span>Voltage</span></td>
@@ -1454,11 +1493,13 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>\* Volts</span></td>
 <td><span>VOLTS</span></td>
 <td><span>v</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Millivolts</span></td>
 <td><span>MILLIVOLTS</span></td>
 <td><span>mv</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Wind Speed</span></td>
@@ -1467,6 +1508,7 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>Kilometer per hour</span></td>
 <td><span>KM_PER_H</span></td>
 <td><span>kmh</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>LT100GPS</span></td>
