@@ -1510,15 +1510,6 @@ In order to process data appropriately, Cayenne needs to know both data type and
 <td><span>kmh</span></td>
 <td>&nbsp;</td>
 </tr>
-<tr>
-<td><span>LT100GPS</span></td>
-<td><span>LT100GPS</span></td>
-<td><span>LT100GPS</span></td>
-<td><span>LT100GPS</span></td>
-<td><span>LT100GPS</span></td>
-<td><span>m</span></td>
-<td>lat,long,alt,rept</td>
-</tr>
 </tbody>
 </table>
 
