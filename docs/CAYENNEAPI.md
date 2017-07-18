@@ -1662,9 +1662,8 @@ If an account is not available in token it can be provided in payload by “acco
 |--------------------|--------------------|---|
 | title      | rule name  | String |
 | account_id      | Account that rule belongs to  | String |
-| triggers      | JSON object of device properties and operators. Currently supported just one.  | Objects Array |
-| triggers_condition      | Currently for just one device. Future Values: OR, AND  | String |
 | enabled      | Rule should run or not  | Boolean |
+| triggers      | JSON object of device properties and operators. Currently supported just one.  | Objects Array |
 | actions      | Execution to other things actions. Currently supported just one.  | Objects Array |
 | notifications      | Email, sms and (not yet available) push notifications  | Objects Array |
 | http_push      | Http push to 3rd party services  | Objects Array |
@@ -1674,33 +1673,39 @@ If an account is not available in token it can be provided in payload by “acco
 ```
 {
   "enabled": true,
+  "account_id": "163200",	
   "title": "My first rule",
   "triggers": [
-    {
-      "id": "parent_device_id",
-	  "unit": "Celsius",
-      "channel": "some_channel_id",
-	  "geofence": false,//optional boolean
-      "operator": "and",//"and", "or", "none"
-	  conditions: [
-			operator: eq, //"eq" , "ne" , "lte" , "lt" , "gte" , "gt", "within", "near", "intersects",
-			value: Joi.number().required(),
-			geo: Joi.array().optional()
-		]
-    }
+	{
+		"conditions" : [
+			{
+				"value" : "15",
+				"operator" : "gt"
+			},
+			{
+				"value" : "30",
+				"operator" : "lt"
+			}
+		],
+		"geofence" : false,
+		"channel" : "101",
+		"unit" : "c",
+		"id" : "23ebc530-52e2-11e7-ab9c-b78f223d8c0b"
+	}
   ],
   "actions": [
     {
       "id": "parent_device_id",
       "channel": "some_channel_id",
       "unit": "std",
-      "value": "0"
+      "value": 0
     }
   ],
   "notifications": [
     {
       "method": "sms",
-      "value": "+10213543213"
+      "value": "+10213543213",
+	  "body": "Some sms body"
     }
   ],
   "http_push": [
@@ -1710,8 +1715,7 @@ If an account is not available in token it can be provided in payload by “acco
       "payload": {},
       "headers": {}
     }
-  ],
-  "triggers_condition": "OR"
+  ]
 }
 ```
 
@@ -1764,48 +1768,50 @@ If an account is not available in token it can be provided in query parameters b
 
 ```
 {
-	"_id": "590667539f234af837fabcf9",
-	"enabled": true,
-	"account_id": "163200",
-	"triggers_condition": "OR",
-	"title": "TEST",
-	"updated_at": "1970-01-18T06:53:11.887Z",
-	"created_at": "1970-01-18T06:53:11.887Z",
-	"notifications": [
-		{
-			"method": "email",
-			"value": "foobar@example.com",
-			"_id": "590667539f234af837fabcfb"
-		}
-	],
-	"http_push": [
-		{
-			"url": "http://some.url.com",
-			"method": "POST",
-			"_id": "590667539f234af837fabcfc"
-		}
-	],
-	"actions": [
-		{
-			"id": "07bc0540-1355-11e7-b08e-b58900f876c2",
-			"channel": "2",
-			"unit": "std",
-			"value": "0",
-			"_id": "590667539f234af837fabcfa"
-		}
-	],
-	"triggers": [
-		{
-			"id": "07bc0540-1355-11e7-b08e-b58900f876c2",
-			"channel": "1",
-			"operator": "EQ",
-			"unit": "std",
-			"_id": "590667539f234af837fabcfd",
-			"values": [
-				"0"
-			]
-		}
-	]
+  "enabled": true,
+  "title": "My first rule",
+  "account_id": "163200",
+  "triggers": [
+	{
+		"conditions" : [
+			{
+				"value" : "15",
+				"operator" : "gt"
+			},
+			{
+				"value" : "30",
+				"operator" : "lt"
+			}
+		],
+		"geofence" : false,
+		"channel" : "101",
+		"unit" : "c",
+		"id" : "23ebc530-52e2-11e7-ab9c-b78f223d8c0b"
+	}
+  ],
+  "actions": [
+    {
+      "id": "parent_device_id",
+      "channel": "some_channel_id",
+      "unit": "std",
+      "value": 0
+    }
+  ],
+  "notifications": [
+    {
+      "method": "sms",
+      "value": "+10213543213",
+	  "body": "Some sms body"
+    }
+  ],
+  "http_push": [
+    {
+      "url": "string",
+      "method": "POST",
+      "payload": {},
+      "headers": {}
+    }
+  ]
 }
 ```
 
@@ -1827,17 +1833,24 @@ Updates an existing rule by id.
 ```
 {
 	    "title":"TEST3",
-	    "account_id": "163200",
 		"triggers": [
-				{
-					"id": "07bc0540-1355-11e7-b08e-b58900f876c2",
-					"operator": "GT",
-					"unit": "std",
-					"values": [
-						"0"
-					]
-				}
-			]
+			{
+				"conditions" : [
+					{
+						"value" : "15",
+						"operator" : "gt"
+					},
+					{
+						"value" : "30",
+						"operator" : "lt"
+					}
+				],
+				"geofence" : false,
+				"channel" : "101",
+				"unit" : "c",
+				"id" : "23ebc530-52e2-11e7-ab9c-b78f223d8c0b"
+			}
+		]
 }
 ```
 
