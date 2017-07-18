@@ -540,7 +540,7 @@ To begin a password reset action, this API provides two endpoints that will crea
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #79ae3d; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/password/rese</td>
+<td style="font-size: 15px; padding: 10px; background-color: #d9ead3; color: #000000;">/password/reset</td>
 </tr>
 </tbody>
 </table>
