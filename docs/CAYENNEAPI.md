@@ -1719,8 +1719,6 @@ If an account is not available in token it can be provided in payload by “acco
 }
 ```
 
-Allowed triggers operators are: and, or, none
-Values are in a array for reserver operators like: IN, BETWEEN  
 Allowed notifications methods are: sms and email.
 Http push is pending for support.
 
