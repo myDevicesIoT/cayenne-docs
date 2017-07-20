@@ -175,6 +175,20 @@
 
         });
 
+        //Cayenne API navigation
+        var cayenneApiItem = $("li#cayenne-api-item");
+        var cayenneApiList = $("ul#cayenne-api-list");
+
+        cayenneApiItem.prepend( $("<div class='toggle-menu'></div>") );
+        cayenneApiList.hide();
+        var cayenneApiE = $("#cayenne-api-item > div.toggle-menu");
+
+        cayenneApiE.click(function(){
+            $(this).toggleClass("expand");
+            cayenneApiList.slideToggle("slow");
+
+        });
+
         // $window.resize(function () {
         //     var viewportWidth = $window.width();
         //     if (viewportWidth < 1) {
@@ -265,6 +279,14 @@
                 $("#security-item > div.toggle-menu").addClass("expand");
                 $("ul#apis-list").css("display", "none");
                 $("#apis-item > div.toggle-menu").removeClass("expand");
+            }
+        }
+        else if( $("a#cayenne-api-link").hasClass("active") ){
+            if( $("ul#cayenne-api-list:hidden") ){
+                $("ul#cayenne-api-list").css("display", "block");
+                $("#cayenne-api-item > div.toggle-menu").addClass("expand");
+                $("ul#cayenne-api-list").css("display", "none");
+                $("#cayenne-api-item > div.toggle-menu").removeClass("expand");
             }
         }
     })

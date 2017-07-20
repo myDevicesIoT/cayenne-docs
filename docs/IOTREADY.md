@@ -194,7 +194,7 @@ myDevices
 Attn: Camrin Roczey
 23801 Calabasas Road, Ste. 2005
 Calabasas, CA 91302
-Phone: 818-591-9600
+Phone: 818-436-3500
 ```
 
 If you have any questions, contact us at <a href="mailto:iotready@mydevices.com">IoTReady@myDevices.com</a>

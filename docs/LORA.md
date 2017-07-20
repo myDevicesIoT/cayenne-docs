@@ -694,6 +694,7 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 *   [Actility](#lora-actility)
 *   [Kerlink](#lora-kerlink-network)
 *   [Loriot](#lora-loriot-network)
+*   [Objenious](#lora-objenious-network)
 *   [OrbiWise](#lora-orbiwise-network)
 *   [Senet](#lora-senet-network)
 *   [Stream](#lora-stream-network)
@@ -825,7 +826,7 @@ After selecting the OTAA activation mode, the list of fields will update to show
     + **Device Address:** Skip – When selecting OTAA activation, the device address will automatically be generated based on the DevEUI.
     + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Be sure to select the correct profile for your device and which network it will be using.
     
-        *TIP: You can refer to the [Supported devices section](#lora-actility-supported-devices) where we have more details on which Device Profile to select for devices.*
+        *TIP: You can refer to the [Actility Device Profiles section](#lora-actility-actility-device-profiles) where we have more details on which Device Profile to select for devices.*
 + Application layer
     + **Application EUI:** Enter the AppEUI. The AppEUI is a global application ID that uniquely identifies the application provider (i.e., owner) of the device.
 
@@ -861,7 +862,7 @@ After selecting the APB activation mode, the list of fields will update to show 
     + **Device Address:** When using APB, you will need to manually enter the hardware address here.
     + **Device Profile:** Actility uses this profile to correctly decode the payload, based on the device type, and display it on their dashboard. Be sure to select the correct profile for your device and which network it will be using.
     
-        *TIP: You can refer to the [Supported devices section](#lora-actility-supported-devices) where we have more details on which Device Profile to select for devices.*
+        *TIP: You can refer to the [Actility Device Profiles section](#lora-actility-actility-device-profiles) where we have more details on which Device Profile to select for devices.*
     + **Application session key:** Enter the AppSKey. The AppSKey is an application session key specific for the end-device. It is used by both the network server and the end-device to encrypt and decrypt the payload field of application-specific data messages.
     + **Network session key:** Enter the NwkSKey. The NwkSKey is a network session key specific for the end-device. It is used by both the network server and the end-device to calculate and verify the MIC (message integrity code) of all data messages to ensure data integrity. It is further used to encrypt and decrypt the payload field of a MAC only data messages.
 + Application layer
@@ -892,7 +893,7 @@ Once your device has been created, continue by making sure that your device has 
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-actility-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#supported-hardware-lora-technology-devices) where you will find Product page, Datasheet and User Guides for your device.
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
@@ -944,7 +945,10 @@ In order to add the device, Cayenne needs to know some information about the dev
 1.  Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
 3.  Our device has been previously manually registered with Actility. Select “Already Registered” in the **Activation Mode** field.
-4.  From the **ThingPark Server** field, be sure to select the correct server that you are using.
+4.  From the **ThingPark Server** field, be sure to select the correct environment that you are using.
+
+    *TIP: If you don't find your ThingPark environment in the dropdown, please ask Actility for your **ThingPark DX Profile**, and manually enter it. It should be suffixed with `-api` such as `mycompany-api`.*
+
 5.  Enter your **ThingPark Email** and **ThingPark Password** into the corresponding fields.
 6.  Click **Add device**.
 
@@ -955,35 +959,7 @@ The Pulse has been added to your dashboard and Cayenne will automatically add wi
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 
-### Supported devices
-
-**Actility network devices supported by Cayenne**
-Cayenne currently supports the following devices on the Actility network. Support for more devices is constantly ongoing.
-
-*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
-*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
-*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
-*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
-*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
-*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
-*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
-*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
-*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
-*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
-*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
-*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
-*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
-*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
-*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
-*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
-
-
-**Actility Device Profiles by device**
+### Actility Device Profiles
 
 When setting up your device on Actility's ThingPark portal, you must select the correct **Device Profile** for your device. Below are some guidelines on which profile to select.
 
@@ -1143,7 +1119,7 @@ Once your device has been created, continue by making sure that your device has 
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-kerlink-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#supported-hardware-lora-technology-devices) where you will find Product page, Datasheet and User Guides for your device.
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
@@ -1204,35 +1180,6 @@ In order to add the device, Cayenne needs to know some information about the dev
 The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
-
-
-### Supported devices
-
-**The Kerlink network devices supported by Cayenne**
-
-Cayenne currently supports the following devices on the Kerlink network. Support for more devices is constantly ongoing.
-
-*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
-*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
-*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
-*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
-*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
-*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
-*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
-*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
-*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
-*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
-*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
-*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
-*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
-*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
-*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
-*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
 
 
 ## Loriot Network
@@ -1342,7 +1289,7 @@ If you have existing devices, select either the **Import existing OTAA** or **Im
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-loriot-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#supported-hardware-lora-technology-devices) where you will find Product page, Datasheet and User Guides for your device.
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
@@ -1414,33 +1361,161 @@ The Pulse has been added to your dashboard and Cayenne will automatically add wi
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
 
 
-### Supported devices
+## Objenious Network
 
-**Loriot network devices supported by Cayenne**
+**About Objenious**
 
-Cayenne currently supports the following devices on the Loriot network. Support for more devices is constantly ongoing.
+Objenious, a Bouygues Telecom subsidiary, has selected LoRaWAN® technology, a global standard, in order to provide the best support to these businesses through every step of their transformation. Objenious also provides a network, an IoT platform called SPOT (stands for Smart Portal of Things) and tailored services to meet businesses needs.
 
-*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
-*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
-*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
-*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
-*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
-*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
-*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
-*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
-*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
-*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
-*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
-*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
-*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
-*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
-*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
-*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
+**Using Objenious with Cayenne**
+
+Cayenne makes it easy to use your LoRa device and the Objenious network. You will need to:
+
+1. [Create / Log into your account on the Objenious SPOT portal](#lora-objenious-network-create-account)
+2. [Register your device on the SPOT portal](#lora-objenious-network-manually-register-device)
+3. [Setup traffic forwarding to Cayenne](#lora-objenious-network-setup-device-forwarding-to-cayenne)
+4. [Add your device to your Cayenne dashboard](#lora-objenious-network-add-device-to-cayenne)
+
+We will walk you through these steps in the following sections.
+
+*Note: At present the Objenious SPOT portal is currently shown in French only. The documentation shown in this section will reference the SPOT portal in French, but the steps should be easy enough to follow along.*
+
+### Create account
+
+To get an account with Objenious, you will need to work directly with Objenious. Although there is an <a href="https://spot.objenious.com/user/add-data-start-user" target="_blank">account creation link</a> on the SPOT portal, it requires an Activation Code that you must first obtain from Objenious.
+
+**Log into the SPOT portal**
+
+Once you have your account, you can proceed with the logging into the <a href="https://spot.objenious.com/login" target="_blank">SPOT portal</a>. After logging in, you will see your Dashboard and from there you can proceed with setting things up to connect with Cayenne.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516152527/Objenius-SPOT-Portal-sign-in.png" width="660" height="553" alt="Objenious SPOT portal login"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516152615/Objenius-SPOT-dashboard.png" width="660" height="414" alt="SPOT portal dashboard"><br/><br/></p>
+
+### Manually register device
+
+Before you can use your LoRa device on the Objenious network, it must be registered on the network. The following information will help guide you through this process using Objenious's SPOT portal and the *CAPTEURS* screen.
+
+**Import Devices**
+
+To get started with adding new devices, click on the **CAPTEURS** link in the side menu shown on the SPOT dashboard. From the screen that appears, click on the **IMPORTER DES CAPTEURS** button.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516152817/Objenius-dashboard-capteurs-highlight.png" width="660" height="585" alt="Capteurs button highlight"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516153229/Objenious-gestion-des-capteurs-import-highlight.png" width="660" height="333" alt="Import button highlight"><br/><br/></p>
+
+In order to import devices into Objenious, you will need to download and fill in a template file. Download the template by clicking on the **Téléchargez le template** button. Fill in the required information for the devices that you wish to import and **save** the template.
+
+*Note: Take note of which __Groupe (code)__ you specify your devices get imported to. Later when you [setup data forwarding to Cayenne](#lora-objenious-network-setup-device-forwarding-to-cayenne), you will need to do so for each group of devices you want to forward data.*
+
+*Note: If you need more information on this step, or run into trouble importing your devices, you may wish to refer to Objenious' <a href="https://spot.objenious.com/assets/documents/faq/faq.pdf?v1" target="_blank">FAQ document (FRENCH)</a> that contains a wealth of helpful information.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516153519/Objenius-import-devices-template-highlight.png" width="660" height="343" alt="Import screen with template button highlighted"><br/><br/></p>
+
+To complete importing your devices, click on **CHOISIR UN FICHIER** and browse to the template file that contains the devices you wish to importn. Click on the **IMPORTER** button and then the **ACCEPTER** button.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516153729/Objenius-import-upload-template-highlight.png" width="660" height="214" alt="Import screen with template ready to import"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516153813/Objenius-import-confirmation-dialog.png" width="660" height="384" alt="Import screen popup"><br/><br/></p>
+
+*Note: You will see the status of your device import and any errors down below in the history section on the Import screen. If you run into any errors, you can expand the details for that import attempt and then try again.*
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516153950/Objenius-import-error-highlight.png" width="660" height="241" alt="Import screen with import history showing error expanded"><br/><br/></p>
+
+Once your devices have been imported, they should appear on the *GESTION DES CAPTEURS* screen.
+
+**Note:** that it can take up to 48 hours for newly imported devices to be activated on Objenious. In the meantime, you will see your device shown in the list of devices, but you will see an activation error shown in the status (STATUT) field. Once your device is ready to be used, you will see a green *EN ACTIVITÉ* status shown next to your device.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154145/Objenious-gestion-des-capteurs-activated-device.png" width="660" height="333" alt="Devices screen with activated device highlight"><br/><br/></p>
+
+Once your device has been imported and is ready to be used, you can proceed with setting up data forwarding to Cayenne.
+
+### Setup device forwarding to Cayenne
+
+In order for Cayenne to be able to able to receive your device’s information, you will need to setup forwarding. When devices are imported into Objenious, they are imported into a group (Groupe). This setup will need to be performed once for each group of devices in your account.
+
+To perform this step, expand the **CONFIGURATION** option in the side menu and select **Scénarios et alertes**. On the *SCÉNARIOS ALERTES* screen that appears, click on the **CRÉER UN SCÉNARIO** button to begin creating a new scenario.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154308/Objenius-scenarios-create-highlight.png" width="660" height="306" alt="Scenarios screen with create highlight"><br/><br/></p>
+
+On the *CHOIX DU SCÉNARIO* page that appears, scroll down and select the HTTP Push Route (**ROUTAGE**) option. Then click on the **SUIVANT** button to continue to the next step.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154549/Objenius-route-highlight.png" width="660" height="407" alt="HTTP Push Routage option highlight"><br/><br/></p>
+
+On the Parameters screen (*PARAMÉTRAGE DU SCÉNARIO*), make the following choices:
+
+- Enter a name for the route in the name (**NOM DU SCENARIO**) field, such as ``Cayenne Forward``.
+- From the group (**GROUPE**) field, select which group of devices you want this rule to apply. *In the example shown here, our group is named **MyDevices**. Yours will be named differently.*
+- From the list of device types (**TYPE DE CAPTEUR**) select All (**TOUS**).
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154723/Objenius-route-parameters-1.png" width="660" height="450" alt="Parameters entered so far"><br/><br/></p>
+- In the destination URL field (**ENVOI D'UNE REQUÊTE HTTP**) enter in Cayenne's Objenious uplink URL.
+
+    ```
+    https://lora.mydevices.com/v1/networks/objenious/uplink
+    ```
+- Under **CONTENU** be sure to select the **MESSAGE** option. This is required so that Cayenne receives the entire payload data and not just decoded values.
+- Finally, click on the create scenario (**Créer le scénario**) button to complete the creation.
+
+    <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154724/Objenius-route-parameters-2.png" width="660" height="598" alt="Parameters showing last options and create highlight"><br/><br/></p>
+
+You will then see your completed route shown on the *SCÉNARIOS ALERTES* screen. Your group is now configured to forward data to Cayenne. You can now proceed with adding your devices in Cayenne.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516154934/Objenius-scenarios.png" width="660" height="306" alt="Scenarios screen with Cayenne Forward created"><br/><br/></p>
+
+### Add device to Cayenne
+
+Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+
+From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Cayenne Add New menu"><br/><br/></p>
+
+From the list of devices & widgets that appears, select the **LoRa** category and then **Objenious** option to view a list of supported devices.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516155015/Cayenne-Objenious-network-list.png" width="660" height="413" alt="Cayenne showing list of Objenious devices"><br/><br/></p>
+
+After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
+
+#### Already Registered
+
+If your device has been previously registered on Objenious, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
+
+**Items you will need:**
+
+1. Which [LoRa technology device](#lora-the-things-network-supported-devices) is being added?
+2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-objenious-network-manually-register-device) if you need help with manually registering your device on the network.
+3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+
+To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under a [Objenious account](#lora-objenious-network-create-account).
+
+**1\. Choose the Network**
+
+Make sure **Objenious** is selected in the list of Networks.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516155015/Cayenne-Objenious-network-list.png" width="660" height="413" alt="Cayenne showing list of Objenious devices"><br/><br/></p>
+
+**2\. Select the Device**
+
+Select your device from among the list supported Objenious devices. In this case, we’ll select the **Adeunis Pulse**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516155019/Cayenne-Objenious-Pulse-selected2.png" width="660" height="413" alt="Cayenne showing Objenious and Adeunis Pulse highlighted"><br/><br/></p>
+
+**3\. Enter Settings & Add device**
+
+In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
+
+1. Give the device a name. In our case, we’ll enter "LoRa Pulse" in the **Name** field.
+2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
+3. Our device has been previously manually registered with Objenious. Make sure “Already Registered” is selected in the **Activation Mode** field.
+4. Click **Add device**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170516155017/Cayenne-Objenious-Pulse-device-settings.png" width="660" height="414" alt="Cayenne showing Objenious Pulse settings"><br/><br/></p>
+
+The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
+
 
 ## OrbiWise Network
 
@@ -1533,13 +1608,26 @@ After selecting the **Registration type** > **Personalized** option, the list of
 
 ### Setup device forwarding to Cayenne
 
-When using an OrbiWise gateway, you should not need to configure any additional data forwarding to Cayenne on the devices themselves. The OrbiWise gateway that you use should be configured to automatically forward the appropriate data to Cayenne. Once your gateway is setup and working, the LoRa devices connected to it will be ready to communicate their data with Cayenne.
+In order for data from your device to reach Cayenne, you must configure forwarding from within the settings found in your user-specific OrbiWise portal. You only need to perform this step once from the portal. To set this up, open the **Applications** menu and select **HTTP Push configuration**.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613142142/OrbiWise-Applications-menu.png" width="600" height="86" alt="Orbiwise Push menu"><br/><br/></p>
+
+From the *HTTP Push configuration* screen we find the settings needed to forward data to Cayenne. To set this up, enter the following information:
+
+1. **Hostname:** ``https://lora.mydevices.com``
+2. **Port:** ``443``
+3. **Path prefix:** ``/v1/networks/ubiq/uplink``
+4. **Host Username:** *Enter anything you want here. OribiWise requires this field, but it is not used by Cayenne.*
+5. **Host Password:** *Enter anything you want here. OribiWise requires this field, but it is not used by Cayenne.*
+6. Click on the **Start** button to start the forwarding service.
+
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613143613/OrbiWise-Push-configuration.png" width="600" height="480" alt="Orbiwise Cayenne push configuration"><br/><br/></p>
 
 ###  Programming the device
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-orbiwise-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#supported-hardware-lora-technology-devices) where you will find Product page, Datasheet and User Guides for your device.
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
@@ -1570,6 +1658,7 @@ Once your device has been previously registered on the OrbiWise network, it can 
 1.  Which [LoRa device](#lora-orbiwise-network-supported-devices) is being added?
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-orbiwise-network-manual-register-device) if you need help with manually registering your device on the network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+4.  If you wish to use downlink commands, you will need to know your user-specific **OrbiWise Server** address as well as your **Login** and **Password**.
 
 To see how easy it is, let’s walk through an example of connecting an [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox) which was previously registered under a [OrbiWise account](#lora-orbiwise-network-create-account).
 
@@ -1589,35 +1678,18 @@ In order to add the device, Cayenne needs to know some information about the dev
 1.  Give the device a name. In our case, we’ll enter “mDotBox” in the **Name** field.
 2.  Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
 3.  Our device has been previously manually registered with OrbiWise. Make sure “Already Registered” is selected in the **Activation Mode** field.
+4.  (Optional) Enter in your OrbiWise account information to take advantage of downlink commands.
+
+    - Enter the name of your customer-specific OrbiWise portal (e.g. ``us.xyz.orbiwise.com``) into the **OrbiWise Server** field.
+    - Enter your **OrbiWise Login** and **OrbiWise Password** into the corresponding fields.
 4.  Click **Add LoRa device**.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Add-Device-OrbiWise-mDotBox-already-registered.png" width="600" height="363" alt="Cayenne dashboard with mDotBox device settings filled in"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170613145437/Add-Device-OrbiWise-mDotBox-already-registered-updated.png" width="600" height="363" alt="Cayenne dashboard with mDotBox device settings filled in"><br/><br/></p>
 
 The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
-### Supported devices
-
-**OrbiWise network devices supported by Cayenne**
-
-Cayenne currently supports the following devices on the OrbiWise network. Support for more devices is constantly ongoing.
-
-*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
-*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
-*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
-*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
-*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
-*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
-*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
-*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
-*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
-*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
 
 ## Senet Network
 
@@ -1730,7 +1802,7 @@ From the *Edit Device* dialog we can setup the device so that it forwards data t
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-senet-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#supported-hardware-lora-technology-devices) where you will find Product page, Datasheet and User Guides for your device.
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
@@ -1798,28 +1870,6 @@ In order to add the device, Cayenne needs to know some information about the dev
 The Multitech mDotBox device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the various sensors on the device.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
-
-### Supported devices
-
-**Senet network devices supported by Cayenne**
-
-Cayenne currently supports the following devices on the Senet network. Support for more devices is constantly ongoing.
-
-*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
-*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
-*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
-*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
-*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
-*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
-*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
-*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
-*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
-*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
 
 
 ## Stream Network
@@ -1951,7 +2001,7 @@ Before you can use your device on the Stream network, it must be registered on t
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-stream-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#supported-hardware-lora-technology-devices) where you will find Product page, Datasheet and User Guides for your device.
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
@@ -2007,35 +2057,6 @@ In order to add the device, Cayenne needs to know some information about the dev
 The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the sensors on the device.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
-
-
-### Supported devices
-
-**The Stream network devices supported by Cayenne**
-
-Cayenne currently supports the following devices on the Stream network. Support for more devices is constantly ongoing.
-
-*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
-*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
-*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
-*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
-*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
-*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
-*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
-*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
-*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
-*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
-*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
-*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
-*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
-*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
-*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
-*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
 
 
 ## The Things Network
@@ -2166,7 +2187,7 @@ Before you can use your device on The Things Network, it must be registered on t
 
 Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
 
-If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#lora-the-things-network-supported-devices) where you will find Product page, Datasheet and User Guides for your device.
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#supported-hardware-lora-technology-devices) where you will find Product page, Datasheet and User Guides for your device.
 
 **NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
 
@@ -2222,32 +2243,3 @@ In order to add the device, Cayenne needs to know some information about the dev
 The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
-
-
-### Supported devices
-
-**The Things Network devices supported by Cayenne**
-
-Cayenne currently supports the following devices on The Things Network. Support for more devices is constantly ongoing.
-
-*   [Adeunis Demonstrator](#supported-hardware-lora-devices-adeunis-adeunis-demonstrator)
-*   [Adeunis Field Test Device](#supported-hardware-lora-devices-adeunis-adeunis-field-test-device)
-*   [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse)
-*   [Adeunis Sensors](#supported-hardware-lora-devices-adeunis-adeunis-sensors)
-*   [Ascoel CM868LR / CMUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-cm868lr-cmus915lr)
-*   [Ascoel CM868LRTH / CMUS915LRTH](#supported-hardware-lora-devices-ascoel-ascoel-cm868lrth-cmus915lrth)
-*   [Ascoel CO868LR / COUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-co868lr-cous915lr)
-*   [Ascoel IR868LR / IRUS915LR](#supported-hardware-lora-devices-ascoel-ascoel-ir868lr-irus915lr)
-*   [Elsys ELT-1](#supported-hardware-lora-devices-elsys-elsys-elt-1)
-*   [Elsys ESM5k](#supported-hardware-lora-devices-elsys-elsys-esm5k)
-*   [Elsys ERS](#supported-hardware-lora-devices-elsys-elsys-ers)
-*   [GlobalSat LS-111 CO2](#supported-hardware-lora-devices-globalsat-globalsat-ls-111-co2)
-*   [GlobalSat LT-100](#supported-hardware-lora-devices-globalsat-globalsat-lt-100)
-*   [Haxiot Arduino Shield](#supported-hardware-lora-devices-haxiot-haxiot-arduino-shield)
-*   [Multitech mDotBox](#supported-hardware-lora-devices-multitech-multitech-mdotbox)
-*   [Multitech XDot](#supported-hardware-lora-devices-multitech-multitech-xdot)
-*   [NKE Watteco Smart Plug](#supported-hardware-lora-devices-nke-watteco-nke-watteco-smart-plug)
-*   [NKE Watteco THr](#supported-hardware-lora-devices-nke-watteco-nke-watteco-thr)
-*   [Rising HF RHF1S001](#supported-hardware-lora-devices-rising-hf-rising-hf-rhf1s001)
-*   [Semtech LoRaMote EU](#supported-hardware-lora-devices-semtech-semtech-loramote-eu)
-*   [Semtech LoRaMote US](#supported-hardware-lora-devices-semtech-semtech-loramote-usa)
