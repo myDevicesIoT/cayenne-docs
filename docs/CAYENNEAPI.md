@@ -46,16 +46,75 @@ In this section we will cover practical examples of putting the Cayenne Cloud AP
 
 The example walkthrough shown here is arranged as a narrative that walks you through the various API-related topics required to implement each screen found in the **Tank Monitoring sample app**. After covering the sample app, we will discuss some additional API features.
 
-1. **[Creating an account](#cayenne-cloud-api-using-the-api-example-walkthrough-creating-an-account)** - Creating a new account.
-2. **[Logging into an account](#cayenne-cloud-api-using-the-api-example-walkthrough-logging-into-account)** - Log into our account.
-3. **[Resetting password](#cayenne-cloud-api-using-the-api-example-walkthrough-reset-password)** - Resetting the account password.
-4. **[Provisioning devices](#cayenne-cloud-api-using-the-api-example-walkthrough-provisioning-devices)** - Provisioning a device so that it can be later activated.
-5. **[Activating devices](#cayenne-cloud-api-using-the-api-example-walkthrough-activating-a-device)** - Activating devices.
-6. **[Get real-time device data](#cayenne-cloud-api-using-the-api-example-walkthrough-getting-real-time-device-data)** - Fetching device status and current device data.
-7. **[Remote control](#cayenne-cloud-api-using-the-api-example-walkthrough-remote-control)** - Controlling devices remotely.
-8. **[Device History](#cayenne-cloud-api-using-the-api-example-walkthrough-getting-device-history)** - Fetching historical device data.
-9. **[Alerts](#cayenne-cloud-api-using-the-api-example-walkthrough-alerts)** - Creating and managing Alerts.
-10. **[Multi-Tenant](#cayenne-cloud-api-using-the-api-example-walkthrough-multi-tenant)** - Creating and managing Users.
+1. **[Application redirects](#cayenne-cloud-api-using-the-api-example-walkthrough-application-redirects)** - Application Redirects.
+2. **[Creating an account](#cayenne-cloud-api-using-the-api-example-walkthrough-creating-an-account)** - Creating a new account.
+3. **[Logging into an account](#cayenne-cloud-api-using-the-api-example-walkthrough-logging-into-account)** - Log into our account.
+4. **[Resetting password](#cayenne-cloud-api-using-the-api-example-walkthrough-reset-password)** - Resetting the account password.
+5. **[Provisioning devices](#cayenne-cloud-api-using-the-api-example-walkthrough-provisioning-devices)** - Provisioning a device so that it can be later activated.
+6. **[Activating devices](#cayenne-cloud-api-using-the-api-example-walkthrough-activating-a-device)** - Activating devices.
+7. **[Get real-time device data](#cayenne-cloud-api-using-the-api-example-walkthrough-getting-real-time-device-data)** - Fetching device status and current device data.
+8. **[Remote control](#cayenne-cloud-api-using-the-api-example-walkthrough-remote-control)** - Controlling devices remotely.
+9. **[Device History](#cayenne-cloud-api-using-the-api-example-walkthrough-getting-device-history)** - Fetching historical device data.
+10. **[Alerts](#cayenne-cloud-api-using-the-api-example-walkthrough-alerts)** - Creating and managing Alerts.
+11. **[Multi-Tenant](#cayenne-cloud-api-using-the-api-example-walkthrough-multi-tenant)** - Creating and managing Users.
+
+#### Application Redirects
+
+Your appplication redirects will be used to retrieve an oAuth token using your **App Key** and **App Secret**. 
+
+First you must retrieve an authorization token to modify your application which is done by making a `POST` to `https://auth.mydevices.com/oauth/token` with the following payload:
+```
+{
+	"grant_type": "password",
+	"email": "YOUR EMAIL",
+	"password": "YOUR PASSWORD
+}
+```
+
+Example `POST` curl call:
+`curl -X POST -H 'Content-Type: application/json' 'https://auth.mydevices.com/users' -d '{"grant_type": "password", "email": "YOUR EMAIL", "password": "YOUR PASSWORD"}'`
+
+A successful response will return the following:
+```
+{
+	"access_token": "YOUR AUTH TOKEN",
+	"refresh_token": "YOUR REFRESH TOKEN"
+}
+```
+
+Using your `access_token` from successful `oauth/token` POST, you can view all your applications for your account by making a `GET` to `https://auth.mydevices.com/applications`
+
+Example `GET` curl call:
+`curl -X GET -H 'Authorization: Bearer ACCESS_TOKEN' 'https://auth.mydevices.com/applications'`
+
+A successful response will return with the following:
+```
+{
+	"id": "YOUR APP ID",
+	"name": "Beta App",
+	"description": "This is a beta app created with Cayenne API",
+	"secret": "YOUR APP SECRET",
+	"status": "active",
+	"updated_at": "YYYY-MM-DDTHH:MM:SS.mmmZ",
+	"created_at": "YYYY-MM-DDTHH:MM:SS.mmmZ"
+}
+```
+
+Note: Your application's name and description will currently have default values during Beta phase. 
+
+To update your application's `redirect_uri`, you will need to make a `POST` to `https://auth.mydevices.com/applications/{YOUR APP ID}/redirects` with the following payload:
+```
+{
+	"redirect_uri": "YOUR REDIRECT URI"
+}
+```
+
+Example curl call using the sample app's redirect URI.
+`curl -X POST -H 'Authorization: Bearer ACCESS_TOKEN' 'https://auth.mydevices.com/applications/{app id}/redirects' -d '{"redirect_uri": "sample://implicit"}'`
+
+This should be repeated for `redirect_uri: sample://explicit` as `sample://explicit` and `sample://implicit` are redirects that will be used by the sample app on oAuth login. 
+
+It is also recommended to add `http://example.com/redirect` as an additional redirect URI for **[Logging into an account](#cayenne-cloud-api-using-the-api-example-walkthrough-logging-into-account)**. 
 
 #### Creating an account
 
@@ -67,11 +126,25 @@ In order to use the Tank Monitoring sample app, users are reqired to have an acc
 
 Once we have the information from the user, we can use the Cayenne Cloud API to create a new account. If the account creation is successful, we can proceed with logging the user into their account.
 
+In order to create an account, you will need to use the following endpoint: `https://auth.mydevices.com/users` with the following payload:
 ```
-Dev to provide Sample App - account creation code example code to be put here.
+{
+	"first_name": "YOUR FIRST NAME",
+	"last_name": "YOUR LAST NAME",
+	"email": "YOUR EMAIL",
+	"password": "YOUR PASSWORD"
+}
+```
 
-0. Example code for creating an account using fake info supplied by a user.
-1. Example output of successful account creation.
+Example `POST` curl call:
+`curl -X POST -H 'Content-Type: application/json' 'https://auth.mydevices.com/users' -d '{"first_name": "joe", "last_name": "smith", "email": "EMAIL", "password": "PASSWORD"}'`
+
+A successful response will return the following: 
+```
+{
+	"access_token": "YOUR AUTH TOKEN",
+	"refresh_token": "YOUR REFRESH TOKEN"
+}
 ```
 
 #### Logging into account
@@ -95,9 +168,66 @@ After logging out of the app, returning users will want to log into their existi
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524084310/Restaurant-iPhone_LogIn-1-2.png" width="346" height="615" alt="Sample App Login screen"><br/><br/></p>
 
+The following will go over how to log into an existing account using three methods. 
+
+1. Logging in using password grant type
+This method will use your email and password used when creating your account and will return an `access_token` and `refresh_token` on success. The endpoint used is `https://auth.mydevices.com/oauth/token` with the following payload:
 ```
-Dev to provide example code showing a call using the account info provided by the user from the Sample App - Login screen to log into their account.
+{
+	"grant_type": "password",
+	"email": "YOUR EMAIL",
+	"password": "YOUR PASSWORD
+}
 ```
+
+Example `POST` curl call:
+`curl -X POST -H 'Content-Type: application/json' 'https://auth.mydevices.com/users' -d '{"grant_type": "password", "email": "YOUR EMAIL", "password": "YOUR PASSWORD"}'`
+
+A successful response will return the following: 
+```
+{
+	"access_token": "YOUR AUTH TOKEN",
+	"refresh_token": "YOUR REFRESH TOKEN"
+}
+```
+
+For the following steps, we will be using `http://example.com/redirect` (must be added to your application's redirects) and using the following URL with `response_type` being `code` for explicit or `token` for implicit: 
+`https://auth.mydevices.com/oauth/authorization?redirect_uri=http%3A%2F%2Fexample.com%2Fredirect&client_id=YOUR APP ID&response_type=TYPE&state=0123456789`
+
+2. Logging in using oAuth through implicit flow using `http://example.com/redirect` (the sample app will use `sample://implicit` for implicit flow)
+
+For implicit, you will use: `https://auth.mydevices.com/oauth/authorization?redirect_uri=http%3A%2F%2Fexample.com%2Fredirect&client_id=YOUR APP ID&response_type=token&state=0123456789`
+
+You will be taken to a login page when accessing the url and after a successful login, you'll be redirected to `http://example.com/redirect#access_token=YOUR ACCESS TOKEN&state=0123456789`. The access_token is your oAuth token can can be used to access your application's things. For the sample app, you'll be redirected back to your app using deep linking with a redirect of `sample://implicit`.
+
+3. Logging in using oAuth through explicit flow. Note: this is added in the sample app for demonstration purposes
+
+For explicit, you will use: `https://auth.mydevices.com/oauth/authorization?redirect_uri=http%3A%2F%2Fexample.com%2Fredirect&client_id=YOUR APP ID&response_type=code&state=0123456789`
+
+After a successful login, you'll be redirected to `http://example.com/redirect?code=YOUR CODE&state=0123456789`
+With the code provided you can make a `POST` to `https://auth.mydevices.com/oauth/token` with the following payload:
+```
+{
+	"client_id": "YOUR APP KEY",
+	"client_secret": "YOUR APP SECRET",
+	"code": "CODE FROM URL",
+	"grant_type": "authorization_code",
+	"redirect_uri": "http://example.com/redirect"
+}
+```
+
+Example curl call:
+`curl -X POST 'https://auth.mydevices.com/oauth/token' -d '{ "client_id": "YOUR APP KEY", "client_secret": "YOUR APP SECRET", "code": "CODE FROM URL", "grant_type": "authorization_code", "redirect_uri": "http://example.com/redirect"}'`
+
+Successful response will return the following:
+```
+{
+	"acess_token": "YOUR oAUTH TOKEN",
+	"refresh_token": "YOUR REFRESH TOKEN"
+}
+```
+
+Within the sample app, you'll also be redirected to your app using deep linking with a redirect of `sample://explicit` and will make a post to `oauth/token` with the returned code. 
 
 #### Reset Password
 
@@ -111,9 +241,18 @@ In order to reset the user's password, we first need to know the users login inf
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170524164225/Tank-Monitoring-Reset-Password.png" width="346" height="615" alt="Sample App Password reset email confirmation"><br/><br/></p>
 
+In order to send a reset password link to your account's email, make a `POST` to `https://auth.mydevices.com/password/forgot` with the following payload:
+
 ```
-Dev to provide example code showing a call using the account info provided by the user from the Sample App - Forgot Password screen to generate this link/email.
+{
+	"email": "YOUR EMAIL"
+}
 ```
+
+Example curl call:
+`curl -X POST 'https://auth.mydevices.com/password/forgot' -d '{"email": "YOUR EMAIL"}'`
+
+Successful response will return `{ "success": true }`. You will receive an email shortly after the POST. 
 
 **Changing the password**
 
@@ -715,7 +854,7 @@ To authenticate users originating from a 3rd party server side application we ut
 The user must be authenticated against the authorization server by directing them to the following link:
 
 ```
-GET http://auth.mydevices.com?response_type=code&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
+GET https://auth.mydevices.com?response_type=code&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
 ```
 
 **Query parameters**
@@ -760,7 +899,7 @@ The user will now login, if not already logged in as a Cayenne user. If they are
 With the user authenticated and the application allowed access, it must now exchange the code grant for an actual usable set of access and refresh tokens for the user. The application should thus make a **server side** request to the following URL:
 
 ```
-POST http://auth.mydevices.com/oauth/token
+POST https://auth.mydevices.com/oauth/token
 {
   “grant_type”: “authorization_code”,
   “code”: “<authorization code>”,
@@ -796,7 +935,7 @@ The implicit flow is similar to the explicit flow except it is designed to be ut
 The user must be authenticated against the authorization server by directing them to the following link:
 
 ```
-GET http://auth.mydevices.com?response_type=token&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
+GET https://auth.mydevices.com?response_type=token&client_id=<client id>&redirect_uri=<redirect uri>&scope=<scopes>&state=<state>
 ```
 
 **Query parameters:**
@@ -1407,7 +1546,6 @@ Jobs is an API that allows consumers to create scheduled events with an action a
 | title      | Title of the Job  | String |
 | account_id      | Account Id in which the Job was created under<br/>Retrieved from JWT authentication  | String |
 | next_runtime      | Date and time in which Job will execute next (**UTC Time**)  | Date Object |
-| \_\_v      |   | Int |
 | **config** \*      | Job scheduling configuration  | Object |
 | **notifications**      | Collection of Job notifications  | Object Array |
 | **http_push**      | Collection of Job HTTP executions  | Object Array |
