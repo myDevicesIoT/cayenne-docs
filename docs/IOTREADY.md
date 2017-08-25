@@ -14,7 +14,7 @@ To get started, follow the [Enrollment process](#iot-ready-program-enrollment-si
 
 To join the IoT Ready Program, visit the <a href="http://mydevices.com/for-hardware-manufacturers/iot-ready-program/" target="_blank">Sign Up</a> page. Fill in the details to begin creating your account and click on the **Submit** button to continue.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224130622/iot-ready-program-signup-form.png" width="660" height="376" alt="Sign up form"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-signup-form.png" width="660" height="376" alt="Sign up form"><br/><br/></p>
 
 After creating your account you will then be taken into your account on the <a href="http://iotready.mydevices.com" target="_blank">IoT Ready Program website</a> where you will need to read over and accept the licensing terms for the program and then fill out the information on your company, product and contacts.
 
@@ -24,7 +24,7 @@ The information that you add to the company information form will not only be us
 
 Be sure that the information you provide here is how you want it displayed to your users. In addition to the <a href="http://mydevices.com/partners/" target="_blank">Partners</a> page, your company name, description and logo may also be displayed to users as they select your hardware when using the Cayenne dashboard.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224130821/iot-ready-program-company-information.png" width="660" height="416" alt="Company Information screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-company-information.png" width="660" height="416" alt="Company Information screen"><br/><br/></p>
 
 To help guide you in entering your company information correctly, it may help you to refer to some examples:
 
@@ -35,7 +35,7 @@ To help guide you in entering your company information correctly, it may help yo
 
   *TIP: We recommend using a high quality, 600x600 pixel image for the logo.*
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224130941/mydevices-partners-page-highlights.png" width="660" height="421" alt="myDevices Partners page"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/mydevices-partners-page-highlights.png" width="660" height="421" alt="myDevices Partners page"><br/><br/></p>
 
 After completing the company information you will be taken to your account [Home screen](#iot-ready-program-home-screen) where you can submit new hardware requests and view previous submissions.
 
@@ -43,7 +43,7 @@ After completing the company information you will be taken to your account [Home
 
 After logging into your account, you will see your account home screen. From here you can [submit new hardware requests](#iot-ready-program-submitting-hardware-requests) and [view past submissions](#iot-ready-program-viewing-submissions).
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224131135/iot-ready-program-account-home-screen.png" width="660" height="416" alt="Account home screen"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-account-home-screen.png" width="660" height="416" alt="Account home screen"><br/><br/></p>
 
 ## Submitting hardware requests
 
@@ -67,7 +67,7 @@ Regardless of which type of device you are submitting, the hardware submission a
 
 To begin the process of creating a new request, click on the **Submit New Hardware** button. The *Hardware Submission Form* will then appear. Follow the form and provide all needed information to submit your request.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224131238/submit-new-hardware-button-highlight.png" width="660" height="438" alt="Submit button highlighted"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/submit-new-hardware-button-highlight.png" width="660" height="438" alt="Submit button highlighted"><br/><br/></p>
 
 ### Hardware Submission Form
 
@@ -80,13 +80,13 @@ To begin the submission process, you will need to first select how your product 
 - **LoRa:** Select this option if your product is a [LoRa technology device](#lora). During the [Setup and Configuration](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration) portion of the submission process the form will ask you for more details [related to LoRa](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-lora-technology-device).
 - **MQTT:**  Select this option if your product will communicate with Cayenne using [MQTT](#bring-your-own-thing-api-overview-about-mqtt), such as Cayenne’s [Bring Your Own Thing API](#bring-your-own-thing-api). During the [Setup and Configuration](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration) portion of the submission process the form will ask you for more details [related to MQTT](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-mqtt).
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224131405/iot-ready-program-hardware-submission-step-1-connection-protocol.png" width="660" height="415" alt="Step 1 - Connection Protocol"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-1-connection-protocol.png" width="660" height="415" alt="Step 1 - Connection Protocol"><br/><br/></p>
 
 #### Device Info
 
 On the *Device Info* page you will enter in non-technical details for your product. This information will help guide the myDevices team when categorizing and adding your device into the Cayenne dashboard. Once added to the dashboard, the information you provide here may directly appear to end-users. To help guide you in entering in correct information, please see the information below and included examples showing where fields may appear in the dashboard.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224131527/iot-ready-program-hardware-submission-step-2-device-info.png" width="660" height="422" alt="Step 2 - Device Info"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-2-device-info.png" width="660" height="422" alt="Step 2 - Device Info"><br/><br/></p>
 
 - **Company Name:** This will be prefilled with your company name. Your device may be found in the Cayenne dashboard under your company name, so be sure that the name shown here is how you want it displayed to end users in the dashboard.
 - **Device Name:** The name of the device, as it will be shown to users when searching for and selecting your hardware.
@@ -101,7 +101,7 @@ On the *Device Info* page you will enter in non-technical details for your produ
 - **Device Website URL:** URL for the product page for your hardware.
 - **Device Purchase URL:** (If available) URL for a purchase page for your hardware.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224131625/cayenne-device-info-highlights2.png" width="660" height="417" alt="Cayenne dashboard showing where information shows up"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/cayenne-device-info-highlights2.png" width="660" height="417" alt="Cayenne dashboard showing where information shows up"><br/><br/></p>
 
 #### Setup and Configuration
 
@@ -116,7 +116,7 @@ The type of information asked for here will depend upon how your device will con
 
 ##### LoRa technology device
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224132026/iot-ready-program-hardware-submission-step-3-setup-and-config-lora-device.png" width="660" height="416" alt="Setup & Config screen showing LoRa fields"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-3-setup-and-config-lora-device.png" width="660" height="416" alt="Setup & Config screen showing LoRa fields"><br/><br/></p>
 
 - **Support LoRaWAN™ Bands:** Select which LoRaWAN band frequencies supported by your device.
 - **Device Unique Identifier:** Select whether your device supports a user-configurable [DevEUI](#lora-about-deveuis). Certain development (e.g. prototype) devices will be configurable, meaning you can modify the device’s unique identifier. If the end user cannot do so, select the **Factory Set** option.
@@ -124,13 +124,13 @@ The type of information asked for here will depend upon how your device will con
 - **Available Configuration Apps:** If the device uses an app to program or configure the device, please enter in information on the platforms and programs used to do so.
 - **Sensor Data Types:** (If your device has embedded sensors) From the list of supported data types shown, select the list of data types that the device sends. By default you will see a list of the most commonly used data types. If you want the full list, click on the **All** link to view them all. To make finding data types easier, you can easily search for data types here.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224132221/iot-ready-program-hardware-submission-step-3.5-embedded-sensors-highlight.png" width="660" height="423" alt="Example Sensor Data Types"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-3.5-embedded-sensors-highlight.png" width="660" height="423" alt="Example Sensor Data Types"><br/><br/></p>
 
 ###### Payload Codecs
 
 - **Payload Codecs:** Select what payload format that your device uses to communicate its data. Cayenne needs to know which codec to use to properly decode and encode communication to and from your LoRa technology device.
 
-  <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224132307/iot-ready-program-hardware-submission-step-3.5-lora-payload-codec-highlight.png" width="660" height="506" alt="Examples of existing codecs"><br/><br/></p>
+  <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-3.5-lora-payload-codec-highlight.png" width="660" height="506" alt="Examples of existing codecs"><br/><br/></p>
 
 From the available list of codecs, choose one:
 
@@ -141,11 +141,11 @@ From the available list of codecs, choose one:
 - **One of our already supported codecs:** If Cayenne already includes a codec for your payload format, you can select it from the list of available codecs.
 - **Use your own payload format**: If Cayenne does not currently support your device’s payload, select the **Custom** option. After doing so, you will be need to upload documentation that fully describes your payload format. The Cayenne team will then use this information to implement a payload codec that supports your format in Cayenne.
 
-  <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224132421/iot-ready-program-hardware-submission-step-3.5-custom-payload-highlight.png" width="660" height="271" alt="Custom codec and upload fields"><br/><br/></p>
+  <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-3.5-custom-payload-highlight.png" width="660" height="271" alt="Custom codec and upload fields"><br/><br/></p>
 
 ##### MQTT
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224132749/iot-ready-program-hardware-submission-step-3-setup-and-config-mqtt.png" width="660" height="417" alt="Setup & Config screen showing MQTT fields"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-3-setup-and-config-mqtt.png" width="660" height="417" alt="Setup & Config screen showing MQTT fields"><br/><br/></p>
 
 - **Sample Code Library:** Please specify the location (such as GitHub repository link) to where we can find sample code for connecting the device. It should give the user everything that they need to quickly and easily connect the device with Cayenne using MQTT.
 
@@ -167,7 +167,7 @@ From the available list of codecs, choose one:
 
 In this optional section, we ask that you provide a short explanation of the purpose of your product and its use cases. This helps us to understand how your product is used and how it should best be described, classified and organized into Cayenne.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224133813/iot-ready-program-hardware-submission-step-4-use-cases.png" width="660" height="418" alt="Step 4 Use Cases"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-4-use-cases.png" width="660" height="418" alt="Step 4 Use Cases"><br/><br/></p>
 
 #### Review and Submit
 
@@ -175,9 +175,9 @@ After filling out each section of the *Hardware Submission Form* you will see a 
 
 When all sections have been filled out and you are ready to do so, click on the **Submit Device** button. After being submitted, the myDevices team will review the information and will get in touch with you if any additional information is required. 
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224133918/iot-ready-program-hardware-submission-step-5-review-and-submit.png" width="660" height="416" alt="ALT"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-5-review-and-submit.png" width="660" height="416" alt="ALT"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224133923/iot-ready-program-hardware-submission-step-5.5-submit-device-highlight.png" width="660" height="416" alt="Submit device button highlight"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-step-5.5-submit-device-highlight.png" width="660" height="416" alt="Submit device button highlight"><br/><br/></p>
 
 If you have additional devices you can use the **Submit Another Device** button to start the process of adding a new device.
 
@@ -203,7 +203,7 @@ If you have any questions, contact us at <a href="mailto:iotready@mydevices.com"
 
 You can view your past submitted hardware submissions at any time *Hardware Submission Status* screen. To access this screen, click on the **View Submissions** button located on your account home screen.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224135012/view-submissions-button-highlight.png" width="660" height="400" alt="View Submissions button highlight"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/view-submissions-button-highlight.png" width="660" height="400" alt="View Submissions button highlight"><br/><br/></p>
 
 From the *Hardware Submission Status* screen will be a list of all the past hardware submissions for your account along with their current status. From here you can:
 
@@ -214,9 +214,9 @@ From the *Hardware Submission Status* screen will be a list of all the past hard
  - **Approved:** Your submission has been received, reviewed and everything looks to be in order to bring your device into Cayenne. Note that questions may still come up when the Cayenne team integrates your device, so be on the lookout for any communications from the team in order to prevent any delays in getting your device added.
  - **Rejected:** Occasionally devices may need to be rejected for a variety of reasons. If this happens, you will be notified by email with more information and next steps on how to proceed. We’re happy to work with you to resolve the problems in order to get your hardware integrated successfully.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224135113/iot-ready-program-hardware-submission-status-pending-highlights.png" width="660" height="206" alt="View Submissions screen with highlights"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-hardware-submission-status-pending-highlights.png" width="660" height="206" alt="View Submissions screen with highlights"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224135202/iot-ready-program-view-submissions-approved-highlight.png" width="660" height="185" alt="Submissions screen showing Approved example"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-view-submissions-approved-highlight.png" width="660" height="185" alt="Submissions screen showing Approved example"><br/><br/></p>
 
 ### Reviewing submission details
 
@@ -224,4 +224,4 @@ From the *Hardware Submission Status* screen you can review the details of your 
 
 *Note: After submitting your hardware the information shown here will be read only. If you need to update the myDevices team for any reason, please contact us at <a href="mailto:iotready@mydevices.com">IoTReady@myDevices.com</a>.*
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224135318/iot-ready-program-viewing-submitted-info.png" width="660" height="416" alt="Reviewing old submitted request"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/02/iot-ready-program-viewing-submitted-info.png" width="660" height="416" alt="Reviewing old submitted request"><br/><br/></p>
