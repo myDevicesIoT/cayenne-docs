@@ -195,6 +195,73 @@ Once you have double-checked the sketch file, select **Sketch** > **Upload** to 
 
 **Congrats! Your hardware is now sending sensor data to the Cayenne Cloud!**
 
+#### Respond to actuator commands
+
+Now that we have our board connected to Cayenne and it has successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. When users change the state of actuators using the dashboard widgets, Cayenne publishes *COMMAND* messages. By subscribing to these messages, we will be informed when our actuator's state was changed. We can then take action in response, such as telling a connected Light to turn on or off. Let's do exactly that by setting up a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to a connected LED serving as a light connected to our board.
+
+##### Connect LED Light
+
+**EXAMPLE**: We will switch on an LED connected to your Arduino using Cayenne Arduino MQTT.
+
+Connect an LED to **Pin 8** as shown here. [View LED tutorial](#supported-hardware-actuators-generic-digital-output-arduino-tutorial)
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601105118/Arduino_LED_step2_bb.png" width="600" height="193" alt="LED Step 2"></p>
+
+##### Add dashboard widget
+
+Let's start by adding a Button widget on the dashboard. From the Cayenne dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/AddNew.jpg" width="266" height="258" alt="Add New menu"><br/><br/></p>
+
+1. Choose **Custom Widget** > **Button**.
+2. Give your actuator a name, for example enter “Light” into the **Name** field.
+3. We’ll be adding this actuator to our custom device, so make sure your device is selected in the **Device** field.
+4. Select **8** from the **Channel** field.
+
+   **Note:** We could use whatever unused channel we want here, but normally we would want to make sure the Channel selected here matches up with the channel that our code uses later when watching for *COMMAND* messages sent from Cayenne. Our recommendation is to stick to using *Channel == the Pin your actuator is connected to*.
+
+5. We can specify an **Icon** for our actuator. Say we’re using it to control a Light, so let’s select a Light icon here.
+6. Click the **Step 2: Add Widget** button. The light widget will then be added to our dashboard.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/10/Arduino-Actuator-Button2.png" width="430" height="600" alt="Dashboard settings - add actuator"><br/><br/></p>
+
+##### Write code for the actuator
+
+Cayenne is now setup to send *COMMAND* events to our actuator, but nobody is listening. We now need to write code so that our board will listen for Cayenne to inform us when the actuator’s state was changed on the dashboard, and to change its state appropriately.
+
+*TIP: You can refer to this <a href="https://github.com/myDevicesIoT/cayenne-docs/blob/staging/examples/MQTT_EthernetShieldW5100_with_TMP36_and_Actuator/MQTT_EthernetShieldW5100_with_TMP36_and_Actuator.ino" target="_blank">example file</a> that includes all of the code used in our example shown here.*
+
+1. **Subscribe to the COMMAND messages that Cayenne sends for our LED.**
+
+   *TIP: Using the Cayenne Arduino MQTT library, this task is automatically handled for us! There’s no need for us to subscribe to Command topics.*
+   
+   The Cayenne library provides built-in functions that we can use when actuator commands are received. We can use either the _CAYENNE_IN_DEFAULT()_ or we can use functions for specific channels, e.g _CAYENNE_IN(1)_ for channel 1 commands. For our example we will use the latter method and place our actuator logic into a **CAYENNE_IN(V8)** function.
+   
+   <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/10/Arduino-MQTT-Actuator-Function.png" width="600" height="538" alt="Cayenne In Actuator function"><br/><br/></p>
+
+2. **Change the LED’s state based on what Cayenne tells us the new state is.**
+   
+   The message details received from Cayenne will tell us what the new state of our LED is. We can easily read the value using _getValue()_. This will tell us what the new state of the LED should be. We can then make a call to _digitalWrite()_ and change our the actual state of our LED based on what the Cayenne told us it's state should be.
+
+   <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/10/Arduino-MQTT-Actuator-Update-value.png" width="600" height="296" alt="Read & Write LED updated state"><br/><br/></p>
+
+3. **Handle errors.**
+
+   Although changing the state of our LED is simple and really can't fail, sometimes you may have more complex devices connected. For example,  maybe you have a motor that is in a state where it cannot currently be turned off. In such instances, you will want to inform Cayenne that there was a problem using _getValue.setError("Error Message")_. This prevents the dashboard from updating the state of the widget and will display an error message to the user.
+
+   **Note:** By default the Cayenne library assumes that the actuator was updated correctly. Unless told otherwise, it will automatically update the state on the dashboard with the updated new value. If there was a problem, it’s very important to inform Cayenne. This ensures that the dashboard properly reflects the correct current state of the device.
+
+   <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/10/Arduino-MQTT-Actuator-Error-handling.png" width="600" height="296" alt="Handle errors"><br/><br/></p>
+
+   *TIP: To get more of a background on how Publishing sensor data to Cayenne works through MQTT (including sending Actuator Responses & publishing updated Values), you may wish to check out the [Manually Publishing / Subscribing](#cayenne-mqtt-api-manually-publishing-subscribing) example section which covers this topic in more detail.*
+
+**Compile, Upload and connect to Cayenne**
+
+Once you have double-checked the sketch file, select **Sketch** > **Upload** to upload the sketch file to your device. As soon as your device comes online and connects to Cayenne, you can use the Button widget on the dashboard, which will then trigger actuator *COMMAND* messages that your board will receive. The code we've written will handle these messages by changing the state of our connected LED and the Cayenne library will automatically respond back to our dashboard to make sure the LED widget is updated as well.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/10/MQTT-Dashbaord-with-Temp-and-Actuator.png" width="600" height="359" alt="Dashboard With Actuator added"><br/><br/></p>
+
+**Congrats! You can now use the button to send actuator commands to your LED.**
 
 ## Using mbed MQTT
 
