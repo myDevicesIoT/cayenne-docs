@@ -45,7 +45,7 @@ Additionally, the Cayenne LPP allows the device to send different sensor data in
 - **Data Channel:** Uniquely identifies each sensor in the device across frames, eg. “indoor sensor”
 - **Data Type:** Identifies the data type in the frame, eg. “temperature”.
 
-### Payload structure
+### Uplink Payload Structure
 <table style="width: 100%;">
 <tbody>
 <tr>
@@ -68,6 +68,31 @@ Additionally, the Cayenne LPP allows the device to send different sensor data in
 </tr>
 </tbody>
 </table>
+
+### Downlink Payload Structure
+
+A downlink message can be sent from the Cayenne dashboard to the end node in order to perform some action on that device.  Before being able to send a downlink command, the user must first inform Cayenne of the current state of the actuator by sending an uplink message using either the **Analog Output** or **Digital Output** data types.  Upon receiving the uplink message, Cayenne will automatically populate the appropriate actuator widget (**Analog = Slider Widget, Digital = Button Widget**) on the specified channel. 
+
+When the user sends the message to the device by either clicking the button or moving the slider,  Cayenne will encode the message using the following payload structure:
+
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>1 Byte</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>2 Bytes</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>1 Byte</b></td>
+</tr>
+<tr>
+<td>Data Ch.</td>
+<td>Data (.01 Precision)</td>
+<td>0xff</td>
+</tr>
+</tbody>
+</table>
+
+The message will then be routed to the network server where it will sit in a queue until the next uplink message is sent by the device (Class A devices only).  Once released from the queue, the device will accept the downlink message and the corresponding action will take place.  At this point, the device should send another uplink message confirming the current state of the actuator.
+
+For digital output, the button widget will remain in a loading state until the device confirms the updated state by sending a new uplink message on the corresponding channel.
 
 ### Data Types
 
@@ -293,6 +318,27 @@ Each data type can use 1 or more bytes to send the data according to the followi
 </tr>
 <tr>
 <td><i>Altitude: 0003E8 ⇒ 10 meters</i></td>
+</tr>
+</tbody>
+</table>
+
+#### Downlink Message
+
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Payload (Hex)</b></td>
+<td style="font-size: 15px; padding: 10px;" colspan="2">01 00 64 ff </td>
+</tr>
+<tr>
+<td style="font-size: 15px; padding: 10px;"><b>Data Channel</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Value</b></td>
+<td style="font-size: 15px; padding: 10px;"><b>Reserved</b></td>
+</tr>
+<tr>
+<td rowspan="3">01 ⇒ 1</td>
+<td rowspan="3">0064 ⇒ 1.00</td>
+<td>ff ⇒ reserved</td>
 </tr>
 </tbody>
 </table>
