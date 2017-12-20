@@ -465,27 +465,24 @@ Begin by verifying that your ESP8266 board and PC/Mac are correctly set up befor
 
 ### Installing Arduino IDE Software
 
-To use the Cayenne MQTT Library, the Arduino IDE software should be installed. Go to https://www.arduino.cc/en/Main/Software to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
-
-### Add Cayenne Library to Arduino IDE
-
-The Cayenne MQTT Library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board. In this section we will walk you through installing and configuring the Arduino IDE to use the library.
-
-The Cayenne MQTT Library is available directly from the Arduino IDE Libraries list. To install the library, select **Sketch** > **Include library** > **Manage Libraries**. The *Library Manager* dialog will appear. From here, search for the **Cayenne MQTT** library and install it.
-
-**Note:** You may find a _Cayenne_ and a _Cayenne MQTT_ library in the library manager. Be sure to select the **Cayenne MQTT** library so that you are using the new MQTT version.
- 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/arduino-ide-manage-libraries.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
-
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/arduino-ide-add-mqtt-library.png" width="660" height="552" alt="arduino-ide-add-mqtt-library"><br/><br/></p>
- 
-The Cayenne MQTT library has now been expanded in the libraries folder in your Arduino sketches directory. You can verify this by going to the **Sketch** > **Include Library** menu where you should now see the Cayenne MQTT library at the bottom of the drop-down menu under *Contributed Libraries*. The Cayenne MQTT library is now ready to be used in your project.
-
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/arduino-ide-mqtt-library-menu.png" width="660" height="553" alt="arduino-ide-mqtt-library-menu"><br/><br/></p>
+To use the Cayenne MQTT ESP Library, the Arduino IDE software should be installed. Go to https://www.arduino.cc/en/Main/Software to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
 
 ### Install the ESP8266 board package to Arduino IDE
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/RVSCjCpZ_nQ" frameborder="0" allowfullscreen></iframe></p>
+
+1. Under **File -> Preferences** add ``http://arduino.esp8266.com/stable/package_esp8266com_index.json`` to the **Additional Boards Manager URLs** field.
+2. Install the **esp8266** platform from **Tools -> Board -> Boards Manager**.
+
+### Add Cayenne MQTT ESP Library to Arduino IDE
+
+The Cayenne MQTT ESP Library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board.
+
+1. Download the Cayenne MQTT ESP library <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-ESP8266/archive/master.zip" target="_blank">from GitHub</a>.
+2. Go to **Sketch** > **Include Library** > **Add .ZIP Library** and install the Cayenne MQTT ESP library from the downloaded archive.
+3. The Cayenne MQTT ESP library has now been expanded in the libraries folder in your Arduino sketches directory. You can verify this by going to the **Sketch** > **Include Library** menu where you should now see the Cayenne-MQTT-ESP8266 library under *Contributed Libraries*. The Cayenne MQTT ESP library is now ready to be used in your project.
+
+   <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/ESP8266-Arduino-IDE-Include-lib.png" width="660" height="478" alt="arduino-ide-add-mqtt-esp-library"><br/><br/></p>
 
 ### Install required USB driver on your computer so you can program the ESP8266
 
@@ -493,7 +490,7 @@ The Cayenne MQTT library has now been expanded in the libraries folder in your A
 
 #### Connect the ESP8266 to your PC/Mac via data-capable USB cable.
 
-Connect the USB cable to both the USB port on the computer and the board.
+Connect your ESP module to your computer using a USB to Serial FTDI or console cable.
 
 #### Configure Arduino IDE
 
