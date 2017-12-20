@@ -94,7 +94,7 @@ Cayenne works with temperature, luminosity, pressure/distance, motion and generi
 
 **EXAMPLE**: Let’s add a BMP180 temperature and pressure sensor to see how easy it is to get started.
 
-Connect the BMP180 as shown here. [View BMP180 hardware tutorial](#supported-hardware-sensors-temperature-bmp180-rpi-tutorial)
+Connect the BMP180 as shown here. [View BMP180 tutorial](#supported-hardware-sensors-wiring-tutorials-temperature-bmp180-rpi-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121157/RPI-BMP180-Step-4.png" width="600" height="193" alt="Cayenne Step 4"></p>
 
@@ -128,7 +128,7 @@ Cayenne works with light, motor, valve, relay and generic actuators that are con
 
 **EXAMPLE**: We will switch on an LED connected to your Raspberry Pi using Cayenne.
 
-Connect an LED to Channel 23 as shown here. [View LED tutorial](#supported-hardware-actuators-generic-digital-output-rpi-tutorial)
+Connect an LED to Channel 23 as shown here. [View LED tutorial](#supported-hardware-actuators-wiring-tutorials-generic-digital-output-rpi-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121207/RPI-Digital-Out-Led-Step-2.png" width="600" height="193" alt="LED Step 2"></p>
 
@@ -181,7 +181,7 @@ Begin by verifying that your Arduino board and PC/Mac are correctly set up befor
 
 #### Connect the Arduino to the Internet
 
-Make sure your Arduino is connected to the Internet. On most Arduino boards, you will need to connect an [Ethernet or Wi-Fi shield](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) in order to connect your board to the Internet. Verify that you have a shield supported by Cayenne installed and working.
+Make sure your Arduino is connected to the Internet. On most Arduino boards, you will need to connect an [Ethernet or Wi-Fi shield](#supported-hardware-microcontrollers-using-arduino-ethernet-wifi-shield) in order to connect your board to the Internet. Verify that you have a shield supported by Cayenne installed and working.
    
 #### Connect the Arduino to a PC/Mac
 
@@ -202,7 +202,7 @@ Cayenne's Arduino libraries are a collection of code, known as sketch files, tha
 
 ## Using Cayenne Arduino Library
 
-The Cayenne MQTT Library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board. In this section we will walk you through setting up the Arduino IDE software so that you can write code that uses the Cayenne library. We will then walk through an example of using the library by setting up and connecting an [Arduino Uno board](#supported-hardware-microcontrollers-arduino-arduino-uno), adding a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will connect an LED as a light and show you how you can control it remotely using a Button actuator on your dashboard.
+The Cayenne MQTT Library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board. In this section we will walk you through setting up the Arduino IDE software so that you can write code that uses the Cayenne library. We will then walk through an example of using the library by setting up and connecting an **Arduino Uno board**, adding a **TMP36 Temperature Sensor**. Finally, we will connect an **LED** as a light and show you how you can control it remotely using a **Button actuator** on your dashboard.
 
 ### Installing Arduino IDE Software
 
@@ -240,7 +240,7 @@ Then, verify that you have the correct **Port** selected for communicating with 
 
 After setting up your PC/Mac computer with the Arduino IDE and the Cayenne Library, you are ready to install Cayenne onto your device. Continue to Step 3 of the Arduino installation, where you will connect your board with Cayenne.
 
-On this screen, select the Arduino board that you are using from the list of [supported boards](#supported-hardware-microcontrollers-arduino). As you select your Arduino board, a list of connections appears below the board name. Select the connection type that you are using.
+On this screen, select the Arduino board that you are using from the list of [supported boards](#supported-hardware-microcontrollers). As you select your Arduino board, a list of connections appears below the board name. Select the connection type that you are using.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616135653/1st-Experience-Arduino-Step-3-board-expanded1.png" width="600" height="385" alt="Arduino Step 3"></p>
 
@@ -268,7 +268,7 @@ Cayenne works with any sensor that is connected to an Arduino. We’ve created <
 
 **EXAMPLE:** Let’s add TMP36 Temperature Sensor to see how easy it is.
 
-Connect the TMP36 Temperature Sensor as shown here. [View TMP36 hardware tutorial](#supported-hardware-sensors-temperature-tmp36-arduino-tutorial)
+Connect the TMP36 Temperature Sensor as shown here. [View TMP36 tutorial](#supported-hardware-sensors-wiring-tutorials-temperature-tmp36-arduino-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121144/Arduino_TMP36_step3_bb.png" width="600" height="380" alt="Arduino TMP36 Step 3"></p>
 
@@ -319,7 +319,7 @@ Now that we have our board connected to Cayenne and it has successfully sent sen
 
 **EXAMPLE**: Let's add a Luminosity actuator widget that will allow us to control a LED connected to our board.
 
-For this example, attach a LED to a PWM-enabled Pin on your board. Let’s use D6 in this example. [View Luminosity hardware tutorial](#supported-hardware-actuators-light-luminosity-arduino-tutorial)
+For this example, attach a LED to a PWM-enabled Pin on your board. Let’s use D6 in this example. [View Luminosity tutorial](#supported-hardware-actuators-wiring-tutorials-light-luminosity-arduino-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601112652/Arduino-Luminosity-Step-2.png" width="600" height="307" alt="Arduino Luminosity Step 2"></p>
 
@@ -380,7 +380,7 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
 
 1. **Make sure your Arduino is connected to the Internet**
 
-   On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have [a shield supported by Cayenne](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) installed and working.
+   On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have [a shield supported by Cayenne](#supported-hardware-microcontrollers-using-arduino-ethernet-wifi-shield) installed and working.
 
    *TIP: Double check that the board connection #include in your sketch file is correct for the shield that you are using. The Cayenne sketch file examples assume that you have a W5100 connected. If this line does not match your connection, your board will fail to connect to Cayenne.*
       
