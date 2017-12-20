@@ -32,7 +32,7 @@ The next section covers getting started with a Raspberry Pi device. If you’re 
 
 1. Power on your Raspberry Pi. Connect the power adapter to your Raspberry Pi.
 2. Connect the Pi to the Internet. Connect your Raspberry Pi to the Internet using an Ethernet cable. Or, if you have a Wi-Fi dongle setup already this works too.
-3. Make sure the Raspbian operating system is installed. Cayenne works with Jessie OS versions of Raspbian. Please make sure one of these is pre-installed to the sd card. If you need to install the Raspbian operating system, <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">click here</a>.
+3. Make sure the Raspbian operating system is installed. Please make sure one of these is pre-installed to the sd card. If you need to install the Raspbian operating system, <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">click here</a>.
 
    **Note:** You do not need to make any configuration changes to the Pi device. Cayenne automatically handles setting up and configuring your Pi for use. However, it is recommended that you expand the filesystem on the flash card if necessary. Please refer to raspi-config if you need additional information on performing this step.
 
@@ -176,7 +176,7 @@ Before you can manage your Arduino device using the online dashboard, you must s
 
 Begin by verifying that your Arduino board and PC/Mac are correctly set up before continuing.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616134313/1st-Experience-Arduino-Step-2-setup-arduino.png" width="600" height="384" alt="Step 2 Arduino"></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/1st-Experience-Arduino-Step-2-setup-arduino2.png" width="600" height="374" alt="Step 2 Arduino"></p>
 
 
 #### Connect the Arduino to the Internet
@@ -214,7 +214,7 @@ The Cayenne MQTT Library is a collection of code, known as sketch files, that ma
 
 The Cayenne MQTT Library is available directly from the Arduino IDE Libraries list. To install the library, select **Sketch** > **Include library** > **Manage Libraries**. The *Library Manager* dialog will appear. From here, search for the **Cayenne MQTT** library and install it.
 
-**Note:** You may find both a _Cayenne_ and _Cayenne MQTT_ library in the library manager. Be sure to select the **Cayenne MQTT** library so that you are using the new MQTT version.
+**Note:** You may find a _Cayenne_ and a _Cayenne MQTT_ library in the library manager. Be sure to select the **Cayenne MQTT** library so that you are using the new MQTT version.
  
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/arduino-ide-manage-libraries.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
 
@@ -242,9 +242,9 @@ After setting up your PC/Mac computer with the Arduino IDE and the Cayenne Libra
 
 On this screen, select the Arduino board that you are using from the list of [supported boards](#supported-hardware-microcontrollers). As you select your Arduino board, a list of connections appears below the board name. Select the connection type that you are using.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616135653/1st-Experience-Arduino-Step-3-board-expanded1.png" width="600" height="385" alt="Arduino Step 3"></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/1st-Experience-Arduino-Step-3-board-expanded2.png" width="600" height="336" alt="Arduino Step 3"></p>
 
-Click on the Sketch button next to the connection you will be using and a popup will appear with the sketch file you will need when flashing your Arduino device. The sketch file will contain everything you need to connect your device to Cayenne, including the Username, Password and Client ID credentials needed to connect via MQTT.
+Click on the Sketch button next to the connection you will be using and a popup will appear with the sketch file you will need when flashing your Arduino device. The sketch file will contain everything you need to connect your device to Cayenne, including the **Username**, **Password** and **Client** ID credentials needed to connect via MQTT.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616135934/1st-Experience-Arduino-Step-3-connection-example.png" width="600" height="385" alt="Arduino Step 3 Connection Example"></p>
 
@@ -266,7 +266,7 @@ If you run into any troubles, see [Troubleshooting](#getting-started-arduino-tro
 
 Cayenne works with any sensor that is connected to an Arduino. We’ve created <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples" target="_blank">sketch files</a> for the various temperature, luminosity, pressure, proximity, motion and generic sensor models.
 
-**EXAMPLE:** Let’s add TMP36 Temperature Sensor to see how easy it is.
+**EXAMPLE:** Let’s add a TMP36 Temperature Sensor to see how easy it is.
 
 Connect the TMP36 Temperature Sensor as shown here. [View TMP36 tutorial](#supported-hardware-sensors-wiring-tutorials-temperature-tmp36-arduino-tutorial)
 
@@ -280,12 +280,12 @@ Click **Add New** > **Device / Widget**.
 
 1. Choose **Sensor** > **Temperature** > **TMP36**.
 2. Choose **Virtual** from the I/O field.
-3. We will use Virtual Pin 0 for this example. Choose **V0** from the **Pin** field.
+3. We will use Virtual Pin 1 for this example. Choose **V1** from the **Pin** field.
 4. Click the **Step 1: Sketch File** button. A popup will appear showing the TMP36 example sketch file.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617103706/Add-Device-Arduino-TMP361.png" width="600" height="365" alt="Arduino Add Device TMP361"></p>
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151040/Add-Device-Arduino-TMP36-Sketch-file2.png" width="600" height="386" alt="Arduino Add Device TMP361 Sketch File"></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Arduino-TMP36-GettingStarted-Popup.png" width="600" height="386" alt="Arduino Add Device TMP361 Sketch File"></p>
 
 **Note:** This sketch file contains a working example of how to use the TMP36 sensor, but we don't want to lose our working sketch file created earlier. Instead, we can use the example TMP36 sketch file to give us an idea of what code needs to be merged into our working sketch file created earlier. Copy & Paste these differences into your sketch file in the Arduino IDE. [Read more about combining sketch files](#sketch-files-using-sketch-files-combining-sketch-files)
 
@@ -295,13 +295,13 @@ Click **Add New** > **Device / Widget**.
 
 *TIP: The example sketch file code may not always use the same pin assignments as you used when connecting your device. Be sure to always double check and correct any differences when importing example code.*
 
-In this case, we are using the default Virtual Pin 0 which is already defined in the sketch file for the TMP36 sensor, so the sketch file should be OK to use as is. After verifying the sketch file looks good, select **Sketch** > **Upload** to upload the sketch file to your device.
+In this case, our sensor is connected to Analog Pin 0 (A0) and we are using the Virtual Pin 1 which matches what the example sketch file has defined, so the sketch file should be OK to use as is. After verifying the sketch file looks good, select **Sketch** > **Upload** to upload the sketch file to your device.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160603151539/TMP36-ArduinoIDE.jpg" width="600" height="836" alt="Arduino IDE TMP361"></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Arduino-TMP36-GettingStarted-Sketch.png" width="600" height="464" alt="Arduino IDE TMP36"></p>
 
 In the Cayenne dashboard, you can now click the **Step 2: Add Sensor** button and the TMP36 widget will be added to your dashboard.
 
-*TIP: You don't actually need to first add Sensor widgets to your dashboard - Cayenne will automatically create widgets for MQTT sensor data it receives! The sketch files shown in the _Add Device / Widget_ popups are merely examples that will help you get started with coding & sending your device data to Cayenne. If you already know how to read the data for your device, you can use the Cayenne MQTT library to write code and send your data to Cayenne without first creating a dashboard widget. Once Cayenne receives the data, it will create the appropriate widgets in your dashboard automatically.*
+*TIP: You don't actually need to first add Sensor widgets to your dashboard - Cayenne will automatically create widgets for MQTT sensor data it receives! The sketch files shown in the _Add Device / Widget_ popups are merely examples that will help you get started with coding & sending your device data to Cayenne. If you already know how to read the data for your device, you can use the Cayenne MQTT library and write code that will send your data to Cayenne without first creating a dashboard widget. Once Cayenne receives the data, it will create the appropriate widgets in your dashboard automatically.*
 
 **Compile, Upload and connect to Cayenne**
 
@@ -337,9 +337,9 @@ Let's start by the actuator widget on the dashboard. From the Cayenne dashboard,
 
 4. Click the **Step 1: Sketch File** button. A popup will appear showing example code for using the Luminosty widget.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617110431/Add-Device-Arduino-Luminosity.png" width="600" height="364" alt="Arduino Luminosity Add Device"></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Arduino-Luminosity-GettingStarted-Dashboard.png" width="600" height="396" alt="Arduino Luminosity Add Device"></p>
 
-**Note:** This sketch file contains a basic example of how to use the Luminosity actuator, but we don't want to lose our working sketch file created earlier. Instead, we can use the code shown in the example to give us an idea of what code needs to be merged into our working sketch file. Copy & Paste these differences into your sketch file in the Arduino IDE. [Read more about combining sketch files](#sketch-files-using-sketch-files-combining-sketch-files)
+**Note:** This sketch file contains a basic example of how to use the Luminosity actuator, but we don't want to lose our working sketch file created earlier that supports our TMP36 sensor. Instead, we can use the code shown in the Luminosity example sketch to give us an idea of what code needs to be merged into our working sketch file in order to support our actuator. Copy & Paste these differences into your sketch file in the Arduino IDE. [Read more about combining sketch files](#sketch-files-using-sketch-files-combining-sketch-files).
 
 *TIP: If you would like more information on how to write code for responding to actuator commands, you may wish to review the [Arduino MQTT](#cayenne-mqtt-api-using-arduino-mqtt-respond-to-actuator-commands) example that walks through adding Button actuator code manually to a sketch file.*
 
@@ -349,20 +349,35 @@ After merging in the required code for handling a Luminosity actuator, we need t
 
 *TIP: The example sketch file code may not always use the same pin assignments as you used when connecting your device. Be sure to always double check and correct any differences when importing example code.*
 
-In this case the example Luminosity code assumes that our light is connected on **Digital Pin 3** and that Cayenne will notify us of changes to this actuator on **Virtual Pin 1**. We will need to update the code to correct these values for our setup. Find and update the ``LED_DIGITAL_PIN`` and ``LED_VIRTUAL_PIN`` definitions to match the values we chose earlier.
+In this case, the example Luminosity code assumes that our light is connected on **Digital Pin 3** and that Cayenne will notify us of changes to this actuator on **Virtual Pin 1**. We need to update the code to correct these values, since they are not correct for our setup. In addition, our sketch file already uses the **VIRTUAL_CHANNEL** define for use with our TMP36 sensor. When we import the sketch code to support the Luminosity actuator, we must customize these values to fit our setup.
 
+
+1. Import the defines for the Luminosity, but customize them so that they are unique in our sketch file and correct for our setup.
 ```
-#define LED_VIRTUAL_PIN 6
-#define LED_DIGITAL_PIN 6
+// Luminosity Pin & Virtual channel
+#define LED_VIRTUAL_CHANNEL 6
+#define ACTUATOR_PIN 6
 ```
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151924/Arduino-Luminosity-in-Arduino-IDE.png" width="600" height="554" alt="Arduino Luminosity in Arduino IDE"></p>
+2. Import the CAYENNE_IN function for handling our actuator, but customize the virtual channel define it so that it refers to our luminosity actuator.
+```
+// This function is called when data is sent from Cayenne.
+CAYENNE_IN(LED_VIRTUAL_CHANNEL)
+{
+  int value = getValue.asInt(); // 0 to 255
+  CAYENNE_LOG("Channel %d, pin %d, value %d", LED_VIRTUAL_CHANNEL, ACTUATOR_PIN, value);
+  // Write the value received to the PWM pin. analogWrite accepts a value from 0 to 255.
+  analogWrite(ACTUATOR_PIN, value);
+}
+```
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Arduino-TMP36-Luminosity-example-changes.png" width="600" height="462" alt="Arduino Luminosity and TMP36 Arduino IDE"></p>
+
+<a href="https://github.com/myDevicesIoT/cayenne-docs/blob/staging/examples/arduino_getting_started_tmp36_luminosity/arduino_getting_started_tmp36_luminosity.ino" target="_blank">Here is a link</a> to a completed sketch file showing an example of combining the TMP36 & Luminosity into a single sketch file.
 
 **Finish adding the actuator widget**
 
 Now that we have the code for our actuator, we need to complete adding the actuator widget to our dashboard. Switch back to the Cayenne dashboard and click the **Step 2: Add Widget** button. The Luminosity widget will then be added to our dashboard.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617110431/Add-Device-Arduino-Luminosity.png" width="600" height="364" alt="Arduino Luminosity Add Device"></p>
 
 Our code and actuator widget are ready, we can now upload our code to our board using Arduino IDE.
 
@@ -382,10 +397,10 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
 
    On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have [a shield supported by Cayenne](#supported-hardware-microcontrollers-using-arduino-ethernet-wifi-shield) installed and working.
 
-   *TIP: Double check that the board connection #include in your sketch file is correct for the shield that you are using. The Cayenne sketch file examples assume that you have a W5100 connected. If this line does not match your connection, your board will fail to connect to Cayenne.*
+   *TIP: Double check that the Cayenne MQTT include appears in your sketch file. If this line is not present, your board will fail to connect to Cayenne.*
       
    ```
-   #include <CayenneEthernet.h>
+   #include <CayenneMQTTEthernet.h>
   
    ```
    <br/>
@@ -409,7 +424,7 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
 
    Verify that you see the Cayenne MQTT Library installed under **File** > **Examples** > **CayenneMQTT**. If you do not, make sure to add it to your Library. For more help on this, see [Add Cayenne Arduino Library to Arduino IDE](#getting-started-arduino-arduino-setup-using-cayenne-arduino-library-add-cayenne-library-to-arduino-ide).
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616115052/Arduino-IDE-Cayenne-lib-installed.png" width="600" height="555" alt="Arduino IDE Library Installed"></p>
+   <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/arduino-ide-mqtt-library-menu.png" width="660" height="553" alt="arduino-ide-mqtt-library-menu"><br/><br/></p>
 
 5. **Verify that your Arduino is connected with Cayenne**
 
@@ -445,10 +460,13 @@ In case of public LoRaWAN network, make sure your devices are powered on and the
 Need a gateway? Here are some helpful links to purchasing and configuring a gateway based on which network you’ll be using.
 
 *   [Setup gateway with Actility](#lora-actility-setup-gateway-device)
+*   [Setup gateway with Everynet](#lora-everynet-network-setup-gateway-device)
+*   [Setup gateway with Kerlink](#lora-kerlink-network-setup-gateway-device)
 *   [Setup gateway with Loriot](#lora-loriot-network-setup-gateway-device)
-*   [Setup gateway with Senet](#lora-senet-network-setup-gateway-device)
 *   [Setup gateway with OrbiWise](#lora-orbiwise-network-setup-gateway-device)
-
+*   [Setup gateway with Senet](#lora-senet-network-setup-gateway-device)
+*   [Setup gateway with Stream](#lora-stream-network-setup-gateway-device)
+*   [Setup gateway with The Things Network](#lora-the-things-network-setup-gateway-device)
 
 **2\. Make sure you have your LoRaWAN account information**
 
@@ -457,10 +475,12 @@ If your device has not been previously registered with your LoRaWAN network prov
 Need an account? Here are some helpful links to creating an account based on which network you’ll be using.
 
 *   [Creating Actility account](#lora-actility-create-account)
+*   [Creating Everynet account](#lora-everynet-network-create-account)
 *   [Creating Loriot account](#lora-loriot-network-create-account)
-*   [Creating Senet account](#lora-senet-network-create-account)
 *   [Creating OrbiWise account](#lora-orbiwise-network-create-account)
-
+*   [Creating Senet account](#lora-senet-network-create-account)
+*   [Creating Stream account](#lora-stream-network-create-account)
+*   [Creating The Things Network account](#lora-the-things-network-create-account)
 
 **3\. Make sure you have the information on your devices being connected**
 
