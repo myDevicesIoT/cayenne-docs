@@ -264,7 +264,7 @@ If you run into any troubles, see [Troubleshooting](#getting-started-arduino-tro
 
 ### Sensors
 
-Cayenne works with any sensor that is connected to an Arduino. We’ve created <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples" target="_blank">sketch files</a> for the various temperature, luminosity, pressure, proximity, motion and generic sensor models.
+Cayenne works with any sensor that is connected to an Arduino. We’ve created <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples" target="_blank">sketch files</a> for the various temperature, luminosity, pressure, proximity, motion and generic sensor models.
 
 **EXAMPLE:** Let’s add a TMP36 Temperature Sensor to see how easy it is.
 
@@ -353,27 +353,29 @@ In this case, the example Luminosity code assumes that our light is connected on
 
 
 1. Import the defines for the Luminosity, but customize them so that they are unique in our sketch file and correct for our setup.
-```
-// Luminosity Pin & Virtual channel
-#define LED_VIRTUAL_CHANNEL 6
-#define ACTUATOR_PIN 6
-```
+
+   ```
+   // Luminosity Pin & Virtual channel
+   #define LED_VIRTUAL_CHANNEL 6
+   #define ACTUATOR_PIN 6
+   ```
 
 2. Import the CAYENNE_IN function for handling our actuator, but customize the virtual channel define it so that it refers to our luminosity actuator.
-```
-// This function is called when data is sent from Cayenne.
-CAYENNE_IN(LED_VIRTUAL_CHANNEL)
-{
-  int value = getValue.asInt(); // 0 to 255
-  CAYENNE_LOG("Channel %d, pin %d, value %d", LED_VIRTUAL_CHANNEL, ACTUATOR_PIN, value);
-  // Write the value received to the PWM pin. analogWrite accepts a value from 0 to 255.
-  analogWrite(ACTUATOR_PIN, value);
-}
-```
+
+   ```
+   // This function is called when data is sent from Cayenne.
+   CAYENNE_IN(LED_VIRTUAL_CHANNEL)
+   {
+     int value = getValue.asInt(); // 0 to 255
+     CAYENNE_LOG("Channel %d, pin %d, value %d", LED_VIRTUAL_CHANNEL, ACTUATOR_PIN, value);
+     // Write the value received to the PWM pin. analogWrite accepts a value from 0 to 255.
+     analogWrite(ACTUATOR_PIN, value);
+   }
+   ```
 
 <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Arduino-TMP36-Luminosity-example-changes.png" width="600" height="462" alt="Arduino Luminosity and TMP36 Arduino IDE"></p>
 
-<a href="https://github.com/myDevicesIoT/cayenne-docs/blob/staging/examples/arduino_getting_started_tmp36_luminosity/arduino_getting_started_tmp36_luminosity.ino" target="_blank">Here is a link</a> to a completed sketch file showing an example of combining the TMP36 & Luminosity into a single sketch file.
+<a href="../examples/arduino_getting_started_tmp36_luminosity/arduino_getting_started_tmp36_luminosity.ino" target="_blank">Here is a link</a> to a completed sketch file showing an example of combining the TMP36 & Luminosity into a single sketch file.
 
 **Finish adding the actuator widget**
 
