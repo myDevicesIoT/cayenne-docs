@@ -133,7 +133,7 @@ A couple of notes before you get started:
 
 **Step 3:** You’re done! You can now add a widget for the LED switch (Pin 8) and use it to turn the LED on and off.
 
-**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/LightSwitch/LightSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/LightSwitch/LightSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 <br/><br/>
 
@@ -201,7 +201,7 @@ A couple of notes before you get started:
 
 **Step 3:** You’re done! You can now add a widget for the light switch (Pin 8) and use it to turn the LED on and off.
 
-**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/LightSwitch/LightSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/LightSwitch/LightSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ##### Luminosity
@@ -253,7 +253,7 @@ A couple of notes before you get started:
 
 **Step 3:** You’re done! You can now add a Luminosity actuator to your dashboard, and use digital channel 6 to adjust the LED brightness.
 
-**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/Luminosity/Luminosity.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/Luminosity/Luminosity.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 #### Motor
 
@@ -350,7 +350,7 @@ A couple of notes before you get started:
 
 **Step 8:** You’re done! You can now add the Motor Switch to the dashboard and control it using digital pin 8.
 
-**Step 9:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/MotorSwitch/MotorSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 9:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/MotorSwitch/MotorSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ##### Servo Motor
@@ -410,7 +410,7 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the Servo Motor to your dashboard, controlling it through digital pin 6.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/ServoMotor/ServoMotor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/ServoMotor/ServoMotor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 #### Valve
@@ -483,7 +483,7 @@ A couple of notes before you get started:
 
 **Step 5:** You’re done! You can now add the Valve to the dashboard and control it using digital pin 2.
 
-**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/ValveSwitch/ValveSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/ValveSwitch/ValveSwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 #### Relay
@@ -567,7 +567,7 @@ A couple of notes before you get started:
 
 **Step 7:** You’re done! You can now add the relay switch to the dashboard and control the LED using digital pin 2.
 
-**Step 8:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/RelaySwitch/RelaySwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 8:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/RelaySwitch/RelaySwitch.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 #### Generic
 
@@ -619,7 +619,7 @@ A couple of notes before you get started:
 
 **Step 3:** You’re done! You can now add a widget for the digital output (Pin 8) and use it to turn the LED on and off.
 
-**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/GenericDigitalOutput/GenericDigitalOutput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/GenericDigitalOutput/GenericDigitalOutput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ##### PWM Output
@@ -668,7 +668,7 @@ A couple of notes before you get started:
 
 **Step 3:** You’re done! You can now add the PWM Output to your dashboard, and use digital channel 6 to adjust the LED brightness.
 
-**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/GenericPWMOutput/GenericPWMOutput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 4:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators/GenericPWMOutput/GenericPWMOutput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ## Extensions
@@ -1457,7 +1457,7 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the TMP36 to your dashboard using analog pin 0.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/TMP36/TMP36.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/TMP36/TMP36.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ##### TMP102
@@ -1525,7 +1525,7 @@ A couple of notes before you get started:
 
 **Step 5:** You’re done! You can now add the TMP102 sensor on the dashboard, with default address of 0x48.
 
-**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/TMP102/TMP102.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/TMP102/TMP102.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ##### DS18B20
@@ -1583,7 +1583,7 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the DS18B20 sensor to your dashboard using digital pin 7.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/DS18B20/DS18B20.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/DS18B20/DS18B20.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 ##### BMP180
 
@@ -1649,7 +1649,7 @@ A couple of notes before you get started:
 
 **Step 5:** You’re done! You can now add the BMP180 to your dashboard.
 
-**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/BMP180/BMP180.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/BMP180/BMP180.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 ##### Thermistor
 
@@ -1706,7 +1706,7 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the Thermistor to your dashboard, reading its value using analog pin A2.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/Thermistor/Thermistor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/Thermistor/Thermistor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 #### Luminosity
 
@@ -1833,7 +1833,7 @@ A couple of notes before you get started:
 
 **Step 5:** You’re done! You can now add the TSL2561 sensor on the dashboard, with default address of 0x39.
 
-**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/TSL2561/TSL2561.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/TSL2561/TSL2561.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ##### Photoresistor
@@ -1895,7 +1895,7 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the Photoresistor to your dashboard using analog pin 0.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/Photoresistor/Photoresistor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/Photoresistor/Photoresistor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 ##### Pressure
 *   [BMP180](#supported-hardware-sensors-wiring-tutorials-temperature-bmp180)
@@ -1966,7 +1966,7 @@ A couple of notes before you get started:
 
 **Step 5:** You’re done! You can now add the BMP180 to your dashboard.
 
-**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/BMP180/BMP180.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 6:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/BMP180/BMP180.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ##### Analog Load
@@ -2029,7 +2029,7 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the Pressure Sensor to your dashboard, referencing analog pin 0.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/AnalogLoadPressureSensor/AnalogLoadPressureSensor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/AnalogLoadPressureSensor/AnalogLoadPressureSensor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ##### Proximity/Distance
@@ -2095,7 +2095,7 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the Proximity Sensor to your dashboard referencing analog pin 0.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/AnalogDistanceSensor/AnalogDistanceSensor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/AnalogDistanceSensor/AnalogDistanceSensor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 #### Motion
@@ -2157,7 +2157,7 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the Digital Motion Sensor to your dashboard, referencing pin 7 as the input pin.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/DigitalMotionSensor/DigitalMotionSensor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/DigitalMotionSensor/DigitalMotionSensor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 #### Generic
@@ -2221,7 +2221,7 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the digital input to your dashboard and use it to read the button state using digital pin 7.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/GenericDigitalInput/GenericDigitalInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/GenericDigitalInput/GenericDigitalInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
 
 
 ##### Analog Input
@@ -2281,4 +2281,4 @@ A couple of notes before you get started:
 
 **Step 4:** You’re done! You can now add the photoresistor to your dashboard, referencing Analog pin 0 as the input pin.
 
-**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/GenericAnalogInput/GenericAnalogInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+**Step 5:** Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors/GenericAnalogInput/GenericAnalogInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your account credentials.
