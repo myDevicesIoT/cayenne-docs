@@ -347,35 +347,16 @@ After merging in the required code for handling a Luminosity actuator, we need t
 
 In this case, the example Luminosity code assumes that our light is connected on **Digital Pin 3** and that Cayenne will notify us of changes to this actuator on **Virtual Pin 1**. We need to update the code to correct these values, since they are not correct for our setup. In addition, our sketch file already uses the **VIRTUAL_CHANNEL** define for use with our TMP36 sensor. When we import the sketch code to support the Luminosity actuator, we must customize these values to fit our setup.
 
+<a href="../examples/arduino_getting_started_tmp36_luminosity/arduino_getting_started_tmp36_luminosity.ino" target="_blank">Here is a link</a> to a sketch file showing an example of combining the TMP36 & Luminosity into a single sketch file. Within it, you'll find the following changes:
 
 1. Import the defines for the Luminosity, but customize them so that they are unique in our sketch file and correct for our setup.
-
-   ```
-   // Luminosity Pin & Virtual channel
-   #define LED_VIRTUAL_CHANNEL 6
-   #define ACTUATOR_PIN 6
-   ```
-
 2. Import the CAYENNE_IN function for handling our actuator, but customize the virtual channel define it so that it refers to our luminosity actuator.
-
-   ```
-   // This function is called when data is sent from Cayenne.
-   CAYENNE_IN(LED_VIRTUAL_CHANNEL)
-   {
-     int value = getValue.asInt(); // 0 to 255
-     CAYENNE_LOG("Channel %d, pin %d, value %d", LED_VIRTUAL_CHANNEL, ACTUATOR_PIN, value);
-     // Write the value received to the PWM pin. analogWrite accepts a value from 0 to 255.
-     analogWrite(ACTUATOR_PIN, value);
-   }
-   ```
 
 <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Arduino-TMP36-Luminosity-example-changes.png" width="600" height="462" alt="Arduino Luminosity and TMP36 Arduino IDE"></p>
 
-<a href="../examples/arduino_getting_started_tmp36_luminosity/arduino_getting_started_tmp36_luminosity.ino" target="_blank">Here is a link</a> to a completed sketch file showing an example of combining the TMP36 & Luminosity into a single sketch file.
-
 **Finish adding the actuator widget**
 
-Now that we have the code for our actuator, we need to complete adding the actuator widget to our dashboard. Switch back to the Cayenne dashboard and click the **Step 2: Add Widget** button. The Luminosity widget will then be added to our dashboard.
+Now that we have the code for our actuator, we need to complete adding the actuator widget to our dashboard. Switch back to the Cayenne dashboard and click the **Step 2: Add Actuator** button. The Luminosity widget will then be added to our dashboard.
 
 Our code and actuator widget are ready, we can now upload our code to our board using Arduino IDE.
 
@@ -461,22 +442,32 @@ You can then proceed with connecting and setting up your ESP8266 board for use.
 
 Begin by verifying that your ESP8266 board and PC/Mac are correctly set up before continuing.
 
-<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/1st-Experience-Arduino-Step-2-setup-arduino2.png" width="600" height="374" alt="Step 2 Arduino"></p>
+#### Install USB driver on computer
 
-### Installing Arduino IDE Software
+Before you can program your ESP8266, you must install the required USB driver on your computer.
+
+<a href="https://mydevices.com/link/generic-esp8266-getting-started" target="_blank">Show me how</a>.
+
+#### Connect the ESP8266 to your PC/Mac
+
+Connect the ESP8266 to your PC/Mac via data-capable USB cable.
+
+#### Using Cayenne ESP Library
+
+The Cayenne MQTT ESP Library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your ESP8266 board.
+
+##### Installing Arduino IDE Software
 
 To use the Cayenne MQTT ESP Library, the Arduino IDE software should be installed. Go to https://www.arduino.cc/en/Main/Software to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
 
-### Install the ESP8266 board package to Arduino IDE
+##### Install the ESP8266 board package
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/RVSCjCpZ_nQ" frameborder="0" allowfullscreen></iframe></p>
 
 1. Under **File -> Preferences** add ``http://arduino.esp8266.com/stable/package_esp8266com_index.json`` to the **Additional Boards Manager URLs** field.
 2. Install the **esp8266** platform from **Tools -> Board -> Boards Manager**.
 
-### Add Cayenne MQTT ESP Library to Arduino IDE
-
-The Cayenne MQTT ESP Library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board.
+##### Add Cayenne MQTT ESP Library
 
 1. Download the Cayenne MQTT ESP library <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-ESP8266/archive/master.zip" target="_blank">from GitHub</a>.
 2. Go to **Sketch** > **Include Library** > **Add .ZIP Library** and install the Cayenne MQTT ESP library from the downloaded archive.
@@ -484,15 +475,7 @@ The Cayenne MQTT ESP Library gives you everything you need to quickly get your b
 
    <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/ESP8266-Arduino-IDE-Include-lib.png" width="660" height="478" alt="arduino-ide-add-mqtt-esp-library"><br/><br/></p>
 
-### Install required USB driver on your computer so you can program the ESP8266
-
-<a href="https://mydevices.com/link/generic-esp8266-getting-started" target="_blank">Show me how</a>.
-
-#### Connect the ESP8266 to your PC/Mac via data-capable USB cable.
-
-Connect your ESP module to your computer using a USB to Serial FTDI or console cable.
-
-#### Configure Arduino IDE
+##### Configure Arduino IDE
 
 In order to successfully program your ES8266, you will need to verify that the appropriate **Board** and **Port** are selected in the Arduino IDE.
  
@@ -506,15 +489,15 @@ Then, verify that you have the correct **Port** selected for communicating with 
 
 ### Connect your ES8266 to Cayenne
 
-After setting up your PC/Mac computer with the Arduino IDE and the Cayenne MQTT Library, you are ready to install Cayenne onto your device. Continue with Step 3 of the ESP8266 installation, where you will connect your board with Cayenne.
+After setting up your PC/Mac computer with the Arduino IDE and the Cayenne MQTT ESP Library, you are ready to install Cayenne onto your device. Continue with Step 3 of the ESP8266 installation, where you will connect your board to Cayenne.
 
 <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/ESP8266-Step-3-Connect.png" width="600" height="354" alt="ESP8266 Step 3 Connect"></p>
 
 Open the included sketch file example for connecting your board to Cayenne. You can obtain this example from Arduino IDE by clicking on **File -> Examples -> Cayenne-MQTT-ESP**. Alternatively, you can open the GitHub repository by clicking on the GitHub button next to the board you will be using on the *Connect* screen.
 
-**Add WiFi Password & MQTT Credentials**
+**Add Network & MQTT Credentials**
 
-The example sketch file includes everything we need to connect to Cayenne and publish our first set of test data, but it is missing our WiFi Password and unique MQTT credentials that will allow us to connect this device into our account. Let’s add those now.
+The example sketch file includes everything we need to connect to Cayenne and publish our first set of test data, but it is missing our WiFi SSID, Password and unique MQTT credentials that will allow us to connect this device into our account. Let’s add those now.
 
 All of the required account information we need can be found on the *Connect* screen. Refer to this screen and copy & paste your **MQTT Username**, **MQTT Password** and **Client ID** into the sketch file. The example sketch file includes placeholders for these values, so we just need to update them with the values provided to us on our dashboard.
 
@@ -524,7 +507,7 @@ All of the required account information we need can be found on the *Connect* sc
 
 **Connect board to Cayenne**
 
-Once you have double-checked the sketch file, select **Sketch** > **Upload** to upload the sketch file to your device. As soon as your Arduino device comes online and connects to Cayenne, your device’s dashboard will appear.
+Once you have double-checked the sketch file, select **Sketch** > **Upload** to upload the sketch file to your device. As soon as your ESP8266 board comes online and connects to Cayenne, your device’s dashboard will appear.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Dashboard-1stExperienceB.png" width="660" height="392" alt="dashboard-1stexperienceb"><br/><br/></p>
 
@@ -619,35 +602,16 @@ After merging in the required code for handling a Luminosity actuator, we need t
 
 In this case, the example Luminosity code assumes that our light is connected on **Digital Pin 3** and that Cayenne will notify us of changes to this actuator on **Virtual Pin 1**. We need to update the code to correct these values, since they are not correct for our setup. In addition, our sketch file already uses the **VIRTUAL_CHANNEL** define for use with our TMP36 sensor. When we import the sketch code to support the Luminosity actuator, we must customize these values to fit our setup.
 
+<a href="../examples/arduino_getting_started_tmp36_luminosity/arduino_getting_started_tmp36_luminosity.ino" target="_blank">Here is a link</a> to a sketch file showing an example of combining the TMP36 & Luminosity into a single sketch file. Within it, you'll find the following changes:
 
 1. Import the defines for the Luminosity, but customize them so that they are unique in our sketch file and correct for our setup.
-
-   ```
-   // Luminosity Pin & Virtual channel
-   #define LED_VIRTUAL_CHANNEL 6
-   #define ACTUATOR_PIN 6
-   ```
-
 2. Import the CAYENNE_IN function for handling our actuator, but customize the virtual channel define it so that it refers to our luminosity actuator.
-
-   ```
-   // This function is called when data is sent from Cayenne.
-   CAYENNE_IN(LED_VIRTUAL_CHANNEL)
-   {
-     int value = getValue.asInt(); // 0 to 255
-     CAYENNE_LOG("Channel %d, pin %d, value %d", LED_VIRTUAL_CHANNEL, ACTUATOR_PIN, value);
-     // Write the value received to the PWM pin. analogWrite accepts a value from 0 to 255.
-     analogWrite(ACTUATOR_PIN, value);
-   }
-   ```
 
 <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Arduino-TMP36-Luminosity-example-changes.png" width="600" height="462" alt="Arduino Luminosity and TMP36 Arduino IDE"></p>
 
-<a href="../examples/arduino_getting_started_tmp36_luminosity/arduino_getting_started_tmp36_luminosity.ino" target="_blank">Here is a link</a> to a completed sketch file showing an example of combining the TMP36 & Luminosity into a single sketch file.
-
 **Finish adding the actuator widget**
 
-Now that we have the code for our actuator, we need to complete adding the actuator widget to our dashboard. Switch back to the Cayenne dashboard and click the **Step 2: Add Widget** button. The Luminosity widget will then be added to our dashboard.
+Now that we have the code for our actuator, we need to complete adding the actuator widget to our dashboard. Switch back to the Cayenne dashboard and click the **Step 2: Add Actuator** button. The Luminosity widget will then be added to our dashboard.
 
 Our code and actuator widget are ready, we can now upload our code to our board using Arduino IDE.
 
@@ -661,22 +625,15 @@ Once you have double-checked the sketch file contents are correct, select **Sket
 
 ### Troubleshooting
 
-If you don’t see your Arduino device connected to Cayenne, or if you’re running into trouble successfully programming your Arduino with the Arduino IDE, here are a few things to check.
+If you don’t see your ESP8266 device connected to Cayenne, or if you’re running into trouble successfully programming your board with the Arduino IDE, here are a few things to check.
 
-1. **Make sure your Arduino is connected to the Internet**
+1. **Make sure your ESP8266 is connected to the Internet**
 
-   On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have [a shield supported by Cayenne](#supported-hardware-microcontrollers-using-arduino-ethernet-wifi-shield) installed and working.
+   The example sketch file for connecting your ESP8266 includes placeholders for the WiFi **SSID** and **Password**. Double check that these are correct for your network and that the device can connect to the Internet successfully.
 
-   *TIP: Double check that the Cayenne MQTT include appears in your sketch file. If this line is not present, your board will fail to connect to Cayenne.*
-      
-   ```
-   #include <CayenneMQTTEthernet.h>
-  
-   ```
-   <br/>
-2. **Make sure your Arduino is connected to a PC/Mac via the USB cable**
+2. **Make sure your ESP8266 is connected to a PC/Mac via the USB cable**
 
-   Power on your Arduino by connecting your Arduino with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the power LED lit on your board.
+   Power on your board by connecting your ESP8266 with a data-capable USB cable. You should see the power LED lit on your board.
 
 3. **Configure the Arduino IDE**
 
@@ -690,13 +647,13 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
 
    <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616114005/Arduino-IDE-port-selection.png" width="600" height="501" alt="Arduino IDE Port Selection"></p>
 
-4. **Verify that you have the Cayenne Arduino Library installed**
+4. **Verify that you have the Cayenne-MQTT-ESP8266 Library installed**
 
-   Verify that you see the Cayenne MQTT Library installed under **File** > **Examples** > **CayenneMQTT**. If you do not, make sure to add it to your Library. For more help on this, see [Add Cayenne Arduino Library to Arduino IDE](#getting-started-arduino-arduino-setup-using-cayenne-arduino-library-add-cayenne-library-to-arduino-ide).
+   Verify that you see the Cayenne-MQTT-ESP8266 Library installed by going to the **Sketch** > **Include Library** menu where you should now see the Cayenne-MQTT-ESP8266 library under *Contributed Libraries*. If you do not, make sure to add it to your Library. For more help on this, see [Add Cayenne MQTT ESP Library to Arduino IDE](#getting-started-esp8266-esp8266-setup-using-cayenne-esp-library-add-cayenne-mqtt-esp-library).
 
-   <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/arduino-ide-mqtt-library-menu.png" width="660" height="553" alt="arduino-ide-mqtt-library-menu"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/ESP8266-Arduino-IDE-Include-lib.png" width="660" height="478" alt="arduino-ide-add-mqtt-esp-library"><br/><br/></p>
 
-5. **Verify that your Arduino is connected with Cayenne**
+5. **Verify that your ESP8266 is connected with Cayenne**
 
    You can use the Serial Monitor tool in the Arduino IDE to view some connection information. After uploading your sketch file to the Arduino device, open the **Serial Monitor** and look for the Cayenne connection.
 
@@ -710,7 +667,7 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
    Connecting to arduino.mydevices.com:8442
    Ready (ping: 109ms).
    ```
-   If you don’t, this means your board is not connected to the Internet to send data to the Cayenne cloud. You will need to verify that your Arduino is connected to the Internet. If you don’t see any outptut in the Serial Monitor, leave it open and Reset your Arduino board.
+   If you don’t, this means your board is not connected to the Internet to send data to the Cayenne cloud. You will need to verify that your ESP8266 is connected to the Internet. If you don’t see any outptut in the Serial Monitor, leave it open and Reset your ESP8266 board.
 
 
 ## LoRa®
