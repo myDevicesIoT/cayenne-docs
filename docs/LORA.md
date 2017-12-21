@@ -1587,7 +1587,9 @@ Cayenne makes it easy to use your LoRa device and the machineQ network. You will
 
 In order for data from your devices to reach Cayenne, you must configure traffic forwarding on the machineQ platform. When configuring data forwarding be be sure to use the Cayenne machineQ URL: 
 
-```https://lora.mydevices.com/v1/networks/machineq/uplink```
+```
+https://lora.mydevices.com/v1/networks/machineq/uplink
+```
 
 ### Add device to Cayenne
 
