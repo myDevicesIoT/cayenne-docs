@@ -20,7 +20,7 @@ Cayenne works with **Raspberry Pi computers** running Linux-based Raspbian Opera
 
 Cayenne can be used with Internet connected **Arduino microcontrollers** and **ESP8266 boards**. You can find a list of <a href="https://mydevices.com/cayenne/marketplace/" target="_blank">Microcontollers supported by Cayenne</a> on the Cayenne **Marketplace**. The Marketplace includes details on each device, **Datasheet**, **User Guides** and **Purchase** links in case you need hardware for your use.
 
-[View Getting Started with Arduino](#getting-started-arduino) for a walkthrough of using Arduino with Cayenne.
+[View Getting Started with Arduino](#getting-started-arduino) or [Getting Started with ESP8266](#getting-started-esp8266) for a walkthrough of using Microcontrollers with Cayenne.
 
 ### Using Arduino Due
 
@@ -73,7 +73,7 @@ Cayenne can be used with a wide range of **LoRa devices** and various LoRa netwo
 
 ## Actuators
 
-Cayenne can be used with a wide range of **Actuators**. You can find a list of <a href="https://mydevices.com/cayenne/marketplace/" target="_blank">Actuators supported by Cayenne</a> on the Cayenne **Marketplace**. The Marketplace includes details on each device, **Datasheet**, **User Guides** and **Purchase** links in case you need hardware for your use.
+Cayenne can be used with virtually any type **Actuator** connected to your Raspberry Pi and Arduino devices. You can find a list of <a href="https://mydevices.com/cayenne/marketplace/" target="_blank">Actuators directly supported by Cayenne</a> on the Cayenne **Marketplace**. The Marketplace includes details on each device, **Datasheet**, **User Guides** and **Purchase** links in case you need hardware for your use.
 
 In addition, you can find helpful wiring tutorials here to help you wire and connect your component for use.
 
@@ -488,7 +488,7 @@ A couple of notes before you get started:
 
 #### Relay
 
-*   [Relay Switch](#supported-hardware-actuators-wiring-tutorials-relay-relay-switch)
+* [Relay Switch](#supported-hardware-actuators-wiring-tutorials-relay-relay-switch)
 
 ##### Relay Switch
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606103904/Component-Doc-Image-Relay-Switch.png" width="351" height="126" alt="Relay Switch"></p>
@@ -673,7 +673,7 @@ A couple of notes before you get started:
 
 ## Extensions
 
-You can add analog, digital and PWM extensions to your Raspberry Pi. This allows you to add more sensors and actuators to your Raspberry Pi. You can find a list of <a href="https://mydevices.com/cayenne/marketplace/" target="_blank">Extensions supported by Cayenne</a> on the Cayenne **Marketplace**. The Marketplace includes details on each device, **Datasheet**, **User Guides** and **Purchase** links in case you need hardware for your use.
+You can add analog, digital and PWM extensions to your Raspberry Pi. This allows you to add more sensors and actuators to your Raspberry Pi. You can find a list of <a href="https://mydevices.com/cayenne/marketplace/" target="_blank">Extensions directly supported by Cayenne</a> on the Cayenne **Marketplace**. The Marketplace includes details on each device, **Datasheet**, **User Guides** and **Purchase** links in case you need hardware for your use.
 
 In addition, you can find helpful wiring tutorials here to help you wire and connect your component for use.
 
@@ -1380,7 +1380,7 @@ A couple of notes before you get started:
 
 ## Sensors
 
-Cayenne works with temperature, luminosity, pressure/distance, motion and generic sensors connected to your Raspberry Pi and Arduino devices. You can find a list of <a href="https://mydevices.com/cayenne/marketplace/" target="_blank">Sensors supported by Cayenne</a> on the Cayenne **Marketplace**. The Marketplace includes details on each device, **Datasheet**, **User Guides** and **Purchase** links in case you need hardware for your use.
+Cayenne works with temperature, luminosity, pressure/distance, motion and generic sensors connected to your Raspberry Pi and Arduino devices. You can find a list of <a href="https://mydevices.com/cayenne/marketplace/" target="_blank">Sensors directly supported by Cayenne</a> on the Cayenne **Marketplace**. The Marketplace includes details on each device, **Datasheet**, **User Guides** and **Purchase** links in case you need hardware for your use.
 
 In addition, you can find helpful wiring tutorials here to help you wire and connect your component for use.
 
