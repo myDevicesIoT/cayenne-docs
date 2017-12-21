@@ -155,6 +155,8 @@ All of the required information we need can be found on the Cayenne dashboard’
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Cayenne dashboard screen so that the correct values are used for your device.*
 
+*TIP: Some MQTT clients truncate Client IDs longer than 23 characters. Double-check your credentials when entering them in.*
+
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/arduino-ide-example-filled-in.png" width="660" height="552" alt="arduino-ide-example-filled-in"><br/><br/></p>
@@ -360,6 +362,8 @@ The Nucleo board we’ve chosen includes a WiFi network connection, so we will n
 After filling in the network information, we will need to fill in the required MQTT Credentials for our account and this board. Refer to the *Choose SDK and connect your device* screen on your Cayenne dashboard, copying & pasting your **MQTT Username**, **MQTT Password** and **Client ID** into the example code. The example code includes placeholders for these values as well, so we just need to update them with the values provided to us on our dashboard.
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the Cayenne dashboard screen so that the correct values are used for your device.*
+
+*TIP: Some MQTT clients truncate Client IDs longer than 23 characters. Double-check your credentials when entering them in.*
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
@@ -638,6 +642,8 @@ In order for your MQTT connection to be successful, you must fill in the require
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste values from your dashboard so that the correct values are used for your device.*
 
+*TIP: Some MQTT clients truncate Client IDs longer than 23 characters. Double-check your credentials when entering them in.*
+
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Cpp-code-mqtt-credentials2.png" width="660" height="484" alt="Add your MQTT credentials"><br/><br/></p>
@@ -855,6 +861,8 @@ In order for your MQTT connection to be successful, you must fill in the require
 
 *TIP: The credentials shown here are unique for your account and the current device being added. When programming new devices, always be sure to copy & paste from the dashboard so that the correct values are used for your device.*
 
+*TIP: Some MQTT clients truncate Client IDs longer than 23 characters. Double-check your credentials when entering them in.*
+
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Step-2-BYOT-Choose-SDK.png" width="660" height="394" alt="Choose SDK and Connect screen"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Embedded-C-code-mqtt-credentials2.png" width="660" height="420" alt="Add your MQTT credentials"><br/><br/></p>
@@ -1008,6 +1016,8 @@ We then substitute in the values for our account, board and sensor.
 
 *TIP: If you ever need to refer to the MQTT Credentials needed for operations such as this, you can refer back to the Configuration screen for your board. To do so, select the __cogwheel__ menu for your board and then the __Configure__ option. In the configuration screen that appears, you'll find the values that you need.*
 
+*TIP: Some MQTT clients truncate Client IDs longer than 23 characters. Double-check your credentials when entering them in.*
+
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/API-Configure-menu.png" width="660" height="394" alt="api-configure-menu"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/API-Configure-screen.png" width="660" height="394" alt="api-configure-screen"><br/><br/></p>
@@ -1091,6 +1101,8 @@ We then substitute in the values for our account, board and actuator.
 + Replace **channel** with the appropriate channel that this actuator is connected to. For this example, we've already chosen Channel **1** when our Light actuator widget was setup.
 
 *TIP: For the purposes of testing with MQTT, you could also use the wildcard __#__ which would subscribe to all channels. Cayenne supports all of the usually filtering and control from MQTT that you'd expect. But since we know the specific Channel that we want to subscribe to in our example, we'll use that.*
+
+*TIP: Some MQTT clients truncate Client IDs longer than 23 characters. Double-check your credentials when entering them in.*
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/MQTT.fx-11-subscribe-command-messages.png" width="660" height="499" alt="mqtt-fx-11-subscribe-command-messages"><br/><br/></p>
 
