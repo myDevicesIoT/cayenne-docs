@@ -744,6 +744,7 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 *   [machineQ](#lora-machineq-network)
 *   [Objenious](#lora-objenious-network)
 *   [OrbiWise](#lora-orbiwise-network)
+*   [Semtech](#lora-semtech-network)
 *   [Senet](#lora-senet-network)
 *   [Stream](#lora-stream-network)
 *   [The Things Network](#lora-the-things-network)
@@ -968,7 +969,7 @@ If your device has been previously registered on the Actility network, it can be
 
 **Items you will need:**
 
-1.  Which [LoRa technology device](#lora-actility-supported-devices) is being added?
+1.  Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-actility-manually-register-device) if you need help with manually registering your device on a network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4.  Which Actility ThingPark Server are you using?
@@ -1151,7 +1152,7 @@ Once your device has been previously registered on the Everynet network, it can 
 
 **Items you will need:**
 
-1.  Which [LoRa technology device](#lora-everynet-network-supported-devices) is being added?
+1.  Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-everynet-network-manually-register-device) if you need help with manually registering your device on the network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4.  What is your unique Everynet account API Key?
@@ -1352,11 +1353,11 @@ If your device has been previously registered on the Kerlink network, it can be 
 
 **Items you will need:**
 
-1. Which [LoRa technology device](#lora-kerlink-network-supported-devices) is being added?
+1. Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
 2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-kerlink-network-manually-register-device) if you need help with manually registering your device on a network.
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 
-To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was [previously registered](#lora-kerlink-network-manually-register-device) on our Kerlink gateway device.
+To see how easy it is, let’s walk through an example of connecting an **Adeunis Pulse** which was [previously registered](#lora-kerlink-network-manually-register-device) on our Kerlink gateway device.
 
 **1\. Choose the Network**
 
@@ -1524,7 +1525,7 @@ If your device has been previously registered on the Loriot network, it can be q
 
 **Items you will need:**
 
-1. Which [LoRa technology device](#lora-loriot-network-supported-devices) is being added?
+1. Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
 2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-loriot-network-manually-register-device) if you need help with manually registering your device on a network.
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4. What is your Loriot **Application ID**? You can obtain your App ID from your Application's dashboard on the Loriot portal.
@@ -1537,7 +1538,7 @@ If your device has been previously registered on the Loriot network, it can be q
 
    <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Loriot-Security-Token-screen.png" width="660" height="394" alt="Security token"><br/><br/></p>
 
-To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under an [Loriot account](#lora-loriot-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an **Adeunis Pulse** which was previously registered under an [Loriot account](#lora-loriot-network-create-account).
 
 **1\. Choose the Network**
 
@@ -1611,7 +1612,7 @@ If your device has been previously registered on the machineQ network, it can be
 
 **Items you will need:**
 
-1.  Which [LoRa technology device](#lora-actility-supported-devices) is being added?
+1.  Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
 2.  Your device will need to have been previously registered on the network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4.  Your machineQ Email and machineQ Password.
@@ -1767,11 +1768,11 @@ If your device has been previously registered on Objenious, it can be quickly & 
 
 **Items you will need:**
 
-1. Which [LoRa technology device](#lora-the-things-network-supported-devices) is being added?
+1. Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
 2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-objenious-network-manually-register-device) if you need help with manually registering your device on the network.
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 
-To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under a [Objenious account](#lora-objenious-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an **Adeunis Pulse** which was previously registered under a [Objenious account](#lora-objenious-network-create-account).
 
 **1\. Choose the Network**
 
@@ -1975,6 +1976,167 @@ The Multitech mDotBox device has been added to your dashboard and Cayenne will a
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="Actility"><br/><br/></p>
 
 
+## Semtech Network
+
+**About Semtech**
+
+Semtech Corporation is a leading supplier of high performance analog and mixed-signal semiconductors and advanced algorithms for high-end consumer, enterprise computing, communications, and industrial equipment. Products are designed to benefit the engineering community as well as the global community.
+
+**Using Semtech with Cayenne**
+
+Cayenne makes it easy to use your LoRa device and the Semtech network. You will need to:
+
+1. [Create / Log into your account on Semtech's IoT portal](#lora-semtech-network-create-account)
+2. [Setup gateway device](#lora-semtech-network-setup-gateway-device)
+3. [Setup traffic forwarding to Cayenne](#lora-semtech-network-setup-traffic-forwarding-to-cayenne)
+4. [Create Application](#lora-semtech-network-create-application)
+5. [Register your device on the IoT-X portal](#lora-semtech-network-manually-register-device)
+6. [Program/Flash your device](#lora-semtech-network-programming-the-device)
+7. [Add your device to your Cayenne dashboard](#lora-semtech-network-add-device-to-cayenne)
+
+We will walk you through these steps in the following sections.
+
+### Create account
+
+To create your Semtech account, visit the <a href="https://iot.semtech.com/" target="_blank">Semtech's IoT Portal</a> and select your region from the list to get started. After selecting the region, you will be asked
+
+**NOTE:** Semtech has many servers that you can use, but you will need an account on each of them in order to use that server. For the purposes of this walkthrough, we will be using the <a href="https://na.iot.semtech.cloud/welcome.html" target="_blank">North America</a> server.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-select-region-highlight.png" width="660" height="360" alt="Semtech region selection"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-account-creation.png" width="660" height="434" alt="Semtech account creation"><br/><br/></p>
+
+### Setup gateway device
+
+In order for your LoRa technology devices to connect to the Semtech network, you must have purchased and configured a gateway device. Once you have your gateway, it must be added to your account on the Semtech dashboard.
+
+**Be sure that you have an appropriate gateway configured and working before continuing with adding devices. Your devices will not be able to properly function without your gateway device in place.**
+
+#### Register new gateway device
+
+If you need to register a new gateway device, you can do so from the Semtech portal. To begin this process, select the **Gateways** option to open the *My Gateways* screen. From here, click on the **Add Gateway** button to begin the process of adding a new gateway.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-Add-Gateway-1.png" width="660" height="319" alt="Semtech dashboard Gateways highlight"><br/><br/></p>
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-Add-Gateway-2.png" width="660" height="307" alt="My Gateways screen"><br/><br/></p>
+
+On the *Add Gateway* screen that appears, give the gateway a nickname and enter the **Gateway ID** of the device.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-Add-Gateway-3.png" width="660" height="638" alt="Add Gateway screen"><br/><br/></p>
+
+### Setup traffic forwarding to Cayenne
+
+In order for data from your devices to reach Cayenne, you must configure the Semtech portal to forward data to Cayenne. You only need to perform this step once globally for your account. To perform this step, click on the **Applications** option on the dashboard. On the *Device Routing Feeds* screen that appears, click on the **Create** button to create a new device routing feed.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-Edit-Push-Config-1.png" width="660" height="319" alt="Semtech dashboard Applications option"><br/><br/></p>
+
+In the *Applications* screen that appears, select the **Edit Default Push Config** button.
+
+**Note:** We recommend that you change the Global Push Config as shown here. However, the Semtech portal also allows you to create a new **Application**. If you do so, you will want to change the **Push Settings** with the changes shown here. You must also remember to later add your devices to this application as well. If you change the Global push config, you will not need to take that extra step.
+
+Enter the following values onto the *Global Push Configuration* screen:
+
+1. **Hostname:** ``https://lora.mydevices.com``
+2. **Port:** ``443``
+3. **Path prefix:** ``/v1/networks/semtech/uplink``
+
+	<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-Edit-Push-Config-3.png" width="660" height="317" alt="Global Push Config screen filled out"><br/><br/></p>
+
+4. Enter your Semtech account **Username** and **Password** into the corresponding fields.
+5. Click **Save Application** to save the changes.
+6. Back on the *Applications* screen, click the **Start Default Push** button.
+
+   <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-Edit-Push-Config-4.png" width="660" height="293" alt="Start Default Push button highlight"><br/><br/></p>
+
+Your account is now configured to forward device data to Cayenne. You can now proceed with adding devices to it.
+
+### Manually register device
+
+Before you can use your device on the Semtech network, it must be registered on the network. To accomplish this, devices must be added via the Semtech portal. The following information will help guide you through this process.
+
+1. Click on **Devices** option on the dashboard to open the *My Devices* screen.
+
+    <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-Add-Device-1.png" width="660" height="319" alt="Semtech dashboard Devices button"><br/><br/></p>
+
+2. Click on **Add Device** to open the *Add New Device* popup dialog.
+
+    <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-Add-Device-2.png" width="660" height="321" alt="My Devices screen with Add highlight"><br/><br/></p>
+
+3. Refer to the **Add New Device** dialog. You can enter in all the required details for adding your device directly here. The Semtech network supports both **OTAA** and **APB** activation.
+
+    <p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Semtech-portal-Add-Device-3.png" width="573" height="559" alt="Add new device popup"><br/><br/></p>
+
+4. Click **OK** to complete adding your device. You will see your new device shown on the *My Devices* screen.
+
+   **Note:** If you chose to use an Application instead of the modifying the Global Push Config as suggested earlier, don't forget to select an application for your device that is setup to forward data to Cayenne. If using the Global Push Config, no additional steps are needed.
+	
+###  Programming the device
+
+Some devices will come from your device supplier preprogrammed and ready to be used immediately. Other devices will require you to program the device manually. If your device is preprogrammed, it can now be deployed and connected to the network for usage.
+
+If your device needs to be programmed, you should now proceed with programming/flashing the device. Because this process is different for each device, you should refer to the instructions for your device for any specific information you need to perform this step. If you need help, you can refer to the [Supported devices section](#supported-hardware-lora-technology-devices) where you will find Product page, Datasheet and User Guides for your device.
+
+**NOTE: Be sure that your device is programmed and properly connected to the network at this time. Only after your device is programmed, online and properly forwarding data should you proceed with adding your device to Cayenne.**
+
+### Add device to Cayenne
+
+Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+
+From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Cayenne Add New menu"><br/><br/></p>
+
+From the list of devices & widgets that appears, select the **LoRaWAN** category and then the **Semtech** Network option to view a list of supported devices.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Cayenne-Semtech-network-list.png" width="660" height="435" alt="Cayenne showing supported Semtech devices"><br/><br/></p>
+
+After selecting the device that you wish to add, settings for that device will appear. In the following section, we’ll walk you through the settings needed for adding a previously registered device.
+
+#### Already Registered
+
+If your device has been previously registered on the Semtech network, it can be quickly & easily added to Cayenne. Once added, your device and all of its sensors will appear in your dashboard.
+
+**Items you will need:**
+
+1. Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
+2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-semtech-network-manually-register-device) if you need help with manually registering your device on the network.
+3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
+
+To see how easy it is, let’s walk through an example of connecting an **Adeunis Pulse** which was previously registered under a [Semtech network account](#lora-semtech-network-create-account).
+
+**1\. Choose the Network**
+
+Make sure the **Semtech** network is selected in the list of LoRaWAN Networks.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Cayenne-Semtech-network-list.png" width="660" height="435" alt="Cayenne showing supported Semtech devices"><br/><br/></p>
+
+**2\. Select the Device**
+
+Select your device from among the list of supported Stream network devices. In this case, we’ll select the **Adeunis Pulse**.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Cayenne-Semtech-Adeunis-Pulse-selected.png" width="660" height="433" alt="Semtech with Pulse device highlight"><br/><br/></p>
+
+**3\. Enter Settings & Add device**
+
+In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
+
+1. Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
+2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
+3. Our device has been previously manually registered with the Semtech network. Make sure ``Already Registered`` is selected in the **Activation Mode** field.
+4. Select which server your device uses from the **Semtech Server** dropdown.
+5. If you wish to use downlink commands, you will need to enter your **Semtech Login** and **Semtech Password**. 
+
+   **Note:** If your device is using the Global Push Config, this will be your account Login and Password. However, if your device uses a separate Application config, you will enter the Host Username and Host Password as found in the Application's Push Config.
+
+6. Click **Add device**.
+
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/Cayenne-Semtech-Adeunis-Pulse.png" width="660" height="433" alt="Semtech Pulse settings"><br/><br/></p>
+
+The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the sensors on the device.
+
+<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
+
+
 ## Senet Network
 
 **About Senet**
@@ -1994,7 +2156,6 @@ Cayenne makes it easy to use your LoRa technology device and the Senet network. 
 
 We will walk you through these steps in the following sections.
 
-
 ### Create account
 
 To create your Senet account, visit the <a href="https://portal.senetco.io/" target="_blank">Senet Portal</a>. Click on the **Create New Account** to get started.
@@ -2002,7 +2163,6 @@ To create your Senet account, visit the <a href="https://portal.senetco.io/" tar
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412110645/Senet-portal-landing.png" width="600" height="377" alt="Senet portal with create new user highlight"><br/><br/></p>
 
 <p style="text-align:center"><br/><img src="https://s3.amazonaws.com/cloudfront-mydevices-wordpress/wp-content/uploads/20170412110516/Senet-Portal-create-new-user.png" width="600" height="377" alt="Senet create user dialog"><br/><br/></p>
-
 
 ### Setup gateway device
 
@@ -2115,7 +2275,7 @@ Once your device has been previously registered on the Senet network, it can be 
 
 **Items you will need:**
 
-1.  Which [LoRa technology device](#lora-senet-network-supported-devices) is being added?
+1.  Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
 2.  Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-senet-network-manual-register-device) if you need help with manually registering your device on the network.
 3.  What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 4.  What is your unique Senet account API Key?
@@ -2309,11 +2469,11 @@ If your device has been previously registered on the Stream network, it can be q
 
 **Items you will need:**
 
-1. Which [LoRa technology device](#lora-stream-network-supported-devices) is being added?
+1. Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
 2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-stream-network-manually-register-device) if you need help with manually registering your device on a network.
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 
-To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under a [the Stream network account](#lora-stream-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an **Adeunis Pulse** which was previously registered under a [the Stream network account](#lora-stream-network-create-account).
 
 **1\. Choose the Network**
 
@@ -2495,11 +2655,11 @@ If your device has been previously registered on The Things Network, it can be q
 
 **Items you will need:**
 
-1. Which [LoRa technology device](#lora-the-things-network-supported-devices) is being added?
+1. Which [LoRa technology device](#supported-hardware-lora-technology-devices) is being added?
 2. Your device will need to have been previously registered on the network. Refer to [Manual device registration](#lora-the-things-network-manually-register-device) if you need help with manually registering your device on a network.
 3. What is the unique [DevEUI](#lora-about-deveuis) for the device being added?
 
-To see how easy it is, let’s walk through an example of connecting an [Adeunis Pulse](#supported-hardware-lora-devices-adeunis-adeunis-pulse) which was previously registered under a [The Things Network account](#lora-the-things-network-create-account).
+To see how easy it is, let’s walk through an example of connecting an **Adeunis Pulse** which was previously registered under a [The Things Network account](#lora-the-things-network-create-account).
 
 **1\. Choose the Network**
 
