@@ -691,6 +691,7 @@ Need a gateway? Here are some helpful links to purchasing and configuring a gate
 *   [Setup gateway with Kerlink](#lora-kerlink-network-setup-gateway-device)
 *   [Setup gateway with Loriot](#lora-loriot-network-setup-gateway-device)
 *   [Setup gateway with OrbiWise](#lora-orbiwise-network-setup-gateway-device)
+*   [Setup gateway with Semtech](#lora-semtech-network-setup-gateway-device)
 *   [Setup gateway with Senet](#lora-senet-network-setup-gateway-device)
 *   [Setup gateway with Stream](#lora-stream-network-setup-gateway-device)
 *   [Setup gateway with The Things Network](#lora-the-things-network-setup-gateway-device)
@@ -705,6 +706,7 @@ Need an account? Here are some helpful links to creating an account based on whi
 *   [Creating Everynet account](#lora-everynet-network-create-account)
 *   [Creating Loriot account](#lora-loriot-network-create-account)
 *   [Creating OrbiWise account](#lora-orbiwise-network-create-account)
+*   [Creating Semtech account](#lora-semtech-network-create-account)
 *   [Creating Senet account](#lora-senet-network-create-account)
 *   [Creating Stream account](#lora-stream-network-create-account)
 *   [Creating The Things Network account](#lora-the-things-network-create-account)
@@ -719,13 +721,13 @@ In addition to adding previously activated devices, Cayenne is capable of activa
 
 To begin the process of adding a LoRa device to Cayenne, select the LoRa option from the list of devices. A list of LoRaWAN Networks and supported devices will appear.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/step-1-choose-device-category-2.png" width="600" height="359" alt="step-1-choose-device-category"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/LoRa-Choose-device-category-highlight.png" width="600" height="364" alt="step-1-choose-lora-device-category"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-Choose-Network-and-Device.png" width="600" height="363" alt="Add LoRa Device"></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/LoRa-Choose-Network-and-Device2.png" width="600" height="356" alt="Selecting LoRaWAN network and Device"></p>
 
 After selecting the LoRaWAN Network and Device that you want to add, you will then enter in the required settings for adding and activating the LoRa device. Once completed, your dashboard will automatically appear and Cayenne will automatically add widgets for all sensors on your device.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-Choose-Network-and-Device.png" width="600" height="363" alt="Add LoRa Device"></p>
+<p style="text-align:center"><br/><img src="https://mydevices.com/wp-content/uploads/2017/12/LoRa-Enter-Device-Settings2.png" width="600" height="357" alt="Fill in LoRa Device settings"></p>
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard-1.png" width="600" height="363" alt="Add LoRa Device"></p>
 
@@ -740,6 +742,7 @@ When adding the LoRa device, the settings, supported activation modes and accoun
 *   [Using the Loriot Network](#lora-loriot-network)
 *   [Using the machineQ Network](#lora-machineq-network)
 *   [Using the OrbiWise Network](#lora-orbiwise-network)
+*   [Using the Semtech Network](#lora-semtech-network)
 *   [Using the Senet Network](#lora-senet-network)
 *   [Using the Stream Network](#lora-stream-network)
 *   [Using the The Things Network](#lora-the-things-network)
