@@ -1989,10 +1989,9 @@ Cayenne makes it easy to use your LoRa device and the Semtech network. You will 
 1. [Create / Log into your account on Semtech's IoT portal](#lora-semtech-network-create-account)
 2. [Setup gateway device](#lora-semtech-network-setup-gateway-device)
 3. [Setup traffic forwarding to Cayenne](#lora-semtech-network-setup-traffic-forwarding-to-cayenne)
-4. [Create Application](#lora-semtech-network-create-application)
-5. [Register your device on the IoT-X portal](#lora-semtech-network-manually-register-device)
-6. [Program/Flash your device](#lora-semtech-network-programming-the-device)
-7. [Add your device to your Cayenne dashboard](#lora-semtech-network-add-device-to-cayenne)
+4. [Register your device on the Semtech portal](#lora-semtech-network-manually-register-device)
+5. [Program/Flash your device](#lora-semtech-network-programming-the-device)
+6. [Add your device to your Cayenne dashboard](#lora-semtech-network-add-device-to-cayenne)
 
 We will walk you through these steps in the following sections.
 
