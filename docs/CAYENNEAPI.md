@@ -58,12 +58,12 @@ All authentication requests are directed to **``https://accounts.mydevices.com``
 
 ##### Create User
 
-With OAuth the user creation is made directly on the identity provider web page. The url to directly acess the user registration page is **``https://accounts.mydevices.com/auth/realms/cayenne/login-actions/registration``**. Refer to the Application section and the different OAuth flows for more details and the paramters list that need to passed.
+With OAuth the user creation is made directly on the identity provider web page. The url to directly acess the user registration page is **``https://accounts.mydevices.com/auth/realms/cayenne/login-actions/registration``**. Refer to the Application section and the different OAuth flows for more details and the paramters that need to passed.
 
 
 ##### Get User Informations
 
-JWT tokens are already containing user informations. A JWT token is deviced into 3 parts, all separated by a `.` character. The middle part, is a JSON object base 64 encoded that contain user information among other information like roles and scopes granted.
+JWT tokens are already containing user information. A JWT token is devided into 3 parts, all separated by a `.` character. The middle part, is a JSON object base 64 encoded that contain user information among other information like roles and scopes granted.
 
 #### User Password
 
