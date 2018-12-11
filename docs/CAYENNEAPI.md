@@ -63,11 +63,12 @@ With OAuth the user creation is made directly on the identity provider web page.
 
 ##### Get User Informations
 
-
+JWT tokens are already containing user informations. A JWT token is deviced into 3 parts, all separated by a `.` character. The middle part, is a JSON object base 64 encoded that contain user information among other information like roles and scopes granted.
 
 #### User Password
 
-To begin a password reset action, this API provides two endpoints that will create a reset token and send out an email to the user.
+User password can be reset at the following url: **``https://accounts.mydevices.com/auth/realms/cayenne/login-actions/reset-credentials``**.
+
 
 #### Applications
 
