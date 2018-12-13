@@ -58,12 +58,40 @@ All authentication requests are directed to **``https://accounts.mydevices.com``
 
 ##### Create User
 
-With OAuth the user creation is made directly on the identity provider web page. The url to directly acess the user registration page is **``https://accounts.mydevices.com/auth/realms/cayenne/login-actions/registration``**. Refer to the Application section and the different OAuth flows for more details and the paramters list that need to passed.
+With OAuth the user creation is made directly on the identity provider web page. The url to directly acess the user registration page is **``https://accounts.mydevices.com/auth/realms/cayenne/login-actions/registration``**. Refer to the Application section and the different OAuth flows for more details and the paramters list that need to be passed.
 
 
-##### Get User Informations
+##### Get User Information
 
-JWT tokens are already containing user informations. A JWT token is deviced into 3 parts, all separated by a `.` character. The middle part, is a JSON object base 64 encoded that contain user information among other information like roles and scopes granted.
+Get specific user information
+
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>GET</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">/auth/realms/cayenne/protocol/openid-connect/userinfo</td>
+</tr>
+</tbody>
+</table>
+
+| Header | Value  |
+|-------|-------------------------------------------|
+| Authorization | Bearer JWT_TOKEN |
+
+**Response Model**
+ ```
+{
+	"sub": "XXXXXXXX",
+    "email_verified": false,
+	"email": "some@email.com",
+    "user_id": "XXXXXXXX",
+	"given_name": "Name",
+	"family_name": "LastName",
+    "name": "Name Lastname"
+}
+```
+
+Additionally, JWT tokens already contain user information. A JWT token is deviced into 3 parts, all separated by a `.` character. The middle part, is a JSON object base 64 encoded that contains user information among other information like roles and scopes granted.
 
 #### User Password
 
@@ -281,7 +309,6 @@ Each request must include an Authorization and API version header, for example:
 | Header | Value  |
 |-------|-------------------------------------------|
 | Authorization | Bearer JWT_TOKEN |
-| X-API-Version | 1.0 |
 
 Various response messages for all requests
 
