@@ -41,6 +41,40 @@ If you fall into this camp, you can jump straight to the [MQTT Messaging Topics]
 
 + [Manually Publishing / Subscribing](#cayenne-mqtt-api-manually-publishing-subscribing) - This will walk you through using the MQTT.fx client to manually publish and subscribe to Cayenne. This can help you test out using MQTT with Cayenne without having to connect an actual board or sensors. This is a great way to become familiar with the fundamentals of using MQTT with Cayenne.
 
+#### Option 3: use HTTP to push MQTT data
+
+If you are interesting to push external data into a virtual device you can use Cayenne API HTTP endpoint to do so.
+
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>POST</b></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">https://api.mydevices.com/things/MQTT_CLIENT_ID/data</td>
+</tr>
+</tbody>
+</table>
+
+| Header | Value  |
+|-------|-------------------------------------------|
+| Authorization | Basic MQTT_USERNAME:MQTT_PASSWORD |
+| Content-Type | application/json |
+
+**Request Payload**
+ ```
+[
+   {
+      "channel": 1,
+      "value": 16.4,
+      "type": "temp",
+      "unit": "c"
+   },
+   {...}
+]
+```
+
+The payload must be a JSON array of objects, each having `channel`, `value`, `type` and `unit` porperties. Refer to the list of our <a href="http://mydevices.com/cayenne/docs/cayenne-mqtt-api/#cayenne-mqtt-api-supported-data-types">supported data types</a> for the `type` and `unit` properties.
+
+
 ## MQTT Clients
 To interact with an MQTT broker you’ll need an MQTT client. Here’s a quick list of MQTT clients and resources:
 
