@@ -72,9 +72,7 @@ If you are interesting to push external data into a virtual device you can use C
 ]
 ```
 
-The payload must be a JSON array of objects, each having `channel`, `value`, `type` and `unit` porperties. 
-
- + Refer to the list of our <a href="http://mydevices.com/cayenne/docs/cayenne-mqtt-api/#cayenne-mqtt-api-supported-data-types">supported data types</a> for the `type` and `unit` properties.
+The payload must be a JSON array of objects, each having `channel`, `value`, `type` and `unit` porperties. Refer to the list of our <a href="http://mydevices.com/cayenne/docs/cayenne-mqtt-api/#cayenne-mqtt-api-supported-data-types">supported data types</a> for the `type` and `unit` properties.
 
 
 ## MQTT Clients
