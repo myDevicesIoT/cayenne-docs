@@ -63,9 +63,9 @@ If you are interesting to push external data into a virtual device you can use C
  ```
 [
    {
-	   "channel": 1,
+      "channel": 1,
       "value": 16.4,
-	   "type": "temp",
+      "type": "temp",
       "unit": "c"
    },
    {...}
