@@ -49,7 +49,7 @@ If you are interesting to push external data into a virtual device you can use C
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">https://api.mydevices.com/things/<MQTT CLIENT ID>/data></td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">https://api.mydevices.com/things/MQTT_CLIENT_ID/data></td>
 </tr>
 </tbody>
 </table>
