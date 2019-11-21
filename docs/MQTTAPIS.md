@@ -2812,27 +2812,42 @@ In order to process data appropriately, Cayenne needs to know both data type and
 
 **Using MQTT with Cayenne**
 
-MQTT is the preferred API protocol to send and receive data to and from Cayenne’s dashboard. Payloads are plain text based, and topics follow a tree composed of a Username, a Client ID and a Channel ID, allowing for fine filtration and control. Therefore, MQTT does not require the use of a provisioning API. Data that is published to a backend topic can also be subscribed to by a user’s third party application.  
+MQTT is the preferred API protocol to send and receive data to and from myDevices dashboard. Payloads are plain text based or JSON, and topics follow a tree composed of a Username, a Client ID and a Channel ID, allowing for fine filtration and control. Therefore, MQTT does not require the use of a provisioning API. Data that is published to a backend topic can also be subscribed to by a user’s third party application.  
 
-### Send System info
+### Send Sensor data as JSON
 
-System information is very basic information that may change very rarely over the lifetime of a device.
+Sensor payload
 
 | Topic	| PUB |	SUB |
 |-------|-------------------------------------------|---|---|
-| v1/**username**/things/**clientID**/sys/model     |	X |	X |
-| v1/**username**/things/**clientID**/sys/version   |	X |	X |
-| v1/**username**/things/**clientID**/sys/cpu/model |	X |	X |
-| v1/**username**/things/**clientID**/sys/cpu/speed |	X |	X |
+| v1/**username**/things/**clientID**/data/json     |	X |	X |
 
-A string payload for each topic is expected:
 
-+ (string) Device Model, eg. “Arduino Uno”
-+ (string) Device Version, eg. “1.0”
-+ (string) Device CPU Model, eg. “ATMega328”
-+	(string) Device CPU Speed, eg. “72000000000” for 72Mhz
+A JSON string payload for
+ ```
+[
+   {
+      "channel": 1,
+      "value": 16.4,
+      "type": "temp",
+      "unit": "c"
+   },
+   {
+      "channel": 2,
+      "value": 75,
+      "type": "rel_hum",
+      "unit": "p"
+   },
+   {
+      "channel": 5,
+      "value": 75,
+      "type": "batt",
+      "unit": "v"
+   }
+]
+```
 
-### Send Sensor data
+### Send individual Sensor data
 
 In order to send data, the channel ID needs to be appended to the data topic.
 
