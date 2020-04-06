@@ -699,6 +699,7 @@ Cayenne currently supports the following LoRa networks. The list of networks tha
 *   [Senet](#lora-senet-network)
 *   [Stream](#lora-stream-network)
 *   [The Things Network](#lora-the-things-network)
+*   [Helium](#lora-helium)
 
 
 ## Actility
@@ -2243,3 +2244,79 @@ In order to add the device, Cayenne needs to know some information about the dev
 The Pulse has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/LoRa-dashboard.png" width="600" height="363" alt="LoRa dashboard"><br/><br/></p>
+
+
+## Helium
+
+**About Helium**
+
+The Helium Blockchain is building the largest LoRaWAN network within the US. Helium is the first peer-to-peer wireless network that provides secured and low-power Internet of Things communication. It's simple and easy to integrate devices with Helium and Cayenne. 
+
+**Using Helium with Cayenne**
+
+Cayenne makes it easy to use your LoRa device and Helium. You will need to:
+
+1. [Create / Log into your account on Helium Console](#lora-helium-create-account)
+2. [Register your device on Helium](#lora-helium-manually-register-device)
+3. [Create and configure Integration](#lora-helium-create-application)
+4. [Add your device to your Cayenne dashboard](#lora-helium-add-device-to-cayenne)
+
+We will walk you through these steps in the following sections.
+
+### Create or Log into your account
+
+To create your account, visit Helium Console <a href="https://console.helium.com/register" target="_blank">Register</a> page. From here you can enter in all the required details for creating your account. Or you can <a href="https://console.helium.com">Login</a> straight into your account.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1586188749/helium-console_hdmsii.png" width="330" height="350" alt="Console Registration"><br/><br/></p>
+
+**Helium Console**
+
+Once you have your account and have signed in, you will be redirected to the **Console** which is where you can configure your Devices and Integrations. 
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1586189238/helium-dashboard_gjgbrw.png" width="660" height="430" alt="Helium Dashboard"><br/><br/></p>
+
+### Setup a device
+
+*If you have an existing device you can skip to the Integration setup step.*
+
+Click on *Devices* to begin the device registration process. Under the Devices click on *Add Device* to register a new device. Helium console will generate a DevEUI, AppEUI and AppKey to use with your device. If you have an existing device not on helium network, you may enter such device information. 
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1586190102/helium-add-devices_esugl5.png" width="660" height="430" alt="Console screen with devices highlight"><br/><br/></p>
+
+### Create and configure Integration
+
+In order for data from your device to reach myDevices, you must configure an integration in the Helium Console. 
+
+To create an integration click on *Integrations*, then select myDevices Cayenne.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1586190317/mydevices_cayenne_integration_hwqyiy.png" width="660" height="415" alt="myDevices Cayenne Integration"><br/><br/></p>
+
+The next step is to name the integration
+
+Last, apply any optional Labels. For more information on Labels please visit the Labels guide.
+
+## Adding Your Device on myDevices Cayenne 
+
+Once you have a device added on Console and you have verified that packets are being received, you can then proceed to add the device on Cayenne.
+
+From the Cayenne dashboard, click **Add New** &gt; **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1586192145/CayenneAddNewDevice_zn0qjw.jpg" width="25%" alt="myDevices Cayenne Integration"><br/><br/></p>
+
+From the list of devices & widgets that appears, click **LoRa** and select the **Helium** Network option to view a list of Helium supported devices. 
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1586192145/CayenneLoraList_aoyocm.png" width="95%" height="95%" alt="myDevices Cayenne Integration"><br/><br/></p>
+
+Here we've selected the popular [STM32 B-L072Z-LRWAN1 ](https://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html)LoRaWAN development board. 
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1586192145/CayenneAddHeliumDevice_ry6ikb.png" width="95%" height="95%" alt="myDevices Cayenne Integration"><br/><br/></p>
+
+
+The only information you'll need once you've selected your device is to enter the **DevEUI**, which is found on your device details page on Console,  shown below.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1586192145/ConsoleUnderlineDevEui_iugs0x.png" width="660" height="250" alt="myDevices Cayenne Integration"><br/><br/></p>
+
+Once the device has been added to the dashboard and send a data uplink, the Cayenne dashboard will automatically create the widgets and values coming from the device. 
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1586192675/helium-st32_dtygou.png" width="100%" alt="myDevices Cayenne Integration"><br/><br/></p>
+
