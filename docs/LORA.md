@@ -2295,7 +2295,7 @@ The next step is to name the integration
 
 Last, apply any optional Labels. For more information on Labels please visit the Labels guide.
 
-## Adding Your Device on myDevices Cayenne 
+### Adding Your Device on myDevices Cayenne 
 
 Once you have a device added on Console and you have verified that packets are being received, you can then proceed to add the device on Cayenne.
 
