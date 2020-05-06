@@ -4,7 +4,6 @@
 
 
 ## Create Cayenne Account
-You can create an account from [Mobile](#downloads-mobile-apps) or online. Mobile is the easiest and fastest way, but instructions for online set up are below:
 
 On the <a href="https://cayenne.mydevices.com/cayenne/signup?_ga=1.165612799.1524412540.1457034675" target="_blank">Sign Up page</a>, enter your Name, Email and create a Password.
 
@@ -42,16 +41,6 @@ The next section covers getting started with a Raspberry Pi device.  If you’r
 
 
 ### Installing Cayenne
-
-**Installing from the Mobile App**
-
-<p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/J9zqvGWB5tM" frameborder="0" allowfullscreen></iframe></p>
-
-Before you can manage your Raspberry Pi device using the mobile app, you must install the Cayenne app onto your mobile device. Installing and using the mobile app is the easiest way to get started with Cayenne. If you need additional help on this step, refer to the video tutorial above.
-
-Visit the [Mobile App download page](#downloads-mobile-apps) to find the appropriate app store link for your device.
-
-After installing the Cayenne app onto your mobile device, you will be guided through finding and installing Cayenne on all of your Raspberry Pi devices.
 
 **Installing from the Web**
 

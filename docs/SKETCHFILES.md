@@ -472,7 +472,7 @@ In order to use Virtual pins, you will need to include some code in your sketch 
 
 Virtual pins are different than Digital and Analog Input/Output (I/O) pins. Cayenne lets you control any hardware connected to Digital and Analog pins without having to write any additional code.
 
-Virtual pins enable some very powerful customizations for your IoT projects because they allow you to interface with any device library. We use Virtual pins to display and send any data from your microcontroller to the Cayenne web dashboard and (coming soon) mobile apps. You can think about Virtual pins as channels for sending various types of data from your microcontroller to Cayenne. Remember, Virtual pins have no physical properties.
+Virtual pins enable some very powerful customizations for your IoT projects because they allow you to interface with any device library. We use Virtual pins to display and send any data from your microcontroller to the Cayenne web dashboard. You can think about Virtual pins as channels for sending various types of data from your microcontroller to Cayenne. Remember, Virtual pins have no physical properties.
 
 <p id="virtual-pin-data-types" class="anchor-link"></p>
 
