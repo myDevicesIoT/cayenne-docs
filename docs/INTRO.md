@@ -11,9 +11,7 @@ This guide will help you to understand how to get started using Cayenne and give
 
 Cayenne is the world’s first drag and drop IoT project builder that empowers developers, designers and engineers to quickly prototype and share their connected device projects. Cayenne was designed to help users create Internet of Things prototypes and then bring them to production.
 
-There are several major components in the platform:
-
-- **Cayenne Mobile Apps** – Remotely monitor and control your IoT projects from the Android or iOS Apps.
+The major component in the platform:
 
 - **Cayenne Online Dashboard** – Use customizable widgets to visualize data, set up rules, schedule events and more.
 
@@ -25,9 +23,7 @@ There are several major components in the platform:
 ### **Hardware**
 A Raspberry Pi or Arduino device connected to the Internet, or a LoRa device connected to a public or private gateway. The list of hardware that works with Cayenne will keep growing.
 
-### **Smartphone or Browser**
-Cayenne was designed to work from iOS and Android smartphones and popular browsers.
+### **Browser**
+Cayenne is designed to work on popular browsers.
 
-*TIP: Setup from the mobile device is the easiest way to get started.*
-
-\*LoRa for iOS and Android coming soon.
+\*Progressive Web Application(PWA) for iOS and Android coming soon.
