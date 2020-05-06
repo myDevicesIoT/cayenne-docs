@@ -325,11 +325,10 @@ Cayenne will send you notification alerts by email if selected.
 
 ## Remote Control
 
-Cayenne makes it easy to manage your connected devices from anywhere. Using the online dashboard or the Cayenne app, you can monitor device status, make changes to your devices, and control them as if you were right in front of them.
+Cayenne makes it easy to manage your connected devices from anywhere. Using the online dashboard, you can monitor device status, make changes to your devices, and control them as if you were right in front of them.
 
 
 * **Online Dashboard** – You can access the Cayenne online dashboard from anywhere using a web browser. No matter where you are, as long as you can access the dashboard, you can manage your devices.
-* **Mobile app** – The Cayenne app has been designed to give you an easy way to manage your devices from your mobile device, with the easy to use mobile experience that you expect.
 
  
 **Manually control device**
@@ -481,7 +480,7 @@ In addition to picking which day to view location data on, the Project map also 
 
 ## Custom Code
 
-Cayenne supports a number of sensors, actuators and extensions [natively](#supported-hardware). If you want to use a device that Cayenne does not currently support, or you want greater control over the behavior of your device, you will need to write some custom code. Using Cayenne, you can easily integrate your devices that use custom code, viewing and controlling them using the same great dashboard and mobile app support that Cayenne has for native devices.
+Cayenne supports a number of sensors, actuators and extensions [natively](#supported-hardware). If you want to use a device that Cayenne does not currently support, or you want greater control over the behavior of your device, you will need to write some custom code. Using Cayenne, you can easily integrate your devices that use custom code, viewing and controlling them using the same great dashboard support that Cayenne has for native devices.
 
 
 ### Arduino
