@@ -2632,6 +2632,14 @@ Connect ground from the Arduino to the VCNL4000 (GND).
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601114024/Arduino-VCNL4000-Step-2.png" width="757" height="601" class="noborder" alt="VCNL4000"></p>
 
+###### Step 3
+Connect the the SDA and SCL pins on the Arduino and VCNL4000.
+
+###### Step 4
+You’re done! You can now add the VCNL4000 to your dashboard.
+
+###### Step 5
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/VCNL4000/VCNL4000.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
 #### TSL2561
 
