@@ -5,7 +5,7 @@
 
 ## Create Cayenne Account
 
-On the <a href="https://cayenne.mydevices.com/cayenne/signup?_ga=1.165612799.1524412540.1457034675" target="_blank">Sign Up page</a>, enter your Name, Email and create a Password.
+On the <a href="https://accounts.mydevices.com/auth/realms/cayenne/protocol/openid-connect/registrations?client_id=cayenne-web-app&response_type=code&scope=openid%20email&redirect_uri=https%3A%2F%2Fcayenne.mydevices.com%2Fauth%2Fcallback&_ga=2.33665569.1495432927.1590403497-673384068.1590403497" target="_blank">Sign Up page</a>, enter your Name, Email and create a Password.
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170202160222/Cayenne-Sign-Up-page.png" width="600" height="386" alt="Sign up for Cayenne"></p>
 
@@ -112,7 +112,7 @@ You can check the current status of your sensor at any time by visiting the dash
 
 
 ### Actuators
-Cayenne works with light, motor, valve, relay and generic actuators that are connected to your Raspberry Pi devices. [View supported actuators](#supported-hardware-actuators)
+Cayenne works with light, motor, valve, relay and generic actuators that are connected to your Raspberry Pi devices. [View supported actuators](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-actuators)
 
 **EXAMPLE**: We will switch on an LED connected to your Raspberry Pi using Cayenne.
 
