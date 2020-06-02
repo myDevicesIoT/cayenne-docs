@@ -79,11 +79,11 @@ __This may take up to 10 minutes. Please be patient.__
 
 
 ### Sensors
-Cayenne works with temperature, luminosity, pressure/distance, motion and generic sensors connected to your Raspberry Pi devices. [View supported sensors](#supported-hardware-sensors)
+Cayenne works with temperature, luminosity, pressure/distance, motion and generic sensors connected to your Raspberry Pi devices. [View supported sensors](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors)
 
 **EXAMPLE**: Let’s add a BMP180 temperature and pressure sensor to see how easy it is to get started.
 
-Connect the BMP180 as shown here. [View BMP180 hardware tutorial](#supported-hardware-sensors-temperature-bmp180-rpi-tutorial)
+Connect the BMP180 as shown here. [View BMP180 hardware tutorial](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors-temperature-bmp180)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121157/RPI-BMP180-Step-4.png" width="600" height="193" alt="Cayenne Step 4"></p>
 
@@ -116,7 +116,7 @@ Cayenne works with light, motor, valve, relay and generic actuators that are con
 
 **EXAMPLE**: We will switch on an LED connected to your Raspberry Pi using Cayenne.
 
-Connect an LED to Channel 23 as shown here. [View LED tutorial](#supported-hardware-actuators-generic-digital-output-rpi-tutorial)
+Connect an LED to Channel 23 as shown here. [View LED tutorial](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-actuators-generic)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121207/RPI-Digital-Out-Led-Step-2.png" width="600" height="193" alt="LED Step 2"></p>
 
@@ -142,7 +142,7 @@ The LED widget has been added to your dashboard. Click the LED button in the das
 
 ### Extensions
 
-You can add analog, digital and PWM extensions to your Raspberry Pi. This allows you to add more sensors and actuators to your Raspberry Pi. [View supported extensions](#supported-hardware-extensions)
+You can add analog, digital and PWM extensions to your Raspberry Pi using Plugins. This allows you to add more sensors and actuators to your Raspberry Pi. [View supported extensions](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-extensions-analog-converter)
 
 <p id="arduino-arduino" class="anchor-link"></p>
 
@@ -169,7 +169,7 @@ Begin by verifying that your Arduino board and PC/Mac are correctly set up befor
 
 #### Connect the Arduino to the Internet
 
-Make sure your Arduino is connected to the Internet. On most Arduino boards, you will need to connect an [Ethernet or Wi-Fi shield](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) in order to connect your board to the Internet. Verify that you have a shield supported by Cayenne installed and working.
+Make sure your Arduino is connected to the Internet. On most Arduino boards, you will need to connect an [Ethernet or Wi-Fi shield](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) in order to connect your board to the Internet. Verify that you have a shield supported by Cayenne installed and working.
    
 #### Connect the Arduino to a PC/Mac
 
@@ -223,11 +223,11 @@ Then, verify that you have the correct **Port** selected for communicating with 
 
 After setting up your PC/Mac computer with the Arduino IDE and the Cayenne Library, you are ready to install Cayenne onto your device. Continue to Step 3 of the Arduino installation, where you will connect your board with Cayenne.
 
-On this screen, select the Arduino board that you are using from the list of [supported boards](#supported-hardware-microcontrollers-arduino). As you select your Arduino board, a list of connections appears below the board name. Select the connection type that you are using.
+On this screen, select the Arduino board that you are using from the list of [supported boards](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-microcontrollers). As you select your Arduino board, a list of connections appears below the board name. Select the connection type that you are using.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616135653/1st-Experience-Arduino-Step-3-board-expanded1.png" width="600" height="385" alt="Arduino Step 3"></p>
 
-Click on the Sketch button next to the connection you will be using and a popup will appear with the sketch file you will need when flashing your Arduino device. The sketch file will contain everything you need to connect your device to Cayenne, including your [authentication token](#sketch-files-finding-auth-token).
+Click on the Sketch button next to the connection you will be using and a popup will appear with the sketch file you will need when flashing your Arduino device. The sketch file will contain everything you need to connect your device to Cayenne, including your [MQTT CREDENTIALS](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files-customizing-sketch-files).
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616135934/1st-Experience-Arduino-Step-3-connection-example.png" width="600" height="385" alt="Arduino Step 3 Connection Example"></p>
 
@@ -248,11 +248,11 @@ If you run into any troubles, see [Troubleshooting](#getting-started-arduino-tro
 
 ### Sensors
 
-Cayenne works with any sensor that is connected to an Arduino. We’ve created <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples" target="_blank">sketch files</a> for the various temperature, luminosity, pressure, proximity, motion and generic sensor models.
+Cayenne works with any sensor that is connected to an Arduino. We’ve created <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors" target="_blank">sketch files</a> for the various temperature, luminosity, pressure, proximity, motion and generic sensor models.
 
 **EXAMPLE:** Let’s add temperature sensor TMP36 to see how easy it is.
 
-Connect the TMP36 as shown here. [View TMP36 hardware tutorial](#supported-hardware-sensors-temperature-tmp36-arduino-tutorial)
+Connect the TMP36 as shown here. [View TMP36 hardware tutorial](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors-temperature-tmp36-arduino-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121144/Arduino_TMP36_step3_bb.png" width="600" height="380" alt="Arduino TMP36 Step 3"></p>
 
@@ -271,7 +271,7 @@ A popup will appear showing the TMP36 sketch file. Copy the sketch file contents
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151040/Add-Device-Arduino-TMP36-Sketch-file2.png" width="600" height="386" alt="Arduino Add Device TMP361 Sketch File"></p>
 
-Paste the TMP36 sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **authentication token** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](#sketch-files-using-sketch-files)
+Paste the TMP36 sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **MQTT CREDENTIALS** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](https://developers.mydevices.com/cayenne/docs/sketch-files/)
 
 In this case, we are using the default Virtual Pin 1 which is already defined in the sketch file, so the sketch file should be OK to use as is. After verifying the sketch file looks good, select **Sketch** > **Upload** to upload the sketch file to your device.
 
@@ -286,11 +286,11 @@ In the Cayenne dashboard, you can now click the **Step 2: Add Sensor** button an
 
 ### Actuators
 
-Cayenne works with actuators that are connected to an Arduino.  We’ve created <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Actuators" target="_blank">sketch files</a> for light, motor, valve, relay and generic actuators.
+Cayenne works with actuators that are connected to an Arduino.  We’ve created <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators" target="_blank">sketch files</a> for light, motor, valve, relay and generic actuators.
 
 **EXAMPLE:** Let’s add a luminosity actuator widget.
 
-For this example, attach a LED to a PWM-enabled Pin on your Arduino Uno. Let’s use D6 in this example. [View Luminosity hardware tutorial](#supported-hardware-actuators-light-luminosity-arduino-tutorial)
+For this example, attach a LED to a PWM-enabled Pin on your Arduino Uno. Let’s use D6 in this example. [View Luminosity hardware tutorial](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-actuators-light-luminosity-arduino-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601112652/Arduino-Luminosity-Step-2.png" width="600" height="307" alt="Arduino Luminosity Step 2"></p>
 
@@ -309,7 +309,7 @@ A popup will appear showing the Luminosity sketch file. Copy the sketch file con
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617152613/Add-Device-Arduino-Luminosity-sketch-file2.png" width="600" height="386" alt="Arduino Luminosity Sketch File"></p>
 
-Paste the Luminosity sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **authentication token** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](#sketch-files-using-sketch-files)
+Paste the Luminosity sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **MQTT CREDENTIAL** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](https://developers.mydevices.com/cayenne/docs/sketch-files/)
 
 In this case, the example sketch file assumes that we used Digital Pin 3 to connect our Luminosity actuator, but we used Digital Pin 6 instead. We will need to update the sketch file to correct the pin. Find and update the **LED_DIGITAL_PIN** definition so that it points at pin 6.
 
@@ -332,11 +332,11 @@ In the Cayenne dashboard, you can now click the **Step 2: Add Actuator** button 
 
 We’ve integrated some specific sensors and actuators, but there are thousands of sensors, actuators and other devices that get connected to Arduino boards. Custom widgets allow you to send and receive data from any device that is connected to your Arduino board to Cayenne.
 
-[Cayenne Custom Widgets Documentation](#custom-widgets)
+[Cayenne Custom Widgets Documentation](https://developers.mydevices.com/cayenne/docs/custom-widgets/)
 
 **EXAMPLE:** Let’s see how easy it is to use a Custom Widget in Cayenne. We will switch on an LED connected to your Raspberry Pi using a custom Button widget.
 
-Connect an LED to Digital Pin 8 as shown here. [View light switch tutorial](http://www.cayenne-mydevices.com/CayenneStaging/docs#arduino-light-switch)
+Connect an LED to Digital Pin 8 as shown here. [View light switch tutorial](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-actuators-light-light-switch-arduino-tutorial)
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601105118/Arduino_LED_step2_bb.png" width="600" height="317" alt="Arduino LED Step 2"></p>
 
@@ -363,7 +363,7 @@ The button widget gets added to your dashboard.
 
 Push the button in your online dashboard to turn the LED on and off. You’re now ready to start using Cayenne for your IoT projects.
 
-Check out other example sketches at our <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples" target="_blank">Cayenne Github</a>. Feel free to experiment and combine different examples together to create your own amazing projects.
+Check out other example sketches at our <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples" target="_blank">Cayenne Github</a>. Feel free to experiment and combine different examples together to create your own amazing projects.
 
 <p id="troubleshooting-arduino" class="anchor-link"></p>
 
@@ -374,12 +374,12 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
 
 1. **Make sure your Arduino is connected to the Internet**
 
-   On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have [a shield supported by Cayenne](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) installed and working.
+   On most Arduino boards, you will need to connect an Ethernet or Wi-Fi shield in order to connect your board to the Internet. Verify that you have [a shield supported by Cayenne](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) installed and working.
 
    *TIP: Double check that the board connection #include in your sketch file is correct for the shield that you are using. The Cayenne sketch file examples assume that you have a W5100 connected. If this line does not match your connection, your board will fail to connect to Cayenne.*
       
    ```
-   #include <CayenneEthernet.h>
+   #include <CayenneMQTTEthernet.h>
   
    ```
    <br/>
@@ -438,10 +438,10 @@ In case of public LoRaWAN network, make sure your devices are powered on and the
 
 Need a gateway? Here are some helpful links to purchasing and configuring a gateway based on which network you’ll be using.
 
-*   [Setup gateway with Actility](#lora-actility-setup-gateway-device)
-*   [Setup gateway with Loriot](#lora-loriot-network-setup-gateway-device)
-*   [Setup gateway with Senet](#lora-senet-network-setup-gateway-device)
-*   [Setup gateway with OrbiWise](#lora-orbiwise-network-setup-gateway-device)
+*   [Setup gateway with Actility](https://developers.mydevices.com/cayenne/docs/lora/#lora-actility-setup-gateway-device)
+*   [Setup gateway with Loriot](https://developers.mydevices.com/cayenne/docs/lora/#lora-loriot-network-setup-gateway-device)
+*   [Setup gateway with Senet](https://developers.mydevices.com/cayenne/docs/lora/#lora-senet-network-setup-gateway-device)
+*   [Setup gateway with OrbiWise](https://developers.mydevices.com/cayenne/docs/lora/#lora-orbiwise-network-setup-gateway-device)
 
 
 **2\. Make sure you have your LoRaWAN account information**
@@ -450,15 +450,15 @@ If your device has not been previously registered with your LoRaWAN network prov
 
 Need an account? Here are some helpful links to creating an account based on which network you’ll be using.
 
-*   [Creating Actility account](#lora-actility-create-account)
-*   [Creating Loriot account](#lora-loriot-network-create-account)
-*   [Creating Senet account](#lora-senet-network-create-account)
-*   [Creating OrbiWise account](#lora-orbiwise-network-create-account)
+*   [Creating Actility account](https://developers.mydevices.com/cayenne/docs/lora/#lora-actility-create-account)
+*   [Creating Loriot account](https://developers.mydevices.com/cayenne/docs/lora/#lora-loriot-network-create-account)
+*   [Creating Senet account](https://developers.mydevices.com/cayenne/docs/lora/#lora-senet-network-create-account)
+*   [Creating OrbiWise account](https://developers.mydevices.com/cayenne/docs/lora/#lora-orbiwise-network-create-account)
 
 
 **3\. Make sure you have the information on your devices being connected**
 
-In order to connect Cayenne to your LoRa technology device, you will need to know the DEVEUI for your device. [What’s this?](#lora-about-deveuis)
+In order to connect Cayenne to your LoRa technology device, you will need to know the DEVEUI for your device. [What’s this?](https://developers.mydevices.com/cayenne/docs/lora/#lora-about-deveuis)
 
 In addition to adding previously activated devices, Cayenne is capable of activating new devices on some LoRaWAN provider networks. If you will be activating your device on the network for the first time, you will also need additional information for the activation process, such as your Appkey or AppEUI. The information required will depend upon which activation mode you select for your device and which network you will be using.
 
@@ -481,7 +481,7 @@ After selecting the LoRaWAN Network and Device that you want to add, you will th
 
 When adding the LoRa device, the settings, supported activation modes and account information required will depend upon which network is selected. Click on the appropriate link below to jump to the section on your network, each of which contains a detailed walkthrough that will help you add your LoRa device to Cayenne.
 
-*   [Using the Actility Network](#lora-actility)
-*   [Using the Loriot Network](#lora-loriot-network)
-*   [Using the Senet Network](#lora-senet-network)
-*   [Using the OrbiWise Network](#lora-orbiwise-network)
+*   [Using the Actility Network](https://developers.mydevices.com/cayenne/docs/lora/#lora-actility)
+*   [Using the Loriot Network](https://developers.mydevices.com/cayenne/docs/lora/#lora-loriot-network)
+*   [Using the Senet Network](https://developers.mydevices.com/cayenne/docs/lora/#lora-senet-network)
+*   [Using the OrbiWise Network](https://developers.mydevices.com/cayenne/docs/lora/#lora-orbiwise-network)
