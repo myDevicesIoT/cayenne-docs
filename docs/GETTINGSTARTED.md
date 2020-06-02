@@ -112,7 +112,7 @@ You can check the current status of your sensor at any time by visiting the dash
 
 
 ### Actuators
-Cayenne works with light, motor, valve, relay and generic actuators that are connected to your Raspberry Pi devices. [View supported actuators](#supported-hardware-actuators)
+Cayenne works with light, motor, valve, relay and generic actuators that are connected to your Raspberry Pi devices. [View supported actuators](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-actuators)
 
 **EXAMPLE**: We will switch on an LED connected to your Raspberry Pi using Cayenne.
 
