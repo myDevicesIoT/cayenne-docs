@@ -77,8 +77,8 @@ The Hardware Submission Form will guide you through entering in all information 
 
 To begin the submission process, you will need to first select how your product will connect with Cayenne. Your answer here will help steer the Hardware Submission Form in asking for the correct information during this process.
 
-- **LoRa:** Select this option if your product is a [LoRa technology device](#lora). During the [Setup and Configuration](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration) portion of the submission process the form will ask you for more details [related to LoRa](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-lora-technology-device).
-- **MQTT:**  Select this option if your product will communicate with Cayenne using [MQTT](#bring-your-own-thing-api-overview-about-mqtt), such as Cayenne’s [Bring Your Own Thing API](#bring-your-own-thing-api). During the [Setup and Configuration](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration) portion of the submission process the form will ask you for more details [related to MQTT](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-mqtt).
+- **LoRa:** Select this option if your product is a [LoRa technology device](#lora). During the [Setup and Configuration](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration) portion of the submission process the form will ask you for more details [related to LoRa](https://developers.mydevices.com/cayenne/docs/iot-ready-program/#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-lora-technology-device).
+- **MQTT:**  Select this option if your product will communicate with Cayenne using [MQTT](https://developers.mydevices.com/cayenne/docs/iot-ready-program/#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-mqtt), such as Cayenne’s [Bring Your Own Thing API](https://developers.mydevices.com/cayenne/docs/cayenne-mqtt-api/). During the [Setup and Configuration](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration) portion of the submission process the form will ask you for more details [related to MQTT](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-mqtt).
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224131405/iot-ready-program-hardware-submission-step-1-connection-protocol.png" width="660" height="415" alt="Step 1 - Connection Protocol"><br/><br/></p>
 
@@ -92,7 +92,7 @@ On the *Device Info* page you will enter in non-technical details for your produ
 - **Device Name:** The name of the device, as it will be shown to users when searching for and selecting your hardware.
 - **Device Photo Image:** This is the image that users see when selecting your hardware from the list in Cayenne.
 
-  _NOTE: This image needs to be **600x600 pixels**. You may wish to refer to the Add Device process in Cayenne or the [Supported Hardware](#supported-hardware) documentation for examples of existing device images._
+  _NOTE: This image needs to be **600x600 pixels**. You may wish to refer to the Add Device process in Cayenne or the [Supported Hardware](https://developers.mydevices.com/cayenne/docs/supported-hardware/) documentation for examples of existing device images._
 
 - **Datasheet, User Guides and Other Documentation:** Upload any datasheets, user guides, tutorials or other general documentation that you feel would be helpful for the Cayenne team to refer to on your hardware.
 
@@ -112,14 +112,14 @@ _TIP: During the process you may leave certain portions here unanswered (such as
 The type of information asked for here will depend upon how your device will connect to Cayenne.
 
 - [LoRa technology device](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-lora-technology-device): Start a new hardware submission for a device that uses LoRa technology.
-- [Device using MQTT](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-mqtt): Start a new hardware submission for a device that will communicate with Cayenne using [MQTT](#bring-your-own-thing-api-overview-about-mqtt), including Cayenne’s [Bring Your Own Thing API](#bring-your-own-thing-api).
+- [Device using MQTT](#iot-ready-program-submitting-hardware-requests-hardware-submission-form-setup-and-configuration-mqtt): Start a new hardware submission for a device that will communicate with Cayenne using [MQTT](https://developers.mydevices.com/cayenne/docs/cayenne-mqtt-api/), including Cayenne’s [Bring Your Own Thing API](https://developers.mydevices.com/cayenne/docs/cayenne-mqtt-api/).
 
 ##### LoRa technology device
 
 <p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170224132026/iot-ready-program-hardware-submission-step-3-setup-and-config-lora-device.png" width="660" height="416" alt="Setup & Config screen showing LoRa fields"><br/><br/></p>
 
 - **Support LoRaWAN™ Bands:** Select which LoRaWAN band frequencies supported by your device.
-- **Device Unique Identifier:** Select whether your device supports a user-configurable [DevEUI](#lora-about-deveuis). Certain development (e.g. prototype) devices will be configurable, meaning you can modify the device’s unique identifier. If the end user cannot do so, select the **Factory Set** option.
+- **Device Unique Identifier:** Select whether your device supports a user-configurable [DevEUI](https://developers.mydevices.com/cayenne/docs/lora/#lora-about-deveuis). Certain development (e.g. prototype) devices will be configurable, meaning you can modify the device’s unique identifier. If the end user cannot do so, select the **Factory Set** option.
 - **LoRaWAN™ Activation:** Specify how your device connects to the LoRa network server.
 - **Available Configuration Apps:** If the device uses an app to program or configure the device, please enter in information on the platforms and programs used to do so.
 - **Sensor Data Types:** (If your device has embedded sensors) From the list of supported data types shown, select the list of data types that the device sends. By default you will see a list of the most commonly used data types. If you want the full list, click on the **All** link to view them all. To make finding data types easier, you can easily search for data types here.
@@ -134,9 +134,9 @@ The type of information asked for here will depend upon how your device will con
 
 From the available list of codecs, choose one:
 
-- **Cayenne LPP:** Select this option if your device will use Cayenne’s own [generic Low Power Payload](#lora-cayenne-low-power-payload).
+- **Cayenne LPP:** Select this option if your device will use Cayenne’s own [generic Low Power Payload](https://developers.mydevices.com/cayenne/docs/lora/#lora-cayenne-low-power-payload).
 
-  *TIP: We strongly recommend that you use Cayenne’s own LPP as it is the easiest way to get your LoRa technology device integrated with Cayenne. You can find all the information you need for using this payload in [Cayenne Low Power Payload](#lora-cayenne-low-power-payload).*
+  *TIP: We strongly recommend that you use Cayenne’s own LPP as it is the easiest way to get your LoRa technology device integrated with Cayenne. You can find all the information you need for using this payload in [Cayenne Low Power Payload](https://developers.mydevices.com/cayenne/docs/lora/#lora-cayenne-low-power-payload).*
 
 - **One of our already supported codecs:** If Cayenne already includes a codec for your payload format, you can select it from the list of available codecs.
 - **Use your own payload format**: If Cayenne does not currently support your device’s payload, select the **Custom** option. After doing so, you will be need to upload documentation that fully describes your payload format. The Cayenne team will then use this information to implement a payload codec that supports your format in Cayenne.
@@ -149,7 +149,7 @@ From the available list of codecs, choose one:
 
 - **Sample Code Library:** Please specify the location (such as GitHub repository link) to where we can find sample code for connecting the device. It should give the user everything that they need to quickly and easily connect the device with Cayenne using MQTT.
 
-  *TIP: Because the device will use MQTT, you can refer to our [Bring Your Own Thing API](#bring-your-own-thing-api) which gives you all the information you need to test connecting your device directly with Cayenne. Using the BYOT API and MQTT, you can easily verify your hardware is working with Cayenne prior to submitting your hardware request!*
+  *TIP: Because the device will use MQTT, you can refer to our [Bring Your Own Thing API](https://developers.mydevices.com/cayenne/docs/cayenne-mqtt-api/) which gives you all the information you need to test connecting your device directly with Cayenne. Using the BYOT API and MQTT, you can easily verify your hardware is working with Cayenne prior to submitting your hardware request!*
 
   *Note: The code you provide will be displayed directly to the user in a popup window when they click on the example code button shown when adding your device in the Cayenne UI. This example code should be something that a user can copy & paste and use to easily connect that device to Cayenne.*
 
