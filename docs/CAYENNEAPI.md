@@ -10,7 +10,7 @@ The Cayenne Cloud API allows for interacting and creating applications using the
 
 ### Create a Cayenne account
 
-In order to use the Cayenne Cloud API, you will need to first create a Cayenne account. Visit the <a href="http://www.cayenne-mydevices.com/" target="_blank">Cayenne website</a> and create an account.
+In order to use the Cayenne Cloud API, you will need to first create a Cayenne account. Visit the <a href="https://developers.mydevices.com/cayenne/features/" target="_blank">Cayenne website</a> and create an account.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/get-started-for-free.png" width="660" height="438" alt="get started for free"><br/><br/></p>
 
@@ -20,7 +20,7 @@ In order to use the Cayenne Cloud API, you will need to first create a Cayenne a
 
 Before you can use the Cayenne Cloud API you will need to obtain your **App Key** and **App Secret**. In order for your custom application to successfully connect with Cayenne you will need to provide these keys when using the Cayenne Cloud API.
 
-*TIP: For more information how these keys are used, see the [Authentication section](#cayenne-cloud-api-http-api-reference-using-the-http-api-authenticating) of the HTTP API documentation.*
+*TIP: For more information how these keys are used, see the [Authentication section](https://developers.mydevices.com/cayenne/docs/cayenne-api/#cayenne-cloud-api-deprecated-http-api-reference-authentication-users-applications) of the HTTP API documentation.*
 
 To obtain your keys, log into your account and select **Create App**. The *App Credentials* page that appears contains your keys. Copy & paste the **App Key** and **App Secret** into your code.
 

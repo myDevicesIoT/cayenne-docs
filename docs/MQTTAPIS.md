@@ -10,7 +10,7 @@ The Cayenne MQTT API is used to connect any device that you have with the Cayenn
 
 ### About MQTT
 
-MQTT is a lightweight messaging protocol designed to be used on top of TCP/IP. It uses an event and message (*publish-subscribe*) methodology that was designed especially for connections where small footprints, unreliable and/or limited bandwidth connections are found. This type of pattern is especially suited for IoT devices that get deployed in the field and often run on battery power and on constrained networks. With MQTT, the publish-subscribe pattern makes use of a broker that is responsible for distributing messages to clients. [Clients](#bring-your-own-thing-api-mqtt-clients) can subscribe to varying levels of messages, depending upon how much or what kind of data they are interested.
+MQTT is a lightweight messaging protocol designed to be used on top of TCP/IP. It uses an event and message (*publish-subscribe*) methodology that was designed especially for connections where small footprints, unreliable and/or limited bandwidth connections are found. This type of pattern is especially suited for IoT devices that get deployed in the field and often run on battery power and on constrained networks. With MQTT, the publish-subscribe pattern makes use of a broker that is responsible for distributing messages to clients.Clients can subscribe to varying levels of messages, depending upon how much or what kind of data they are interested.
 
 
 ### Using MQTT with Cayenne
@@ -21,7 +21,7 @@ Cayenne MQTT is straightforward and easy to use, offering several different ways
 
 #### Option 1: Use the Cayenne MQTT Libraries
 
-Using one of our libraries is the easiest way to get started using MQTT with Cayenne. The Cayenne libraries bundle an [MQTT client](#bring-your-own-thing-api-mqtt-clients) and all of the code examples you'll need to get your board connected and using MQTT with Cayenne.
+Using one of our libraries is the easiest way to get started using MQTT with Cayenne. The Cayenne libraries bundle an MQTT clientand all of the code examples you'll need to get your board connected and using MQTT with Cayenne.
 
 We have prepared walkthroughs and libraries for some of the most common toolchain/IDE combinations to help get you up and running as quickly as possible. If you would like to use [one of our libraries](#cayenne-mqtt-api-libraries), the easiest way to get started is to jump to a section below and read through the information and guides provided there.
 
@@ -82,13 +82,13 @@ To interact with an MQTT broker you’ll need an MQTT client. Here’s a quick l
 
 <a href="http://www.mqttfx.org/" target="_blank">MQTT.fx</a>: A JavaFX based MQTT Client.
 
-<a href="https://chrome.google.com/webstore/detail/mqttlens/" target="_blank">MQTT Lens</a>: A Google Chrome extension that connects to an MQTT broker and is able to publish and subscribe to MQTT topics.
+<a href="https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en" target="_blank">MQTT Lens</a>: A Google Chrome extension that connects to an MQTT broker and is able to publish and subscribe to MQTT topics.
 
 <a href="https://github.com/ckrey/MQTTInspector" target="_blank">MQTT Inspector</a>: A general MQTT testing app for iOS (iPhone and iPad).
 
 ## Libraries
 
-Using one of our libraries is the easiest way to get started using MQTT with Cayenne. The Cayenne libraries bundle an [MQTT client](#cayenne-mqtt-api-mqtt-clients) and all of the code examples you'll need to get your board connected and using MQTT with Cayenne.
+Using one of our libraries is the easiest way to get started using MQTT with Cayenne. The Cayenne libraries bundle an MQTT client and all of the code examples you'll need to get your board connected and using MQTT with Cayenne.
 
 **Cayenne Arduino MQTT**
 
@@ -124,7 +124,7 @@ Includes everything you need for using Cayenne and MQTT in your project that use
 
 **Create a Cayenne account**
 
-In order to use the Cayenne MQTT API, you will need to first create a Cayenne account. Visit the <a href="http://www.cayenne-mydevices.com/" target="_blank">Cayenne website</a> and create an account.
+In order to use the Cayenne MQTT API, you will need to first create a Cayenne account. Visit the <a href="https://developers.mydevices.com/cayenne/features/" target="_blank">Cayenne website</a> and create an account.
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/get-started-for-free.png" width="660" height="438" alt="get started for free"><br/><br/></p>
 
@@ -136,17 +136,17 @@ After creating your account, Cayenne will ask you which type of device you wish 
 
 ## Using Arduino MQTT
 
-The Cayenne Arduino MQTT library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board. In this section we will walk you through setting up the Arduino IDE software so that you can write code that uses the Arduino MQTT library. We will then walk through an example of using the library, setting up and connecting an [Arduino Uno board](#supported-hardware-microcontrollers-arduino-arduino-uno), adding a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36).
+The Cayenne Arduino MQTT library gives you everything you need to quickly get your board connected with Cayenne using MQTT and the Arduino IDE. Using the Arduino IDE is a fast and easy way to program your Arduino board. In this section we will walk you through setting up the Arduino IDE software so that you can write code that uses the Arduino MQTT library. We will then walk through an example of using the library, setting up and connecting an [Arduino Uno board](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-microcontrollers-arduino-arduino-uno), adding a [TMP36 Temperature Sensor](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors-temperature-tmp36).
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/3kCD5S7N6zE" frameborder="0" allowfullscreen></iframe></p>
 
 ### Install Arduino IDE
 
-To use the Cayenne Arduino MQTT Library, the Arduino IDE software should be installed. Go to https://www.arduino.cc/en/Main/Software to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
+To use the Cayenne Arduino MQTT Library, the Arduino IDE software should be installed. Go to <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE</a>  to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
 
 ### Add MQTT Library to Arduino IDE
 
-The Cayenne Arduino MQTT Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards using MQTT. Cayenne sketch files can be [combined with other sketch files](#sketch-files-using-sketch-files-combining-sketch-files) for your IoT projects.
+The Cayenne Arduino MQTT Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards using MQTT. Cayenne sketch files can be [combined with other sketch files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files-combining-sketch-files) for your IoT projects.
 
 The Cayenne Arduino MQTT Library is available directly from the Arduino IDE Libraries list. To install the library, select **Sketch** > **Include library** > **Manage Libraries**. The *Library Manager* dialog will appear. From here, search for the **Cayenne MQTT** library and install it.
  
@@ -177,7 +177,7 @@ After setting up your PC/Mac computer with the Arduino IDE and the Cayenne MQTT 
 
 Open the **File** > **Examples** > **CayenneMQTT** > **Connections** menu and select the appropriate sketch file example for the connection type you will be using. In our case, we’ll be using the W5100 shield, so we select the **EthernetShieldW5100** example. Once selected, the example sketch file will open in the Arduino IDE.
 
-*TIP: If you aren’t sure which connection type you have, you can refer to [Arduino Ethernet and WiFi Shields](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield) for more information.*
+*TIP: If you aren’t sure which connection type you have, you can refer to [Arduino Ethernet and WiFi Shields](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shieldd) for more information.*
 
 <p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/arduino-ide-connect-example-loaded.png" width="660" height="596" alt="arduino-ide-connect-example-loaded"><br/><br/></p>
 
@@ -203,9 +203,9 @@ Once you have double-checked the sketch file, select **Sketch** > **Upload** to 
 
 ### Send sensor data
 
-Once our board is connected to our Cayenne dashboard, we can send some sensor data and get our very first widget added. For this example, we’ll be using a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36). Begin by making sure that your TMP36 sensor is connected to the Arduino board. If you need help connecting this sensor, you can refer to the [TMP36 Arduino Tutorial](#supported-hardware-sensors-temperature-tmp36-arduino-tutorial). As in the tutorial, our TMP36 sensor will be connected to the Arduino’s Analog Pin 0.
+Once our board is connected to our Cayenne dashboard, we can send some sensor data and get our very first widget added. For this example, we’ll be using a [TMP36 Temperature Sensor](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors-temperature-tmp36). Begin by making sure that your TMP36 sensor is connected to the Arduino board. If you need help connecting this sensor, you can refer to the [TMP36 Arduino Tutorial](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors-temperature-tmp36-arduino-tutorial). As in the tutorial, our TMP36 sensor will be connected to the Arduino’s Analog Pin 0.
 
-*TIP: You can refer to this <a href="https://github.com/myDevicesIoT/cayenne-docs/blob/staging/examples/MQTT_EthernetShieldW5100_with_TMP36/MQTT_EthernetShieldW5100_with_TMP36.ino" target="_blank">example file</a> that includes all of the code used in our example for reading and sending our sensor’s data to Cayenne.*
+*TIP: You can refer to this <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/TMP36/TMP36.ino" target="_blank">example file</a> that includes all of the code used in our example for reading and sending our sensor’s data to Cayenne.*
 
 #### Reading the TMP36 sensor data
 
@@ -236,7 +236,7 @@ The Cayenne mbed library will give you everything you need to quickly get your b
 
 **Example: using the library**
 
-In this section we will walk through setting up and connecting a <a href="https://developer.mbed.org/platforms/ST-Nucleo-F446RE/" target="_blank">Nucleo board with WiFi shield</a>. After writing code to connect our board, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of the Nucleo's onboard LED from our dashboard.
+In this section we will walk through setting up and connecting a <a href="https://developer.mbed.org/platforms/ST-Nucleo-F446RE/" target="_blank">Nucleo board with WiFi shield</a>. After writing code to connect our board, we will demonstrate sending sensor data to our dashboard by sending values from a connected [TMP36 Temperature sensor](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors-temperature-tmp36). Finally, we will write code to allow us to control the state of the Nucleo's onboard LED from our dashboard.
 
 To accomplish this goal, we will cover the following topics:
 
@@ -354,7 +354,7 @@ After you drag & drop the binary into the device, the Nucleo board will automati
 
 ### Send sensor data
 
-Once our board is connected to our Cayenne dashboard, we can send some sensor data and get our very first widget added. For this example, we’ll be using a [TMP36 Temperature Sensor](#supported-hardware-sensors-temperature-tmp36). Begin by making sure that your sensor is connected to the board.
+Once our board is connected to our Cayenne dashboard, we can send some sensor data and get our very first widget added. For this example, we’ll be using a [TMP36 Temperature Sensor](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors-temperature-tmp36). Begin by making sure that your sensor is connected to the board.
 
 *TIP: There are many ways to read and send sensor data, we’re only showing you one such example here. Depending upon what device you are using and what goals you have in mind, you may choose a very different way. As a reminder, you can refer to this <a href="https://developer.mbed.org/teams/myDevicesIoT/code/Cayenne-X-NUCLEO-IDW01M1-TMP36/" target="_blank">example project on mbed</a> that includes the code mentioned in this section.*
 
@@ -489,7 +489,7 @@ The Cayenne C++ library will give you everything you need to quickly get your bo
 
 **Example: using the library**
 
-In this section we will walk through setting up and connecting a [Raspberry Pi 3 Model B](#supported-hardware-single-board-computers-raspberry-pi-model-b) to Cayenne using MQTT. Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the C++ library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending example sensor data to our dashboard. Finally, we will examine code that handles reacting to a user changing the status of an example Light actuator widget on our dashboard.
+In this section we will walk through setting up and connecting a [Raspberry Pi 3 Model B](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-single-board-computers-raspberry-pi-model-b) to Cayenne using MQTT. Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the C++ library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending example sensor data to our dashboard. Finally, we will examine code that handles reacting to a user changing the status of an example Light actuator widget on our dashboard.
 
 To accomplish this goal, we will cover the following topics:
 
@@ -633,7 +633,7 @@ Once our board comes online, it will send two test data points to our dashboard,
 
 Now that we have our board connected to Cayenne and it has successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. When users change the state of actuators using the dashboard widgets, Cayenne publishes *COMMAND* messages. By subscring to these messages, we will be informed when our actuator's state was changed. We can then take action in response, such as telling a connected Light to turn on or off.
 
-For this example, we will setup a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. We will then take a look at the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimpleSubscribe.cpp" target="_blank">SimpleSubscribe</a>* code example that subscribes to data from Cayenne so that we know when our actuator's state was changed on the dashboard.
+For this example, we will setup a [Button widget](https://developers.mydevices.com/cayenne/docs/custom-widgets/#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. We will then take a look at the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-CPP/blob/master/src/Platform/Linux/examples/SimpleSubscribe.cpp" target="_blank">SimpleSubscribe</a>* code example that subscribes to data from Cayenne so that we know when our actuator's state was changed on the dashboard.
 
 ##### Add dashboard widget
 
@@ -707,7 +707,7 @@ The Cayenne Embedded C library will give you everything you need to quickly get 
 
 **Example: using the library**
 
-In this section we will walk through setting up and connecting a [Raspberry Pi 3 Model B](#supported-hardware-single-board-computers-raspberry-pi-model-b) to Cayenne using MQTT. Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the Embedded C library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending example sensor data to our dashboard. Finally, we will examine code that handles reacting to a user changing the status of an example Light actuator widget on our dashboard.
+In this section we will walk through setting up and connecting a [Raspberry Pi 3 Model B](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-single-board-computers-raspberry-pi-model-b) to Cayenne using MQTT. Since this is a Raspberry Pi device that uses the Linux OS, we will make use of a Linux-based compiler. We will cover topics related to extending the Embedded C library to support our board on Linux. After covering supporting and connecting our board to our Cayenne dashboard, we will demonstrate sending example sensor data to our dashboard. Finally, we will examine code that handles reacting to a user changing the status of an example Light actuator widget on our dashboard.
 
 To accomplish this goal, we will cover the following topics:
 
@@ -850,7 +850,7 @@ Once our board comes online, it will send two test data points to our dashboard,
 
 Now that we have our board connected to Cayenne and it has successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. When users change the state of actuators using the dashboard widgets, Cayenne publishes *COMMAND* messages. By subscring to these messages, we will be informed when our actuator's state was changed. We can then take action in response, such as telling a connected Light to turn on or off.
 
-For this example, we will setup a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. We will then take a look at the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimpleSubscribe.c" target="_blank">SimpleSubscribe</a>* code example that subscribes to data from Cayenne so that we know when our actuator's state was changed on the dashboard.
+For this example, we will setup a [Button widget](https://developers.mydevices.com/cayenne/docs/custom-widgets/#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. We will then take a look at the *<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-C/blob/master/src/Platform/Linux/examples/SimpleSubscribe.c" target="_blank">SimpleSubscribe</a>* code example that subscribes to data from Cayenne so that we know when our actuator's state was changed on the dashboard.
 
 ##### Add dashboard widget
 
@@ -961,7 +961,7 @@ Now that our profile is setup, we can connect to Cayenne. To do so, click on the
 
 Now that we have a connection to the Cayenne MQTT server, let's put our connection to use by simulating sending sensor data to our dashboard. For our example, we will simulate having a Temperature sensor connected by publishing a sensor reading up to our dashboard. To do this, switch to MQTT.fx and make sure the *Publish* tab is selected. From here we can enter in the MQTT details to publish sample  sensor data to Cayenne.
 
-To publish sensor data to Cayenne using MQTT, we refer to the [MQTT Messaging Topics - Send sensor data](#cayenne-mqtt-api-mqtt-messaging-topics-send-sensor-data) section of the docs. There, we find the details on which MQTT call to make. According to the docs, Sending sensor data expects:
+To publish sensor data to Cayenne using MQTT, we refer to the [MQTT Messaging Topics - Send sensor data](https://developers.mydevices.com/cayenne/docs/cayenne-mqtt-api/#cayenne-mqtt-api-mqtt-messaging-topics-send-sensor-data-as-json) section of the docs. There, we find the details on which MQTT call to make. According to the docs, Sending sensor data expects:
 
 ```
 v1/username/things/clientID/data/channel
@@ -1006,7 +1006,7 @@ After entering in the MQTT details for publishing our sample sensor data, click 
 
 Now that we have our connection to Cayenne and  successfully sent test data to our dashboard, let’s take a look at how easy it is to add an actuator. When users change the state of actuators using the dashboard widgets, Cayenne publishes *COMMAND* messages. By subscring to these messages, you will be informed when our actuator's state was changed.
 
-For this example, we will setup a [Button widget](#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. In doing so, we will also cover the steps that Cayenne expects well behaved clients to perform when interacting with actuators via MQTT.
+For this example, we will setup a [Button widget](https://developers.mydevices.com/cayenne/docs/custom-widgets/#custom-widgets-button) on our dashboard and use it to send actuator commands to an imaginary actuator connected to our board. In doing so, we will also cover the steps that Cayenne expects well behaved clients to perform when interacting with actuators via MQTT.
 
 #### Add dashboard widget
 

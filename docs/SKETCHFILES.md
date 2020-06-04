@@ -12,7 +12,7 @@ Programs written using Arduino Software IDE for installing on Arduino and simila
 
 
 ## Cayenne Arduino Library
-The Cayenne Arduino library is a collection of example sketch files and libraries for connecting and sending data to and from your Arduino hardware. <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples" target="_blank">View Cayenne Arduino Library</a>
+The Cayenne Arduino library is a collection of example sketch files and libraries for connecting and sending data to and from your Arduino hardware. <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">View Cayenne Arduino Library</a>
 
 <p id="using-sketch-files-arduino" class="anchor-link"></p>
 
@@ -28,7 +28,7 @@ The easiest way to get the sketch files you need is to use the **Sketch File** b
 
 **Through Cayenne GitHub**
 
-You can find and browse the complete list of example sketch files located on the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples" target="_blank">Cayenne GitHub</a>.
+You can find and browse the complete list of example sketch files located on the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples" target="_blank">Cayenne GitHub</a>.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617160351/Github-root.png" width="600" height="300" alt="Using Sketch Files"><br/><br/></p>
 
@@ -68,7 +68,7 @@ If you need help, refer to [Finding your authentication token](#sketch-files-fin
 
 Many sketch files will include default pin assignments for those pins used when reading/writing to the device. If you have connected your device in a different manner than mentioned in the example, you will need to customize these lines. You will find helpful information on using the example file within each sketch file.
  
-For example, let’s look at the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Actuators/Luminosity/Luminosity.ino" target="_blank">**Luminosity** sketch file</a>. The sketch file begings with the following code:<br/>
+For example, let’s look at the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Actuators/Luminosity/Luminosity.ino" target="_blank">**Luminosity** sketch file</a>. The sketch file begings with the following code:<br/>
 
 ```
 #define CAYENNE_PRINT Serial // Comment this out to disable prints and save space
@@ -94,7 +94,7 @@ Once you’ve looked over your sketch file and updated all values, use **Sketch 
 
 ### Combining Sketch Files
 
-Cayenne provides various example sketch files for [supported hardware](#supported-hardware). These sketch files give you a working example of how to get that device up and running quickly. These examples only outline the addition of a single sensor, actuator or widget. You will almost certainly want to include support for multiple sensors in your sketch file. To do so, you will need to properly merge two or more sketch files together.
+Cayenne provides various example sketch files for [supported hardware](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-microcontrollers). These sketch files give you a working example of how to get that device up and running quickly. These examples only outline the addition of a single sensor, actuator or widget. You will almost certainly want to include support for multiple sensors in your sketch file. To do so, you will need to properly merge two or more sketch files together.
 
 Let’s start by taking a look at the example sketch file for connecting a TMP36 temperature sensor and go over each section to get a better understanding of what goes on in an typical Cayenne sketch file.
 
@@ -208,14 +208,14 @@ Cayenne.celsiusWrite(VIRTUAL_PIN, tmpSensor.getCelsius());
 
 Let’s walk through combing several Cayenne example sketch files. For the purposes of this tutorial we will:
 
-1. Start with an example sketch file for an Arduino board connecting to Cayenne with [W5500 ethernet shield](#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield).
-2. We will then add an [Analog distance sensor](#supported-hardware-sensors-proximitydistance).
-3. And then we will add a [TMP36 temperature sensor](#supported-hardware-sensors-temperature-tmp36).
+1. Start with an example sketch file for an Arduino board connecting to Cayenne with [W5500 ethernet shield](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-microcontrollers-arduino-arduino-ethernet-wifi-shield).
+2. We will then add an [Analog distance sensor](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors-proximitydistance-analog-distance-arduino-tutorial).
+3. And then we will add a [TMP36 temperature sensor](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors-temperature-tmp36-arduino-tutorial).
 4. Finally, we will add yet another TMP36 so that you can see how combining multiple objects/functions works.
 
 **Arduino board + W5500 Ethernet Shield**
 
-When adding our Arduino board to Cayenne, you will flash your Arduino device with the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/InternetConnections/EthernetShieldW5500/EthernetShieldW5500.ino" target="_blank">W5500 example sketch file</a>.
+When adding our Arduino board to Cayenne, you will flash your Arduino device with the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/EthernetShieldW5500/EthernetShieldW5500.ino" target="_blank">W5500 example sketch file</a>.
 
 Your sketch file will start out looking similar to this:
 
@@ -223,7 +223,7 @@ Your sketch file will start out looking similar to this:
 
 **W5500 + Analog Distance Sensor**
 
-Now let’s add an Analog Distance sensor using the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/AnalogDistanceSensor/AnalogDistanceSensor.ino" target="_blank">Analog Distance sensor sketch file</a>. Comparing these sketch files, we see some things to merge.
+Now let’s add an Analog Distance sensor using the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/AnalogDistanceSensor/AnalogDistanceSensor.ino" target="_blank">Analog Distance sensor sketch file</a>. Comparing these sketch files, we see some things to merge.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160629141902/SketchFileMerge3-W5500-vs-AnalogDistance.png" width="600" height="400" alt="Sketch File"><br/><br/></p>
 
@@ -256,7 +256,7 @@ Here is our updated sketch file for supporting a W5500 + an Analog Distance sens
 
 
 **W5500 + Analog Distance Sensor + TMP36** <br/>
-Now let’s add a TMP36 temperature sensor. We will use the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/Sensors/TMP36/TMP36.ino" target="_blank">TMP36 example sketch file</a>. When we compare our sketch file against the TMP36 one, we see a lot more differences that we need to examine.
+Now let’s add a TMP36 temperature sensor. We will use the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/TMP36/TMP36.ino" target="_blank">TMP36 example sketch file</a>. When we compare our sketch file against the TMP36 one, we see a lot more differences that we need to examine.
 
 1. The TMP36 requires a temperature library to work. We need to merge that library into our sketch file. Copy the following line to our sketch file:
    ```
@@ -387,64 +387,71 @@ Your Auth Token can be found on this settings screen.
 
 ## Code examples (Sketch)
 
-**<a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Actuators" target="_blank">Actuators</a>**
+**<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Actuators" target="_blank">Actuators</a>**
 
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Actuators/GenericDigitalOutput/GenericDigitalOutput.ino" target="_blank">GenericDigitalOutput</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Actuators/GenericPWMOutput/GenericPWMOutput.ino" target="_blank">GenericPWMOutput</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Actuators/LightSwitch/LightSwitch.ino" target="_blank">LightSwitch</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Actuators/Luminosity/Luminosity.ino" target="_blank">Luminosity</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Actuators/MotorSwitch/MotorSwitch.ino" target="_blank">MotorSwitch</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Actuators/RelaySwitch/RelaySwitch.ino" target="_blank">RelaySwitch</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Actuators/ServoMotor/ServoMotor.ino" target="_blank">ServoMotor</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Actuators/ValveSwitch/ValveSwitch.ino" target="_blank">ValveSwitch</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Actuators/GenericDigitalOutput/GenericDigitalOutput.ino" target="_blank">GenericDigitalOutput</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Actuators/GenericPWMOutput/GenericPWMOutput.ino" target="_blank">GenericPWMOutput</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Actuators/LightSwitch/LightSwitch.ino" target="_blank">LightSwitch</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Actuators/Luminosity/Luminosity.ino" target="_blank">Luminosity</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Actuators/MotorSwitch/MotorSwitch.ino" target="_blank">MotorSwitch</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Actuators/RelaySwitch/RelaySwitch.ino" target="_blank">RelaySwitch</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Actuators/ServoMotor/ServoMotor.ino" target="_blank">ServoMotor</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Actuators/ValveSwitch/ValveSwitch.ino" target="_blank">ValveSwitch</a>
 <br/><br/>
 
-**<a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Basics" target="_blank">Basics</a>**
+**<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Basics" target="_blank">Basics</a>**
 
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Basics/ReceiveData/ReceiveData.ino" target="_blank">ReceiveData</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Basics/SendData/SendData.ino" target="_blank">SendData</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Basics/SendDataOnRequest/SendDataOnRequest.ino" target="_blank">SendDataOnRequest</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Basics/SyncAll/SyncAll.ino" target="_blank">SyncAll</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Basics/SyncData/SyncData.ino" target="_blank">SyncData</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Basics/ReceiveData/ReceiveData.ino" target="_blank">ReceiveData</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Basics/SendData/SendData.ino" target="_blank">SendData</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Basics/SendDataOnTimer/SendDataOnTimer.ino" target="_blank">SendDataOnTimer</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Basics/SendDataOnTrigger/SendDataOnTrigger.ino" target="_blank">SendDataOnTrigger</a>
 <br/><br/>
 
-**<a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Connections" target="_blank">Connections</a>**
+**<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Connections" target="_blank">Connections</a>**
 
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Connections/ArduinoEthernet/ArduinoEthernet.ino" target="_blank">ArduinoEthernet</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Connections/ArduinoEthernetManual/ArduinoEthernetManual.ino" target="_blank">ArduinoEthernetManual</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Connections/ArduinoEthernetW5200/ArduinoEthernetW5200.ino" target="_blank">ArduinoEthernetW5200</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Connections/ArduinoEthernetW5500/ArduinoEthernetW5500.ino" target="_blank">ArduinoEthernetW5500</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Connections/ArduinoSerialUSB/ArduinoSerialUSB.ino" target="_blank">ArduinoSerialUSB</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Connections/ArduinoWiFi/ArduinoWiFi.ino" target="_blank">ArduinoWiFi</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Connections/ArduinoWiFi101/ArduinoWiFi101.ino" target="_blank">ArduinoWiFi101</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Connections/ArduinoYun/ArduinoYun.ino" target="_blank">ArduinoYun</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/EthernetShieldW5100/EthernetShieldW5100.ino" target="_blank">ArduinoEthernetShieldW5100</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/ManualConnection/ManualConnection.ino" target="_blank">ManualConnection</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/EthernetShieldW5200/EthernetShieldW5200.ino" target="_blank">ArduinoEthernetW5200</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/EthernetShieldW5500/EthernetShieldW5500.ino" target="_blank">ArduinoEthernetW5500</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/SerialUSBConnection/SerialUSBConnection.ino" target="_blank">ArduinoSerialUSB</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/WiFiShield/WiFiShield.ino" target="_blank">ArduinoWiFiShield</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/WiFi101Shield/WiFi101Shield.ino" target="_blank">ArduinoWiFi101</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/ArduinoYun/ArduinoYun.ino" target="_blank">ArduinoYun</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/ArduinoYun/ArduinoYun.ino" target="_blank">ArduinoYun</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/ESP32/ESP32.ino" target="_blank">ESP32</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/ESP8266/ESP8266.ino" target="_blank">ESP8266</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/ESP8266Shield/ESP8266Shield.ino" target="_blank">ESP8266Shield</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/GSM/GSM.ino" target="_blank">GSM</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/MKR1000/MKR1000.ino" target="_blank">MKR1000</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/MKR1010/MKR1010.ino" target="_blank">MKR1010</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Connections/UnoWifiRev2/UnoWifiRev2.ino" target="_blank">UnoWifiRev2</a>
 <br/><br/>
 
-**<a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/CustomWidgets" target="_blank">Custom Widgets</a>**
+**<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/CustomWidgets" target="_blank">Custom Widgets</a>**
 
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">2StateWidget</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/ButtonWidget/ButtonWidget.ino" target="_blank">ButtonWidget</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/GaugeWidget/GaugeWidget.ino" target="_blank">GaugeWidget</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/LineChartWidget/LineChartWidget.ino" target="_blank">LineChartWidget</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/SliderWidget/SliderWidget.ino" target="_blank">SliderWidget</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/ValueWidget/ValueWidget.ino" target="_blank">ValueWidget</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">2StateWidget</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/ButtonWidget/ButtonWidget.ino" target="_blank">ButtonWidget</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/GaugeWidget/GaugeWidget.ino" target="_blank">GaugeWidget</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/LineChartWidget/LineChartWidget.ino" target="_blank">LineChartWidget</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/SliderWidget/SliderWidget.ino" target="_blank">SliderWidget</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/ValueWidget/ValueWidget.ino" target="_blank">ValueWidget</a>
 <br/><br/>
 
-**<a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/tree/master/Sensors" target="_blank">Sensors</a>**
+**<a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples/Sensors" target="_blank">Sensors</a>**
 
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/AnalogDistanceSensor/AnalogDistanceSensor.ino" target="_blank">AnalogDistanceSensor</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/AnalogLoadPressureSensor/AnalogLoadPressureSensor.ino" target="_blank">AnalogLoadPressureSensor</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/BMP180/BMP180.ino" target="_blank">BMP180</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/DS18B20/DS18B20.ino" target="_blank">DS18B20</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/DigitalMotionSensor/DigitalMotionSensor.ino" target="_blank">DigitalMotionSensor</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/GenericAnalogInput/GenericAnalogInput.ino" target="_blank">GenericAnalogInput</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/GenericDigitalInput/GenericDigitalInput.ino" target="_blank">GenericDigitalInput</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/Photoresistor/Photoresistor.ino" target="_blank">Photoresistor</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/TMP102/TMP102.ino" target="_blank">TMP102</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/TMP36/TMP36.ino" target="_blank">TMP36</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/TSL2561/TSL2561.ino" target="_blank">TSL2561</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/Thermistor/Thermistor.ino" target="_blank">Thermistor</a>
-* <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/Sensors/VCNL4000/VCNL4000.ino" target="_blank">VCNL4000</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/AnalogDistanceSensor/AnalogDistanceSensor.ino" target="_blank">AnalogDistanceSensor</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/AnalogLoadPressureSensor/AnalogLoadPressureSensor.ino" target="_blank">AnalogLoadPressureSensor</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/BMP180/BMP180.ino" target="_blank">BMP180</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/DS18B20/DS18B20.ino" target="_blank">DS18B20</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/DigitalMotionSensor/DigitalMotionSensor.ino" target="_blank">DigitalMotionSensor</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/GenericDigitalInput/GenericDigitalInput.ino" target="_blank">GenericAnalogInput</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/GenericAnalogInput/GenericAnalogInput.ino" target="_blank">GenericDigitalInput</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/Photoresistor/Photoresistor.ino" target="_blank">Photoresistor</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/TMP102/TMP102.ino" target="_blank">TMP102</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/TMP36/TMP36.ino" target="_blank">TMP36</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/TSL2561/TSL2561.ino" target="_blank">TSL2561</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/Thermistor/Thermistor.ino" target="_blank">Thermistor</a>
+* <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/VCNL4000/VCNL4000.ino" target="_blank">VCNL4000</a>
 
 <p id="using-analog-vs-virtual-pins" class="anchor-link"></p>
 
@@ -455,7 +462,7 @@ Your Auth Token can be found on this settings screen.
 When reading Analog devices with the Arduino microcontroller, the Arduino’s built in analog to digital converter (ADC) will be used. The value returned by the ADC is a 10-bit value (0 – 1023) that is proportional to the amount of voltage being applied to the pin. It is important to keep this in mind when examining the data returned by your device. For example, if you connect a Temperature sensor to an analog pin, it will not automatically return a temperature reading as you may expect. Instead, additional formulas would be needed to convert the voltage reading returned from the ADC into meaningful temperature data for the sensor.
 
 **NOTE:** If you use Cayenne’s built-in library of devices, this conversion can be performed automatically!
-[View list of supported sensors](#supported-hardware-sensors)
+[View list of supported sensors](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors)
 
 **Arduino Virtual pins** <br/>
 If you wish convert your analog reading to a more meaningful data point, or you wish to change the way your data is formatted, you can instead use a Virtual pin.
@@ -463,7 +470,7 @@ If you wish convert your analog reading to a more meaningful data point, or you 
 Using a Virtual pin, you have complete control over the data is returned to Cayenne. You can apply whatever formatting or data conversions are needed and when viewing the data in Cayenne, it will be in the exact format that you’ve specified. For example, you can perform an Analog read of your temperature sensor, convert the data to a Temperature value in Celsius, and return the data to Cayenne. Now when you view your sensor in Cayenne, you will see Temperature data reported exactly as you expected.
 
 In order to use Virtual pins, you will need to include some code in your sketch file to handle reading and formatting for your sensor. Cayenne makes this easy by providing various example sketch files and information that you can use to get started.
-[View sketch file information](http://www.cayenne-mydevices.com/CayenneStaging/docs/#code-examples-sketch)
+[View sketch file information](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files)
 
 <p id="virtual-pins-microcontrollers" class="anchor-link"></p>
 
@@ -554,4 +561,4 @@ Cayenne.syncVirtual(V1);
 
 ## Using IDE
 
-To use Cayenne’s library of sketch files, we recommend using Arduino IDE or similar IDE for installing on your Arduinio hardware. [View using Cayenne Arduino Library](#getting-started-arduino-arduino-setup-using-cayenne-arduino-library)
+To use Cayenne’s library of sketch files, we recommend using Arduino IDE or similar IDE for installing on your Arduinio hardware. [View using Cayenne Arduino Library](https://developers.mydevices.com/cayenne/docs/getting-started/#getting-started-arduino-arduino-setup-using-cayenne-arduino-library)

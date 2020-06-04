@@ -9,7 +9,7 @@ The Cayenne dashboard (online and mobile) is the main screen where you can setup
 
 From the Cayenne dashboard you can:
 
-+ Add [Raspberry Pis](#supported-hardware-single-board-computers-raspberry-pi), [Arduino boards](#supported-hardware-microcontrollers-arduino), [LoRa devices](#supported-hardware-lora-devices), [sensors](#supported-hardware-sensors), [actuators](#supported-hardware-actuators) and [extensions](#supported-hardware-extensions).
++ Add [Raspberry Pis](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-single-board-computers-raspberry-pi), [Arduino boards](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-microcontrollers-arduino), [LoRa devices](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-lora-devices), [sensors](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors), [actuators](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-actuators) and [extensions](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-extensions).
 + Fully customize your dashboard with [drag-and-drop widgets](#features-dashboard-drag-and-drop-widgets).
 + View [device and sensor data history](#features-visualization-data-history).
 + Setup [automatic triggers](#features-triggers) and receive [notification alerts](#features-alerts).
@@ -333,16 +333,16 @@ Cayenne makes it easy to manage your connected devices from anywhere. Using the 
  
 **Manually control device**
 
-Cayenne makes it easy to add widgets to your device and project dashboards for quickly changing the state of your device. Using Actuators or Custom Widgets, you can easily manually take action on your device. For example, you can create a custom [Button widget](#custom-widgets-button) that lets you easily toggle your light on/off. Or you can add a [Servo Motor](#supported-hardware-actuators-motor-servo-motor) that lets you adjust a motor using a [Slider widget](#custom-widgets-slider).
+Cayenne makes it easy to add widgets to your device and project dashboards for quickly changing the state of your device. Using Actuators or Custom Widgets, you can easily manually take action on your device. For example, you can create a custom [Button widget](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-actuators-generic-digital-output) that lets you easily toggle your light on/off. Or you can add a [Servo Motor](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-actuators-motor-servo-motor) that lets you adjust a motor using a [Slider widget](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-actuators-generic-pwm-output).
 
-Cayenne has a growing [list of widgets available](#custom-widgets) to help you manually control a device’s state.
+Cayenne has a growing [list of widgets available](https://developers.mydevices.com/cayenne/docs/custom-widgets/) to help you manually control a device’s state.
 
-* [Button](#custom-widgets-button): Change device state from ON/OFF or HIGH/LOW. For example, turning a light on/off.
-* [Dial Knob](#custom-widgets-dial-knob): Change values between MIN and MAX, such as the temperature of a thermostat or volume control. Knob widgets can also be used to just display the current value of a knob that is being turned by a user, such as potentiometer or physical knob located on a board.
-* [Joystick](#custom-widgets-joystick): This controls a device, such as a video camera in a parking lot or a robot. It controls movements on X and Y axis in 4 directions.
-* [Lighting](#custom-widgets-lighting): Changes the color, adjusts the luminosity and has ability to turn on or off a light, LED or light source.
-* [Slider](#custom-widgets-slider): Change the value of the connected device, such as dimming a light.
-* [Switch](#custom-widgets-switch): Used to change between 2 states, such as switching between power voltage levels used. Similar to a button.
+* [Button](https://developers.mydevices.com/cayenne/docs/custom-widgets/#custom-widgets-button): Change device state from ON/OFF or HIGH/LOW. For example, turning a light on/off.
+* [Dial Knob](https://developers.mydevices.com/cayenne/docs/custom-widgets/#custom-widgets-dial-knob): Change values between MIN and MAX, such as the temperature of a thermostat or volume control. Knob widgets can also be used to just display the current value of a knob that is being turned by a user, such as potentiometer or physical knob located on a board.
+* [Joystick](https://developers.mydevices.com/cayenne/docs/custom-widgets/#custom-widgets-joystick): This controls a device, such as a video camera in a parking lot or a robot. It controls movements on X and Y axis in 4 directions.
+* [Lighting](https://developers.mydevices.com/cayenne/docs/custom-widgets/#custom-widgets-lighting): Changes the color, adjusts the luminosity and has ability to turn on or off a light, LED or light source.
+* [Slider](https://developers.mydevices.com/cayenne/docs/custom-widgets/#custom-widgets-slider): Change the value of the connected device, such as dimming a light.
+* [Switch](https://developers.mydevices.com/cayenne/docs/custom-widgets/#custom-widgets-switch): Used to change between 2 states, such as switching between power voltage levels used. Similar to a button.
  
 
 **Scheduling actions**
@@ -480,19 +480,19 @@ In addition to picking which day to view location data on, the Project map also 
 
 ## Custom Code
 
-Cayenne supports a number of sensors, actuators and extensions [natively](#supported-hardware). If you want to use a device that Cayenne does not currently support, or you want greater control over the behavior of your device, you will need to write some custom code. Using Cayenne, you can easily integrate your devices that use custom code, viewing and controlling them using the same great dashboard support that Cayenne has for native devices.
+Cayenne supports a number of sensors, actuators and extensions [natively](https://developers.mydevices.com/cayenne/docs/supported-hardware/). If you want to use a device that Cayenne does not currently support, or you want greater control over the behavior of your device, you will need to write some custom code. Using Cayenne, you can easily integrate your devices that use custom code, viewing and controlling them using the same great dashboard support that Cayenne has for native devices.
 
 
 ### Arduino
 
 
-Writing custom code for devices connected to an Arduino is accomplished using sketch files. By writing your code in the sketch file, you have complete control over how your data is sent to Cayenne. [See Using Sketch Files](#sketch-files-using-sketch-files)
+Writing custom code for devices connected to an Arduino is accomplished using sketch files. By writing your code in the sketch file, you have complete control over how your data is sent to Cayenne. [See Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/)
 
 If the sensor that you want to customize is already supported by Cayenne, you can start with the example sketch file for that sensor and make minor changes before uploading it to your board. If you want greater control, or you need to add something new that Cayenne does not currently support, you can use a Custom Widget and add whatever custom code you need to the example sketch files for Custom Widgets.
 
-*TIP: Your custom code should communicate with Cayenne using [Virtual Pins](#sketch-files-virtual-pins).*
+*TIP: Your custom code should communicate with Cayenne using [Virtual Pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins).*
 
-The example sketch files for each component can be found by following the Add Device/Widget process in the Cayenne dashboard, or you can visit the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/tree/master/examples" target="_blank">Cayenne github</a>.
+The example sketch files for each component can be found by following the Add Device/Widget process in the Cayenne dashboard, or you can visit the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">Cayenne github</a>.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151040/Add-Device-Arduino-TMP36-Sketch-file2.png" width="600" height="386" alt="Arduino Custom Code"><br/><br/></p>
 

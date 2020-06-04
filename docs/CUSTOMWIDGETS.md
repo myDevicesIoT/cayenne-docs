@@ -88,13 +88,13 @@ Select your method of connectivity; is your sensor connected to Digital pins, or
    - **Digital** <br/>
 A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
    - **Virtual** <br/>
-[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Icon** <br/>
 Select an Icon to be used for the widget. For example, a temperature sensor could a thermometer Icon.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the 2 State code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">2 State Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the 2 State code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">2 State Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -136,7 +136,7 @@ Select your method of connectivity; is your sensor connected to Digital pins, or
    - **Digital** <br/>
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget.
@@ -145,7 +145,7 @@ Select the Data type and the Units to be used for the widget.
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Accelerometer code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Arduino Accelerometer Widget sketch file</a>. See Using Sketch Files for more information on customizing and using sketch files.
+If you haven’t already uploaded the Accelerometer code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Arduino Accelerometer Widget sketch file</a>. See Using Sketch Files for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -186,13 +186,13 @@ Select your method of connectivity; is your sensor connected to Digital pins, or
 A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
 
    - **Virtual** <br/>
-[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a battery may have percent remaining or a measure of the power level.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Battery code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Arduino Accelerometer Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Battery code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Arduino Accelerometer Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -234,13 +234,13 @@ Select your method of connectivity; will the button widget be connected to a dig
 You can control the actuator state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Icon** <br/>
 Select an Icon to be used for the widget. For example, a light switch might have a light bulb icon.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Button code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/ButtonWidget/ButtonWidget.ino" target="_blank">Button Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Button code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/ButtonWidget/ButtonWidget.ino" target="_blank">Button Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -316,7 +316,7 @@ Select your method of connectivity; will the button widget be connected to a dig
 You can control the actuator state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a light dimmer might have Data type of voltage and Units of percentage.
@@ -325,7 +325,7 @@ Select the Data type and the Units to be used for the widget. For example, a lig
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Dial Knob code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Dial Knob Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Dial Knob code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Dial Knob Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -362,7 +362,7 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-analog-vs-virtual-pins)
 
    
    - **Analog** <br/>
@@ -372,7 +372,7 @@ Select your method of connectivity; is your widget connected to Analog pins, Dig
 A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a disk space widget could have a Data type of storage and Units of kilobytes.
@@ -381,7 +381,7 @@ Select the Data type and the Units to be used for the widget. For example, a dis
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Donut code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Donut Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Donut code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Donut Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
@@ -418,12 +418,12 @@ Give your sensor a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
+Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-analog-vs-virtual-pins)
 
    - **Analog** <br/>
 If you’re trying to read data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a temperature monitor could have a Data type of temperature and Units of Celsius.
@@ -432,7 +432,7 @@ Select the Data type and the Units to be used for the widget. For example, a tem
 Input the minimum and maximum values that you’d like the gauge widget to use when displaying the range of data for your sensor. This can help improve the visualization of your sensor data as it displays on the gauge widget.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Gauge code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/blob/master/CustomWidgets/GaugeWidget/GaugeWidget.ino" target="_blank">Gauge Widget sketch file</a>. See [Using Sketch Files](http://www.cayenne-mydevices.com/CayenneStaging/docs/#using-sketch-files-arduino) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Gauge code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/GaugeWidget/GaugeWidget.ino" target="_blank">Gauge Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.
@@ -506,7 +506,7 @@ Select your method of connectivity; will the gyroscope use the Digital pins, or 
    - **Digital** <br/>
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit**<br/>
 Select the Data type and the Units to be used for the widget.
@@ -515,7 +515,7 @@ Select the Data type and the Units to be used for the widget.
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File**<br/>
-If you haven’t already uploaded the Gyroscope code for this widget to your Arduino, click the Sketch File button to open the <a href="" target="_blank">Gyroscope Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Gyroscope code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/" target="_blank">Gyroscope Widget sketch file</a>. See [Using Sketch Files](https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**</br>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.<br/><br/>
@@ -555,10 +555,10 @@ Select your method of connectivity; will the gyroscope use the Digital pins, or 
    - **Digital** <br/>
 You can control the widget state (high / low) through the digital pin on the Arduino.<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Step 1: Sketch File**<br/>
-If you haven’t already uploaded the Intrusion code for this widget to your Arduino, click the Sketch File button to open the <a href="" target="_blank">Intrusion Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Intrusion code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">Intrusion Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**</br>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.<br/><br/>
@@ -598,7 +598,7 @@ Select your method of connectivity; will the joystick widget use the physical PW
    - **Digital** <br/>
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).<br/><br/>
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a light dimmer might have Data type of voltage and Units of percentage.
@@ -607,7 +607,7 @@ Select the Data type and the Units to be used for the widget. For example, a lig
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Joystick code for this widget to your Arduino, click the Sketch File button to open the <a href="" target="_blank">Joystick Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Joystick code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">Joystick Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**</br>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.<br/><br/>
@@ -646,10 +646,10 @@ Select your Arduino device.
 Select the Virtual pin that your LCD will use when displaying values.
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the LCD code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon)LCD Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the LCD code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon)LCD Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**</br>
 After filling in each of the fields for your widget, click **Add Widget** and the widget will be added to your dashboard.<br/><br/>
@@ -691,7 +691,7 @@ Select your method of connectivity; will the lighting widget use the physical PW
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a light dimmer might have Data type of voltage and Units of percentage.
@@ -700,7 +700,7 @@ Select the Data type and the Units to be used for the widget. For example, a lig
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Lighting code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Lighting Widget sketch file</a>. See Using [Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Lighting code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Lighting Widget sketch file</a>. See Using [Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -736,12 +736,12 @@ Give your sensor a name.
 Select your Arduino device.
 
 **Connectivity** <br/>
-Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
+Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-analog-vs-virtual-pins)
 
    - **Analog** <br/>
 If you’re trying to read data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a temperature chart could have a Data type of temperature and Units of Celsius.
 
@@ -749,7 +749,7 @@ Select the Data type and the Units to be used for the widget. For example, a tem
 Input the minimum and maximum values that you’d like the line graph widget to use when displaying the range of data for your sensor. This can help improve the visualization of your sensor data as it displays on the line graph.
 
 **Step 1: Sketch File**
-If you haven’t already uploaded the Line Chart code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/LineChartWidget/LineChartWidget.ino" target="_blank">Line Chart Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Line Chart code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/LineChartWidget/LineChartWidget.ino" target="_blank">Line Chart Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget**
 After filling in each of the fields for your widget, click the Add Widget button and the widget will be added to your dashboard.<br/><br/>
@@ -791,7 +791,7 @@ Select your method of connectivity; will the lighting widget use the physical PW
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget.
@@ -800,7 +800,7 @@ Select the Data type and the Units to be used for the widget.
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Magnetometer code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Magnetometer sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Magnetometer code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Magnetometer sketch file</a>. See Using [Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -842,13 +842,13 @@ Select the Virtual pin that your map will use for location values.
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a map of GPS devices might have Data type of Location and Units of GPS coordinates.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Map code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Map Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Map code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Map Widget sketch file</a>. See Using [Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -884,19 +884,19 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a liquid level widget could have a Data type of Liquid and Units of Gallons.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Meter code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Meter Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Meter code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Meter Widget sketch file</a>. See Using [Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -932,16 +932,16 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 You can control the widget state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Motion Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">(Coming Soon) Motion Widget sketch file</a>. See Using [Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -977,19 +977,19 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 You can control the widget state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit**
 Select the Data type and the Units to be used for the widget.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Proximity Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">(Coming Soon) Proximity Widget sketch file</a>. See Using [Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1025,13 +1025,13 @@ Give your widget a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 You can control the widget state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a voltage adjustment widget might have Data type of Voltage and Units of volts.
@@ -1040,7 +1040,7 @@ Select the Data type and the Units to be used for the widget. For example, a vol
 Input the minimum and maximum values that you’d like the widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Rotary Knob Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/" target="_blank">(Coming Soon) Rotary Knob Widget sketch file</a>. See Using [Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1076,13 +1076,13 @@ Give your actuator a name.
 Select your Arduino device.
 
 **I/O** <br/>
-Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
+Select your method of connectivity; is your widget connected to Analog pins, Digital pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-analog-vs-virtual-pins)
 
    - **Digital** <br/>
 A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
 
    - **Virtual** <br/>
-[Virtual pins](#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a cell strength widget might have Data type of Signal Strength and Units of dBM.
@@ -1091,7 +1091,7 @@ Select the Data type and the Units to be used for the widget. For example, a cel
 Input the minimum and maximum values that you’d like the signal widget to use when adjusting the range of data for your widget.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/CayenneArduinoSamples/" target="_blank">(Coming Soon) Signal Widget sketch file</a>. See Using [Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Motion code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Signal Widget sketch file</a>. See Using [Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1133,7 +1133,7 @@ Select your method of connectivity; will the slider widget use the physical PWM 
 The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Data, Unit** <br/>
 Select the Data type and the Units to be used for the widget. For example, a light dimmer might have Data type of voltage and Units of percentage.
@@ -1142,7 +1142,7 @@ Select the Data type and the Units to be used for the widget. For example, a lig
 Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Slider code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/SliderWidget/SliderWidget.ino" target="_blank">Slider Widget sketch file</a>. See [Using Sketch Files](#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Slider code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/SliderWidget/SliderWidget.ino" target="_blank">Slider Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#using-sketch-files-arduino target=) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1184,13 +1184,13 @@ Select your method of connectivity; will the button widget be connected to a dig
 You can control the actuator state (high / low) through the digital pin on the Arduino.
 
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 
 **Off Label/On Label** <br/>
 Specify the labels to be shown on the widget for the On and Off state names.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Switch code for this widget to your Arduino, click the **Sketch File button** to open the <a href="" target="_blank">Switch Widget sketch file</a>. [See Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Switch code for this widget to your Arduino, click the **Sketch File button** to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">Switch Widget sketch file</a>. [See Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.<br/><br/>
@@ -1262,17 +1262,17 @@ Give your sensor a name.
 Select your Arduino device.
 
 **Connectivity** <br/>
-Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](#sketch-files-using-analog-vs-virtual-pins)
+Select your method of connectivity; is your sensor connected to Analog pins, or will it make use of the Cayenne Virtual pins? [Using Analog vs Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-analog-vs-virtual-pins)
 
    - **Analog** <br/>
 If you’re trying to read data from an analog sensor, the Arduino may have several analog inputs that can be used. Simply connect your analog sensor to one of the analog pins on the Arduino. Make sure you select the correct corresponding pin when adding a widget for your analog sensor.
    - **Virtual** <br/>
-[Virtual pins](http://www.cayenne-mydevices.com/CayenneStaging/docs/#virtual-pins-microcontrollers) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
 **Data, Unit, Icon** <br/>
 Select the Data type, the Units, and the Icon to be used for the widget. For example, a temperature sensor could have a Data type of temperature, Units of Celsius, and a thermometer Icon.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Value code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-Arduino-Library/blob/master/examples/CustomWidgets/ValueWidget/ValueWidget.ino" target="_blank">Value Widget sketch file</a>. See [Using Sketch Files](#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Value code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/ValueWidget/ValueWidget.ino" target="_blank">Value Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the Add Widget button and the widget will be added to your dashboard.

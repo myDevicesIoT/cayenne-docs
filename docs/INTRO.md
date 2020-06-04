@@ -1,6 +1,6 @@
 # Introduction
 
-This guide will help you to understand how to get started using Cayenne and give you the most comprehensive overview of all the features. If you want to jump straight into playing with Cayenne, check out [Getting Started](#getting-started).<br>
+This guide will help you to understand how to get started using Cayenne and give you the most comprehensive overview of all the features. If you want to jump straight into playing with Cayenne, check out [Getting Started](https://developers.mydevices.com/cayenne/docs/getting-started/).<br>
 
 <p style="text-align:center"><iframe width="480" height="270" src="https://www.youtube.com/embed/4PoYotGZ-I8" frameborder="0" allowfullscreen></iframe></p>
 
