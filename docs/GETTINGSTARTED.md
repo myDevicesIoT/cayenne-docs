@@ -7,7 +7,7 @@
 
 On the <a href="https://accounts.mydevices.com/auth/realms/cayenne/protocol/openid-connect/registrations?client_id=cayenne-web-app&response_type=code&scope=openid%20email&redirect_uri=https%3A%2F%2Fcayenne.mydevices.com%2Fauth%2Fcallback&_ga=2.33665569.1495432927.1590403497-673384068.1590403497" target="_blank">Sign Up page</a>, enter your Name, Email and create a Password.
 
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170202160222/Cayenne-Sign-Up-page.png" width="600" height="386" alt="Sign up for Cayenne"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591373396/cayenne/Cayenne_Sign_Up.png" width="600" height="386" alt="Sign up for Cayenne"></p>
 
 <p id="choose-device" class="anchor-link"></p>
 
@@ -31,7 +31,7 @@ The next section covers getting started with a Raspberry Pi device.  If you’r
 
 1. Power on your Raspberry Pi. Connect the power adapter to your Raspberry Pi.
 2. Connect the Pi to the Internet. Connect your Raspberry Pi to the Internet using an Ethernet cable. Or, if you have a Wi-Fi dongle setup already this works too.
-3. Make sure the Raspbian operating system is installed. Cayenne works with Jessie OS versions of Raspbian. Please make sure one of these is pre-installed to the sd card. If you need to install the Raspbian operating system, <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">click here</a>.
+3. Make sure the Raspbian operating system is installed. Cayenne works with the Raspberry Pi OS. Please make sure it is pre-installed to the sd card. If you need to install the Raspberry Pi OS, <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">click here</a>.
 
    **Note:** You do not need to make any configuration changes to the Pi device. Cayenne automatically handles setting up and configuring your Pi for use. However, it is recommended that you expand the filesystem on the flash card if necessary. Please refer to raspi-config if you need additional information on performing this step.
 
@@ -56,7 +56,7 @@ The instructions for installing Cayenne onto your device are displayed on screen
 
 _**NOTE:** The commands displayed on screen will be customized uniquely for the device being added and for your account. Do not share or re-use the installer downloaded from these commands - If you need to install additional devices, or reinstall onto this same device, you should follow the installation process again for each device._
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616133821/1st-Experience-RPI-Step-3-connect-rpi.png" width="600" height="382" alt="Raspberry Pi Step 3"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591373609/cayenne/Cayenne_Agent_Instal.png" width="600" height="382" alt="Raspberry Pi Step 3"></p>
 
 **2. As soon as the installation process starts, the Installing screen automatically appears. From here you can check on the installation process as it completes.**
 
@@ -69,11 +69,11 @@ Cayenne installs on your Raspberry Pi in 4 steps:
 
 __This may take up to 10 minutes. Please be patient.__
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160205134947/Screenshot-123.png" width="600" height="382" alt="Installing Cayenne"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591377094/cayenne/Cayenne_Agent_Installing.png" width="600" height="382" alt="Installing Cayenne"></p>
 
 **3. As soon as the installation process completes, the Online Dashboard will automatically appear. Your Raspberry Pi is now ready to use!**
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601102506/RaspberryPi-1stExperience.jpg" width="600" height="382" alt="Cayenne First Experience"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591377541/cayenne/Cayenne_Pi_Agent_Dashboard.png" width="600" height="382" alt="Cayenne First Experience"></p>
 
 <p id="sensors-raspberry-pi" class="anchor-link"></p>
 
@@ -95,7 +95,7 @@ Click **Add New** > **Device / Widget**.
 1. Select **Sensors, Temperature,** then **BMP180**.
 2. Click **Add Sensor**.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617103039/Add-Device-RPI-BMP180.png" width="600" height="365" alt="Add Sensor"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591377875/cayenne/Adding_BMP180.png" width="600" height="365" alt="Add Sensor"></p>
 
 
 **Read your Sensor**
@@ -106,7 +106,7 @@ Let’s try it out! Place your hand on the BMP180 sensor. The temperature value 
 
 You can check the current status of your sensor at any time by visiting the dashboard.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122628/BMP180-RPIAdded.jpg" width="600" height="365" alt="Added Sensor"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591377875/cayenne/Pi_BMP180.png" width="600" height="365" alt="Added Sensor"></p>
 
 <p id="actuators-raspberry-pi" class="anchor-link"></p>
 
@@ -131,11 +131,11 @@ Click **Add New > Device / Widget**.
 4. Click **Add Actuator**.
 
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617103241/Add-Device-RPI-Lightswitch.jpg" width="600" height="365" alt="Light Switch"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591378137/cayenne/Adding_LED.png" width="600" height="365" alt="Light Switch"></p>
 
 The LED widget has been added to your dashboard. Click the LED button in the dashboard to turn the LED on and off.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601123646/LightSwitch-RPI-todashboard.jpg" width="600" height="365" alt="Light Switch to Dashboard"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591378137/cayenne/Pi_LED.png" width="600" height="365" alt="Light Switch to Dashboard"></p>
 
 <p id="extensions-raspberry-pi" class="anchor-link"></p>
 
@@ -182,28 +182,28 @@ Power on your Arduino by connecting your Arduino with a USB cable (or FTDI conne
 
 #### Using Cayenne Arduino Library
 
-The Cayenne Arduino Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards. Cayenne sketch files can be combined with other sketch files for your IoT projects. In this section we will walk you through installing and configuring the Arduino IDE to use the library.
+The Cayenne MQTT Arduino Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards. Cayenne sketch files can be combined with other sketch files for your IoT projects. In this section we will walk you through installing and configuring the Arduino IDE to use the library.
 
 <p id="installing-library-arduino-ide" class="anchor-link"></p>
 
 
 ##### Installing Arduino IDE Software
-To use the Cayenne Arduino Library, the Arduino IDE software should be installed. Go to <a href="https://www.arduino.cc/en/Main/Software" target="_blank">https://www.arduino.cc/en/Main/Software</a> to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
+To use the Cayenne MQTT Arduino Library, the Arduino IDE software should be installed. Go to <a href="https://www.arduino.cc/en/Main/Software" target="_blank">https://www.arduino.cc/en/Main/Software</a> to download and install the Arduino IDE software if you need it. Arduino IDE can be installed on Windows, Mac or Linux computers.
 
 
 ##### Add Cayenne Library to Arduino IDE
 
-The Cayenne Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards. Cayenne sketch files can be combined with other sketch files for your IoT projects.
+The Cayenne MQTT Arduino Library is a collection of code, known as sketch files, that makes it easy for you to connect and send data to and from sensors, actuators and devices connected to Arduino boards. Cayenne sketch files can be combined with other sketch files for your IoT projects.
 
-The Cayenne Library is available directly from the Arduino IDE Libraries list. To install the library, select **Sketch** > **Include library** > **Manage Libraries**. The *Library Manager* dialog will appear. From here, search for the **Cayenne** library and install it.
+The Cayenne MQTT Arduino Library is available directly from the Arduino IDE Libraries list. To install the library, select **Sketch** > **Include library** > **Manage Libraries**. The *Library Manager* dialog will appear. From here, search for the **Cayenne MQTT** library and install it.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/arduino-ide-manage-libraries.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591378811/cayenne/Arduino_IDE_1.png" width="660" height="552" alt="arduino-ide-manage-libraries"><br/><br/></p>
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Arduino-IDE-add-Cayenne-lib-using-Lib-Manager.png" width="600" height="542" alt="arduino-ide-add-cayenne-lib-using-lib-manager"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591378809/cayenne/Arduino_IDE_2.png" width="600" height="542" alt="arduino-ide-add-cayenne-lib-using-lib-manager"><br/><br/></p>
 
-The Cayenne library has now been expanded in the libraries folder in your Arduino sketches directory. You can verify this by going to the **Sketch** > **Include Library** menu where you should now see the Cayenne library at the bottom of the drop-down menu under *Contributed Libraries*. The Cayenne library is now ready to be used in your project.
+The Cayenne MQTT Arduino library has now been expanded in the libraries folder in your Arduino sketches directory. You can verify this by going to the **Sketch** > **Include Library** menu where you should now see the Cayenne MQTT library at the bottom of the drop-down menu under *Contributed Libraries*. The Cayenne MQTT Arduino library is now ready to be used in your project.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601124601/CayenneLibraryInstalled.jpg" width="600" height="925" alt="Cayenne Library Installed"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591380348/cayenne/Arduino_IDE_3.png" width="720" height="800" alt="Cayenne Library Installed"></p>
 
 <p id="connect-your-arduino" class="anchor-link"></p>
 
@@ -213,11 +213,11 @@ In order to successfully program your Arduino board, you will need to verify tha
  
 First, verify that the correct Board is selected in the **Tools** > **Board** menu. Be sure to select the board type that you will be programming.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Arduino-IDE-board-selection.png" width="660" height="552" alt="Arduino IDE board selection"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591380588/cayenne/Arduino_IDE_4.png" width="660" height="552" alt="Arduino IDE board selection"><br/><br/></p>
  
 Then, verify that you have the correct **Port** selected for communicating with your Arduino. Pick the correct port based upon how you are connecting your Arduino to your PC/Mac.
 
-<p style="text-align:center"><br/><img src="http://www.mydevices.com/cayenne/uploads/Arduino-IDE-port-selection.png" width="660" height="552" alt="Arduino IDE port selection"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591380590/cayenne/Arduino_IDE_5.png" width="660" height="552" alt="Arduino IDE port selection"><br/><br/></p>
 
 #### Connect your Arduino
 
@@ -225,19 +225,29 @@ After setting up your PC/Mac computer with the Arduino IDE and the Cayenne Libra
 
 On this screen, select the Arduino board that you are using from the list of [supported boards](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-microcontrollers). As you select your Arduino board, a list of connections appears below the board name. Select the connection type that you are using.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616135653/1st-Experience-Arduino-Step-3-board-expanded1.png" width="600" height="385" alt="Arduino Step 3"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381104/cayenne/Arduino_Dashboard_Step_3.png" width="600" height="385" alt="Arduino Step 3"></p>
 
 Click on the Sketch button next to the connection you will be using and a popup will appear with the sketch file you will need when flashing your Arduino device. The sketch file will contain everything you need to connect your device to Cayenne, including your [MQTT CREDENTIALS](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files-customizing-sketch-files).
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616135934/1st-Experience-Arduino-Step-3-connection-example.png" width="600" height="385" alt="Arduino Step 3 Connection Example"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381104/cayenne/Arduino_Dashboard_Step_3_Example.png" width="600" height="385" alt="Arduino Step 3 Connection Example"></p>
 
 Copy & paste the sketch file contents into Arduino IDE and select **Sketch** > **Upload** to upload the sketch file to your device.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616151042/Arduino-IDE-paste-example-sketch-for-connection.png" width="600" height="555" alt="Arduino IDE paste example sketch"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381588/cayenne/Arduino_IDE_6.png" width="600" height="555" alt="Arduino IDE paste example sketch"></p>
 
-As soon as your Arduino device comes online and connects to Cayenne, you will see your Arduino Board in the online dashboard.
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381588/cayenne/Arduino_IDE_7.png" width="600" height="555" alt="Done Uploading"></p>
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601125316/Arduino1stExperience.png" width="600" height="385" alt="Arduino 1st Experience"></p>
+Open your **Serial Monitor** to get the cayenne log prints.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381588/cayenne/Serial_Monitor.png" width="600" height="358" alt="Done Uploading"></p>
+
+As soon as your Arduino device comes online and connects to Cayenne, you will see your Arduino Board in the online dashboard with a temporary green widget on channel 0.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381588/cayenne/Arduino_Online_Temporary_Widget.png" width="600" height="385" alt="Arduino 1st Temporary Widget"></p>
+
+Add it to the dashboard by clicking on the **+** of the widget.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381588/cayenne/Arduino_Dashboard.png" width="600" height="385" alt="Arduino 1st Experience"></p>
 
 **Congrats! You are all set! Now your hardware is connected to the Cayenne Cloud!**
 
@@ -261,25 +271,24 @@ Click **Add New** > **Device / Widget**.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"></p>
 
 1. Choose **Sensor** > **Temperature** > **TMP36**.
-2. Choose **Virtual** from the I/O field.
-3. We will use Virtual Pin 1 for this example. Choose **V1** from the **Pin** field.
-4. Click the **Step 1: Sketch File** button to view the sketch file.
+2. We will use Virtual Pin 1 for this example. Choose **1** from the **Pin** field.
+3. Click the **Step 1: Sketch File** button to view the sketch file.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617103706/Add-Device-Arduino-TMP361.png" width="600" height="365" alt="Arduino Add Device TMP361"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591382921/cayenne/Arduino_TMP36_Adding.png" width="600" height="365" alt="Arduino Add Device TMP361"></p>
 
 A popup will appear showing the TMP36 sketch file. Copy the sketch file contents to the clipboard and open Arduino IDE.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151040/Add-Device-Arduino-TMP36-Sketch-file2.png" width="600" height="386" alt="Arduino Add Device TMP361 Sketch File"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591383019/cayenne/Arduino_TMP36_Sketch.png" width="600" height="386" alt="Arduino Add Device TMP361 Sketch File"></p>
 
 Paste the TMP36 sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **MQTT CREDENTIALS** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](https://developers.mydevices.com/cayenne/docs/sketch-files/)
 
 In this case, we are using the default Virtual Pin 1 which is already defined in the sketch file, so the sketch file should be OK to use as is. After verifying the sketch file looks good, select **Sketch** > **Upload** to upload the sketch file to your device.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160603151539/TMP36-ArduinoIDE.jpg" width="600" height="836" alt="Arduino IDE TMP361"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591382921/cayenne/Arduino_IDE_TMP36.png" width="600" height="836" alt="Arduino IDE TMP361"></p>
 
 In the Cayenne dashboard, you can now click the **Step 2: Add Sensor** button and the TMP36 widget will be added to your dashboard. You can change widget type and settings by clicking on the cogwheel icon in the top right corner of the TMP36 widget.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601131032/Arduino-TMP36.jpg" width="600" height="336" alt="Arduino IDE TMP361"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591382921/cayenne/Arduino_TMP36_Dashboard.png" width="600" height="336" alt="Arduino IDE TMP361"></p>
 
 <p id="actuators-arduino" class="anchor-link"></p>
 
@@ -299,15 +308,14 @@ Click **Add New** > **Device / Widget**.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122359/AddNew.jpg" width="260" height="252" alt="Add New Device"></p>
 
 1. Choose **Actuator** > **Light** > **Luminosity**.
-2. Choose **Virtual** from the I/O field.
-3. We will use Virtual Pin 1 for this example. Choose **V1** from the **Pin field**.
+2. We will use Virtual Pin 1 for this example. Choose **2** from the **Pin field**.
 4. Click the **Step 1: Sketch File** button to view the sketch file.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617110431/Add-Device-Arduino-Luminosity.png" width="600" height="364" alt="Arduino Luminosity Add Device"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591385451/cayenne/Arduino_Luminosity_Adding.png" width="600" height="364" alt="Arduino Luminosity Add Device"></p>
 
 A popup will appear showing the Luminosity sketch file. Copy the sketch file contents to the clipboard and open Arduino IDE.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617152613/Add-Device-Arduino-Luminosity-sketch-file2.png" width="600" height="386" alt="Arduino Luminosity Sketch File"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591385451/cayenne/Arduino_Luminosity_Sketch.png" width="600" height="386" alt="Arduino Luminosity Sketch File"></p>
 
 Paste the Luminosity sketch file code into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that your **MQTT CREDENTIAL** is correct as well as update any pin assignments that appear in the sketch file. [Read more about using sketch files](https://developers.mydevices.com/cayenne/docs/sketch-files/)
 
@@ -319,11 +327,11 @@ In this case, the example sketch file assumes that we used Digital Pin 3 to conn
 
 After verifying the sketch file looks good, select **Sketch** > **Upload** to upload the sketch file to your device.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151924/Arduino-Luminosity-in-Arduino-IDE.png" width="600" height="554" alt="Arduino Luminosity in Arduino IDE"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591385659/cayenne/Arduino_IDE_Luminosity.png" width="600" height="554" alt="Arduino Luminosity in Arduino IDE"></p>
 
 In the Cayenne dashboard, you can now click the **Step 2: Add Actuator** button and the luminosity widget will be added to your dashboard. You can now use the slider to control the brightness of the LED.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601131732/Arduino1stExperience-Luminosity.jpg" width="600" height="376" alt="Arduino Luminosity"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591385451/cayenne/Arduino_Lumonisity_Dashboard.png" width="600" height="376" alt="Arduino Luminosity"></p>
 
 <p id="add-custom-widgets-arduino" class="anchor-link"></p>
 
@@ -349,17 +357,18 @@ Click **Add New** > **Device / Widget**.
 
    + **Widget Name:** LED
    + **Device:** Arduino
-   + **Connectivity:** Digital
-   + **Pin:** D8
+   + **Data:** Digital Actuator
+   + **Unit:** Digital(0/1)
+   + **Channel:** 3
    + **Icon:** LED
 
 3. Click **Add Widget**.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601132656/Arduino-Custom-Button-Widget.png" width="600" height="355" alt="Arduino Custom Button Widget"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591385893/cayenne/Arduino_Custom_Widget_Adding.pngg" width="600" height="355" alt="Arduino Custom Button Widget"></p>
 
 The button widget gets added to your dashboard.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601132737/Arduino1stExperience-AddLED.jpg" width="600" height="336" alt="Arduino Add LED"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591385893/cayenne/Arduino_Custom_Widget.png" width="600" height="336" alt="Arduino Add LED"></p>
 
 Push the button in your online dashboard to turn the LED on and off. You’re now ready to start using Cayenne for your IoT projects.
 
@@ -393,31 +402,32 @@ If you don’t see your Arduino device connected to Cayenne, or if you’re runn
 
    Open the Arduino IDE program and verify that the correct **Board** is selected.
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616113931/Arduino-IDE-board-selection.png" width="600" height="501" alt="Arduino IDE Board Selection"></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591380588/cayenne/Arduino_IDE_4.png" width="600" height="501" alt="Arduino IDE Board Selection"></p>
 
    Next, verify that you have the correct **Port** selected for communicating with your Arduino. Pick the correct port based upon how you are connecting your Arduino to your PC/Mac.
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616114005/Arduino-IDE-port-selection.png" width="600" height="501" alt="Arduino IDE Port Selection"></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591380590/cayenne/Arduino_IDE_5.png" width="600" height="501" alt="Arduino IDE Port Selection"></p>
 
-4. **Verify that you have the Cayenne Library installed**
+4. **Verify that you have the Cayenne MQTT Arduino Library installed**
 
-   Verify that you see the Cayenne library installed under **File** > **Examples** > **Cayenne**. If you do not, make sure to add it to your Library. For more help on this, see [Add Cayenne Library to Arduino IDE](#getting-started-arduino-arduino-setup-using-cayenne-arduino-library-add-cayenne-library-to-arduino-ide).
+   Verify that you see the Cayenne MQTT Arduino library installed under **File** > **Examples** > **CayenneMQTT**. If you do not, make sure to add it to your Library. For more help on this, see [Add Cayenne Library to Arduino IDE](#getting-started-arduino-arduino-setup-using-cayenne-arduino-library-add-cayenne-library-to-arduino-ide).
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616115052/Arduino-IDE-Cayenne-lib-installed.png" width="600" height="555" alt="Arduino IDE Library Installed"></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591380348/cayenne/Arduino_IDE_3.png" width="600" height="555" alt="Arduino IDE Library Installed"></p>
 
 5. **Verify that your Arduino is connected with Cayenne**
 
    You can use the Serial Monitor tool in the Arduino IDE to view some connection information. After uploading your sketch file to the Arduino device, open the **Serial Monitor** and look for the Cayenne connection.
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160616114750/Arduino-Serial-Monitor-option.png" width="600" height="487" alt="Arduino Serial Monitor"></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591386209/cayenne/Arduino_IDE_Serial_Monitor.png" width="600" height="487" alt="Arduino Serial Monitor"></p>
 
    In the output of the Serial Monitor, you should see something like this:
 
    ```
-   Getting IP...
-   My IP: 192.168.0.10
-   Connecting to arduino.mydevices.com:8442
-   Ready (ping: 109ms).
+   [0] MAC: FE-35-C7-EB-B9-A3
+   [4803] IP: 192.168.1.12
+   [4804] Connecting to mqtt.mydevices.com:1883
+   [5340] Connected
+
    ```
    If you don’t, this means your board is not connected to the Internet to send data to the Cayenne cloud. You will need to verify that your Arduino is connected to the Internet. If you don’t see any outptut in the Serial Monitor, leave it open and Reset your Arduino board.
 
