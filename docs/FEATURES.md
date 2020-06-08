@@ -3,9 +3,9 @@
 <p id="tools-features" class="anchor-link"></p>
 
 ## Dashboard
-The Cayenne dashboard (online and mobile) is the main screen where you can setup, customize, monitor, manage and control your connected devices.
+The Cayenne dashboard is the main screen where you can setup, customize, monitor, manage and control your connected devices.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601123646/LightSwitch-RPI-todashboard.jpg" width="600" height="383" alt="Light Switch Dashboard"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591377541/cayenne/Cayenne_Pi_Agent_Dashboard.png" width="600" height="383" alt="Light Switch Dashboard"></p>
 
 From the Cayenne dashboard you can:
 
@@ -14,7 +14,7 @@ From the Cayenne dashboard you can:
 + View [device and sensor data history](#features-visualization-data-history).
 + Setup [automatic triggers](#features-triggers) and receive [notification alerts](#features-alerts).
 + [Schedule actions](#features-scheduling) and commands.
-+ [Create IoT projects](http://www.cayenne-mydevices.com/CayenneStaging/docs/#features-projects).
++ [Create IoT projects](https://developers.mydevices.com/cayenne/docs/features/#features-projects).
 + [Remotely manage](#features-remote-control) devices and sensors.
 + [Track Assets](#features-asset-tracking) and display them on a map.
 
@@ -42,27 +42,30 @@ Cayenne stores historical data that enables you to see meaningful patterns of be
 
 ### Live Data
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602132957/Sensor-Live.jpg" width="600" height="244" alt="Sensor Live"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591625089/cayenne/Charts_Live.png" width="600" height="244" alt="Sensor Live"></p>
 
 
 ### Data History
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602133036/Sensor-History.jpg" width="600" height="244" alt="Sensor History"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591625435/cayenne/Data_History.png" width="560" height="294" alt="Sensor History"></p>
 
 
 ### Filtering visualization
 
 From the data history graph, you have the ability to filter by different timeframes. Depending upon the timeframe you have selected, the data display will update to show you more or less detail.
 
-You can select from any of the preset ranges available. The ranges shown to you here may depend upon the data currently available for the device. For example, if the device was recently added you may not see the option to select the yearly options. Some options such as **minutes** and **year to date** will always be present. Custom filtering options will added soon.
+You can select from any of the preset ranges available.For example **minutes** and **hours** . You can also add a custom filter range.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602134448/Line-Chart-filtering.png" width="600" height="220" alt="Line Chart Filtering"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591625435/cayenne/Data_Custom.png" width="547" height="298" alt="Sensor History"></p>
 
 
 ### Downloading data history
 
-Coming soon you will be able download data history.
+You can download data history in csv format.You can also chosse the filter range and download the data history.
 
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591625506/cayenne/Data_Download.png" width="579" height="338" alt="Download History"></p>
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591625832/cayenne/CSV_download.png" width="1300" height="884" alt="Download"></p>
 
 ## Projects
 
@@ -84,7 +87,7 @@ In order to create your new project, you must give the dashboard a unique name. 
 
 After creating your new project, you will see a blank canvas. From here, you can start populating your new project dashboard with widgets from any of your devices.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602135744/Projects-Default.jpg" width="600" height="358" alt="Projects Default"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627856/cayenne/New_Project.png" width="600" height="358" alt="Projects Default"></p>
 
 
 #### Adding widgets
@@ -96,34 +99,51 @@ You can customize your project by adding widgets at any time. When adding widget
 
 You can click and drag a single widget from a device into the device list area. The added widget appears in the project and the widget container clearly indicates which device this widget is associated with.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601131032/Arduino-TMP36.jpg" width="600" height="336" alt="Arduino TMP36"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627856/cayenne/New_Project_TMP36.png" width="600" height="336" alt="Arduino TMP36"></p>
 
 
 #### Adding multiple widgets
 
 To add more than one widget at a time, you can drag the device from the device list into the dashboard area. This will allow the user to add multiple widgets associated with that device at one time.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602140608/Projects-MultipleWidget.jpg" width="600" height="412" alt="Multiple Widgets"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627856/cayenne/Project_Add_Device..png" width="600" height="412" alt="Multiple Widgets"></p>
 
 After selecting some or all the widgets you would like to add from a device, they appear on the Project dashboard.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602140649/Projects-MultipleWidget-Dashbioard.jpg" width="600" height="358" alt="Multiple Widgets on Dashboard"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627856/cayenne/Project_Dashboard.png" width="600" height="358" alt="Multiple Widgets on Dashboard"></p>
 
 
 #### Deleting widgets
 
 To remove a widget from a project, click on the **cogwheel** icon in the top right corner of the widget, then click **Remove from project**.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602141024/Project-RemoveWidget.jpg" width="300" height="330" alt="Remove Widget"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627858/cayenne/Remove_widget_from_dashboard.png" width="300" height="330" alt="Remove Widget"></p>
 
 **Note:** This only removes the widget from this project. It doesn’t remove the widget from other projects or from Cayenne.
 
+### Data tab
+
+You can view the data history of all the widgets in the project. You can filter it by different timeframes. Depending on the timeframe the data history will be displayed.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627857/cayenne/Project_Data_Tab.png" width="600" height="330" alt="Data Tab"></p>
+
+### Sharing
+
+You can share your project with your friends and co-wokers using the project share link. You can also give the required Privileges to users using the shared project.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627858/cayenne/Project_Sharing.png" width="600" height="330" alt="Project Sharing"></p>
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627858/cayenne/Project_shared_Dashboard.png" width="600" height="330" alt="Project Sharing Dashbaord"></p>
+
+The project shared link can be expanded to full screen mode.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627857/cayenne/Project_Dashboard_Full_Screen.png" width="600" height="330" alt="Project Sharing Dashbaord Full screen"></p>
 
 ### Editing and deleting projects
 
 To edit a project name or delete a project click on the cogwheel icon next to your Project Name.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601130027/Configure.jpg" width="230" height="183" alt="Configure"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591627856/cayenne/Delete_Project.png" width="600" height="330" alt="Configure"></p>
 
 
 ## Scheduling
@@ -189,14 +209,17 @@ From here, you can fill in all the details required for creation of your schedul
 
 You can view your scheduled events by Year, Month, Week or List View.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145121/Scheduling-ListView.jpg" width="600" height="321" alt="Schedule List View"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591629662/cayenne/Schedule_Calendar.png" width="600" height="321" alt="Schedule List View"><br/></p>
 
 
 ### Receiving notifications
 
 Cayenne can send you a notification when a scheduled event has occurred by email and/or text message.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145334/ScheduleEvent-Notification.jpg" width="346" height="615" alt="Schedule Notifications"><br/></p>
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591632438/cayenne/Scheduling_Email.png" width="646" height="515" alt="Schedule Notifications"><br/></p>
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591632346/cayenne/Scheduling_SMS.jpg" width="346" height="615" alt="Schedule Notifications"><br/></p>
 
 
 ## Triggers
@@ -250,7 +273,7 @@ Let’s create our first trigger. We’ll create a trigger to turn on our light 
    
 Cayenne will will now start monitoring the temperature sensor and when it reaches the correct temperature your trigger will automatically run.
    
-   
+**Note** To avoid trigger flood, you need to modify your sketch accordingly to send data only once when the trigger limit is reached. For arduino the reference code is <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Basics/SendDataOnTrigger/SendDataOnTrigger.ino" target="_blank">here</a> and for raspberry pi is <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Python/blob/master/examples/Example-04-SendDataOnTrigger.py" target="_blank">here</a>. 
    
 ## Alerts
 
@@ -270,39 +293,39 @@ Let’s create our first notification alert. We’ll send a text message and ema
    
 2. The Create Trigger screen appears.
    
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602145622/Triggers-000.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634126/cayenne/Alert.png" width="600" height="376" alt="Triggers"><br/><br/></p>
    
    From here, you can fill in all the details required for creation of your notification alert. To make this process easy, you will be guided through triggered alert creation that is easy to follow and select the devices and actions that you want.
 
 3. Let’s begin by giving our trigger a name. Enter **“Tmp36 is above 80, Send Notification”** into the Trigger Name field.
    
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150757/Triggers-01-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634126/cayenne/Alert_Name.png" width="600" height="376" alt="Triggers"><br/><br/></p>
 
 4. We’re going to trigger a notification alert when Tmp36 is above 80 degrees. The TMP36 temperature sensor is located on our Arduino device, so drag & drop the **Arduino** device into the **IF** statement.
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150853/Triggers-02-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634126/cayenne/Alert_Device.png" width="600" height="376" alt="Triggers"><br/><br/></p>
 
 5. After selecting the TMP36 temperature sensor, we can choose whether we want to trigger a notification if temperature is above or below a certain value.
 
    We want to react to the temperature being high, so we select **Temperature** from the list and select **Temperature Above** in the options presented and choose **80 degrees** for this example.
    
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602150957/Triggers-03-NOtification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634127/cayenne/Alert_TMP36.png width="600" height="376" alt="Triggers"><br/><br/></p>
    
 6. We want to receive a triggered alert notification by text message and email each time TMP36 is above 80 degrees. Click **Setup notification**.
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151034/Triggers-04-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634126/cayenne/Alert_Notification.png" width="600" height="376" alt="Triggers"><br/><br/></p>
    
 7. You can choose to receive notifications by text message and/or email. We want both, so we will choose **Select All**.   
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151059/Triggers-05-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634127/cayenne/Alert_Notification_Select_All.png" width="600" height="376" alt="Triggers"><br/><br/></p>
 
 8. Click **Add custom recipient** and enter in phone number to receive text. Then click **Add more recipients**? and add in the email address.
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151114/Triggers-06-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>   
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634126/cayenne/Alert_Notification_Details.png" width="600" height="376" alt="Triggers"><br/><br/></p>   
    
 9. We’re done! Click **Save Trigger** to complete our trigger alert and return to the Triggers list where our new trigger alert is shown.
 
-   <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151206/Triggers-07-Notification.jpg" width="600" height="376" alt="Triggers"><br/><br/></p>   
+   <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634127/cayenne/My_Triggers.png" width="600" height="376" alt="Triggers"><br/><br/></p>   
    
 Cayenne will will now start monitoring the temperature sensor and when it reaches the correct temperature a notification alert will be send by email and text message. <br/><br/>
    
@@ -313,15 +336,16 @@ Cayenne will will now start monitoring the temperature sensor and when it reache
 
 Cayenne will send you notification alerts by text message if selected.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160602151440/Triggers-07-Notification-Event.jpg" width="346" height="615" alt="Notification Alert"><br/><br/></p>   
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634127/cayenne/Alert_SMS.jpg" width="346" height="615" alt="Notification Alert"><br/><br/></p>   
 
 
 ### Email
 
 Cayenne will send you notification alerts by email if selected.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160603101622/Triggers-08-EmailAlert.jpg" width="346" height="372" alt="Email Alert"><br/><br/></p>  
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591634126/cayenne/Alert_Email.png" width="646" height="515" alt="Email Alert"><br/><br/></p>  
 
+**Note** To avoid trigger flood, you need to modify your sketch accordingly to send data only once when the trigger limit is reached. For arduino the reference code is <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Basics/SendDataOnTrigger/SendDataOnTrigger.ino" target="_blank">here</a> and for raspberry pi is <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Python/blob/master/examples/Example-04-SendDataOnTrigger.py" target="_blank">here</a>. 
 
 ## Remote Control
 
@@ -396,8 +420,6 @@ If your LoRa device will remain stationary, set the **Location** field for the d
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160926143957/LoRa-Settings-Device-doesnt-move1.png" width="600" height="363" alt="LoRa Tracking"><br/><br/></p>
 
 If you wish to change the address, access the location settings using the **settings cogwheel** menu to open the *Settings* dialog where you can change the address in the **Address** field.
-
-<p style="text-align:center"><br/><img src="http://cloudfront-mydevices-wordpress.s3.amazonaws.com/wp-content/uploads/20170201095452/LoRa-manual-tracking-February-2017.png" width="600" height="485" alt="LoRa Tracking"><br/><br/></p>
 
 
 ### Map Tracking Features
@@ -494,13 +516,13 @@ If the sensor that you want to customize is already supported by Cayenne, you ca
 
 The example sketch files for each component can be found by following the Add Device/Widget process in the Cayenne dashboard, or you can visit the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">Cayenne github</a>.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151040/Add-Device-Arduino-TMP36-Sketch-file2.png" width="600" height="386" alt="Arduino Custom Code"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381104/cayenne/Arduino_Dashboard_Step_3_Example.png" width="600" height="386" alt="Arduino Custom Code"><br/><br/></p>
 
 
 After writing your sketch file to send device data to the Cayenne Virtual Pins, you can upload the code to your Arduino board. You will then need to complete adding your Device or Custom Widget to Cayenne by telling Cayenne how to read the data. Fill in the appropriate settings during the Add Device/Widget process, making sure to select the correct **Virtual Pin(s)**, **Data Type** and **Units** being sent in your custom code.
 
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160721125553/Custom-Code-Arduino-Custom-Widget-settings1.png" width="600" height="362" alt="Arduino Custom Code"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591385893/cayenne/Arduino_Custom_Widget_Adding.png" width="600" height="362" alt="Arduino Custom Code"><br/><br/></p>
 
 
 Once your code has been uploaded to your Arduino, and a corresponding widget added to Cayenne, you will see your device shown on the dashboard as you would with any device that Cayenne supports out of the box.
@@ -511,5 +533,83 @@ Once your code has been uploaded to your Arduino, and a corresponding widget add
 
 ### Raspberry Pi
 
-Coming soon
+The <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Python" target="_blank">Cayenne MQTT Python</a> Library provides functions to easily connect to the Cayenne. With it you can send data to and receive data from Cayenne.
 
+#### Installation
+This library can be installed using pip.
+
+Python 2:
+```
+pip install cayenne-mqtt
+```
+
+Python 3:
+```
+pip3 install cayenne-mqtt
+```
+
+It can also be installed from the repository.
+
+Python 2:
+```
+git clone https://github.com/myDevicesIoT/Cayenne-MQTT-Python
+cd Cayenne-MQTT-Python
+python setup.py install
+```
+
+Python 3:
+```
+git clone https://github.com/myDevicesIoT/Cayenne-MQTT-Python
+cd Cayenne-MQTT-Python
+python3 setup.py install
+```
+Cayenne Setup
+
+Create your Cayenne account <a href="https://developers.mydevices.com/cayenne/features/" target="_blank">here</a>.
+Add a new device using the Bring Your Own Thing API selection.
+
+Examples
+Simple examples are available in the repository <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Python/tree/master/examples" target="_blank">here</a>.
+
+Below is an example of a simple client that publishes some sample data and receives data from Cayenne in a message callback. The Cayenne authentication variables must be modified with the authentication info you received when adding a new device in Cayenne:
+
+```
+import cayenne.client
+import time
+
+# Cayenne authentication info. This should be obtained from the Cayenne Dashboard.
+MQTT_USERNAME  = "MQTT_USERNAME"
+MQTT_PASSWORD  = "MQTT_PASSWORD"
+MQTT_CLIENT_ID = "MQTT_CLIENT_ID"
+
+# The callback for when a message is received from Cayenne.
+def on_message(message):
+  print("message received: " + str(message))
+  # If there is an error processing the message return an error string, otherwise return nothing.
+
+client = cayenne.client.CayenneMQTTClient()
+client.on_message = on_message
+client.begin(MQTT_USERNAME, MQTT_PASSWORD, MQTT_CLIENT_ID)
+# For a secure connection use port 8883 when calling client.begin:
+# client.begin(MQTT_USERNAME, MQTT_PASSWORD, MQTT_CLIENT_ID, port=8883)
+
+i=0
+timestamp = 0
+
+while True:
+  client.loop()
+
+  if (time.time() > timestamp + 10):
+    client.celsiusWrite(1, i)
+    client.luxWrite(2, i*10)
+    client.hectoPascalWrite(3, i+800)
+    timestamp = time.time()
+    i = i+1
+```
+
+Documentation
+
+For more detailed info about the Cayenne client API you can use pydoc.
+```
+pydoc cayenne.client
+```
