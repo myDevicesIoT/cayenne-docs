@@ -8,42 +8,18 @@ Widgets are used to control a device or are used to show the visualization of da
 <tbody>
 <tr>
 <td height="150"><a href="#custom-widgets-2-state"><img class="aligncenter size-full wp-image-4602" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081922/Tile-2StateWidget.png" alt="Tile-2StateWidget" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-accelerometer"><img class="aligncenter size-full wp-image-4623" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105150/Tile-AccelerometerWidget-ComingSoon.png" alt="Tile-AccelerometerWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-battery"><img class="aligncenter size-full wp-image-4629" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105201/Tile-BatteryWidget-ComingSoon.png" alt="Tile-BatteryWidget-ComingSoon" width="120" height="150"></a></td>
 <td height="150"><a href="#custom-widgets-button"><img class="aligncenter size-full wp-image-4603" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081942/Tile-ButtonWidget.png" alt="Tile-ButtonWidget" width="120" height="150"></a></td>
-</tr>
-<tr>
-<td height="150"><a href="#custom-widgets-camera"><img class="aligncenter size-full wp-image-4618" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105141/Tile-CameraWidget-ComingSoon.png" alt="Tile-CameraWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-dial-knob"><img class="aligncenter size-full wp-image-4632" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105206/Tile-DialKnobWidget-ComingSoon.png" alt="Tile-DialKnobWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-donut"><img class="aligncenter size-full wp-image-4616" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105138/Tile-DonutWidget-ComingSoon.png" alt="Tile-DonutWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-gallery"><img class="aligncenter size-full wp-image-4619" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105143/Tile-GalleryWidget-ComingSoon.png" alt="Tile-GalleryWidget-ComingSoon" width="120" height="150"></a></td>
-</tr>
-<tr>
 <td height="150"><a href="#custom-widgets-gauge"><img class="aligncenter size-full wp-image-4601" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081900/Tile-GaugeWidget.png" alt="Tile-GaugeWidget" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-gyroscope"><img class="aligncenter size-full wp-image-4622" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105148/Tile-GyroscopeWidget-ComingSoon.png" alt="Tile-GyroscopeWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-intrusion"><img class="aligncenter size-full wp-image-4633" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105209/Tile-IntrusionWidget-ComingSoon.png" alt="Tile-IntrusionWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-joystick"><img class="aligncenter wp-image-4627 size-full" style="border: 0 !important;" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105157/Tile-JoystickWidget-ComingSoon.png" width="120" height="150"></a></td>
+   <td height="150"><a href="#custom-widgets-line-chart"><img class="aligncenter size-full wp-image-4600" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081838/Tile-LineChartWidget.png" alt="Tile-LineChartWidget" width="120" height="150"></a></td>
 </tr>
 <tr>
-<td height="150"><a href="#custom-widgets-lcd"><img class="aligncenter size-full wp-image-4626" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105155/Tile-LCDWidget-ComingSoon.png" alt="Tile-LCDWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-lighting"><img class="aligncenter size-full wp-image-4628" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105159/Tile-LightingWidget-ComingSoon.png" alt="Tile-LightingWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-line-chart"><img class="aligncenter size-full wp-image-4600" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081838/Tile-LineChartWidget.png" alt="Tile-LineChartWidget" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-magnetometer"><img class="aligncenter size-full wp-image-4621" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105147/Tile-MagnetometerWidget-ComingSoon.png" alt="Tile-MagnetometerWidget-ComingSoon" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-motion"><img class="aligncenter size-full wp-image-4615" style="border: 0 !important" src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591642495/cayenne/Motion.png" alt="Tile-MotionWidget" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-proximity"><img class="aligncenter size-full wp-image-4614" style="border: 0 !important" src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591643960/cayenne/Proximity.png" alt="Tile-ProximityWidget" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-co2"><img class="aligncenter size-full wp-image-4614" style="border: 0 !important" src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591643960/cayenne/CO2.png" alt="Tile-Co2Widget" width="120" height="150"></a></td>
+<td height="150"><a href="#custom-widgets-tank"><img class="aligncenter size-full wp-image-4614" style="border: 0 !important" src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591643960/cayenne/Tank.png" alt="Tile-TankWidget" width="120" height="150"></a></td>
 </tr>
 <tr>
-<td height="150"><a href="#custom-widgets-map"><img class="aligncenter size-full wp-image-4620" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105145/Tile-MapWidget-ComingSoon.png" alt="Tile-MapWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-meter"><img class="aligncenter size-full wp-image-4630" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105203/Tile-MeterWidget-ComingSoon.png" alt="Tile-MeterWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-motion"><img class="aligncenter size-full wp-image-4615" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105136/Tile-MotionWidget-ComingSoon.png" alt="Tile-MotionWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-proximity"><img class="aligncenter size-full wp-image-4614" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105134/Tile-ProximityWidget-ComingSoon.png" alt="Tile-ProximityWidget-ComingSoon" width="120" height="150"></a></td>
-</tr>
-<tr>
-<td height="150"><a href="#custom-widgets-rotary-knob"><img class="aligncenter size-full wp-image-4631" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105204/Tile-RotaryKnobWidget-ComingSoon.png" alt="Tile-RotaryKnobWidget-ComingSoon" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-signal"><img class="aligncenter size-full wp-image-4625" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105154/Tile-SignalWidget-ComingSoon.png" alt="Tile-SignalWidget-ComingSoon" width="120" height="150"></a></td>
 <td height="150"><a href="#custom-widgets-slider"><img class="aligncenter size-full wp-image-4604" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081959/Tile-SliderWidget.png" alt="Tile-SliderWidget" width="120" height="150"></a></td>
-<td height="150"><a href="#custom-widgets-switch"><img class="aligncenter size-full wp-image-4624" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105152/Tile-SwitchWidget-ComingSoon.png" alt="Tile-SwitchWidget-ComingSoon" width="120" height="150"></a></td>
-</tr>
-<tr>
-<td height="150"><a href="#custom-widgets-text"><img class="aligncenter size-full wp-image-4617" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105140/Tile-TextWidget-ComingSoon.png" alt="Tile-TextWidget-ComingSoon" width="120" height="150"></a></td>
 <td height="150"><a href="#custom-widgets-value"><img class="aligncenter size-full wp-image-4599" style="border: 0 !important" src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081807/Tile-ValueWidget.png" alt="Tile-ValueWidget" width="120" height="150"></a></td>
 <td height="150"></td>
 <td height="150"></td>
@@ -63,7 +39,7 @@ Displays the current status of a device as either 1 (being High) or 0 (being low
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624111822/2State1.jpg" width="600" height="360" alt="2 State Widget"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591644318/cayenne/Custom_Widget_2_State_Example.png" width="702" height="601" alt="2 State Widget"><br/><br/></p>
 
 <p id="2-state-display-2" class="anchor-link"></p>
 
@@ -74,7 +50,7 @@ This tutorial explains how to use the 2 State display widget to add a sensor con
 
 Let’s look at each dropdown field that will be used when adding your sensor.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628101415/Widget-2StateSettings.png" width="346" height="534" alt="2 State Widget"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591644318/cayenne/Custom_Widget_2_State_Dropdown.png" width="346" height="534" alt="2 State Widget"><br/><br/></p>
 
 **Name** <br/>
 Give your sensor a name. 
@@ -82,117 +58,20 @@ Give your sensor a name.
 **Device** <br/>
 Select your Arduino device.
 
-**I/O** <br/>
-Select your method of connectivity; is your sensor connected to Digital pins, or will it make use of the Cayenne Virtual pins?
+**Data** <br/>
+Select the data type for your required 2 state widget.
 
-   - **Digital** <br/>
-A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
-   - **Virtual** <br/>
-[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
+**Unit** <br/>
+Select the unit type for the widget. Here it Digital(0/1)
+
+**Channel**
+Add the channel number you want to add the custom 2 state widget.
 
 **Icon** <br/>
 Select an Icon to be used for the widget. For example, a temperature sensor could a thermometer Icon.
 
 **Step 1: Sketch File** <br/>
 If you haven’t already uploaded the 2 State code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">2 State Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
-
-**Step 2: Add Widget** <br/>
-After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
-<br/><br/>
-
-<p id="accelerometer-widget" class="anchor-link"></p>
-
-
-### Accelerometer
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105150/Tile-AccelerometerWidget-ComingSoon.png" width="120" height="150" class="noborder" alt="Accelerometer"><br/><br/></p>
-
-Shows the G forces acting in the X, Y and Z directions.
-
-**Example States**
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624144932/AccelerometerStates.png" width="600" height="282" alt="Accelerometer"><br/><br/></p>
-
-<p id="accelerometer-widget-2" class="anchor-link"></p>
-
-
-#### Accelerometer Tutorial (Arduino)
-
-This tutorial explains how to use the Accelerometer widget to add an accelerometer sensor to your dashboard.
-
-Let’s look at each dropdown field that will be used when adding your widget.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160630135835/Widget-AccelerometerSettings.png" width="346" height="643" alt="Accelerometer"><br/><br/></p>
-
-**Name** <br/>
-Give your widget a name.
-
-**Device** <br/>
-Select your Arduino device.
-
-**I/O** <br/>
-Select your method of connectivity; is your sensor connected to Digital pins, or will it make use of the Cayenne Virtual pins?
-
-   - **Digital** <br/>
-The Arduino may have several pins that can be used as PWM outputs (e.g. Arduino Uno has D3, D5, D6, D9, D10 & D11).<br/><br/>
-   - **Virtual** <br/>
-[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
-
-**Data, Unit** <br/>
-Select the Data type and the Units to be used for the widget.
-
-**Minimum and Maximum Values (optional)** <br/>
-Input the minimum and maximum values that you’d like the slider widget to use when adjusting the range of data for your actuator.
-
-**Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Accelerometer code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Arduino Accelerometer Widget sketch file</a>. See Using Sketch Files for more information on customizing and using sketch files.
-
-**Step 2: Add Widget** <br/>
-After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
-
-<p id="battery-widget" class="anchor-link"></p>
-
-
-### Battery
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624105201/Tile-BatteryWidget-ComingSoon.png" width="120" height="150" alt="Battery" class="noborder"><br/><br/></p>
-
-Shows battery percentage remaining and charging status. Good, warning and danger value ranges can be defined.
-
-**Example States**
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624141218/BatteryStates.jpg" width="600" height="233" alt="Battery"><br/><br/></p>
-
-<p id="battery-widget-2" class="anchor-link"></p>
-
-#### Battery Tutorial (Arduino)
-
-This tutorial explains how to use the Battery widget to add a sensor connected to your Arduino.
-
-Let’s look at each dropdown field that will be used when adding your sensor.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160628103118/Widget-BatterySettings.png" width="346" height="669" alt="Battery"><br/><br/></p>
-
-**Name** <br/>
-Give your sensor a name.
-
-**Device** <br/>
-Select your Arduino device.
-
-**I/O** <br/>
-Select your method of connectivity; is your sensor connected to Digital pins, or will it make use of the Cayenne Virtual pins?
-
-   - **Digital** <br/>
-A digital pin can be used to read data from a non-analog sensor, but the data will need to be written to a virtual channel. If you’re trying to read data from a non-analog sensor, you’ll most likely use a virtual pin.
-
-   - **Virtual** <br/>
-[Virtual pins](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-virtual-pins) are channels to send and receive different data types from and to the Arduino (e.g. SPI, I2C, 1-Wire and devices connected to Arduino expansion boards). There are 26 virtual pins available for each Arduino board.
-
-**Data, Unit** <br/>
-Select the Data type and the Units to be used for the widget. For example, a battery may have percent remaining or a measure of the power level.
-
-**Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Battery code for this widget to your Arduino, click the **Sketch File** button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino" target="_blank">(Coming Soon) Arduino Accelerometer Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the **Add Widget** button and the widget will be added to your dashboard.
