@@ -417,29 +417,29 @@ If you haven’t already uploaded the Value code for this widget to your Arduino
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the Add Widget button and the widget will be added to your dashboard.
 
-<p id="value-display" class="anchor-link"></p>
+<p id="co2-detector" class="anchor-link"></p>
 
 
-### Value
+### CO2 Detector
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081807/Tile-ValueWidget.png" width="120" height="150" alt="Value Display Widget"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591643960/cayenne/CO2.png" width="120" height="150" alt="Co2 Widget"><br/></p>
 
-Displays a measurement value from a sensor or device. You can use settings to adjust the icon or unit information displayed in the widget.
+This displays 2 states. When CO2 is detected by sensor, the widget animates with “On” state to show CO2 presence. When there is no CO2, it is in the “Off” state.
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591708256/cayenne/Custom_Widget_Value_Example.png" width="600" height="367" alt="Value Display Widget"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591709172/cayenne/Custom_Widget_CO2_Example.png" width="600" height="367" alt="CO2  Widget"><br/></p>
 
-<p id="value-display-2" class="anchor-link"></p>
+<p id="co2-detector-2" class="anchor-link"></p>
 
 
-#### Value Arduino Tutorial
+#### CO2 Arduino Tutorial
 
-This tutorial explains how to use the Value display widget to add a sensor connected to your Arduino.
+This tutorial explains how to use the CO2 widget to add a sensor connected to your Arduino.
 
 Let’s look at each dropdown field that will be used when adding your sensor.
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591708256/cayenne/Custom_Widget_Value_Dropdown.png" width="346" height="637" alt="Value Display"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591709172/cayenne/Custom_Widget_CO2_Dropdown.png" width="346" height="637" alt="Value Display"><br/><br/></p>
 
 **Name** <br/>
 Give your sensor a name. 
@@ -448,18 +448,65 @@ Give your sensor a name.
 Select your Arduino device.
 
 **Data** <br/>
-Select the data type for your required Value widget.
+Select the data type for your required CO2 widget.
 
 **Unit** <br/>
-Select the unit type for the Value widget.
+Select the unit type for the CO2 widget.
 
-For example, a temperature monitor could have a Data type of temperature and Units of Celsius.
+For example, a CO2 widget have a Data type of Digital Sensor and Units of Digital(0/1).
 
 **Channel**
-Add the channel number you want to add the custom Value widget.
+Add the channel number you want to add the custom CO2 widget.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Value code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/ValueWidget/ValueWidget.ino" target="_blank">Value Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the CO2 code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">CO2 Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+
+**Step 2: Add Widget** <br/>
+After filling in each of the fields for your widget, click the Add Widget button and the widget will be added to your dashboard.
+
+<p id="tank-widget" class="anchor-link"></p>
+
+
+### Tank Widget
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591643960/cayenne/Tank.png" width="120" height="150" alt="Tank Widget"><br/></p>
+
+This widget can be used to display a level of an water tank or other. 
+
+**Example States**
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591713586/cayenne/Custom_Widget_Tank_Example.png" height="367" alt="Tank Widget"><br/></p>
+
+<p id="tank-widget-2" class="anchor-link"></p>
+
+
+#### Tank Widget Arduino Tutorial
+
+This tutorial explains how to use the Tank widget to add a sensor connected to your Arduino.
+
+Let’s look at each dropdown field that will be used when adding your sensor.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591709172/cayenne/Custom_Widget_CO2_Dropdown.png" width="346" height="637" alt="Value Display"><br/><br/></p>
+
+**Name** <br/>
+Give your sensor a name. 
+
+**Device** <br/>
+Select your Arduino device.
+
+**Data** <br/>
+Select the data type for the Tank widget.
+
+**Unit** <br/>
+Select the unit type for the Tank widget.
+
+For example, a Tank widget have a Data type of Tank Level and Units of Analog.
+
+**Channel**
+Add the channel number you want to add the custom Tank widget.
+
+**Step 1: Sketch File** <br/>
+If you haven’t already uploaded the Tank code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">Tank Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the Add Widget button and the widget will be added to your dashboard.
