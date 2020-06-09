@@ -506,7 +506,7 @@ For example, a Tank widget have a Data type of Tank Level and Units of Analog.
 Add the channel number you want to add the custom Tank widget.
 
 **Step 1: Sketch File** <br/>
-If you haven’t already uploaded the Tank code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/TwoStateWidget/TwoStateWidget.ino" target="_blank">Tank Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
+If you haven’t already uploaded the Tank code for this widget to your Arduino, click the Sketch File button to open the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CustomWidgets/ValueWidget/ValueWidget.ino" target="_blank">Tank Widget sketch file</a>. See [Using Sketch Files](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files) for more information on customizing and using sketch files.
 
 **Step 2: Add Widget** <br/>
 After filling in each of the fields for your widget, click the Add Widget button and the widget will be added to your dashboard.
