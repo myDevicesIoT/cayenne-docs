@@ -420,7 +420,7 @@ After filling in each of the fields for your widget, click the Add Widget button
 <p id="co2-detector" class="anchor-link"></p>
 
 
-### CO2 Detector
+### CO2
 
 <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591643960/cayenne/CO2.png" width="120" height="150" alt="Co2 Widget"><br/></p>
 
@@ -467,7 +467,7 @@ After filling in each of the fields for your widget, click the Add Widget button
 <p id="tank-widget" class="anchor-link"></p>
 
 
-### Tank Widget
+### Tank
 
 <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591643960/cayenne/Tank.png" width="120" height="150" alt="Tank Widget"><br/></p>
 
