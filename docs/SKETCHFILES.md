@@ -24,13 +24,13 @@ Cayenne sketch files will help you get your hardware online quickly, adding sens
 
 The easiest way to get the sketch files you need is to use the **Sketch File** button found when adding your widget from the Cayenne dashboard. When you open the sketch file from the dashboard, Cayenne will create a personalized version of the sketch file just for you; automatically filling in details such as your **authentication token** and some of the Pin values based upon fields you selected on screen.
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591727082/cayenne/Cayenne_MQTT_Arduino_Library_Github.png" width="600" height="388" alt="Using Sketch Files"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381104/cayenne/Arduino_Dashboard_Step_3_Example.png" width="600" height="388" alt="Using Sketch Files"><br/><br/></p>
 
 **Through Cayenne GitHub**
 
 You can find and browse the complete list of example sketch files located on the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples" target="_blank">Cayenne GitHub</a>.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617160351/Github-root.png" width="600" height="300" alt="Using Sketch Files"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381104/cayenne/Arduino_Dashboard_Step_3_Example.png" width="600" height="300" alt="Using Sketch Files"><br/><br/></p>
 
 **Through Arduino IDE**
 
