@@ -88,7 +88,7 @@ Send values like LOW/HIGH and On/Off to change state. An optional icon can be sh
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591706145/cayenne/Custom_Widget_Button_Example.png" width="600" height="175" alt="Button"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591706145/cayenne/Custom_Widget_Button_Example.png" width="900" height="500" alt="Button"><br/><br/></p>
 
 <p id="button-control-2" class="anchor-link"></p>
 
@@ -130,13 +130,13 @@ After filling in each of the fields for your widget, click the **Add Widget** bu
 
 ### Gauge
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081900/Tile-GaugeWidget.pngg" width="120" height="150" alt="Gauge" class="noborder"><br/><br/></p>
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160624081900/Tile-GaugeWidget.png" width="120" height="150" alt="Gauge" class="noborder"><br/><br/></p>
 
 Displays the current value of a sensor within a given range of values. Good, warning and danger value ranges can be defined in settings.
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591704418/cayenne/Custom_Widget_Gauge_Example.png" width="600" height="221" alt="Gauge Widget"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591704418/cayenne/Custom_Widget_Gauge_Example.png" width="900" height="500" alt="Gauge Widget"><br/></p>
 
 <p id="gauge-widget-2" class="anchor-link"></p>
 
@@ -186,7 +186,7 @@ Displays live or historical data from the attached device. Historical data can b
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591706892/cayenne/Custom_Widget_Line_Chart_Example.png" width="600" height="282" alt="Line Chart Tutorial"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591706892/cayenne/Custom_Widget_Line_Chart_Example.png" width="900" height="500" alt="Line Chart Tutorial"><br/></p>
 
 <p id="line-chart-widget-2" class="anchor-link"></p>
 
@@ -236,7 +236,7 @@ This displays 2 states. When motion is detected by sensor, the widget animates w
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591706145/cayenne/Custom_Widget_Button_Example.png" width="600" height="341" alt="Motion Tutorial"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591707161/cayenne/Custom_Widget_Motion_Example.png" width="900" height="500" alt="Motion Tutorial"><br/></p>
 
 <p id="motion-widget-2" class="anchor-link"></p>
 
@@ -283,7 +283,7 @@ This displays 2 states. When proximity is detected by sensor, the widget animate
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591707728/cayenne/Custom_Widget_Proximity_Example.png" width="600" height="340" alt="Proximity Tutorial"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591707728/cayenne/Custom_Widget_Proximity_Example.png" width="900" height="500" alt="Proximity Tutorial"><br/></p>
 
 <p id="proximity-widget-2" class="anchor-link"></p>
 
@@ -331,7 +331,7 @@ Change the value of the connected device, such as dimming a light. The units, MI
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591708092/cayenne/Custom_Widget_Slider_Example.png" width="600" height="136" alt="Slider Widget"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591708092/cayenne/Custom_Widget_Slider_Example.png" width="900" height="500" alt="Slider Widget"><br/><br/></p>
 
 <p id="slider-widget-2" class="anchor-link"></p>
 
@@ -381,7 +381,7 @@ Displays a measurement value from a sensor or device. You can use settings to ad
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591708256/cayenne/Custom_Widget_Value_Example.png" width="600" height="367" alt="Value Display Widget"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591708256/cayenne/Custom_Widget_Value_Example.png" width="900" height="500" alt="Value Display Widget"><br/></p>
 
 <p id="value-display-2" class="anchor-link"></p>
 
@@ -428,7 +428,7 @@ This displays 2 states. When CO2 is detected by sensor, the widget animates with
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591709172/cayenne/Custom_Widget_CO2_Example.png" width="600" height="367" alt="CO2  Widget"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591709172/cayenne/Custom_Widget_CO2_Example.png" width="900" height="500" alt="CO2  Widget"><br/></p>
 
 <p id="co2-detector-2" class="anchor-link"></p>
 
@@ -475,7 +475,7 @@ This widget can be used to display a level of an water tank or other.
 
 **Example States**
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591713586/cayenne/Custom_Widget_Tank_Example.png" height="367" alt="Tank Widget"><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591713586/cayenne/Custom_Widget_Tank_Example.png" width="900" height="500" alt="Tank Widget"><br/></p>
 
 <p id="tank-widget-2" class="anchor-link"></p>
 
