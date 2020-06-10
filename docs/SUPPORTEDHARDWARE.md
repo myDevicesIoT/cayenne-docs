@@ -1389,6 +1389,9 @@ You can add analog, digital and PWM extensions to your Raspberry Pi. This allows
 *   [MCP3008](#supported-hardware-extensions-analog-converter-mcp3008)
 *   [ADS1115](#supported-hardware-extensions-analog-converter-ads1115)
 *   [ADS1015](#supported-hardware-extensions-analog-converter-ads1015)
+*   [MCP4725](#supported-hardware-extensions-analog-converter-mcp4725)
+*   [PCF8591](#supported-hardware-extensions-analog-converter-pcf8591)
+
 
 
 #### MCP3004
@@ -1828,9 +1831,9 @@ sudo service myDevices restart.
 
 #### MCP4725
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606093812/Component-Doc-Image-ADS1015.png" width="346" height="124" alt="ADS1015"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591814892/cayenne/MCP4725.png" width="346" height="124" alt="MCP4725"></p>
 
-<p id="rpi-ads1015" class="anchor-link"></p>
+<p id="rpi-mcp4725" class="anchor-link"></p>
 
 ##### RPI Tutorial
 
@@ -1846,7 +1849,7 @@ A couple of notes before you get started:
 ###### Step 1
 Connect power from the Pi Cobbler to the MCP4725.
 
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_VCC.png" width="757" height="262" class="noborder" alt="ADS1015"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_VCC.png" width="757" height="262" class="noborder" alt="MCP4725"></p>
 
 ###### Step 2
 Connect ground from the Pi Cobbler to the MCP4725.
@@ -1854,16 +1857,16 @@ Connect ground from the Pi Cobbler to the MCP4725.
 <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_GND.png" width="757" height="262" class="noborder" alt="MCP4725"></p>
 
 ###### Step 3
-Connect the SCL pins of the MCP4725 and Pi Cobbler.
-
-<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_SCL.png" width="757" height="262" class="noborder" alt="MCP4725"></p>
-
-###### Step 4
 Connect the SDA pins of the MCP4725 and Pi Cobbler.
 
 <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_SDA.png" width="757" height="262" class="noborder" alt="MCP4725"></p>
 
-###### Step 6
+###### Step 4
+Connect the SCL pins of the MCP4725 and Pi Cobbler.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_SCL.png" width="757" height="262" class="noborder" alt="MCP4725"></p>
+
+###### Step 5
 From the command line run the following commands to install this plugin.
 
 ```
@@ -1871,7 +1874,68 @@ cd /etc/myDevices/plugins
 sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp4725.git
 ```
 
-###### Step 8
+###### Step 6
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
+
+
+#### PCF8591
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591814892/cayenne/PCF8591.png" width="287" height="161" alt="PCF8591"></p>
+
+<p id="rpi-PCF8591" class="anchor-link"></p>
+
+##### RPI Tutorial
+
+Use the following diagram to connect your PCF8591 A/D Converter.
+
+A couple of notes before you get started:
+
+* Make sure Raspberry Pi is powered off when connecting wires.
+* When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
+* The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you!
+
+
+###### Step 1
+Connect power from the Pi Cobbler to the PCF8591.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591814349/cayenne/PCF8591_VCC.png" width="757" height="262" class="noborder" alt="PCF8591"></p>
+
+###### Step 2
+Connect ground from the Pi Cobbler to the PCF8591.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591814350/cayenne/PCF8591_GND.png" width="757" height="262" class="noborder" alt="PCF8591"></p>
+
+###### Step 3
+Connect the SDA pins of the PCF8591 and Pi Cobbler.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591814350/cayenne/PCF8591_SDA.png" width="757" height="262" class="noborder" alt="PCF8591"></p>
+
+###### Step 4
+Connect the SCL pins of the PCF8591 and Pi Cobbler.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591814349/cayenne/PCF8591_SCL.png" width="757" height="262" class="noborder" alt="PCF8591"></p>
+
+###### Step 5
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-pcf8591.git
+```
+
+###### Step 6
 Restart the agent so it can load the plugin.
 
 ```
