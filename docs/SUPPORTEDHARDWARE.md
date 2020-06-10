@@ -1437,8 +1437,31 @@ Connect the MCP3004 chip-select input pin 8 (CS/SHDN) to one of the Pi Cobbler c
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121238/RPI-MCP3004-Step-6.png" width="757" height="315" class="noborder" alt="MCP3004"></p>
 
 ###### Step 7
-You’re done! You can now add the MCP3004 converter to your dashboard using chip-select 0.
+From the command line run the following commands to install this plugin.
 
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp3xxx.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp3xxx.plugin file. By default this is set to MCP3008 in the cayenne_mcp3xxx module so need to change it MCP3004. If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp3xxx.plugin.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 #### MCP3204
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102606/Component-Doc-Image-MCP3204.png" width="346" height="124" alt="MCP3204"></p>
@@ -1486,7 +1509,31 @@ Connect the MCP3204 chip-select input pin 8 (CS/SHDN) to one of the Pi Cobbler c
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121241/RPI-MCP3204-Step-6.png" width="757" height="291" class="noborder" alt="MCP3204"></p>
 
 ###### Step 7
-You’re done! You can now add the MCP3204 converter to your dashboard using chip-select 0.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp3xxx.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp3xxx.plugin file. By default this is set to MCP3008 in the cayenne_mcp3xxx module so need to change it MCP3204. If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp3xxx.plugin.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 #### MCP3208
@@ -1535,7 +1582,31 @@ Connect the MCP3208 chip-select input pin 10 (CS/SHDN) to one of the Pi Cobbler 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121334/RPI-MCP3208-Step-6.png" width="757" height="314" class="noborder" alt="MCP3208"></p>
 
 ###### Step 7
-You’re done! You can now add the MCP3208 converter to your dashboard using chip-select 0.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp3xxx.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp3xxx.plugin file. By default this is set to MCP3008 in the cayenne_mcp3xxx module so need to change it MCP3208. If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp3xxx.plugin.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 #### MCP3008
@@ -1584,7 +1655,31 @@ Connect the MCP3008 chip-select input pin 10 (CS/SHDN) to one of the Pi Cobbler 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601120409/RPI-MCP3008-Step-6.png" width="757" height="315" class="noborder" alt="MCP3008"></p>
 
 ###### Step 7
-You’re done! You can now add the MCP3008 converter to your dashboard, using chip-select 0.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp3xxx.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp3xxx.plugin file. By default this is set to MCP3008 in the cayenne_mcp3xxx module. If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp3xxx.plugin.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 #### ADS1115
@@ -1635,8 +1730,31 @@ Connect the GND and ADDR pins on the ADS1115. This will result in an I2C address
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601120225/RPI-ADS1115-Step-5.png" width="757" height="262" class="noborder" alt="ADS1115"></p>
 
 ###### Step 6
+From the command line run the following commands to install this plugin.
 
-You’re done! You can now add the ADS1115 converter on the dashboard, with default address of 0x48.
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-ads1xxx.git
+```
+
+###### Step 7
+Specify the device you are using by setting the class value under the ADS section in the cayenne_ads1xxx.plugin file. By default this is set to ADS1115 in the cayenne_ads1xxx module. If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_ads1xxx.plugin.
+
+###### Step 8
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 9
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 #### ADS1015
 
@@ -1681,8 +1799,32 @@ Connect the GND and ADDR pins on the ADS1015. This will result in an I2C address
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601120054/RPI-ADS1015-Step-5.png" width="757" height="262" class="noborder" alt="ADS1015"></p>
 
-You’re done! You can now add the ADS1015 converter on the dashboard, with default address of 0x48.
+###### Step 6
+From the command line run the following commands to install this plugin.
 
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-ads1xxx.git
+```
+
+###### Step 7
+Specify the device you are using by setting the class value under the ADS section in the cayenne_ads1xxx.plugin file. By default this is set to ADS1115 in the cayenne_ads1xxx module so you need to change it to ADS1015. If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_ads1xxx.plugin.
+
+###### Step 8
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 9
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 ### GPIO Port
 
@@ -1743,8 +1885,37 @@ Connect ground to the address pin (pin 15) on the MCP23018. This will give the e
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160609104216/RPI-MCP23018-Step-6.png" width="757" height="272" class="noborder" alt="MCP23018"></p>
 
+
 ###### Step 7
-You’re done! You can now add the MCP23018 on the dashboard, with default address of 0x20.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp23xxx.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp23xxx.plugin file. By default this is set to MCP23017 in the cayenne_mcp23xxx module so you need to change it to MCP23018.
+
+If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp23xxx.plugin.
+
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 #### MCP23017
@@ -1794,7 +1965,35 @@ Connect power to the Reset (pin 18) on the MCP23017. Pulling Reset high is neede
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121221/RPI-MCP23017-Step-6.png" width="757" height="290" class="noborder" alt="MCP23017"></p>
 
 ###### Step 7
-You’re done! You can now add the MCP23017 on the dashboard, with default address of 0x20.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp23xxx.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp23xxx.plugin file. By default this is set to MCP23017 in the cayenne_mcp23xxx module.
+
+If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp23xxx.plugin.
+
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 #### MCP23009
@@ -1842,9 +2041,36 @@ Connect ground to the address pin (pin 5) on the MCP23009. This will give the ex
 Connect power to the Reset (pin 6) on the MCP23009. Pulling Reset high is needed for normal operation.
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121218/RPI-MCP23009-Step-6.png" width="757" height="273" class="noborder" alt="MCP23009"></p>
-
 ###### Step 7
-You’re done! You can now add the MCP23009 on the dashboard, with default address of 0x20.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp23xxx.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp23xxx.plugin file. By default this is set to MCP23017 in the cayenne_mcp23xxx module so you need to change it to MCP23009.
+
+If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp23xxx.plugin.
+
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 #### MCP23008
@@ -1894,43 +2120,35 @@ Connect power to the Reset (pin 6) on the MCP23008. Pulling Reset high is needed
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121214/RPI-MCP23008-Step-6.png" width="757" height="272" class="noborder" alt="MCP23008"></p>
 
 ###### Step 7
-You’re done! You can now add the MCP23008 on the dashboard, with default address of 0x20.
+From the command line run the following commands to install this plugin.
 
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp23xxx.git
+```
 
-#### DS2408
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp23xxx.plugin file. By default this is set to MCP23017 in the cayenne_mcp23xxx module so you need to change it to MCP23008.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606100910/Component-Doc-Image-DS2408.png" width="346" height="124" alt="DS2408"></p>
+If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp23xxx.plugin.
 
-<p id="rpi-ds2408" class="anchor-link"></p>
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
 
-##### RPI Tutorial
-Use the following diagram to connect your **DS2408 “1-Wire” IO Expander**.
+###### Step 9
+Restart the agent so it can load the plugin.
 
-A couple of notes before you get started:
+```
+sudo service myDevices restart
+```
 
-* To take advantage of Cayenne’s automatic detection of 1-wire devices, connect them to GPIO 4.
-* Make sure Raspberry Pi is powered off when connecting wires.
-* When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
-* The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you!
-* Some full-size breadboards (used in diagrams below) have a powerline that is separated in the middle. If this is the case, be sure your sensors are connected on the same half of the breadboard as your Pi Cobbler.
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
 
-###### Step 1
-Connect power from the Pi Cobbler to the DS2408 VCC (pin 3). Make sure a pull-up resistor is in place between the power (pin 3) and data (pin 4) pins on the DS2408.
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121204/RPI-DS2408-Step-1.png" width="757" height="247" class="noborder" alt="DS2408"></p>
-
-###### Step 2
-Connect ground from the Pi Cobbler to the DS2408 ground (pin 5).
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121204/RPI-DS2408-Step-2.png" width="757" height="247" class="noborder" alt="DS2408"></p>
-
-###### Step 3
-Connect the DS2408 control pin to GPIO Pin 4 on the Pi Cobbler. Connecting to GPIO 4 allows for automatic detection with Cayenne.
-
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121205/RPI-DS2408-Step-3.png" width="757" height="247" class="noborder" alt="DS2408"></p>
-
-###### Step 4
-You’re done! Power on your Raspberry Pi and Cayenne will automatically detect the DS2408 expander and add it to your dashboard.
+```
+sudo service myDevices restart.
+```
 
 #### MCP23S09
 
@@ -1979,7 +2197,36 @@ Connect the Pi Cobbler’s MISO pin and the MCP23S09 pin 6 (SO).
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121228/RPI-MCP23S09-Step-6.png" width="757" height="263" class="noborder" alt="MCP23S09"></p>
 
 ###### Step 7
-You’re done! You can now add the MCP23S09 converter to your dashboard using chip-select 0.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp23xxx.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp23xxx.plugin file. By default this is set to MCP23017 in the cayenne_mcp23xxx module so you need to change it to MCP23S09.
+
+If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp23xxx.plugin.
+
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
+
 
 
 #### MCP23S08
@@ -2034,7 +2281,35 @@ Connect the MCP23S08 chip-select input pin 7 (CS) to one of the Pi Cobbler chip-
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121224/RPI-MCP23S08-Step-7.png" width="757" height="276" class="noborder" alt="MCP23S08"></p>
 
 ###### Step 8
-You’re done! You can now add the MCP23S08 converter to your dashboard using chip-select 0.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp23xxx.git
+```
+
+###### Step 9
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp23xxx.plugin file. By default this is set to MCP23017 in the cayenne_mcp23xxx module so you need to change it to MCP23S08.
+
+If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp23xxx.plugin.
+
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
+
+###### Step 10
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 11
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 #### MCP23S18
@@ -2084,7 +2359,35 @@ Connect the Pi Cobbler’s MISO pin and the MCP23S18 pin 15 (SO).
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121235/RPI-MCP23S18-Step-6.png" width="757" height="272" class="noborder" alt="MCP23S18"></p>
 
 ###### Step 7
-You’re done! You can now add the MCP23S18 converter to your dashboard using chip-select 0.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp23xxx.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp23xxx.plugin file. By default this is set to MCP23017 in the cayenne_mcp23xxx module so you need to change it to MCP23S18.
+
+If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp23xxx.plugin.
+
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 #### MCP23S17
@@ -2144,7 +2447,35 @@ Connect power to RESET (pin 18) pin on the MCP23S17. Pulling Reset high is neede
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121232/RPI-MCP23S17-Step-8.png" width="757" height="262" class="noborder" alt="MCP23S17"></p>
 
 ###### Step 9
-You’re done! You can now add the MCP23S17 converter to your dashboard using chip-select 0.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp23xxx.git
+```
+
+###### Step 10
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp23xxx.plugin file. By default this is set to MCP23017 in the cayenne_mcp23xxx module so you need to change it to MCP23S17.
+
+If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp23xxx.plugin.
+
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
+
+###### Step 11
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 12
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 ### PWM
@@ -2187,7 +2518,28 @@ Connect the SCL pins on the Pi Cobbler and PCA9685.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121339/RPI-PCA9685-Step-4.png" width="757" height="272" class="noborder" alt="PCA9685"></p>
 
 ###### Step 5
-You’re done! You can now add the PCA9685 controller to your dashboard with default address of 0x40.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-pca9685.git
+```
+
+###### Step 6
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 7
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 
 ## Sensors
