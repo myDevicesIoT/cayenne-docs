@@ -1826,6 +1826,66 @@ NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboa
 sudo service myDevices restart.
 ```
 
+#### MCP4725
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606093812/Component-Doc-Image-ADS1015.png" width="346" height="124" alt="ADS1015"></p>
+
+<p id="rpi-ads1015" class="anchor-link"></p>
+
+##### RPI Tutorial
+
+Use the following diagram to connect your MCP4725 D/A Converter.
+
+A couple of notes before you get started:
+
+* Make sure Raspberry Pi is powered off when connecting wires.
+* When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
+* The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you!
+
+
+###### Step 1
+Connect power from the Pi Cobbler to the MCP4725.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_VCC.png" width="757" height="262" class="noborder" alt="ADS1015"></p>
+
+###### Step 2
+Connect ground from the Pi Cobbler to the MCP4725.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_GND.png" width="757" height="262" class="noborder" alt="MCP4725"></p>
+
+###### Step 3
+Connect the SCL pins of the MCP4725 and Pi Cobbler.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_SCL.png" width="757" height="262" class="noborder" alt="MCP4725"></p>
+
+###### Step 4
+Connect the SDA pins of the MCP4725 and Pi Cobbler.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591808849/cayenne/MCP4725_SDA.png" width="757" height="262" class="noborder" alt="MCP4725"></p>
+
+###### Step 6
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp4725.git
+```
+
+###### Step 8
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
+
 ### GPIO Port
 
 *   [MCP23018](#supported-hardware-extensions-gpio-port-mcp23018)
