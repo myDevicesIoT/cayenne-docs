@@ -2601,6 +2601,69 @@ NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboa
 sudo service myDevices restart.
 ```
 
+#### PCF8574
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591876463/cayenne/PCF8574.png" width="446" height="154" alt="PCF8574"></p>
+
+<p id="rpi-pcf8574" class="anchor-link"></p>
+
+##### RPI Tutorial
+Use the following diagram to connect your **PCF8574 IO Expander**.
+
+A couple of notes before you get started:
+
+* Make sure Raspberry Pi is powered off when connecting wires.
+* When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
+* The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you!
+
+###### Step 1
+Connect your power lines, connecting power to VCC on the PCF8574.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591876461/cayenne/PCF8574_VCC.png" width="757" height="245" class="noborder" alt="PCF8574"></p>
+
+###### Step 2
+Connect your ground lines, connecting ground to the GND on the PCF8574.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591876461/cayenne/PCF8574_GND.png" width="757" height="245" class="noborder" alt="PCF8574"></p>
+
+###### Step 3
+Connect the SDA pins of the PCF8574 and Pi Cobbler.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591876461/cayenne/PCF8574_SDA.png" width="757" height="272" class="noborder" alt="PCF8574"></p>
+
+###### Step 4
+Connect the SCL pins of the PCF8574 and Pi Cobbler.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591876461/cayenne/PCF8574_SCL.png" width="757" height="272" class="noborder" alt="PCF8574"></p>
+
+###### Step 7
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-pcf8574.git
+```
+
+###### Step 8
+Specify the device you are using by setting the class value under the PCF8574 section in the cayenne_pcf8574.plugin file. By default this is set to PCF8574 but it can also be set PCF8574A.
+
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
+
+###### Step 9
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 ### PWM
 
