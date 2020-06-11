@@ -2836,6 +2836,8 @@ Cayenne works with temperature, luminosity, pressure/distance, motion and generi
 *   [DS18B20](#supported-hardware-sensors-temperature-ds18b20)
 *   [BMP180](#supported-hardware-sensors-temperature-bmp180)
 *   [Thermistor](#supported-hardware-sensors-temperature-thermistor)
+*   [DHT22](#supported-hardware-sensors-temperature-dht22)
+
 
 #### TMP36
 
@@ -2869,10 +2871,34 @@ Connect the TMP36 pin 2 (VOUT) to one of the 8 Channels on the MCP3008. For this
 
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122644/RPI-TMP36-Step-3.png" width="757" height="317" class="noborder" alt="TMP36"></p>
 
-###### Step 4
-You’re done! You can now add the TMP36 sensor to your dashboard, using the MCP3008’s Channel 0 to read the sensor value.
 
-<p id="arduino-tmp36" class="anchor-link"></p>
+###### Step 4
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-tmp36.git
+```
+
+###### Step 5
+Specify the ADC device and channel number you are connecting the TMP36 to by modifying init_args under TMP36 in the cayenne_tmp36.plugin file. The adc value should be set to plugin_name:section where plugin_name is the name of the ADC plugin file name and section is the section within that file that defines the ADC extension. For example, cayenne_mcp3xxx:MCP. The channel value should be set to the channel on the ADC device that the TMP36 is connected to.
+
+###### Step 6
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 7
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
+
 
 ##### Arduino Tutorial
 Use the following diagram to connect your **TMP36 Analog Temperature sensor**.
@@ -3193,6 +3219,107 @@ You’re done! You can now add the Thermistor to your dashboard, reading its val
 ###### Step 5
 Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/Thermistor/Thermistor.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
 
+#### DHT22
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591889455/cayenne/DHT22.png" width="346" height="124" alt="DHT22"></p>
+
+<p id="rpi-dht22" class="anchor-link"></p>
+
+##### RPI Tutorial
+
+Use the following diagram to connect a **DHT22 sensor**.
+
+A couple of notes before you get started:
+
+*   Make sure Raspberry Pi is powered off when connecting wires.
+*   When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
+*   The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you!
+
+###### Step 1
+Connect power from the Pi Cobbler to the DHT22.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591889410/cayenne/DHT22_VCC.png" width="757" height="245" class="noborder" alt="DHT22"></p>
+
+###### Step 2
+Connect ground from the Pi Cobbler to the DHT22 (GND).
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591889410/cayenne/DHT22_GND.png" width="757" height="245" class="noborder" alt="DHT22"></p>
+
+###### Step 3
+Connect the pull up resistor of 10 kohm to pin 2 of the DHT22.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591889410/cayenne/DHT22_GND.png" width="757" height="245" class="noborder" alt="DHT22"></p>
+
+###### Step 4
+Connect pin2 of DHT22 to pin 17 of the Pi Cobbler.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591889410/cayenne/DHT22_pin_17.png" width="757" height="245" class="noborder" alt="DHT22"></p>
+
+###### Step 5
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-dht.git
+cd cayenne-plugin-dht
+sudo pip3 install .
+```
+
+###### Step 6
+Specify the sensor type and pin you are using by modifying init_args under DHT Temperature in the cayenne_dht.plugin file. For a DHT11 use 11 for the sensor argument, for a DHT22 use 22 and for a AM2302 use 22. Set the pin argument to the GPIO pin number your sensor is connected to. For example, a DHT11 on pin 17 would use the following:
+```
+init_args={"sensor": 22, "pin": 17}
+```
+
+###### Step 7
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 8
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
+<p id="arduino-dht22" class="anchor-link"></p>
+
+##### Arduino Tutorial
+Use the following diagram to connect your **DHT22 sensor**.
+
+A couple of notes before you get started:
+
+* The provided diagram is just an example of how to connect the hardware. There are many ways to connect devices, so try what works best for you!
+* Although there are many Arduino boards, the one used in this example is the Arduino Uno.
+
+###### Step 1
+Connect ground from the Arduino to the DHT22 (GND).
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591894264/cayenne/DHT22_Arduino_GND.png" width="757" height="601" class="noborder" alt="DHT22"></p>
+
+###### Step 2
+Connect 5V power from the Arduino to the DHT22 VCC.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591894264/cayenne/DHT22_Arduino_VCC.png" width="757" height="601" class="noborder" alt="DHT22"></p>
+
+###### Step 3
+Connect a pull up resistor to pin 2 of DHT22.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591894264/cayenne/DHT22_Arduino_Resistor.png" width="757" height="601" class="noborder" alt="DHT22"></p>
+
+###### Step 4
+Connect pin 2 of DHT22 to arduino digital pin 2.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591894264/cayenne/DHT22_Arduino_Pin_2.png" width="757" height="601" class="noborder" alt="DHT22"></p>
+
+
+###### Step 5
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/CommunitySubmitted/DHT/DHT.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your MQTT Credentials.
+
 ### Luminosity
 
 *   [VCNL4000](#supported-hardware-sensors-luminosity-vcnl4000)
@@ -3265,7 +3392,7 @@ Connect the the SDA and SCL pins on the Arduino and VCNL4000.
 You’re done! You can now add the VCNL4000 to your dashboard.
 
 ###### Step 5
-Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/VCNL4000/VCNL4000.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/VCNL4000/VCNL4000.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your MQTT Credentials.
 
 #### TSL2561
 
@@ -3306,7 +3433,31 @@ Connect the SCL pins of the TSL2561 and Pi Cobbler.
 <p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601122645/RPI-TSL2561-Step-4.png" width="757" height="245" class="noborder" alt="TSL2561"></p>
 
 ###### Step 5
-You’re done! You can now add the TSL2561 sensor on the dashboard, with default address of 0x39.
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-tsl.git
+```
+
+###### Step 6
+Specify the device you are using by setting the class value under the TSL Luminosity section in the cayenne_tsl.plugin file. By default this is set to TSL2561 but it can be set to use any of the classes in the cayenne_tsl module.
+
+###### Step 7
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 8
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
 
 <p id="arduino-tsl2561" class="anchor-link"></p>
 
