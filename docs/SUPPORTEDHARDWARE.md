@@ -4008,4 +4008,4 @@ Connect the Photoresistor to one of the Analog inputs on the Arduino. For this e
 You’re done! You can now add the photoresistor to your dashboard, referencing Analog pin 0 as the input pin.
 
 ###### Step 5
-Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/GenericAnalogInput/GenericAnalogInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your authentication token.
+Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/GenericAnalogInput/GenericAnalogInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your MQTT Credentials.
