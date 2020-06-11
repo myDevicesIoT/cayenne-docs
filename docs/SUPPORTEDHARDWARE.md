@@ -1961,6 +1961,8 @@ sudo service myDevices restart.
 *   [MCP23S08](#supported-hardware-extensions-gpio-port-mcp23s08)
 *   [MCP23S18](#supported-hardware-extensions-gpio-port-mcp23s18)
 *   [MCP23S17](#supported-hardware-extensions-gpio-port-mcp23s17)
+*   [PCF8574](#supported-hardware-extensions-gpio-port-pcf8574)
+
 
 #### MCP23018
 
@@ -2657,6 +2659,93 @@ sudo service myDevices restart
 ```
 
 ###### Step 10
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
+
+```
+sudo service myDevices restart.
+```
+
+#### MCP23S17
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160606102122/Component-Doc-Image-MCP23S17.png" width="346" height="124" alt="MCP23S17"></p>
+
+<p id="rpi-mcp23s17" class="anchor-link"></p>
+
+##### RPI Tutorial
+Use the following diagram to connect your **MCP23S17 A/D Converter with SPI Interface**.
+
+A couple of notes before you get started:
+
+* Make sure Raspberry Pi is powered off when connecting wires.
+* When using a GPIO ribbon cable, make sure the power wire (it’s a different color than the others) is connected to the corner of your Raspberry Pi and the top of your Pi cobbler.
+* The provided diagram is just an example of how to connect the sensor. There are many ways to connect sensors and extensions, so try what works best for you!
+* Some full-size breadboards (used in diagrams below) have a powerline that is separated in the middle. If this is the case, be sure your sensors are connected on the same half of the breadboard as your Pi Cobbler.
+
+###### Step 1
+Connect power from the Pi Cobbler to VDD (pin 9) on the MCP23S17.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121228/RPI-MCP23S17-Step-1.png" width="757" height="246" class="noborder" alt="MCP23S17"></p>
+
+###### Step 2
+Connect ground from the Pi Cobbler to VSS (pin 10) on the MCP23S17.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121229/RPI-MCP23S17-Step-2.png" width="757" height="246" class="noborder" alt="MCP23S17"></p>
+
+###### Step 3
+Connect the MCP23S17 chip-select input pin 11 (CS) to one of the Pi Cobbler chip-select pins, CE0 in this example.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121229/RPI-MCP23S17-Step-3.png" width="757" height="262" class="noborder" alt="MCP23S17"></p>
+
+###### Step 4
+Connect the Pi Cobbler’s SCLK pin and the MCP23S17 pin 12 (SCK).
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121230/RPI-MCP23S17-Step-4.png" width="757" height="262" class="noborder" alt="MCP23S17"></p>
+
+###### Step 5
+Connect the Pi Cobbler’s MOSI pin and the MCP23S17 pin 13 (SI).
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121230/RPI-MCP23S17-Step-5.png" width="757" height="262" class="noborder" alt="MCP23S17"></p>
+
+###### Step 6
+Connect the Pi Cobbler’s MISO pin and the MCP23S17 pin 14 (SO).
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121231/RPI-MCP23S17-Step-6.png" width="757" height="262" class="noborder" alt="MCP23S17"></p>
+
+###### Step 7
+Connect ground to the MCP23S17 address pins (15, 16, 17). This will give the expander a default address of 0x20.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121232/RPI-MCP23S17-Step-7.png" width="757" height="262" class="noborder" alt="MCP23S17"></p>
+
+###### Step 8
+Connect power to RESET (pin 18) pin on the MCP23S17. Pulling Reset high is needed for normal operation.
+
+<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601121232/RPI-MCP23S17-Step-8.png" width="757" height="262" class="noborder" alt="MCP23S17"></p>
+
+###### Step 9
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-mcp23xxx.git
+```
+
+###### Step 10
+Specify the device you are using by setting the class value under the MCP section in the cayenne_mcp23xxx.plugin file. By default this is set to MCP23017 in the cayenne_mcp23xxx module so you need to change it to MCP23S17.
+
+If you do not want the raw channel values to be displayed in the Cayenne dashboard you can disable any of the individual input sections in cayenne_mcp23xxx.plugin.
+
+By default the plugin alternates between input and output channels. To specify different functions for specific channels you can modify the class for that section to specify DigitalInput or DigitalOutput.
+
+###### Step 11
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+
+###### Step 12
 Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
 
 NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using 
