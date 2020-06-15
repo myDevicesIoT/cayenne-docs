@@ -24,19 +24,19 @@ Cayenne sketch files will help you get your hardware online quickly, adding sens
 
 The easiest way to get the sketch files you need is to use the **Sketch File** button found when adding your widget from the Cayenne dashboard. When you open the sketch file from the dashboard, Cayenne will create a personalized version of the sketch file just for you; automatically filling in details such as your **authentication token** and some of the Pin values based upon fields you selected on screen.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151040/Add-Device-Arduino-TMP36-Sketch-file2.png" width="600" height="388" alt="Using Sketch Files"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381104/cayenne/Arduino_Dashboard_Step_3_Example.png" width="600" height="388" alt="Using Sketch Files"><br/><br/></p>
 
 **Through Cayenne GitHub**
 
 You can find and browse the complete list of example sketch files located on the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/tree/master/examples" target="_blank">Cayenne GitHub</a>.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617160351/Github-root.png" width="600" height="300" alt="Using Sketch Files"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591381104/cayenne/Arduino_Dashboard_Step_3_Example.png" width="600" height="300" alt="Using Sketch Files"><br/><br/></p>
 
 **Through Arduino IDE**
 
 After adding the Cayenne library to Arduino IDE, you can open example Cayenne sketch files from the **File -> Examples** menu.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601124630/CayenneExampleSketchFiles.jpg" width="600" height="587" alt="Using Sketch Files"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591380348/cayenne/Arduino_IDE_3.png" width="600" height="587" alt="Using Sketch Files"><br/><br/></p>
 
 <p id="customizing-sketch-files" class="anchor-link"></p>
 
@@ -45,23 +45,27 @@ After adding the Cayenne library to Arduino IDE, you can open example Cayenne sk
 
 After locating the example sketch file that you need for your Arduino board or connected device, you will need to copy & paste the content into the Arduino IDE. After copying & pasting the example sketch files, you will want to double check that the content of the sketch file is correct.
 
-**Verify your authentication token**
+**Verify your MQTT credentials**
 
-The authentication token is the unique identifier that connects your Arduino board to the Cayenne Cloud and enables interactions to and from Cayenne and your hardware.  An Auth token is generated each time you add a new Arduino board.
+MQTT credentials are unique identifier that connects your Arduino board to the Cayenne Cloud and enables interactions to and from Cayenne and your hardware.  Each cayenne account has unquie MQTT Username and password while each device in that account has an unique Client ID. Two device with same Client ID cannot be connected. 
 
-If you use an example sketch file from Cayenne, you will want to make sure that your authentication token is present. To verify this, check for the following line in your sketch file:<br/>
+If you use an example sketch file from Cayenne, you will want to make sure that your MQTT Credentials are present. To verify this, check for the following lines in your sketch file:<br/>
  
 ```
-char token[] = "AuthenticationToken";
+char username[] = "MQTT_USERNAME";
+char password[] = "MQTT_PASSWORD";
+char clientID[] = "CLIENT_ID";
 ```
  
 Make sure to update this line in the sketch file to include your Arduino board’s unique authentication token. It should look similar to this:<br/>
 
 ```
-char token[] = "a5cpbk9k1w";
+char username[] = "6e06ae80-a72d-11ea-93bf-d33a96695544";
+char password[] = "48f0508728b399702931ec3754551dea9b8a5b24";
+char clientID[] = "d289aa20-aa7e-11ea-b767-3f1a8f1211ba";
 ```
 
-If you need help, refer to [Finding your authentication token](#sketch-files-finding-auth-token).<br/><br/>
+If you need help, refer to [Finding your MQTT Credentials](#sketch-files-finding-auth-token).<br/><br/>
 
 
 **Verify pin assignments**
@@ -73,19 +77,19 @@ For example, let’s look at the <a href="https://github.com/myDevicesIoT/Cayenn
 ```
 #define CAYENNE_PRINT Serial // Comment this out to disable prints and save space
 #include <CayenneEthernet.h>
-#define LED_VIRTUAL_PIN 1
-#define LED_DIGITAL_PIN 3
+#define VIRTUAL_PIN 1
+#define ACTUATOR_PIN 3
 ```
 
-The code assumes that you have your actuator connected to the Arduino’s **Digital Pin 3**. It also assumes that you will be using **Virtual Pin 1** when adding the Luminosity widget in the Cayenne dashboard.
+The code assumes that you have your actuator connected to the Arduino’s **Digital Pin 3**. It also assumes that you will be using **Pin 1** when adding the Luminosity widget in the Cayenne dashboard.
 
-Let’s assume that you didn’t attach your Luminosity actuator to Digital Pin 3, but instead you used **Digital Pin 6**. You will need to update the sketch file to correct the pin. Update the **LED_DIGITAL_PIN** definition so that it points at pin 6.
+Let’s assume that you didn’t attach your Luminosity actuator to Digital Pin 3, but instead you used **Digital Pin 6**. You will need to update the sketch file to correct the pin. Update the **ACTUATOR_PIN** definition so that it points at pin 6.
 
 ```
-#define LED_DIGITAL_PIN 6
+#define ACTUATOR_PIN 6
 ```
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160617151924/Arduino-Luminosity-in-Arduino-IDE.png" width="600" height="554" alt="Using Sketch Files"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591727082/cayenne/Cayenne_MQTT_Arduino_Library_Github.png" width="600" height="554" alt="Using Sketch Files"><br/><br/></p>
 
 Once you’ve looked over your sketch file and updated all values, use **Sketch -> Upload** in Arduino IDE to upload the sketch file to your device.
 
@@ -98,7 +102,7 @@ Cayenne provides various example sketch files for [supported hardware](https://d
 
 Let’s start by taking a look at the example sketch file for connecting a TMP36 temperature sensor and go over each section to get a better understanding of what goes on in an typical Cayenne sketch file.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160629103643/SketchFileMerge1.png" width="600" height="554" alt="Combining Sketch Files"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591730480/cayenne/Sketch.png" width="600" height="554" alt="Combining Sketch Files"><br/><br/></p>
 
 **Comments** <br/>
 Each Cayenne example sketch file comes with some helpful tips on using it. When merging sketch files you should first read through the comments and get an understanding of what the example is doing. You do not need to keep any comments when combining sketch files, but if you find any notes useful, feel free to keep them in.
@@ -109,7 +113,7 @@ Example:<br/>
 
 ```
 /*
-Cayenne Analog Distance Sensor Example
+Cayenne TMP36 Example
 */
 ```
 <br/>
@@ -120,13 +124,14 @@ In order to support a sensor or connection, you may find certain libraries need 
 Example:<br/>
 
 ```
-#include <CayenneEthernet.h>
+#include <CayenneTemperature.h>
+#include <CayenneMQTTEthernet.h>  
 ```
 <br/>
 
 
 **Constants and Pin Numbers** <br/>
-In most sketch files, you will find certain constants defined so that they can be later referred to in various functions used to read or control the device. For example, you will always need to have your unique authentication token present in the sketch file. It will also be common to see pin assignments included, so that the code knows which pins you used when wiring your device to the Arduino.
+In most sketch files, you will find certain constants defined so that they can be later referred to in various functions used to read or control the device. For example, you will always need to have your unique MQTT Credentials present in the sketch file. It will also be common to see pin assignments included, so that the code knows which pins you used when wiring your device to the Arduino.
 
 When combining sketch files, you will need to include all the constants and pin assignments from both sketch files. Be sure that non-generic defines and constants, such as for pin assignments, are included and are unique; include both statements and then rename one or both.
 
@@ -137,11 +142,15 @@ When combining sketch files, you will need to include all the constants and pin 
 Example:<br/>
 
 ```
-// Cayenne authentication token. This should be obtained from the Cayenne Dashboard.
-char token[] = "6ruapz6zx1";
-// Virtual Pin of the TMP36 widget.
+// Cayenne authentication info. This should be obtained from the Cayenne Dashboard.
+char username[] = "MQTT_USERNAME";
+char password[] = "MQTT_PASSWORD";
+char clientID[] = "CLIENT_ID";
 
-#define VIRTUAL_PIN V1
+#define VIRTUAL_CHANNEL 1
+
+// Analog pin the TMP36 is connected to.
+const int tmpPin = 0;
 ```
 <br/>
 
@@ -168,7 +177,7 @@ Example:<br/>
 void setup()
 {
 Serial.begin(9600);
-Cayenne.begin(token);
+Cayenne.begin(username, password, clientID);
 }
 ```
 <br/>
@@ -176,15 +185,15 @@ Cayenne.begin(token);
 **Loop** <br/>
 After setup, the Loop function gets called. It is here that the various code for reading/controlling your devices occurs. When combining sketch files, make sure to incorporate the code from both loop functions into this section. However, be careful when merging items here as the order of code matters. If you change the sequence things are run in, things may no longer work as expected. None of the Cayenne example sketches have complex code in the loop function, so this makes it trivial to merge example sketches. But if you start to merge sketch files from other sources, this step can get non-trivial. Be sure to read through and understand what the sketch file is doing so that you make sure the logic of what it does remains intact.
 
-*TIP: In order for Cayenne to work, you will always need a single Cayenne.run() in the loop function.*
+*TIP: In order for Cayenne to work, you will always need a single Cayenne.loop() in the loop function.*
 
-*TIP: Be sure to avoid putting delays or code that takes a while to process in the loop since that can block Cayenne.run from executing events properly.*
+*TIP: Be sure to avoid putting delays or code that takes a while to process in the loop since that can block Cayenne.loop from executing events properly.*
 
 Example:<br/>
 ```
 void loop()
 {
-Cayenne.run();
+Cayenne.loop();
 }
 ```
 <br/>
@@ -219,40 +228,52 @@ When adding our Arduino board to Cayenne, you will flash your Arduino device wit
 
 Your sketch file will start out looking similar to this:
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160629141643/SketchFileMerge2-W5500.png" width="600" height="658" alt="Sketch File"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591731659/cayenne/Arduino_W5500_Sketch.png" width="600" height="658" alt="Sketch File"><br/><br/></p>
 
 **W5500 + Analog Distance Sensor**
 
 Now let’s add an Analog Distance sensor using the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/AnalogDistanceSensor/AnalogDistanceSensor.ino" target="_blank">Analog Distance sensor sketch file</a>. Comparing these sketch files, we see some things to merge.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160629141902/SketchFileMerge3-W5500-vs-AnalogDistance.png" width="600" height="400" alt="Sketch File"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591731659/cayenne/W5500_Compare_Analog_Distance_Sketch.png" width="600" height="400" alt="Sketch File"><br/><br/></p>
 
 1. We will ignore the top comments in both files since they simply explain how to use the example. We won’t merge any comments.
  
 2. There is a CAYENNE_DEBUG line that is commented out. This optional line enables debug messages. You can choose to keep or ignore this line.
-	
-	```
+
+<br/>
+
+```
 //#define CAYENNE_DEBUG         // Uncomment to show debug messages
 ```
 
 3. That just leaves a difference in the Include section to examine.
 
-	```
- #include <CayenneEthernet.h>
+```
+#include <CayenneMQTTEthernet.h>
 ```
  
-	The example sketch files include a generic connection example, but we already know that we’re using the W5500 shield. In this case, we want to keep the W5500 line that reads:
+The example sketch files include a generic connection example, but we already know that we’re using the W5500 shield. In this case, we want to keep the W5500 line that reads:
 	
-	```
-#include <CayenneEthernetW5500.h>
+```
+#include <CayenneMQTTEthernetW5500.h>
+```
+
+4. We can replace the default function for sending data with only function sending only Analog Distance sensor data.
+
+```
+// This function is called at intervals to send sensor data to Cayenne.
+CAYENNE_OUT(VIRTUAL_CHANNEL)
+{
+  Cayenne.virtualWrite(VIRTUAL_CHANNEL, analogRead(SENSOR_PIN));
+}
 ```
 	
-	From now on, we’ll ignore the connection include that’s found in any new sketch files we examine as we already know we have our sketch file setup properly to use the W5500 shield.<br/>
+From now on, we’ll ignore the connection include that’s found in any new sketch files we examine as we already know we have our sketch file setup properly to use the W5500 shield.<br/>
 
 Here is our updated sketch file for supporting a W5500 + an Analog Distance sensor. As you can see, we didn’t really need to make any changes at all to support the Analog Distance sensor! Some devices will be like that – Cayenne will immediately support them without any additional work on your part.
 
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160629142506/SketchFileMerge4-W5500-AnalogDistance.png" width="600" height="658" alt="Sketch File"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591731658/cayenne/W5500_Analog_Distance_Sketch.png" width="600" height="658" alt="Sketch File"><br/><br/></p>
 
 
 **W5500 + Analog Distance Sensor + TMP36** <br/>
@@ -265,31 +286,25 @@ Now let’s add a TMP36 temperature sensor. We will use the <a href="https://git
 
 2. We see some constants and definitions from the TMP36. In order for the TMP36 to code to work, we will need to merge these into our sketch file.
 
-	1. This line sets which Virtual pin our TMP36 widget will use to receive the temperature data. Per the instructions in the TMP36 sketch file, this should match the value you used during the Add Device process to add your widget to the dashboard. Let’s assume that Virtual Pin 1 is correct.<br/>
+      1. This line sets which Virtual pin our TMP36 widget will use to receive the temperature data. Per the instructions in the TMP36 sketch file, this should match the value you used during the Add Device process to add your widget to the dashboard. Let’s assume that Virtual Pin 2 is correct. You cannot use virtual channel 1 because it is already selected for Analog Distance sensor. Same Virtual Channel cannot be used for two sensor<br/>
     
-		<pre><code>#define VIRTUAL_PIN V1</code></pre>
+		```#define VIRTUAL_PIN 2```
 
-    2. This line sets which Analog pin the TMP36 sensor is connected to on our Arduino board. Let’s assume that Analog Pin 0 is correct.
+      2. This line sets which Analog pin the TMP36 sensor is connected to on our Arduino board. Let’s assume that Analog Pin 1 is correct.
  	
-		```
-const int tmpPin = 0;
-		```
+		```const int tmpPin = 1;```
 	
 	3. This line let’s Cayenne know what voltage the TMP36 sensor is using. In the case of the TMP36 sensor, this is needed so that the temperature value can be correctly converted from the sensor reading. Let’s assume that our sensor is wired to 5 volts.
  
-		``` 
-const float voltage = 5.0;
-		```
+		``` const float voltage = 5.0;```
 		
 	4. This line creates a TMP36 object. This object will be used in the sketch file code to actually read the sensor. Since we have no other objects with this name, we can simply include the line as is.
 	
-		```
-TMP36 tmpSensor(tmpPin, voltage);
-		```
+		```TMP36 tmpSensor(tmpPin, voltage);```
 
 3. Finally, we see that the TMP36 sketch file includes a Function used to read the TMP36 sensor and write it out to our Virtual pin. This function gives us a chance to change the temperature units sent to Cayenne. For now, let’s simply include the helper function as is.
 
-	```
+```
 CAYENNE_OUT(VIRTUAL_PIN)
 {
 // This command writes the temperature in Celsius to the Virtual Pin.
@@ -303,7 +318,55 @@ Cayenne.celsiusWrite(VIRTUAL_PIN, tmpSensor.getCelsius());
 
 Here is our updated sketch file for supporting a W5500 + an Analog Distance sensor + a TMP36 temperature sensor.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160629145127/SketchFileMerge6-W5500-AnalogDistance-TMP36.png" width="600" height="658" alt="Sketch File"><br/><br/></p>
+```
+//#define CAYENNE_DEBUG       // Uncomment to show debug messages
+#define CAYENNE_PRINT Serial  // Comment this out to disable prints and save space
+#include <CayenneMQTTEthernetW5500.h>
+#include <CayenneMQTTEthernet.h>   // Change this to use a different communication device. See Communications examples.
+
+// Cayenne authentication info. This should be obtained from the Cayenne Dashboard.
+char username[] = "MQTT_USERNAME";
+char password[] = "MQTT_PASSWORD";
+char clientID[] = "CLIENT_ID";
+
+//Analog Distance Sensor
+#define SENSOR_PIN 0
+#define VIRTUAL_CHANNEL 1
+
+//TMP35 Sensor
+const int tmpPin = 1;
+#define VIRTUAL_CHANNEL 1
+
+// Voltage to the TMP36. For 3v3 Arduinos use 3.3.
+const float voltage = 5.0; 
+
+TMP36 tmpSensor(tmpPin, voltage);
+
+void setup() {
+	Serial.begin(9600);
+	Cayenne.begin(username, password, clientID);
+}
+
+void loop() {
+	Cayenne.loop();
+}
+
+// This function is called at intervals to send sensor data to Cayenne.
+CAYENNE_OUT(VIRTUAL_CHANNEL)
+{
+  Cayenne.virtualWrite(VIRTUAL_CHANNEL, analogRead(SENSOR_PIN));
+}
+// This function is called at intervals to send sensor data to Cayenne.
+CAYENNE_OUT(VIRTUAL_CHANNEL)
+{
+  // This command writes the temperature in Celsius to the Virtual Channel.
+  Cayenne.celsiusWrite(VIRTUAL_CHANNEL, tmpSensor.getCelsius());
+  // To send the temperature in Fahrenheit or Kelvin use the corresponding code below.
+  //Cayenne.fahrenheitWrite(VIRTUAL_CHANNEL, tmpSensor.getFahrenheit());
+  //Cayenne.kelvinWrite(VIRTUAL_CHANNEL, tmpSensor.getKelvin());
+}
+```
+<br/><br/></p>
 
 
 **W5500 + Analog Distance Sensor + TMP36 x 2**<br/>
@@ -313,16 +376,13 @@ Now let’s see what happens if we want to add another TMP36 sensor. Because the
 2. We will need two TMP36 objects so that we can refer to either of the TMP36 sensors in the code.
 3. We will need two CAYENNE_OUT functions, one each to read from the appropriate sensor.
 
-Let’s take a look at a comparison of our sketch file so far and a version that includes all of the above changes. We will then go through each change in detail.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160629145811/SketchFileMerge7-W5500-AnalogDistance-TMP36-vs-adding-another-TMP36.png" width="600" height="430" alt="Sketch File"><br/><br/></p>
-
-We now have two copies of the VIRTUAL_PIN statement and we’ve renamed them both so that it’s easier to refer to them later in the code. In this case, one of our sensors will be using pin V1 and the other V2.
+We now have two copies of the VIRTUAL_CHANNEL statement and we’ve renamed them both so that it’s easier to refer to them later in the code. In this case, one of our sensors will be using pin V1 and the other V2.
 
 ```
 // Virtual Pins of our TMP36 widgets (there are 2).
-#define VIRTUAL_PIN_SENSOR1 V1
-#define VIRTUAL_PIN_SENSOR2 V2
+#define VIRTUAL_CHANNEL_SENSOR1 1
+#define VIRTUAL_CHANNEL_SENSOR2 2
 ```
 
 We also have two statements defining which analog pin each sensor is connected to. Once again, we’ve named them appropriately so that we can easily refer to them later. In this case, one of our sensors is wired to pin A0 and the other to A5.
@@ -350,37 +410,92 @@ TMP36 tmpSensor2(tmpPin2, voltage);
 The TMP36 sketch file needs to include a CAYENNE_OUT function for sending the temperature data of our sensor to the correct virtual pin. In this case, this function will be for our first sensor and we make sure to update the name of the CAYENNE_OUT function declaration as well as the both the pin name and TMP36 object names so that they refer to our sensor.
  
 ```
-CAYENNE_OUT(VIRTUAL_PIN_SENSOR1)
+CAYENNE_OUT(VIRTUAL_CHANNEL_SENSOR1)
 {
-Cayenne.celsiusWrite(VIRTUAL_PIN_SENSOR1, tmpSensor1.getCelsius());
+Cayenne.celsiusWrite(VIRTUAL_CHANNEL_SENSOR1, tmpSensor1.getCelsius());
 }
 ```
  
 For our second sensor, we create another copy of the CAYENNE_OUT function and change the name of the function and references in the code to match our second sensor. In this case, we’ll also change the function so that it writes the temperature in Fahrenheit instead of Celsius.
  
 ```
-CAYENNE_OUT(VIRTUAL_PIN_SENSOR2)
+CAYENNE_OUT(VIRTUAL_CHANNEL_SENSOR2)
 {
-Cayenne.fahrenheitWrite(VIRTUAL_PIN_SENSOR2, tmpSensor2.getFahrenheit());
+Cayenne.fahrenheitWrite(VIRTUAL_CHANNEL_SENSOR2, tmpSensor2.getFahrenheit());
 }
 ```
 
 Here is our final sketch file, supporting our W5500 connection, an Analog Distance sensor, and two TMP36 temperature sensors. Our sketch file is now ready to be uploaded to our board.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160629145816/SketchFileMerge8-W5500-AnalogDistance-TMP36-another-TMP36.png" width="600" height="707" alt="Sketch File"><br/><br/></p>
+```
+//#define CAYENNE_DEBUG       // Uncomment to show debug messages
+#define CAYENNE_PRINT Serial  // Comment this out to disable prints and save space
+#include <CayenneMQTTEthernetW5500.h>
+#include <CayenneMQTTEthernet.h>   // Change this to use a different communication device. See Communications examples.
+
+// Cayenne authentication info. This should be obtained from the Cayenne Dashboard.
+char username[] = "MQTT_USERNAME";
+char password[] = "MQTT_PASSWORD";
+char clientID[] = "CLIENT_ID";
+
+//Analog Distance Sensor
+#define SENSOR_PIN 0
+#define VIRTUAL_CHANNEL 1
+
+//TMP35 Sensor
+// Analog pins the TMP36 are connected to.
+const int tmpPin1 = 0;
+const int tmpPin2 = 5;
+
+// Virtual Pins of our TMP36 widgets (there are 2).
+#define VIRTUAL_CHANNEL_SENSOR1 1
+#define VIRTUAL_CHANNEL_SENSOR2 2
+
+// Voltage to the TMP36. For 3v3 Arduinos use 3.3.
+const float voltage = 5.0; 
+
+TMP36 tmpSensor1(tmpPin1, voltage);
+TMP36 tmpSensor2(tmpPin2, voltage);
+
+void setup() {
+	Serial.begin(9600);
+	Cayenne.begin(username, password, clientID);
+}
+
+void loop() {
+	Cayenne.loop();
+}
+
+// This function is called at intervals to send sensor data to Cayenne.
+CAYENNE_OUT(VIRTUAL_CHANNEL)
+{
+  Cayenne.virtualWrite(VIRTUAL_CHANNEL, analogRead(SENSOR_PIN));
+}
+
+CAYENNE_OUT(VIRTUAL_CHANNEL_SENSOR1)
+{
+Cayenne.celsiusWrite(VIRTUAL_CHANNEL_SENSOR1, tmpSensor1.getCelsius());
+}
+
+CAYENNE_OUT(VIRTUAL_CHANNEL_SENSOR2)
+{
+Cayenne.fahrenheitWrite(VIRTUAL_CHANNEL_SENSOR2, tmpSensor2.getFahrenheit());
+}
+```
+<br/><br/></p>
 
 <p id="finding-auth-token" class="anchor-link"></p>
 
 
-## Finding Auth Token
+## Finding MQTT Credentials
 
-If you ever need to find your Auth Token again, click on the **cogwheel icon** next to your Arduino board name and click **Configure**.
+If you ever need to find your MQTT Credentials again, click on the **cogwheel icon** next to your Arduino board name and click **Configure**.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601130027/Configure.jpg" width="232" height="184" alt="Finding Auth Token"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591733639/cayenne/Arduino_Setting.png" width="232" height="184" alt="Finding Auth Token"><br/><br/></p>
 
-Your Auth Token can be found on this settings screen.
+Your MQTT Credentials can be found on this settings screen.
 
-<p style="text-align:center"><br/><img src="http://d1nocd4j7qtmw4.cloudfront.net/wp-content/uploads/20160601130044/ArduinoConfigure-e1464901755145.jpg" width="600" height="340" alt="Finding Auth Token"><br/><br/></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1591733640/cayenne/Arduino_Setting_Screen.png" width="600" height="340" alt="Finding Auth Token"><br/><br/></p>
 
 <p id="code-examples-sketch" class="anchor-link"></p>
 
@@ -453,31 +568,12 @@ Your Auth Token can be found on this settings screen.
 * <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/Thermistor/Thermistor.ino" target="_blank">Thermistor</a>
 * <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/VCNL4000/VCNL4000.ino" target="_blank">VCNL4000</a>
 
-<p id="using-analog-vs-virtual-pins" class="anchor-link"></p>
-
-
-## Using Analog vs. Virtual pins
-
-**Arduino analog data** <br/>
-When reading Analog devices with the Arduino microcontroller, the Arduino’s built in analog to digital converter (ADC) will be used. The value returned by the ADC is a 10-bit value (0 – 1023) that is proportional to the amount of voltage being applied to the pin. It is important to keep this in mind when examining the data returned by your device. For example, if you connect a Temperature sensor to an analog pin, it will not automatically return a temperature reading as you may expect. Instead, additional formulas would be needed to convert the voltage reading returned from the ADC into meaningful temperature data for the sensor.
-
-**NOTE:** If you use Cayenne’s built-in library of devices, this conversion can be performed automatically!
-[View list of supported sensors](https://developers.mydevices.com/cayenne/docs/supported-hardware/#supported-hardware-sensors)
-
-**Arduino Virtual pins** <br/>
-If you wish convert your analog reading to a more meaningful data point, or you wish to change the way your data is formatted, you can instead use a Virtual pin.
-
-Using a Virtual pin, you have complete control over the data is returned to Cayenne. You can apply whatever formatting or data conversions are needed and when viewing the data in Cayenne, it will be in the exact format that you’ve specified. For example, you can perform an Analog read of your temperature sensor, convert the data to a Temperature value in Celsius, and return the data to Cayenne. Now when you view your sensor in Cayenne, you will see Temperature data reported exactly as you expected.
-
-In order to use Virtual pins, you will need to include some code in your sketch file to handle reading and formatting for your sensor. Cayenne makes this easy by providing various example sketch files and information that you can use to get started.
-[View sketch file information](https://developers.mydevices.com/cayenne/docs/sketch-files/#sketch-files-using-sketch-files)
-
 <p id="virtual-pins-microcontrollers" class="anchor-link"></p>
 
 
 ## Virtual Pins
 
-Virtual pins are different than Digital and Analog Input/Output (I/O) pins. Cayenne lets you control any hardware connected to Digital and Analog pins without having to write any additional code.
+Cayenne lets you control any hardware connected to Digital and Analog pins without having to write any additional code.
 
 Virtual pins enable some very powerful customizations for your IoT projects because they allow you to interface with any device library. We use Virtual pins to display and send any data from your microcontroller to the Cayenne web dashboard. You can think about Virtual pins as channels for sending various types of data from your microcontroller to Cayenne. Remember, Virtual pins have no physical properties.
 
@@ -494,13 +590,13 @@ You can send various formats of data to Virtual Pins
 Send an integer value to a virtual pin:
 
 ```
-Cayenne.virtualWrite(V1, 123)
+Cayenne.virtualWrite(1, 123)
 ```
 <br/>
 
 Send a float value to a virtual pin:<br/>
 ```
-Cayenne.virtualWrite(V1, 12.34)
+Cayenne.virtualWrite(1, 12.34)
 ```
 <br/>
 
@@ -508,7 +604,7 @@ Cayenne.virtualWrite(V1, 12.34)
 CAYENNE_IN defines a function that is called when the device receives an updated Virtual pin value from the Cayenne server.
 
 ```
-CAYENNE_IN(V1)
+CAYENNE_IN(1)
 {
 int value = getValue.asInt(); // Get value as integer
 }
@@ -519,7 +615,7 @@ int value = getValue.asInt(); // Get value as integer
 CAYENNE_OUT defines a function that is called when the device is request to send it’s current value of Virtual pin to the Cayenne server. Normally, this function contains some Cayenne.virtualWrite calls.
 
 ```
-CAYENNE_OUT(V1)
+CAYENNE_OUT(1)
 {
 Cayenne.virtualWrite(V1, newValue);
 }
@@ -536,25 +632,6 @@ CAYENNE_CONNECTED() {
 ``` 
 <br/>
 
-**Cayenne.syncAll()**
-Request the Cayenne server to send the most recent values for all widgets. All analog/digital pin states will be restored and every virtual pin will generate CAYENNE_IN event.
-
-```
-CAYENNE_CONNECTED() {
-  if (isFirstConnect) {
-   Cayenne.syncAll();
- }
-}
-``` 
-<br/>
-
-**Cayenne.syncVirtual(vPin)**
-Requests a single virtual pin value update. The corresponding CAYENNE_IN handler is called as a result.
-
-```
-Cayenne.syncVirtual(V1);
-```
-<br/>
 
 <p id="ide-sketch" class="anchor-link"></p>
 
