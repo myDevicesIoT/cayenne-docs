@@ -190,6 +190,63 @@ Use this <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/mast
 
 Want to use the Arduino Yun on-board WiFi? Check out <a href="https://www.arduino.cc/en/Guide/ArduinoYun#toc14" target="_blank">this tutorial</a> on the Arduino website.
 
+<p id="esp8266" class="anchor-link"></p>
+
+### ESP8266
+
+The Cayenne MQTT ESP Library provides functions to easily connect to the Cayenne IoT project builder. This library is designed to work with ESP8266 and ESP32 WiFi modules. With it you can send data to and receive data from Cayenne.
+
+###### Supported Hardware
+* ESP-01
+* Adafruit HUZZAH ESP8266
+* Nodemcu
+* Wemos Mini
+
+Note: Most ESP8266 dev module are compatible with the Cayenne Library and should work without any modification.
+
+###### Step 1
+Download and install the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE</a>.
+
+###### Step 2
+Install the Board Package.
+Under File -> Preferences add http://arduino.esp8266.com/stable/package_esp8266com_index.json to the Additional Boards Manager URLs field.
+Install the esp8266 platform from Tools -> Board -> Boards Manager.
+
+###### Step 3
+Download the Cayenne MQTT ESP library as a zip file [here](https://github.com/myDevicesIoT/Cayenne-MQTT-ESP8266/archive/master.zip).
+
+###### Step 4
+Install the downloaded zip library from Sketch -> Include Library -> Add .ZIP Library.
+
+###### Step 5
+Connect your ESP module to your computer.
+
+###### Step 6
+Select your ESP module and port from the Tools menu.
+
+###### Step 7
+On the cayenne dashboard add a new device as SparkFun ESP8266 Thing Dev Board
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1592219506/cayenne/ESP8266_Add_New.png" width="846" height="644" class="noborder" alt="ESP8266-Dashboard"></p>
+
+Take note of the MQTT credentials.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1592219506/cayenne/ESP8266_MQTT_Dashboard.png" width="846" height="644" class="noborder" alt="ESP8266-MQTT"></p>
+
+###### Step 8
+Open the included example sketch from File -> Examples -> Cayenne-MQTT-ESP -> ESP8266.
+
+###### Step 9
+Modify the included sketch with your network info, and the Cayenne authentication info you received when adding your device.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1592224862/cayenne/ESP8266_Sketch.png" width="646" height="644" class="noborder" alt="ESP8266-MQTT"></p>
+
+###### Step 9
+Compile and upload the sketch to your device. Uploading may require setting the device into bootload mode.
+
+###### Step 9
+Once uploaded, temporary widgets for the channel 0 should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
 <p id="lora-hardware-supported-devices" class="anchor-link"></p>
 <p id="supported-hardware-lora-devices" class="anchor-link"></p>
 
