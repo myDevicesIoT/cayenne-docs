@@ -249,7 +249,7 @@ Once uploaded, temporary widgets for the channel 0 should now show up in the Cay
 
 <p id="esp8266" class="anchor-link"></p>
 
-### ESP8266
+### ESP32
 
 The Cayenne MQTT ESP Library provides functions to easily connect to the Cayenne IoT project builder. This library is designed to work with ESP8266 and ESP32 WiFi modules. With it you can send data to and receive data from Cayenne.
 
@@ -278,13 +278,12 @@ Connect your ESP32 module to your computer.
 Select your ESP32 module and port from the Tools menu.
 
 ###### Step 7
-On the cayenne dashboard add a new device as SparkFun ESP32 Thing Board
+On the cayenne dashboard add a new device as SparkFun ESP8266 Thing Board
 
-<p style="text-align:center"><br/><img src="" width="846" height="644" class="noborder" alt="ESP8266-Dashboard"></p>
-
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1592219506/cayenne/ESP8266_Add_New.png" width="846" height="644" class="noborder" alt="ESP8266-Dashboard"></p>
 Take note of the MQTT credentials.
 
-<p style="text-align:center"><br/><img src="" width="846" height="644" class="noborder" alt="ESP8266-MQTT"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1592219506/cayenne/ESP8266_MQTT_Dashboard.png" width="846" height="644" class="noborder" alt="ESP8266-MQTT"></p>
 
 ###### Step 8
 Open the included example sketch from File -> Examples -> Cayenne-MQTT-ESP -> ESP32.
@@ -292,7 +291,7 @@ Open the included example sketch from File -> Examples -> Cayenne-MQTT-ESP -> ES
 ###### Step 9
 Modify the included sketch with your network info, and the Cayenne authentication info you received when adding your device.
 
-<p style="text-align:center"><br/><img src="" width="646" height="644" class="noborder" alt="ESP8266-MQTT"></p>
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1592242530/cayenne/ESP32_SKetch.png" width="646" height="644" class="noborder" alt="ESP8266-MQTT"></p>
 
 ###### Step 9
 Compile and upload the sketch to your device. Uploading may require setting the device into bootload mode.
