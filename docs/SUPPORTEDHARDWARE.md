@@ -219,10 +219,10 @@ Download the Cayenne MQTT ESP library as a zip file [here](https://github.com/my
 Install the downloaded zip library from Sketch -> Include Library -> Add .ZIP Library.
 
 ###### Step 5
-Connect your ESP module to your computer.
+Connect your ESP8266 module to your computer.
 
 ###### Step 6
-Select your ESP module and port from the Tools menu.
+Select your ESP8266 module and port from the Tools menu.
 
 ###### Step 7
 On the cayenne dashboard add a new device as SparkFun ESP8266 Thing Dev Board
@@ -240,6 +240,59 @@ Open the included example sketch from File -> Examples -> Cayenne-MQTT-ESP -> ES
 Modify the included sketch with your network info, and the Cayenne authentication info you received when adding your device.
 
 <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1592224862/cayenne/ESP8266_Sketch.png" width="646" height="644" class="noborder" alt="ESP8266-MQTT"></p>
+
+###### Step 9
+Compile and upload the sketch to your device. Uploading may require setting the device into bootload mode.
+
+###### Step 9
+Once uploaded, temporary widgets for the channel 0 should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+<p id="esp8266" class="anchor-link"></p>
+
+### ESP8266
+
+The Cayenne MQTT ESP Library provides functions to easily connect to the Cayenne IoT project builder. This library is designed to work with ESP8266 and ESP32 WiFi modules. With it you can send data to and receive data from Cayenne.
+
+###### Supported Hardware
+* SparkFun ESP32 Thing.
+
+Note: Most ESP32 dev module are compatible with the Cayenne Library and should work without any modification.
+
+###### Step 1
+Download and install the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE</a>.
+
+###### Step 2
+Install the Board Package.
+For ESP32, manually install the board package by following the instructions <a href="https://github.com/espressif/arduino-esp32/blob/master/README.md#installation-instructions" target="_blank">here</a>
+
+###### Step 3
+Download the Cayenne MQTT ESP library as a zip file [here](https://github.com/myDevicesIoT/Cayenne-MQTT-ESP8266/archive/master.zip).
+
+###### Step 4
+Install the downloaded zip library from Sketch -> Include Library -> Add .ZIP Library.
+
+###### Step 5
+Connect your ESP32 module to your computer.
+
+###### Step 6
+Select your ESP32 module and port from the Tools menu.
+
+###### Step 7
+On the cayenne dashboard add a new device as SparkFun ESP32 Thing Board
+
+<p style="text-align:center"><br/><img src="" width="846" height="644" class="noborder" alt="ESP8266-Dashboard"></p>
+
+Take note of the MQTT credentials.
+
+<p style="text-align:center"><br/><img src="" width="846" height="644" class="noborder" alt="ESP8266-MQTT"></p>
+
+###### Step 8
+Open the included example sketch from File -> Examples -> Cayenne-MQTT-ESP -> ESP32.
+
+###### Step 9
+Modify the included sketch with your network info, and the Cayenne authentication info you received when adding your device.
+
+<p style="text-align:center"><br/><img src="" width="646" height="644" class="noborder" alt="ESP8266-MQTT"></p>
 
 ###### Step 9
 Compile and upload the sketch to your device. Uploading may require setting the device into bootload mode.
