@@ -4118,3 +4118,101 @@ You’re done! You can now add the photoresistor to your dashboard, referencing 
 
 ###### Step 5
 Copy & paste the <a href="https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino/blob/master/examples/Sensors/GenericAnalogInput/GenericAnalogInput.ino" target="_blank">sketch file</a> into your Arduino IDE. Remember to use your MQTT Credentials.
+
+## Hats
+
+
+Cayenne pi agents works with couple of raspberry hats to collect sensor data and show them on the cayenne dashboard.
+
+*   [SenseHat](#supported-hardware-sensors-sensehat)
+*   [Energenie Pi-Mote](#supported-hardware-sensors-energenie-pimote)
+
+<p id="sense-hat" class="anchor-link"></p>
+
+#### SenseHat
+
+The Sense HAT is an add-on board for the Raspberry Pi. The board allows you to make measurements of temperature, humidity, pressure, and orientation, and to output information using its built-in LED matrix. 
+The Cayenne SenseHat Plugin allows you to show all the sensor data from the Senshat on the Cayenne dashboard.
+
+###### Step 1
+Connect the SenseHat to your raspberry pi. You can follow the tutorial <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/2" target="_blank">here</a> on getting started with SenseHat.
+
+###### Step 2
+Install the <a href="https://developers.mydevices.com/cayenne/docs/getting-started/#getting-started-raspberry-pi" target="_blank">Cayenne Agent</a> on the Raspberry Pi. 
+
+###### Step 3
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-sensehat.git
+cd cayenne-plugin-sensehat
+sudo python3 setup.py install
+sudo service myDevices restart
+```
+
+###### Step 4
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using ```sudo service myDevices restart.```
+
+##### SenseHat Emulator
+If you do not have an actual Sense HAT board and would like to use the Sense HAT Emulator instead you will need to install and run the Emulator.
+Install the Sense HAT Emulator.
+
+```
+sudo apt-get update
+sudo apt-get install python-sense-emu python3-sense-emu sense-emu-tools
+```
+
+Launch the Sense HAT Emulator from the Pi desktop
+Add this entry to the SenseHAT Temperature section in the sensehat.plugin file: 
+
+```
+init_args={"use_emulator": true}.
+```
+
+Restart the Cayenne Agent.
+```
+sudo service myDevices restart
+```
+
+<p id="energenie-pimote" class="anchor-link"></p>
+
+#### Energenie Pi-Mote
+
+A plugin allowing the Cayenne Pi Agent to control electrical sockets using the Energie Pi-mote Control from the Cayenne Dashboard.
+
+###### Step 1
+Connect the SenseHat to your raspberry pi. You can follow the tutorial <a href="https://energenie4u.co.uk/res/pdfs/ENER314%20UM.pdf" target="_blank">here</a> on getting started with SenseHat.
+
+###### Step 2
+Install the <a href="https://developers.mydevices.com/cayenne/docs/getting-started/#getting-started-raspberry-pi" target="_blank">Cayenne Agent</a> on the Raspberry Pi. 
+
+###### Step 3
+From the command line run the following commands to install this plugin.
+
+```
+cd /etc/myDevices/plugins
+sudo git clone https://github.com/myDevicesIoT/cayenne-plugin-energenie.git
+cd cayenne-plugin-energenie
+sudo python3 setup.py install
+```
+
+###### Step 4
+By default the plugin will create widgets for four sockets. If your device has fewer sockets you can set the enabled value to false in the cayenne_energenie.plugin file for any sockets you aren't using. Alternatively you can add the temporary widgets in the Cayenne Dashboard and then delete the ones you don't need.
+
+###### Step 5
+Restart the agent so it can load the plugin.
+
+```
+sudo service myDevices restart
+```
+Temporary widgets for the plugin should now show up in the Cayenne Dashboard. You can make them permanent by clicking the plus sign.
+
+NOTE: If the temporary widgets do not show up try refreshing the Cayenne Dashboard or restarting the agent again using ```sudo service myDevices restart.```
