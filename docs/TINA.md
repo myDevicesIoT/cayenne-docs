@@ -15,7 +15,6 @@ Sending Device to Cloud messages using HTTP API.
 
 | Header | Value  |
 |-------|-------------------------------------------|
-| Authorization | Basic MQTT_USERNAME:MQTT_PASSWORD |
 | Content-Type | application/json |
 
 **Request Payload**
