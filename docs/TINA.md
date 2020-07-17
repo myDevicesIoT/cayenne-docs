@@ -75,4 +75,4 @@ For <a href="https://github.com/myDevicesIoT/cayenne-docs/blob/master/docs/LORA.
 }
 ```
 
-The payload must be a JSON array of objects, each having `channel`, `value`, `type` and `unit` porperties. Refer to the list of our <a href="http://mydevices.com/cayenne/docs/cayenne-mqtt-api/#cayenne-mqtt-api-supported-data-types">supported data types</a> for the `type` and `unit` properties.
+The data property must be a JSON array of objects, each element having `channel`, `value`, `type` and `unit` porperties. Refer to the list of our <a href="http://mydevices.com/cayenne/docs/cayenne-mqtt-api/#cayenne-mqtt-api-supported-data-types">supported data types</a> for the `type` and `unit` properties.
