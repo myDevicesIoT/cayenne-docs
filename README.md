@@ -31,28 +31,6 @@ Let's say you find something incorrectly written or you would like to update som
 6. Once you are satisfied with the results, click Commit changes. 
 *(If you want to add some style, code, or specialized text, follow the link to the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for a quick breakdown. If you want to add an image, follow the steps listed below.)*
 
-### Adding an image to your edit
-This step is a little more tricky and involves uploading your image through Wordpress.
-
-**We'll use adding a screenshot for our example:**
-
-1. Login to the [Cayenne Wordpress admin panel](http://www.cayenne-mydevices.com/wp-admin).
-2. Navigate to the Media menu, and select the [Add New](http://www.cayenne-mydevices.com/wp-admin/media-new.php) link.
-3. Click "Select Files" and upload your image.
-4. When the upload is complete, click the Edit link located the right of the thumbnail.
-5. On this screen, you will find a few different things you'll need to copy and enter into the example code below to embed your image. If your image is larger than 660px, you will have to continue to the 6th step as well.
-    **File URL:** IMAGE_URL <br/>
-    **Width:** WIDTH (If the width is greater than 660px, goto step 6 to get the correct size)<br/>
-    **Height:** HEIGHT <br/>
-    **Alt:** A short description of this image
-6. If your width is greater than 660px, stay on the Edit Media page:
-   * Click on the "Edit Image" button located below your uploaded media.
-   * A new set of tools appears, and the to right of the image you will see a menu called "Scale Image". 
-   * In the first box located below "New dimensions", enter 660. 
-   * This will give you the appropriate size ratio for your large image. 
-   * Use the 660 for the width, and use the number to the right of it for the height.
-7. Fill out the example code below with your new data. Paste the code into place and preview your changes.
-
 **Image Example Code**
 ```
 
@@ -76,8 +54,3 @@ If you need to add additional anchor links to a section in the Docs, use the sam
 <p id="ANCHOR_LINK_HERE" class="anchor-link"></p>
 
 ```
-
-
-### I'm ready for my changes to go live!
-So you're ready for your changes to go live? Contact Jonathan on Skype (jsiderman.mydevices), Slack (@jsiderman) or via email (jsiderman@mydevices.com). 
-
