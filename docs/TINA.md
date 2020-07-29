@@ -8,7 +8,7 @@ Sending Device to Cloud messages using HTTP API.
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">https://lora.iotinabox.com/v1/networks/iotinabox/uplink</td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;"><strong>IoT in a Box:</strong> https://lora.iotinabox.com/v1/networks/iotinabox/uplink <br /><strong>Cayenne:</strong> https://lora.iotinabox.com/v1/networks/generic/uplink</td>
 </tr>
 </tbody>
 </table>
