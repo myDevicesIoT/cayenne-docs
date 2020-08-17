@@ -101,10 +101,11 @@ One of the part of the body should be set to `image` with the filename and addit
 
 
 **Body**
-| Key | Value  |
+| Key | Value
 |-------|-------------------------------------------|
+| eui | fc0f860000000001f3 - Device ID |
 | snapshot | route65.jpg |
-| ch_1024 | file,image
+| ch_1024 | file,image |
 | ch_x | type,unit=value |
 | ... | ... |
 
