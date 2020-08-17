@@ -85,7 +85,7 @@ The following endpoint consumes image stream and sensor data to be processed on 
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">https://lora.iotinabox.com/v1/networks/iotinabox/uplink</td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">https://lora.iotinabox.com/v1/networks/iotinabox/data</td>
 </tr>
 </tbody>
 </table>
@@ -103,7 +103,8 @@ One of the part of the body should be set to `image` with the filename and addit
 **Body**
 | Key | Value  |
 |-------|-------------------------------------------|
-| image | route65.jpg |
+| snapshot | route65.jpg |
+| ch_1024 | file,image
 | ch_x | type,unit=value |
 | ... | ... |
 
@@ -112,11 +113,13 @@ One of the part of the body should be set to `image` with the filename and addit
 **Example Curl Command**
  ```shell
 curl --request POST \
-  --url https://localhost/v1/networks/iotinabox/uplink \
-  --header 'authorization: Basic Base64' \
-  --header 'content-type: multipart/form-data' \
-  --form image=@got.png \
-  --form 'ch_1=temp,f=75' \
-  --form 'ch_2=rel_hum,p=80' \
-  --form 'ch_3=rssi,db=-100' 
+  --url https://localhost/v1/networks/iotinabox/data \
+  --header 'authorization: Basic Base64=' \
+  --header 'content-type: multipart/form-data; boundary=---011000010111000001101001' \
+  --form snapshot=route65.jpg \
+  --form 'ch_1024=file,image' \
+  --form 'ch_171=temp,f=75' \
+  --form 'ch_6=temp,f=70' \
+  --form 'ch_4=rel_hum,p=65' \
+  --form eui=fc0f860000000001f3
 ```
