@@ -114,13 +114,13 @@ One of the part of the body should be set to `image` with the filename and addit
 **Example Curl Command**
  ```shell
 curl --request POST \
-  --url https://localhost/v1/networks/iotinabox/data \
+  --url http://localhost:3001/v1/networks/iotinabox/data \
   --header 'authorization: Basic Base64=' \
-  --header 'content-type: multipart/form-data; boundary=---011000010111000001101001' \
-  --form snapshot=route65.jpg \
-  --form 'ch_1024=file,image' \
+  --header 'content-type: multipart/form-data' \
+  --form snapshot=@file.jpeg \
+  --form 'ch_1024=file,image=snapshot' \
   --form 'ch_171=temp,f=75' \
-  --form 'ch_6=temp,f=70' \
-  --form 'ch_4=rel_hum,p=65' \
-  --form eui=fc0f860000000001f3
+  --form 'ch_6=temp,f=75' \
+  --form 'ch_4=rel_hum,p=80' \
+  --form 'eui=fc0f860000000001f3'
 ```
