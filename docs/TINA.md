@@ -160,7 +160,7 @@ Where
 
 #### Example
 
-Publishing data to a device
+Publishing data to cloud
 
 **Topic***
 `v2/things/DEVICE_ID/data.json`
