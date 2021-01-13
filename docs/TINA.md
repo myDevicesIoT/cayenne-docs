@@ -1,5 +1,3 @@
-<p id="bring-your-own-thing-api" class="anchor-link"></p>
-
 # HTTP API
 
 Sending Device to Cloud messages using HTTP API.
@@ -124,3 +122,74 @@ curl --request POST \
   --form 'ch_4=rel_hum,p=80' \
   --form 'eui=fc0f860000000001f3'
 ```
+
+# MQTT API
+
+## V2
+
+### Topic format
+
+All topics use following format :
+
+`v2/{serviceId}/{endpointId}/{resourceId}`
+
+Where
+- `serviceId` is the Cayenne MQTT API Service
+- `endpointId` is a Service endpoint
+- `resourceId` is a Cayenne MQTT API Resource
+
+### Things Service
+
+| **Parameter** | **Definition** |
+|---------------|----------------|
+| `serviceId`   | *things*       | 
+| `endpointId`  | *Device ID*    |
+
+
+### Topic ACL
+
+## Common Resources
+
+### Data Resources
+| **resourceId**   | **Payload** | **Description**                                                    | **V1** | **V2** |
+|------------------|-------------|--------------------------------------------------------------------|--------|--------|
+| `data/{CHANNEL}` | D_TEXT  | Send value for a single sensor or actuator using text format.          | ✅ | ✅ |
+| `data/json`      | D_JSON  | Send value for multiple sensors and actuators using Cayenne JSON.      | ✅ | ❌ |
+| `data.json`      | D_JSON  | Send value for multiple sensors and actuators using Cayenne JSON.      | ✅ | ✅ |
+| `data.bin`       | LPP     | Send value for multiple sensors and actuators using LPP binary format. | ❌ | ✅ |
+
+#### Example
+
+Publishing data to a device
+
+**Topic***
+`v2/things/DEVICE_ID/data.json`
+
+**Payload**
+```json
+{
+  "hardware_id": "01020304050607",
+  "device_id" : "optinal",
+  "client_id": "MQTT_USERNAME",
+  "application_id": "REALM_TENANT_ID",
+  "event": "uplink",
+  "timestamp": 01020304050607,
+  "sensors": [
+    {
+       "channel": 1,
+       "value": 16.4,
+       "type": "temp",
+       "unit": "c"
+     },
+     {
+        "channel": 2,
+        "value": 75,
+        "type": "rel_hum",
+        "unit": "p"
+     },
+     ...
+  ]
+}
+```
+
+
