@@ -6,7 +6,7 @@ Sending Device to Cloud messages using HTTP API.
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;"><strong>IoT in a Box:</strong> https://lora.iotinabox.com/v1/networks/iotinabox/uplink <br /><strong>Cayenne:</strong> https://lora.iotinabox.com/v1/networks/generic/uplink</td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;"><strong>IoT in a Box:</strong> https://hub.m2c.io/v1/networks/iotinabox/uplink <br /><strong>Cayenne:</strong> https://hub.m2c.io/v1/networks/generic/uplink</td>
 </tr>
 </tbody>
 </table>
@@ -14,6 +14,8 @@ Sending Device to Cloud messages using HTTP API.
 | Header | Value  |
 |-------|-------------------------------------------|
 | Content-Type | application/json |
+| x-subscription-key | API Key |
+
 
 **Request Payload**
  ```
@@ -83,7 +85,7 @@ The following endpoint consumes image stream and sensor data to be processed on 
 <tbody>
 <tr>
 <td style="font-size: 15px; padding: 10px; background-color: #357ca2; color: #ffffff;"><b>POST</b></td>
-<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">https://lora.iotinabox.com/v1/networks/iotinabox/data</td>
+<td style="font-size: 15px; padding: 10px; background-color: #cfe2f3; color: #000000;">https://hub.m2c.io/v1/networks/iotinabox/data</td>
 </tr>
 </tbody>
 </table>
@@ -92,7 +94,7 @@ The following endpoint consumes image stream and sensor data to be processed on 
 | Header | Value  |
 |-------|-------------------------------------------|
 | Content-Type | multipart/form-data |
-| Authorization | Basic Token |
+| x-subscription-key | API Key |
 
 
 One of the part of the body should be set to `image` with the filename and additional parts can be sent with sensor data. The key would be the channel number `ch_x` and value would follow our MQTT channel based payload: `type,unit=value`. [Supported list of data types](https://github.com/myDevicesIoT/cayenne-docs/blob/master/docs/MQTTAPIS.md#supported-data-types)
@@ -112,8 +114,8 @@ One of the part of the body should be set to `image` with the filename and addit
 **Example Curl Command**
  ```shell
 curl --request POST \
-  --url http://localhost:3001/v1/networks/iotinabox/data \
-  --header 'authorization: Basic Base64=' \
+  --url https://hub.m2c.io/v1/networks/iotinabox/data \
+  --header 'x-subscription-key: API-KEY' \
   --header 'content-type: multipart/form-data' \
   --form snapshot=@file.jpeg \
   --form 'ch_1024=file,image=snapshot' \
