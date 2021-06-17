@@ -63,12 +63,30 @@ If you are interesting to push external data into a virtual device you can use C
  ```
 [
    {
-      "channel": 1,
-      "value": 16.4,
-      "type": "temp",
-      "unit": "c"
-   },
-   {...}
+     "channel": 1,
+     "value": 16.4,
+     "type": "temp",
+     "unit": "c"
+  },
+  {
+     "channel": 2,
+     "value": 75,
+     "type": "rel_hum",
+     "unit": "p"
+  },
+  {
+     "channel": 5,
+     "value": 75,
+     "type": "batt",
+     "unit": "v"
+  },
+  {
+     "channel": 10,
+     "value": 1,
+     "type": "digital_sensor",
+     "unit": "d"
+  },
+  {...}
 ]
 ```
 
