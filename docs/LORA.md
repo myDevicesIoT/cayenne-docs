@@ -2071,6 +2071,195 @@ The Things Network is building a global, open, crowd-sourced Internet of Things 
 
 Cayenne makes it easy to use your LoRa device and The Things Network. You will need to:
 
+## The Things Network V3
+
+### Create account
+
+To create your account, visit The Things Network <a href="https://account.thethingsnetwork.org/register" target="_blank">Sign Up</a> page. From here you can enter in all the required details for creating your account.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623955110/cayenne/screencapture-account-thethingsnetwork-org-register-2021-06-18-00_08_02.png" width="660" height="414" alt="Account Sign Up"><br/><br/></p>
+
+**Open The Things Network Console**
+
+Once you have your account and have signed in, you will want to access the **Console** which is where you can configure your Applications and Gateway devices. To access the console, expand your user menu and select the **CONSOLE** option. This will open the <a href="https://console.cloud.thethings.network/" target="_blank">Console page</a>.
+Select a cluster to start adding devices and gateways.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623955291/cayenne/screencapture-console-cloud-thethings-network-2021-06-18-00_11_21.png" width="660" height="278" alt="User menu expanded"><br/><br/></p>
+
+
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623955467/cayenne/screencapture-eu1-cloud-thethings-network-console-2021-06-18-00_14_13.png" width="660" height="414" alt="Console landing screen"><br/><br/></p>
+
+### Setup gateway device
+
+In order for your LoRa technology devices to connect to The Things Network, you must have purchased and configured a gateway device. The Things Network has a <a href="https://www.thethingsnetwork.org/docs/gateways/" target="_blank">Gateway page</a> with information on hardware supported, including their own <a href="https://www.kickstarter.com/projects/419277966/the-things-network" target="_blank">Gateway device (Coming Soon)</a> that you can use.
+
+**Be sure that you have an appropriate gateway configured and working before continuing. Your devices will not be able to properly function without your gateway device in place.**
+
+
+#### Register gateway device
+
+If you need to register a new gateway device, you can do so from The Things Network console. To begin this process, log into your account and open the <a href="https://console.thethingsnetwork.org/" target="_blank">Console page</a>. Select the **Gateways** link to open the *Gateways* screen. From here, select the **register gateway** link to begin the process of registering a new gateway.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623955958/cayenne/screencapture-eu1-cloud-thethings-network-console-gateways-add-2021-06-18-00_22_27.png" width="660" height="414" alt="Console screen with gateways highlight"><br/><br/></p>
+
+
+You will then be guided through setting up your gateway device.
+
+*TIP: The Things Network has in-depth documentation on <a href="https://www.thethingsnetwork.org/docs/gateways/registration.html" target="_blank">registering your gateway</a> available if you should need help with this process.*
+
+### Create Application
+
+In order for data from your device to reach Cayenne, you must configure your devices in The Things Network portal to forward data to Cayenne. The Things Network portal groups devices in what they call **Applications**. If you want to use a group of devices with Cayenne, you will need to configure your Application to use the Cayenne. You only need to perform this step once for each Application that you want to use.
+
+To create an application, click <a href="https://eu1.cloud.thethings.network/console/applications" target="_blank">add application</a> in the console. The *Add Application* screen appears.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623957423/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-2021-06-18-00_46_20.png" width="660" height="343" alt="Add Application screen"><br/><br/></p>
+
+
+On the *Add Application*, fill in the required information to create your new Application.
+
+*Tip: If you need help with this part of the process, you can refer to The Things Network <a href="https://www.thethingsnetwork.org/docs/applications/add.html" target="_blank">documentation on this step</a>.*
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623957544/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-add-2021-06-18-00_48_46.png" width="660" height="396" alt="Add Application screen"><br/><br/></p>
+
+Once you have an application that you want to use, you can then proceed with configuring it to work with Cayenne.
+
+#### Add Cayenne Integration
+
+To configure your Application to forward data to Cayenne you will need to add an **Integration**. To add the Cayenne integration, perform the following steps:
+
+
+1. Open your existing Application in the console.
+   
+2. Select **Integrations** from the left menu.
+
+    <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623957712/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-2021-06-18-00_49_50.png" width="660" height="415" alt="Application screen with Integrations highlight"><br/><br/></p>
+
+3. Click the **Webhook**.
+
+    <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623957848/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-2021-06-18-00_53_31.png" width="560" height="301" alt="Integrations screen with add link highlight"><br/><br/></p>
+
+4. Add a webhook.
+
+    <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623958044/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-integrations-webhooks-2021-06-18-00_55_49.png" width="660" height="328" alt="Add integration screen with Cayenne option"><br/><br/></p>
+
+
+5. Select the cayenne integeration from the list.
+
+
+    <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623958306/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-integrations-webhooks-add-template-2021-06-18-00_59_39.png" width="660" height="393" alt="Cayenne integration screen with filled in values"><br/><br/></p>
+    
+6. Complete the Cayenne integration by adding the **Webhook ID** . The *Client ID* (optional) can be left blank.
+
+    <p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1623960449/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-integrations-webhooks-add-template-cayenne-2021-06-18-01_02_58.png" width="660" height="393" alt="Cayenne integration screen with filled in values"><br/><br/></p>
+
+### Registering device on The Things Network
+You can register a device to TTN either **From the LoRaWAN Device Repository** or **Manually**.
+
+#### 1. **From the LoRaWAN Device Repository**
+
+
+For many LoRaWAN devices, the LoRaWAN device repository offers device profiles, LoRaWAN metadata, codecs, and more. When you utilise the device repository to add devices to The Things Stack, the relevant LoRaWAN version and regional parameters version are automatically used, which means you'll have less information to search!
+
+Make sure the From the LoRaWAN Device Repository tab is selected to use the device repository. Then choose your device's Brand, Model, Hardware Version, Software Version, and Region.
+
+Select a Frequency plan that is suited for your area. To communicate, your device and gateway must use the same frequency plan.
+
+If your manufacturer has supplied a JoinEUI/AppEUI, enter it. If your device is programmable, you can utilise all 0s and then programme the device with the same JoinEUI/AppEUI.
+
+Fill in your DevEUI.
+
+Enter an AppKey if your manufacturer supplies one. Otherwise, make one with the generate button and programme it into your device.
+
+Finally, give your device a unique End device ID and register it by clicking the Register end device button.
+
+The device is now active, and once it sends an uplink, it will display as linked in The Things Stack.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1624024135/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-devices-add-repository-2021-06-18-19_18_35.png" width="660" height="414" alt="Account Sign Up"><br/><br/></p>
+
+#### 2. **Manually**
+
+You can manually register your device if it isn't in the device repository.
+
+Make sure you're on the Manually tab.
+
+Select the Activation Mode from the drop-down menu.
+
+Choose the LoRaWAN device version.
+
+Tick the External Join Server button if you're using Over-the-Air-Activation (OTAA) and an External Join Server.
+
+The addresses for the Network Server, Application Server, and Join Server should all point to the same address as the The Things Stack deployment you're using.
+
+To get to the Basic Settings page, click the Start button.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1624029166/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-devices-add-manual-2021-06-18-20_42_20.png" width="660" height="414" alt="Account Sign Up"><br/><br/></p>
+
+Assign a unique End device ID to your device.
+
+If your manufacturer has supplied a JoinEUI/AppEUI, enter it. If your device is programmable, you can utilise all 0s and then programme the device with the same JoinEUI/AppEUI.
+
+Fill in your DevEUI.
+
+The Name and Description fields are optional and will aid in identifying your device.
+
+To go to the next page, click Network Layer Settings.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1624029283/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-devices-add-manual-steps-2021-06-18-20_44_33.png" width="660" height="414" alt="Account Sign Up"><br/><br/></p>
+
+Select a Frequency plan that is suited for your area. To communicate, your device and gateway must use the same frequency plan.
+
+Select the Regional Parameters version offered by your device's manufacturer. Regional Parameters or PHY Version should be mentioned in the data sheet.
+
+You can use the checkboxes to enable Class B or Class C capabilities if your device supports them.
+
+Advanced parameters for configuring Frame counter width and RX2 settings are also available, however they should not be essential for most devices.
+
+To get to the next page, click the Join settings button.
+
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1624038990/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-devices-add-manual-steps-2021-06-18-20_47_39.png" width="660" height="414" alt="Account Sign Up"><br/><br/></p>
+
+Enter an AppKey if your manufacturer offers one. Otherwise, make one with the Create button and programme it into your device.
+
+Advanced options for Net ID, Application Server ID, and KEK Labels are also available, but they are not required for most devices.
+
+Finally, to register the end device, click Add end device.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1624039105/cayenne/screencapture-eu1-cloud-thethings-network-console-applications-new-app-49-devices-add-manual-steps-2021-06-18-23_28_16.png" width="660" height="414" alt="Account Sign Up"><br/><br/></p>
+
+### Add device to Cayenne
+
+Once your device has been registered, programmed, configured to forward data to Cayenne and is online, you can proceed with adding the device in Cayenne so that it appears in your dashboard.
+
+From the Cayenne Dashboard, click **Add New** > **Device / Widget**.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1624043836/cayenne/Screenshot_2021-06-19_at_12.46.47_AM.png" width="560" height="252" alt="Cayenne Add New menu"><br/><br/></p>
+
+From the list of devices & widgets that appears, select the **LoRa** category and then **The Things Network** option to view a list of supported devices.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1624044042/cayenne/screencapture-cayenne-mydevices-cayenne-dashboard-add-2021-06-19-00_49_58.png" width="660" height="315" alt="Cayenne showing supported TTN devices"><br/><br/></p>
+
+After selecting the device that you wish to add, settings for that device will appear. 
+
+In order to add the device, Cayenne needs to know some information about the device and how it will be shown on the dashboard.
+
+1. Give the device a name. In our case, we’ll enter “LoRa Pulse” in the **Name** field.
+2. Enter the [DevEUI](#lora-about-deveuis) for this device into the **DevEUI** field.
+3. Our device has been previously manually registered with The Things Network. Make sure “Already Registered” is selected in the **Activation Mode** field.
+4. Click **Add device**.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1624044418/cayenne/screencapture-cayenne-mydevices-cayenne-dashboard-add-2021-06-19-00_54_53.png" width="660" height="315" alt="Cayenne showing supported TTN devices"><br/><br/></p>
+
+The Device has been added to your dashboard and Cayenne will automatically add widgets for the sensors on the device. You can now [track the location](#features-asset-tracking) of your device as well as examine the current status of the water, gas, electricity & heat sensors on the device.
+
+<p style="text-align:center"><br/><img src="https://res.cloudinary.com/dctlrnwuz/image/upload/v1624044843/cayenne/Screenshot_2021-06-19_at_1.03.47_AM.png" width="600" height="263" alt="LoRa dashboard"><br/><br/></p>
+
+
+## The Things Network 
+
+
 1. [Create / Log into your account on The Things Network portal](#lora-the-things-network-create-account)
 2. [Setup gateway device](#lora-the-things-network-setup-gateway-device)
 3. [Create Application and configure Integration](#lora-the-things-network-create-application)
